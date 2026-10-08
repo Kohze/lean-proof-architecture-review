@@ -1,0 +1,406 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        7
+      ]
+    ],
+    "date-time": "2026-10-07T20:13:45Z",
+    "timestamp": 1791404025804,
+    "version": "4.3.3"
+  },
+  "reference-count": 26,
+  "publisher": "Elsevier BV",
+  "issue": "8",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2009,
+            6,
+            1
+          ]
+        ],
+        "date-time": "2009-06-01T00:00:00Z",
+        "timestamp": 1243814400000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2013,
+            8,
+            22
+          ]
+        ],
+        "date-time": "2013-08-22T00:00:00Z",
+        "timestamp": 1377129600000
+      },
+      "content-version": "vor",
+      "delay-in-days": 1543,
+      "URL": "https://www.elsevier.com/open-access/userlicense/1.0/"
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "published-print": {
+    "date-parts": [
+      [
+        2009,
+        6
+      ]
+    ]
+  },
+  "DOI": "10.1016/j.scico.2007.09.002",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2009,
+        2,
+        11
+      ]
+    ],
+    "date-time": "2009-02-11T13:45:11Z",
+    "timestamp": 1234359911000
+  },
+  "page": "568-589",
+  "source": "Crossref",
+  "is-referenced-by-count": 76,
+  "title": [
+    "Proofs of randomized algorithms in Coq"
+  ],
+  "prefix": "10.1016",
+  "volume": "74",
+  "author": [
+    {
+      "given": "Philippe",
+      "family": "Audebaud",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Christine",
+      "family": "Paulin-Mohring",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "78",
+  "reference": [
+    {
+      "key": "10.1016/j.scico.2007.09.002_b1",
+      "series-title": "Proc. of 8th Int. Conf. on Mathematics of Program Construction",
+      "first-page": "49",
+      "article-title": "Proofs of randomized algorithms in Coq",
+      "volume": "vol. 4014",
+      "author": "Audebaud",
+      "year": "2006"
+    },
+    {
+      "key": "10.1016/j.scico.2007.09.002_b2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "M. Escardó, A. Simpson, A universal characterization of the closed euclidean interval (extended abstract), in: Proc. of 16th Ann. IEEE Symp. on Logic in Computer Science, LICS 2001 Boston, MA, June 2001, IEEE CS Press, Los Alamitos, CA, pp. 115–125",
+      "DOI": "10.1109/LICS.2001.932488"
+    },
+    {
+      "key": "10.1016/j.scico.2007.09.002_b3",
+      "series-title": "The Why Verification Tool",
+      "author": "Filliâtre",
+      "year": "2002"
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.scico.2007.09.002_b4",
+      "doi-asserted-by": "crossref",
+      "first-page": "709",
+      "DOI": "10.1017/S095679680200446X",
+      "article-title": "Verification of non-functional programs using interpretations in type theory",
+      "volume": "13",
+      "author": "Filliâtre",
+      "year": "2003",
+      "journal-title": "J. Funct. Programming"
+    },
+    {
+      "key": "10.1016/j.scico.2007.09.002_b5",
+      "series-title": "Selected Papers from 1st Int. Wksh. on Types for Proofs and Programs",
+      "first-page": "79",
+      "article-title": "Constructive reals in Coq: Axioms and categoricity",
+      "volume": "vol. 2277",
+      "author": "Geuvers",
+      "year": "2002"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.scico.2007.09.002_b6",
+      "doi-asserted-by": "crossref",
+      "first-page": "3",
+      "DOI": "10.1017/S0960129506005834",
+      "article-title": "Constructive analysis, types and exact real numbers",
+      "volume": "17",
+      "author": "Geuvers",
+      "year": "2007",
+      "journal-title": "Math. Structures Comput. Sci."
+    },
+    {
+      "key": "10.1016/j.scico.2007.09.002_b7",
+      "series-title": "Categorical Aspects of Topology and Analysis",
+      "first-page": "69",
+      "article-title": "A categorical approach to probability theory",
+      "volume": "vol. 915",
+      "author": "Giry",
+      "year": "1982"
+    },
+    {
+      "key": "10.1016/j.scico.2007.09.002_b8",
+      "series-title": "Proc. of 21st Conf. on Automated Deduction",
+      "first-page": "3",
+      "article-title": "Formalization of continuous probability distributions",
+      "volume": "vol. 4603",
+      "author": "Hasan",
+      "year": "2007"
+    },
+    {
+      "key": "10.1016/j.scico.2007.09.002_b9",
+      "series-title": "Proc. of 15th Int. Conf. on Theorem Proving in Higher-Order Logics",
+      "first-page": "230",
+      "article-title": "A formal approach to probabilistic termination",
+      "volume": "vol. 2410",
+      "author": "Hurd",
+      "year": "2002"
+    },
+    {
+      "key": "10.1016/j.scico.2007.09.002_b10",
+      "unstructured": "J. Hurd, Formal verification of probabilistic algorithms, Ph.D. Thesis, Univ. of Cambridge, 2002"
+    },
+    {
+      "issue": "1–2",
+      "key": "10.1016/j.scico.2007.09.002_b11",
+      "doi-asserted-by": "crossref",
+      "first-page": "3",
+      "DOI": "10.1016/S1567-8326(02)00065-6",
+      "article-title": "Verification of the Miller–Rabin probabilistic primality test",
+      "volume": "50",
+      "author": "Hurd",
+      "year": "2003",
+      "journal-title": "J. Log. Algebr. Program."
+    },
+    {
+      "key": "10.1016/j.scico.2007.09.002_b12",
+      "series-title": "Proc. of 2nd Wksh. on Quantitative Aspects of Programming Languages",
+      "first-page": "95",
+      "article-title": "Probabilistic guarded commands mechanized in HOL",
+      "volume": "vol. 112",
+      "author": "Hurd",
+      "year": "2005"
+    },
+    {
+      "key": "10.1016/j.scico.2007.09.002_b13",
+      "unstructured": "C. Jones, Probabilistic non-determinism, Ph.D. Thesis, Univ. of Edinburgh, 1989"
+    },
+    {
+      "key": "10.1016/j.scico.2007.09.002_b14",
+      "series-title": "Proc. of 4th Ann. IEEE Symp. on Logic in Computer Science",
+      "first-page": "186",
+      "article-title": "A probabilistic powerdomain of evaluations",
+      "author": "Jones",
+      "year": "1989"
+    },
+    {
+      "key": "10.1016/j.scico.2007.09.002_b15",
+      "doi-asserted-by": "crossref",
+      "first-page": "328",
+      "DOI": "10.1016/0022-0000(81)90036-2",
+      "article-title": "Semantics of probabilistic programs",
+      "volume": "22",
+      "author": "Kozen",
+      "year": "1981",
+      "journal-title": "J. Comput. System Sci."
+    },
+    {
+      "key": "10.1016/j.scico.2007.09.002_b16",
+      "series-title": "Proc. of 15th Ann. ACM Symp. on Theory of Computing",
+      "first-page": "291",
+      "article-title": "A probabilistic PDL",
+      "author": "Kozen",
+      "year": "1983"
+    },
+    {
+      "key": "10.1016/j.scico.2007.09.002_b17",
+      "unstructured": "F.W. Lawvere, The category of probabilistic mappings, 1962. Preprint"
+    },
+    {
+      "key": "10.1016/j.scico.2007.09.002_b18",
+      "series-title": "Technical Monographs in Computer Science",
+      "article-title": "Abstraction, refinement and proof for probabilistic systems",
+      "author": "McIver",
+      "year": "2005"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.scico.2007.09.002_b19",
+      "doi-asserted-by": "crossref",
+      "first-page": "55",
+      "DOI": "10.1016/0890-5401(91)90052-4",
+      "article-title": "Notions of computation and monads",
+      "volume": "93",
+      "author": "Moggi",
+      "year": "1991",
+      "journal-title": "Inform. and Comput."
+    },
+    {
+      "key": "10.1016/j.scico.2007.09.002_b20",
+      "first-page": "14",
+      "article-title": "pGCL: Formal reasoning for random algorithms",
+      "volume": "22",
+      "author": "Morgan",
+      "year": "1999",
+      "journal-title": "South African Comput. J."
+    },
+    {
+      "key": "10.1016/j.scico.2007.09.002_b21",
+      "series-title": "Proc. of 32nd ACM SIGPLAN-SIGACT Symp. on Principles of Programming Languages",
+      "first-page": "171",
+      "article-title": "A probabilistic language based upon sampling functions",
+      "author": "Park",
+      "year": "2005"
+    },
+    {
+      "key": "10.1016/j.scico.2007.09.002_b22",
+      "unstructured": "C. Paulin-Mohring, A library for reasoning on randomized algorithms in Coq, Description of a Coq Contribution, INRIA & Univ. Paris Sud, 2007. URL http://www.lri.fr/~paulin/ALEA/library.pdf"
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.scico.2007.09.002_b23",
+      "doi-asserted-by": "crossref",
+      "first-page": "511",
+      "DOI": "10.1017/S0960129501003322",
+      "article-title": "A judgmental reconstruction of modal logic",
+      "volume": "11",
+      "author": "Pfenning",
+      "year": "2001",
+      "journal-title": "Math. Structures Comput. Sci."
+    },
+    {
+      "key": "10.1016/j.scico.2007.09.002_b24",
+      "series-title": "Conf. Record of 29th ACM SIGPLAN-SIGACT Symp. on Principles of Programming Languages",
+      "first-page": "154",
+      "article-title": "Stochastic lambda calculus and monads of probability distributions",
+      "author": "Ramsey",
+      "year": "2002"
+    },
+    {
+      "key": "10.1016/j.scico.2007.09.002_b25",
+      "series-title": "Formal Semantics of Programming Languages",
+      "first-page": "65",
+      "article-title": "Lattice theory, data types, and semantics",
+      "volume": "vol. 2",
+      "author": "Scott",
+      "year": "1972"
+    },
+    {
+      "key": "10.1016/j.scico.2007.09.002_b26",
+      "series-title": "Modèles et algorithmes Markoviens",
+      "volume": "vol. 39",
+      "author": "Ycart",
+      "year": "2002"
+    }
+  ],
+  "container-title": [
+    "Science of Computer Programming"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S0167642309000240?httpAccept=text/xml",
+      "content-type": "text/xml",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S0167642309000240?httpAccept=text/plain",
+      "content-type": "text/plain",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        2,
+        7
+      ]
+    ],
+    "date-time": "2025-02-07T15:52:53Z",
+    "timestamp": 1738943573000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0167642309000240"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2009,
+        6
+      ]
+    ]
+  },
+  "references-count": 26,
+  "journal-issue": {
+    "issue": "8",
+    "published-print": {
+      "date-parts": [
+        [
+          2009,
+          6
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "S0167642309000240"
+  ],
+  "URL": "http://dx.doi.org/10.1016/j.scico.2007.09.002",
+  "relation": {},
+  "ISSN": [
+    "0167-6423"
+  ],
+  "subject": [],
+  "container-title-short": "Science of Computer Programming",
+  "published": {
+    "date-parts": [
+      [
+        2009,
+        6
+      ]
+    ]
+  }
+}

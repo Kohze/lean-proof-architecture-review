@@ -1,0 +1,94 @@
+\section{What is distinctive, and what can be reused?}
+\label{sec:discussion}
+
+The six cases suggest four kinds of preservation requirement. Exact data
+must survive when a later construction uses named coordinates or a
+particular polynomial expansion. Probability laws must survive when the
+next statement concerns an event rather than an average output. Estimates
+must survive when error terms are summed or a constant is optimized.
+Local differential information must survive when a derivative or boundary
+integral is formed. A single development can require several of these:
+the common-base proof uses both deterministic execution equality and
+distributional equality, while Mahler uses whole-field equality and then
+boundary-local agreement. An event probability factors through the output
+law, so reindexing can be harmless in the first case. A named-coordinate
+equation consumes the coordinate map itself; ambient differentiation
+consumes the field near the point. The operation to be performed determines
+which correspondence is sufficient.
+
+This classification is useful because it identifies the failure caused by
+an interface that is too weak. A mean does not determine an accuracy
+probability. A finite table describes the graph averages only after its
+multiplicities have been related to those of the graph fibers; here an
+explicit bijection supplies that relation. Equal subspaces
+do not determine named quotient coordinates. Equality at boundary points
+does not establish the ambient derivative congruence used by this Stokes
+argument. Pointwise scalar-zero limits need not equal the weights of the
+closed finite ideals of extended traces. These are concrete
+mathematical failures, illustrated in Section~\ref{sec:worked}, rather than
+generic objections to abstraction.
+
+Several reusable patterns emerge. First, use a representation in which
+the local calculation is small, then prove an explicit correspondence to
+the original state space. The switch-chain matrix table is useful because
+the graph-cell equivalence identifies its counting measure and its
+conditional fibers. Second, give the semantic relation the strength of
+the downstream claim. The all-observables certificate handles changes of
+enumeration without imposing an unnecessary same-bank equality. Third,
+keep hypothesis discharge visible. The Mahler strip map constructs the
+analytic inputs; the Crouzeix exterior domain constructs the resolvent
+and coefficient estimates. Fourth, preserve a common witness across
+dependent constructions. The marked-cut diagram and its values use the
+same splitting data, so the final seam theorem refers to the actual
+produced object.
+
+These patterns have substantial antecedents. Verified compilers prove
+semantic preservation and make the relationship between a source language
+and its implementation explicit \citep{Leroy2009,CakeML2014}. Probabilistic
+program logics already reason about output distributions and observations
+\citep{CertiCrypt2009,EasyCrypt2011}. Algebraic hierarchy design and
+specification-driven collaboration already treat interfaces as mathematical
+objects \citep{GarillotEtAl2009,Baanen2022,CommelinTopaz2024}. Accordingly,
+the evidence supports a claim of informative, concrete compositions of
+established methods. It does not establish a historical first use of
+transport, finite decision, dependent records, or compiler correctness.
+
+What makes the selected steps worth studying is their mathematical
+specificity. The random tape map records a real execution convention and
+feeds an exact success count. The exceptional graph direction is identified
+by the total-two matrix table and controlled by a projection budget.
+The ordered form identity retains the sign and multiplicity needed for
+transgression. Rectangular compressions organize amplification so that two
+energy bounds close at the constant two. Positive cuts recover the ideal
+hidden by infinite trace values. Named graded maps keep the produced
+diagram's equations intact under rebasing. These choices explain more of
+the proofs than a description of tactics or file size would.
+
+The review also has clear limits. Selection favors readable, explicit
+bridges, so it cannot estimate how frequent these techniques are across
+the collection or compare development effort with other projects. The
+source analysis establishes what the inspected declarations state and how
+their displayed constructions connect. A full assessment of the headline
+mathematical results additionally involves rebuilding their dependencies
+and examining the underlying mathematical arguments. Those tasks should
+retain the same endpoint distinctions used here, particularly for the two
+support results.
+
+For a mathematician, the practical benefit is a route into the source:
+identify the next operation, ask what it consumes, and inspect the lemma
+that preserves that information. For a formalizer, the cases suggest
+interfaces worth extracting into smaller libraries or examples. Their
+value lies in making a mathematical dependency explicit enough to inspect,
+reuse, and test. The worked examples demonstrate a modest version of that
+process without requiring the entire surrounding development.
+
+\section*{Data and code availability}
+
+The accompanying source package contains the LaTeX manuscript, verified
+reference records, declaration evidence ledgers, original Lean examples,
+and Python checks. The Lean examples use Lean 4.34.1 and import only
+\src{Lean}; their compiler log records the axioms reported for the four
+named theorems. The Python checks enumerate tape fibers and Boolean matrix
+counts using exact integers. The package README gives reproduction
+commands and identifies the pinned external sources. Public source links
+in the manuscript resolve to the reviewed repository revision.

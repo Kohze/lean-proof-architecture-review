@@ -1,0 +1,119 @@
+{
+  "date": "2026-10-08",
+  "purpose": "Three additional primary scholarly comparators for the selected analytic and probabilistic interfaces. These are substantive precedents, not evidence of empirical rarity.",
+  "method": "Read publisher bibliographic records and primary full texts through web browsing; retained all three primary PDFs with SHA256 hashes. No manuscript or bibliography file was edited.",
+  "references": [
+    {
+      "key": "Kudryashov2022",
+      "type": "inproceedings",
+      "title": "Formalizing the Divergence Theorem and the Cauchy Integral Formula in Lean",
+      "authors": ["Yury Kudryashov"],
+      "year": 2022,
+      "venue": "13th International Conference on Interactive Theorem Proving (ITP 2022)",
+      "series": "Leibniz International Proceedings in Informatics",
+      "volume": "237",
+      "pages": "23:1–23:19",
+      "doi": "10.4230/LIPIcs.ITP.2022.23",
+      "primary_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2022.23",
+      "author_manuscript_url": "https://drops.dagstuhl.de/opus/volltexte/2022/16732/pdf/LIPIcs-ITP-2022-23.pdf",
+      "publisher_metadata_verified": true,
+      "publisher_metadata_title": "Formalizing the Divergence Theorem and the Cauchy Integral Formula in Lean",
+      "publication_date": "2022-08-03",
+      "claim_supported": "Earlier Lean work already formalizes integration-theory transport and careful regularity interfaces: a GP-integral divergence theorem is transferred to the Bochner integral, and the resulting rectangular-domain theorem yields Cauchy–Goursat without continuity assumptions on the complex derivative.",
+      "limitation": "Its domains are rectangular boxes; it does not establish the sphere-local exact-form flux theorem or ordered differential-form representation used in the Mahler case.",
+      "closest_comparison": "This gives a direct precedent for organizing analysis around the assumptions of an integration interface. Mahler's specific audited bridge concerns sphere-local form congruence and a cutoff extension.",
+      "suggested_placement": "Discussion paragraph beginning 'These patterns have substantial antecedents', or the Mahler subsection's concluding comparison with established formal analysis.",
+      "evidence_locators": [
+        {"source": "publisher record", "locator": "Title, author, publication date, DOI, and Cite As/BibTeX fields"},
+        {"source": "primary PDF", "locator": "Sections 4.10–4.11, printed pp. 23:14–23:15 (PDF pages 14–15)", "topic": "Bochner-to-GP integrability bridge and divergence theorem"},
+        {"source": "primary PDF", "locator": "Section 5, printed pp. 23:15–23:16 (PDF pages 15–16)", "topic": "Cauchy–Goursat applications"}
+      ],
+      "retained_pdf": {
+        "path": "tmp/lean-study/prior-papers/Kudryashov2022.pdf",
+        "sha256": "4692664c3677f0afbac95f0a6900adaecba480c6b5bb5d467b1118e4ba704c43"
+      }
+    },
+    {
+      "key": "AudebaudPaulinMohring2009",
+      "type": "article",
+      "title": "Proofs of randomized algorithms in Coq",
+      "authors": ["Philippe Audebaud", "Christine Paulin-Mohring"],
+      "year": 2009,
+      "venue": "Science of Computer Programming",
+      "volume": "74",
+      "number": "8",
+      "pages": "568–589",
+      "doi": "10.1016/j.scico.2007.09.002",
+      "primary_url": "https://www.sciencedirect.com/science/article/pii/S0167642309000240",
+      "author_manuscript_url": "https://www.lri.fr/~paulin/ALEA/random-scp.pdf",
+      "publisher_metadata_verified": true,
+      "publisher_metadata_title": "Proofs of randomized algorithms in Coq",
+      "publication_date": "2009-06-01",
+      "year_note": "The selected reference is the 2009 expanded journal article; its DOI contains 2007, and an earlier conference version appeared in 2006.",
+      "claim_supported": "The Coq development interprets randomized programs as functionals M(A)=(A→[0,1])→[0,1], representing subprobabilities through expectations. It proves probability rules, supports general recursion, and verifies a Bernoulli sampler from coin flips.",
+      "limitation": "This is an expectation-based denotational account, not a cost-bearing compiler theorem for the particular fixed oracle machine and tape positions inspected in CommonBases.",
+      "closest_comparison": "The all-observables output certificate should be presented as a concrete application of established expectation semantics; its case-specific content is the connection to bounded banks and fixed-machine execution.",
+      "suggested_placement": "CommonBases final comparison paragraph, alongside CertiCrypt/EasyCrypt; optionally the discussion's sentence about observations and output distributions.",
+      "evidence_locators": [
+        {"source": "publisher record", "locator": "Title, author list, volume 74 issue 8, pages 568–589, date, and DOI"},
+        {"source": "author's publication bibliography", "url": "https://toccata.gitlabpages.inria.fr/toccata/publications/paulin_bib.html", "locator": "audebaud07scp record confirms journal version metadata"},
+        {"source": "primary author PDF", "locator": "Sections 1.3 and 2.2, PDF pages 3 and 6", "topic": "Expectation-functional interpretation"},
+        {"source": "primary author PDF", "locator": "Section 2.5.1, PDF page 9", "topic": "Pointwise equality of measures means equality on every observable"},
+        {"source": "primary author PDF", "locator": "Section 4.4, Definition 4 and Proposition 5, PDF pages 29–30", "topic": "Commuting expectation with recursive semantics"},
+        {"source": "primary author PDF", "locator": "Section 5.3, PDF pages 36–38", "topic": "Bernoulli implementation"}
+      ],
+      "retained_pdf": {
+        "path": "tmp/lean-study/prior-papers/AudebaudPaulinMohring2009.pdf",
+        "sha256": "62b9fb520c22afa3f8c75381a13638ae2b254d1ad8c000b98d72b251a7082cfd"
+      }
+    },
+    {
+      "key": "deMedeirosEtAl2025",
+      "type": "article",
+      "title": "Verified Foundations for Differential Privacy",
+      "authors": [
+        "Markus de Medeiros",
+        "Muhammad Naveed",
+        "Tancrède Lepoint",
+        "Temesghen Kahsai",
+        "Tristan Ravitch",
+        "Stefan Zetzsche",
+        "Anjali Joshi",
+        "Joseph Tassarotti",
+        "Aws Albarghouthi",
+        "Jean-Baptiste Tristan"
+      ],
+      "year": 2025,
+      "venue": "Proceedings of the ACM on Programming Languages",
+      "volume": "9",
+      "number": "PLDI",
+      "article_number": "191",
+      "pages": "191:1–191:25",
+      "doi": "10.1145/3729294",
+      "primary_url": "https://dl.acm.org/doi/10.1145/3729294",
+      "author_manuscript_url": "https://pages.cs.wisc.edu/~aws/papers/pldi25.pdf",
+      "publisher_metadata_verified": true,
+      "publisher_metadata_title": "Verified Foundations for Differential Privacy",
+      "publication_date": "2025-06-13",
+      "claim_supported": "SampCert verifies exact discrete samplers in Lean. Its SLang uses unnormalized mass functions; normalization promotes completed samplers to PMFs. Equal sampler distributions support substituting implementations without redoing downstream privacy proofs.",
+      "limitation": "Section 4.1 explicitly retains external runtime definitions in the trusted computing base; the article does not supply CommonBases' inspected fixed-machine cost and physical-tape theorem.",
+      "closest_comparison": "This is a close Lean precedent for separating executable sampling structure from distribution semantics and using equality of output laws as a downstream interface.",
+      "suggested_placement": "CommonBases final comparison paragraph and discussion of preservation of probability laws; citation should support established sampler/distribution interfaces, not a rarity claim.",
+      "evidence_locators": [
+        {"source": "publisher record", "locator": "Full author list, publication history, volume 9 PLDI, title, and DOI"},
+        {"source": "primary PDF", "locator": "ACM Reference Format, printed p. 191:2 (PDF page 2)", "topic": "All authors, year, article 191, 25 pages, DOI"},
+        {"source": "primary PDF", "locator": "Sections 3–3.1, printed pp. 191:12–191:14 (PDF pages 12–14)", "topic": "PMF boundary, SLang mass semantics, normalization, and finite loop cuts"},
+        {"source": "primary PDF", "locator": "Section 3.3.1, printed p. 191:17 (PDF page 17)", "topic": "Interchangeable Laplace implementations through equal distributions"},
+        {"source": "primary PDF", "locator": "Section 4.1, printed p. 191:19 (PDF page 19)", "topic": "External runtime definitions and compilation boundary"}
+      ],
+      "retained_pdf": {
+        "path": "tmp/lean-study/prior-papers/deMedeirosEtAl2025.pdf",
+        "sha256": "39d2de1ef8a9caccd48369a9330b7d93c0c5eb22a73fdbc461dbe65aad6c49a4"
+      }
+    }
+  ],
+  "proposed_comparison_paragraph": "Kudryashov's Lean formalization already transfers a divergence theorem between integration theories and derives Cauchy–Goursat under carefully chosen differentiability assumptions \\citep{Kudryashov2022}. Audebaud and Paulin-Mohring establish expectation-functional semantics for randomized Coq programs \\citep{AudebaudPaulinMohring2009}, while SampCert separates Lean sampling procedures from normalized distribution semantics and verifies exact discrete samplers \\citep{deMedeirosEtAl2025}. These precedents focus the present comparison on the particular sphere-local congruences and fixed-machine tape correspondence, while treating integration interfaces, observation semantics, and verified sampling as established approaches.",
+  "proposed_paragraph_placement": "discussion.tex, after the current sentences on verified compilers and probabilistic program logics in the paragraph beginning 'These patterns have substantial antecedents'; alternatively use the first sentence in the Mahler case and the second in the CommonBases concluding paragraph, retaining the third in discussion.",
+  "novelty_guardrail": "These references support positive claims about prior formalized mechanisms. The review neither establishes historical first use nor estimates how frequent the techniques are. Kudryashov is a divergence/complex-analysis comparator, not evidence of a general manifold Stokes formalization.",
+  "selection_note": "Prioritized a direct Lean integration-theory predecessor and two exact probabilistic-semantic comparators. General smooth-manifold library papers and newer Stokes preprints were not added merely to raise the bibliography count."
+}

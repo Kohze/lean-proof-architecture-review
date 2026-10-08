@@ -1,0 +1,400 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        6
+      ]
+    ],
+    "date-time": "2026-10-06T17:24:23Z",
+    "timestamp": 1791307463221,
+    "version": "4.3.1"
+  },
+  "publisher-location": "New York, NY, USA",
+  "reference-count": 32,
+  "publisher": "ACM",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2009,
+            1,
+            21
+          ]
+        ],
+        "date-time": "2009-01-21T00:00:00Z",
+        "timestamp": 1232496000000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "https://www.acm.org/publications/policies/copyright_policy#Background"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "dl.acm.org"
+    ],
+    "crossmark-restriction": true
+  },
+  "published-print": {
+    "date-parts": [
+      [
+        2009,
+        1,
+        21
+      ]
+    ]
+  },
+  "DOI": "10.1145/1480881.1480894",
+  "type": "proceedings-article",
+  "created": {
+    "date-parts": [
+      [
+        2009,
+        1,
+        20
+      ]
+    ],
+    "date-time": "2009-01-20T09:41:38Z",
+    "timestamp": 1232444498000
+  },
+  "page": "90-101",
+  "update-policy": "https://doi.org/10.1145/crossmark-policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 142,
+  "title": [
+    "Formal certification of code-based cryptographic proofs"
+  ],
+  "prefix": "10.1145",
+  "author": [
+    {
+      "given": "Gilles",
+      "family": "Barthe",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Instituto Madrileño de Estudios Avanzados, Madrid, Spain"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Benjamin",
+      "family": "Grégoire",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Institut National de Recherche en Informatique et en Automatique, Sophia Antipolis, France"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Santiago",
+      "family": "Zanella Béguelin",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Institut National de Recherche en Informatique et en Automatique, Sophia Antipolis, France"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "320",
+  "published-online": {
+    "date-parts": [
+      [
+        2009,
+        1,
+        21
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "e_1_3_2_1_1_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s00145-001-0014-7"
+    },
+    {
+      "key": "e_1_3_2_1_2_1",
+      "first-page": "151",
+      "volume-title": "Proceedings of security by game-playing in a proof assistant. In Proceedings of Lecture Notes in Computer Science",
+      "author": "Affeldt R.",
+      "year": "2007",
+      "unstructured": "R. Affeldt , M. Tanaka , and N. Marti . Formal proof of provable security by game-playing in a proof assistant . In Proceedings of security by game-playing in a proof assistant. In Proceedings of Lecture Notes in Computer Science , pages 151 -- 168 . Springer , 2007 . R. Affeldt, M. Tanaka, and N. Marti. Formal proof of provable security by game-playing in a proof assistant. In Proceedings of security by game-playing in a proof assistant. In Proceedings of Lecture Notes in Computer Science, pages 151--168. Springer, 2007."
+    },
+    {
+      "key": "e_1_3_2_1_3_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/1111037.1111046"
+    },
+    {
+      "key": "e_1_3_2_1_4_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.scico.2007.09.002"
+    },
+    {
+      "key": "e_1_3_2_1_5_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/1180405.1180450"
+    },
+    {
+      "key": "e_1_3_2_1_6_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-540-25984-8_29"
+    },
+    {
+      "key": "e_1_3_2_1_7_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/BFb0053428"
+    },
+    {
+      "key": "e_1_3_2_1_8_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/11761679_25"
+    },
+    {
+      "key": "e_1_3_2_1_9_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/964001.964003"
+    },
+    {
+      "key": "e_1_3_2_1_10_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/11617990_5"
+    },
+    {
+      "key": "e_1_3_2_1_11_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/SP.2006.1"
+    },
+    {
+      "key": "e_1_3_2_1_12_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/11818175_32"
+    },
+    {
+      "key": "e_1_3_2_1_13_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/1008731.1008734"
+    },
+    {
+      "key": "e_1_3_2_1_14_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/11787006_22"
+    },
+    {
+      "key": "e_1_3_2_1_15_1",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "crossref",
+      "first-page": "229",
+      "DOI": "10.1007/3-540-44598-6_14",
+      "volume-title": "Advances in Cryptology",
+      "author": "Coron J.-S.",
+      "year": "2000",
+      "unstructured": "J.-S. Coron . On the exact security of Full Domain Hash . In Advances in Cryptology , volume 1880 of Lecture Notes in Computer Science , pages 229 -- 235 . Springer-Verlag , 2000 . J.-S. Coron. On the exact security of Full Domain Hash. In Advances in Cryptology, volume 1880 of Lecture Notes in Computer Science, pages 229--235. Springer-Verlag, 2000."
+    },
+    {
+      "key": "e_1_3_2_1_16_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/1455770.1455817"
+    },
+    {
+      "key": "e_1_3_2_1_17_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s00145-002-0204-y"
+    },
+    {
+      "key": "e_1_3_2_1_18_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/0022-0000(84)90070-9"
+    },
+    {
+      "key": "e_1_3_2_1_19_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.tcs.2005.08.005"
+    },
+    {
+      "key": "e_1_3_2_1_20_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/B978-044482830-9/50029-1"
+    },
+    {
+      "key": "e_1_3_2_1_21_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/0022-0000(81)90036-2"
+    },
+    {
+      "key": "e_1_3_2_1_22_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.5555/645395.651928"
+    },
+    {
+      "key": "e_1_3_2_1_23_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/1111037.1111042"
+    },
+    {
+      "key": "e_1_3_2_1_24_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/JSAC.2002.806125"
+    },
+    {
+      "key": "e_1_3_2_1_25_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.5555/1785001.1785034"
+    },
+    {
+      "key": "e_1_3_2_1_26_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/503272.503288"
+    },
+    {
+      "key": "e_1_3_2_1_27_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-540-74835-9_15"
+    },
+    {
+      "key": "e_1_3_2_1_28_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1023/A:1011553200337"
+    },
+    {
+      "key": "e_1_3_2_1_29_1",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "crossref",
+      "first-page": "239",
+      "DOI": "10.1007/3-540-44647-8_15",
+      "volume-title": "Advances in Cryptology -- CRYPTO'01",
+      "author": "Shoup V.",
+      "year": "2001",
+      "unstructured": "V. Shoup . OAEP reconsidered . In Advances in Cryptology -- CRYPTO'01 , volume 2139 of Lecture Notes in Computer Science , pages 239 -- 259 . Springer-Verlag , 2001 . V. Shoup. OAEP reconsidered. In Advances in Cryptology -- CRYPTO'01, volume 2139 of Lecture Notes in Computer Science, pages 239--259. Springer-Verlag, 2001."
+    },
+    {
+      "key": "e_1_3_2_1_31_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/CSF.2008.19"
+    },
+    {
+      "key": "e_1_3_2_1_32_1",
+      "series-title": "Lecture Notes in Computer Science",
+      "volume-title": "Why provable security matters? In Advances in Cryptology -- EUROCRYPT'03",
+      "author": "Stern J.",
+      "year": "2003",
+      "unstructured": "J. Stern . Why provable security matters? In Advances in Cryptology -- EUROCRYPT'03 , volume 2656 of Lecture Notes in Computer Science . Springer-Verlag , 2003 . J. Stern. Why provable security matters? In Advances in Cryptology -- EUROCRYPT'03, volume 2656 of Lecture Notes in Computer Science. Springer-Verlag, 2003."
+    },
+    {
+      "key": "e_1_3_2_1_33_1",
+      "first-page": "1",
+      "article-title": "Coq development team",
+      "volume": "8",
+      "author": "The",
+      "year": "2006",
+      "unstructured": "The Coq development team . The Coq Proof Assistant Reference Manual v 8 . 1 , 2006 . Available at http://coq.inria.fr The Coq development team. The Coq Proof Assistant Reference Manual v8.1, 2006. Available at http://coq.inria.fr",
+      "journal-title": "The Coq Proof Assistant Reference Manual"
+    }
+  ],
+  "event": "POPL09: The 36th Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages",
+  "container-title": [
+    "Proceedings of the 36th annual ACM SIGPLAN-SIGACT symposium on Principles of programming languages"
+  ],
+  "original-title": [],
+  "link": [
+    {
+      "URL": "https://dl.acm.org/doi/10.1145/1480881.1480894",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://dl.acm.org/doi/pdf/10.1145/1480881.1480894",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        6,
+        18
+      ]
+    ],
+    "date-time": "2025-06-18T09:29:59Z",
+    "timestamp": 1750238999000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://dl.acm.org/doi/10.1145/1480881.1480894"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2009,
+        1,
+        21
+      ]
+    ]
+  },
+  "references-count": 32,
+  "alternative-id": [
+    "10.1145/1480881.1480894",
+    "10.1145/1480881"
+  ],
+  "URL": "http://dx.doi.org/10.1145/1480881.1480894",
+  "relation": {
+    "is-identical-to": [
+      {
+        "id-type": "doi",
+        "id": "10.1145/1594834.1480894",
+        "asserted-by": "object"
+      }
+    ]
+  },
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2009,
+        1,
+        21
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "2009-01-21",
+      "order": 2,
+      "name": "published",
+      "label": "Published",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    }
+  ]
+}

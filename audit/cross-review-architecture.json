@@ -1,0 +1,537 @@
+{
+  "reviewed_file": "papers/lean-proof-architecture/cases-architecture.tex",
+  "reviewed_file_sha256": "b1ae5e350af9c4847109a16bf820993e46e56deeceeae9ddefd580234658e337",
+  "source_commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "reviewer": "Independent discrete-case agent; did not author cases-architecture.tex",
+  "method": "Read architecture research findings, then independently read the mathematical definitions and actual local/endpoint proofs in thirteen pinned source/configuration files. Recomputed their Git blob SHA-1 values and compared with the untruncated complete Git tree. No TeX changes made.",
+  "recommendation": "Accept after two small precision edits; no high-severity formula or theorem-scope mismatch found.",
+  "ranked_findings": [
+    {
+      "rank": 1,
+      "id": "A1",
+      "severity": "medium",
+      "category": "definition completeness",
+      "status": "correction recommended",
+      "tex_lines": [
+        13,
+        15
+      ],
+      "quoted_text": "An ExtendedTrace A is a function on positive elements with values in [0,infinity], together with proofs of additivity, positive homogeneity, traciality, and lower semicontinuity.",
+      "finding": "The description omits the explicit map_zero field. For extended-valued functions, the other listed laws do not force the value at zero to be zero: the constant-infinity function satisfies the listed laws for positive scalars but fails map_zero. The actual ExtendedTrace interface excludes it.",
+      "suggested_correction": "Add zero preservation to the defining list, for example: \"... with value zero at zero, together with proofs of additivity, positive homogeneity, traciality, and lower semicontinuity.\"",
+      "evidence": [
+        {
+          "path": "lean/OAI/Analysis/TraceCone/Basic.lean",
+          "lines": [
+            50,
+            58
+          ],
+          "git_blob_sha1": "73d786d85aa544c5682dd77bc11089c38f8d31e8",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/TraceCone/Basic.lean#L50-L58"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "id": "A2",
+      "severity": "low",
+      "category": "filter hypothesis",
+      "status": "precision edit recommended",
+      "tex_lines": [
+        72,
+        83
+      ],
+      "quoted_text": "Its canonical convergence predicate for a filtered family ... Their combination ... gives uniqueness of a canonical limit.",
+      "finding": "The convergence formula is copied correctly, but the uniqueness theorem requires a nontrivial filter, written [l.NeBot]. The predicate itself is defined for arbitrary filters. The scalar-limit filters used later are nontrivial, so the transport endpoints are unaffected; the general prose statement should expose the uniqueness hypothesis.",
+      "suggested_correction": "Change \"for a filtered family\" to \"for a family along a nontrivial filter\", or qualify the uniqueness sentence with \"along a nontrivial filter\".",
+      "evidence": [
+        {
+          "path": "lean/OAI/Analysis/TraceCone/Basic.lean",
+          "lines": [
+            65,
+            70
+          ],
+          "git_blob_sha1": "73d786d85aa544c5682dd77bc11089c38f8d31e8",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/TraceCone/Basic.lean#L65-L70"
+        },
+        {
+          "path": "lean/OAI/Analysis/TraceCone/IdealTransport.lean",
+          "lines": [
+            177,
+            190
+          ],
+          "git_blob_sha1": "4b387ab059c84367e4de6d0348fff1f29b09d0eb",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/TraceCone/IdealTransport.lean#L177-L190"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "id": "A3",
+      "severity": "low",
+      "category": "source traceability",
+      "status": "optional editorial improvement",
+      "tex_lines": [
+        13,
+        216
+      ],
+      "finding": "The section gives source declaration names and bibliography citations, but no direct commit-pinned line hyperlinks for the substantial definitions and endpoint scope distinction. The source details are well supported in the research evidence; a few direct footnotes would make them as readily inspectable as those in cases-discrete.tex.",
+      "suggested_correction": "Optionally add short pinned-source footnotes at the convergence formula, SameFramedFlag formula, and final all-seams/full-solution comparison; avoid repeating raw long paths in the main text.",
+      "evidence": [
+        {
+          "path": "lean/OAI/Analysis/TraceCone/Basic.lean",
+          "lines": [
+            65,
+            70
+          ],
+          "git_blob_sha1": "73d786d85aa544c5682dd77bc11089c38f8d31e8",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/TraceCone/Basic.lean#L65-L70"
+        },
+        {
+          "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/Flags.lean",
+          "lines": [
+            148,
+            158
+          ],
+          "git_blob_sha1": "3756bb8e3686715410977cb9cfde5d60f7655800",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/Flags.lean#L148-L158"
+        },
+        {
+          "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedSolution.lean",
+          "lines": [
+            144,
+            155
+          ],
+          "git_blob_sha1": "f2457411ba1ec389cb9762ff72fa1cdb093dc83e",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedSolution.lean#L144-L155"
+        }
+      ]
+    }
+  ],
+  "confirmed_checks": [
+    {
+      "id": "T1",
+      "claim": "The ideal weight is literally zero on positive elements in I and infinity outside I; its existence theorem proves all ExtendedTrace fields using ideal heredity, scaling, star-square membership and closed sublevel sets.",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "lean/OAI/Analysis/TraceCone/FiniteIdeal.lean",
+          "lines": [
+            106,
+            164
+          ],
+          "git_blob_sha1": "dc6f37eea43e005895a90c39991c4e87fa142a3e",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/TraceCone/FiniteIdeal.lean#L106-L164"
+        },
+        {
+          "path": "lean/OAI/Analysis/TraceCone/IdealTransport.lean",
+          "lines": [
+            75,
+            86
+          ],
+          "git_blob_sha1": "4b387ab059c84367e4de6d0348fff1f29b09d0eb",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/TraceCone/IdealTransport.lean#L75-L86"
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "claim": "The finite-square domain is {x | tau(x* x)<infinity}, and finiteIdeal is the topological/norm closure of its nonunital star subalgebra. Closure absorption and finite-positive density are proved.",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "lean/OAI/Analysis/TraceCone/FiniteIdeal.lean",
+          "lines": [
+            172,
+            174
+          ],
+          "git_blob_sha1": "dc6f37eea43e005895a90c39991c4e87fa142a3e",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/TraceCone/FiniteIdeal.lean#L172-L174"
+        },
+        {
+          "path": "lean/OAI/Analysis/TraceCone/FiniteIdeal.lean",
+          "lines": [
+            234,
+            260
+          ],
+          "git_blob_sha1": "dc6f37eea43e005895a90c39991c4e87fa142a3e",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/TraceCone/FiniteIdeal.lean#L234-L260"
+        },
+        {
+          "path": "lean/OAI/Analysis/TraceCone/FiniteIdeal.lean",
+          "lines": [
+            289,
+            306
+          ],
+          "git_blob_sha1": "dc6f37eea43e005895a90c39991c4e87fa142a3e",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/TraceCone/FiniteIdeal.lean#L289-L306"
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "claim": "The idempotent correspondence and ideal-order equation I<=J iff iota_I+iota_J=iota_I have the correct direction. An additive bijection alone gives the ideal-poset isomorphism; scalar and convergence fields are used subsequently for recognition of trace-associated ideals.",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "lean/OAI/Analysis/TraceCone/IdealTransport.lean",
+          "lines": [
+            108,
+            129
+          ],
+          "git_blob_sha1": "4b387ab059c84367e4de6d0348fff1f29b09d0eb",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/TraceCone/IdealTransport.lean#L108-L129"
+        },
+        {
+          "path": "lean/OAI/Analysis/TraceCone/IdealTransport.lean",
+          "lines": [
+            140,
+            174
+          ],
+          "git_blob_sha1": "4b387ab059c84367e4de6d0348fff1f29b09d0eb",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/TraceCone/IdealTransport.lean#L140-L174"
+        },
+        {
+          "path": "lean/OAI/Analysis/TraceCone/IdealTransport.lean",
+          "lines": [
+            193,
+            228
+          ],
+          "git_blob_sha1": "4b387ab059c84367e4de6d0348fff1f29b09d0eb",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/TraceCone/IdealTransport.lean#L193-L228"
+        }
+      ]
+    },
+    {
+      "id": "T4",
+      "claim": "Positive ideal membership is equivalent to finiteness on every strictly positive cut. Canonical convergence uses limsup on the cut at the left and liminf on the uncut element at the right; neither inequality is reversed.",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "lean/OAI/Analysis/TraceCone/FiniteIdeal.lean",
+          "lines": [
+            308,
+            326
+          ],
+          "git_blob_sha1": "dc6f37eea43e005895a90c39991c4e87fa142a3e",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/TraceCone/FiniteIdeal.lean#L308-L326"
+        },
+        {
+          "path": "lean/OAI/Analysis/TraceCone/Basic.lean",
+          "lines": [
+            65,
+            70
+          ],
+          "git_blob_sha1": "73d786d85aa544c5682dd77bc11089c38f8d31e8",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/TraceCone/Basic.lean#L65-L70"
+        }
+      ]
+    },
+    {
+      "id": "T5",
+      "claim": "Scalar-zero convergence is canonical convergence along positive scalars approaching zero, rather than a general pointwise limit. The given infinite-value obstruction is correctly conditional and follows from positive scaling. Scalar-infinity convergence is first established pointwise through the support weight, then promoted to canonical convergence.",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "lean/OAI/Analysis/TraceCone/Basic.lean",
+          "lines": [
+            54,
+            55
+          ],
+          "git_blob_sha1": "73d786d85aa544c5682dd77bc11089c38f8d31e8",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/TraceCone/Basic.lean#L54-L55"
+        },
+        {
+          "path": "lean/OAI/Analysis/TraceCone/IdealTransport.lean",
+          "lines": [
+            262,
+            280
+          ],
+          "git_blob_sha1": "4b387ab059c84367e4de6d0348fff1f29b09d0eb",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/TraceCone/IdealTransport.lean#L262-L280"
+        },
+        {
+          "path": "lean/OAI/Analysis/TraceCone/IdealTransport.lean",
+          "lines": [
+            300,
+            353
+          ],
+          "git_blob_sha1": "4b387ab059c84367e4de6d0348fff1f29b09d0eb",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/TraceCone/IdealTransport.lean#L300-L353"
+        }
+      ]
+    },
+    {
+      "id": "T6",
+      "claim": "TraceConeEquiv includes additive bijection, zero and positive-scalar preservation, and convergence preservation in both directions. The displayed finIdeal/zeroIdeal endpoint bodies directly invoke only forward convergence preservation, then scalar rewriting, uniqueness and weight injectivity.",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "lean/OAI/Analysis/TraceCone/IdealTransport.lean",
+          "lines": [
+            369,
+            379
+          ],
+          "git_blob_sha1": "4b387ab059c84367e4de6d0348fff1f29b09d0eb",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/TraceCone/IdealTransport.lean#L369-L379"
+        },
+        {
+          "path": "lean/OAI/Analysis/TraceCone/IdealTransport.lean",
+          "lines": [
+            400,
+            421
+          ],
+          "git_blob_sha1": "4b387ab059c84367e4de6d0348fff1f29b09d0eb",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/TraceCone/IdealTransport.lean#L400-L421"
+        }
+      ]
+    },
+    {
+      "id": "F1",
+      "claim": "F_k^e is the frame image of coordinates vanishing in grades >=k; q_k^e is the named grade-k coordinate map after applying e inverse. SameFramedFlag requires equality of all prefixes and equality of these named maps only on F_(k+1), exactly as displayed.",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/Flags.lean",
+          "lines": [
+            148,
+            158
+          ],
+          "git_blob_sha1": "3756bb8e3686715410977cb9cfde5d60f7655800",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/Flags.lean#L148-L158"
+        }
+      ]
+    },
+    {
+      "id": "F2",
+      "claim": "IdentifiedBand stores one shape/common frame and graded row/column isomorphisms with prefix and named-coordinate laws. Nonemptiness is proved from actual_named_band_grades, then classical choice is used; cutGeneratorWitness is opaque with this constructed body.",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/BandBases.lean",
+          "lines": [
+            134,
+            168
+          ],
+          "git_blob_sha1": "a4edcc48afe6f7a343baec7bda7c825bc070a783",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/BandBases.lean#L134-L168"
+        },
+        {
+          "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MarkedFrames.lean",
+          "lines": [
+            18,
+            25
+          ],
+          "git_blob_sha1": "11795bf7975f75889c97bcf632482a253e20d398",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MarkedFrames.lean#L18-L25"
+        }
+      ]
+    },
+    {
+      "id": "F3",
+      "claim": "The produced band, diagram, frames, punctures and values all refer to the same chosen producedCutBand and its rowRanks/colRanks witnesses.",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedDiagram.lean",
+          "lines": [
+            36,
+            61
+          ],
+          "git_blob_sha1": "2e2eb8b10cc829690e1611e21ed7e6403bd4533c",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedDiagram.lean#L36-L61"
+        }
+      ]
+    },
+    {
+      "id": "F4",
+      "claim": "The all-seams assembly really covers eight named families by graftPlus surjectivity, finite endpoint cases and Boolean/sum cases. The inherited-family proof carries grade preservation, coordinate frame identifications and parent/child word evaluations into the full named flag predicate.",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/AllSeams.lean",
+          "lines": [
+            22,
+            67
+          ],
+          "git_blob_sha1": "2c8c04b32402528c8f448d1dec28b050627c5801",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/AllSeams.lean#L22-L67"
+        },
+        {
+          "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/AllSeams.lean",
+          "lines": [
+            231,
+            244
+          ],
+          "git_blob_sha1": "2c8c04b32402528c8f448d1dec28b050627c5801",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/AllSeams.lean#L231-L244"
+        },
+        {
+          "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/InheritedSeams.lean",
+          "lines": [
+            73,
+            80
+          ],
+          "git_blob_sha1": "87c649449275c68c4e53b3fd0def3bc87a94713a",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/InheritedSeams.lean#L73-L80"
+        },
+        {
+          "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/InheritedSeams.lean",
+          "lines": [
+            117,
+            160
+          ],
+          "git_blob_sha1": "87c649449275c68c4e53b3fd0def3bc87a94713a",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/InheritedSeams.lean#L117-L160"
+        }
+      ]
+    },
+    {
+      "id": "F5",
+      "claim": "The endpoint does equality-induced matrix-size rebasing, mirror rebasing, congruence through side values and valuesFromPorts, and final transport of FramedSeamEquation. The explanation is stronger than a rank-equality-only gloss and matches the actual proof.",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/SurfaceSurgery.lean",
+          "lines": [
+            188,
+            191
+          ],
+          "git_blob_sha1": "6f84237c85e0c8def65c8e99cc0c4e16e811970c",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/SurfaceSurgery.lean#L188-L191"
+        },
+        {
+          "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedSolution.lean",
+          "lines": [
+            18,
+            28
+          ],
+          "git_blob_sha1": "f2457411ba1ec389cb9762ff72fa1cdb093dc83e",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedSolution.lean#L18-L28"
+        },
+        {
+          "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedSolution.lean",
+          "lines": [
+            37,
+            97
+          ],
+          "git_blob_sha1": "f2457411ba1ec389cb9762ff72fa1cdb093dc83e",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedSolution.lean#L37-L97"
+        }
+      ]
+    },
+    {
+      "id": "F6",
+      "claim": "producedMarkedValues_allSeams has D.Proper, maximal chosen adjacent-facet rank, positive parent genus, CommRing R, Field K, Algebra R K, Finite V, punctures, an existing solution, and boundary indices. It has no boundary occurrence alignment hb premise. producedMarkedSolution adds exactly the displayed hb and uses it in the surface component.",
+      "verdict": "supported",
+      "evidence": [
+        {
+          "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedSolution.lean",
+          "lines": [
+            30,
+            38
+          ],
+          "git_blob_sha1": "f2457411ba1ec389cb9762ff72fa1cdb093dc83e",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedSolution.lean#L30-L38"
+        },
+        {
+          "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedSolution.lean",
+          "lines": [
+            136,
+            155
+          ],
+          "git_blob_sha1": "f2457411ba1ec389cb9762ff72fa1cdb093dc83e",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedSolution.lean#L136-L155"
+        },
+        {
+          "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedDiagram.lean",
+          "lines": [
+            100,
+            110
+          ],
+          "git_blob_sha1": "2e2eb8b10cc829690e1611e21ed7e6403bd4533c",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedDiagram.lean#L100-L110"
+        }
+      ]
+    },
+    {
+      "id": "N1",
+      "claim": "Novelty framing concerns the concrete analytic reconstruction/recognition chain and the common witness carrying named graded maps through exhaustive seam families. The text attributes records and abstraction interfaces to established practice and makes no historical-first or rarity claim.",
+      "verdict": "appropriately bounded",
+      "evidence": []
+    }
+  ],
+  "informational_notes": [
+    "The inherited seam ultimately obtains its old named equation from the original solution via the based-circle gauge. The prose is correct but could name this gauge if more detail is useful; ProducedDiagram.producedCutSeed_namedSeam makes that bridge explicit.",
+    "NonUnitalCStarAlgebra is a structure requirement and does not exclude algebras that also have a unit. \"C*-algebras not assumed unital\" is a possible stylistic refinement, not a substantive error.",
+    "No historical novelty inference was made from routine use of Classical.choice, opaque, records, or equality elimination."
+  ],
+  "verified_sources": [
+    {
+      "path": "lean/OAI/Analysis/TraceCone/Basic.lean",
+      "git_blob_sha1": "73d786d85aa544c5682dd77bc11089c38f8d31e8",
+      "bytes": 14258
+    },
+    {
+      "path": "lean/OAI/Analysis/TraceCone/FiniteIdeal.lean",
+      "git_blob_sha1": "dc6f37eea43e005895a90c39991c4e87fa142a3e",
+      "bytes": 18017
+    },
+    {
+      "path": "lean/OAI/Analysis/TraceCone/IdealTransport.lean",
+      "git_blob_sha1": "4b387ab059c84367e4de6d0348fff1f29b09d0eb",
+      "bytes": 18222
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/Flags.lean",
+      "git_blob_sha1": "3756bb8e3686715410977cb9cfde5d60f7655800",
+      "bytes": 13837
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/SurfaceSurgery.lean",
+      "git_blob_sha1": "6f84237c85e0c8def65c8e99cc0c4e16e811970c",
+      "bytes": 10756
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/BandBases.lean",
+      "git_blob_sha1": "a4edcc48afe6f7a343baec7bda7c825bc070a783",
+      "bytes": 9633
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MarkedFrames.lean",
+      "git_blob_sha1": "11795bf7975f75889c97bcf632482a253e20d398",
+      "bytes": 3635
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/InheritedSeams.lean",
+      "git_blob_sha1": "87c649449275c68c4e53b3fd0def3bc87a94713a",
+      "bytes": 8591
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/AllSeams.lean",
+      "git_blob_sha1": "2c8c04b32402528c8f448d1dec28b050627c5801",
+      "bytes": 11640
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedDiagram.lean",
+      "git_blob_sha1": "2e2eb8b10cc829690e1611e21ed7e6403bd4533c",
+      "bytes": 7943
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedSolution.lean",
+      "git_blob_sha1": "f2457411ba1ec389cb9762ff72fa1cdb093dc83e",
+      "bytes": 7694
+    },
+    {
+      "path": "lean/ComparatorChallenges/CharacterVarietiesAllSeamsSupport.json",
+      "git_blob_sha1": "c5b2017c0cdb46e77d2e6560898dbcdfbda90599",
+      "bytes": 429
+    },
+    {
+      "path": "lean/ComparatorChallenges/TraceIdealTransportSupport.json",
+      "git_blob_sha1": "5c89a31c11c8920c181bafdf91c85a474b83da0d",
+      "bytes": 1518
+    }
+  ],
+  "tex_edits_made": false
+}

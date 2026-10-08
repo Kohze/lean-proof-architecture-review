@@ -1,0 +1,370 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        6
+      ]
+    ],
+    "date-time": "2026-10-06T17:26:06Z",
+    "timestamp": 1791307566195,
+    "version": "4.3.1"
+  },
+  "publisher-location": "Berlin, Heidelberg",
+  "reference-count": 24,
+  "publisher": "Springer Berlin Heidelberg",
+  "isbn-type": [
+    {
+      "value": "9783642227912",
+      "type": "print"
+    },
+    {
+      "value": "9783642227929",
+      "type": "electronic"
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "published-print": {
+    "date-parts": [
+      [
+        2011
+      ]
+    ]
+  },
+  "DOI": "10.1007/978-3-642-22792-9_5",
+  "type": "book-chapter",
+  "created": {
+    "date-parts": [
+      [
+        2011,
+        8,
+        5
+      ]
+    ],
+    "date-time": "2011-08-05T11:32:14Z",
+    "timestamp": 1312543934000
+  },
+  "page": "71-90",
+  "source": "Crossref",
+  "is-referenced-by-count": 168,
+  "title": [
+    "Computer-Aided Security Proofs for the Working Cryptographer"
+  ],
+  "prefix": "10.1007",
+  "author": [
+    {
+      "given": "Gilles",
+      "family": "Barthe",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Benjamin",
+      "family": "Grégoire",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Sylvain",
+      "family": "Heraud",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Santiago Zanella",
+      "family": "Béguelin",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "297",
+  "reference": [
+    {
+      "key": "5_CR1",
+      "first-page": "387",
+      "volume-title": "17th ACM Conference on Computer and Communications Security, CCS 2010",
+      "author": "M. Backes",
+      "year": "2010",
+      "unstructured": "Backes, M., Maffei, M., Unruh, D.: Computationally sound verification of source code. In: 17th ACM Conference on Computer and Communications Security, CCS 2010, pp. 387–398. ACM, New York (2010)"
+    },
+    {
+      "key": "5_CR2",
+      "doi-asserted-by": "publisher",
+      "first-page": "100",
+      "DOI": "10.1109/CSFW.2004.1310735",
+      "volume-title": "17th IEEE Workshop on Computer Security Foundations, CSFW 2004",
+      "author": "G. Barthe",
+      "year": "2004",
+      "unstructured": "Barthe, G., D’Argenio, P., Rezk, T.: Secure information flow by self-composition. In: 17th IEEE Workshop on Computer Security Foundations, CSFW 2004, pp. 100–114. IEEE Computer Society, Washington (2004)"
+    },
+    {
+      "key": "5_CR3",
+      "first-page": "375",
+      "volume-title": "17th ACM Conference on Computer and Communications Security, CCS 2010",
+      "author": "G. Barthe",
+      "year": "2010",
+      "unstructured": "Barthe, G., Daubignard, M., Kapron, B., Lakhnech, Y.: Computational indistinguishability logic. In: 17th ACM Conference on Computer and Communications Security, CCS 2010, pp. 375–386. ACM, New York (2010)"
+    },
+    {
+      "key": "5_CR4",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "1",
+      "DOI": "10.1007/978-3-642-01465-9_1",
+      "volume-title": "Formal Aspects in Security and Trust",
+      "author": "G. Barthe",
+      "year": "2009",
+      "unstructured": "Barthe, G., Grégoire, B., Heraud, S., Zanella Béguelin, S.: Formal certification of ElGamal encryption. A gentle introduction to CertiCrypt. In: Degano, P., Guttman, J., Martinelli, F. (eds.) FAST 2008. LNCS, vol. 5491, pp. 1–19. Springer, Heidelberg (2009)"
+    },
+    {
+      "key": "5_CR5",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "180",
+      "DOI": "10.1007/978-3-642-19074-2_13",
+      "volume-title": "Topics in Cryptology – CT-RSA 2011",
+      "author": "G. Barthe",
+      "year": "2011",
+      "unstructured": "Barthe, G., Grégoire, B., Lakhnech, Y., Zanella Béguelin, S.: Beyond provable security verifiable IND-CCA security of OAEP. In: Kiayias, A. (ed.) CT-RSA 2011. LNCS, vol. 6558, pp. 180–196. Springer, Heidelberg (2011)"
+    },
+    {
+      "key": "5_CR6",
+      "first-page": "90",
+      "volume-title": "36th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages, POPL 2009",
+      "author": "G. Barthe",
+      "year": "2009",
+      "unstructured": "Barthe, G., Grégoire, B., Zanella Béguelin, S.: Formal certification of code-based cryptographic proofs. In: 36th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages, POPL 2009, pp. 90–101. ACM, New York (2009)"
+    },
+    {
+      "key": "5_CR7",
+      "doi-asserted-by": "publisher",
+      "first-page": "246",
+      "DOI": "10.1109/CSF.2010.24",
+      "volume-title": "23rd IEEE Computer Security Foundations Symposium, CSF 2010",
+      "author": "G. Barthe",
+      "year": "2010",
+      "unstructured": "Barthe, G., Hedin, D., Zanella Béguelin, S., Grégoire, B., Heraud, S.: A machine-checked formalization of Sigma-protocols. In: 23rd IEEE Computer Security Foundations Symposium, CSF 2010, pp. 246–260. IEEE Computer Society, Los Alamitos (2010)"
+    },
+    {
+      "key": "5_CR8",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "409",
+      "DOI": "10.1007/11761679_25",
+      "volume-title": "Advances in Cryptology - EUROCRYPT 2006",
+      "author": "M. Bellare",
+      "year": "2006",
+      "unstructured": "Bellare, M., Rogaway, P.: The security of triple encryption and a framework for code-based game-playing proofs. In: Vaudenay, S. (ed.) EUROCRYPT 2006. LNCS, vol. 4004, pp. 409–426. Springer, Heidelberg (2006)"
+    },
+    {
+      "key": "5_CR9",
+      "first-page": "445",
+      "volume-title": "37th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages, POPL 2010",
+      "author": "K. Bhargavan",
+      "year": "2010",
+      "unstructured": "Bhargavan, K., Fournet, C., Gordon, A.D.: Modular verification of security protocol code by typing. In: 37th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages, POPL 2010, pp. 445–456. ACM, New York (2010)"
+    },
+    {
+      "key": "5_CR10",
+      "first-page": "87",
+      "volume-title": "15th ACM Conference on Computer and Communications Security, CCS 2008",
+      "author": "B. Blanchet",
+      "year": "2008",
+      "unstructured": "Blanchet, B., Jaggard, A.D., Scedrov, A., Tsay, J.K.: Computationally sound mechanized proofs for basic and public-key Kerberos. In: 15th ACM Conference on Computer and Communications Security, CCS 2008, pp. 87–99. ACM, New York (2008)"
+    },
+    {
+      "key": "5_CR11",
+      "first-page": "140",
+      "volume-title": "27th IEEE Symposium on Security and Privacy, S&P 2006",
+      "author": "B. Blanchet",
+      "year": "2006",
+      "unstructured": "Blanchet, B.: A computationally sound mechanized prover for security protocols. In: 27th IEEE Symposium on Security and Privacy, S&P 2006, pp. 140–154. IEEE Computer Society, Los Alamitos (2006)"
+    },
+    {
+      "key": "5_CR12",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "537",
+      "DOI": "10.1007/11818175_32",
+      "volume-title": "Advances in Cryptology - CRYPTO 2006",
+      "author": "B. Blanchet",
+      "year": "2006",
+      "unstructured": "Blanchet, B., Pointcheval, D.: Automated security proofs with sequences of games. In: Dwork, C. (ed.) CRYPTO 2006. LNCS, vol. 4117, pp. 537–554. Springer, Heidelberg (2006)"
+    },
+    {
+      "issue": "2",
+      "key": "5_CR13",
+      "doi-asserted-by": "publisher",
+      "first-page": "51",
+      "DOI": "10.1016/j.entcs.2008.04.080",
+      "volume": "198",
+      "author": "S. Conchon",
+      "year": "2008",
+      "unstructured": "Conchon, S., Contejean, E., Kanig, J., Lescuyer, S.: CC(X): Semantic combination of congruence closure with solvable theories. Electronic Notes in Theoretical Computer Science 198(2), 51–69 (2008)",
+      "journal-title": "Electronic Notes in Theoretical Computer Science"
+    },
+    {
+      "key": "5_CR14",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "414",
+      "DOI": "10.1007/978-3-540-70545-1_38",
+      "volume-title": "Computer Aided Verification",
+      "author": "C.J.F. Cremers",
+      "year": "2008",
+      "unstructured": "Cremers, C.: The scyther tool: Verification, falsification, and analysis of security protocols. In: Gupta, A., Malik, S. (eds.) CAV 2008. LNCS, vol. 5123, pp. 414–418. Springer, Heidelberg (2008)"
+    },
+    {
+      "key": "5_CR15",
+      "unstructured": "Detlefs, D., Nelson, G., Saxe, J.B.: Simplify: A theorem prover for program checking. Tech. Rep. HPL-2003-148, HP Laboratories Palo Alto (2003)"
+    },
+    {
+      "key": "5_CR16",
+      "unstructured": "Filliâtre, J.C.: The WHY verification tool: Tutorial and Reference Manual Version 2.28 (2010), \n                    \n                      http://why.lri.fr"
+    },
+    {
+      "key": "5_CR17",
+      "unstructured": "Halevi, S.: A plausible approach to computer-aided cryptographic proofs. Cryptology ePrint Archive, Report 2005/181 (2005)"
+    },
+    {
+      "key": "5_CR18",
+      "doi-asserted-by": "crossref",
+      "first-page": "685",
+      "DOI": "10.1016/B978-044482830-9/50029-1",
+      "volume-title": "Handbook of Process Algebra",
+      "author": "B. Jonsson",
+      "year": "2001",
+      "unstructured": "Jonsson, B., Yi, W., Larsen, K.G.: Probabilistic extensions of process algebras. In: Bergstra, J., Ponse, A., Smolka, S. (eds.) Handbook of Process Algebra, pp. 685–710. Elsevier, Amsterdam (2001)"
+    },
+    {
+      "issue": "1-2",
+      "key": "5_CR19",
+      "doi-asserted-by": "crossref",
+      "first-page": "85",
+      "DOI": "10.3233/JCS-1998-61-205",
+      "volume": "6",
+      "author": "L.C. Paulson",
+      "year": "1998",
+      "unstructured": "Paulson, L.C.: The inductive approach to verifying cryptographic protocols. J. of Comput. Secur. 6(1-2), 85–128 (1998)",
+      "journal-title": "J. of Comput. Secur."
+    },
+    {
+      "key": "5_CR20",
+      "unstructured": "Shoup, V.: Sequences of games: a tool for taming complexity in security proofs. Cryptology ePrint Archive, Report 2004/332 (2004)"
+    },
+    {
+      "key": "5_CR21",
+      "doi-asserted-by": "publisher",
+      "first-page": "121",
+      "DOI": "10.1016/j.entcs.2008.12.121",
+      "volume": "228",
+      "author": "A. Stump",
+      "year": "2009",
+      "unstructured": "Stump, A.: Proof checking technology for satisfiability modulo theories. Electr. Notes Theor. Comput. Sci. 228, 121–133 (2009)",
+      "journal-title": "Electr. Notes Theor. Comput. Sci."
+    },
+    {
+      "key": "5_CR22",
+      "unstructured": "The Coq development team: The Coq Proof Assistant Reference Manual Version 8.3 (2010), \n                    \n                      http://coq.inria.fr"
+    },
+    {
+      "key": "5_CR23",
+      "unstructured": "Zanella Béguelin, S.: Formal Certification of Game-Based Cryptographic Proofs. Ph.D. thesis, Ecole Nationale Supérieure des Mines de Paris – Mines ParisTech (2010)"
+    },
+    {
+      "key": "5_CR24",
+      "doi-asserted-by": "publisher",
+      "first-page": "237",
+      "DOI": "10.1109/SP.2009.17",
+      "volume-title": "30th IEEE Symposium on Security and Privacy, S&P 2009",
+      "author": "S. Zanella Béguelin",
+      "year": "2009",
+      "unstructured": "Zanella Béguelin, S., Grégoire, B., Barthe, G., Olmedo, F.: Formally certifying the security of digital signature schemes. In: 30th IEEE Symposium on Security and Privacy, S&P 2009, pp. 237–250. IEEE Computer Society, Los Alamitos (2009)"
+    }
+  ],
+  "container-title": [
+    "Lecture Notes in Computer Science"
+  ],
+  "original-title": [],
+  "link": [
+    {
+      "URL": "http://link.springer.com/content/pdf/10.1007/978-3-642-22792-9_5.pdf",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2021,
+        5,
+        3
+      ]
+    ],
+    "date-time": "2021-05-03T07:36:39Z",
+    "timestamp": 1620027399000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://link.springer.com/10.1007/978-3-642-22792-9_5"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2011
+      ]
+    ]
+  },
+  "ISBN": [
+    "9783642227912",
+    "9783642227929"
+  ],
+  "references-count": 24,
+  "URL": "http://dx.doi.org/10.1007/978-3-642-22792-9_5",
+  "relation": {},
+  "ISSN": [
+    "0302-9743",
+    "1611-3349"
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2011
+      ]
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "repository": "leanprover/comparator",
+  "commit": "ca04cfc72b550331658ec314bf47685281bfd4bf",
+  "files": [
+    {
+      "path": "Main.lean",
+      "sha256": "bb97e3e56d35431cfc7fbef9153935f85e82cde8cc0fc588ceb0119022646cec",
+      "git_blob": "8560511ff73fbcd48e8d1abba2c22a976c52c393"
+    },
+    {
+      "path": "README.md",
+      "sha256": "cfdf0ff608755d56f3bad62acc86273bc0c11591335678344bf53cb733b61772",
+      "git_blob": "e1d67f66231d4d18feae57797ee850ab5e00f2c0"
+    },
+    {
+      "path": "Comparator/Axioms.lean",
+      "sha256": "863c5e1329811be0427880e08c171de733343491c5a3619b5dbf2e12b34c6125",
+      "git_blob": "8da75bf80b27f2a71ad2312653b105442c5f5992"
+    },
+    {
+      "path": "Comparator/Compare.lean",
+      "sha256": "9bc34cb7de5a069a6fef7f3b13b20fea22f1d52603f74320a93d519b735ad3dd",
+      "git_blob": "8bf63632315171a533d41479c7d831d9e6fcd175"
+    },
+    {
+      "path": "Comparator/Util.lean",
+      "sha256": "693d845330dd7122565aeb19314a3e3de4b49f9a8a7ac6e1fadbc9ab374b9f88",
+      "git_blob": "131a0708db68cc331a8f9d1743f719b37aa68cbd"
+    }
+  ]
+}

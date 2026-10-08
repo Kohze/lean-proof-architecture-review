@@ -1,0 +1,30 @@
+[
+  {
+    "path": "Mathlib/Analysis/Calculus/DifferentialForm/Basic.lean",
+    "commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+    "git_blob_sha1": "6d5ebd7f10cb4bf8871581aac2c87f3380af9a58",
+    "sha256": "faf5c0543d2c00a38af8e5764e9c0d722db5c24d5f61437f15299f255bc1fd2e",
+    "bytes": 13635
+  },
+  {
+    "path": "Mathlib/Algebra/Polynomial/Sequence.lean",
+    "commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+    "git_blob_sha1": "63718f3e1e4bb02bbcab89408f0c7d760f5e81b2",
+    "sha256": "c0f1be67db5c11f3326a8bc80140fee079ba0a4dabf8d2986d88c9cdcb7a9503",
+    "bytes": 9352
+  },
+  {
+    "path": "Mathlib/MeasureTheory/Integral/DivergenceTheorem.lean",
+    "commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+    "git_blob_sha1": "018872f8d0a00ed12c35866cde830971508a8326",
+    "sha256": "7801deae1fa630bca3f1966f17b9005e0e9dfc86be62f7abd14e88bece1a26cc",
+    "bytes": 33762
+  },
+  {
+    "path": "Mathlib/Analysis/Normed/Module/Alternating/Basic.lean",
+    "commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+    "git_blob_sha1": "52e68a3388580c4af7defad23b8085005083cc20",
+    "sha256": "8c662ed98e80329f02cb4245e0fb63b4372718853ec7543231739fd0d57ea111",
+    "bytes": 31017
+  }
+]

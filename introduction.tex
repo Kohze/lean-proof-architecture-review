@@ -1,0 +1,64 @@
+\section{Introduction}
+
+A theorem prover checks a formal proposition, but a mathematician also wants
+to know why that proposition expresses the intended argument. This question
+becomes particularly interesting when a proof crosses several mathematical
+languages. A graph may become a Boolean matrix, a differential form may
+acquire a continuously bundled representation, or an estimator may become
+a program reading a particular sequence of random bits. At each crossing,
+the proof must identify the information that the next step consumes and
+show that the chosen representation retains it.
+
+Lean provides a dependent type theory, an extensible elaborator, and a
+programming language \citep{deMouraUllrich2021}. Mathlib supplies a large
+shared mathematical vocabulary \citep{mathlib2020}. Neither a dependent
+record nor an automated arithmetic proof is unusual by itself. The useful
+question is what mathematical specification a record carries, and what
+argument becomes possible after that specification has been proved.
+Accounts of proof anatomy and specification-driven development make this
+perspective explicit \citep{AvigadEtAl2024Anatomy,CommelinTopaz2024}.
+
+Substantial precedents also matter when assessing a new collection. The
+formalizations of the odd-order theorem and the Kepler conjecture already
+combined extensive libraries with large proof decompositions and verified
+computation \citep{GonthierEtAl2013,HalesEtAl2017}. In Lean, perfectoid
+spaces and schemes required careful choices of mathematical objects and
+interfaces \citep{Perfectoid2020,Schemes2021}. Such projects show why the
+presence of a difficult theorem, or a large number of declarations, is
+insufficient evidence for a new formalization method. A useful review must
+locate a more specific mechanism and explain its mathematical purpose.
+
+The OpenAI collection offers an unusually broad setting in which to look
+for these mechanisms \citep{OAIRepository}. We select six developments
+whose sources expose a substantial transition between representations.
+The first two concern finite probability and algorithms; the next two
+concern analysis; the final two concern reconstruction and transport of
+algebraic data. The selected statements have different roles: four are
+public endpoints, while trace-ideal transport and all-seams compatibility
+are support results with their own explicit conclusions. Reading the
+support results on their own terms reveals useful mathematics that a list
+of headline theorem titles would miss.
+
+Three questions guide the review. What information does the intermediate
+representation retain? Which theorem connects it to the intended object?
+Where is that theorem used to discharge the next step's hypotheses?
+For common bases, the answer includes the law of the output and the
+execution cost of one fixed machine. For Mahler, it includes both equality
+of form-valued fields and agreement near the integration boundary. For
+character varieties, it includes named maps on graded pieces, beyond
+equality of the corresponding subspaces.
+
+The contribution is a comparative analysis of these concrete interfaces.
+We give source anchors, trace the relevant definitions and hypotheses,
+and separate established methods from the particular mathematical choices
+made in each development. We then work out small examples that expose the
+reason for the stronger specifications. These examples are elementary;
+their role is explanatory. The proposed distinction between preservation
+of data, laws, estimates, and local information is a reading framework,
+rather than a claim that the underlying methods originate in this release.
+
+Section~\ref{sec:method} explains the source selection and evidence.
+Table~\ref{tab:overview} gives the overview before the case studies in
+Section~\ref{sec:cases}. Section~\ref{sec:worked} develops the examples,
+and Section~\ref{sec:discussion} considers what can be reused and what
+the comparison establishes about novelty.

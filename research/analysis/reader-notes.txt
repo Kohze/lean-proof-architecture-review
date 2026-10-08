@@ -1,0 +1,340 @@
+ANALYSIS CASES FOR THE LEAN PROOF-ARCHITECTURE REVIEW
+
+Method and intended use
+
+These notes concern source at openai/math commit
+fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb. Each cited raw file has been
+downloaded and its Git blob SHA-1 matched against the complete, untruncated
+Git tree. findings.json gives exact theorem names, line spans, short excerpts,
+hashes and pinned GitHub links. source-manifest.json records 44 cited or
+contextual source files. I inspected the endpoint bodies and the specific
+mechanisms described below, rather than treating theorem names or scope pages
+as proof evidence. This is source tracing; no Lean build or kernel/comparator
+validation was performed in this subtask. The comparator statement files have
+intentional sorry placeholders and are not the implementation evidence.
+
+Two families justify inclusion. Their interest lies in concrete interfaces
+between kinds of mathematics, not in the fact that their endpoints are famous.
+The underlying mathematics uses familiar singular vectors, dual test families,
+horizontal forms and cutoff functions. Claims of historical priority or
+frequency across Lean developments would require a separate study.
+
+CASE 1. CROUZEIX: FOUR COMPRESSED RESOLVENTS CLOSE A SHARP NORM BOUND
+
+The endpoint and the useful internal interface
+
+OAI.DirectCrouzeix.complete_crouzeix has target UniversalBound 2 [D1]. The
+definitions in Model.lean make this concrete. For A an n-by-n complex matrix
+and B_0,...,B_d m-by-m complex matrices, with n,m>0, it asserts
+
+  ||sum_{k=0}^d A^k tensor B_k||
+      <= 2 sup_{z in W(A)} ||sum_{k=0}^d z^k B_k||.
+
+The norm is the operator 2-norm, the tensor is the literal matrix Kronecker
+product, and W(A) is the set of <u,Au> for Euclidean unit vectors. In
+particular, the endpoint does not retain a normality or nonempty-interior
+assumption on W(A). This case is the finite-matrix polynomial development;
+the arbitrary-Hilbert-space and holomorphic/rational variants are elsewhere.
+
+The mathematically substantial interface is analytic_domain_core
+(DomainCore.lean 15-117) [D2]. It accepts a scalar polynomial sequence b_k,
+a continuous boundary parametrization h, and a matrix resolvent field R(t).
+Its inputs expose every needed analytic fact: finite Faber expansion of
+matrix polynomials, lower and upper coefficient-energy bounds, the exact
+negative Fourier coefficients R_hat(-k)=b_k(A), vanishing positive Fourier
+coefficients, and positivity of R+R*. Given a matrix polynomial F bounded by
+one on that boundary, it concludes ||F(A)||<=2. These facts are genuine
+conditional inputs at this local theorem; ExteriorCollar.lean constructs
+them before the final endpoint invokes the theorem [D5].
+
+The sharp constant is a scalar cancellation
+
+Let T be the Euclidean continuous linear map represented by the amplified
+matrix polynomial and let gamma=||T||. The zero case is immediate. For
+gamma>0, exists_singular_pair supplies unit vectors x,y with
+
+  T x=gamma y,       T* y=gamma x.
+
+The supporting proof obtains a norm attainer from compactness of the unit
+sphere, then proves the adjoint relation by showing that the squared norm
+of T*y-gamma x is zero. It does not require a full singular-value
+decomposition. matrixify turns x,y, indexed by Fin n times Fin m, into
+rectangular matrices X,Y. This makes the amplification compatible with
+ordinary matrix compression and Hilbert-Schmidt energy:
+
+  P=X* R X,   Q=Y* R Y,   M=Y* R X,   L=X* R Y,
+  a=integral ||M(t)||_HS^2.
+
+The proof derives a>0 from the singular-vector pairing and a cross-boundary
+estimate. It then obtains the two diagonal estimates
+
+  integral ||P+P*||_HS^2 <= 4a/gamma^2,
+  integral ||Q+Q*||_HS^2 <= 4a/gamma^2.
+
+Fourier bookkeeping gives
+
+  a <= integral ||M+L*||_HS^2.
+
+Finally, positive_compression_blocks compresses R+R* by [X Y]. The result is
+a positive 2-by-2 block matrix whose diagonal blocks are P+P*, Q+Q* and whose
+off-diagonal block is M+L*. positive_block_hsSq gives the pointwise estimate
+
+  2 ||M+L*||_HS^2 <= ||P+P*||_HS^2+||Q+Q*||_HS^2.
+
+Integration now yields 2a<=8a/gamma^2. Since a>0, gamma^2<=4 and gamma<=2.
+The final lines of analytic_domain_core display precisely this scalar
+cancellation. This is a useful review passage: the complete matrix bound
+comes from keeping both singular-vector relations and both ordered matrix
+products, then placing their four compressions in one positive block.
+
+Where the diagonal energies come from
+
+singular_ordered_pairings and singular_diagonal_estimates
+(PolynomialEnergy.lean 146-219) connect F*G and G*F to different diagonal
+compressions. The two orders matter because matrix coefficients do not
+commute. Left and right multiplication by a boundary contraction F cannot
+increase the polynomial Hilbert-Schmidt energy. The cross-boundary estimate
+and the upper Faber-energy estimate therefore bound every finite test-family
+pairing of each diagonal coefficient sequence [D3].
+
+The dual step is unusually transparent. weighted_coefficient_dual assumes
+for every finite matrix test family C that
+
+  |sum_k entryPair(P_k,C_k)|^2
+      <= b sum_k w_k ||C_k||_HS^2,    w_k>0.
+
+It substitutes C_k=w_k^{-1} conjugate(P_k). The project uses a bilinear
+entryPair, which explains the entrywise conjugate in the witness. Both the
+pairing and the weighted test energy reduce to
+
+  s=sum_k ||P_k||_HS^2/w_k.
+
+Thus s^2<=bs and s>=0 force s<=b. weighted_sequence_dual then applies this
+finite lemma to every prefix and uses nonnegative bounded partial sums to
+obtain the infinite sum. For the Faber weights w_0=1 and w_k=2 for k>0, the
+result is the constant term plus one half of the positive-index tail.
+That half-weight is exactly what anti_diagonal_energy needs to account for
+the energy of P+P*. The transferable technique is to supply the optimizing
+finite witness explicitly and postpone the infinite sum until a monotone
+scalar argument suffices.
+
+The Faber weights are proved, not inserted as axioms
+
+faber_hilbert_coefficient_bounds (FaberEnergy.lean 77-110) explains the
+weights [D4]. The boundary Faber series is a nonnegative Fourier series plus
+a remainder having no nonnegative Fourier coefficients. Orthogonality gives
+the exact identity
+
+  E(Faber series)=sum ||C_k||^2+E(remainder).
+
+The remainder is also the action of a nonnegative boundary kernel K on the
+nonconstant Fourier series. Both kernel marginals are one. A generic
+markov_kernel_contraction first proves the weighted squared-norm estimate
+pointwise, integrates it, swaps the two integrals, and uses the other
+marginal. Hence the remainder energy is at most the energy of the
+nonconstant coefficients. Adding the positive Fourier part gives weight
+one for the constant and two for all other coefficients. This derivation
+reveals why the apparently technical normalization facts and the missing
+constant term are indispensable to the sharp matrix estimate.
+
+Closing the geometry-to-analysis boundary
+
+exterior_collar_bound (ExteriorCollar.lean 76-96) supplies the abstract core
+with an actual exterior conformal parametrization [D5]. Its
+faber_resolvent_data defines a concrete inverse generating function, proves
+its Fourier coefficients and absence of positive frequencies, and obtains
+positivity of Q+Q* from geometric supporting halfplanes. Thus the positive
+resolvent needed by the block argument is an output at this stage.
+
+The final endpoint handles possible degeneracy of W(A) by a separate outer
+approximation [D6]. exists_exponential_outer works for every compact,
+nonempty convex K. It chooses a finite direction net containing the four
+coordinate axes and builds a finite sum of exponentials of affine support
+inequalities. The axes give boundedness of the sublevel; the finer direction
+net keeps the sublevel in an arbitrarily small neighborhood of K. The
+endpoint takes M to be the boundary supremum, sets rho=M+epsilon/2, puts
+W(A) in the open set {z:||F(z)||<rho}, and chooses the outer sublevel inside
+that open set. The scaled analytic estimate gives ||F(A)||<=2M+epsilon;
+le_of_forall_pos_le_add removes epsilon. Smooth analytic boundaries are
+therefore auxiliary objects, rather than additional endpoint assumptions.
+
+Assessment and comparison
+
+The proof devices above are established mathematics. What warrants a case
+study is their exact composition: tensor vectors become rectangular
+compressions, ordered polynomial products produce two dual estimates,
+Fourier constant terms fix the coefficients, and positivity reduces the
+answer to one scalar cancellation. A standard comparison point is the
+Crouzeix-Palencia 2017 proof, which obtains complete constant 1+sqrt(2) and
+centers the Cauchy transform of conjugate holomorphic functions
+(https://arxiv.org/abs/1702.00668). This contrast does not establish that all
+other approaches have that architecture or that the project was the first
+to use these devices. Similarly, the finite Faber expansion itself is not
+a novel basis construction: DomainCore.lean 119-151 adapts Mathlib's
+Polynomial.Sequence.span_degreeLT to matrix coefficients, using unit
+leading coefficients. The correct object of attention is the proof's
+interfaces and exact constants.
+
+CASE 2. MAHLER: ORDERED FORMS, TANGENT VANISHING AND BOUNDARY LOCALITY
+
+The endpoint and the actual analytic hypotheses
+
+OAI.SymmetricMahler.symmetric_mahler (MainTheorem.lean 12-22) concludes
+
+  4^n/n! <= volume(K) volume(K^polar)
+
+for n>=1 and K compact, convex, origin-symmetric, with nonempty interior
+[M6]. The ambient space is Fin n -> R with ordinary Lebesgue volume.
+coordinatePolar is the literal set {p: forall v in K, sum_i p_i v_i<=1}.
+This case concerns that inequality endpoint; its equality classification
+is a separate development.
+
+The analytic machinery is organized around MassHypotheses [M5]. It records
+positive dimension and degree, an open domain containing zero,
+holomorphic components f_j, an isolated common zero at zero, a homogeneous
+degree-m polynomial leading map G with no nonzero common zero, an actual
+Euclidean O(||z||^(m+1)) Taylor remainder, and compact sublevels contained
+in the domain. It contains no mass inequality or flux-value field.
+euclideanSpecial_massHypotheses proves this package for the finite-strip
+special map using an injective measurement matrix A and m>=2. Its components
+have the concrete form inverseF(row_j(A,z))^m, and its leading polynomials
+are powers of the corresponding linear forms. The Taylor estimate is
+transported across the PiLp continuous linear equivalence in both domain
+and codomain; this is why the exact Euclidean realization matters.
+
+The generic flux result does retain MassHypotheses as inputs. The body
+reduction symmetric_mahler_from_special_homogeneous_values temporarily
+retains the special-family numerical homogeneous flux value as an input.
+The last proof in MainTheorem constructs the special MassHypotheses and
+applies homogeneousSphereFlux_value to supply that input. Neither the
+numerical value nor a general Sard theorem remains in the final body
+statement: positive-level noncriticality is proved for the actual special
+family by euclideanSpecial_positive_regular_nonzero.
+
+The local algebra and why the horizontal term vanishes
+
+Write n=k+2. The deformation uses a one-form alpha_t and a one-form beta.
+The continuous transgression primitive has degree 2(k+1) and is the ordered
+form
+
+  eta_t=alpha_t wedge beta wedge (d alpha_t)^k.
+
+The ambient exterior derivative identity keeps both terms:
+
+  d eta_t=beta wedge (d alpha_t)^(k+1)-singleResidual_t.
+
+PowerTransgression.lean derives this from actual Frechet differentiation,
+the exterior product rule and d^2 alpha_t=0; it does not stipulate a formal
+symbolic differential calculus [M2]. The full residual has k+1 placements
+of d beta, and HomogeneousVariationCoefficient.lean proves their exact
+multiplicity. Consequently, after restriction to sphere tangent tuples,
+
+  residual_t=-(k+1) d eta_t.
+
+The disappearance of the first ambient term deserves explanation. It is
+not a discarded premise. At z!=0, the sphere tangent space has real
+dimension 2n-1. Its circle tangent i*z is nonzero. Homogeneity shows that
+beta and d alpha_t annihilate that tangent direction, so their top-degree
+wedge is horizontal and vanishes [M1].
+
+horizontal_top_eq_zero makes that familiar exterior-algebra fact explicit.
+Given an independent top-degree tuple, it forms the associated basis,
+chooses a nonzero coordinate of the horizontal vector V, replaces that
+slot by V, and expands V in the basis. Alternation kills all terms except
+the chosen one. Since the chosen coefficient is nonzero and the replaced
+evaluation is zero by horizontality, the original evaluation is zero.
+Dependent tuples already vanish by alternation. SphereForms.lean then
+instantiates this generic argument with V=i*z and the verified tangent
+dimension. This supplies a concrete algebra-to-geometry bridge beneath
+the transgression identity.
+
+Two useful representations, one exact reconciliation
+
+The project deliberately has two constructions of eta_t [M3]. One builds
+the literal unbundled shuffle form and bundles it continuously using a
+finite basis expansion; this gives a convenient evaluation-by-evaluation
+regularity proof. The other builds a continuous product from pairExterior
+and continuous wedge powers; this is convenient for actual derivative
+product rules. Their recursive ordered slot types differ syntactically.
+
+WedgePowerSlots k is recursively Fin 2 plus WedgePowerSlots(k-1). This keeps
+the two slots of every exterior factor visible. sourcePrimitiveSlots and
+primitiveFinEquiv both flatten alpha, beta and those ordered pairs to
+Fin(2(k+1)), but take different routes through equivalences. The lemma
+sourcePrimitiveSlots_eq_primitiveFinEquiv proves equality of the routes by
+cases on the sum slots. The next lemma uses injectivity of
+ContinuousAlternatingMap.toAlternatingMap and the two shuffle descriptions
+to identify the entire continuous fields.
+
+This equality is a mathematically significant interface theorem. Pointwise
+agreement of some evaluations would not by itself identify their Frechet
+derivatives as continuous-map-valued fields. Equality of the fields does.
+homogeneous_flux_endpoints rewrites the primitive in the proved tangent
+transgression, then feeds it to the analytic theorem that expects the
+other representation. The conditional theorem is explicitly named
+homogeneousFlux_endpoints_of_transgression and visibly retains the local
+formula. The representation bridge is the step that discharges it.
+
+Boundary locality avoids imposing regularity at the singular origin
+
+The primitive is C2 on the punctured space, which suffices for the sphere
+flux argument [M4]. ClosedBoundaryStokes.lean provides a reusable locality
+theorem. If omega is C2 on an open U containing a closed set K, smooth
+separation gives chi equal to one near K and zero near U complement.
+The field eta=chi*omega is globally C2: inside U use the product rule;
+outside U it is eventually the zero field. Near K it is eventually omega.
+
+For K the sphere, that neighborhood equality preserves d omega there:
+the proof unfolds extDeriv and uses the eventual-equality rule for the
+Frechet derivative. Coordinate Stokes is now applicable to global eta;
+d^2 eta=0 makes the integral of d eta over the sphere zero. Transport and
+tangent-density congruence allow the result to be used for the original
+complex form and even for another field agreeing with c*d eta only on
+tangent tuples. No regularity at the center is introduced.
+
+This makes a clean chain. The residual agrees tangentially with
+-(k+1)d eta_t, so its flux is zero. The fundamental theorem of calculus
+makes the deformation's homogeneous path flux constant. Comparing its
+two endpoints gives the numerical value (pi*m)^n. A small-sphere limit and
+the special finite-strip mass reduction feed that value into the final
+convex-body inequality. The one-complex-dimensional case is handled
+separately by the circle calculation, as homogeneousSphereFlux_value
+shows explicitly.
+
+Assessment and the Mathlib boundary
+
+The cutoff principle, top-degree horizontality and transgression argument
+are standard mathematical tools. Their formal integration is the useful
+case: recursive slot bookkeeping supports exact wedge multiplicities;
+continuous bundling supports real Frechet differentiation; equality of
+those representations makes the local identity usable by Stokes; and
+neighborhood equality isolates the regularity actually needed.
+
+Mathlib at the pinned dependency revision already represents normed-space
+differential forms as functions to continuous alternating maps, defines
+extDeriv by alternatizing the actual Frechet derivative, and proves d^2=0
+under smoothness. It also supplies Bochner-integral divergence machinery,
+explicitly imported in Mahler.ChartStokes. The project builds the ordered
+wedge, tangent, coordinate-sphere and transgression interfaces above that
+foundation. Thus a review should not attribute exterior differentiation
+or d^2=0 to this project, nor claim a first general Stokes formalization.
+The particular reconciliation and locality interfaces are enough to make
+the case interesting.
+
+Pinned comparison sources are listed in findings.json. Relevant files are
+Mathlib/Analysis/Calculus/DifferentialForm/Basic.lean (form representation,
+extDeriv, d^2), Mathlib/Algebra/Polynomial/Sequence.lean (degree-filtered
+spanning), and Mathlib/MeasureTheory/Integral/DivergenceTheorem.lean
+(Bochner divergence on boxes), all at
+d13f23b723b8a846827a245b89c10fc7d3f11612. Downloaded bytes and their hashes are
+under tmp/lean-study/mathlib-source and recorded in primary-library-manifest.
+
+Candidates not promoted
+
+PiExponent.Main was inspected, but the endpoint is a small connection from
+global interpolation to eventual rational lower bounds and exponent equality.
+The large geometric interpolation argument was not traced deeply enough in
+this subtask to justify a case. TwoPointCorrelations.FinalMain similarly
+aliases imported endpoint theorem names. Their omission says nothing about
+the depth of their full developments; it avoids selecting wrappers solely
+on the prestige of the result they state.

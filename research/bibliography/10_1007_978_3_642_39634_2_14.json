@@ -1,0 +1,612 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        8
+      ]
+    ],
+    "date-time": "2026-10-08T00:45:02Z",
+    "timestamp": 1791420302408,
+    "version": "4.3.3"
+  },
+  "publisher-location": "Berlin, Heidelberg",
+  "reference-count": 40,
+  "publisher": "Springer Berlin Heidelberg",
+  "isbn-type": [
+    {
+      "value": "9783642396335",
+      "type": "print"
+    },
+    {
+      "value": "9783642396342",
+      "type": "electronic"
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "published-print": {
+    "date-parts": [
+      [
+        2013
+      ]
+    ]
+  },
+  "DOI": "10.1007/978-3-642-39634-2_14",
+  "type": "book-chapter",
+  "created": {
+    "date-parts": [
+      [
+        2013,
+        7,
+        22
+      ]
+    ],
+    "date-time": "2013-07-22T09:52:36Z",
+    "timestamp": 1374486756000
+  },
+  "page": "163-179",
+  "source": "Crossref",
+  "is-referenced-by-count": 194,
+  "title": [
+    "A Machine-Checked Proof of the Odd Order Theorem"
+  ],
+  "prefix": "10.1007",
+  "author": [
+    {
+      "given": "Georges",
+      "family": "Gonthier",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Andrea",
+      "family": "Asperti",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Jeremy",
+      "family": "Avigad",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Yves",
+      "family": "Bertot",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Cyril",
+      "family": "Cohen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "François",
+      "family": "Garillot",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Stéphane",
+      "family": "Le Roux",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Assia",
+      "family": "Mahboubi",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Russell",
+      "family": "O’Connor",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Sidi",
+      "family": "Ould Biha",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Ioana",
+      "family": "Pasca",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Laurence",
+      "family": "Rideau",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Alexey",
+      "family": "Solovyev",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Enrico",
+      "family": "Tassi",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Laurent",
+      "family": "Théry",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "297",
+  "reference": [
+    {
+      "key": "14_CR1",
+      "doi-asserted-by": "publisher",
+      "first-page": "711",
+      "DOI": "10.1090/S0002-9904-1976-14122-5",
+      "volume": "82",
+      "author": "K. Appel",
+      "year": "1976",
+      "unstructured": "Appel, K., Haken, W.: Every map is four colourable. Bulletin of the American Mathematial Society 82, 711–712 (1976)",
+      "journal-title": "Bulletin of the American Mathematial Society"
+    },
+    {
+      "key": "14_CR2",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "135",
+      "DOI": "10.1007/978-3-642-25379-9_12",
+      "volume-title": "Certified Programs and Proofs",
+      "author": "M. Armand",
+      "year": "2011",
+      "unstructured": "Armand, M., Faure, G., Grégoire, B., Keller, C., Théry, L., Werner, B.: A Modular Integration of SAT/SMT Solvers to Coq through Proof Witnesses. In: Jouannaud, J.-P., Shao, Z. (eds.) CPP 2011. LNCS, vol. 7086, pp. 135–150. Springer, Heidelberg (2011)"
+    },
+    {
+      "key": "14_CR3",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Aschbacher, M.: Finite Group Theory. Cambridge Studies in Advanced Mathematics. Cambridge University Press (2000)",
+      "DOI": "10.1017/CBO9781139175319"
+    },
+    {
+      "key": "14_CR4",
+      "unstructured": "Avigad, J.: Type inference in mathematics. Bulletin of the European Association for Theoretical Computer Science, EATCS (106), 78–98 (2012)"
+    },
+    {
+      "key": "14_CR5",
+      "unstructured": "Avigad, J., Harrison, J.: Formally verified mathematics. To appear in the Communications of the ACM"
+    },
+    {
+      "key": "14_CR6",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Bender, H., Glauberman, G.: Local analysis for the Odd Order Theorem. Number 188 in London Mathematical Society, LNS. Cambridge University Press (1994)",
+      "DOI": "10.1017/CBO9780511665592"
+    },
+    {
+      "key": "14_CR7",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-662-07964-5",
+      "volume-title": "Interactive theorem proving and program development: Coq’Art: The calculus of inductive constructions",
+      "author": "Y. Bertot",
+      "year": "2004",
+      "unstructured": "Bertot, Y., Castéran, P.: Interactive theorem proving and program development: Coq’Art: The calculus of inductive constructions. Springer, Berlin (2004)"
+    },
+    {
+      "key": "14_CR8",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "86",
+      "DOI": "10.1007/978-3-540-71067-7_11",
+      "volume-title": "Theorem Proving in Higher Order Logics",
+      "author": "Y. Bertot",
+      "year": "2008",
+      "unstructured": "Bertot, Y., Gonthier, G., Ould Biha, S., Pasca, I.: Canonical big operators. In: Mohamed, O.A., Muñoz, C., Tahar, S. (eds.) TPHOLs 2008. LNCS, vol. 5170, pp. 86–101. Springer, Heidelberg (2008)"
+    },
+    {
+      "key": "14_CR9",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "67",
+      "DOI": "10.1007/978-3-642-32347-8_6",
+      "volume-title": "Interactive Theorem Proving",
+      "author": "C. Cohen",
+      "year": "2012",
+      "unstructured": "Cohen, C.: Construction of real algebraic numbers in coq. In: Beringer, L., Felty, A. (eds.) ITP 2012. LNCS, vol. 7406, pp. 67–82. Springer, Heidelberg (2012)"
+    },
+    {
+      "key": "14_CR10",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "189",
+      "DOI": "10.1007/978-3-642-14128-7_17",
+      "volume-title": "Intelligent Computer Mathematics",
+      "author": "C. Cohen",
+      "year": "2010",
+      "unstructured": "Cohen, C., Mahboubi, A.: A formal quantifier elimination for algebraically closed fields. In: Autexier, S., Calmet, J., Delahaye, D., Ion, P.D.F., Rideau, L., Rioboo, R., Sexton, A.P. (eds.) AISC 2010. LNCS, vol. 6167, pp. 189–203. Springer, Heidelberg (2010)"
+    },
+    {
+      "issue": "2-3",
+      "key": "14_CR11",
+      "doi-asserted-by": "publisher",
+      "first-page": "95",
+      "DOI": "10.1016/0890-5401(88)90005-3",
+      "volume": "76",
+      "author": "T. Coquand",
+      "year": "1988",
+      "unstructured": "Coquand, T., Huet, G.: The calculus of constructions. Information and Computation 76(2-3), 95–120 (1988)",
+      "journal-title": "Information and Computation"
+    },
+    {
+      "key": "14_CR12",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "50",
+      "DOI": "10.1007/3-540-52335-9_47",
+      "volume-title": "COLOG-88",
+      "author": "T. Coquand",
+      "year": "1990",
+      "unstructured": "Coquand, T., Paulin-Mohring, C.: Inductively defined types. In: Martin-Löf, P., Mints, G. (eds.) COLOG 1988. LNCS, vol. 417, pp. 50–66. Springer, Heidelberg (1990)"
+    },
+    {
+      "issue": "7",
+      "key": "14_CR13",
+      "doi-asserted-by": "publisher",
+      "first-page": "620",
+      "DOI": "10.2307/3647746",
+      "volume": "100",
+      "author": "H. Derksen",
+      "year": "2003",
+      "unstructured": "Derksen, H.: The fundamental theorem of algebra and linear algebra. American Mathematical Monthly 100(7), 620–623 (2003)",
+      "journal-title": "American Mathematical Monthly"
+    },
+    {
+      "issue": "3",
+      "key": "14_CR14",
+      "doi-asserted-by": "publisher",
+      "first-page": "775",
+      "DOI": "10.2140/pjm.1963.13.775",
+      "volume": "13",
+      "author": "W. Feit",
+      "year": "1963",
+      "unstructured": "Feit, W., Thompson, J.G.: Solvability of groups of odd order. Pacific Journal of Mathematics 13(3), 775–1029 (1963)",
+      "journal-title": "Pacific Journal of Mathematics"
+    },
+    {
+      "key": "14_CR15",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "327",
+      "DOI": "10.1007/978-3-642-03359-9_23",
+      "volume-title": "Theorem Proving in Higher Order Logics",
+      "author": "F. Garillot",
+      "year": "2009",
+      "unstructured": "Garillot, F., Gonthier, G., Mahboubi, A., Rideau, L.: Packaging mathematical structures. In: Berghofer, S., Nipkow, T., Urban, C., Wenzel, M. (eds.) TPHOLs 2009. LNCS, vol. 5674, pp. 327–342. Springer, Heidelberg (2009)"
+    },
+    {
+      "issue": "11",
+      "key": "14_CR16",
+      "first-page": "1382",
+      "volume": "55",
+      "author": "G. Gonthier",
+      "year": "2008",
+      "unstructured": "Gonthier, G.: Formal proof—the Four Color Theorem. Notices of the AMS 55(11), 1382–1393 (2008)",
+      "journal-title": "Notices of the AMS"
+    },
+    {
+      "key": "14_CR17",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "103",
+      "DOI": "10.1007/978-3-642-22863-6_10",
+      "volume-title": "Interactive Theorem Proving",
+      "author": "G. Gonthier",
+      "year": "2011",
+      "unstructured": "Gonthier, G.: Point-free, set-free concrete linear algebra. In: van Eekelen, M., Geuvers, H., Schmaltz, J., Wiedijk, F. (eds.) ITP 2011. LNCS, vol. 6898, pp. 103–118. Springer, Heidelberg (2011)"
+    },
+    {
+      "issue": "2",
+      "key": "14_CR18",
+      "first-page": "95",
+      "volume": "3",
+      "author": "G. Gonthier",
+      "year": "2010",
+      "unstructured": "Gonthier, G., Mahboubi, A.: An introduction to small scale reflection in Coq. Journal of Formalized Reasoning 3(2), 95–152 (2010)",
+      "journal-title": "Journal of Formalized Reasoning"
+    },
+    {
+      "key": "14_CR19",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "86",
+      "DOI": "10.1007/978-3-540-74591-4_8",
+      "volume-title": "Theorem Proving in Higher Order Logics",
+      "author": "G. Gonthier",
+      "year": "2007",
+      "unstructured": "Gonthier, G., Mahboubi, A., Rideau, L., Tassi, E., Théry, L.: A Modular Formalisation of Finite Group Theory. In: Schneider, K., Brandt, J. (eds.) TPHOLs 2007. LNCS, vol. 4732, pp. 86–101. Springer, Heidelberg (2007)"
+    },
+    {
+      "key": "14_CR20",
+      "unstructured": "Gonthier, G., Mahboubi, A., Tassi, E.: A Small Scale Reflection Extension for the Coq system. Rapport de recherche RR-6455, INRIA (2012)"
+    },
+    {
+      "key": "14_CR21",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Gonthier, G., Ziliani, B., Nanevski, A., Dreyer, D.: How to make ad hoc proof automation less ad hoc. In: ICFP, pp. 163–175 (2011)",
+      "DOI": "10.1145/2034574.2034798"
+    },
+    {
+      "key": "14_CR22",
+      "unstructured": "Gorenstein, D.: Finite Groups. AMS Chelsea Publishing Series (2007)"
+    },
+    {
+      "issue": "11",
+      "key": "14_CR23",
+      "first-page": "1370",
+      "volume": "55",
+      "author": "T. Hales",
+      "year": "2008",
+      "unstructured": "Hales, T.: Formal proof. Notices of the AMS 55(11), 1370–1380 (2008)",
+      "journal-title": "Notices of the AMS"
+    },
+    {
+      "key": "14_CR24",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "43",
+      "DOI": "10.1007/978-3-642-03359-9_3",
+      "volume-title": "Theorem Proving in Higher Order Logics",
+      "author": "J. Harrison",
+      "year": "2009",
+      "unstructured": "Harrison, J.: Without Loss of Generality. In: Berghofer, S., Nipkow, T., Urban, C., Wenzel, M. (eds.) TPHOLs 2009. LNCS, vol. 5674, pp. 43–59. Springer, Heidelberg (2009)"
+    },
+    {
+      "issue": "4",
+      "key": "14_CR25",
+      "doi-asserted-by": "publisher",
+      "first-page": "413",
+      "DOI": "10.1017/S0956796898003153",
+      "volume": "8",
+      "author": "M. Hedberg",
+      "year": "1998",
+      "unstructured": "Hedberg, M.: A coherence theorem for Martin-Löf’s type theory. Journal of Functional Programming 8(4), 413–436 (1998)",
+      "journal-title": "Journal of Functional Programming"
+    },
+    {
+      "key": "14_CR26",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Hinze, R.: Fun with phantom types. In: Gibbons, J., de Moor, O. (eds.) The Fun of Programming, Cornerstones of Computing, pp. 245–262 (2003)",
+      "DOI": "10.1007/978-1-349-91518-7_12"
+    },
+    {
+      "key": "14_CR27",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Huppert, B., Blackburn, N.: Finite Groups II. Grundlehren Der Mathematischen Wissenschaften. Springer London, Limited (1982)",
+      "DOI": "10.1007/978-3-642-67994-0"
+    },
+    {
+      "key": "14_CR28",
+      "unstructured": "Isaacs, I.: Character Theory of Finite Groups. AMS Chelsea Pub. Series (1976)"
+    },
+    {
+      "key": "14_CR29",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Klein, G., et al.: sel4: Formal verification of an os kernel. In: SOPS ACM SIGOPS, pp. 207–220 (2009)",
+      "DOI": "10.1145/1629575.1629596"
+    },
+    {
+      "key": "14_CR30",
+      "unstructured": "Konrad, K.: Separability II, http://www.math.uconn.edu/~kconrad/blurbs/galoistheory/separable2.pdf"
+    },
+    {
+      "key": "14_CR31",
+      "unstructured": "Kurzweil, H., Stellmacher, B.: The Theory of Finite Groups: An Introduction. Universitext Series. Springer (2010)"
+    },
+    {
+      "key": "14_CR32",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Leroy, X.: Formal certification of a compiler back-end, or: programming a compiler with a proof assistant. In: POPL, pp. 42–54. ACM Press (2006)",
+      "DOI": "10.1145/1111320.1111042"
+    },
+    {
+      "key": "14_CR33",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Mines, R., Richman, F., Ruitenburg, W.: A course in constructive algebra. Universitext (1979). Springer (1988)",
+      "DOI": "10.1007/978-1-4419-8640-5"
+    },
+    {
+      "key": "14_CR34",
+      "unstructured": "Neumann, P.M., Mann, A.J.S., Tompson, J.C.: The collected papers of William Burnside, vol. I. Oxford University Press (2004)"
+    },
+    {
+      "key": "14_CR35",
+      "doi-asserted-by": "publisher",
+      "first-page": "861",
+      "DOI": "10.1017/S0960129511000132",
+      "volume": "21",
+      "author": "R. O’Connor",
+      "year": "2011",
+      "unstructured": "O’Connor, R.: Classical mathematics for a constructive world. Mathematical Structures in Computer Science 21, 861–882 (2011)",
+      "journal-title": "Mathematical Structures in Computer Science"
+    },
+    {
+      "key": "14_CR36",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Peterfalvi, T.: Character Theory for the Odd Order Theorem. London Mathematical Society, LNS, vol. 272. Cambridge University Press (2000)",
+      "DOI": "10.1017/CBO9780511565861"
+    },
+    {
+      "key": "14_CR37",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Rotman, J.: Galois Theory. Universitext (1979). Springer (1998)",
+      "DOI": "10.1007/978-1-4612-0617-0"
+    },
+    {
+      "key": "#cr-split#-14_CR38.1",
+      "unstructured": "Tarski, A.: A Decision Method for Elementary Algebra and Geometry (1948)"
+    },
+    {
+      "key": "#cr-split#-14_CR38.2",
+      "unstructured": "2nd edn. University of California Press, Berkeley (1951)"
+    },
+    {
+      "key": "14_CR39",
+      "unstructured": "The Mathematical Component Team. A Formalization of the Odd Order Theorem using the Coq proof assistant (September 2012), http://www.msr-inria.inria.fr/Projects/math-components/feit-thompson"
+    }
+  ],
+  "container-title": [
+    "Lecture Notes in Computer Science"
+  ],
+  "original-title": [],
+  "link": [
+    {
+      "URL": "http://link.springer.com/content/pdf/10.1007/978-3-642-39634-2_14",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2019,
+        7,
+        18
+      ]
+    ],
+    "date-time": "2019-07-18T22:13:05Z",
+    "timestamp": 1563487985000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://link.springer.com/10.1007/978-3-642-39634-2_14"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2013
+      ]
+    ]
+  },
+  "ISBN": [
+    "9783642396335",
+    "9783642396342"
+  ],
+  "references-count": 40,
+  "URL": "http://dx.doi.org/10.1007/978-3-642-39634-2_14",
+  "relation": {},
+  "ISSN": [
+    "0302-9743",
+    "1611-3349"
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2013
+      ]
+    ]
+  }
+}

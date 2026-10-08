@@ -1,0 +1,220 @@
+\subsection{Recovering ideals from extended traces and canonical limits}
+\label{sec:trace-ideals}
+
+The trace-cone development reconstructs actual closed ideals from an analytic
+invariant and then proves that an equivalence of invariants transports two
+distinguished ideals. The mathematical setting is the cone of extended,
+lower-semicontinuous traces, studied as an invariant of $C^*$-algebras by
+\citet{ElliottRobertSantiago2011}. The selected support results concern this
+ideal correspondence. Their hypotheses are nonunital complex $C^*$-algebras
+with compatible order and star structures; they impose no density condition
+on the finite domain of a trace \citep{OAITraceIdeals}.
+
+An \src{ExtendedTrace A} is a function on positive elements with values in
+$[0,\infty]$, together with proofs of vanishing at zero, additivity, positive homogeneity,
+traciality, and lower semicontinuity. For a closed two-sided star ideal $I$,
+the code constructs the extended trace
+\begin{equation}
+  \iota_I(a)=
+  \begin{cases}0,&a\in I,\\ \infty,&a\notin I,\end{cases}
+  \qquad a\geq 0.
+  \label{eq:ideal-weight}
+\end{equation}
+This requires mathematical proofs, rather than only a convenient wrapper.
+For positive $a,b$, heredity of closed ideals gives
+$a+b\in I$ exactly when both summands belong to $I$, proving additivity.
+The equivalence $x^*x\in I\Longleftrightarrow x\in I$ and star invariance
+give traciality; closed sublevel sets give lower semicontinuity. The
+existence theorem in \src{FiniteIdeal.lean} therefore supplies a trace
+satisfying the full interface, from which the later definition chooses a
+witness.
+
+The reverse construction starts with the finite-square domain of a trace:
+\begin{equation}
+  \mathcal N_\tau=\{x\in A:\tau(x^*x)<\infty\},
+  \qquad I_\tau=\overline{\mathcal N_\tau}^{\norm{\cdot}}.
+  \label{eq:finite-ideal}
+\end{equation}
+The source proves that $\mathcal N_\tau$ is a nonunital star subalgebra
+absorbing multiplication on both sides, then takes its topological
+closure. Thus $I_\tau$ denotes a concrete closed ideal. If
+$\tau+\tau=\tau$, every value is either zero or infinity.
+Finite-trace positive elements approximate every positive element of
+$I_\tau$; lower semicontinuity extends their zero values to that limit,
+yielding $\tau=\iota_{I_\tau}$. Conversely,
+$I_{\iota_I}=I$. These inverse laws establish
+\src{closedIdealEquivIdempotent}, an equivalence between closed ideals
+and additive-idempotent traces.
+
+The ideal order is also encoded by addition:
+\begin{equation}
+  I\subseteq J\quad\Longleftrightarrow\quad
+  \iota_I+\iota_J=\iota_I.
+  \label{eq:ideal-addition-order}
+\end{equation}
+Consequently, any additive bijection $e$ of the two extended-trace cones
+already induces an order isomorphism $\Phi$ of their closed ideals, with
+$\iota_{\Phi(I)}=e(\iota_I)$. Neither continuity nor compatibility with
+scalars is required for this part. The subsequent analytic argument
+identifies which ideals this order isomorphism assigns to a given trace.
+This separation makes the strength of each interface field visible.
+
+The relevant topology cannot be replaced silently by pointwise
+convergence. Write $(a-\varepsilon)_+$ for the positive cut defined by
+continuous functional calculus. The development proves
+\begin{equation}
+  a\in I_\tau\quad\Longleftrightarrow\quad
+  \forall\varepsilon>0,\quad
+  \tau\bigl((a-\varepsilon)_+\bigr)<\infty,
+  \qquad a\geq0.
+  \label{eq:finite-ideal-cuts}
+\end{equation}
+Its canonical convergence predicate for a filtered family $(\tau_i)$ and
+a candidate limit $\sigma$ requires, for every positive $a$ and every
+$\varepsilon>0$,
+\begin{equation}
+  \limsup_i\tau_i\bigl((a-\varepsilon)_+\bigr)
+  \leq\sigma(a)\leq\liminf_i\tau_i(a).
+  \label{eq:trace-canonical-convergence}
+\end{equation}
+The two inequalities have different roles: the left regularizes the
+argument by a positive cut; the right uses the original element. Their
+combination, together with recovery of a lower-semicontinuous trace from
+its cuts, gives uniqueness of a canonical limit along a proper filter.\footnote{The convergence predicate is defined in
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/TraceCone/Basic.lean\#L65-L69}{\src{TraceCone/Basic.lean}, lines 65--69}; uniqueness is proved in
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/TraceCone/IdealTransport.lean\#L177-L190}{\src{IdealTransport.lean}, lines 177--190}.}
+
+In this sense the source proves
+\begin{equation}
+  r\tau\longrightarrow\iota_{I_\tau}\quad(r\downarrow0),
+  \qquad
+  r\tau\longrightarrow\iota_{Z_\tau}\quad(r\to\infty),
+  \label{eq:trace-scalar-limits}
+\end{equation}
+where $Z_\tau$ is a closed ideal whose positive elements are exactly those
+on which $\tau$ vanishes. The first limit depends on the closure and cut
+characterization in~\eqref{eq:finite-ideal-cuts}. Whenever
+$a\in I_\tau$ but $\tau(a)=\infty$, every positive scalar multiple
+still has value $(r\tau)(a)=\infty$, although
+$\iota_{I_\tau}(a)=0$. A claimed pointwise scalar-zero limit would therefore
+give the wrong assertion. Finite values on all positive cuts reconcile
+this behavior with~\eqref{eq:trace-canonical-convergence}. The
+scalar-infinity limit, by contrast, is first proved pointwise using the
+trace that is zero on $\tau$'s zero set and infinity elsewhere.
+
+Finally, a \src{TraceConeEquiv} packages an additive bijection, preservation
+of zero and positive scaling, and canonical convergence in both
+directions. For each scalar limit, the endpoint proof maps the family
+through $e$, rewrites using scalar compatibility, and invokes uniqueness
+of canonical limits. Injectivity of $I\mapsto\iota_I$ then yields
+\[
+  \Phi(I_\tau)=I_{e(\tau)},\qquad
+  \Phi(Z_\tau)=Z_{e(\tau)}.
+\]
+The displayed endpoint proofs use forward convergence preservation;
+the inverse field belongs to the larger equivalence interface. The
+illuminating architecture is the chain from constructed ideal weights,
+through an algebraic reconstruction, to analytic recognition by limits.
+It makes the ideal correspondence an actual transported object, rather
+than an unspecified provider assumption. This is a specific use of the
+abstraction boundaries familiar from large formalizations
+\citep{Perfectoid2020,CommelinTopaz2024}.
+
+\subsection{Named graded maps across all seams of a produced diagram}
+\label{sec:all-seams}
+
+The character-variety case proves that values produced by a marked
+surface construction satisfy every seam equation. The selected theorem,
+\src{producedMarkedValues_allSeams}, starts with an existing field-valued
+solution of the original diagram. Its hypotheses include properness of
+the diagram, a maximal-rank condition on the facet at the chosen seam,
+and positive genus of the parent facet. The conclusion refers to the
+specific diagram and values constructed from that solution
+\citep{OAIAllSeams}. The key issue is preserving named graded data while
+changing coordinates and subdividing the surface.
+
+The seam equation is stronger than equality of flags. For a graded index
+set with grade function $a$ and a frame $e$, let
+\[
+  F_k^e=e\{u:u_i=0\text{ whenever }a(i)\geq k\},
+  \qquad q_k^e(v)=\bigl(e^{-1}v\bigr)|_{\{i:a(i)=k\}}.
+\]
+Here $q_k^e$ retains the named coordinates of grade $k$. The predicate
+\src{SameFramedFlag a e f} requires
+\begin{equation}
+  F_k^e=F_k^f,\qquad
+  q_k^e(v)=q_k^f(v)\quad\text{for all }v\in F_{k+1}^e,
+  \label{eq:named-graded-flag}
+\end{equation}
+for every $k$. Thus the comparison retains the maps representing the
+successive graded pieces, rather than only their dimensions or underlying
+subspaces.\footnote{See the definition of
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/Flags.lean\#L155-L160}{\src{SameFramedFlag}}.}
+In the produced seam equations, the two frames are obtained
+from evaluations of the seam's left and right matrix words. Losing these
+named maps during a change of basis would weaken the theorem's meaning.
+The one-dimensional frame example in Section~\ref{sec:local-examples}
+illustrates this distinction without the surface construction.
+
+The intermediate construction records precisely the data needed to
+prevent that loss. An \src{IdentifiedBand} contains a common frame for a
+simultaneous splitting, a rank shape, and row and column identifications
+of its graded fibers. Its prefix and named-coordinate laws relate those
+identifications to the two input frames. The source first proves that
+such a record exists using the named band grades and rank equalities.
+It then chooses a witness. The opaque declaration
+\src{cutGeneratorWitness} has this construction as its body; opacity
+hides reduction, rather than adding an unproved existence assumption.
+Classical choice here supplies coherent mathematical data, without
+claiming an effective procedure for computing the frame.
+
+Crucially, the same chosen record supplies the shape, row ranks, column
+ranks, and marked frames of the produced diagram. Those fields also
+determine its punctures and values. Independently choosing compatible
+dimensions would not provide these shared identifications. This illustrates
+the difference between packaging a structure and carrying a sufficiently
+strong specification through it. Records and algebraic interfaces are
+standard techniques \citep{GarillotEtAl2009,Baanen2022}; the case-specific
+payload is the simultaneous preservation of the named graded maps
+in~\eqref{eq:named-graded-flag}.
+
+The global seam proof is assembled from eight local families: the chosen
+old seam, the other inherited seams, the first and internal original
+seams, the last and internal mirror seams, and the positive and negative
+branch seams. Exhaustiveness is proved using a surjective equivalence
+describing the grafted diagram, followed by sum, endpoint, and Boolean
+cases. Consequently, the universal quantifier over new seams follows
+from a structural coverage theorem. In the inherited family, coordinate
+equivalences identify the new frames with the old named seam frame;
+grade-preservation lemmas make these equivalences suitable for the full
+predicate. The original solution then supplies the seam equation. The
+local proof transports coordinate maps, not merely a statement that the
+old and new ranks agree.
+
+There remains a second transport at the endpoint. The general
+\src{markedCut_allSeams} theorem proves the eight-family result for the
+assembled marked-cut data. The produced values use matrices rebased along
+the equality of the selected seam rank and its parent-facet rank.
+\src{rebaseUnit} performs this equality-induced change of matrix size.
+The endpoint proves that the chosen and rebased generator matrices agree,
+uses the mirror-rebasing theorem, and transports the resulting equality
+through the side-value constructor and then \src{valuesFromPorts}.
+Finally, \src{framedSeamEquations_of_values_eq} transfers the general
+seam predicate to the exact produced values. These equalities tie the
+compatibility proof to the constructed representation.
+
+The boundary assumptions also distinguish two nearby statements. The
+all-seams endpoint has boundary indices $b_0,i_0$, but requires no proof
+that this occurrence is the chosen seam. The later
+\src{producedMarkedSolution}, which assembles surface, seam, and vertex
+equations into a complete solution, additionally assumes
+\[
+  D.\mathrm{boundarySide}
+  \langle D.\mathrm{bandCutParent}(q),b_0,i_0\rangle
+  =\langle q,\mathrm{none}\rangle.
+\]
+That extra hypothesis is used for the surface component. Keeping these
+endpoints distinct exposes the exact scope of the selected support
+theorem. The architectural lesson is the combination of a common
+witness, exhaustive local families, and equality transport that preserves
+the named mathematical content through the final construction.

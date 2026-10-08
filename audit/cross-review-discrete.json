@@ -1,0 +1,913 @@
+{
+  "review_type": "Independent source cross-review of discrete case sections; no edits to TeX",
+  "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "reviewed_file": "papers/lean-proof-architecture/cases-discrete.tex",
+  "reviewed_file_sha256": "5a5fc512414b3cd60bc6af98b78a91d82d2e64e59726ea1e096871e0feeaec02",
+  "review_scope": "Checked the mathematical and formal-interface claims in both sections against their research evidence and pinned source proof bodies. Historical bibliography claims and full Lean builds are outside this cross-review; the paper has separate citation and build audits.",
+  "verdict": "No major mathematical, probability-law, formula, endpoint-scope, or quantifier error found. Three minor clarity fixes are recommended before publication.",
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "id": "D-M1",
+      "severity": "minor",
+      "priority": 1,
+      "tex_lines": [
+        57,
+        62
+      ],
+      "issue": "Numerical switch-chain constants are given before the transition convention is specified. Different common switch-chain normalizations have different constants.",
+      "recommended_fix": "Add one sentence: The chain stays put with probability 1/2; otherwise it chooses a four-vertex set and an ordered pair of distinct perfect matchings uniformly, performs the replacement when valid, and stays put otherwise.",
+      "evidence": {
+        "path": "lean/OAI/Probability/SwitchChain/Definitions.lean",
+        "line_start": 34,
+        "line_end": 94,
+        "declarations": [
+          "SwitchProposal",
+          "removedMatching",
+          "addedMatching",
+          "validSwitch",
+          "replaceEdges",
+          "proposalResult",
+          "allGraphStates",
+          "allProposals",
+          "stateCount",
+          "switchKernel"
+        ],
+        "git_blob_sha1": "5801f8189cfa3ce4b53d2287627a0a740a6f6810",
+        "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/Definitions.lean#L34-L94"
+      }
+    },
+    {
+      "id": "D-M2",
+      "severity": "minor",
+      "priority": 2,
+      "tex_lines": [
+        78,
+        78
+      ],
+      "issue": "\"Its centered covariance\" immediately follows the sentence about totals other than two, although the substantive rank-one covariance statement concerns total two.",
+      "recommended_fix": "Replace \"Its centered covariance factors\" with \"For total two, the centered covariance factors\".",
+      "evidence": {
+        "path": "lean/OAI/Probability/SwitchChain/CrossCellMoments.lean",
+        "line_start": 142,
+        "line_end": 158,
+        "declarations": [
+          "covariance_rank_one"
+        ],
+        "git_blob_sha1": "35c18f2a694dfa7e82af480e5cc4890d14d2a6e1",
+        "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/CrossCellMoments.lean#L142-L158"
+      }
+    },
+    {
+      "id": "D-M3",
+      "severity": "minor",
+      "priority": 3,
+      "tex_lines": [
+        89,
+        94
+      ],
+      "issue": "The final double-sum notation suppresses that a and b are two-element vertex sets and that the sum is ordered. The preceding prose makes the intent recoverable.",
+      "recommended_fix": "Write \"Summing over ordered disjoint pairs of two-element vertex sets\" or add a,b in binom(Fin n,2) to the displayed index.",
+      "evidence": {
+        "path": "lean/OAI/Probability/SwitchChain/PairDisjointAssembly.lean",
+        "line_start": 45,
+        "line_end": 77,
+        "declarations": [
+          "disjoint_sum_nonneg_of_named_interaction_budget"
+        ],
+        "git_blob_sha1": "31b9bad18286c4ad5623d1e75a179955d3564626",
+        "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/PairDisjointAssembly.lean#L45-L77"
+      }
+    }
+  ],
+  "claim_checks": [
+    {
+      "id": "CB-01",
+      "tex_lines": [
+        6,
+        18
+      ],
+      "claim": "Paired matroid, base correspondence, rank n, zero deficiency, partition bound, and plain/defect states.",
+      "assessment": "Correct under the full-ground and equal-rank endpoint assumptions. The base correspondence itself needs the second matroid to have full ground. The displayed partition estimate includes q=0 and q=1; the source uses the usual 0^0=1 convention.",
+      "evidence": [
+        {
+          "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+          "line_start": 7133,
+          "line_end": 7167,
+          "declarations": [
+            "pairedMatroid",
+            "transversal",
+            "transversal_injective",
+            "paired_ground",
+            "transversal_isBase_iff",
+            "paired_eRank"
+          ],
+          "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L7133-L7167"
+        },
+        {
+          "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+          "line_start": 7574,
+          "line_end": 7639,
+          "declarations": [
+            "subsetDeficiency",
+            "subsetDeficiency_zero",
+            "commonSetFinsetEquiv",
+            "zeroDeficiency_eq_commonBaseCount",
+            "plainPartition_eq_subsets",
+            "paired_partition_contamination"
+          ],
+          "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L7574-L7639"
+        },
+        {
+          "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+          "line_start": 3115,
+          "line_end": 3118,
+          "declarations": [
+            "PlainState",
+            "DefectState"
+          ],
+          "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L3115-L3118"
+        },
+        {
+          "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+          "line_start": 6362,
+          "line_end": 6369,
+          "declarations": [
+            "plainPredicate",
+            "metropolisKilled",
+            "metropolisTrace"
+          ],
+          "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L6362-L6369"
+        }
+      ]
+    },
+    {
+      "id": "CB-02",
+      "tex_lines": [
+        18,
+        20
+      ],
+      "claim": "Greedy oracle rank, guarded zero count, bounded-rejection loss M 2^-D, and exact preservation under reindexing.",
+      "assessment": "Correct. The rejection theorem is a one-sided lower bound on the implemented expectation with failed draws assigned observable value zero; it is not equality of the bounded and ideal sampling laws. The paragraph distinguishes this loss from the subsequent exact reindexing law.",
+      "evidence": [
+        {
+          "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+          "line_start": 11012,
+          "line_end": 11032,
+          "declarations": [
+            "rankOracle",
+            "queryFinset_exact",
+            "rankOracle_correct"
+          ],
+          "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L11012-L11032"
+        },
+        {
+          "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+          "line_start": 11170,
+          "line_end": 11189,
+          "declarations": [
+            "oracleGuard",
+            "oracleWitnessTree",
+            "oracleAlgorithmTree",
+            "oracleDeficiency_eq",
+            "oracleAnneal_eq",
+            "oracleStepTree_eq"
+          ],
+          "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L11170-L11189"
+        },
+        {
+          "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+          "line_start": 9346,
+          "line_end": 9382,
+          "declarations": [
+            "run_lower"
+          ],
+          "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L9346-L9382"
+        },
+        {
+          "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+          "line_start": 11548,
+          "line_end": 11578,
+          "declarations": [
+            "Reindexed",
+            "Reindexed.refl",
+            "Reindexed.symm",
+            "Reindexed.bind",
+            "Reindexed.map",
+            "Reindexed.expectation"
+          ],
+          "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L11548-L11578"
+        }
+      ]
+    },
+    {
+      "id": "CB-03",
+      "tex_lines": [
+        22,
+        24
+      ],
+      "claim": "Explicit-bank effect realization, concrete Metropolis composition, nine registers, compiler cost correctness, and recursive width bounds.",
+      "assessment": "Correct. Instructions use Fin(k+8) registers and the constructed block has k=1. Successful evaluation gives all three bounded execution counters within the evaluation charge. Safe certificates and compiled polynomial majorants are separate from semantic realization.",
+      "evidence": [
+        {
+          "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+          "line_start": 20,
+          "line_end": 26,
+          "declarations": [
+            "Instruction"
+          ],
+          "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L20-L26"
+        },
+        {
+          "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+          "line_start": 16275,
+          "line_end": 16321,
+          "declarations": [
+            "DataType",
+            "encode",
+            "width",
+            "Expression"
+          ],
+          "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L16275-L16321"
+        },
+        {
+          "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+          "line_start": 16459,
+          "line_end": 16620,
+          "declarations": [
+            "compile_correct"
+          ],
+          "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L16459-L16620"
+        },
+        {
+          "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+          "line_start": 16855,
+          "line_end": 16864,
+          "declarations": [
+            "Safe"
+          ],
+          "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L16855-L16864"
+        },
+        {
+          "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+          "line_start": 18664,
+          "line_end": 18665,
+          "declarations": [
+            "Effect"
+          ],
+          "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L18664-L18665"
+        },
+        {
+          "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+          "line_start": 18741,
+          "line_end": 18745,
+          "declarations": [
+            "Realizes"
+          ],
+          "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L18741-L18745"
+        },
+        {
+          "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+          "line_start": 20649,
+          "line_end": 20669,
+          "declarations": [
+            "stepCode_source"
+          ],
+          "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L20649-L20669"
+        },
+        {
+          "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+          "line_start": 24074,
+          "line_end": 24086,
+          "declarations": [
+            "algorithmCode_source"
+          ],
+          "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L24074-L24086"
+        },
+        {
+          "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+          "line_start": 25542,
+          "line_end": 25580,
+          "declarations": [
+            "compile_safe_bound",
+            "compiledMajorant",
+            "compile_majorant",
+            "frozen_uniform_safe"
+          ],
+          "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L25542-L25580"
+        },
+        {
+          "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+          "line_start": 25799,
+          "line_end": 25802,
+          "declarations": [
+            "fprasBlock"
+          ],
+          "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L25799-L25802"
+        }
+      ]
+    },
+    {
+      "id": "CB-04",
+      "tex_lines": [
+        26,
+        33
+      ],
+      "claim": "For every rational-output test function, uniform word expectation equals uniform canonical-bank expectation; outputs are nonnegative and zero when Z=0.",
+      "assessment": "Correct with the displayed universal quantifier over all phi: Q -> R. OutputCertificate contains source evaluation, both pointwise output properties, and the exact finite-average equality. The equality relates implemented postamble output and the canonical bounded experiment, not the ideal unbounded tree.",
+      "evidence": [
+        {
+          "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+          "line_start": 25962,
+          "line_end": 25968,
+          "declarations": [
+            "OutputCertificate"
+          ],
+          "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L25962-L25968"
+        },
+        {
+          "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+          "line_start": 25969,
+          "line_end": 26020,
+          "declarations": [
+            "output_certificate"
+          ],
+          "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L25969-L26020"
+        }
+      ]
+    },
+    {
+      "id": "CB-05",
+      "tex_lines": [
+        33,
+        40
+      ],
+      "claim": "There exists a start offset independent of tapes; physicalWord(s,m,beta)(i)=beta(s+3(m-1-i)+1), start+3m+1 <= B; uniform B-bit tapes give uniform m-bit words.",
+      "assessment": "Correct, including the order of quantifiers and the distinction between m and B. The index subtraction is natural subtraction, and for i<m equals the ordinary integer m-1-i. The injective-coordinate law covers m=0 as well. Reversal and stride three are supported by the stack sampling-loop simulation.",
+      "evidence": [
+        {
+          "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+          "line_start": 25630,
+          "line_end": 25656,
+          "declarations": [
+            "runs_pipeline"
+          ],
+          "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L25630-L25656"
+        },
+        {
+          "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+          "line_start": 25658,
+          "line_end": 25686,
+          "declarations": [
+            "physicalWord",
+            "sampledWord_physical",
+            "physicalPosition",
+            "physicalPosition_injective",
+            "physicalWord_finite",
+            "physicalWord_law"
+          ],
+          "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L25658-L25686"
+        },
+        {
+          "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+          "line_start": 26027,
+          "line_end": 26066,
+          "declarations": [
+            "frozen_machine"
+          ],
+          "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L26027-L26066"
+        }
+      ]
+    },
+    {
+      "id": "CB-06",
+      "tex_lines": [
+        40,
+        52
+      ],
+      "claim": "One fixed program and constants precede all inputs, exact full-ground common-rank assumptions, rational 0<epsilon,delta<1, polynomial budget, universal halting and resource bounds, and success on at least (1-delta)2^B finite tapes.",
+      "assessment": "Correct. The source budget has the same parentheses and ceiling binary logarithm. Full ground, equal supplied eRanks, and exact oracle remain input assumptions. The existential fixed program has k=1, hence nine registers. Every length-B tape is zero extended; the source success count includes an existential rational output, uniquely determined by the execution. The prose out(w) is a justified abbreviation because universal termination has already been stated.",
+      "evidence": [
+        {
+          "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+          "line_start": 104,
+          "line_end": 132,
+          "declarations": [
+            "relativeAccuracy",
+            "resourceBound",
+            "MainTheorem"
+          ],
+          "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L104-L132"
+        },
+        {
+          "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+          "line_start": 26070,
+          "line_end": 26126,
+          "declarations": [
+            "physical_accuracy",
+            "common_bases_fpras"
+          ],
+          "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L26070-L26126"
+        }
+      ]
+    },
+    {
+      "id": "SW-01",
+      "tex_lines": [
+        57,
+        62
+      ],
+      "claim": "Graphical bounded degree sequence, n>=4, total-variation threshold 1/4, mixing <=2n^8, and gap >=1/(24n^2 choose(n,4)) for multiple realizations.",
+      "assessment": "Endpoint assumptions and constants match exactly. The source theorem also separately handles the singleton state space at time zero. The section need not repeat that branch, but should name the exact lazy-chain convention to make its numerical constants self-contained.",
+      "evidence": [
+        {
+          "path": "lean/OAI/Probability/SwitchChain/Main.lean",
+          "line_start": 18,
+          "line_end": 29,
+          "declarations": [
+            "switch_chain_main"
+          ],
+          "git_blob_sha1": "f57bfdeb78b3af3dec46c90aeaa145b85d044140",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/Main.lean#L18-L29"
+        },
+        {
+          "path": "lean/OAI/Probability/SwitchChain/Definitions.lean",
+          "line_start": 34,
+          "line_end": 49,
+          "declarations": [
+            "SwitchProposal",
+            "removedMatching",
+            "addedMatching",
+            "validSwitch",
+            "replaceEdges"
+          ],
+          "git_blob_sha1": "5801f8189cfa3ce4b53d2287627a0a740a6f6810",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/Definitions.lean#L34-L49"
+        },
+        {
+          "path": "lean/OAI/Probability/SwitchChain/Definitions.lean",
+          "line_start": 87,
+          "line_end": 94,
+          "declarations": [
+            "switchKernel"
+          ],
+          "git_blob_sha1": "5801f8189cfa3ce4b53d2287627a0a740a6f6810",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/Definitions.lean#L87-L94"
+        },
+        {
+          "path": "lean/OAI/Probability/SwitchChain/Definitions.lean",
+          "line_start": 131,
+          "line_end": 149,
+          "declarations": [
+            "hasSpectralGapAtLeast",
+            "tvDistanceFrom",
+            "MixedAt",
+            "mixingTime"
+          ],
+          "git_blob_sha1": "5801f8189cfa3ce4b53d2287627a0a740a6f6810",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/Definitions.lean#L131-L149"
+        }
+      ]
+    },
+    {
+      "id": "SW-02",
+      "tex_lines": [
+        63,
+        70
+      ],
+      "claim": "Coarse cell, graph determination by Boolean cross matrix and singleton boundary sets, total and margin feasibility, and multiplicity-preserving cell equivalence.",
+      "assessment": "Correct. U and W range over subsets of the fixed outside-singleton sets. This range condition is implicit in the prose description of boundary choices and explicit in the source. The total and two margin equations replace the four local degree equations; compatible cross-matrix counts give the projected uniform weights.",
+      "evidence": [
+        {
+          "path": "lean/OAI/Probability/SwitchChain/DisjointEncoding.lean",
+          "line_start": 20,
+          "line_end": 30,
+          "declarations": [
+            "SameCell"
+          ],
+          "git_blob_sha1": "7b492a205d49c7b3d0603a003b7e0721df56b230",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/DisjointEncoding.lean#L20-L30"
+        },
+        {
+          "path": "lean/OAI/Probability/SwitchChain/DisjointEncoding.lean",
+          "line_start": 84,
+          "line_end": 98,
+          "declarations": [
+            "graph_eq_of_cell_coordinates"
+          ],
+          "git_blob_sha1": "7b492a205d49c7b3d0603a003b7e0721df56b230",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/DisjointEncoding.lean#L84-L98"
+        },
+        {
+          "path": "lean/OAI/Probability/SwitchChain/DisjointCoordinateFeasibility.lean",
+          "line_start": 22,
+          "line_end": 108,
+          "declarations": [
+            "coordinate_degrees_iff"
+          ],
+          "git_blob_sha1": "7fdb3c4cea0981a6774d82549796943abc26b9e5",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/DisjointCoordinateFeasibility.lean#L22-L108"
+        },
+        {
+          "path": "lean/OAI/Probability/SwitchChain/DisjointCellCounting.lean",
+          "line_start": 14,
+          "line_end": 32,
+          "declarations": [
+            "MarginData",
+            "LeftData",
+            "RightData",
+            "MatrixFiber",
+            "JointData"
+          ],
+          "git_blob_sha1": "c13ceb1aa4c381310efaf458dc8491f6040bea13",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/DisjointCellCounting.lean#L14-L32"
+        },
+        {
+          "path": "lean/OAI/Probability/SwitchChain/DisjointCellCounting.lean",
+          "line_start": 66,
+          "line_end": 106,
+          "declarations": [
+            "coordinatesEquiv",
+            "degreeCellJointEquiv",
+            "matrixFiber_card",
+            "sum_degreeCell_joint"
+          ],
+          "git_blob_sha1": "c13ceb1aa4c381310efaf458dc8491f6040bea13",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/DisjointCellCounting.lean#L66-L106"
+        }
+      ]
+    },
+    {
+      "id": "SW-03",
+      "tex_lines": [
+        72,
+        80
+      ],
+      "claim": "The 16 Boolean matrices give c2=[[0,1,0],[1,2,1],[0,1,0]], c2=2-p(r)-p(t), independent weights for s!=2, and the total-two centered covariance has one flag on each side.",
+      "assessment": "All mathematical identities match. Independent enumeration of the 16 matrices reproduced the table. The covariance statement is valid for total two; its pronoun currently follows the sentence about other totals, which obscures the intended reference.",
+      "evidence": [
+        {
+          "path": "lean/OAI/Probability/SwitchChain/CrossMatrix.lean",
+          "line_start": 19,
+          "line_end": 25,
+          "declarations": [
+            "count",
+            "count_two"
+          ],
+          "git_blob_sha1": "44bbbe6e200de3180e8c17421b25ca404607a429",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/CrossMatrix.lean#L19-L25"
+        },
+        {
+          "path": "lean/OAI/Probability/SwitchChain/CrossMatrix.lean",
+          "line_start": 81,
+          "line_end": 89,
+          "declarations": [
+            "count_two_real"
+          ],
+          "git_blob_sha1": "44bbbe6e200de3180e8c17421b25ca404607a429",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/CrossMatrix.lean#L81-L89"
+        },
+        {
+          "path": "lean/OAI/Probability/SwitchChain/CrossIndependent.lean",
+          "line_start": 19,
+          "line_end": 52,
+          "declarations": [
+            "count_eq_independent_product"
+          ],
+          "git_blob_sha1": "f0ceb6ff77c5907c4609ef8882aa0a3d9afb1652",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/CrossIndependent.lean#L19-L52"
+        },
+        {
+          "path": "lean/OAI/Probability/SwitchChain/CrossCellMoments.lean",
+          "line_start": 123,
+          "line_end": 158,
+          "declarations": [
+            "conditionalRight_two",
+            "conditionalRight_two_span",
+            "covariance_rank_one"
+          ],
+          "git_blob_sha1": "35c18f2a694dfa7e82af480e5cc4890d14d2a6e1",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/CrossCellMoments.lean#L123-L158"
+        },
+        {
+          "path": "lean/OAI/Probability/SwitchChain/CrossCellAffineComposition.lean",
+          "line_start": 64,
+          "line_end": 87,
+          "declarations": [
+            "expectation_first_second_affine"
+          ],
+          "git_blob_sha1": "038446c5326fb2a9b425bb535b528dde4b90a168",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/CrossCellAffineComposition.lean#L64-L87"
+        }
+      ]
+    },
+    {
+      "id": "SW-04",
+      "tex_lines": [
+        80,
+        84
+      ],
+      "claim": "Conditional-image transport to graph fibers; p(r) becomes equality of cross adjacency bits; the error space is at most one-dimensional per active fiber, not globally.",
+      "assessment": "Correct, including the important local/global dimensional distinction. The active condition says each of k,l has exactly one neighbor in {i,j}. The source equalitySpace permits a separate real coefficient for every pair-resampling fiber. The affine coefficient is supported on cross-total two and fiber constant, as stated.",
+      "evidence": [
+        {
+          "path": "lean/OAI/Probability/SwitchChain/DisjointCrossCellEquiv.lean",
+          "line_start": 68,
+          "line_end": 96,
+          "declarations": [
+            "expectation_ker_pullback"
+          ],
+          "git_blob_sha1": "c95d557e1a72217b73581861273d9aa0e63f11dd",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/DisjointCrossCellEquiv.lean#L68-L96"
+        },
+        {
+          "path": "lean/OAI/Probability/SwitchChain/DisjointEqualityFlags.lean",
+          "line_start": 46,
+          "line_end": 63,
+          "declarations": [
+            "stateLeftFlag_eq_observable"
+          ],
+          "git_blob_sha1": "ea47485f002ef6f7ae3e9c679ab2cd04a4c65286",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/DisjointEqualityFlags.lean#L46-L63"
+        },
+        {
+          "path": "lean/OAI/Probability/SwitchChain/DisjointGraphAffine.lean",
+          "line_start": 68,
+          "line_end": 90,
+          "declarations": [
+            "right_left_expectation_cell_affine"
+          ],
+          "git_blob_sha1": "85abe54c38f295ba3111e7ebc516452436d5f6af",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/DisjointGraphAffine.lean#L68-L90"
+        },
+        {
+          "path": "lean/OAI/Probability/SwitchChain/PairEqualityProjection.lean",
+          "line_start": 12,
+          "line_end": 42,
+          "declarations": [
+            "observable",
+            "centered",
+            "active",
+            "equalitySpace",
+            "projection"
+          ],
+          "git_blob_sha1": "7de0cafcfc18ed9c7e544966d156313e2ab7afb7",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/PairEqualityProjection.lean#L12-L42"
+        },
+        {
+          "path": "lean/OAI/Probability/SwitchChain/PairAffineInteraction.lean",
+          "line_start": 15,
+          "line_end": 52,
+          "declarations": [
+            "AffineFlagImage",
+            "affineFlagImage_of_cellwise",
+            "fluctuation_mem_of_affineFlagImage"
+          ],
+          "git_blob_sha1": "3dcc9a2ea5f162717450fdd0c38ebd6100554be4",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/PairAffineInteraction.lean#L15-L52"
+        }
+      ]
+    },
+    {
+      "id": "SW-05",
+      "tex_lines": [
+        84,
+        96
+      ],
+      "claim": "2||G_ab f||^2-||R_ab f||^2-||R_ba f||^2 <=2<(I-E_a)f,(I-E_b)f>, error budget <= gain budget, and the summed disjoint fluctuation interaction is nonnegative.",
+      "assessment": "Correct, including signs, both error terms, coefficient two, and budget direction. The sum is over ordered disjoint pairs of two-element vertex sets, as made explicit by the source double sum over pairs n; a brief domain clarification would make the displayed notation fully self-contained. Euclidean state-space norms and inner products can both be rescaled by the same uniform factor without changing the inequality.",
+      "evidence": [
+        {
+          "path": "lean/OAI/Probability/SwitchChain/ProjectionRangeInteraction.lean",
+          "line_start": 138,
+          "line_end": 222,
+          "declarations": [
+            "interaction_of_correlated_error_ranges"
+          ],
+          "git_blob_sha1": "db186e150a6a82b01ab063691d379c1d60cc0d43",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/ProjectionRangeInteraction.lean#L138-L222"
+        },
+        {
+          "path": "lean/OAI/Probability/SwitchChain/PairActualAffine.lean",
+          "line_start": 81,
+          "line_end": 101,
+          "declarations": [
+            "actual_named_interaction"
+          ],
+          "git_blob_sha1": "c097d0cd33aee37331958ed04367f758c6e2cb38",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/PairActualAffine.lean#L81-L101"
+        },
+        {
+          "path": "lean/OAI/Probability/SwitchChain/PairEqualityBudgetUnordered.lean",
+          "line_start": 42,
+          "line_end": 60,
+          "declarations": [
+            "pair_projection_budget"
+          ],
+          "git_blob_sha1": "a4fbc1dc304b5ba642cc1c6491f03e731b510c53",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/PairEqualityBudgetUnordered.lean#L42-L60"
+        },
+        {
+          "path": "lean/OAI/Probability/SwitchChain/PairDisjointAssembly.lean",
+          "line_start": 13,
+          "line_end": 77,
+          "declarations": [
+            "interaction_on_pairs_of_named",
+            "disjoint_sum_nonneg_of_named_interaction_budget"
+          ],
+          "git_blob_sha1": "31b9bad18286c4ad5623d1e75a179955d3564626",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/PairDisjointAssembly.lean#L13-L77"
+        }
+      ]
+    },
+    {
+      "id": "SW-06",
+      "tex_lines": [
+        96,
+        96
+      ],
+      "claim": "Disjoint sum, triple-generator and local comparison estimates feed a generator-square bound and the final gap and mixing result.",
+      "assessment": "Correct as a dependency summary, without importing unproved hypotheses into the advertised endpoint. The endpoint supplies concrete named interactions and projection budgets before invoking its abstract endgame.",
+      "evidence": [
+        {
+          "path": "lean/OAI/Probability/SwitchChain/Main.lean",
+          "line_start": 18,
+          "line_end": 45,
+          "declarations": [
+            "switch_chain_main",
+            "switch_chain_tv_bound",
+            "switch_connectivity"
+          ],
+          "git_blob_sha1": "f57bfdeb78b3af3dec46c90aeaa145b85d044140",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/Main.lean#L18-L45"
+        },
+        {
+          "path": "lean/OAI/Probability/SwitchChain/LocalGapEndgame.lean",
+          "line_start": 31,
+          "line_end": 48,
+          "declarations": [
+            "spectralGap_of_triples_and_disjoint"
+          ],
+          "git_blob_sha1": "8ea6816375553a5149941140a3d04c353807829e",
+          "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/LocalGapEndgame.lean#L31-L48"
+        }
+      ]
+    }
+  ],
+  "independent_integrity_checks": {
+    "source_files_checked": 20,
+    "all_source_blobs_match_pinned_complete_tree": true,
+    "source_integrity": [
+      {
+        "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+        "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+        "matches_complete_pinned_tree": true
+      },
+      {
+        "path": "lean/OAI/Probability/SwitchChain/CrossCellAffineComposition.lean",
+        "git_blob_sha1": "038446c5326fb2a9b425bb535b528dde4b90a168",
+        "matches_complete_pinned_tree": true
+      },
+      {
+        "path": "lean/OAI/Probability/SwitchChain/CrossCellMoments.lean",
+        "git_blob_sha1": "35c18f2a694dfa7e82af480e5cc4890d14d2a6e1",
+        "matches_complete_pinned_tree": true
+      },
+      {
+        "path": "lean/OAI/Probability/SwitchChain/CrossIndependent.lean",
+        "git_blob_sha1": "f0ceb6ff77c5907c4609ef8882aa0a3d9afb1652",
+        "matches_complete_pinned_tree": true
+      },
+      {
+        "path": "lean/OAI/Probability/SwitchChain/CrossMatrix.lean",
+        "git_blob_sha1": "44bbbe6e200de3180e8c17421b25ca404607a429",
+        "matches_complete_pinned_tree": true
+      },
+      {
+        "path": "lean/OAI/Probability/SwitchChain/Definitions.lean",
+        "git_blob_sha1": "5801f8189cfa3ce4b53d2287627a0a740a6f6810",
+        "matches_complete_pinned_tree": true
+      },
+      {
+        "path": "lean/OAI/Probability/SwitchChain/DisjointCellCounting.lean",
+        "git_blob_sha1": "c13ceb1aa4c381310efaf458dc8491f6040bea13",
+        "matches_complete_pinned_tree": true
+      },
+      {
+        "path": "lean/OAI/Probability/SwitchChain/DisjointCoordinateFeasibility.lean",
+        "git_blob_sha1": "7fdb3c4cea0981a6774d82549796943abc26b9e5",
+        "matches_complete_pinned_tree": true
+      },
+      {
+        "path": "lean/OAI/Probability/SwitchChain/DisjointCrossCellEquiv.lean",
+        "git_blob_sha1": "c95d557e1a72217b73581861273d9aa0e63f11dd",
+        "matches_complete_pinned_tree": true
+      },
+      {
+        "path": "lean/OAI/Probability/SwitchChain/DisjointEncoding.lean",
+        "git_blob_sha1": "7b492a205d49c7b3d0603a003b7e0721df56b230",
+        "matches_complete_pinned_tree": true
+      },
+      {
+        "path": "lean/OAI/Probability/SwitchChain/DisjointEqualityFlags.lean",
+        "git_blob_sha1": "ea47485f002ef6f7ae3e9c679ab2cd04a4c65286",
+        "matches_complete_pinned_tree": true
+      },
+      {
+        "path": "lean/OAI/Probability/SwitchChain/DisjointGraphAffine.lean",
+        "git_blob_sha1": "85abe54c38f295ba3111e7ebc516452436d5f6af",
+        "matches_complete_pinned_tree": true
+      },
+      {
+        "path": "lean/OAI/Probability/SwitchChain/LocalGapEndgame.lean",
+        "git_blob_sha1": "8ea6816375553a5149941140a3d04c353807829e",
+        "matches_complete_pinned_tree": true
+      },
+      {
+        "path": "lean/OAI/Probability/SwitchChain/Main.lean",
+        "git_blob_sha1": "f57bfdeb78b3af3dec46c90aeaa145b85d044140",
+        "matches_complete_pinned_tree": true
+      },
+      {
+        "path": "lean/OAI/Probability/SwitchChain/PairActualAffine.lean",
+        "git_blob_sha1": "c097d0cd33aee37331958ed04367f758c6e2cb38",
+        "matches_complete_pinned_tree": true
+      },
+      {
+        "path": "lean/OAI/Probability/SwitchChain/PairAffineInteraction.lean",
+        "git_blob_sha1": "3dcc9a2ea5f162717450fdd0c38ebd6100554be4",
+        "matches_complete_pinned_tree": true
+      },
+      {
+        "path": "lean/OAI/Probability/SwitchChain/PairDisjointAssembly.lean",
+        "git_blob_sha1": "31b9bad18286c4ad5623d1e75a179955d3564626",
+        "matches_complete_pinned_tree": true
+      },
+      {
+        "path": "lean/OAI/Probability/SwitchChain/PairEqualityBudgetUnordered.lean",
+        "git_blob_sha1": "a4fbc1dc304b5ba642cc1c6491f03e731b510c53",
+        "matches_complete_pinned_tree": true
+      },
+      {
+        "path": "lean/OAI/Probability/SwitchChain/PairEqualityProjection.lean",
+        "git_blob_sha1": "7de0cafcfc18ed9c7e544966d156313e2ab7afb7",
+        "matches_complete_pinned_tree": true
+      },
+      {
+        "path": "lean/OAI/Probability/SwitchChain/ProjectionRangeInteraction.lean",
+        "git_blob_sha1": "db186e150a6a82b01ab063691d379c1d60cc0d43",
+        "matches_complete_pinned_tree": true
+      }
+    ],
+    "evidence_excerpts_checked": 92,
+    "evidence_excerpt_mismatches": [],
+    "independently_enumerated_total_two_matrix_table": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        2,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "matrix_table_matches_display": true
+  },
+  "reader_value": {
+    "common_bases": "High. The section explains a concrete chain from a matroid representation to output laws and fixed tape positions. The universal-observable equality, start-before-tapes quantifier, and distinction between gathered bits and machine budget are especially informative. The middle compiler paragraphs are dense but serve the endpoint instead of listing generic tactics.",
+    "switch_chain": "High. The 16-matrix table, affine conditional image, fiberwise equality direction, and compensated global inequality form a coherent mathematical explanation. Explicitly distinguishing one dimension per fiber from the global subspace prevents a tempting false simplification. Adding the lazy-chain convention would make the endpoint fully interpretable without opening Lean.",
+    "novelty_assessment": "Both sections appropriately frame established representation, compilation, finite computation and semantic transport methods through concrete source-specific interfaces. Neither makes an unsupported first-formalization or first-proof claim. The most transferable content is the choice of intermediary semantics and the exact invariant carried through it."
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-08",
+  "review_process": "Three cross-case source reviews, a full-manuscript reader review, and a closest-prior comparison check. Internal reviews retain the hashes of their reviewed versions; this resolution describes the revised delivery.",
+  "unresolved_required_findings": [],
+  "resolutions": [
+    {"ids": ["AN-01"], "status": "addressed", "change": "State boundary normalization before the Crouzeix core concludes gamma <= 2."},
+    {"ids": ["AN-02"], "status": "addressed", "change": "State uniqueness of the common zero in the domain and compact closures of sublevels 0<R<1."},
+    {"ids": ["AN-03"], "status": "addressed", "change": "Cite pinned Mathlib differential-form source for its calculus API."},
+    {"ids": ["AN-04"], "status": "addressed", "change": "Name normalized circle measure for the Crouzeix energy integrals."},
+    {"ids": ["BIB-01"], "status": "addressed", "change": "Correct EasyCrypt proceedings title and LNCS volume 6841."},
+    {"ids": ["BIB-02"], "status": "addressed", "change": "Include CakeML's full verified-implementation subtitle."},
+    {"ids": ["BIB-03"], "status": "addressed", "change": "OAIAllSeams points to the produced-values endpoint source ProducedSolution.lean."},
+    {"ids": ["A1"], "status": "addressed", "change": "Include vanishing at zero in the ExtendedTrace interface."},
+    {"ids": ["A2"], "status": "addressed", "change": "State the proper-filter condition for uniqueness of a canonical limit."},
+    {"ids": ["A3"], "status": "addressed", "change": "Add pinned line footnotes for convergence and named flags; the endpoint citation now directly resolves to ProducedSolution.lean."},
+    {"ids": ["D-M1"], "status": "addressed", "change": "Specify 1/2 laziness and uniform ordered-perfect-matching proposal normalization."},
+    {"ids": ["D-M2"], "status": "addressed", "change": "Identify total two explicitly as the exceptional covariance case."},
+    {"ids": ["D-M3"], "status": "addressed", "change": "Specify ordered disjoint two-element vertex sets in the summed interaction."},
+    {"ids": ["FULL-01"], "status": "addressed", "change": "Provide README.txt with all reproduction commands, versions, evidence locations, source rights and scope."},
+    {"ids": ["FULL-02"], "status": "addressed", "change": "Narrow the pointwise trace-limit statement to failure of convergence to the closed-ideal weight."},
+    {"ids": ["FULL-03"], "status": "addressed", "change": "Explain the source's ambient derivative congruence and avoid claiming universal necessity of neighborhood equality for Stokes."},
+    {"ids": ["FULL-04"], "status": "addressed", "change": "Present the bijection as this proof's mechanism for multiplicity accounting."},
+    {"ids": ["FULL-05"], "status": "addressed", "change": "Abstract correctly identifies the compiled finite-multiplicity theorem."},
+    {"ids": ["FULL-06"], "status": "addressed", "change": "Add the six-matrix covariance -1/9 and verify it by exact Fraction arithmetic; distinguish weighted graph cells."},
+    {"ids": ["FULL-07"], "status": "addressed", "change": "Compare which downstream operations consume a law, a named coordinate map, or a neighborhood germ."},
+    {"ids": ["FULL-08"], "status": "addressed", "change": "Add a forward reference from named flags to the elementary one-dimensional frame example."}
+  ],
+  "additional_improvements": [
+    "Three verified closest-prior references address formal integration transport, expectation semantics, and Lean exact samplers.",
+    "All 38 references are cited, with 26 scholarly works; publisher DOI title identity checked for all 22 published scholarly records.",
+    "The overview table is kept on one page before the case exposition with thin separators and generous row spacing.",
+    "164 curated upstream files are byte-verified against pinned Git blob and SHA256 identifiers."
+  ],
+  "verification_scope": "Upstream cases: static source analysis. Original review examples: Lean 4.34.1 compilation and exact finite enumeration. Internal cross-review is distinct from external peer review."
+}

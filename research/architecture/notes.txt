@@ -1,0 +1,146 @@
+Source audit notes for the architecture paper
+Repository snapshot: fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb
+
+Suggested organizing point
+
+The productive distinction is between a specification, a construction satisfying it,
+and the transport of the constructed object's properties to the endpoint's actual
+representation. The two cases make that distinction mathematically visible. The
+trace example reconstructs actual closed ideals from extended traces and uses a
+topological characterization to transport them. The character-variety example
+preserves a simultaneous-splitting witness with named quotient data while moving
+between rank-dependent coordinates, then proves all local seam families exhaust
+the new diagram. Neither record/typeclass packaging nor classical choice should
+be described as an innovation in itself. The associated mathematical payload and
+how the endpoint reuses it are the case-specific findings.
+
+Trace ideal transport: formulas and order of explanation
+
+Use T(A) for the actual extended lower-semicontinuous traces. Their values lie in
+[0,infinity]; no finite-domain density restriction is built into ExtendedTrace.
+For a closed two-sided star ideal I, define iota_I(a)=0 when a is in I, infinity
+otherwise, for a positive. The code constructs iota_I and proves the trace laws.
+Its additivity is not automatic syntax: it uses heredity of closed ideals to show
+a+b in I iff a in I and b in I for positive a,b. Lower semicontinuity follows from
+closedness of I via the sublevel sets. The proof also checks traciality using
+x* x in I iff x in I.
+
+An additive idempotent tau has only zero/infinity values. Lower semicontinuity
+then extends zero values from finite positive approximants to the closed ideal.
+This yields the inverse laws of ClosedIdeal A equivalent to IdempotentTrace A.
+The order is read from addition:
+
+    I <= J  iff  iota_I + iota_J = iota_I.
+
+Thus additive equivalence alone already recovers the ideal order isomorphism.
+The stronger TraceConeEquiv interface is needed to identify which ideals attach
+to each arbitrary trace. The interface includes addition, zero, positive scalar
+multiplication, and canonical convergence in each direction; the displayed ideal
+transport proofs use the forward continuity field directly.
+
+The finite ideal is
+
+    finIdeal(tau) = closure {x : tau(x* x) < infinity}.
+
+For a positive a, membership in it is equivalent to finiteness of every positive
+cut tau((a-epsilon)_+) for epsilon>0. Canonical convergence of tau_i to sigma is
+
+    limsup_i tau_i((a-epsilon)_+) <= sigma(a) <= liminf_i tau_i(a)
+
+for every a and every epsilon>0. The scalar-zero limit is canonical:
+
+    r tau -> iota_finIdeal(tau) as r -> 0+.
+
+Do not turn that statement into pointwise convergence. If tau(a)=infinity for an
+a in the closure-defined finite ideal, r tau(a)=infinity for every positive r,
+but the limiting ideal weight is zero at a. The cut formulation is the essential
+regularization, not an implementation ornament. In contrast, the infinity limit
+is first proved pointwise, then canonical:
+
+    r tau -> supportWeight(tau) = iota_zeroIdeal(tau) as r -> infinity,
+
+where supportWeight(a)=0 iff tau(a)=0, infinity otherwise. Apply the cone map to
+each scalar net, use preservation of scaling and canonical convergence, then
+uniqueness of the limit. Injectivity of I -> iota_I converts equality of weights
+into equality of literal ideals.
+
+This endpoint is support for trace-cone classification, not spatial classification
+of stabilizations. The supporting theorem is more general than the manuscript's
+separable/nuclear classification setting, since those assumptions do not occur in
+the endpoint type. State this only as an inspection of the selected theorem type.
+
+Character-variety all-seams compatibility: what is transported
+
+SameFramedFlag includes equality of the entire prefix flag and compatibility of
+the named quotient maps. A statement about unframed subspaces alone would lose
+part of the formal conclusion. IdentifiedBand packages a common splitting,
+row/column grade isomorphisms and the corresponding prefix and named-map laws.
+It is populated from a proved existence theorem. cutGeneratorWitness is opaque
+with a body; it must not be confused with an unproved constant. Classical.choice
+makes this a noncomputable chosen construction, with no effective extraction
+claim.
+
+The same witness supplies the shape and row/column rank equalities to the new
+marked diagram, frames, punctures, and generator values. Inherited seams require
+explicit coordinate equivalences and grade preservation. The local results are
+assembled into eight families: selected old, inherited old, first original,
+internal original, last mirror, internal mirror, positive branch, negative branch.
+AllSeams proves exhaustiveness using the graftPlus equivalence and finite-index
+case splits. The produced endpoint then transports that generic theorem to the
+actual produced generator values. Rebasing equal-rank matrix units produces the
+side-value equality; congruence through valuesFromPorts produces equality of the
+generator assignment; the equality-transport lemma gives all seam equations.
+
+The hypothesis x is an existing solution over a field. The comparator theorem
+requires properness, maximal chosen adjacent rank, positive parent genus, finite
+vertices, puncture data and boundary/occurrence indices. It does not require hb,
+the equation identifying that chosen occurrence's boundary side with q. The
+downstream producedMarkedSolution definition does require hb, because its surface
+equation proof uses it. Do not silently promote the compared all-seams theorem to
+an unconditional full-solution construction or to potential integral density.
+
+Comparator and semantic alignment
+
+The audited Comparator snapshot is ca04cfc72b550331658ec314bf47685281bfd4bf, a
+separate repository snapshot. openai/math's instructions do not pin it. Explain
+its source mechanism independently instead of attributing its current version to
+the authors' original checking run.
+
+Theorem targets have matching ConstantVal data, including type/universe data.
+Their proof bodies may differ, as intended. The statement dependency worklist
+compares non-target declarations, while targets supply replaceable proofs. The
+axiom traversal follows types, bodies including opaque values, inductive/constructor
+links and recursor rules. A successful correctly configured execution would check
+declaration identity, permitted transitive axioms and kernel acceptance. This
+statement identity is relative to the trusted challenge/imports. Mathematical
+agreement between that formal challenge and the manuscript remains a different
+question, addressed here by reading exact definitions and repository scope notes.
+
+The challenge's sorry placeholders are normal specifications. The relevant issue
+is the solution endpoint's transitive axiom dependencies, not the literal presence
+of sorry in the challenge file. Both selected challenges allow propext, Quot.sound
+and Classical.choice, and neither has definition holes. TraceIdealTransportSupport
+selects 17 declarations, including construction obligations as well as transport
+endpoints, and requests nanoda; all-seams selects one theorem and does not request
+nanoda. Configuration is evidence of intended checking, not evidence of execution.
+
+Audit evidence and scope
+
+source-audit.json contains Git blob and SHA-256 identities for 93 downloaded corpus
+files. The full OAI import closures of the two endpoints contain three files for
+trace transport and 79 for all-seams. A lexical scan of each closure found zero
+occurrences of sorry/admit/axiom/unsafe. This is a reproducible static source fact;
+it is not a replacement for an elaborated dependency or kernel check. Mathlib and
+other external imports are outside those closure counts. No repository-wide total
+or rarity/first-ever claim is derived from these selected case studies.
+
+Literature framing
+
+references.json supplies 15 primary literature references. The especially relevant
+architecture baseline is Commelin–Topaz (2024), including its separate discussion
+of formal/informal alignment. Garillot et al. and Baanen prevent describing record
+interfaces or instance parameters as novel. Barendregt–Wiedijk and Carneiro frame
+independent checking; van Doorn–Ebner–Lewis distinguish kernel coherence from
+additional library-quality checks. LeanArchitect's paper is relevant to dependency
+documentation, but the package's presence in lakefile does not by itself prove that
+the inspected case files use blueprint annotations.

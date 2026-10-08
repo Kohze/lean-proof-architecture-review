@@ -1,0 +1,53 @@
+{
+  "type": "",
+  "id": "https://doi.org/10.4230/lipics.itp.2022.23",
+  "categories": [
+    "divergence theorem",
+    "Green’s theorem",
+    "Gauge integral",
+    "Cauchy integral formula",
+    "Cauchy-Goursat theorem",
+    "complex analysis",
+    "Security and privacy → Logic and verification",
+    "Mathematics of computing → Integral calculus"
+  ],
+  "language": "en",
+  "author": [
+    {
+      "family": "Kudryashov",
+      "given": "Yury"
+    }
+  ],
+  "editor": [
+    {
+      "family": "Andronick",
+      "given": "June"
+    },
+    {
+      "family": "de Moura",
+      "given": "Leonardo"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2022
+      ]
+    ]
+  },
+  "abstract": "I formalize a version of the divergence theorem for a function on a rectangular box that does not assume regularity of individual partial derivatives, only Fréchet differentiability of the vector field and integrability of its divergence. Then I use this theorem to prove the Cauchy-Goursat theorem (for some simple domains) and bootstrap complex analysis in the Lean mathematical library. The main tool is the GP-integral, a version of the Henstock-Kurzweil integral introduced by J. Mawhin in 1981. The divergence theorem for this integral does not require integrability of the divergence.",
+  "container-title": [
+    "LIPIcs, Volume 237, ITP 2022"
+  ],
+  "DOI": "10.4230/LIPICS.ITP.2022.23",
+  "volume": "237",
+  "number": "23",
+  "page": "23:1-23:19",
+  "page-first": "23:1",
+  "publisher": "Schloss Dagstuhl – Leibniz-Zentrum für Informatik",
+  "title": [
+    "Formalizing the Divergence Theorem and the Cauchy Integral Formula in Lean"
+  ],
+  "URL": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2022.23",
+  "copyright": "Creative Commons Attribution 4.0 International license"
+}

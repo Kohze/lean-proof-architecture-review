@@ -1,0 +1,700 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        8
+      ]
+    ],
+    "date-time": "2026-10-08T00:45:31Z",
+    "timestamp": 1791420331045,
+    "version": "4.3.3"
+  },
+  "reference-count": 48,
+  "publisher": "Cambridge University Press (CUP)",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2017,
+            5,
+            29
+          ]
+        ],
+        "date-time": "2017-05-29T00:00:00Z",
+        "timestamp": 1496016000000
+      },
+      "content-version": "unspecified",
+      "delay-in-days": 148,
+      "URL": "http://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "www.cambridge.org"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "Forum of Mathematics, Pi"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2017
+      ]
+    ]
+  },
+  "abstract": "<jats:p>This article describes a formal proof of the Kepler conjecture on dense sphere packings in a combination of the HOL Light and Isabelle proof assistants. This paper constitutes the official published account of the now completed Flyspeck project.</jats:p>",
+  "DOI": "10.1017/fmp.2017.1",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2017,
+        5,
+        28
+      ]
+    ],
+    "date-time": "2017-05-28T22:38:50Z",
+    "timestamp": 1496011130000
+  },
+  "update-policy": "https://doi.org/10.1017/policypage",
+  "source": "Crossref",
+  "is-referenced-by-count": 246,
+  "title": [
+    "A FORMAL PROOF OF THE KEPLER CONJECTURE"
+  ],
+  "prefix": "10.1017",
+  "volume": "5",
+  "author": [
+    {
+      "given": "THOMAS",
+      "family": "HALES",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "MARK",
+      "family": "ADAMS",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "GERTRUD",
+      "family": "BAUER",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "TAT DAT",
+      "family": "DANG",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "JOHN",
+      "family": "HARRISON",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "LE TRUONG",
+      "family": "HOANG",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "CEZARY",
+      "family": "KALISZYK",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "VICTOR",
+      "family": "MAGRON",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "SEAN",
+      "family": "MCLAUGHLIN",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "TAT THANG",
+      "family": "NGUYEN",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "QUANG TRUONG",
+      "family": "NGUYEN",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "TOBIAS",
+      "family": "NIPKOW",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "STEVEN",
+      "family": "OBUA",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "JOSEPH",
+      "family": "PLESO",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "JASON",
+      "family": "RUTE",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "ALEXEY",
+      "family": "SOLOVYEV",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "THI HOAI AN",
+      "family": "TA",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "NAM TRUNG",
+      "family": "TRAN",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "THI DIEP",
+      "family": "TRIEU",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "JOSEF",
+      "family": "URBAN",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "KY",
+      "family": "VU",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "ROLAND",
+      "family": "ZUMKELLER",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "56",
+  "published-online": {
+    "date-parts": [
+      [
+        2017,
+        5,
+        29
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "S2050508617000014_r28",
+      "first-page": "207",
+      "volume-title": "Proc. 22nd ACM Symposium on Operating Systems Principles 2009",
+      "author": "Klein",
+      "year": "2009"
+    },
+    {
+      "key": "S2050508617000014_r9",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-642-39634-2_14"
+    },
+    {
+      "key": "S2050508617000014_r37",
+      "volume-title": "Isabelle/HOL – A Proof Assistant for Higher-Order Logic",
+      "author": "Nipkow",
+      "year": "2002"
+    },
+    {
+      "key": "S2050508617000014_r25",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s10817-014-9303-3"
+    },
+    {
+      "key": "S2050508617000014_r31",
+      "first-page": "42",
+      "volume-title": "ACM SIGPLAN Notices",
+      "volume": "41",
+      "author": "Leroy",
+      "year": "2006"
+    },
+    {
+      "key": "S2050508617000014_r15",
+      "volume-title": "Mathematics, Algorithms, Proofs",
+      "author": "Hales",
+      "year": "2006"
+    },
+    {
+      "key": "S2050508617000014_r30",
+      "first-page": "3",
+      "volume-title": "The Kepler Conjecture and its Proof",
+      "author": "Lagarias",
+      "year": "2009"
+    },
+    {
+      "key": "S2050508617000014_r44",
+      "first-page": "123",
+      "volume-title": "Efficient Formal Verification of Bounds of Linear Programs",
+      "author": "Solovyev",
+      "year": "2011"
+    },
+    {
+      "key": "S2050508617000014_r47",
+      "first-page": "152",
+      "volume-title": "MKM/Calculemus/DML",
+      "author": "Tankink",
+      "year": "2013"
+    },
+    {
+      "key": "S2050508617000014_r3",
+      "volume-title": "Proceedings of the IJCAR Workshop on Automated Theory Exploration",
+      "author": "Adams",
+      "year": "2012"
+    },
+    {
+      "key": "S2050508617000014_r40",
+      "unstructured": "[40] S. Obua , ‘Flyspeck II: the basic linear programs’. PhD Thesis, Technische Universität München, 2008."
+    },
+    {
+      "key": "S2050508617000014_r19",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s00454-009-9148-4"
+    },
+    {
+      "key": "S2050508617000014_r35",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1137/1.9780898717716"
+    },
+    {
+      "key": "S2050508617000014_r33",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s00209-009-0644-2"
+    },
+    {
+      "key": "S2050508617000014_r13",
+      "unstructured": "[13] T. Hales , Developments in formal proofs. Bourbaki Seminar, 2013/2014 (1086):1086-1-23, 2014."
+    },
+    {
+      "key": "S2050508617000014_r22",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-642-03359-9_4"
+    },
+    {
+      "key": "S2050508617000014_r7",
+      "unstructured": "[7] Flyspeck, The Flyspeck Project, 2014. https://github.com/flyspeck/flyspeck."
+    },
+    {
+      "key": "S2050508617000014_r42",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/11814771_27"
+    },
+    {
+      "key": "S2050508617000014_r48",
+      "unstructured": "[48] R. Zumkeller , ‘Global optimization in type theory’. PhD Thesis, École Polytechnique Paris, 2008."
+    },
+    {
+      "key": "S2050508617000014_r46",
+      "first-page": "42",
+      "article-title": "GNU parallel – the command-line power tool",
+      "volume": "36",
+      "author": "Tange",
+      "year": "2011",
+      "journal-title": "USENIX Mag."
+    },
+    {
+      "key": "S2050508617000014_r8",
+      "unstructured": "[8] GLPK, GLPK (GNU Linear Programming Kit). http://www.gnu.org/software/glpk/."
+    },
+    {
+      "key": "S2050508617000014_r5",
+      "volume-title": "The Archive of Formal Proofs",
+      "author": "Bauer"
+    },
+    {
+      "key": "S2050508617000014_r34",
+      "first-page": "192",
+      "volume-title": "IJCAR",
+      "author": "McLaughlin",
+      "year": "2006"
+    },
+    {
+      "key": "S2050508617000014_r32",
+      "unstructured": "[32] V. Magron , ‘Formal proofs for global optimization – templates and sums of squares’. PhD Thesis, École Polytechnique, 2013."
+    },
+    {
+      "key": "S2050508617000014_r23",
+      "unstructured": "[23] J. Harrison , The HOL Light theorem prover, 2014. http://www.cl.cam.ac.uk/∼jrh13/hol-light/index.html."
+    },
+    {
+      "key": "S2050508617000014_r1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-642-15582-6_25"
+    },
+    {
+      "key": "S2050508617000014_r11",
+      "volume-title": "Introduction to HOL: a Theorem Proving Environment for Higher Order Logic",
+      "author": "Gordon",
+      "year": "1993"
+    },
+    {
+      "key": "S2050508617000014_r27",
+      "volume-title": "Strena seu de nive sexangula",
+      "author": "Kepler",
+      "year": "1611"
+    },
+    {
+      "key": "S2050508617000014_r24",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-642-39634-2_7"
+    },
+    {
+      "key": "S2050508617000014_r21",
+      "first-page": "43",
+      "volume-title": "Proceedings of the 22nd International Conference on Theorem Proving in Higher Order Logics, TPHOLs 2009",
+      "author": "Harrison",
+      "year": "2009"
+    },
+    {
+      "key": "S2050508617000014_r14",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.4007/annals.2005.162.1065"
+    },
+    {
+      "key": "S2050508617000014_r45",
+      "first-page": "383",
+      "volume-title": "NFM",
+      "author": "Solovyev",
+      "year": "2013"
+    },
+    {
+      "key": "S2050508617000014_r12",
+      "doi-asserted-by": "crossref",
+      "first-page": "103",
+      "DOI": "10.1007/978-3-642-12251-4_9",
+      "volume-title": "Functional and Logic Programming, 10th International Symposium, FLOPS 2010, Sendai, Japan, April 19–21, 2010. Proceedings",
+      "author": "Haftmann",
+      "year": "2010"
+    },
+    {
+      "key": "S2050508617000014_r6",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-662-01206-2"
+    },
+    {
+      "key": "S2050508617000014_r18",
+      "first-page": "1",
+      "article-title": "The Kepler conjecture",
+      "volume": "36",
+      "author": "Hales",
+      "year": "2006",
+      "journal-title": "Discrete Comput. Geom."
+    },
+    {
+      "key": "S2050508617000014_r2",
+      "doi-asserted-by": "crossref",
+      "first-page": "16",
+      "DOI": "10.1007/978-3-662-44199-2_3",
+      "volume-title": "Mathematical Software–ICMS 2014",
+      "author": "Adams",
+      "year": "2014"
+    },
+    {
+      "key": "S2050508617000014_r36",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-642-22863-6_21"
+    },
+    {
+      "key": "S2050508617000014_r43",
+      "unstructured": "[43] A. Solovyev , ‘Formal methods and computations’. PhD Thesis, University of Pittsburgh, 2012. http://d-scholarship.pitt.edu/16721/."
+    },
+    {
+      "key": "S2050508617000014_r41",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s10472-009-9168-z"
+    },
+    {
+      "key": "S2050508617000014_r16",
+      "unstructured": "[16] T. C. Hales , ‘The strong dodecahedral conjecture and Fejes Tóth’s contact conjecture’, Technical Report, 2011."
+    },
+    {
+      "key": "S2050508617000014_r10",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/3-540-09724-4"
+    },
+    {
+      "key": "S2050508617000014_r38",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/11814771_4"
+    },
+    {
+      "key": "S2050508617000014_r39",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/11541868_15"
+    },
+    {
+      "key": "S2050508617000014_r20",
+      "doi-asserted-by": "crossref",
+      "first-page": "177",
+      "DOI": "10.1007/11814771_17",
+      "volume-title": "Automated Reasoning, Third International Joint Conference, IJCAR 2006, Seattle, WA, USA, August 17–20, 2006, Proceedings",
+      "author": "Harrison",
+      "year": "2006"
+    },
+    {
+      "key": "S2050508617000014_r26",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.jsc.2014.09.032"
+    },
+    {
+      "key": "S2050508617000014_r4",
+      "unstructured": "[4] G. Bauer , ‘Formalizing plane graph theory – towards a formalized proof of the Kepler conjecture’. PhD Thesis, Technische Universität München, 2006. http://mediatum.ub.tum.de/doc/601794/document.pdf."
+    },
+    {
+      "key": "S2050508617000014_r17",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1017/CBO9781139193894"
+    },
+    {
+      "key": "S2050508617000014_r29",
+      "doi-asserted-by": "crossref",
+      "first-page": "308",
+      "DOI": "10.1007/978-3-319-08970-6_20",
+      "volume-title": "Interactive Theorem Proving – 5th International Conference, ITP 2014, Held as Part of the Vienna Summer of Logic, VSL 2014, Vienna, Austria, July 14–17, 2014. Proceedings",
+      "author": "Kumar",
+      "year": "2014"
+    }
+  ],
+  "container-title": [
+    "Forum of Mathematics, Pi"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/S2050508617000014",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2019,
+        9,
+        25
+      ]
+    ],
+    "date-time": "2019-09-25T01:52:30Z",
+    "timestamp": 1569376350000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://www.cambridge.org/core/product/identifier/S2050508617000014/type/journal_article"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2017
+      ]
+    ]
+  },
+  "references-count": 48,
+  "alternative-id": [
+    "S2050508617000014"
+  ],
+  "URL": "https://doi.org/10.1017/fmp.2017.1",
+  "relation": {},
+  "ISSN": [
+    "2050-5086"
+  ],
+  "issn-type": [
+    {
+      "value": "2050-5086",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2017
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "© The Author(s) 2017 This is an Open Access article, distributed under the terms of the Creative Commons Attribution licence (http://creativecommons.org/licenses/by/4.0/), which permits unrestricted re-use, distribution, and reproduction in any medium, provided the original work is properly cited.",
+      "name": "license",
+      "label": "License",
+      "group": {
+        "name": "copyright_and_licensing",
+        "label": "Copyright and Licensing"
+      }
+    }
+  ],
+  "article-number": "e2"
+}

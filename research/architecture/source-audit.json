@@ -1,0 +1,1248 @@
+{
+  "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "method": "Static source/import audit; no Lean compilation or comparator execution",
+  "closures": [
+    {
+      "seed": "lean/OAI/Analysis/TraceCone/IdealTransport.lean",
+      "files": [
+        "lean/OAI/Analysis/TraceCone/Basic.lean",
+        "lean/OAI/Analysis/TraceCone/FiniteIdeal.lean",
+        "lean/OAI/Analysis/TraceCone/IdealTransport.lean"
+      ],
+      "edges": [
+        [
+          "lean/OAI/Analysis/TraceCone/IdealTransport.lean",
+          "lean/OAI/Analysis/TraceCone/FiniteIdeal.lean"
+        ],
+        [
+          "lean/OAI/Analysis/TraceCone/FiniteIdeal.lean",
+          "lean/OAI/Analysis/TraceCone/Basic.lean"
+        ]
+      ],
+      "file_count": 3,
+      "bytes": 50497,
+      "lexical_markers": []
+    },
+    {
+      "seed": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedSolution.lean",
+      "files": [
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/AtomicFrames.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/AtomicGallery.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/BoundaryEnumeration.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/BoundarySurgery.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/DoubledStrips.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/FreshGallery.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/GraftCircuits.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/GraftValues.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/Grafting.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/MarkedDiagram.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/PortSurgery.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/RefinedDiagram.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/StripFacets.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/StripForest.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BandCut.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BandCutTopology.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BandCycles.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BandIncidence.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BoundaryBands.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BoundaryCycles.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BoundaryFrames.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BoundaryReordering.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/ComplementaryPatches.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/CornerGauge.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/CutCircleIndex.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/DiskGauge.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/FlagGalleries.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/Flags.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/GeneratorGauge.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/Incidence.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/MatrixExpressions.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/MatrixPresentation.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/PatchCycles.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/PortPatches.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/RoutedFamilies.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/SplitFlags.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/SurfacePresentation.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/SurfaceSurgery.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/VertexFrames.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/VertexGauge.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/AtomicFlags.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/BandBases.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/BandGauges.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/BoundaryMarking.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/CutFrames.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/Endpoints.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/FrameTransport.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/FramedFlags.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/GradeMaps.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/Graded.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/InheritedFrames.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/InheritedSeams.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/LocalFrames.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MarkedFrames.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/Mirror.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MirrorCoordinates.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MirrorSeamCoordinates.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MirrorSeams.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/NamedSeams.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/PortCoordinates.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/PortValues.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/PositiveCoordinates.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/SeamCoordinates.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/SeamFactors.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/ShortCoordinates.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/ShortSeams.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/AllSeams.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/BoundaryWords.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/CutWords.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/FirstShortSeam.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/Handles.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/InternalSeams.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/InverseSolution.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/MarkedSeams.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/MarkedSurface.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/PortEquations.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedDiagram.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedEquations.lean",
+        "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedSolution.lean"
+      ],
+      "edges": [
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedSolution.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/AllSeams.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedSolution.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedEquations.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/AllSeams.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/FirstShortSeam.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/AllSeams.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/MarkedSeams.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/AllSeams.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/InheritedSeams.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/AllSeams.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/ShortSeams.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedEquations.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedDiagram.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/InheritedSeams.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/InheritedFrames.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/InheritedSeams.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/SeamCoordinates.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/ShortSeams.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/PositiveCoordinates.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/ShortSeams.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MirrorSeams.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/FirstShortSeam.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MarkedFrames.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/FirstShortSeam.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/FrameTransport.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/FirstShortSeam.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/SeamCoordinates.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/MarkedSeams.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/PortEquations.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/MarkedSeams.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/BoundaryMarking.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedDiagram.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/MarkedSurface.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedDiagram.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MarkedFrames.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/BoundaryMarking.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/MarkedDiagram.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/FrameTransport.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/FramedFlags.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/InheritedFrames.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MarkedFrames.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/InheritedFrames.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/ShortCoordinates.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MarkedFrames.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/Mirror.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MarkedFrames.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/NamedSeams.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MarkedFrames.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/MarkedDiagram.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MirrorSeams.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MirrorSeamCoordinates.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MirrorSeams.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/SeamFactors.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/PositiveCoordinates.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MarkedFrames.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/PositiveCoordinates.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/SeamCoordinates.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/PositiveCoordinates.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/PortValues.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/PositiveCoordinates.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/SeamFactors.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/SeamCoordinates.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/ShortCoordinates.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/SeamCoordinates.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/FrameTransport.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/MarkedSurface.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/BoundaryWords.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/MarkedSurface.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/InverseSolution.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/PortEquations.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/InternalSeams.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/MarkedDiagram.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/GraftValues.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/FramedFlags.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/Mirror.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/FramedFlags.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/NamedSeams.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/FramedFlags.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BandCut.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MarkedFrames.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/Mirror.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MarkedFrames.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/NamedSeams.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MarkedFrames.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/MarkedDiagram.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/Mirror.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/Endpoints.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/Mirror.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/CutFrames.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/Mirror.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/GraftValues.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MirrorSeamCoordinates.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/PortValues.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MirrorSeamCoordinates.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MarkedFrames.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MirrorSeamCoordinates.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/FramedFlags.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MirrorSeamCoordinates.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/SeamCoordinates.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MirrorSeamCoordinates.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MirrorCoordinates.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/NamedSeams.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/BandBases.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/NamedSeams.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/GeneratorGauge.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/PortValues.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/FramedFlags.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/SeamCoordinates.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/ShortCoordinates.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/SeamCoordinates.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/FrameTransport.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/SeamFactors.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/FramedFlags.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/ShortCoordinates.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/PortCoordinates.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/BoundaryWords.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/Mirror.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/BoundaryWords.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/MarkedDiagram.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/InternalSeams.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MarkedFrames.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/InternalSeams.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/FrameTransport.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/InternalSeams.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/PortCoordinates.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/InternalSeams.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BandCut.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/InverseSolution.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/Handles.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/InverseSolution.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/DiskGauge.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/GraftValues.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/BoundaryEnumeration.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BandCut.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BandCutTopology.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BandCut.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/GeneratorGauge.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/DiskGauge.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/SurfacePresentation.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/GeneratorGauge.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/VertexGauge.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/BandBases.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/AtomicFlags.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/BandBases.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/Grafting.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/BandBases.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/VertexGauge.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/CutFrames.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/BandBases.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/CutFrames.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/RefinedDiagram.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/Endpoints.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/BandGauges.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/Mirror.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/Endpoints.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/Mirror.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/CutFrames.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/Mirror.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/GraftValues.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MirrorCoordinates.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/Mirror.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MirrorCoordinates.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/LocalFrames.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MirrorCoordinates.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/FramedFlags.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/NamedSeams.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/BandBases.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/NamedSeams.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/GeneratorGauge.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/PortCoordinates.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/Mirror.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/PortCoordinates.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/LocalFrames.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/PortCoordinates.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/FramedFlags.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/PortValues.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/FramedFlags.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/ShortCoordinates.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/PortCoordinates.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/Handles.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/CutWords.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/BoundaryEnumeration.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/RefinedDiagram.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/Grafting.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/AtomicGallery.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/RefinedDiagram.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/GraftCircuits.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/RefinedDiagram.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BoundaryReordering.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BandCutTopology.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BandIncidence.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/GeneratorGauge.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/VertexGauge.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/SurfacePresentation.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/Incidence.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/VertexGauge.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BandCycles.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/AtomicFlags.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/Graded.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/AtomicFlags.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/AtomicGallery.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/BandGauges.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/BandBases.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/LocalFrames.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/Mirror.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/CutWords.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BandCut.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/CutWords.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BoundaryReordering.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/AtomicGallery.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/AtomicFrames.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/GraftCircuits.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/BoundarySurgery.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/RefinedDiagram.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/GraftCircuits.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/RefinedDiagram.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BoundaryReordering.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BandCycles.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BoundaryBands.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BandIncidence.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/SurfacePresentation.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BoundaryReordering.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/CornerGauge.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/Incidence.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/MatrixExpressions.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/VertexGauge.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BandCycles.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/Graded.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/GradeMaps.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/Graded.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/ComplementaryPatches.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/AtomicFrames.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/FreshGallery.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/AtomicFrames.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/VertexFrames.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/BoundarySurgery.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/StripFacets.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BoundaryBands.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/SurfaceSurgery.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BoundaryReordering.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/CornerGauge.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/ComplementaryPatches.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/FlagGalleries.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/CornerGauge.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/GeneratorGauge.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/MatrixExpressions.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/MatrixPresentation.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/GradeMaps.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/Flags.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/FreshGallery.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/RoutedFamilies.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/StripFacets.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/PortSurgery.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/CornerGauge.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/GeneratorGauge.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/FlagGalleries.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/PortPatches.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/Flags.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/CutCircleIndex.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/MatrixPresentation.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/Flags.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/SurfaceSurgery.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BoundaryFrames.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/SurfaceSurgery.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/DiskGauge.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/VertexFrames.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/RoutedFamilies.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/PortSurgery.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/DoubledStrips.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BoundaryFrames.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/SplitFlags.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/PortPatches.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BoundaryCycles.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/RoutedFamilies.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/PatchCycles.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/DoubledStrips.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/StripForest.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BoundaryCycles.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/SurfacePresentation.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/PatchCycles.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/ComplementaryPatches.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/SplitFlags.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/VertexFrames.lean"
+        ],
+        [
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/StripForest.lean",
+          "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/Grafting.lean"
+        ]
+      ],
+      "file_count": 79,
+      "bytes": 1343683,
+      "lexical_markers": []
+    }
+  ],
+  "source_files": [
+    {
+      "path": "lean/ComparatorChallenges/CartierChartCompactnessSupport.lean",
+      "git_blob": "6c79c16e103614b08895c88576d6d23f4d28c8c1",
+      "sha256": "05de6915fb577137d01be2fcaab5ebcc252d80f628ffb913bea4bef87b54ea64",
+      "bytes": 1365
+    },
+    {
+      "path": "lean/ComparatorChallenges/CharacterVarietiesAllSeamsSupport.lean",
+      "git_blob": "ad7008eda1679969dc541623524d89867461aa92",
+      "sha256": "ebc3129bfb5ef4a47e0de1d89f0f406ef6603df32355bdfbb9ce278627c1a1f1",
+      "bytes": 900
+    },
+    {
+      "path": "lean/ComparatorChallenges/SurfaceConeCandidateSupport.lean",
+      "git_blob": "4860a4aa7ffedb6fb83d5256c4ca3645b5395563",
+      "sha256": "c75e9be97bcb12a6c289b6652337fc32398064fe8bef7cd910110a9d96fae56e",
+      "bytes": 494
+    },
+    {
+      "path": "lean/ComparatorChallenges/TraceIdealTransportSupport.lean",
+      "git_blob": "8774ac11d74a8d364abc97b48e2cf9b8b7e88a72",
+      "sha256": "d6c228b57bb7df92e03b09d12d23e0d3d9dda330a165e986fecfc2aabd4a2b05",
+      "bytes": 10021
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CartierSections/ChartCompactness.lean",
+      "git_blob": "85e2dc9c5d0ac1a8fcba25e59c5731f4c25ea3e7",
+      "sha256": "c51e40d84349c8cbc26f15a3444e250134090a201ab8da7d23b3a1fdfbc3a50a",
+      "bytes": 2350
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/AtomicFrames.lean",
+      "git_blob": "65e5d3b28cc7c4937d699f56a48ba1abfd4cc1b9",
+      "sha256": "c18e42ad63992b03784a72eb5d116891f91c20a9e6cd83e16bd727d38dec6b17",
+      "bytes": 9586
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/AtomicGallery.lean",
+      "git_blob": "92fbd89ae2c02d2210d6f62557ae2d88921fbe11",
+      "sha256": "83b06889c39882e36f9f2bba052ab4fc5e6417122d483b9a1ac9c187ae8c7437",
+      "bytes": 30855
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/BoundaryEnumeration.lean",
+      "git_blob": "15d210307945f5dc89af57da7ccdd61220119a07",
+      "sha256": "6c8de419da0e3eb6a5c55f89628d081b80cb989bff2225c20d72ed25785b749f",
+      "bytes": 15744
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/BoundarySurgery.lean",
+      "git_blob": "07c68d0f5994adafea20adf628be0fb0231f2249",
+      "sha256": "cacb010e82dd811b216bb72aaaf76ebd4efe2b0a1cb30a151a1eda66fee2d17d",
+      "bytes": 31693
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/DoubledStrips.lean",
+      "git_blob": "372a4100d703ad00cc75650c2c4926ea65a2c73b",
+      "sha256": "02b2a07bf24fa256f8de4e4c2d5017a6af04b10b391669e741a8d3e339f48b39",
+      "bytes": 25459
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/FreshGallery.lean",
+      "git_blob": "7d2aa02c4593e75dad49d8030f5175f8fc3f1bd1",
+      "sha256": "03bc6dc8412236efb81ab1fb7555f3ff4e2a2b02c9904b256a12b4328b48d02d",
+      "bytes": 41798
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/GraftCircuits.lean",
+      "git_blob": "9679e74533d2cd77eb30f05f8bad73d22aef9b74",
+      "sha256": "b257bf1fc75bf0d4c42624391d4b9dc8ec54016b0f108d9d8490cef61d3c530f",
+      "bytes": 45522
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/Grafting.lean",
+      "git_blob": "d5b903dc8241b44783dbd6d916b343160851eb94",
+      "sha256": "50d3fdaa1ffb7fddc4220578ea2644eb220d9166ee449e8171ae82b9411d20a8",
+      "bytes": 60512
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/GraftValues.lean",
+      "git_blob": "cd05433fee2b83b94010a95142b5afeefea113d0",
+      "sha256": "0f423745f885d9665ff35d8d4b66951369d69b6f470cd347219a53e21165391e",
+      "bytes": 21120
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/MarkedDiagram.lean",
+      "git_blob": "57552c205be115fb6893223cb136ca492db52629",
+      "sha256": "3191c4bbd5348c802eabe3c3c7b3ca01c7c3926d80aae5af85dcf45b7109b843",
+      "bytes": 6902
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/PortSurgery.lean",
+      "git_blob": "43f4b69a03f0c2df98a480a153cd841b053efe54",
+      "sha256": "f8457fca8ea3fe538b37ee8193385b729a75e5243454d7d65751f34d5ec71bed",
+      "bytes": 25851
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/RefinedDiagram.lean",
+      "git_blob": "3e1b66adfbc11428b52d3e31d20820b5b7a4ff6f",
+      "sha256": "968d5a68cf0487fd29a48b074a4ba8b3fd9a0a3feab0b8f277cafba844907006",
+      "bytes": 31815
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/StripFacets.lean",
+      "git_blob": "2eafda849493fdaeccfa93c88ae04a301523f351",
+      "sha256": "83ff80de6bf61e89abfd8ffc618e7227b9d10eb4d707a225cf59a33029c0ecc9",
+      "bytes": 40122
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/StripForest.lean",
+      "git_blob": "18566f1accd7485abf600568a494c3e5743ab7cf",
+      "sha256": "97ff940793081084281700fbea546e6d749c7b95b488b0b9527e8ec490a82178",
+      "bytes": 22763
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BandCut.lean",
+      "git_blob": "99ac2bb0ab6f6b4332dbb0fdf84250d62defb310",
+      "sha256": "ebe9d957cc8a91f223a3fe09b66cff4aa6df869e7424fbee6aa366dbc2ce8618",
+      "bytes": 35890
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BandCutTopology.lean",
+      "git_blob": "2d9f96657a4b781527bc5e0540217c991a726c3a",
+      "sha256": "be87cf0c88a2c31353d0caff8654294451d8d8d29ae78d1422b63f470d3bffca",
+      "bytes": 13262
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BandCycles.lean",
+      "git_blob": "8fc62d71ed1d95f937ebef4962d3d29f7c8d985f",
+      "sha256": "398444074f4e7593382eb8a36840f450ab5294a9c4e439b51fda29d22b0c8cde",
+      "bytes": 11538
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BandIncidence.lean",
+      "git_blob": "57a294cd58f526fd01ad46de7a84e5b61f19c7d6",
+      "sha256": "dd7d2c5925d600305a367ee020f08708322c25fd2f0e283a6a7a2896c4f04203",
+      "bytes": 22217
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BoundaryBands.lean",
+      "git_blob": "de7961338a9de9809d1ec8d1e023ae61c4cf9725",
+      "sha256": "695a05daf5bd698f836d8cae8cc056f7624df70a8d9863e33adb08df05106ad2",
+      "bytes": 15362
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BoundaryCycles.lean",
+      "git_blob": "c528d2077cb1af700453fdf5a08ce99846bf76f5",
+      "sha256": "c7dc483155d5f61ca1c7bab6c6e4997e2ec90f080d6ec40e4df030e3126f0bf4",
+      "bytes": 21485
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BoundaryFrames.lean",
+      "git_blob": "57dff9533b44e26d98acbddac60dc84d9263e309",
+      "sha256": "7e2548494bc5cc1e3a93ea90abe2c456c81175eeb6abcaa286a7b0376e0deb77",
+      "bytes": 16978
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BoundaryReordering.lean",
+      "git_blob": "be5f13eea2b82a72c83633030336176f60d30c32",
+      "sha256": "0890150d3f08276bd70dd81559fe7cabd22c982e1b1dc9efcebb5979c2f76f87",
+      "bytes": 9939
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/ComplementaryPatches.lean",
+      "git_blob": "d1ce6b65cc4337567e9ec9f8afcd6d22a1ccba71",
+      "sha256": "9a4296f8f0da290eeb43e492c3a09572a5932ee8f093f2804e9d144f3ed1daf9",
+      "bytes": 40251
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/CornerGauge.lean",
+      "git_blob": "e08c42dbf0bf0d84092879d598fe74b540bfe7a5",
+      "sha256": "0c18bfd3693e4b2c5fb40f2b542a1de619de808252c2f0dbe2c3f527cc28ec0c",
+      "bytes": 12441
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/CutCircleIndex.lean",
+      "git_blob": "941088d0adcf06e98eacc466592db373d0ae15c6",
+      "sha256": "fd1bba37345bcc08c5d42c412604c656a134c6a89194be77eabb9cb8480d0c37",
+      "bytes": 2778
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/DiskGauge.lean",
+      "git_blob": "32de986cbfbaa3616c7c738a385c76e2ada1ca6b",
+      "sha256": "df63a0038156c23043007bdd52691214122a063909e6ac6ebf3ed8ca311e10e0",
+      "bytes": 14084
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/FlagGalleries.lean",
+      "git_blob": "d831d98e3825f0aa4a505715664c71fc22294324",
+      "sha256": "074f36a1e6824e12ac4eb5899c29a37bdb56a1b94ffdaf886edf7a895645efc7",
+      "bytes": 28721
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/Flags.lean",
+      "git_blob": "3756bb8e3686715410977cb9cfde5d60f7655800",
+      "sha256": "0a5412a7d8bf468799a766580cd66647e299bb94b0f8ffc62ed15db3d0542fcb",
+      "bytes": 13837
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/GeneratorGauge.lean",
+      "git_blob": "5ca000aa20a6708e87c85b5afdaa489d04d16e8a",
+      "sha256": "bd702283534cde3f405705e7767cfa767c040c9a12692a685226d8e4a0ed4d8a",
+      "bytes": 11834
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/Incidence.lean",
+      "git_blob": "04f18febe77600fd8d77658583a0901e3df8089e",
+      "sha256": "2fffa90d905943cea29115230b87fcdd93b2aaac3a33137265ad192e03a3a48a",
+      "bytes": 17101
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/MatrixExpressions.lean",
+      "git_blob": "373c1b043141e50b5c73f27decf339beb350115e",
+      "sha256": "ca37156a02617cfb605ca20f2743adb40dc5a094fef4a1d9890e87ccf7eb7d3f",
+      "bytes": 9416
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/MatrixPresentation.lean",
+      "git_blob": "c1500922bf96829d1dba1254b897b5a1fd7e7c0c",
+      "sha256": "d108c8d57e24295c8000ba6162e762a94ba86725b9a005d9058e4586505c2081",
+      "bytes": 7570
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/PatchCycles.lean",
+      "git_blob": "6a3adbd7424f9b48bdf69de521192795c204c8b6",
+      "sha256": "9d1fe36c82a24db570b509412a6fb925c96cf38f61a290cad0e573266de00255",
+      "bytes": 26759
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/PortPatches.lean",
+      "git_blob": "3786b2afceef053db26bddd01720369daae526db",
+      "sha256": "7fc965a6b2cd6ee4202f888980c28570fa34aea1e429438efd7042e549270295",
+      "bytes": 20024
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/RoutedFamilies.lean",
+      "git_blob": "a5acce61a99a651a6292b4c7659f5d1b05ad0a07",
+      "sha256": "14cd1bab885fc0d6863b342445170b6d08ca9472697f7aaef39463bb2c2d6e5f",
+      "bytes": 28990
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/SplitFlags.lean",
+      "git_blob": "78f9668096adb81aeba23bc06f07cd074cb10a94",
+      "sha256": "e850306aae38bb29a2b5b894c2114f23b065eb80982f59a7f4294e8e0cf6d4f2",
+      "bytes": 16823
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/SurfacePresentation.lean",
+      "git_blob": "ec3fcacc69c2a502cc3a8e3837d8629d6b6dad82",
+      "sha256": "1030f673451af317691dec29b2ae4a8eb9e6c242e8723966dfccd5124497c5db",
+      "bytes": 31793
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/SurfaceSurgery.lean",
+      "git_blob": "6f84237c85e0c8def65c8e99cc0c4e16e811970c",
+      "sha256": "3b73867f4099c938af3970ad6048c1d75a7c43ba59d84c33cca70bcb840c4b22",
+      "bytes": 10756
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/VertexFrames.lean",
+      "git_blob": "6e0b546e1e2e773846e7a099991f7c61567c630c",
+      "sha256": "c7815746c9b3e76ccbaab66c637ad58619f848131339c2f913ef17448dda2ae4",
+      "bytes": 14606
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/VertexGauge.lean",
+      "git_blob": "1f49b9ec3c04de7e3ca68828c9b10fa1252d4b71",
+      "sha256": "d8841ea315aa4ac972f7fea8f22cf9ca8c3c18a6d57ffea2e037544135025971",
+      "bytes": 16827
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/AtomicFlags.lean",
+      "git_blob": "8a75e43f50d42b85f68e9b6c775b9ae65d0f70a5",
+      "sha256": "0ffacc11715e24abff00fe2e27b40aacb0b1c6ca10620ea96025271093fe30de",
+      "bytes": 2265
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/BandBases.lean",
+      "git_blob": "a4edcc48afe6f7a343baec7bda7c825bc070a783",
+      "sha256": "b0acd4e240c053747a46a1967b453db85eb96d38dadd847c19d1053307f6c684",
+      "bytes": 9633
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/BandGauges.lean",
+      "git_blob": "1b8d53667e363188ca39d99f616058c44ee587c4",
+      "sha256": "a459e8469de543859fd373fed747cad0ec2d63117cbe3187cada9f9893e4b40c",
+      "bytes": 13291
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/BoundaryMarking.lean",
+      "git_blob": "e76413408509e927f73a65670e68b1531cf96dfc",
+      "sha256": "d761870376d9ed22f645c3b78900149178c4b8f5f37004ece05dc764c622afac",
+      "bytes": 2434
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/CutFrames.lean",
+      "git_blob": "43950bc7b55a2087afdc77d6279e174f12999ce8",
+      "sha256": "6b23f5a126a70c69c61ab57ee205d963d2b95a7bea50a5df485b65b01b77e463",
+      "bytes": 6615
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/Endpoints.lean",
+      "git_blob": "e6999a49cacd09befc5115f1b23b2e43ed83d4f9",
+      "sha256": "b101181228f53dfeb10fba4c1308c0760ee5d27eff90612487f76b7f83fc3f3b",
+      "bytes": 21824
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/FramedFlags.lean",
+      "git_blob": "2004433228e4e05a4ee2a0c853398f783850ce83",
+      "sha256": "37d9c2a24e16a7a5fcb54cbaa0d844a6a80d310ba9ea8f57baec4f353cc57ea4",
+      "bytes": 29950
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/FrameTransport.lean",
+      "git_blob": "626266c2bc83a79e2aafe8c6e931ec366cf3c66d",
+      "sha256": "895e212e8024f909736fc7ded72f7565c984e576d5debdd4b2b468fc2e3ff61c",
+      "bytes": 4588
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/Graded.lean",
+      "git_blob": "455b17d871bd87ac4f25b68f30f5f9674b99a834",
+      "sha256": "5a6a4b4913f7fdc5147d8eaf6e7dd53bfeeac313425fcb5ad78bf423ac12211c",
+      "bytes": 10832
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/GradeMaps.lean",
+      "git_blob": "1e7f369f77907e9a08491d0650f83cce069107c2",
+      "sha256": "ae2e9a8e490bc740d0e2907ff8be7cce1a6a6a02b356aafe3cae0562edecc4df",
+      "bytes": 8072
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/InheritedFrames.lean",
+      "git_blob": "2a489b09d690e7322c5ce43b6c78a146aff2f0d5",
+      "sha256": "4336458931b5f76fe1d21a2c7b42499c4528371ea211456fdeadbdd7779e27d5",
+      "bytes": 5301
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/InheritedSeams.lean",
+      "git_blob": "87c649449275c68c4e53b3fd0def3bc87a94713a",
+      "sha256": "3923081de2adf2e058f746f30bf557ff58ba1d228a56081e4ed70a4dcc79a665",
+      "bytes": 8591
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/LocalFrames.lean",
+      "git_blob": "c423ec6c722314b643e0776168ed9dd9ab676442",
+      "sha256": "c8b19ad28b400486fed9f60792d8deaa91aa4fec3937aa641e311e6fe624fe9f",
+      "bytes": 1109
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MarkedFrames.lean",
+      "git_blob": "11795bf7975f75889c97bcf632482a253e20d398",
+      "sha256": "fdd053185deaac30577ce93f4b4a47e90775bd6351b571bcb13708807f6c6df7",
+      "bytes": 3635
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/Mirror.lean",
+      "git_blob": "4735f93059321c4d346befd7284df619391779d1",
+      "sha256": "ce08de497540c1b014334b01a74a1cb50666e0383ce13f5c7bf8e36b4e274a25",
+      "bytes": 11316
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MirrorCoordinates.lean",
+      "git_blob": "7364c39f49d1f4e510a9bc17349add19182908d1",
+      "sha256": "77286f0c1246ad06ccf1967d7b014592658d71c6d2ec84b41f63cfb295556c98",
+      "bytes": 9569
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MirrorSeamCoordinates.lean",
+      "git_blob": "9e1b23d3b880cc31abcdd089ec0ac2eebcef40ad",
+      "sha256": "e239d4fa8e761c2e1a0b083899e6700ecd35c8ef8f3af955c2f41093d7e2635d",
+      "bytes": 16894
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MirrorSeams.lean",
+      "git_blob": "5377fc21ffddfd6069b242a9ae0c070cce592183",
+      "sha256": "de82671074b8f434ad01dafaf7e9ea9b1ef5bb406f8f75c6921b3b76a267838a",
+      "bytes": 8338
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/NamedSeams.lean",
+      "git_blob": "fc5033878a4028be41138a93263ef1c1ed718053",
+      "sha256": "2c14619c012b0164533e13b64ca39c3beaa1e5fb0e487519553cd0b91320283f",
+      "bytes": 7141
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/PortCoordinates.lean",
+      "git_blob": "eeb5b62c4b0f965f062fd3a0de565aba30027cc9",
+      "sha256": "080c7842198352800bed6963b5996e5a2373b4eb530a3c554f667603627c8380",
+      "bytes": 23026
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/PortValues.lean",
+      "git_blob": "37abc3b32dadf13676b352a67e95a6e4353f64f7",
+      "sha256": "a60ebab6cc3e2d14ad7ec73ee0ccd2ae39cf4c73d9133722a1e1631e35e6b88d",
+      "bytes": 5133
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/PositiveCoordinates.lean",
+      "git_blob": "e74114d434dbd0f4d70b2a16739ac3019532529c",
+      "sha256": "e19ca71d03456badf85ecfef33b55af76687be7333ecfe1801551fb1ec403132",
+      "bytes": 17276
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/SeamCoordinates.lean",
+      "git_blob": "dc19559d8f5fa1acf2784b843a1e8f33d90bccbe",
+      "sha256": "9d14cbc90d7e87b6ece1d913ae1d047e611e8b323f62b4b171798f24964457a3",
+      "bytes": 8049
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/SeamFactors.lean",
+      "git_blob": "c32b723b1759288b013f76d1cba66471304299ca",
+      "sha256": "69017cad36c1fff41730577e0200201fd27bf6553e59da875389d050f66c5e9e",
+      "bytes": 2833
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/ShortCoordinates.lean",
+      "git_blob": "4806016a8a3823ef0bcc44f88d898effda044032",
+      "sha256": "e0806d1e81793eaa88527edbd5866f565b7ceade244038493f16a66f2333f3d7",
+      "bytes": 22394
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/ShortSeams.lean",
+      "git_blob": "1478c19e5118558cd6fcdfc19189126e5d78927d",
+      "sha256": "a96d6230580ad68ba6ebe2a00af824b232188b4a8d472a2d530b11fd65ddab83",
+      "bytes": 142
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/AllSeams.lean",
+      "git_blob": "2c8c04b32402528c8f448d1dec28b050627c5801",
+      "sha256": "a89dcde435cb1b67de56cc5e91cbaf6346d1763e98591f28270d5549c61cacea",
+      "bytes": 11640
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/BoundaryWords.lean",
+      "git_blob": "8cccc0875dc7cd5e8b10231669efa13c92583788",
+      "sha256": "b78b5c5ca2aa12591c2d0d1ca83b16a27fe33c991da8eb1767cc1b571a5662c1",
+      "bytes": 24313
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/CutWords.lean",
+      "git_blob": "872ee1e3f517a78df36b54e4f22e25303a342442",
+      "sha256": "a231f656d6958d2a0c658acfdf8454fda45b7d2569cd58c7362dc66f4d75a47c",
+      "bytes": 17650
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/FirstShortSeam.lean",
+      "git_blob": "abd000ea0df6b36fe2a0c5c8e807b6f1864e2f4e",
+      "sha256": "89a4d7cd436ef8bb15b9b80bc7ccd25c773fde7c78b590acb47a3895dc747d67",
+      "bytes": 14278
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/Handles.lean",
+      "git_blob": "6e7f808e3428edacf50f9544d5969e8477030af8",
+      "sha256": "24bcebe3c1e5173e9f4d47e47991bf65805affb10abdebd8c3f0034aea5647ed",
+      "bytes": 8920
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/InternalSeams.lean",
+      "git_blob": "be3614019e55646b81e14ac55c98ce5c1471bcc3",
+      "sha256": "325b0396866bb34a177f79f7ea981487147f7729701115a3548aea6add58a60f",
+      "bytes": 63893
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/InverseSolution.lean",
+      "git_blob": "256261161e7b4989a536feabb17aa42c424e7aea",
+      "sha256": "43e3d88790df824f986f23cdbd3efd858b1c490f1ad8bec440374b6d69dd96de",
+      "bytes": 19493
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/MarkedSeams.lean",
+      "git_blob": "c89b86a9466d3b6a430918d0b5fa7159c3ef5ac8",
+      "sha256": "052fcfe550cd46c7542681769a19b666f1979551f2281fd10e923c38c9f7f5a3",
+      "bytes": 7702
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/MarkedSurface.lean",
+      "git_blob": "05256c23ecabafd544df8fe8bf5902b37390f710",
+      "sha256": "daee1598370ce162cbb52ed6bf8184592f9dc0accd1016e0bca56e4ae33a5c79",
+      "bytes": 15386
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/PortEquations.lean",
+      "git_blob": "7966c8505a80a84f961b1f6a8bc919ea34e2dd9d",
+      "sha256": "85e3d6610258172fd2ac666ce0b3e2342bd7025bc6d8ccb81d5fbadd8855d62a",
+      "bytes": 1290
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedDiagram.lean",
+      "git_blob": "2e2eb8b10cc829690e1611e21ed7e6403bd4533c",
+      "sha256": "5eac5b9103bec2d0f642d5bf56817afcab427bae742ef9b05962fae6a4c8329b",
+      "bytes": 7943
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedEquations.lean",
+      "git_blob": "958fd063dc912f19ad430ae5a6ee417696992d85",
+      "sha256": "2812714a68c122afd3cb5055bf256a61c797ebcfa90e9f211dd2e020604eb418",
+      "bytes": 2206
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedSolution.lean",
+      "git_blob": "f2457411ba1ec389cb9762ff72fa1cdb093dc83e",
+      "sha256": "bf360b65bff8f3405123df8f469cee58609367e2c1f8a8db7cd8dc796f4a4816",
+      "bytes": 7694
+    },
+    {
+      "path": "lean/OAI/AlgebraicGeometry/SurfaceCones/CandidateRing.lean",
+      "git_blob": "2ca62b92e5eaf9fa4bb30eb15f26547231e5459c",
+      "sha256": "bea971e387a6c77c5ff5c3d533a6a3663aa9deb58f0247c203bd763cf5735aa7",
+      "bytes": 1057
+    },
+    {
+      "path": "lean/OAI/Analysis/TraceCone/Basic.lean",
+      "git_blob": "73d786d85aa544c5682dd77bc11089c38f8d31e8",
+      "sha256": "de409f3d3d82a547500c73c72c193cbaf25388b11b704e7a6cdbb1036420b720",
+      "bytes": 14258
+    },
+    {
+      "path": "lean/OAI/Analysis/TraceCone/FiniteIdeal.lean",
+      "git_blob": "dc6f37eea43e005895a90c39991c4e87fa142a3e",
+      "sha256": "dc498c5106478f01ea03a6dd6f59db25576cd1d466dde99fddef90cab4c4662a",
+      "bytes": 18017
+    },
+    {
+      "path": "lean/OAI/Analysis/TraceCone/IdealTransport.lean",
+      "git_blob": "4b387ab059c84367e4de6d0348fff1f29b09d0eb",
+      "sha256": "ce1b2e54486dd3bf4cc80aa676234ae18a3946fea652746e042a4da9f3e21ff7",
+      "bytes": 18222
+    },
+    {
+      "path": "lean/OAI/Analysis/TraceCone/Main.lean",
+      "git_blob": "257c73526a5d2d84e1a7c4a284292b2a3a8e3e6a",
+      "sha256": "c7a8f9ece6754ab219f3fb10c17d4e376e218dc6a693181628b6603983824a27",
+      "bytes": 143
+    },
+    {
+      "path": "lean/ComparatorChallenges/CartierChartCompactnessSupport.json",
+      "git_blob": "b9b3651ebd56b5cd033ad9af2308836d3152db64",
+      "sha256": "242cadf7dd3f4675b1db7043075221e2044ddc7786837ed97971138a31b62c0f",
+      "bytes": 390
+    },
+    {
+      "path": "lean/ComparatorChallenges/CharacterVarietiesAllSeamsSupport.json",
+      "git_blob": "c5b2017c0cdb46e77d2e6560898dbcdfbda90599",
+      "sha256": "c6bc7eb2e8d770e64482e642a8a6f25f020d73a0df5927a0b6b03b835798fe8b",
+      "bytes": 429
+    },
+    {
+      "path": "lean/ComparatorChallenges/SurfaceConeCandidateSupport.json",
+      "git_blob": "760584b99ae21762968525d45f570f2b241761cb",
+      "sha256": "dce1e6a3d800cb5b61ab13b7dd5cd76566960b963678f1dd238f922fcc4801f1",
+      "bytes": 357
+    },
+    {
+      "path": "lean/ComparatorChallenges/TraceIdealTransportSupport.json",
+      "git_blob": "5c89a31c11c8920c181bafdf91c85a474b83da0d",
+      "sha256": "0d717e97d8b472826a27af8c44a68da8bc92261020684c08aae97265c9fe3173",
+      "bytes": 1518
+    }
+  ]
+}

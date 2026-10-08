@@ -1,0 +1,32 @@
+# Local Python environments and caches.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Lean build products; the original .lean files are retained.
+.lake/
+*.olean
+*.ilean
+
+# Ad hoc TeX products. The manuscript PDF and audit logs are retained.
+/*.aux
+/*.bbl
+/*.blg
+/*.fdb_latexmk
+/*.fls
+/*.log
+/*.out
+/*.synctex.gz
+/*.toc
+
+# Local outputs and editor/OS files.
+/output/
+/tmp/
+/build/
+/dist/
+.DS_Store
+Thumbs.db
+*~
+*.swp

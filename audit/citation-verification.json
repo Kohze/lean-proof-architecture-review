@@ -1,0 +1,811 @@
+{
+  "date": "2026-10-08",
+  "method": "Primary literature records plus retained DOI publisher metadata, and pinned Git-tree artifacts.",
+  "references": [
+    {
+      "key": "deMouraUllrich2021",
+      "type": "inproceedings",
+      "title": "The Lean 4 Theorem Prover and Programming Language",
+      "authors": [
+        "Leonardo de Moura",
+        "Sebastian Ullrich"
+      ],
+      "year": 2021,
+      "venue": "Automated Deduction – CADE 28",
+      "series": "Lecture Notes in Computer Science",
+      "volume": "12699",
+      "pages": "625–635",
+      "doi": "10.1007/978-3-030-79876-5_37",
+      "primary_url": "https://link.springer.com/chapter/10.1007/978-3-030-79876-5_37",
+      "claim_supported": "Lean 4 combines an extensible interactive theorem prover with a programming language; its architecture supplies a background baseline for metaprogramming and kernel checking.",
+      "limitation": "A system paper, not evidence that any particular openai/math endpoint was independently rebuilt.",
+      "publisher_metadata_title": "The Lean 4 Theorem Prover and Programming Language",
+      "publisher_metadata_verified": true
+    },
+    {
+      "key": "mathlib2020",
+      "type": "inproceedings",
+      "title": "The Lean Mathematical Library",
+      "authors": [
+        "The mathlib Community"
+      ],
+      "year": 2020,
+      "venue": "Proceedings of the 9th ACM SIGPLAN International Conference on Certified Programs and Proofs",
+      "pages": "367–381",
+      "doi": "10.1145/3372885.3373824",
+      "primary_url": "https://leanprover-community.github.io/papers/mathlib-paper.pdf",
+      "claim_supported": "Mathlib's dependently typed foundations, classical mathematical focus, structure hierarchy, automation and collaborative organization are established library practices.",
+      "limitation": "Describes the earlier mathlib library; does not document the corpus's pinned 2026 mathlib revision.",
+      "publisher_metadata_title": "The lean mathematical library",
+      "publisher_metadata_verified": true
+    },
+    {
+      "key": "vanDoornEbnerLewis2020",
+      "type": "inproceedings",
+      "title": "Maintaining a Library of Formal Mathematics",
+      "authors": [
+        "Floris van Doorn",
+        "Gabriel Ebner",
+        "Robert Y. Lewis"
+      ],
+      "year": 2020,
+      "venue": "Intelligent Computer Mathematics (CICM 2020)",
+      "series": "Lecture Notes in Computer Science",
+      "volume": "12236",
+      "pages": "251–267",
+      "doi": "10.1007/978-3-030-53518-6_16",
+      "primary_url": "https://link.springer.com/chapter/10.1007/978-3-030-53518-6_16",
+      "author_manuscript_url": "https://florisvandoorn.com/papers/maintenance.pdf",
+      "claim_supported": "Kernel acceptance is complemented by semantic linting and documentation checks for library quality; logical coherence does not settle every engineering property of a formal corpus.",
+      "limitation": "Semantic linting here concerns elaborated declarations and metadata; it is not an automatic proof of agreement with an informal manuscript.",
+      "publisher_metadata_title": "Maintaining a Library of Formal Mathematics",
+      "publisher_metadata_verified": true
+    },
+    {
+      "key": "Baanen2022",
+      "type": "inproceedings",
+      "title": "Use and Abuse of Instance Parameters in the Lean Mathematical Library",
+      "authors": [
+        "Anne Baanen"
+      ],
+      "year": 2022,
+      "venue": "13th International Conference on Interactive Theorem Proving (ITP 2022)",
+      "series": "Leibniz International Proceedings in Informatics",
+      "volume": "237",
+      "pages": "4:1–4:20",
+      "doi": "10.4230/LIPIcs.ITP.2022.4",
+      "primary_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2022.4",
+      "claim_supported": "Instance parameters and typeclass design patterns organize mathematical structures but create scaling and inheritance complications; their use alone is not an unusual innovation of this corpus.",
+      "limitation": "The selected reference is the 2022 conference version, not the expanded 2025 journal version.",
+      "publisher_metadata_title": "Use and Abuse of Instance Parameters in the Lean Mathematical Library",
+      "publisher_metadata_verified": true
+    },
+    {
+      "key": "GarillotEtAl2009",
+      "type": "inproceedings",
+      "title": "Packaging Mathematical Structures",
+      "authors": [
+        "François Garillot",
+        "Georges Gonthier",
+        "Assia Mahboubi",
+        "Laurence Rideau"
+      ],
+      "year": 2009,
+      "venue": "Theorem Proving in Higher Order Logics (TPHOLs 2009)",
+      "series": "Lecture Notes in Computer Science",
+      "volume": "5674",
+      "pages": "327–342",
+      "doi": "10.1007/978-3-642-03359-9_23",
+      "primary_url": "https://link.springer.com/chapter/10.1007/978-3-642-03359-9_23",
+      "institutional_record_url": "https://research.vu.nl/en/publications/packaging-mathematical-structures",
+      "claim_supported": "Dependent records, coercions and inference have long been used to package mathematical interfaces and multiple inheritance; the interesting evidence in IdentifiedBand is its specific mathematical payload and subsequent transport.",
+      "limitation": "A Coq architecture paper; it supplies a conceptual baseline, not a claim that Lean directly implements its exact packed-class scheme.",
+      "publisher_metadata_title": "Packaging Mathematical Structures",
+      "publisher_metadata_verified": true
+    },
+    {
+      "key": "CommelinTopaz2024",
+      "type": "article",
+      "title": "Abstraction boundaries and spec driven development in pure mathematics",
+      "authors": [
+        "Johan Commelin",
+        "Adam Topaz"
+      ],
+      "year": 2024,
+      "venue": "Bulletin of the American Mathematical Society",
+      "volume": "61",
+      "number": "2",
+      "pages": "241–255",
+      "doi": "10.1090/bull/1831",
+      "primary_url": "https://www.ams.org/journals/bull/2024-61-02/S0273-0979-2024-01831-X/S0273-0979-2024-01831-X.pdf",
+      "author_manuscript_url": "https://adamtopaz.com/static/CommelinTopazAbstractionBoundaries.pdf",
+      "arxiv_url": "https://arxiv.org/abs/2309.14870",
+      "claim_supported": "Abstraction boundaries and specification-based collaboration are established formalization methods. Section 5 separately addresses alignment of formal objects with informal mathematics through specifications and examples.",
+      "limitation": "Supports the need for semantic alignment; does not certify alignment of the present corpus.",
+      "publisher_metadata_title": "Abstraction boundaries and spec driven development in pure mathematics",
+      "publisher_metadata_verified": true
+    },
+    {
+      "key": "ZhuEtAl2026",
+      "type": "misc",
+      "title": "LeanArchitect: Automating Blueprint Generation for Humans and AI",
+      "authors": [
+        "Thomas Zhu",
+        "Pietro Monticone",
+        "Jeremy Avigad",
+        "Sean Welleck"
+      ],
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "eprint": "2601.22554",
+      "doi": "10.48550/arXiv.2601.22554",
+      "primary_url": "https://arxiv.org/abs/2601.22554v1",
+      "claim_supported": "Blueprint metadata and automatically inferred declaration dependencies can be extracted directly from Lean code and exported to synchronized exposition.",
+      "limitation": "The corpus's lakefile pins LeanArchitect, but that dependency alone does not show that every case study uses annotations or an exported blueprint. The arXiv record was verified; no publication venue is asserted."
+    },
+    {
+      "key": "Carneiro2025Lean4Lean",
+      "type": "misc",
+      "title": "Lean4Lean: Verifying a Typechecker for Lean, in Lean",
+      "authors": [
+        "Mario Carneiro"
+      ],
+      "year": 2025,
+      "venue": "arXiv preprint, version 3",
+      "eprint": "2403.14064",
+      "doi": "10.48550/arXiv.2403.14064",
+      "primary_url": "https://arxiv.org/abs/2403.14064v3",
+      "first_submitted": "2024-03-21",
+      "version_date": "2025-09-14",
+      "claim_supported": "Lean permits external proof checking implementations, and verification of a checker itself is a separate task with partial correctness results reported in this version.",
+      "limitation": "Do not say all of Lean's kernel or metatheory is fully verified. This record's title differs from the first 2024 version, so cite the version explicitly."
+    },
+    {
+      "key": "deBruijn1970",
+      "type": "inproceedings",
+      "title": "The mathematical language AUTOMATH, its usage and some of its extensions",
+      "authors": [
+        "N. G. de Bruijn"
+      ],
+      "year": 1970,
+      "venue": "Symposium on Automatic Demonstration (Versailles, December 1968)",
+      "series": "Lecture Notes in Mathematics",
+      "volume": "125",
+      "pages": "29–61",
+      "doi": "10.1007/BFb0060623",
+      "primary_url": "https://pure.tue.nl/ws/portalfiles/portal/1988576/597597.pdf",
+      "institutional_record_url": "https://research.tue.nl/en/publications/the-mathematical-language-automath-its-usage-and-some-of-its-exte/",
+      "claim_supported": "AUTOMATH supplies an early primary source for representing mathematics in a language admitting mechanical checking.",
+      "limitation": "For the explicit modern phrase 'de Bruijn criterion', cite Barendregt and Wiedijk rather than claiming this paper states that wording.",
+      "publisher_metadata_title": "The mathematical language AUTOMATH, its usage, and some of its extensions",
+      "publisher_metadata_verified": true
+    },
+    {
+      "key": "BarendregtWiedijk2005",
+      "type": "article",
+      "title": "The challenge of computer mathematics",
+      "authors": [
+        "Henk Barendregt",
+        "Freek Wiedijk"
+      ],
+      "year": 2005,
+      "venue": "Philosophical Transactions of the Royal Society A",
+      "volume": "363",
+      "number": "1835",
+      "pages": "2351–2375",
+      "doi": "10.1098/rsta.2005.1650",
+      "primary_url": "https://cs.ru.nl/~henk/2005BarWiedijk.pdf",
+      "claim_supported": "The de Bruijn criterion emphasizes that a formal proof can be independently checked by a small program; proof production and independent checking need not share the entire trust base.",
+      "limitation": "Independent checkability is an architectural principle, not evidence that this audit actually executed an independent kernel.",
+      "publisher_metadata_title": "The challenge of computer mathematics",
+      "publisher_metadata_verified": true
+    },
+    {
+      "key": "Harrison1995",
+      "type": "techreport",
+      "title": "Metatheory and Reflection in Theorem Proving: A Survey and Critique",
+      "authors": [
+        "John Harrison"
+      ],
+      "year": 1995,
+      "institution": "SRI International Cambridge Computer Science Research Centre",
+      "number": "CRC-053",
+      "primary_url": "https://www.cl.cam.ac.uk/~jrh13/papers/reflect.html",
+      "pdf_url": "https://www.cl.cam.ac.uk/~jrh13/papers/reflect.pdf",
+      "claim_supported": "Computational reflection and LCF-style checking are longstanding approaches to efficient verified reasoning, and they should be distinguished from logical reflection principles that extend a logic.",
+      "limitation": "Use to frame certificates/reflection generally; neither TraceCone nor AllSeams is being claimed as a reflective decision procedure."
+    },
+    {
+      "key": "CohenMahboubi2012",
+      "type": "article",
+      "title": "Formal proofs in real algebraic geometry: from ordered fields to quantifier elimination",
+      "authors": [
+        "Cyril Cohen",
+        "Assia Mahboubi"
+      ],
+      "year": 2012,
+      "venue": "Logical Methods in Computer Science",
+      "volume": "8",
+      "number": "1:02",
+      "pages": "1–40",
+      "doi": "10.2168/LMCS-8(1:2)2012",
+      "primary_url": "https://lmcs.episciences.org/844",
+      "pdf_url": "https://lmcs.episciences.org/844/pdf",
+      "claim_supported": "Formal algebraic theories can validate algorithms and decision procedures by proving their mathematical correctness; certificate-based computation has substantial antecedents.",
+      "limitation": "A Coq real-algebraic-geometry formalization; not a specific precedent for this corpus's analytic trace-ideal transport.",
+      "printed_doi_variant": "10.2168/LMCS-8(1:02)2012",
+      "doi_normalization_note": "The journal prints 1:02; its resolving DOI and official project bibliography use 1:2.",
+      "publisher_metadata_title": "Formal proofs in real algebraic geometry: from ordered fields to quantifier elimination",
+      "publisher_metadata_verified": true
+    },
+    {
+      "key": "GonthierEtAl2013",
+      "type": "inproceedings",
+      "title": "A Machine-Checked Proof of the Odd Order Theorem",
+      "authors": [
+        "Georges Gonthier",
+        "Andrea Asperti",
+        "Jeremy Avigad",
+        "Yves Bertot",
+        "Cyril Cohen",
+        "François Garillot",
+        "Stéphane Le Roux",
+        "Assia Mahboubi",
+        "Russell O'Connor",
+        "Sidi Ould Biha",
+        "Ioana Pasca",
+        "Laurence Rideau",
+        "Alexey Solovyev",
+        "Enrico Tassi",
+        "Laurent Théry"
+      ],
+      "year": 2013,
+      "venue": "Interactive Theorem Proving (ITP 2013)",
+      "series": "Lecture Notes in Computer Science",
+      "volume": "7998",
+      "pages": "163–179",
+      "doi": "10.1007/978-3-642-39634-2_14",
+      "primary_url": "https://link.springer.com/chapter/10.1007/978-3-642-39634-2_14",
+      "claim_supported": "Large collaborative formalization projects have developed extensive reusable mathematical libraries well before this corpus.",
+      "limitation": "Do not use an earlier large project to quantify this corpus's novelty or comparative difficulty.",
+      "publisher_metadata_title": "A Machine-Checked Proof of the Odd Order Theorem",
+      "publisher_metadata_verified": true
+    },
+    {
+      "key": "HalesEtAl2017",
+      "type": "article",
+      "title": "A formal proof of the Kepler conjecture",
+      "authors": [
+        "Thomas Hales",
+        "Mark Adams",
+        "Gertrud Bauer",
+        "Dat Tat Dang",
+        "John Harrison",
+        "Truong Le Hoang",
+        "Cezary Kaliszyk",
+        "Victor Magron",
+        "Sean McLaughlin",
+        "Thang Tat Nguyen",
+        "Truong Quang Nguyen",
+        "Tobias Nipkow",
+        "Steven Obua",
+        "Joseph Pleso",
+        "Jason Rute",
+        "Alexey Solovyev",
+        "An Hoai Thi Ta",
+        "Trung Nam Tran",
+        "Diep Thi Trieu",
+        "Josef Urban",
+        "Ky Khac Vu",
+        "Roland Zumkeller"
+      ],
+      "year": 2017,
+      "venue": "Forum of Mathematics, Pi",
+      "volume": "5",
+      "article_number": "e2",
+      "doi": "10.1017/fmp.2017.1",
+      "primary_url": "https://arxiv.org/abs/1501.02155",
+      "arxiv_url": "https://arxiv.org/abs/1501.02155",
+      "claim_supported": "Flyspeck is a primary precedent for a major formal proof involving multiple proof assistants and substantial verified computation.",
+      "limitation": "Author spellings here follow the authors' arXiv record. No claimed performance comparison to openai/math.",
+      "publisher_metadata_title": "A FORMAL PROOF OF THE KEPLER CONJECTURE",
+      "publisher_metadata_verified": true
+    },
+    {
+      "key": "AvigadEtAl2024Anatomy",
+      "type": "misc",
+      "title": "Anatomy of a Formal Proof",
+      "authors": [
+        "Jeremy Avigad",
+        "Johan Commelin",
+        "Heather Macbeth",
+        "Adam Topaz"
+      ],
+      "year": 2024,
+      "venue": "arXiv preprint",
+      "eprint": "2411.11885",
+      "doi": "10.48550/arXiv.2411.11885",
+      "primary_url": "https://arxiv.org/abs/2411.11885v1",
+      "claim_supported": "Formal proof assistants make definitions and theorem statements explicit and check proofs against a formal axiomatic foundation; their practical impact includes mathematical exposition and collaboration.",
+      "limitation": "General framing, not source-level evidence about the inspected repository."
+    },
+    {
+      "key": "ComparatorSource2026",
+      "title": "Comparator",
+      "authors": [
+        "Henrik Böving",
+        "Lean FRO"
+      ],
+      "version": "ca04cfc72b550331658ec314bf47685281bfd4bf",
+      "primary_url": "https://github.com/leanprover/comparator/tree/ca04cfc72b550331658ec314bf47685281bfd4bf",
+      "claim_supported": "Source-level comparison of theorem statements and dependent declarations, transitive axiom inspection, builtin kernel replay, and optional external kernel checking.",
+      "limitation": "This is an independently pinned infrastructure snapshot. openai/math does not pin Comparator in the inspected challenge README or lakefile, so do not represent this as the exact checker used to produce the corpus.",
+      "type": "misc",
+      "year": 2026
+    },
+    {
+      "key": "MassotLeanBlueprint",
+      "title": "LeanBlueprint",
+      "authors": [
+        "Patrick Massot",
+        "contributors"
+      ],
+      "primary_url": "https://github.com/PatrickMassot/leanblueprint",
+      "claim_supported": "Blueprint tooling links informal labels to Lean declaration names and records dependencies/status through explicit metadata.",
+      "limitation": "Primary software documentation, separate from the 15 literature references.",
+      "type": "misc",
+      "year": 2026
+    },
+    {
+      "key": "Kudryashov2022",
+      "type": "inproceedings",
+      "title": "Formalizing the Divergence Theorem and the Cauchy Integral Formula in Lean",
+      "authors": [
+        "Yury Kudryashov"
+      ],
+      "year": 2022,
+      "venue": "13th International Conference on Interactive Theorem Proving (ITP 2022)",
+      "series": "Leibniz International Proceedings in Informatics",
+      "volume": "237",
+      "pages": "23:1–23:19",
+      "doi": "10.4230/LIPIcs.ITP.2022.23",
+      "primary_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2022.23",
+      "author_manuscript_url": "https://drops.dagstuhl.de/opus/volltexte/2022/16732/pdf/LIPIcs-ITP-2022-23.pdf",
+      "publisher_metadata_verified": true,
+      "publisher_metadata_title": "Formalizing the Divergence Theorem and the Cauchy Integral Formula in Lean",
+      "publication_date": "2022-08-03",
+      "claim_supported": "Earlier Lean work already formalizes integration-theory transport and careful regularity interfaces: a GP-integral divergence theorem is transferred to the Bochner integral, and the resulting rectangular-domain theorem yields Cauchy–Goursat without continuity assumptions on the complex derivative.",
+      "limitation": "Its domains are rectangular boxes; it does not establish the sphere-local exact-form flux theorem or ordered differential-form representation used in the Mahler case.",
+      "closest_comparison": "This gives a direct precedent for organizing analysis around the assumptions of an integration interface. Mahler's specific audited bridge concerns sphere-local form congruence and a cutoff extension.",
+      "suggested_placement": "Discussion paragraph beginning 'These patterns have substantial antecedents', or the Mahler subsection's concluding comparison with established formal analysis.",
+      "evidence_locators": [
+        {
+          "source": "publisher record",
+          "locator": "Title, author, publication date, DOI, and Cite As/BibTeX fields"
+        },
+        {
+          "source": "primary PDF",
+          "locator": "Sections 4.10–4.11, printed pp. 23:14–23:15 (PDF pages 14–15)",
+          "topic": "Bochner-to-GP integrability bridge and divergence theorem"
+        },
+        {
+          "source": "primary PDF",
+          "locator": "Section 5, printed pp. 23:15–23:16 (PDF pages 15–16)",
+          "topic": "Cauchy–Goursat applications"
+        }
+      ],
+      "retained_pdf": {
+        "path": "tmp/lean-study/prior-papers/Kudryashov2022.pdf",
+        "sha256": "4692664c3677f0afbac95f0a6900adaecba480c6b5bb5d467b1118e4ba704c43"
+      }
+    },
+    {
+      "key": "AudebaudPaulinMohring2009",
+      "type": "article",
+      "title": "Proofs of randomized algorithms in Coq",
+      "authors": [
+        "Philippe Audebaud",
+        "Christine Paulin-Mohring"
+      ],
+      "year": 2009,
+      "venue": "Science of Computer Programming",
+      "volume": "74",
+      "number": "8",
+      "pages": "568–589",
+      "doi": "10.1016/j.scico.2007.09.002",
+      "primary_url": "https://www.sciencedirect.com/science/article/pii/S0167642309000240",
+      "author_manuscript_url": "https://www.lri.fr/~paulin/ALEA/random-scp.pdf",
+      "publisher_metadata_verified": true,
+      "publisher_metadata_title": "Proofs of randomized algorithms in Coq",
+      "publication_date": "2009-06-01",
+      "year_note": "The selected reference is the 2009 expanded journal article; its DOI contains 2007, and an earlier conference version appeared in 2006.",
+      "claim_supported": "The Coq development interprets randomized programs as functionals M(A)=(A→[0,1])→[0,1], representing subprobabilities through expectations. It proves probability rules, supports general recursion, and verifies a Bernoulli sampler from coin flips.",
+      "limitation": "This is an expectation-based denotational account, not a cost-bearing compiler theorem for the particular fixed oracle machine and tape positions inspected in CommonBases.",
+      "closest_comparison": "The all-observables output certificate should be presented as a concrete application of established expectation semantics; its case-specific content is the connection to bounded banks and fixed-machine execution.",
+      "suggested_placement": "CommonBases final comparison paragraph, alongside CertiCrypt/EasyCrypt; optionally the discussion's sentence about observations and output distributions.",
+      "evidence_locators": [
+        {
+          "source": "publisher record",
+          "locator": "Title, author list, volume 74 issue 8, pages 568–589, date, and DOI"
+        },
+        {
+          "source": "author's publication bibliography",
+          "url": "https://toccata.gitlabpages.inria.fr/toccata/publications/paulin_bib.html",
+          "locator": "audebaud07scp record confirms journal version metadata"
+        },
+        {
+          "source": "primary author PDF",
+          "locator": "Sections 1.3 and 2.2, PDF pages 3 and 6",
+          "topic": "Expectation-functional interpretation"
+        },
+        {
+          "source": "primary author PDF",
+          "locator": "Section 2.5.1, PDF page 9",
+          "topic": "Pointwise equality of measures means equality on every observable"
+        },
+        {
+          "source": "primary author PDF",
+          "locator": "Section 4.4, Definition 4 and Proposition 5, PDF pages 29–30",
+          "topic": "Commuting expectation with recursive semantics"
+        },
+        {
+          "source": "primary author PDF",
+          "locator": "Section 5.3, PDF pages 36–38",
+          "topic": "Bernoulli implementation"
+        }
+      ],
+      "retained_pdf": {
+        "path": "tmp/lean-study/prior-papers/AudebaudPaulinMohring2009.pdf",
+        "sha256": "62b9fb520c22afa3f8c75381a13638ae2b254d1ad8c000b98d72b251a7082cfd"
+      }
+    },
+    {
+      "key": "deMedeirosEtAl2025",
+      "type": "article",
+      "title": "Verified Foundations for Differential Privacy",
+      "authors": [
+        "Markus de Medeiros",
+        "Muhammad Naveed",
+        "Tancrède Lepoint",
+        "Temesghen Kahsai",
+        "Tristan Ravitch",
+        "Stefan Zetzsche",
+        "Anjali Joshi",
+        "Joseph Tassarotti",
+        "Aws Albarghouthi",
+        "Jean-Baptiste Tristan"
+      ],
+      "year": 2025,
+      "venue": "Proceedings of the ACM on Programming Languages",
+      "volume": "9",
+      "number": "PLDI",
+      "article_number": "191",
+      "pages": "191:1–191:25",
+      "doi": "10.1145/3729294",
+      "primary_url": "https://dl.acm.org/doi/10.1145/3729294",
+      "author_manuscript_url": "https://pages.cs.wisc.edu/~aws/papers/pldi25.pdf",
+      "publisher_metadata_verified": true,
+      "publisher_metadata_title": "Verified Foundations for Differential Privacy",
+      "publication_date": "2025-06-13",
+      "claim_supported": "SampCert verifies exact discrete samplers in Lean. Its SLang uses unnormalized mass functions; normalization promotes completed samplers to PMFs. Equal sampler distributions support substituting implementations without redoing downstream privacy proofs.",
+      "limitation": "Section 4.1 explicitly retains external runtime definitions in the trusted computing base; the article does not supply CommonBases' inspected fixed-machine cost and physical-tape theorem.",
+      "closest_comparison": "This is a close Lean precedent for separating executable sampling structure from distribution semantics and using equality of output laws as a downstream interface.",
+      "suggested_placement": "CommonBases final comparison paragraph and discussion of preservation of probability laws; citation should support established sampler/distribution interfaces, not a rarity claim.",
+      "evidence_locators": [
+        {
+          "source": "publisher record",
+          "locator": "Full author list, publication history, volume 9 PLDI, title, and DOI"
+        },
+        {
+          "source": "primary PDF",
+          "locator": "ACM Reference Format, printed p. 191:2 (PDF page 2)",
+          "topic": "All authors, year, article 191, 25 pages, DOI"
+        },
+        {
+          "source": "primary PDF",
+          "locator": "Sections 3–3.1, printed pp. 191:12–191:14 (PDF pages 12–14)",
+          "topic": "PMF boundary, SLang mass semantics, normalization, and finite loop cuts"
+        },
+        {
+          "source": "primary PDF",
+          "locator": "Section 3.3.1, printed p. 191:17 (PDF page 17)",
+          "topic": "Interchangeable Laplace implementations through equal distributions"
+        },
+        {
+          "source": "primary PDF",
+          "locator": "Section 4.1, printed p. 191:19 (PDF page 19)",
+          "topic": "External runtime definitions and compilation boundary"
+        }
+      ],
+      "retained_pdf": {
+        "path": "tmp/lean-study/prior-papers/deMedeirosEtAl2025.pdf",
+        "sha256": "39d2de1ef8a9caccd48369a9330b7d93c0c5eb22a73fdbc461dbe65aad6c49a4"
+      }
+    },
+    {
+      "key": "Perfectoid2020",
+      "type": "inproceedings",
+      "title": "Formalising perfectoid spaces",
+      "authors": [
+        "Kevin Buzzard",
+        "Johan Commelin",
+        "Patrick Massot"
+      ],
+      "year": 2020,
+      "venue": "Proceedings of the 9th ACM SIGPLAN International Conference on Certified Programs and Proofs",
+      "volume": null,
+      "pages": "299-312",
+      "doi": "10.1145/3372885.3373830",
+      "primary_url": "https://arxiv.org/abs/1910.12320",
+      "claim_supported": "Sophisticated mathematical objects and reusable foundations in Lean.",
+      "publisher_metadata_title": "Formalising perfectoid spaces",
+      "publisher_metadata_verified": true
+    },
+    {
+      "key": "Schemes2021",
+      "type": "article",
+      "title": "Schemes in Lean",
+      "authors": [
+        "Kevin Buzzard",
+        "Chris Hughes",
+        "Kenny Lau",
+        "Amelia Livingston",
+        "Ramon Fernández Mir",
+        "Scott Morrison"
+      ],
+      "year": 2022,
+      "venue": "Experimental Mathematics",
+      "volume": "31",
+      "pages": "355-363",
+      "doi": "10.1080/10586458.2021.1983489",
+      "primary_url": "https://arxiv.org/abs/2101.02602",
+      "claim_supported": "Alternative formal representations of schemes illustrate design choices.",
+      "publisher_metadata_title": "Schemes in Lean",
+      "publisher_metadata_verified": true
+    },
+    {
+      "key": "CertiCrypt2009",
+      "type": "inproceedings",
+      "title": "Formal certification of code-based cryptographic proofs",
+      "authors": [
+        "Gilles Barthe",
+        "Benjamin Grégoire",
+        "Santiago Zanella Béguelin"
+      ],
+      "year": 2009,
+      "venue": "Proceedings of the 36th annual ACM SIGPLAN-SIGACT symposium on Principles of programming languages",
+      "volume": null,
+      "pages": "90-101",
+      "doi": "10.1145/1480881.1480894",
+      "primary_url": "https://software.imdea.org/~szanella/Zanella.2009.POPL.pdf",
+      "claim_supported": "Established observational-equivalence and probabilistic-program proof methodology.",
+      "publisher_metadata_title": "Formal certification of code-based cryptographic proofs",
+      "publisher_metadata_verified": true
+    },
+    {
+      "key": "EasyCrypt2011",
+      "type": "inproceedings",
+      "title": "Computer-Aided Security Proofs for the Working Cryptographer",
+      "authors": [
+        "Gilles Barthe",
+        "Benjamin Grégoire",
+        "Sylvain Heraud",
+        "Santiago Zanella Béguelin"
+      ],
+      "year": 2011,
+      "venue": "Advances in Cryptology -- CRYPTO 2011",
+      "volume": "6841",
+      "pages": "71-90",
+      "doi": "10.1007/978-3-642-22792-9_5",
+      "primary_url": "https://software.imdea.org/~szanella/Zanella.2011.CRYPTO.pdf",
+      "claim_supported": "Established computer-aided game-based cryptographic proofs.",
+      "series": "Lecture Notes in Computer Science",
+      "publisher_metadata_title": "Computer-Aided Security Proofs for the Working Cryptographer",
+      "publisher_metadata_verified": true
+    },
+    {
+      "key": "CakeML2014",
+      "type": "inproceedings",
+      "title": "CakeML: A Verified Implementation of ML",
+      "authors": [
+        "Ramana Kumar",
+        "Magnus O. Myreen",
+        "Michael Norrish",
+        "Scott Owens"
+      ],
+      "year": 2014,
+      "venue": "Proceedings of the 41st ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages",
+      "volume": null,
+      "pages": "179-191",
+      "doi": "10.1145/2535838.2535841",
+      "primary_url": "https://www.cl.cam.ac.uk/~mom22/popl14.pdf",
+      "claim_supported": "Verified compilation is an established method.",
+      "publisher_metadata_title": "CakeML",
+      "publisher_metadata_verified": true
+    },
+    {
+      "key": "Leroy2009",
+      "type": "article",
+      "title": "Formal verification of a realistic compiler",
+      "authors": [
+        "Xavier Leroy"
+      ],
+      "year": 2009,
+      "venue": "Communications of the ACM",
+      "volume": "52",
+      "pages": "107-115",
+      "doi": "10.1145/1538788.1538814",
+      "primary_url": "https://xavierleroy.org/publi/compcert-CACM.pdf",
+      "claim_supported": "Compiler semantic preservation is an established independent proof obligation.",
+      "publisher_metadata_title": "Formal verification of a realistic compiler",
+      "publisher_metadata_verified": true
+    },
+    {
+      "key": "ElliottRobertSantiago2011",
+      "type": "article",
+      "title": "The cone of lower semicontinuous traces on a C*-algebra",
+      "authors": [
+        "George A. Elliott",
+        "Leonel Robert",
+        "Luis Santiago"
+      ],
+      "year": 2011,
+      "venue": "American Journal of Mathematics",
+      "volume": "133",
+      "pages": "969-1005",
+      "doi": "10.1353/ajm.2011.0027",
+      "primary_url": "https://arxiv.org/abs/0805.3122",
+      "claim_supported": "Lower-semicontinuous trace cones provide the mathematical context for cut-sensitive convergence.",
+      "publisher_metadata_title": "The cone of lower semicontinuous traces on a C*-algebra",
+      "publisher_metadata_verified": true
+    },
+    {
+      "key": "CrouzeixPalencia2017",
+      "type": "article",
+      "title": "The Numerical Range is a $(1+\\sqrt{2})$-Spectral Set",
+      "authors": [
+        "M. Crouzeix",
+        "C. Palencia"
+      ],
+      "year": 2017,
+      "venue": "SIAM Journal on Matrix Analysis and Applications",
+      "volume": "38",
+      "pages": "649-655",
+      "doi": "10.1137/17M1116672",
+      "primary_url": "https://arxiv.org/abs/1702.00668",
+      "claim_supported": "Established complete spectral-set bound 1+sqrt(2), used as an architecture comparator.",
+      "publisher_metadata_title": "The Numerical Range is a $(1+\\sqrt{2})$-Spectral Set",
+      "publisher_metadata_verified": true
+    },
+    {
+      "key": "OAIRepository",
+      "type": "misc",
+      "title": "Mathematics manuscripts and supporting proof artifacts",
+      "authors": [
+        "OpenAI"
+      ],
+      "year": 2026,
+      "primary_url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/README.md",
+      "note": "Repository artifact; accessed 8 October 2026",
+      "git_blob_sha1": "50feb63d396138f30dc1ff1e0af121d0263bf5a3",
+      "claim_supported": "Source-level case analysis; see research evidence ledger."
+    },
+    {
+      "key": "OAICatalog",
+      "type": "misc",
+      "title": "Formalization catalogue",
+      "authors": [
+        "OpenAI"
+      ],
+      "year": 2026,
+      "primary_url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/formalization.yaml",
+      "note": "Repository artifact; accessed 8 October 2026",
+      "git_blob_sha1": "275eee8cfab7ce49d3a5e88f02cbb8f28fe6fee6",
+      "claim_supported": "Source-level case analysis; see research evidence ledger."
+    },
+    {
+      "key": "OAIComparator",
+      "type": "misc",
+      "title": "Comparator verification configurations and instructions",
+      "authors": [
+        "OpenAI"
+      ],
+      "year": 2026,
+      "primary_url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/ComparatorChallenges/README.md",
+      "note": "Repository artifact; accessed 8 October 2026",
+      "git_blob_sha1": "8ce7be24bf62c66104be5f733d168301ead4e4f3",
+      "claim_supported": "Source-level case analysis; see research evidence ledger."
+    },
+    {
+      "key": "OAICommonBases",
+      "type": "misc",
+      "title": "Lean source for common-base approximate counting",
+      "authors": [
+        "OpenAI"
+      ],
+      "year": 2026,
+      "primary_url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+      "note": "Repository artifact; accessed 8 October 2026",
+      "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+      "claim_supported": "Source-level case analysis; see research evidence ledger."
+    },
+    {
+      "key": "OAISwitch",
+      "type": "misc",
+      "title": "Lean source for switch-chain mixing",
+      "authors": [
+        "OpenAI"
+      ],
+      "year": 2026,
+      "primary_url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/Main.lean",
+      "note": "Repository artifact; accessed 8 October 2026",
+      "git_blob_sha1": "f57bfdeb78b3af3dec46c90aeaa145b85d044140",
+      "claim_supported": "Source-level case analysis; see research evidence ledger."
+    },
+    {
+      "key": "OAIMahler",
+      "type": "misc",
+      "title": "Lean source for the symmetric Mahler theorem",
+      "authors": [
+        "OpenAI"
+      ],
+      "year": 2026,
+      "primary_url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/MainTheorem.lean",
+      "note": "Repository artifact; accessed 8 October 2026",
+      "git_blob_sha1": "d5c55dee7e95a66312217de1f875ea8cb7508e62",
+      "claim_supported": "Source-level case analysis; see research evidence ledger."
+    },
+    {
+      "key": "OAICrouzeix",
+      "type": "misc",
+      "title": "Lean source for the complete Crouzeix bound",
+      "authors": [
+        "OpenAI"
+      ],
+      "year": 2026,
+      "primary_url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/CompleteBound.lean",
+      "note": "Repository artifact; accessed 8 October 2026",
+      "git_blob_sha1": "a504007c267984cb20e977b0e8c31c4198bad757",
+      "claim_supported": "Source-level case analysis; see research evidence ledger."
+    },
+    {
+      "key": "OAITraceIdeals",
+      "type": "misc",
+      "title": "Lean source for trace and ideal transport",
+      "authors": [
+        "OpenAI"
+      ],
+      "year": 2026,
+      "primary_url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/TraceCone/IdealTransport.lean",
+      "note": "Repository artifact; accessed 8 October 2026",
+      "git_blob_sha1": "4b387ab059c84367e4de6d0348fff1f29b09d0eb",
+      "claim_supported": "Source-level case analysis; see research evidence ledger."
+    },
+    {
+      "key": "OAIAllSeams",
+      "type": "misc",
+      "title": "Lean source for produced all-seams compatibility",
+      "authors": [
+        "OpenAI"
+      ],
+      "year": 2026,
+      "primary_url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedSolution.lean",
+      "note": "Repository artifact; accessed 8 October 2026",
+      "git_blob_sha1": "f2457411ba1ec389cb9762ff72fa1cdb093dc83e",
+      "claim_supported": "Source-level case analysis; see research evidence ledger."
+    },
+    {
+      "key": "MathlibForms",
+      "type": "misc",
+      "title": "Differential forms: Mathlib source",
+      "authors": [
+        "The mathlib Community"
+      ],
+      "year": 2026,
+      "primary_url": "https://github.com/leanprover-community/mathlib4/blob/d13f23b723b8a846827a245b89c10fc7d3f11612/Mathlib/Analysis/Calculus/DifferentialForm/Basic.lean",
+      "note": "Pinned dependency source; accessed 8 October 2026",
+      "claim_supported": "Continuous alternating maps, Frechet exterior derivative, and d squared under smoothness."
+    }
+  ],
+  "reference_count": 38
+}

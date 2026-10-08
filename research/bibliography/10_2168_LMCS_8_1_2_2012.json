@@ -1,0 +1,412 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        8
+      ]
+    ],
+    "date-time": "2026-10-08T00:45:05Z",
+    "timestamp": 1791420305395,
+    "version": "4.3.3"
+  },
+  "reference-count": 36,
+  "publisher": "Centre pour la Communication Scientifique Directe (CCSD)",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2012,
+            2,
+            16
+          ]
+        ],
+        "date-time": "2012-02-16T00:00:00Z",
+        "timestamp": 1329350400000
+      },
+      "content-version": "unspecified",
+      "delay-in-days": 0,
+      "URL": "https://arxiv.org/licenses/nonexclusive-distrib/1.0"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/501100000780",
+      "name": "European Commission",
+      "doi-asserted-by": "crossref",
+      "award": [
+        "243847"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "243847"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/501100000780",
+          "id-type": "DOI",
+          "asserted-by": "crossref"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "abstract": "<jats:p>This paper describes a formalization of discrete real closed fields in the\nCoq proof assistant. This abstract structure captures for instance the theory\nof real algebraic numbers, a decidable subset of real numbers with good\nalgorithmic properties. The theory of real algebraic numbers and more generally\nof semi-algebraic varieties is at the core of a number of effective methods in\nreal analysis, including decision procedures for non linear arithmetic or\noptimization methods for real valued functions. After defining an abstract\nstructure of discrete real closed field and the elementary theory of real roots\nof polynomials, we describe the formalization of an algebraic proof of\nquantifier elimination based on pseudo-remainder sequences following the\nstandard computer algebra literature on the topic. This formalization covers a\nlarge part of the theory which underlies the efficient algorithms implemented\nin practice in computer algebra. The success of this work paves the way for\nformal certification of these efficient methods.</jats:p>",
+  "DOI": "10.2168/lmcs-8(1:2)2012",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2012,
+        9,
+        6
+      ]
+    ],
+    "date-time": "2012-09-06T06:03:11Z",
+    "timestamp": 1346911391000
+  },
+  "source": "Crossref",
+  "is-referenced-by-count": 18,
+  "title": [
+    "Formal proofs in real algebraic geometry: from ordered fields to quantifier elimination"
+  ],
+  "prefix": "10.46298",
+  "volume": "Volume 8, Issue 1",
+  "author": [
+    {
+      "given": "Assia",
+      "family": "Mahboubi",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Cyril",
+      "family": "Cohen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "25203",
+  "published-online": {
+    "date-parts": [
+      [
+        2012,
+        2,
+        16
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "issue": "2",
+      "key": "10.2168/LMCS-8(1:2)2012_setoids",
+      "doi-asserted-by": "crossref",
+      "first-page": "261",
+      "DOI": "10.1017/S0956796802004501",
+      "volume": "13",
+      "author": "Gilles Barthe, Venanzio Capretta, and Ol",
+      "year": "2003",
+      "journal-title": "J. Funct. Program."
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_Basu",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Saugata Basu, Richard Pollack, and Marie-Francoise Roy.\n                      Algorithms in Real Algebraic Geometry\n                      , volume 10 of\n                      Algorithms and Computation in Mathematics\n                      . Springer-Verlag New York, Inc., 2006.",
+      "DOI": "10.1007/3-540-33099-2"
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_BG",
+      "unstructured": "Helmut Bender and Georges Glauberman.\n                      Local analysis for the Odd Order Theorem\n                      . Number 188 in London Mathematical Society Lecture Note Series. Cambridge University Press, 1994."
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_coqart",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Yves Bertot and Pierre Castéran.\n                      Interactive Theorem Proving and Program Development, Coq'Art: the Calculus of Inductive Constructions\n                      . Springer-Verlag, 2004.",
+      "DOI": "10.1007/978-3-662-07964-5"
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_bigops",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Yves Bertot, Georges Gonthier, Sidi Ould Biha, and Ioana Pasca. Canonical big operators. In\n                      Theorem Proving in Higher-Order Logics\n                      , volume 5170 of\n                      LNCS\n                      , pages 86-101, 2008.",
+      "DOI": "10.1007/978-3-540-71067-7_11"
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_berncoq",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Yves Bertot, Fréderique Guilhot, and Assia Mahboubi. A formal study of bernstein and coefficients polynomials.\n                      Mathematical Structures in Computer Sciences\n                      , 2011.",
+      "DOI": "10.1017/S0960129511000090"
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_BCR",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Jack Bochnak, Michel Coste, and Marie-Francoise Roy.\n                      Real Algebraic Geometry\n                      , volume 36 of\n                      Ergebnisse der Mathematik und ihrer Grenzgebiete\n                      . Springer-Verlag, 1998.",
+      "DOI": "10.1007/978-3-662-03718-8"
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_boutin",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Samuel Boutin. Using reflection to build efficient and certified decision procedures. In Martín Abadi and Takayasu Ito, editors,\n                      Theoretical Aspects of Computer Software\n                      , volume 1281 of\n                      Lecture Notes in Computer Science\n                      , pages 515-529. Springer Berlin / Heidelberg, 1997. 10.1007/BFb0014565.",
+      "DOI": "10.1007/BFb0014565"
+    },
+    {
+      "issue": "25",
+      "key": "10.2168/LMCS-8(1:2)2012_Cauchy",
+      "first-page": "176",
+      "volume": "15",
+      "author": "Auguste Cauchy",
+      "year": "1832",
+      "journal-title": "Journal de l'Ecole Polytechnique"
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_realalg",
+      "unstructured": "Cyril Cohen. Construction des nombres algébriques en Coq. In\n                      Proceedings of JFLA2012 (to appear)\n                      , 2012."
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_Laplace",
+      "unstructured": "Cyril Cohen and Thierry Coquand. A constructive version of Laplace's proof on the existence of complex roots."
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_qe_closedF",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Cyril Cohen and Assia Mahboubi. A formal quantifier elimination for algebraically closed fields. In\n                      Symposium on the Integration of Symbolic C\n                      omputation and {Mechanised Reasoning, Calculemus Intelligent Computer Mathematics}, volume 6167 of\n                      Computer Science\n                      , pages 189-203, Paris France, 06 2010. Springer. The final publication is available at www.springerlink.com.",
+      "DOI": "10.1007/978-3-642-14128-7_17"
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_Collins74",
+      "doi-asserted-by": "crossref",
+      "first-page": "80",
+      "DOI": "10.1145/1086837.1086852",
+      "volume": "8",
+      "author": "George E. Collins",
+      "year": "1974",
+      "journal-title": "SIGSAM Bull."
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_Collins91",
+      "doi-asserted-by": "crossref",
+      "first-page": "299",
+      "DOI": "10.1016/S0747-7171(08)80152-6",
+      "volume": "12",
+      "author": "George E. Collins and Hoon Hong",
+      "year": "1991",
+      "journal-title": "J. Symb. Comput."
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_GG+09",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Francois Garillot, Georges Gonthier, Assia Mahboubi, and Laurence Rideau. Packaging mathematical structures. In Stefan Berghofer, Tobias Nipkow, Christian Urban, and Makarius Wenzel, editors,\n                      Theorem Proving in Higher Order Logics, TPHOLs 2009 proceedings\n                      , volume 5674 of\n                      Lecture Notes in Computer Science\n                      , pages 327-342. Springer, 2009.",
+      "DOI": "10.1007/978-3-642-03359-9_23"
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_linalg",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Georges Gonthier. Point-free, set-free concrete linear algebra. In\n                      Interactive Theorem Proving, ITP 2011 Proceedings\n                      , Lecture Notes in Computer Sciences. Springer, 2011. to appear.",
+      "DOI": "10.1007/978-3-642-22863-6_10"
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_ssrtuto",
+      "first-page": "95",
+      "volume": "3",
+      "author": "Georges Gonthier and Assia Mahboubi",
+      "year": "2010",
+      "journal-title": "Journal of Formalized Reasoning"
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_ssrman",
+      "unstructured": "Georges Gonthier, Assia Mahboubi, and Enrico Tassi.\n                      A small scale reflection extension for the Coq system\n                      . INRIA Technical report,"
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_harrison-thesis",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-1-4471-1591-5"
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_hodges",
+      "unstructured": "Wilfried Hodges.\n                      A shorter model theory\n                      . Cambridge University Press, 1997."
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_Hormander",
+      "unstructured": "Lars Hörmander.\n                      The analysis of linear partial differential operators\n                      , volume 2. Springer-Verlag, Berlin etc., 1983."
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_krebbers-spittters11",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Robbert Krebbers and Bas Spitters. Computer certified efficient exact reals in coq. In\n                      Conference on Intelligent Computer Mathematics, CICM 2011 Proceedings\n                      , Lecture Notes in Artifical Intelligence. Springer, 2011. to appear.",
+      "DOI": "10.1007/978-3-642-22673-1_7"
+    },
+    {
+      "issue": "01",
+      "key": "10.2168/LMCS-8(1:2)2012_CADCoq",
+      "doi-asserted-by": "crossref",
+      "first-page": "99",
+      "DOI": "10.1017/S096012950600586X",
+      "volume": "17",
+      "author": "Assia Mahboubi",
+      "year": "2007",
+      "journal-title": "Mathematical Structures in Computer Science 2007"
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_MahboubiPottier2002",
+      "unstructured": "Assia Mahboubi and Loïc Pottier. Élimination des quantificateurs sur les réels en Coq. In\n                      Journées Francophones des Langages A\n                      pplicatifs, Anglet, January 2002."
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_mclaughlin-harrison",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Sean McLaughlin and John Harrison. A proof-producing decision procedure for real arithmetic. In Robert Nieuwenhuis, editor,\n                      CADE-20: 20th International Conference on Automated Deduction, proceedings\n                      , volume 3632 of\n                      Lecture Notes in Computer Science\n                      , pages 295-314, Tallinn, Estonia, 2005. Springer-Verlag.",
+      "DOI": "10.1007/11532231_22"
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_HOLsetinterval",
+      "unstructured": "Tobias Nipkow, Clemens Ballarin, and Jeremy Avigad. Isabelle/hol: Theory setinterval."
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_oconnorphd",
+      "unstructured": "Russell O'Connor.\n                      Incompleteness & Completeness, Formalizing Logic and Analysis in Type Theory\n                      . PhD thesis, Radboud University Nijmegen, Netherlands, 2009."
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_Pasca10",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Ioana Pasca. Formally verified conditions for regularity of interval matrices. In\n                      17th Symposium on the Integration of Symbolic Computation and Mechanised Reasoning, Calculemus 2010\n                      , volume 6167 of\n                      Lecture Notes in Artificial Intelligence\n                      , pages 219 - 233. Springer, 2010.",
+      "DOI": "10.1007/978-3-642-14128-7_19"
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_peterfalvi",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Thomas Peterfalvi.\n                      Character Theory for the Odd Order Theorem\n                      . Number 272 in London Mathematical Society Lecture Note Series. Cambridge University Press, 2000.",
+      "DOI": "10.1017/CBO9780511565861"
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_mathcomp",
+      "unstructured": "The Mathematical Components Project. ssr extension and libraries. http://www.msr-inria.inria.fr/Projects/math-components/index.html."
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_Saibi97",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Amokrane Saibi. Typing algorithm in type theory with inheritance. In\n                      Principles of Programming Languages, POPL 1997 proceedings\n                      , pages 292-301, 1997.",
+      "DOI": "10.1145/263699.263742"
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_sozeau+08",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Matthieu Sozeau and Nicolas Oury. First-class type classes. In Otmane Aït Mohamed, César Muñoz, and Sofiène Tahar, editors,\n                      Theorem Proving in Higher Order Logics, TPHOLs 2008 proceedings\n                      , volume 5170 of\n                      Lecture Notes in Computer Science\n                      , pages 278-293. Springer, 2008.",
+      "DOI": "10.1007/978-3-540-71067-7_23"
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_math-classes",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Bas Spitters and Eelis van der Weegen. Type classes for mathematics in type theory.\n                      MSCS, special issue on `Interactive theorem proving and the formalization of mathematics'\n                      , 21:1-31, 2011.",
+      "DOI": "10.1017/S0960129511000119"
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_CoqMT",
+      "unstructured": "Pierre-Yves Strub. Coq Modulo Theory. In Anuj Dawar and Helmut Veith, editors,\n                      19th EACSL\n                      {Annual Conference on Computer Science Logic Computer Science Logic, CSL 2010, 19th Annual Conference of the EACSL}, volume 6247 of\n                      Lecture Notes in Computer Science}, pages 529-543, B\n                      rno {Czech Republic, 2010. Springer."
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_tarski",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Alfred Tarski. A decision method for elementary algebra and geometry. Manuscript. Santa Monica, CA: RAND Corp., 1948. Republished as A Decision Method for Elementary Algebra and Geometry, 2nd ed. Berkeley, CA: University of California Press, 1951.",
+      "DOI": "10.1525/9780520348097"
+    },
+    {
+      "key": "10.2168/LMCS-8(1:2)2012_coq",
+      "unstructured": "The Coq Development Team.\n                      The Coq Proof Assistant, Reference Manual\n                      ."
+    }
+  ],
+  "container-title": [
+    "Logical Methods in Computer Science"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://lmcs.episciences.org/844/pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://lmcs.episciences.org/844/pdf",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2023,
+        4,
+        11
+      ]
+    ],
+    "date-time": "2023-04-11T15:57:23Z",
+    "timestamp": 1681228643000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://lmcs.episciences.org/844"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2012,
+        2,
+        16
+      ]
+    ]
+  },
+  "references-count": 36,
+  "URL": "http://dx.doi.org/10.2168/LMCS-8(1:2)2012",
+  "relation": {
+    "is-same-as": [
+      {
+        "id-type": "arxiv",
+        "id": "1201.3731",
+        "asserted-by": "subject"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.48550/arXiv.1201.3731",
+        "asserted-by": "subject"
+      }
+    ]
+  },
+  "ISSN": [
+    "1860-5974"
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2012,
+        2,
+        16
+      ]
+    ]
+  },
+  "article-number": "844"
+}

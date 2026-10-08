@@ -1,0 +1,142 @@
+{
+  "repository": "https://github.com/openai/math",
+  "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "audit_method": "Read immutable challenge JSON, challenge statement, solution endpoint and relevant definitions; fetch full OAI import closures and verify every fetched blob against the untruncated Git tree; lexical scan is supporting evidence rather than a kernel axiom audit.",
+  "source_inventory": "source-audit.json",
+  "cases": [
+    {
+      "id": "trace_ideal_transport",
+      "recommendation": "Strong main case: analytic reconstruction and transport of literal ideals through algebraic idempotents and canonical scalar limits.",
+      "challenge_json": "lean/ComparatorChallenges/TraceIdealTransportSupport.json",
+      "challenge_statement": "lean/ComparatorChallenges/TraceIdealTransportSupport.lean",
+      "solution_module": "OAI.Analysis.TraceCone.IdealTransport",
+      "scope_note": "lean/docs/301.md",
+      "endpoint_names": [
+        "OAI.TraceConeClassification.TraceConeEquiv.idealOrderIso_finIdeal",
+        "OAI.TraceConeClassification.TraceConeEquiv.idealOrderIso_zeroIdeal"
+      ],
+      "all_compared_declarations": 17,
+      "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+      "enable_nanoda": true,
+      "definition_names": [],
+      "hypotheses": [
+        "A and B are types with NonUnitalCStarAlgebra, PartialOrder and StarOrderedRing instances.",
+        "F : TraceConeEquiv A B is given; it contains a bijection of extended traces preserving addition, zero, positive scalar multiplication, and canonical convergence in both directions.",
+        "The transported trace τ is arbitrary; no dense finite domain, finiteness, separability, or nuclearity hypothesis is added for this supporting ideal theorem."
+      ],
+      "mathematical_content": [
+        "ExtendedTrace A consists of actual functions A₊ → [0,∞], with zero, additive, positive-homogeneous, tracial and norm-lower-semicontinuous laws.",
+        "Positive.cut a ε is defined by nonunital continuous functional calculus as (a−ε)₊.",
+        "finiteSquareSet τ = {x | τ(x* x) < ∞}; finiteIdeal is the norm closure of the resulting nonunital star subalgebra, whose two-sided absorption and closedness are proved.",
+        "For each closed two-sided star ideal I, closed_ideal_weight_exists constructs ι_I(a)=0 for a∈I and ∞ otherwise. Its proof verifies additivity via hereditary positivity, homogeneity, traciality and lower semicontinuity. This is a proved construction, not a provider axiom.",
+        "The additive idempotent extended traces are exactly those ideal weights. finiteIdeal_weight and idempotent_eq_weight form inverse laws in closedIdealEquivIdempotent.",
+        "I ≤ J iff ι_I + ι_J = ι_I. Hence an additive trace-cone bijection alone induces an order isomorphism of the literal closed ideals.",
+        "For an arbitrary trace, canonical scalar limits at 0+ and ∞ identify respectively its finite-domain ideal weight and zero-ideal weight. Preservation and uniqueness of canonical limits then identify the ideals attached to its image under F."
+      ],
+      "canonical_convergence_formula": "For all a∈A₊ and ε>0: limsup_i τ_i((a−ε)₊) ≤ σ(a) ≤ liminf_i τ_i(a).",
+      "scalar_zero_formula": "rτ → ι_finIdeal(τ) in canonical convergence as r→0+.",
+      "scalar_infinity_formula": "rτ → supportWeight(τ)=ι_zeroIdeal(τ) as r→∞; this limit is first proved pointwise, then passed to canonical convergence.",
+      "essential_caveat": "The scalar-zero claim is not generally pointwise convergence. If τ(a)=∞ but a belongs to the closure defining finIdeal, then rτ(a)=∞ for every r>0 while ι_finIdeal(a)=0. The positive-cut condition is the substantive bridge: a∈finIdeal iff τ((a−ε)₊)<∞ for every ε>0.",
+      "proof_architecture": [
+        "Recover order from addition on idempotents, which allows the order correspondence to be built from only F.toEquiv and F.map_add.",
+        "Use lower semicontinuity to extend the zero values of an idempotent trace from finite positive approximants to the closure ideal.",
+        "Express convergence with filters. PreservesCanonicalConvergence quantifies over filters on the trace cone, and a map-filter equivalence extends it to arbitrary index types without a higher-universe universal net field.",
+        "Apply F.continuous_toFun to the scalar nets, rewrite using preservation of scalar multiplication, and invoke canonicalConvergence_unique. Weight injectivity then turns equality of limits into equality of ideals.",
+        "The interface includes inverse convergence preservation, but the two displayed transport proofs directly use only forward convergence preservation, plus the additive/scalar/zero structure."
+      ],
+      "semantic_strength": "An actual ideal-poset isomorphism is constructed, and it carries each actual finIdeal/zeroIdeal to the corresponding image-trace ideal. This is stronger than transport of arbitrary ideal labels or a theorem conditional on already-provided ideal transport. It is a supporting theorem only: spatial Razak–Jacelon classification, stabilization model existence, norm uniqueness and final intertwining remain outside the comparison.",
+      "why_illuminating": "The formalization crosses from analytic data to an algebraic invariant and back through topological characterization, while preserving actual subobjects. The resulting endpoint proof is short because the construction and analytic characterization have been separated and discharged. This is a case-specific architectural observation, not a claim of historical novelty or rarity.",
+      "evidence": [
+        {"path": "lean/OAI/Analysis/TraceCone/Basic.lean", "line": 43, "claim": "Functional-calculus positive cuts; ExtendedTrace at 50; CanonicalConvergence at 65."},
+        {"path": "lean/OAI/Analysis/TraceCone/FiniteIdeal.lean", "line": 106, "claim": "Construction and proof of the literal 0/∞ ideal trace."},
+        {"path": "lean/OAI/Analysis/TraceCone/FiniteIdeal.lean", "line": 172, "claim": "Finite-square set; finiteIdeal at 244 is its closure."},
+        {"path": "lean/OAI/Analysis/TraceCone/FiniteIdeal.lean", "line": 308, "claim": "Positive membership iff every positive cut has finite trace."},
+        {"path": "lean/OAI/Analysis/TraceCone/FiniteIdeal.lean", "line": 341, "claim": "Universal property of finite-domain ideal and canonical scalar-zero limit."},
+        {"path": "lean/OAI/Analysis/TraceCone/IdealTransport.lean", "line": 108, "claim": "Ideal inclusion read from addition of idempotent weights."},
+        {"path": "lean/OAI/Analysis/TraceCone/IdealTransport.lean", "line": 140, "claim": "Lower semicontinuity extends zero values to finiteIdeal closure."},
+        {"path": "lean/OAI/Analysis/TraceCone/IdealTransport.lean", "line": 170, "claim": "Closed ideals equivalent to precisely all additive idempotent traces."},
+        {"path": "lean/OAI/Analysis/TraceCone/IdealTransport.lean", "line": 177, "claim": "Uniqueness of canonical convergence using positive cuts."},
+        {"path": "lean/OAI/Analysis/TraceCone/IdealTransport.lean", "line": 217, "claim": "Order isomorphism requires only additive equivalence."},
+        {"path": "lean/OAI/Analysis/TraceCone/IdealTransport.lean", "line": 238, "claim": "Map-filter equivalence and .net extension at 249."},
+        {"path": "lean/OAI/Analysis/TraceCone/IdealTransport.lean", "line": 262, "claim": "Scalar-zero canonical limit."},
+        {"path": "lean/OAI/Analysis/TraceCone/IdealTransport.lean", "line": 341, "claim": "Scalar-infinity limit via pointwise convergence."},
+        {"path": "lean/OAI/Analysis/TraceCone/IdealTransport.lean", "line": 369, "claim": "TraceConeEquiv interface; actual order isomorphism at 391; transport endpoints at 400 and 411."}
+      ],
+      "oai_import_closure": {"files": 3, "bytes": 50497, "lexical_sorry_admit_axiom_unsafe_matches": 0},
+      "baseline_references": ["CommelinTopaz2024", "GarillotEtAl2009", "Baanen2022", "mathlib2020"]
+    },
+    {
+      "id": "character_varieties_all_seams",
+      "recommendation": "Strong second case: dependent transport of named flags plus exhaustive local-to-global compatibility.",
+      "challenge_json": "lean/ComparatorChallenges/CharacterVarietiesAllSeamsSupport.json",
+      "challenge_statement": "lean/ComparatorChallenges/CharacterVarietiesAllSeamsSupport.lean",
+      "solution_module": "OAI.AlgebraicGeometry.CharacterVarieties.Seams.ProducedSolution",
+      "scope_note": "lean/docs/027.md",
+      "endpoint_name": "OAI.IntegralCharacterVarieties.SurfacePresentation.Diagram.producedMarkedValues_allSeams",
+      "all_compared_declarations": 1,
+      "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+      "enable_nanoda": false,
+      "definition_names": [],
+      "hypotheses": [
+        "A diagram D with facet, seam and vertex types, a natural arity for each seam and finitely many vertices.",
+        "D.Proper, a chosen seam q whose adjacent facet rank is maximal among all facet ranks, and positive genus of the band-cut parent.",
+        "A commutative base ring R, field K with R-algebra structure, puncture data P, and an existing solution x : D.Solution P K.",
+        "A chosen boundary b0 and occurrence i0. The comparison theorem does not need the extra equality hb that identifies this occurrence's boundary side with q."
+      ],
+      "conclusion": "All seams of the produced marked diagram satisfy SameFramedFlag between the two evaluated seam expressions, using the specifically produced generator values.",
+      "mathematical_content": [
+        "SameFramedFlag is equality of every prefix submodule together with equality of the named graded quotient maps on the next filtration level. It retains more information than equality of the underlying unframed flags.",
+        "IdentifiedBand stores one rank shape, a common frame, row/column graded isomorphisms, prefix equalities, and compatibility with the original named quotient maps.",
+        "identifiedBand_nonempty is proved from actual_named_band_grades. identifiedBand is then chosen classically; cutGeneratorWitness is an opaque declaration with that constructed body, not an axiom.",
+        "The produced diagram, punctures, frames and generator values all depend on this same chosen witness and its rowRanks/colRanks proofs.",
+        "All seams are exhausted by selected old, inherited old, first original, internal original, last mirror, internal mirror, positive-branch and negative-branch families. The exhaustion uses surjectivity of a concrete graftPlus equivalence and finite-index cases.",
+        "The endpoint transfers the generic all-seams result to the particular produced values by rebasing equal-rank units, proving side-value equality, applying congruence through valuesFromPorts, and transporting framed seam equations along equality."
+      ],
+      "proof_architecture": [
+        "Explicit coordinate equivalences and grade preservation connect an inherited seam's new matrix coordinates with its original named frames; the inherited flag proof uses these together with parent/child word evaluation lemmas.",
+        "Eight geometric seam families are proved locally and assembled by a separate exhaustive combinatorial theorem. This prevents a first-short-seam lemma from being mistaken for all-seams compatibility.",
+        "A short equality-transport lemma framedSeamEquations_of_values_eq isolates substitution into dependent generator assignments; the endpoint then uses hJ, hT, hmirror, hside and hv to establish the needed equality.",
+        "The full producedMarkedSolution definition is downstream and additionally needs hb. It assembles surface, seam and vertex equations; only all-seams compatibility is the selected comparison endpoint."
+      ],
+      "semantic_strength": "Conditional compatibility of a constructed marked diagram from an existing field-valued solution. It is not potential integral density, density in every component, a prescribed-boundary arithmetic conclusion, or an unconditional construction of a full new solution. The stronger downstream full-solution definition has an additional boundary-occurrence alignment hypothesis.",
+      "why_illuminating": "The informative object is a witness carrying simultaneous flags and named quotient data across rank-dependent coordinates. The proof keeps the same witness throughout a geometrically modified diagram and separately proves all seam families. The construction is noncomputable, so no extraction of an effective algorithm is claimed.",
+      "evidence": [
+        {"path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/Flags.lean", "line": 155, "claim": "Exact semantics of SameFramedFlag."},
+        {"path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/BandBases.lean", "line": 134, "claim": "IdentifiedBand data and proof fields; proved nonempty lemma at 150; classical choice at 160."},
+        {"path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MarkedFrames.lean", "line": 18, "claim": "Opaque cutGeneratorWitness with a concrete body."},
+        {"path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/SurfaceSurgery.lean", "line": 188, "claim": "rebaseUnit is the equality-induced multiplicative equivalence between rank-indexed matrix units."},
+        {"path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/InheritedSeams.lean", "line": 73, "claim": "Inherited seam grade preservation; coordinate/flag transport proof at 117."},
+        {"path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/AllSeams.lean", "line": 43, "claim": "Eight seam families exhaust every seam; generic assembly at 231."},
+        {"path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedDiagram.lean", "line": 26, "claim": "Actual produced seed, rebased units, band, diagram and values."},
+        {"path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedEquations.lean", "line": 25, "claim": "Unfolded all-seams predicate on produced values."},
+        {"path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedSolution.lean", "line": 18, "claim": "Equality transport lemma; endpoint at 36; full producedMarkedSolution with hb at 144."}
+      ],
+      "oai_import_closure": {"files": 79, "bytes": 1343683, "lexical_sorry_admit_axiom_unsafe_matches": 0},
+      "baseline_references": ["CommelinTopaz2024", "GarillotEtAl2009", "Baanen2022"]
+    }
+  ],
+  "comparator_audit": {
+    "repository": "https://github.com/leanprover/comparator",
+    "commit": "ca04cfc72b550331658ec314bf47685281bfd4bf",
+    "version_warning": "External infrastructure snapshot audited independently. The openai/math challenge README asks the user to install Comparator and does not pin a revision; do not identify this current checker snapshot with the one originally used for the corpus.",
+    "mechanism": [
+      "compareAt requires target theorem constant kinds to agree and compares ConstantVal data (name, universe parameters and type), not the target theorem proof body.",
+      "Starting from statement constants and designated kernel primitives, Compare.loop recursively compares full dependent ConstantInfo entries for every non-target declaration. This includes definition bodies and, through runForUsedConsts, opaque values and inductive/recursor dependencies.",
+      "For targets, Compare.loop follows types rather than comparing the replaceable theorem proof bodies or designated definition-hole bodies.",
+      "Axioms.loop follows types, values (allowOpaque=true), constructor/inductive connections and recursor rules. It rejects any axiom name outside the configured permitted set.",
+      "verifyMatch compares declaration identity, checks target theorem/definition axiom dependencies, runs configured external kernels and replays the parsed solution environment in the builtin kernel.",
+      "enable_nanoda=true is a compatibility configuration path that registers nanoda_bin. Merely seeing that setting does not constitute evidence that a checker execution succeeded."
+    ],
+    "semantic_boundary": "Formal statement/declaration identity relative to the trusted challenge and transitive axiom checking are distinct from checking whether the trusted formal statement expresses the manuscript's intended mathematics. Definition-hole challenges need additional semantic oversight; the two selected comparisons have no definition holes.",
+    "challenge_sorry_explanation": "The challenge files deliberately contain sorry placeholders as specifications. Their presence is not evidence that the corresponding solution proof uses sorry; the solution's transitive axiom dependencies are the relevant checker input, and sorryAx is absent from the permitted list.",
+    "trust_assumptions": "The checker README requires trusted challenge imports/build configuration, uncompromised checking environment and correct sandbox/kernel infrastructure. The present study uses source auditing; runtime checker acceptance must be supported by separate execution logs if asserted.",
+    "evidence": [
+      {"path": "Comparator/Compare.lean", "line": 37, "claim": "Worklist traversal and non-target declaration identity."},
+      {"path": "Comparator/Compare.lean", "line": 67, "claim": "Target theorem ConstantVal match; definition-hole matching."},
+      {"path": "Comparator/Axioms.lean", "line": 39, "claim": "Transitive illegal-axiom rejection."},
+      {"path": "Comparator/Util.lean", "line": 11, "claim": "Types, self, values including opaque, constructors/inductives and recursor dependencies."},
+      {"path": "Main.lean", "line": 288, "claim": "verifyMatch identity/axioms/external/builtin kernel pipeline."}
+    ],
+    "baseline_references": ["BarendregtWiedijk2005", "Carneiro2025Lean4Lean", "vanDoornEbnerLewis2020", "CommelinTopaz2024"]
+  }
+}

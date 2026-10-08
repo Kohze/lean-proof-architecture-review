@@ -1,0 +1,391 @@
+{
+  "reviewer": "lean_architecture_audit",
+  "review_date": "2026-10-08",
+  "corpus_commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "reviewed_files": {
+    "cases-analysis.tex": "4df0430b4f16733aeaa31960de034546a68003cd16137ac275c8b83c73b4d60f",
+    "references.bib": "27d5f0685da9d80922d51ab48d5f43c0794e05f9305944acb56a46acbe047c92"
+  },
+  "method": "Independent source-level cross-review of the prose, equations, endpoint hypotheses and cited local mechanisms. Read the pinned downloaded source bodies directly, checked 25 relevant Git blob hashes against the analysis manifest, and inspected selected bibliographic records against primary publisher/author/arXiv pages. No TeX edits made. Bibliography inspection is selective, not an exhaustive new metadata audit.",
+  "overall_assessment": "The central mechanisms and both final endpoints are supported by the inspected sources. Root addressed the important normalization and the hypothesis/citation/metadata corrections during review; only two optional source-locator/measure-notation refinements remain. No contradictory endpoint scope or unresolved provider premise was found in the inspected chains.",
+  "ranked_findings": [
+    {
+      "id": "AN-01",
+      "priority": "P1",
+      "category": "missing normalization in exposition",
+      "location": "cases-analysis.tex, paragraph beginning Let T be the amplified polynomial evaluation (reviewed line 158)",
+      "claim_at_issue": "The energy argument concludes gamma <= 2 without first explicitly assuming that F is contractive on the boundary.",
+      "source_evidence": [
+        {
+          "path": "lean/OAI/Analysis/DirectCrouzeix/DomainCore.lean",
+          "lines": [
+            28,
+            29
+          ],
+          "declaration": "analytic_domain_core",
+          "fact": "The theorem explicitly takes hF : forall t, norm(matrixPolynomialValue (h t) F) <= 1."
+        },
+        {
+          "path": "lean/OAI/Analysis/DirectCrouzeix/PolynomialEnergy.lean",
+          "lines": [
+            175,
+            207
+          ],
+          "declaration": "singular_diagonal_estimates",
+          "fact": "The diagonal bounds use hF through polynomialEnergy_mul_le; it is not optional."
+        }
+      ],
+      "reason": "Without this normalization, gamma <= 2 is false for arbitrary large constant polynomials. The final endpoint remains correctly stated; this is a gap in the explanation of the intermediate core.",
+      "correction": "Before introducing T and gamma, say: For the normalized core, assume norm(F(h(t))) <= 1 on the boundary. Then introduce T and gamma. The final scaled-domain paragraph already explains how this normalized estimate yields the arbitrary-polynomial endpoint.",
+      "status_at_completion": "addressed by root during review; independently rechecked"
+    },
+    {
+      "id": "AN-02",
+      "priority": "P2",
+      "category": "exact analytic hypotheses",
+      "location": "cases-analysis.tex, MassHypotheses paragraph (reviewed lines 20-23)",
+      "claim_at_issue": "The fields are summarized as an isolated common zero and compact sublevels contained in the domain.",
+      "source_evidence": [
+        {
+          "path": "lean/OAI/Analysis/Mahler/MassTarget.lean",
+          "lines": [
+            19,
+            33
+          ],
+          "declaration": "MassHypotheses",
+          "fact": "isolated_zero is forall z in U, (forall j, f j z = 0) iff z = 0. compact_sublevels concerns closure(U intersect {tau f < R}) for 0 < R < 1, both compact and contained in U."
+        }
+      ],
+      "reason": "The unique-zero condition throughout U is stronger than merely local isolation; the range of sublevels and the closure are omitted. These details matter in a review centered on retained versus discharged assumptions.",
+      "correction": "Replace with: zero as the unique common zero in U ... and compact closures of the sublevels 0 < R < 1 contained in U. No change is needed to the final body theorem paragraph, whose listed retained assumptions match MainTheorem.",
+      "status_at_completion": "addressed by root during review; independently rechecked"
+    },
+    {
+      "id": "AN-03",
+      "priority": "P2",
+      "category": "citation scope",
+      "location": "cases-analysis.tex, closing Mahler paragraph (reviewed lines 122-124)",
+      "claim_at_issue": "mathlib2020 is used to substantiate the precise present-day API for continuous alternating maps, exterior differentiation and d squared = 0.",
+      "source_evidence": [
+        {
+          "path": "Mathlib/Analysis/Calculus/DifferentialForm/Basic.lean",
+          "commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+          "lines": [
+            73,
+            74
+          ],
+          "fact": "extDeriv is defined by alternatizing the actual Frechet derivative."
+        },
+        {
+          "path": "Mathlib/Analysis/Calculus/DifferentialForm/Basic.lean",
+          "commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+          "lines": [
+            229,
+            237
+          ],
+          "fact": "extDeriv_extDeriv_apply and extDeriv_extDeriv prove the squared derivative vanishes under the specified smoothness condition."
+        }
+      ],
+      "reason": "The 2020 system/library paper is an appropriate general baseline but does not document this pinned 2026 Lean 4 API. The assembled bibliography already contains the directly relevant MathlibForms key.",
+      "correction": "Cite MathlibForms for this sentence; retain mathlib2020 elsewhere for general library practice.",
+      "status_at_completion": "addressed by root during review; independently rechecked"
+    },
+    {
+      "id": "BIB-01",
+      "priority": "P3",
+      "category": "bibliographic metadata",
+      "location": "references.bib, EasyCrypt2011",
+      "claim_at_issue": "booktitle is Lecture Notes in Computer Science, which is the series rather than the conference volume title.",
+      "source_evidence": [
+        {
+          "primary_url": "https://link.springer.com/chapter/10.1007/978-3-642-22792-9_5",
+          "fact": "Publisher identifies the volume as Advances in Cryptology - CRYPTO 2011, LNCS volume 6841, pages 71-90, DOI 10.1007/978-3-642-22792-9_5."
+        }
+      ],
+      "correction": "Set booktitle = {Advances in Cryptology -- CRYPTO 2011}, series = {Lecture Notes in Computer Science}, volume = {6841}. Other supplied metadata match the primary record.",
+      "status_at_completion": "addressed by root during review; independently rechecked"
+    },
+    {
+      "id": "BIB-02",
+      "priority": "P3",
+      "category": "bibliographic metadata",
+      "location": "references.bib, CakeML2014",
+      "claim_at_issue": "The title is abbreviated to CakeML.",
+      "source_evidence": [
+        {
+          "primary_url": "https://www.cl.cam.ac.uk/~mom22/popl14.pdf",
+          "fact": "The author manuscript title is CakeML: A Verified Implementation of ML. It prints DOI 10.1145/2535838.2535841 and the four supplied authors."
+        }
+      ],
+      "correction": "Use the full title CakeML: A Verified Implementation of ML.",
+      "status_at_completion": "addressed by root during review; independently rechecked"
+    },
+    {
+      "id": "BIB-03",
+      "priority": "P3",
+      "category": "source locator precision",
+      "location": "references.bib, OAIAllSeams",
+      "claim_at_issue": "The source citation points to the general Seams/AllSeams.lean theorem while the architecture section names producedMarkedValues_allSeams.",
+      "source_evidence": [
+        {
+          "path": "lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedSolution.lean",
+          "lines": [
+            36,
+            85
+          ],
+          "declaration": "producedMarkedValues_allSeams",
+          "fact": "This is the exact endpoint and equality transport described in the section; AllSeams.lean supplies the generic local-family assembly."
+        }
+      ],
+      "correction": "Prefer the pinned ProducedSolution.lean URL for OAIAllSeams, or provide both exact endpoint and generic assembly locators. The existing URL is relevant but indirect.",
+      "status_at_completion": "optional precision improvement remains"
+    },
+    {
+      "id": "AN-04",
+      "priority": "P3",
+      "category": "measure normalization",
+      "location": "cases-analysis.tex, Crouzeix energy displays",
+      "claim_at_issue": "The integrals use dt without naming the circle measure.",
+      "source_evidence": [
+        {
+          "path": "lean/OAI/Analysis/DirectCrouzeix/DomainCore.lean",
+          "lines": [
+            63,
+            64
+          ],
+          "fact": "The energy a is integrated against circleMeasure."
+        },
+        {
+          "path": "lean/OAI/Analysis/DirectCrouzeix/FaberEnergy.lean",
+          "lines": [
+            82,
+            88
+          ],
+          "fact": "The exact coefficient-energy formulas use angularMeasure."
+        }
+      ],
+      "reason": "A reader could interpret dt as unnormalized Lebesgue angle measure, introducing 2*pi factors into coefficient-energy identities. The final energy cancellation is unchanged when all measures are scaled consistently.",
+      "correction": "Add a short statement that the displayed boundary integrals use the normalized circle measure.",
+      "status_at_completion": "optional precision improvement remains"
+    }
+  ],
+  "verified_passes": [
+    {
+      "id": "PASS-M1",
+      "claim": "The ordered ambient derivative formula, negative sign, residual multiplicity k+1, and restriction to tangent tuples agree with the source.",
+      "evidence": [
+        "PowerTransgression.lean:70-106",
+        "HomogeneousTransgression.lean:65-97",
+        "SphereForms.lean:84-111",
+        "HorizontalForms.lean:20-50"
+      ]
+    },
+    {
+      "id": "PASS-M2",
+      "claim": "Whole-field equality between the two continuous primitive constructions is proved by function extensionality, injectivity of toAlternatingMap, and equality of slot equivalences. It is used to discharge the explicit local-transgression premise.",
+      "evidence": [
+        "HomogeneousEndpoint.lean:14-45",
+        "HomogeneousPrimitiveRegularity.lean:32-61",
+        "HomogeneousTransgressionFTC.lean:51-66"
+      ]
+    },
+    {
+      "id": "PASS-M3",
+      "claim": "The cutoff extension is globally C2 and eventually equal near the closed set; eventual equality transports Frechet and exterior derivatives. Coordinate Stokes and d squared = 0 give the exact-form zero-flux result.",
+      "evidence": [
+        "ClosedBoundaryStokes.lean:19-63",
+        "SourcePrimitiveStokes.lean:28-52"
+      ]
+    },
+    {
+      "id": "PASS-M4",
+      "claim": "The final Mahler theorem retains only positive dimension and the listed convex-body assumptions. Its numerical special-family homogeneous value is supplied from constructed MassHypotheses. Positive-level regularity of the actual special family is derived, rather than retained as an extra body premise.",
+      "evidence": [
+        "MainTheorem.lean:12-22",
+        "EuclideanSpecialMap.lean:69-97",
+        "HomogeneousMassAssembly.lean:29-41",
+        "SpecialSourceMass.lean:13-37"
+      ]
+    },
+    {
+      "id": "PASS-C1",
+      "claim": "A finite norm attainer is obtained from compactness, then the singular adjoint identity is established by the squared-distance calculation. The four rectangular compressions, positivity and a>0 cancellation match the source.",
+      "evidence": [
+        "SingularPairs.lean:30-78",
+        "DomainCore.lean:38-117"
+      ]
+    },
+    {
+      "id": "PASS-C2",
+      "claim": "The finite dual witness uses entrywise conjugation because entryPair is bilinear; bounded nonnegative partial sums yield the infinite coefficient bound. Ordered FG and GF pairings use the two singular relations.",
+      "evidence": [
+        "Duality.lean:15-46",
+        "BoundaryEnergy.lean:112-133",
+        "PolynomialEnergy.lean:146-219"
+      ]
+    },
+    {
+      "id": "PASS-C3",
+      "claim": "The outer approximation is constructed for compact nonempty convex K. The endpoint rho=M+epsilon/2, open strict norm sublevel, compact thickening, scaled bound and epsilon removal agree with the source, including the case M=0.",
+      "evidence": [
+        "OuterApproximation.lean:59-122",
+        "DomainBound.lean:99-113",
+        "CompleteBound.lean:65-97"
+      ]
+    },
+    {
+      "id": "PASS-C4",
+      "claim": "The Crouzeix-Palencia comparison states the complete constant 1+sqrt(2) and the role of the Cauchy transform of conjugate holomorphic functions accurately. The journal and preprint have different titles, as reflected by the supplied journal title and arXiv URL.",
+      "primary_urls": [
+        "https://epubs.siam.org/doi/10.1137/17M1116672",
+        "https://arxiv.org/abs/1702.00668"
+      ]
+    }
+  ],
+  "source_integrity": [
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/CompleteBound.lean",
+      "git_blob_sha1": "a504007c267984cb20e977b0e8c31c4198bad757",
+      "matches_analysis_manifest": true
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/Model.lean",
+      "git_blob_sha1": "bb0abb06d42480e15073530da46cfac0f4a7c636",
+      "matches_analysis_manifest": true
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/DomainCore.lean",
+      "git_blob_sha1": "7648fc2c1447cf95cbe7ead792e70455230b0cb8",
+      "matches_analysis_manifest": true
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/SingularPairs.lean",
+      "git_blob_sha1": "30a999e394b4cbf3b0aacabc48b3571716133eeb",
+      "matches_analysis_manifest": true
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/Duality.lean",
+      "git_blob_sha1": "6023e50cc85a8415e3bd8af16f3f42fa4de8ecfb",
+      "matches_analysis_manifest": true
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/BoundaryEnergy.lean",
+      "git_blob_sha1": "35ad5040edd4ed9d4cf11fa8012d24e02cf814e5",
+      "matches_analysis_manifest": true
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/PolynomialEnergy.lean",
+      "git_blob_sha1": "443ca47dfbb234e50ddb3d546ad0bdbe0b649079",
+      "matches_analysis_manifest": true
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/FaberEnergy.lean",
+      "git_blob_sha1": "968cd9a5547cac6cfe965b57faabd10287254b18",
+      "matches_analysis_manifest": true
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/ExteriorCollar.lean",
+      "git_blob_sha1": "84fc72e9a7afd7bc980589285aa45630c270bea0",
+      "matches_analysis_manifest": true
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/DomainBound.lean",
+      "git_blob_sha1": "db6e87404ed69425330844b3e187241251e8f09f",
+      "matches_analysis_manifest": true
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/OuterApproximation.lean",
+      "git_blob_sha1": "90b384e860ab4d1f1dc3a068c16a747a0c341521",
+      "matches_analysis_manifest": true
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HorizontalForms.lean",
+      "git_blob_sha1": "5dfbf7c57bc06e9486303540b628a4f0055b257f",
+      "matches_analysis_manifest": true
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SphereForms.lean",
+      "git_blob_sha1": "a4d458689fc4df77591f63435dc1228d955cd5d9",
+      "matches_analysis_manifest": true
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HomogeneousTransgression.lean",
+      "git_blob_sha1": "c381fcf297116fe1c5174f8c0f622d3912eea597",
+      "matches_analysis_manifest": true
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/PowerTransgression.lean",
+      "git_blob_sha1": "1707a44523003ff153693bb5e50b7bb7b3f4f25a",
+      "matches_analysis_manifest": true
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HomogeneousEndpoint.lean",
+      "git_blob_sha1": "882afa1e3d92d2fbfe07cf067fcef06ffb958183",
+      "matches_analysis_manifest": true
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HomogeneousPrimitiveRegularity.lean",
+      "git_blob_sha1": "b3d247040eb52cee3c9c8120b9f72a0ccea1c158",
+      "matches_analysis_manifest": true
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ClosedBoundaryStokes.lean",
+      "git_blob_sha1": "fc98a4b561c4407d6e5d428d014164b2034cdd1f",
+      "matches_analysis_manifest": true
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SourcePrimitiveStokes.lean",
+      "git_blob_sha1": "76bb81f3e8e8ce40dfc6e0935286febd11cc8221",
+      "matches_analysis_manifest": true
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HomogeneousTransgressionFTC.lean",
+      "git_blob_sha1": "9282748f7e2b0be254fd9b76c95a0e8a3dc6b837",
+      "matches_analysis_manifest": true
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/EuclideanSpecialMap.lean",
+      "git_blob_sha1": "ae986cfb6716e6ee011c2db32e8bed96575a8e91",
+      "matches_analysis_manifest": true
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/MassTarget.lean",
+      "git_blob_sha1": "c97437040a367116cb04067b32a16e34db84d3c2",
+      "matches_analysis_manifest": true
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SpecialSourceMass.lean",
+      "git_blob_sha1": "f2ab1771d017b1dc5db1dc28ffcfb0c9d8f6e67a",
+      "matches_analysis_manifest": true
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/MainTheorem.lean",
+      "git_blob_sha1": "d5c55dee7e95a66312217de1f875ea8cb7508e62",
+      "matches_analysis_manifest": true
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HomogeneousMassAssembly.lean",
+      "git_blob_sha1": "3d3d897e72635fe4cb1f4382b9173749c592c3c5",
+      "matches_analysis_manifest": true
+    }
+  ],
+  "bibliography_checks": {
+    "correctly_encoded_utf8": true,
+    "context_notes": [
+      "The console mojibake from PowerShell Get-Content is a decoding artifact; UTF-8 inspection shows the intended accented author names.",
+      "Anatomy of a Formal Proof has the supplied four authors and 2024 first-submission year on arXiv.",
+      "The key Schemes2021 with year 2022 is not itself an error: key names need not equal the final publication year.",
+      "CrouzeixPalencia2017 journal title and arXiv preprint title differ legitimately."
+    ],
+    "primary_urls_checked": [
+      "https://link.springer.com/chapter/10.1007/978-3-642-22792-9_5",
+      "https://www.cl.cam.ac.uk/~mom22/popl14.pdf",
+      "https://epubs.siam.org/doi/10.1137/17M1116672",
+      "https://arxiv.org/abs/1702.00668",
+      "https://arxiv.org/abs/2411.11885",
+      "https://arxiv.org/abs/2601.22554v1",
+      "https://arxiv.org/abs/2403.14064v3"
+    ]
+  },
+  "integration_recheck": "Root integrated the five main corrections during this review. Re-reading the current TeX and bibliography confirms boundary normalization, unique common zero and compact-closure range, MathlibForms citation, full EasyCrypt venue metadata, and full CakeML title. Remaining suggestions concern a direct all-seams endpoint source locator and naming the circle measure."
+}

@@ -1,0 +1,194 @@
+{
+  "status": "passed",
+  "method": "exhaustive finite enumeration",
+  "physical_tape_fibers": [
+    {
+      "m": 0,
+      "start": 0,
+      "B": 1,
+      "positions": [],
+      "output_words": 1,
+      "fiber_cardinality": 2
+    },
+    {
+      "m": 0,
+      "start": 1,
+      "B": 2,
+      "positions": [],
+      "output_words": 1,
+      "fiber_cardinality": 4
+    },
+    {
+      "m": 0,
+      "start": 2,
+      "B": 3,
+      "positions": [],
+      "output_words": 1,
+      "fiber_cardinality": 8
+    },
+    {
+      "m": 1,
+      "start": 0,
+      "B": 4,
+      "positions": [
+        1
+      ],
+      "output_words": 2,
+      "fiber_cardinality": 8
+    },
+    {
+      "m": 1,
+      "start": 1,
+      "B": 5,
+      "positions": [
+        2
+      ],
+      "output_words": 2,
+      "fiber_cardinality": 16
+    },
+    {
+      "m": 1,
+      "start": 2,
+      "B": 6,
+      "positions": [
+        3
+      ],
+      "output_words": 2,
+      "fiber_cardinality": 32
+    },
+    {
+      "m": 2,
+      "start": 0,
+      "B": 7,
+      "positions": [
+        4,
+        1
+      ],
+      "output_words": 4,
+      "fiber_cardinality": 32
+    },
+    {
+      "m": 2,
+      "start": 1,
+      "B": 8,
+      "positions": [
+        5,
+        2
+      ],
+      "output_words": 4,
+      "fiber_cardinality": 64
+    },
+    {
+      "m": 2,
+      "start": 2,
+      "B": 9,
+      "positions": [
+        6,
+        3
+      ],
+      "output_words": 4,
+      "fiber_cardinality": 128
+    },
+    {
+      "m": 3,
+      "start": 0,
+      "B": 10,
+      "positions": [
+        7,
+        4,
+        1
+      ],
+      "output_words": 8,
+      "fiber_cardinality": 128
+    },
+    {
+      "m": 3,
+      "start": 1,
+      "B": 11,
+      "positions": [
+        8,
+        5,
+        2
+      ],
+      "output_words": 8,
+      "fiber_cardinality": 256
+    },
+    {
+      "m": 3,
+      "start": 2,
+      "B": 12,
+      "positions": [
+        9,
+        6,
+        3
+      ],
+      "output_words": 8,
+      "fiber_cardinality": 512
+    },
+    {
+      "m": 4,
+      "start": 0,
+      "B": 13,
+      "positions": [
+        10,
+        7,
+        4,
+        1
+      ],
+      "output_words": 16,
+      "fiber_cardinality": 512
+    },
+    {
+      "m": 4,
+      "start": 1,
+      "B": 14,
+      "positions": [
+        11,
+        8,
+        5,
+        2
+      ],
+      "output_words": 16,
+      "fiber_cardinality": 1024
+    },
+    {
+      "m": 4,
+      "start": 2,
+      "B": 15,
+      "positions": [
+        12,
+        9,
+        6,
+        3
+      ],
+      "output_words": 16,
+      "fiber_cardinality": 2048
+    }
+  ],
+  "two_by_two_binary_total_two_counts": [
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      2,
+      1
+    ],
+    [
+      0,
+      1,
+      0
+    ]
+  ],
+  "binary_matrices_enumerated": 16,
+  "uniform_total_two_flag_example": {
+    "matrices": 6,
+    "left_mean": "1/3",
+    "right_mean": "1/3",
+    "joint_mean": "0",
+    "covariance": "-1/9"
+  },
+  "scope": "Finite examples of general arguments explained in the review."
+}

@@ -1,0 +1,38 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype,booktabs,longtable,array}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage{listings}
+\setlength{\emergencystretch}{2em}
+\lstset{basicstyle=\ttfamily\small,columns=fullflexible,keepspaces=true,breaklines=true,frame=single,aboveskip=12pt,belowskip=12pt}
+\newtheorem{proposition}{Proposition}
+\newtheorem{example}[proposition]{Example}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\E}{\mathbb E}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+\newcommand{\src}[1]{\texttt{\nolinkurl{#1}}}
+\title{Proof Architecture in the OpenAI Lean Library:\\Representation, Locality, and Semantic Transport}
+\author{Robin Gounder\thanks{Correspondence: \href{mailto:robin@gounder.com}{robin@gounder.com}.}\\{\small Vaionex Corporation}}
+\date{8 October 2026}
+\hypersetup{pdfauthor={Robin Gounder},pdftitle={Proof Architecture in the OpenAI Lean Library: Representation, Locality, and Semantic Transport}}
+\begin{document}
+\maketitle
+\input{abstract}
+\noindent\textbf{Keywords:} formalized mathematics; Lean; proof architecture; semantic preservation; probabilistic algorithms; mathematical interfaces.
+\input{introduction}
+\input{method}
+\input{cases}
+\input{worked-examples}
+\input{discussion}
+\section*{Generative AI disclosure}
+OpenAI Codex agents contributed substantially to source discovery, literature synthesis, and mathematical exposition.
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}

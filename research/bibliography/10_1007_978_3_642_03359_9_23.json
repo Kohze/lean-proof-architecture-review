@@ -1,0 +1,384 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        8
+      ]
+    ],
+    "date-time": "2026-10-08T00:45:02Z",
+    "timestamp": 1791420302543,
+    "version": "4.3.3"
+  },
+  "publisher-location": "Berlin, Heidelberg",
+  "reference-count": 22,
+  "publisher": "Springer Berlin Heidelberg",
+  "isbn-type": [
+    {
+      "value": "9783642033582",
+      "type": "print"
+    },
+    {
+      "value": "9783642033599",
+      "type": "electronic"
+    }
+  ],
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2009,
+            1,
+            1
+          ]
+        ],
+        "date-time": "2009-01-01T00:00:00Z",
+        "timestamp": 1230768000000
+      },
+      "content-version": "unspecified",
+      "delay-in-days": 0,
+      "URL": "http://www.springer.com/tdm"
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "published-print": {
+    "date-parts": [
+      [
+        2009
+      ]
+    ]
+  },
+  "DOI": "10.1007/978-3-642-03359-9_23",
+  "type": "book-chapter",
+  "created": {
+    "date-parts": [
+      [
+        2009,
+        8,
+        19
+      ]
+    ],
+    "date-time": "2009-08-19T21:46:12Z",
+    "timestamp": 1250718372000
+  },
+  "page": "327-342",
+  "source": "Crossref",
+  "is-referenced-by-count": 92,
+  "title": [
+    "Packaging Mathematical Structures"
+  ],
+  "prefix": "10.1007",
+  "author": [
+    {
+      "given": "François",
+      "family": "Garillot",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Georges",
+      "family": "Gonthier",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Assia",
+      "family": "Mahboubi",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Laurence",
+      "family": "Rideau",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "297",
+  "reference": [
+    {
+      "key": "23_CR1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-1-4613-0041-0",
+      "volume-title": "Algebra",
+      "author": "S. Lang",
+      "year": "2002",
+      "unstructured": "Lang, S.: Algebra. Springer, Heidelberg (2002)"
+    },
+    {
+      "key": "23_CR2",
+      "unstructured": "Jackson, P.: Enhancing the Nuprl proof-development system and applying it to computational abstract algebra. PhD thesis, Cornell University (1995)"
+    },
+    {
+      "key": "23_CR3",
+      "unstructured": "Betarte, G., Tasistro, A.: Formalisation of systems of algebras using dependent record types and subtyping: An example. In: Proc. 7th Nordic workshop on Programming Theory (1995)"
+    },
+    {
+      "key": "23_CR4",
+      "unstructured": "Pottier, L.: User contributions in Coq, Algebra (1999), \n                    \n                      http://coq.inria.fr/contribs/Algebra.html"
+    },
+    {
+      "issue": "4",
+      "key": "23_CR5",
+      "doi-asserted-by": "publisher",
+      "first-page": "271",
+      "DOI": "10.1006/jsco.2002.0552",
+      "volume": "34",
+      "author": "H. Geuvers",
+      "year": "2002",
+      "unstructured": "Geuvers, H., Pollack, R., Wiedijk, F., Zwanenburg, J.: A constructive algebraic hierarchy in Coq. Journal of Symbolic Computation 34(4), 271–286 (2002)",
+      "journal-title": "Journal of Symbolic Computation"
+    },
+    {
+      "key": "23_CR6",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "crossref",
+      "first-page": "153",
+      "DOI": "10.1007/978-3-642-02444-3_10",
+      "volume-title": "TYPES 2008",
+      "author": "F. Haftmann",
+      "year": "2009",
+      "unstructured": "Haftmann, F., Wenzel, M.: Local theory specifications in Isabelle/Isar. In: Berardi, S., Damiani, F., de’Liguoro, U. (eds.) TYPES 2008. LNCS, vol. 5497, pp. 153–168. Springer, Heidelberg (2009)"
+    },
+    {
+      "issue": "1",
+      "key": "23_CR7",
+      "doi-asserted-by": "publisher",
+      "first-page": "143",
+      "DOI": "10.1006/jsco.2001.0456",
+      "volume": "32",
+      "author": "P. Rudnicki",
+      "year": "2001",
+      "unstructured": "Rudnicki, P., Schwarzweller, C., Trybulec, A.: Commutative algebra in the Mizar system. J. Symb. Comput. 32(1), 143–169 (2001)",
+      "journal-title": "J. Symb. Comput."
+    },
+    {
+      "key": "23_CR8",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "86",
+      "DOI": "10.1007/978-3-540-74591-4_8",
+      "volume-title": "Theorem Proving in Higher Order Logics",
+      "author": "G. Gonthier",
+      "year": "2007",
+      "unstructured": "Gonthier, G., Mahboubi, A., Rideau, L., Tassi, E., Théry, L.: A Modular Formalisation of Finite Group Theory. In: Schneider, K., Brandt, J. (eds.) TPHOLs 2007. LNCS, vol. 4732, pp. 86–101. Springer, Heidelberg (2007)"
+    },
+    {
+      "key": "23_CR9",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "86",
+      "DOI": "10.1007/978-3-540-71067-7_11",
+      "volume-title": "Theorem Proving in Higher Order Logics",
+      "author": "Y. Bertot",
+      "year": "2008",
+      "unstructured": "Bertot, Y., Gonthier, G., Ould Biha, S., Pasca, I.: Canonical big operators. In: Mohamed, O.A., Muñoz, C., Tahar, S. (eds.) TPHOLs 2008. LNCS, vol. 5170, pp. 86–101. Springer, Heidelberg (2008)"
+    },
+    {
+      "key": "23_CR10",
+      "unstructured": "Gonthier, G., Mahboubi, A.: A small scale reflection extension for the Coq system. INRIA Technical report, \n                    \n                      http://hal.inria.fr/inria-00258384"
+    },
+    {
+      "key": "23_CR11",
+      "unstructured": "Paulin-Mohring, C.: Définitions Inductives en Théorie des Types d’Ordre Supérieur. Habilitation à diriger les recherches, Université Claude Bernard Lyon I (1996)"
+    },
+    {
+      "key": "23_CR12",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "278",
+      "DOI": "10.1007/978-3-540-71067-7_23",
+      "volume-title": "Theorem Proving in Higher Order Logics",
+      "author": "M. Sozeau",
+      "year": "2008",
+      "unstructured": "Sozeau, M., Oury, N.: First-Class Type Classes. In: Mohamed, O.A., Muñoz, C., Tahar, S. (eds.) TPHOLs 2008. LNCS, vol. 5170, pp. 278–293. Springer, Heidelberg (2008)"
+    },
+    {
+      "key": "23_CR13",
+      "doi-asserted-by": "publisher",
+      "first-page": "386",
+      "DOI": "10.1007/s001650200018",
+      "volume": "13",
+      "author": "R. Pollack",
+      "year": "2002",
+      "unstructured": "Pollack, R.: Dependently typed records in type theory. Formal Aspects of Computing 13, 386–402 (2002)",
+      "journal-title": "Formal Aspects of Computing"
+    },
+    {
+      "key": "23_CR14",
+      "doi-asserted-by": "publisher",
+      "first-page": "189",
+      "DOI": "10.1016/0890-5401(91)90066-B",
+      "volume": "91",
+      "author": "N.G.D. Bruijn",
+      "year": "1991",
+      "unstructured": "Bruijn, N.G.D.: Telescopic mappings in typed lambda calculus. Information and Computation 91, 189–204 (1991)",
+      "journal-title": "Information and Computation"
+    },
+    {
+      "issue": "4",
+      "key": "23_CR15",
+      "doi-asserted-by": "publisher",
+      "first-page": "658",
+      "DOI": "10.1145/1183278.1183280",
+      "volume": "7",
+      "author": "L.C. Paulson",
+      "year": "2006",
+      "unstructured": "Paulson, L.C.: Defining Functions on Equivalence Classes. ACM Transactions on Computational Logic 7(4), 658–675 (2006)",
+      "journal-title": "ACM Transactions on Computational Logic"
+    },
+    {
+      "issue": "2",
+      "key": "23_CR16",
+      "doi-asserted-by": "publisher",
+      "first-page": "261",
+      "DOI": "10.1017/S0956796802004501",
+      "volume": "13",
+      "author": "G. Barthe",
+      "year": "2003",
+      "unstructured": "Barthe, G., Capretta, V., Pons, O.: Setoids in type theory. Journal of Functional Programming 13(2), 261–293 (2003)",
+      "journal-title": "Journal of Functional Programming"
+    },
+    {
+      "key": "23_CR17",
+      "first-page": "57",
+      "volume-title": "Proceedings of the PLPV 2007 workshop",
+      "author": "T. Altenkirch",
+      "year": "2007",
+      "unstructured": "Altenkirch, T., McBride, C., Swierstra, W.: Observational equality, now! In: Proceedings of the PLPV 2007 workshop, pp. 57–68. ACM, New York (2007)"
+    },
+    {
+      "issue": "258",
+      "key": "23_CR18",
+      "doi-asserted-by": "publisher",
+      "first-page": "1073",
+      "DOI": "10.1090/S0025-5718-07-01957-6",
+      "volume": "76",
+      "author": "G. Olteanu",
+      "year": "2007",
+      "unstructured": "Olteanu, G.: Computing the Wedderburn decomposition of group algebras by the Brauer-Witt theorem. Mathematics of Computation 76(258), 1073–1087 (2007)",
+      "journal-title": "Mathematics of Computation"
+    },
+    {
+      "key": "23_CR19",
+      "volume-title": "An Introduction to the Theory of Groups",
+      "author": "J.J. Rotman",
+      "year": "1994",
+      "unstructured": "Rotman, J.J.: An Introduction to the Theory of Groups. Springer, Heidelberg (1994)"
+    },
+    {
+      "key": "23_CR20",
+      "volume-title": "Introduction to Algorithms",
+      "author": "T.H. Cormen",
+      "year": "2003",
+      "unstructured": "Cormen, T.H., Leiserson, C.E., Rivest, R.L., Stein, C.: Introduction to Algorithms, 2nd edn. McGraw-Hill, New York (2003)",
+      "edition": "2"
+    },
+    {
+      "key": "23_CR21",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "157",
+      "DOI": "10.1007/978-3-540-68103-8_11",
+      "volume-title": "Types for Proofs and Programs",
+      "author": "C. Sacerdoti Coen",
+      "year": "2008",
+      "unstructured": "Sacerdoti Coen, C., Tassi, E.: Working with Mathematical Structures in Type Theory. In: Miculan, M., Scagnetto, I., Honsell, F. (eds.) TYPES 2007. LNCS, vol. 4941, pp. 157–172. Springer, Heidelberg (2008)"
+    },
+    {
+      "key": "23_CR22",
+      "first-page": "51",
+      "volume": "1",
+      "author": "C. Sacerdoti Coen",
+      "year": "2008",
+      "unstructured": "Sacerdoti Coen, C., Tassi, E.: A constructive and formal proof of Lebesgue Dominated Convergence Theorem in the interactive theorem prover Matita. Journal of Formalized Reasoning 1, 51–89 (2008)",
+      "journal-title": "Journal of Formalized Reasoning"
+    }
+  ],
+  "container-title": [
+    "Lecture Notes in Computer Science"
+  ],
+  "original-title": [],
+  "link": [
+    {
+      "URL": "http://link.springer.com/content/pdf/10.1007/978-3-642-03359-9_23",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2019,
+        3,
+        9
+      ]
+    ],
+    "date-time": "2019-03-09T08:24:42Z",
+    "timestamp": 1552119882000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://link.springer.com/10.1007/978-3-642-03359-9_23"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2009
+      ]
+    ]
+  },
+  "ISBN": [
+    "9783642033582",
+    "9783642033599"
+  ],
+  "references-count": 22,
+  "URL": "http://dx.doi.org/10.1007/978-3-642-03359-9_23",
+  "relation": {},
+  "ISSN": [
+    "0302-9743",
+    "1611-3349"
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2009
+      ]
+    ]
+  }
+}

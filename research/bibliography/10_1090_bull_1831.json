@@ -1,0 +1,393 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        7,
+        23
+      ]
+    ],
+    "date-time": "2026-07-23T23:10:18Z",
+    "timestamp": 1784848218566,
+    "version": "3.55.0"
+  },
+  "reference-count": 17,
+  "publisher": "American Mathematical Society (AMS)",
+  "issue": "2",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2025,
+            2,
+            15
+          ]
+        ],
+        "date-time": "2025-02-15T00:00:00Z",
+        "timestamp": 1739577600000
+      },
+      "content-version": "am",
+      "delay-in-days": 366,
+      "URL": "https://www.ams.org/publications/copyright-and-permissions"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/501100001659",
+      "name": "Deutsche Forschungsgemeinschaft",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "CO 2587/1-1"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "CO 2587/1-1"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/501100001659",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    },
+    {
+      "DOI": "10.13039/501100001659",
+      "name": "Deutsche Forschungsgemeinschaft",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "RGPIN-2019-04762"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "RGPIN-2019-04762"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/501100001659",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    },
+    {
+      "DOI": "10.13039/501100000038",
+      "name": "Natural Sciences and Engineering Research Council of Canada",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "CO 2587/1-1"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "CO 2587/1-1"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/501100000038",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    },
+    {
+      "DOI": "10.13039/501100000038",
+      "name": "Natural Sciences and Engineering Research Council of Canada",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "RGPIN-2019-04762"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "RGPIN-2019-04762"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/501100000038",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Bull. Amer. Math. Soc."
+  ],
+  "abstract": "<p>\n                    In this article we discuss how\n                    <italic>abstraction boundaries</italic>\n                    can help tame complexity in mathematical research with the help of an interactive theorem prover. While many of the ideas we present here have been used implicitly by mathematicians for some time, we argue that the use of an interactive theorem prover introduces additional qualitative benefits in the implementation of these ideas.\n                  </p>",
+  "DOI": "10.1090/bull/1831",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2024,
+        2,
+        15
+      ]
+    ],
+    "date-time": "2024-02-15T14:33:36Z",
+    "timestamp": 1708007616000
+  },
+  "page": "241-255",
+  "source": "Crossref",
+  "is-referenced-by-count": 6,
+  "title": [
+    "Abstraction boundaries and spec driven development in pure mathematics"
+  ],
+  "prefix": "10.1090",
+  "volume": "61",
+  "author": [
+    {
+      "given": "Johan",
+      "family": "Commelin",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Adam",
+      "family": "Topaz",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "14",
+  "published-online": {
+    "date-parts": [
+      [
+        2024,
+        2,
+        15
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "1",
+      "unstructured": "Clark Barwick and Peter Haine, Pyknotic objects, I. Basic notions, Preprint,  arXiv:1904.09966, (2019)."
+    },
+    {
+      "key": "2",
+      "unstructured": "Dustin Clausen and Peter Scholze, Condensed Mathematics and Complex Geometry, (2022), \\url{https://people.mpim-bonn.mpg.de/scholze/Complex.pdf}."
+    },
+    {
+      "key": "3",
+      "doi-asserted-by": "crossref",
+      "unstructured": "The Mathlib Community, The Lean mathematical library, Proceedings of the 9th ACM SIGPLAN International Conference on Certified Programs and Proofs (New York, NY, USA), CPP 2020, Association for Computing Machinery, 2020, pp. 367–381.",
+      "DOI": "10.1145/3372885.3373824"
+    },
+    {
+      "key": "4",
+      "unstructured": "The Mathlib Community, Completion of the Liquid Tensor Experiment, Blog Post, 2022, \\url{https://leanprover-community.github.io/blog/posts/lte-final/}."
+    },
+    {
+      "key": "5",
+      "isbn-type": "print",
+      "doi-asserted-by": "publisher",
+      "first-page": "378",
+      "DOI": "10.1007/978-3-319-21401-6_26",
+      "article-title": "The lean theorem prover (system description)",
+      "author": "de Moura, Leonardo",
+      "year": "2015",
+      "ISBN": "https://id.crossref.org/isbn/9783319214016"
+    },
+    {
+      "key": "6",
+      "doi-asserted-by": "publisher",
+      "first-page": "e2, 29",
+      "DOI": "10.1017/fmp.2017.1",
+      "article-title": "A formal proof of the Kepler conjecture",
+      "volume": "5",
+      "author": "Hales, Thomas",
+      "year": "2017",
+      "journal-title": "Forum Math. Pi"
+    },
+    {
+      "key": "7",
+      "first-page": "123",
+      "article-title": "How to write mathematics",
+      "volume": "16",
+      "author": "Halmos, P. R.",
+      "year": "1970",
+      "journal-title": "Enseign. Math. (2)",
+      "ISSN": "https://id.crossref.org/issn/0013-8584",
+      "issn-type": "print"
+    },
+    {
+      "issue": "1",
+      "key": "8",
+      "doi-asserted-by": "publisher",
+      "first-page": "110",
+      "DOI": "10.1112/blms/21.1.110",
+      "article-title": "Eulogy: Donald E. Knuth",
+      "volume": "21",
+      "author": "Bond, G. W.",
+      "year": "1989",
+      "journal-title": "Bull. London Math. Soc.",
+      "ISSN": "https://id.crossref.org/issn/0024-6093",
+      "issn-type": "print"
+    },
+    {
+      "key": "9",
+      "unstructured": "Patrick Massot, Git Repository, \\url{https://github.com/PatrickMassot/leanblueprint}."
+    },
+    {
+      "key": "10",
+      "unstructured": "Peter Scholze, Lecture notes on Condensed Mathematics, (2019), \\url{https://www.math.uni-bonn.de/people/scholze/Condensed.pdf}."
+    },
+    {
+      "key": "11",
+      "unstructured": "Peter Scholze, Lectures on Analytic Geometry, (2019), \\url{https://www.math.uni-bonn.de/people/scholze/Analytic.pdf}."
+    },
+    {
+      "key": "12",
+      "unstructured": "Peter Scholze, Half a year of the Liquid Tensor Experiment: Amazing developments, Blog Post, 2021, \\url{https://xenaproject.wordpress.com/2021/06/05/half-a-year-of-the-liquid-tensor-experiment-amazing-developments/}."
+    },
+    {
+      "key": "13",
+      "unstructured": "Peter Scholze, Nonconvexity and discretization, MathOverflow, 2021, \\url{https://mathoverflow.net/q/386796}."
+    },
+    {
+      "issue": "2",
+      "key": "14",
+      "doi-asserted-by": "publisher",
+      "first-page": "349",
+      "DOI": "10.1080/10586458.2021.1926016",
+      "article-title": "Liquid tensor experiment",
+      "volume": "31",
+      "author": "Scholze, Peter",
+      "year": "2022",
+      "journal-title": "Exp. Math.",
+      "ISSN": "https://id.crossref.org/issn/1058-6458",
+      "issn-type": "print"
+    },
+    {
+      "key": "15",
+      "unstructured": "Jean-Pierre Serre, How to write mathematics badly, 2007, \\url{https://www.youtube.com/watch?v=ECQyFzzBHlo}."
+    },
+    {
+      "key": "16",
+      "unstructured": "Adam Topaz, Definitions in the liquid tensor experiment, Blog Post, 2022, \\url{https://leanprover-community.github.io/blog/posts/lte-examples/}."
+    },
+    {
+      "key": "17",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1515/9781400877577",
+      "volume-title": "Geometric integration theory",
+      "author": "Whitney, Hassler",
+      "year": "1957"
+    }
+  ],
+  "container-title": [
+    "Bulletin of the American Mathematical Society"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://www.ams.org/bull/2024-61-02/S0273-0979-2024-01831-X/S0273-0979-2024-01831-X.pdf",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2026,
+        4,
+        21
+      ]
+    ],
+    "date-time": "2026-04-21T19:50:30Z",
+    "timestamp": 1776801030000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://www.ams.org/bull/2024-61-02/S0273-0979-2024-01831-X/"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2024,
+        2,
+        15
+      ]
+    ]
+  },
+  "references-count": 17,
+  "journal-issue": {
+    "issue": "2",
+    "published-print": {
+      "date-parts": [
+        [
+          2024,
+          4
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "S0273-0979-2024-01831-X"
+  ],
+  "URL": "https://doi.org/10.1090/bull/1831",
+  "archive": [
+    "CLOCKSS",
+    "Portico"
+  ],
+  "relation": {},
+  "ISSN": [
+    "1088-9485",
+    "0273-0979"
+  ],
+  "issn-type": [
+    {
+      "value": "1088-9485",
+      "type": "electronic"
+    },
+    {
+      "value": "0273-0979",
+      "type": "print"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2024,
+        2,
+        15
+      ]
+    ]
+  }
+}

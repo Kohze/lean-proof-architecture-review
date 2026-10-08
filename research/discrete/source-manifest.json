@@ -1,0 +1,232 @@
+{
+  "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "files": [
+    {
+      "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+      "bytes": 1336009,
+      "lines": 26126,
+      "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+      "sha256": "0e5fa4d146154656ca6f89fad0d255159ca3e895b76b8bc3af731882e28725a9",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/CrossCellAffineComposition.lean",
+      "bytes": 5238,
+      "lines": 116,
+      "git_blob_sha1": "038446c5326fb2a9b425bb535b528dde4b90a168",
+      "sha256": "8ef3312911467872d25fc40b777572694945fe4387c8ef8979c03d37976afa1f",
+      "imports": [
+        "OAI.Probability.SwitchChain.CrossCellConditionalExpectation",
+        "OAI.Probability.SwitchChain.CrossIndependent"
+      ]
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/CrossCellMoments.lean",
+      "bytes": 10164,
+      "lines": 256,
+      "git_blob_sha1": "35c18f2a694dfa7e82af480e5cc4890d14d2a6e1",
+      "sha256": "6feabcda1ea00ea2e5a3465a589d82f06a6d29e4a6fc5adb35389fe3359d874f",
+      "imports": [
+        "OAI.Probability.SwitchChain.CrossMatrix",
+        "OAI.Probability.SwitchChain.CrossCovariance"
+      ]
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/CrossIndependent.lean",
+      "bytes": 9955,
+      "lines": 268,
+      "git_blob_sha1": "f0ceb6ff77c5907c4609ef8882aa0a3d9afb1652",
+      "sha256": "1bf19842ae0c2a91c739ef3febbed58ec3455e16b72448c606fd1433cb6fbb02",
+      "imports": [
+        "OAI.Probability.SwitchChain.CrossMatrix",
+        "OAI.Probability.SwitchChain.CrossCovariance"
+      ]
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/CrossMatrix.lean",
+      "bytes": 2426,
+      "lines": 89,
+      "git_blob_sha1": "44bbbe6e200de3180e8c17421b25ca404607a429",
+      "sha256": "840ed656ed02ada5a8771540f37dad04251aa74e1ec2dc59dfc34649ca504ed6",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/Definitions.lean",
+      "bytes": 4722,
+      "lines": 159,
+      "git_blob_sha1": "5801f8189cfa3ce4b53d2287627a0a740a6f6810",
+      "sha256": "62cd5736b5403852e1102e71a5ef17efe6fc03e80417c625e030b54ffe3b747c",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/DisjointCellCounting.lean",
+      "bytes": 7031,
+      "lines": 171,
+      "git_blob_sha1": "c13ceb1aa4c381310efaf458dc8491f6040bea13",
+      "sha256": "f4bdc3d19c0867d9d999a53067d9bf2331009f91f9bd92e795a78fab980d9afb",
+      "imports": [
+        "OAI.Probability.SwitchChain.DisjointCoordinateFeasibility",
+        "OAI.Probability.SwitchChain.CrossCovariance"
+      ]
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/DisjointCoordinateFeasibility.lean",
+      "bytes": 4591,
+      "lines": 108,
+      "git_blob_sha1": "7fdb3c4cea0981a6774d82549796943abc26b9e5",
+      "sha256": "b497fbf488120f5dc160f73d1b306f1b8f54d5fdfd23671e4b1da494aa43481e",
+      "imports": [
+        "OAI.Probability.SwitchChain.DisjointRealization"
+      ]
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/DisjointCrossCellEquiv.lean",
+      "bytes": 7490,
+      "lines": 179,
+      "git_blob_sha1": "c95d557e1a72217b73581861273d9aa0e63f11dd",
+      "sha256": "eaf8fb663153e9c3acf71160f0a9a1782dc881c26ecad7a7c3e319ac70c08c6f",
+      "imports": [
+        "OAI.Probability.SwitchChain.DisjointStateLaw",
+        "OAI.Probability.SwitchChain.CrossCellMoments",
+        "OAI.Probability.SwitchChain.PairFibers"
+      ]
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/DisjointEncoding.lean",
+      "bytes": 6279,
+      "lines": 160,
+      "git_blob_sha1": "7b492a205d49c7b3d0603a003b7e0721df56b230",
+      "sha256": "2f71b4b0644b4f6e6932a335a10a9d98072e403d05725bc76ffe566377c1fde9",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/DisjointEqualityFlags.lean",
+      "bytes": 5300,
+      "lines": 120,
+      "git_blob_sha1": "ea47485f002ef6f7ae3e9c679ab2cd04a4c65286",
+      "sha256": "483366d566098d2ae3645aa64b31290f2c23e7e6216a82a4a775262122fdc772",
+      "imports": [
+        "OAI.Probability.SwitchChain.DisjointStateLaw",
+        "OAI.Probability.SwitchChain.PairEqualityProjection"
+      ]
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/DisjointGraphAffine.lean",
+      "bytes": 5617,
+      "lines": 118,
+      "git_blob_sha1": "85abe54c38f295ba3111e7ebc516452436d5f6af",
+      "sha256": "ccd69d396b9aaf8969429a9de8888ef3877b9af0412b074e4cc46670ca504d83",
+      "imports": [
+        "OAI.Probability.SwitchChain.DisjointCrossCellEquiv",
+        "OAI.Probability.SwitchChain.DisjointEqualityFlags",
+        "OAI.Probability.SwitchChain.CrossCellAffineComposition"
+      ]
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/LocalGapEndgame.lean",
+      "bytes": 2042,
+      "lines": 48,
+      "git_blob_sha1": "8ea6816375553a5149941140a3d04c353807829e",
+      "sha256": "fcb0a1e0d7b06489c8ee125337118d643d8d185d442667be4a16b1526bd2af79",
+      "imports": [
+        "OAI.Probability.SwitchChain.PairGeneratorSquare",
+        "OAI.Probability.SwitchChain.PairSwitchComparison",
+        "OAI.Probability.SwitchChain.PairLocalComparison"
+      ]
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/Main.lean",
+      "bytes": 2119,
+      "lines": 45,
+      "git_blob_sha1": "f57bfdeb78b3af3dec46c90aeaa145b85d044140",
+      "sha256": "ade00e55a157ee7bc2dc1fff71777e8cf717cbba7463819938f62de639c32d15",
+      "imports": [
+        "OAI.Probability.SwitchChain.Definitions",
+        "OAI.Probability.SwitchChain.HavelConnectivity",
+        "OAI.Probability.SwitchChain.MainFromGap",
+        "OAI.Probability.SwitchChain.ActualTripleSquare",
+        "OAI.Probability.SwitchChain.LocalGapEndgame",
+        "OAI.Probability.SwitchChain.PairDisjointAssembly",
+        "OAI.Probability.SwitchChain.PairActualAffine",
+        "OAI.Probability.SwitchChain.PairEqualityBudgetUnordered"
+      ]
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairActualAffine.lean",
+      "bytes": 3957,
+      "lines": 101,
+      "git_blob_sha1": "c097d0cd33aee37331958ed04367f758c6e2cb38",
+      "sha256": "81521f5ad99fd0cd2d8c214a7dbec5f5bb365510c69f5d2ffa4342b9d629078c",
+      "imports": [
+        "OAI.Probability.SwitchChain.DisjointGraphAffine",
+        "OAI.Probability.SwitchChain.DisjointProjectionCell",
+        "OAI.Probability.SwitchChain.PairAffineInteraction",
+        "OAI.Probability.SwitchChain.CrossTogglePairs"
+      ]
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairAffineInteraction.lean",
+      "bytes": 4778,
+      "lines": 108,
+      "git_blob_sha1": "3dcc9a2ea5f162717450fdd0c38ebd6100554be4",
+      "sha256": "37ebfd5f3d2513521b6ecb88083b38d4fc33cceb5a6e99071b9320ed2455a8a3",
+      "imports": [
+        "OAI.Probability.SwitchChain.PairRangeInteraction",
+        "OAI.Probability.SwitchChain.PairEqualityProjection",
+        "OAI.Probability.SwitchChain.SwitchFlip"
+      ]
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairDisjointAssembly.lean",
+      "bytes": 3575,
+      "lines": 77,
+      "git_blob_sha1": "31b9bad18286c4ad5623d1e75a179955d3564626",
+      "sha256": "7dd67cb22cbab2f0ad7ef9fa8981e1f7399e817dbb6c86e557bfd6af0ddb380e",
+      "imports": [
+        "OAI.Probability.SwitchChain.PairDisjointBudget",
+        "OAI.Probability.SwitchChain.CrossToggleGain",
+        "OAI.Probability.SwitchChain.PairEqualityUnordered"
+      ]
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairEqualityBudgetUnordered.lean",
+      "bytes": 3314,
+      "lines": 82,
+      "git_blob_sha1": "a4fbc1dc304b5ba642cc1c6491f03e731b510c53",
+      "sha256": "c4834dc1308763f26f570841215aa7f908e867b2976bec9adab42433a8cf323e",
+      "imports": [
+        "OAI.Probability.SwitchChain.PairEqualityBudget",
+        "OAI.Probability.SwitchChain.PairEqualityUnorderedSum",
+        "OAI.Probability.SwitchChain.CrossToggleGain"
+      ]
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairEqualityProjection.lean",
+      "bytes": 8133,
+      "lines": 196,
+      "git_blob_sha1": "7de0cafcfc18ed9c7e544966d156313e2ab7afb7",
+      "sha256": "c38a28a4abde4aa0baf7e5edcac68cd924ff2594a4b9fe27b04b2942b2cfbed4",
+      "imports": [
+        "OAI.Probability.SwitchChain.PairFiberBridge"
+      ]
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/ProjectionRangeInteraction.lean",
+      "bytes": 9613,
+      "lines": 222,
+      "git_blob_sha1": "db186e150a6a82b01ab063691d379c1d60cc0d43",
+      "sha256": "5a001bed26185f8ced573ecdcabcf78591fb695dda91ed9a5231debe5184702a",
+      "imports": [
+        "OAI.Probability.SwitchChain.RankOneInteraction"
+      ]
+    }
+  ]
+}

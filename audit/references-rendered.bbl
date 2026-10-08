@@ -1,0 +1,332 @@
+\begin{thebibliography}{38}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Audebaud and Paulin-Mohring(2009)]{AudebaudPaulinMohring2009}
+Philippe Audebaud and Christine Paulin-Mohring.
+\newblock {Proofs of randomized algorithms in Coq}.
+\newblock \emph{Science of Computer Programming}, 74\penalty0 (8):\penalty0
+  568--589, 2009.
+\newblock \doi{10.1016/j.scico.2007.09.002}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0167642309000240}.
+
+\bibitem[Avigad et~al.(2024)Avigad, Commelin, Macbeth, and
+  Topaz]{AvigadEtAl2024Anatomy}
+Jeremy Avigad, Johan Commelin, Heather Macbeth, and Adam Topaz.
+\newblock {Anatomy of a Formal Proof}, 2024.
+\newblock URL \url{https://arxiv.org/abs/2411.11885v1}.
+
+\bibitem[Baanen(2022)]{Baanen2022}
+Anne Baanen.
+\newblock {Use and Abuse of Instance Parameters in the Lean Mathematical
+  Library}.
+\newblock In \emph{13th International Conference on Interactive Theorem Proving
+  (ITP 2022)}, volume 237 of \emph{Leibniz International Proceedings in
+  Informatics}, pages 4:1--4:20, 2022.
+\newblock \doi{10.4230/LIPIcs.ITP.2022.4}.
+\newblock URL
+  \url{https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2022.4}.
+
+\bibitem[Barendregt and Wiedijk(2005)]{BarendregtWiedijk2005}
+Henk Barendregt and Freek Wiedijk.
+\newblock {The challenge of computer mathematics}.
+\newblock \emph{Philosophical Transactions of the Royal Society A},
+  363\penalty0 (1835):\penalty0 2351--2375, 2005.
+\newblock \doi{10.1098/rsta.2005.1650}.
+\newblock URL \url{https://cs.ru.nl/~henk/2005BarWiedijk.pdf}.
+
+\bibitem[Barthe et~al.(2009)Barthe, Grégoire, and Béguelin]{CertiCrypt2009}
+Gilles Barthe, Benjamin Grégoire, and Santiago~Zanella Béguelin.
+\newblock {Formal certification of code-based cryptographic proofs}.
+\newblock In \emph{Proceedings of the 36th annual ACM SIGPLAN-SIGACT symposium
+  on Principles of programming languages}, pages 90--101, 2009.
+\newblock \doi{10.1145/1480881.1480894}.
+\newblock URL \url{https://software.imdea.org/~szanella/Zanella.2009.POPL.pdf}.
+
+\bibitem[Barthe et~al.(2011)Barthe, Grégoire, Heraud, and
+  Béguelin]{EasyCrypt2011}
+Gilles Barthe, Benjamin Grégoire, Sylvain Heraud, and Santiago~Zanella
+  Béguelin.
+\newblock {Computer-Aided Security Proofs for the Working Cryptographer}.
+\newblock In \emph{Advances in Cryptology -- CRYPTO 2011}, volume 6841 of
+  \emph{Lecture Notes in Computer Science}, pages 71--90, 2011.
+\newblock \doi{10.1007/978-3-642-22792-9_5}.
+\newblock URL
+  \url{https://software.imdea.org/~szanella/Zanella.2011.CRYPTO.pdf}.
+
+\bibitem[Buzzard et~al.(2020)Buzzard, Commelin, and Massot]{Perfectoid2020}
+Kevin Buzzard, Johan Commelin, and Patrick Massot.
+\newblock {Formalising perfectoid spaces}.
+\newblock In \emph{Proceedings of the 9th ACM SIGPLAN International Conference
+  on Certified Programs and Proofs}, pages 299--312, 2020.
+\newblock \doi{10.1145/3372885.3373830}.
+\newblock URL \url{https://arxiv.org/abs/1910.12320}.
+
+\bibitem[Buzzard et~al.(2022)Buzzard, Hughes, Lau, Livingston, Mir, and
+  Morrison]{Schemes2021}
+Kevin Buzzard, Chris Hughes, Kenny Lau, Amelia Livingston, Ramon~Fernández
+  Mir, and Scott Morrison.
+\newblock {Schemes in Lean}.
+\newblock \emph{Experimental Mathematics}, 31:\penalty0 355--363, 2022.
+\newblock \doi{10.1080/10586458.2021.1983489}.
+\newblock URL \url{https://arxiv.org/abs/2101.02602}.
+
+\bibitem[Böving and {Lean FRO}(2026)]{ComparatorSource2026}
+Henrik Böving and {Lean FRO}.
+\newblock {Comparator}, 2026.
+\newblock URL
+  \url{https://github.com/leanprover/comparator/tree/ca04cfc72b550331658ec314bf47685281bfd4bf}.
+
+\bibitem[Carneiro(2025)]{Carneiro2025Lean4Lean}
+Mario Carneiro.
+\newblock {Lean4Lean: Verifying a Typechecker for Lean, in Lean}, 2025.
+\newblock URL \url{https://arxiv.org/abs/2403.14064v3}.
+
+\bibitem[Cohen and Mahboubi(2012)]{CohenMahboubi2012}
+Cyril Cohen and Assia Mahboubi.
+\newblock {Formal proofs in real algebraic geometry: from ordered fields to
+  quantifier elimination}.
+\newblock \emph{Logical Methods in Computer Science}, 8\penalty0
+  (1:02):\penalty0 1--40, 2012.
+\newblock \doi{10.2168/LMCS-8(1:2)2012}.
+\newblock URL \url{https://lmcs.episciences.org/844}.
+
+\bibitem[Commelin and Topaz(2024)]{CommelinTopaz2024}
+Johan Commelin and Adam Topaz.
+\newblock {Abstraction boundaries and spec driven development in pure
+  mathematics}.
+\newblock \emph{Bulletin of the American Mathematical Society}, 61\penalty0
+  (2):\penalty0 241--255, 2024.
+\newblock \doi{10.1090/bull/1831}.
+\newblock URL
+  \url{https://www.ams.org/journals/bull/2024-61-02/S0273-0979-2024-01831-X/S0273-0979-2024-01831-X.pdf}.
+
+\bibitem[Crouzeix and Palencia(2017)]{CrouzeixPalencia2017}
+M.~Crouzeix and C.~Palencia.
+\newblock {The Numerical Range is a $(1+\sqrt{2})$-Spectral Set}.
+\newblock \emph{SIAM Journal on Matrix Analysis and Applications}, 38:\penalty0
+  649--655, 2017.
+\newblock \doi{10.1137/17M1116672}.
+\newblock URL \url{https://arxiv.org/abs/1702.00668}.
+
+\bibitem[de~Bruijn(1970)]{deBruijn1970}
+N.~G. de~Bruijn.
+\newblock {The mathematical language AUTOMATH, its usage and some of its
+  extensions}.
+\newblock In \emph{Symposium on Automatic Demonstration (Versailles, December
+  1968)}, volume 125 of \emph{Lecture Notes in Mathematics}, pages 29--61,
+  1970.
+\newblock \doi{10.1007/BFb0060623}.
+\newblock URL
+  \url{https://pure.tue.nl/ws/portalfiles/portal/1988576/597597.pdf}.
+
+\bibitem[de~Medeiros et~al.(2025)de~Medeiros, Naveed, Lepoint, Kahsai, Ravitch,
+  Zetzsche, Joshi, Tassarotti, Albarghouthi, and Tristan]{deMedeirosEtAl2025}
+Markus de~Medeiros, Muhammad Naveed, Tancrède Lepoint, Temesghen Kahsai,
+  Tristan Ravitch, Stefan Zetzsche, Anjali Joshi, Joseph Tassarotti, Aws
+  Albarghouthi, and Jean-Baptiste Tristan.
+\newblock {Verified Foundations for Differential Privacy}.
+\newblock \emph{Proceedings of the ACM on Programming Languages}, 9\penalty0
+  (PLDI):\penalty0 191:1--191:25, 2025.
+\newblock \doi{10.1145/3729294}.
+\newblock URL \url{https://dl.acm.org/doi/10.1145/3729294}.
+
+\bibitem[de~Moura and Ullrich(2021)]{deMouraUllrich2021}
+Leonardo de~Moura and Sebastian Ullrich.
+\newblock {The Lean 4 Theorem Prover and Programming Language}.
+\newblock In \emph{Automated Deduction – CADE 28}, volume 12699 of
+  \emph{Lecture Notes in Computer Science}, pages 625--635, 2021.
+\newblock \doi{10.1007/978-3-030-79876-5_37}.
+\newblock URL
+  \url{https://link.springer.com/chapter/10.1007/978-3-030-79876-5_37}.
+
+\bibitem[Elliott et~al.(2011)Elliott, Robert, and
+  Santiago]{ElliottRobertSantiago2011}
+George~A. Elliott, Leonel Robert, and Luis Santiago.
+\newblock {The cone of lower semicontinuous traces on a C*-algebra}.
+\newblock \emph{American Journal of Mathematics}, 133:\penalty0 969--1005,
+  2011.
+\newblock \doi{10.1353/ajm.2011.0027}.
+\newblock URL \url{https://arxiv.org/abs/0805.3122}.
+
+\bibitem[Garillot et~al.(2009)Garillot, Gonthier, Mahboubi, and
+  Rideau]{GarillotEtAl2009}
+François Garillot, Georges Gonthier, Assia Mahboubi, and Laurence Rideau.
+\newblock {Packaging Mathematical Structures}.
+\newblock In \emph{Theorem Proving in Higher Order Logics (TPHOLs 2009)},
+  volume 5674 of \emph{Lecture Notes in Computer Science}, pages 327--342,
+  2009.
+\newblock \doi{10.1007/978-3-642-03359-9_23}.
+\newblock URL
+  \url{https://link.springer.com/chapter/10.1007/978-3-642-03359-9_23}.
+
+\bibitem[Gonthier et~al.(2013)Gonthier, Asperti, Avigad, Bertot, Cohen,
+  Garillot, Roux, Mahboubi, O'Connor, Biha, Pasca, Rideau, Solovyev, Tassi, and
+  Théry]{GonthierEtAl2013}
+Georges Gonthier, Andrea Asperti, Jeremy Avigad, Yves Bertot, Cyril Cohen,
+  François Garillot, Stéphane~Le Roux, Assia Mahboubi, Russell O'Connor,
+  Sidi~Ould Biha, Ioana Pasca, Laurence Rideau, Alexey Solovyev, Enrico Tassi,
+  and Laurent Théry.
+\newblock {A Machine-Checked Proof of the Odd Order Theorem}.
+\newblock In \emph{Interactive Theorem Proving (ITP 2013)}, volume 7998 of
+  \emph{Lecture Notes in Computer Science}, pages 163--179, 2013.
+\newblock \doi{10.1007/978-3-642-39634-2_14}.
+\newblock URL
+  \url{https://link.springer.com/chapter/10.1007/978-3-642-39634-2_14}.
+
+\bibitem[Hales et~al.(2017)Hales, Adams, Bauer, Dang, Harrison, Hoang,
+  Kaliszyk, Magron, McLaughlin, Nguyen, Nguyen, Nipkow, Obua, Pleso, Rute,
+  Solovyev, Ta, Tran, Trieu, Urban, Vu, and Zumkeller]{HalesEtAl2017}
+Thomas Hales, Mark Adams, Gertrud Bauer, Dat~Tat Dang, John Harrison, Truong~Le
+  Hoang, Cezary Kaliszyk, Victor Magron, Sean McLaughlin, Thang~Tat Nguyen,
+  Truong~Quang Nguyen, Tobias Nipkow, Steven Obua, Joseph Pleso, Jason Rute,
+  Alexey Solovyev, An~Hoai~Thi Ta, Trung~Nam Tran, Diep~Thi Trieu, Josef Urban,
+  Ky~Khac Vu, and Roland Zumkeller.
+\newblock {A formal proof of the Kepler conjecture}.
+\newblock \emph{Forum of Mathematics, Pi}, 5, 2017.
+\newblock \doi{10.1017/fmp.2017.1}.
+\newblock URL \url{https://arxiv.org/abs/1501.02155}.
+
+\bibitem[Harrison(1995)]{Harrison1995}
+John Harrison.
+\newblock {Metatheory and Reflection in Theorem Proving: A Survey and
+  Critique}.
+\newblock Technical Report CRC-053, SRI International Cambridge Computer
+  Science Research Centre, 1995.
+\newblock URL \url{https://www.cl.cam.ac.uk/~jrh13/papers/reflect.html}.
+
+\bibitem[Kudryashov(2022)]{Kudryashov2022}
+Yury Kudryashov.
+\newblock {Formalizing the Divergence Theorem and the Cauchy Integral Formula
+  in Lean}.
+\newblock In \emph{13th International Conference on Interactive Theorem Proving
+  (ITP 2022)}, volume 237 of \emph{Leibniz International Proceedings in
+  Informatics}, pages 23:1--23:19, 2022.
+\newblock \doi{10.4230/LIPIcs.ITP.2022.23}.
+\newblock URL
+  \url{https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2022.23}.
+
+\bibitem[Kumar et~al.(2014)Kumar, Myreen, Norrish, and Owens]{CakeML2014}
+Ramana Kumar, Magnus~O. Myreen, Michael Norrish, and Scott Owens.
+\newblock {CakeML: A Verified Implementation of ML}.
+\newblock In \emph{Proceedings of the 41st ACM SIGPLAN-SIGACT Symposium on
+  Principles of Programming Languages}, pages 179--191, 2014.
+\newblock \doi{10.1145/2535838.2535841}.
+\newblock URL \url{https://www.cl.cam.ac.uk/~mom22/popl14.pdf}.
+
+\bibitem[Leroy(2009)]{Leroy2009}
+Xavier Leroy.
+\newblock {Formal verification of a realistic compiler}.
+\newblock \emph{Communications of the ACM}, 52:\penalty0 107--115, 2009.
+\newblock \doi{10.1145/1538788.1538814}.
+\newblock URL \url{https://xavierleroy.org/publi/compcert-CACM.pdf}.
+
+\bibitem[Massot and contributors(2026)]{MassotLeanBlueprint}
+Patrick Massot and contributors.
+\newblock {LeanBlueprint}, 2026.
+\newblock URL \url{https://github.com/PatrickMassot/leanblueprint}.
+
+\bibitem[{OpenAI}(2026{\natexlab{a}})]{OAIAllSeams}
+{OpenAI}.
+\newblock {Lean source for produced all-seams compatibility},
+  2026{\natexlab{a}}.
+\newblock URL
+  \url{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedSolution.lean}.
+\newblock Repository artifact; accessed 8 October 2026.
+
+\bibitem[{OpenAI}(2026{\natexlab{b}})]{OAICatalog}
+{OpenAI}.
+\newblock {Formalization catalogue}, 2026{\natexlab{b}}.
+\newblock URL
+  \url{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/formalization.yaml}.
+\newblock Repository artifact; accessed 8 October 2026.
+
+\bibitem[{OpenAI}(2026{\natexlab{c}})]{OAICommonBases}
+{OpenAI}.
+\newblock {Lean source for common-base approximate counting},
+  2026{\natexlab{c}}.
+\newblock URL
+  \url{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean}.
+\newblock Repository artifact; accessed 8 October 2026.
+
+\bibitem[{OpenAI}(2026{\natexlab{d}})]{OAIComparator}
+{OpenAI}.
+\newblock {Comparator verification configurations and instructions},
+  2026{\natexlab{d}}.
+\newblock URL
+  \url{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/ComparatorChallenges/README.md}.
+\newblock Repository artifact; accessed 8 October 2026.
+
+\bibitem[{OpenAI}(2026{\natexlab{e}})]{OAICrouzeix}
+{OpenAI}.
+\newblock {Lean source for the complete Crouzeix bound}, 2026{\natexlab{e}}.
+\newblock URL
+  \url{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/CompleteBound.lean}.
+\newblock Repository artifact; accessed 8 October 2026.
+
+\bibitem[{OpenAI}(2026{\natexlab{f}})]{OAIMahler}
+{OpenAI}.
+\newblock {Lean source for the symmetric Mahler theorem}, 2026{\natexlab{f}}.
+\newblock URL
+  \url{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/MainTheorem.lean}.
+\newblock Repository artifact; accessed 8 October 2026.
+
+\bibitem[{OpenAI}(2026{\natexlab{g}})]{OAIRepository}
+{OpenAI}.
+\newblock {Mathematics manuscripts and supporting proof artifacts},
+  2026{\natexlab{g}}.
+\newblock URL
+  \url{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/README.md}.
+\newblock Repository artifact; accessed 8 October 2026.
+
+\bibitem[{OpenAI}(2026{\natexlab{h}})]{OAISwitch}
+{OpenAI}.
+\newblock {Lean source for switch-chain mixing}, 2026{\natexlab{h}}.
+\newblock URL
+  \url{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/Main.lean}.
+\newblock Repository artifact; accessed 8 October 2026.
+
+\bibitem[{OpenAI}(2026{\natexlab{i}})]{OAITraceIdeals}
+{OpenAI}.
+\newblock {Lean source for trace and ideal transport}, 2026{\natexlab{i}}.
+\newblock URL
+  \url{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/TraceCone/IdealTransport.lean}.
+\newblock Repository artifact; accessed 8 October 2026.
+
+\bibitem[{The mathlib Community}(2020)]{mathlib2020}
+{The mathlib Community}.
+\newblock {The Lean Mathematical Library}.
+\newblock In \emph{Proceedings of the 9th ACM SIGPLAN International Conference
+  on Certified Programs and Proofs}, pages 367--381, 2020.
+\newblock \doi{10.1145/3372885.3373824}.
+\newblock URL
+  \url{https://leanprover-community.github.io/papers/mathlib-paper.pdf}.
+
+\bibitem[{The mathlib Community}(2026)]{MathlibForms}
+{The mathlib Community}.
+\newblock {Differential forms: Mathlib source}, 2026.
+\newblock URL
+  \url{https://github.com/leanprover-community/mathlib4/blob/d13f23b723b8a846827a245b89c10fc7d3f11612/Mathlib/Analysis/Calculus/DifferentialForm/Basic.lean}.
+\newblock Pinned dependency source; accessed 8 October 2026.
+
+\bibitem[van Doorn et~al.(2020)van Doorn, Ebner, and
+  Lewis]{vanDoornEbnerLewis2020}
+Floris van Doorn, Gabriel Ebner, and Robert~Y. Lewis.
+\newblock {Maintaining a Library of Formal Mathematics}.
+\newblock In \emph{Intelligent Computer Mathematics (CICM 2020)}, volume 12236
+  of \emph{Lecture Notes in Computer Science}, pages 251--267, 2020.
+\newblock \doi{10.1007/978-3-030-53518-6_16}.
+\newblock URL
+  \url{https://link.springer.com/chapter/10.1007/978-3-030-53518-6_16}.
+
+\bibitem[Zhu et~al.(2026)Zhu, Monticone, Avigad, and Welleck]{ZhuEtAl2026}
+Thomas Zhu, Pietro Monticone, Jeremy Avigad, and Sean Welleck.
+\newblock {LeanArchitect: Automating Blueprint Generation for Humans and AI},
+  2026.
+\newblock URL \url{https://arxiv.org/abs/2601.22554v1}.
+
+\end{thebibliography}

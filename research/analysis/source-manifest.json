@@ -1,0 +1,402 @@
+{
+  "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "git_tree_complete": true,
+  "files": [
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/CompleteBound.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 2757,
+      "git_blob_sha1": "a504007c267984cb20e977b0e8c31c4198bad757",
+      "sha256": "c8f0706d92662aaca2d1a26fe7647b3719035f72177d68fbf5b490028f12e891",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\CompleteBound.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/CompleteBound.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/Model.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 1208,
+      "git_blob_sha1": "bb0abb06d42480e15073530da46cfac0f4a7c636",
+      "sha256": "3be01360e343e41c9712883d81e8845122ef13b2418640fa32c5e2fd22cdba84",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\Model.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/Model.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/DomainCore.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 7826,
+      "git_blob_sha1": "7648fc2c1447cf95cbe7ead792e70455230b0cb8",
+      "sha256": "8c3ad69737fe2343607e665b27087a8016d43221a146eebd4b6879d833ddcb40",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\DomainCore.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/DomainCore.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/SingularPairs.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 5006,
+      "git_blob_sha1": "30a999e394b4cbf3b0aacabc48b3571716133eeb",
+      "sha256": "148b39d7df6831d6fc7ba50327f1594a0ba816668a28661fc8c1d6e82991f920",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\SingularPairs.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/SingularPairs.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/PositiveBlocks.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 2550,
+      "git_blob_sha1": "b7787904dedc05f3fea0e20106353b88ab7474f7",
+      "sha256": "74695a483d53771ef5cbde120f37e677659f42fe9dc9592bb4875fc7769774a9",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\PositiveBlocks.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/PositiveBlocks.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/Duality.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 3285,
+      "git_blob_sha1": "6023e50cc85a8415e3bd8af16f3f42fa4de8ecfb",
+      "sha256": "3b717a4dbb596ed52e342f3b3d7da991f5a70cf1a73e77a68678cd93fc2dc090",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\Duality.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/Duality.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/BoundaryEnergy.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 6470,
+      "git_blob_sha1": "35ad5040edd4ed9d4cf11fa8012d24e02cf814e5",
+      "sha256": "1bc293fb8f61ec3b924e0179a348b94f9dac5cb27e4b4be2a8070247873eef30",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\BoundaryEnergy.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/BoundaryEnergy.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/PolynomialEnergy.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 12029,
+      "git_blob_sha1": "443ca47dfbb234e50ddb3d546ad0bdbe0b649079",
+      "sha256": "7015c78df7181bd32d8aaa1632da7b92a9a56df241321c13a763857e4d4c7309",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\PolynomialEnergy.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/PolynomialEnergy.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/FaberEnergy.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 11084,
+      "git_blob_sha1": "968cd9a5547cac6cfe965b57faabd10287254b18",
+      "sha256": "a7a4914685716845b1161f075ac562f2e20b3f395fe087e688b8299b9c7bcf08",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\FaberEnergy.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/FaberEnergy.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/KernelContraction.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 9458,
+      "git_blob_sha1": "82b0e6ebe2c2e47746e97d131f52015e48e5132c",
+      "sha256": "2a648dce84f28a064555c98f4da0dc49c98520a7d29a218ecbef32a31fa9148e",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\KernelContraction.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/KernelContraction.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/ExteriorCollar.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 5353,
+      "git_blob_sha1": "84fc72e9a7afd7bc980589285aa45630c270bea0",
+      "sha256": "05ebbcf8152552db266eceb0af5e9a22b354d635e001e266d5ba763fe5286657",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\ExteriorCollar.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/ExteriorCollar.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/DomainBound.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 4202,
+      "git_blob_sha1": "db6e87404ed69425330844b3e187241251e8f09f",
+      "sha256": "792e5f24630ef2911ba5287df5bc042c4df4a741f9ae2d47dcfb8901616ecd70",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\DomainBound.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/DomainBound.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/OuterApproximation.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 5236,
+      "git_blob_sha1": "90b384e860ab4d1f1dc3a068c16a747a0c341521",
+      "sha256": "a7cc6181472d8830f53ef28e1efef4ffcd3eb88c71de671b4a92504b3aa7b245",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\OuterApproximation.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/OuterApproximation.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HorizontalForms.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 5397,
+      "git_blob_sha1": "5dfbf7c57bc06e9486303540b628a4f0055b257f",
+      "sha256": "5ecf0de601a9be291a0670a73bce254f94253b512d3017a01474435f623b76b9",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\HorizontalForms.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HorizontalForms.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SphereForms.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 4967,
+      "git_blob_sha1": "a4d458689fc4df77591f63435dc1228d955cd5d9",
+      "sha256": "ec25a18b86b5df18348a571ed2b506a2856513f55dcdeb26d169bf9b8c911556",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\SphereForms.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/SphereForms.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HomogeneousTransgression.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 8303,
+      "git_blob_sha1": "c381fcf297116fe1c5174f8c0f622d3912eea597",
+      "sha256": "70ddaa59dd91b03c9d2446aa05c52fcf2a25a82d581b9544caefee612a2d8bc1",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\HomogeneousTransgression.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousTransgression.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/PowerTransgression.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 6205,
+      "git_blob_sha1": "1707a44523003ff153693bb5e50b7bb7b3f4f25a",
+      "sha256": "930eeedf56aadd16a0309d6128f6c3232cfddbe5a85fd74456200b67b023a1fd",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\PowerTransgression.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/PowerTransgression.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HomogeneousVariationCoefficient.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 2644,
+      "git_blob_sha1": "9e5a64ca71749f2d1746add37ad6de50ca598db1",
+      "sha256": "ebe7a93d5d1644e027478b3e9ddee030319d607178f8f39f2cd030405926fa83",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\HomogeneousVariationCoefficient.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousVariationCoefficient.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HomogeneousEndpoint.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 2572,
+      "git_blob_sha1": "882afa1e3d92d2fbfe07cf067fcef06ffb958183",
+      "sha256": "b1c23ab0ded1757208ef0756f1af7dfec22a6231c109bea2caa9f1b9403d3169",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\HomogeneousEndpoint.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousEndpoint.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HomogeneousPrimitiveRegularity.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 4131,
+      "git_blob_sha1": "b3d247040eb52cee3c9c8120b9f72a0ccea1c158",
+      "sha256": "357e02cce0c0ad4b01de34fa7c3c8fb96bf3e2591aea96e6b479ef4f45dfe6f2",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\HomogeneousPrimitiveRegularity.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousPrimitiveRegularity.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ClosedBoundaryStokes.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 3175,
+      "git_blob_sha1": "fc98a4b561c4407d6e5d428d014164b2034cdd1f",
+      "sha256": "0b107f76a665e055b95d2f24c05110f498bcbec93b3d0f8761d9a8f13c72c721",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\ClosedBoundaryStokes.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/ClosedBoundaryStokes.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ExactSphereStokes.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 2806,
+      "git_blob_sha1": "2215702c8343d5b3c2a0f49d57ba4ea4f87525fb",
+      "sha256": "40b5cd4a1fafafdba30a32004fee9c3a0b9b959c6c2884b509882e6a0034d6bd",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\ExactSphereStokes.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/ExactSphereStokes.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SourcePrimitiveStokes.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 3305,
+      "git_blob_sha1": "76bb81f3e8e8ce40dfc6e0935286febd11cc8221",
+      "sha256": "c1f857871d04b7b08501684635d578933ea07ee7a70558a11188f920a85e3def",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\SourcePrimitiveStokes.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/SourcePrimitiveStokes.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HomogeneousTransgressionFTC.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 4275,
+      "git_blob_sha1": "9282748f7e2b0be254fd9b76c95a0e8a3dc6b837",
+      "sha256": "b4d2389c84dee13ef8d3522b3fb364a53b905a7690493e9a44de855247587762",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\HomogeneousTransgressionFTC.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousTransgressionFTC.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/EuclideanSpecialMap.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 5228,
+      "git_blob_sha1": "ae986cfb6716e6ee011c2db32e8bed96575a8e91",
+      "sha256": "77068c0e5dce13e0fcec035dbfddefa8673fb5fa2fc1f09ab9f2857b9dbd2809",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\EuclideanSpecialMap.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/EuclideanSpecialMap.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/MassTarget.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 2407,
+      "git_blob_sha1": "c97437040a367116cb04067b32a16e34db84d3c2",
+      "sha256": "01e57540d5c45e9e507bc81593a66fda96c20e95c262b9bddfe4cfd4b1369112",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\MassTarget.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/MassTarget.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SpecialSourceMass.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 2667,
+      "git_blob_sha1": "f2ab1771d017b1dc5db1dc28ffcfb0c9d8f6e67a",
+      "sha256": "5ca6f729dd257889d261226f9d97acc99f33acade382286344e6f2ddfc9916a0",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\SpecialSourceMass.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/SpecialSourceMass.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/MainTheorem.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 882,
+      "git_blob_sha1": "d5c55dee7e95a66312217de1f875ea8cb7508e62",
+      "sha256": "ff4222bb24b6b48e571c63a481f6cbe430ce68f8c707da065c2117d7e94f058e",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\MainTheorem.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/MainTheorem.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HomogeneousMassAssembly.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 1991,
+      "git_blob_sha1": "3d3d897e72635fe4cb1f4382b9173749c592c3c5",
+      "sha256": "adeef41de850349f05b61f71904c9ffe42ce974385ef778829f6a33da39e4e46",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\HomogeneousMassAssembly.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousMassAssembly.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ActualFiniteStrips.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 3841,
+      "git_blob_sha1": "12a2bd80e5feeb7716747f91c189bf1edf2a1887",
+      "sha256": "db8fd13fcdf965677174dbd1b066a74cad74bfebccce282ce8c2ba5642eed9a7",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\ActualFiniteStrips.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/ActualFiniteStrips.lean"
+    },
+    {
+      "path": "lean/ComparatorChallenges/DirectCrouzeix.json",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 371,
+      "git_blob_sha1": "0bcbfcbef94caf448a99232ee99a40e63bf33311",
+      "sha256": "26346f0920c9862517f30c4c3a016a5aea03913cca5c151dd1a26eee3e7a9f82",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\ComparatorChallenges\\DirectCrouzeix.json",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/ComparatorChallenges/DirectCrouzeix.json"
+    },
+    {
+      "path": "lean/ComparatorChallenges/DirectCrouzeix.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 1353,
+      "git_blob_sha1": "ff445cf2d835a67739ddbfa113a50c3f4e876ceb",
+      "sha256": "6aff79e03dee428cf5a677dba39da0fe14fe3d9a989a7e6d4bc0f3bf2a148d22",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\ComparatorChallenges\\DirectCrouzeix.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/ComparatorChallenges/DirectCrouzeix.lean"
+    },
+    {
+      "path": "lean/ComparatorChallenges/MahlerConjecture.json",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 328,
+      "git_blob_sha1": "410a7c012b122da7d8a7f78e6214e1f9856e9d9b",
+      "sha256": "fdf11d50fc36b5ae3d13aeea074aa6e40071c6bacd8de44fc399ac9ac9251959",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\ComparatorChallenges\\MahlerConjecture.json",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/ComparatorChallenges/MahlerConjecture.json"
+    },
+    {
+      "path": "lean/ComparatorChallenges/MahlerConjecture.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 585,
+      "git_blob_sha1": "bb8fd407424ca2e0a71dc34fa6d60cf8ce84bd8d",
+      "sha256": "40718172f61fe01f6c96b4c28324a1d76491eb84af4776d8507d8cdcb3120ea0",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\ComparatorChallenges\\MahlerConjecture.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/ComparatorChallenges/MahlerConjecture.lean"
+    },
+    {
+      "path": "lean/docs/325.md",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 2508,
+      "git_blob_sha1": "cd4d083eceaf63a4ababffa7a7b43a993c21be54",
+      "sha256": "e44548f4f54b1e408506529aac102b3a2bfcf930ddb5145afb4b193a97dee54b",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\docs\\325.md",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/docs/325.md"
+    },
+    {
+      "path": "lean/docs/087.md",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 2474,
+      "git_blob_sha1": "52459dc8c7e37b2395a25c903c4edac14b08e032",
+      "sha256": "85fdda35b4d2c609d330331cde9972b51dcda6127eef31d42e451c1bb644b0eb",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\docs\\087.md",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/docs/087.md"
+    },
+    {
+      "path": "lean/lake-manifest.json",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 14622,
+      "git_blob_sha1": "67d01d2717d0aaff59fb8814bb53581b961f42b4",
+      "sha256": "cf6105a25d9dca2f166b241d9191bd12c7e13305890dc9c4d0952351cccc0794",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\lake-manifest.json",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/lake-manifest.json"
+    },
+    {
+      "path": "lean/OAI/NumberTheory/PiExponent/Main.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 1361,
+      "git_blob_sha1": "486ed39ba52e5a10de7893cf0f302edb873801f2",
+      "sha256": "51a034738b1a61a17b076f19b0e12e4297e3974299bbca186b65f6e0826f0933",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\NumberTheory\\PiExponent\\Main.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/PiExponent/Main.lean"
+    },
+    {
+      "path": "lean/OAI/NumberTheory/TwoPointCorrelations/FinalMain.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 1461,
+      "git_blob_sha1": "2bd48811e73bbdc80c1f738fa889a14189186408",
+      "sha256": "5c03b192161ba203e82cfededd01b435f390a8cc03a430ef408734342161c7df",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\NumberTheory\\TwoPointCorrelations\\FinalMain.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/TwoPointCorrelations/FinalMain.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/Main.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 2051,
+      "git_blob_sha1": "23098f404746a3bf96350d6622af5765bcd814ac",
+      "sha256": "0a259924198d24e07a91764943aa2623b0cde487747f7c74a863d15dd50d3e71",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\Main.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/Main.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ContinuousWedge.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 5713,
+      "git_blob_sha1": "83aae8a5f41d19b95f455026482678a81a059294",
+      "sha256": "f0822c8ee8ccae57527921983a3a5a9c9a25bd2bddbcc9bed4ac1d5574a06909",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\ContinuousWedge.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/ContinuousWedge.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ChartStokes.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 6402,
+      "git_blob_sha1": "77c5fd86a1eabf47843f21de4f41b1c7ecf91674",
+      "sha256": "cba27c7bcedfc20105c3c71eec50c832331a6b17e22eda17c56a0c77729757e2",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\ChartStokes.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/ChartStokes.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ComplexStripMap.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 5622,
+      "git_blob_sha1": "51344b98cc226d5b3fb590a1c66487959c32537c",
+      "sha256": "cab24b8ec4f7a2d303f54473e5e5df9afabb3312658e30a96032acb0a075a423",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\ComplexStripMap.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/ComplexStripMap.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SpecialLeadingTerm.lean",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "bytes": 4420,
+      "git_blob_sha1": "1a20a382b93bf4119198867ec306a4bafdb5ca66",
+      "sha256": "3a7eafec1688c2bcf6070155ed2ead2541685ae8c89ac03fe928a7206a7e10ed",
+      "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\SpecialLeadingTerm.lean",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/SpecialLeadingTerm.lean"
+    }
+  ]
+}

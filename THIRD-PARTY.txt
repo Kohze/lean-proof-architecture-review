@@ -1,0 +1,14 @@
+The curated files in research/source/openai-math/ are unmodified excerpts of
+the source tree at https://github.com/openai/math, revision
+fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb. Their original path names are retained.
+They are distributed under the upstream Apache License 2.0. Full license
+texts are included as research/source/openai-math/LICENSE and lean/LICENSE.
+The review does not relabel these files as original work by its author.
+
+Research evidence ledgers retain quotations from these open source files
+with paths and blob identifiers. DOI metadata and bibliographic records are
+retained for source identification; their underlying works remain subject
+to the respective authors' and publishers' terms.
+
+Comparator and Mathlib source identities are recorded in research manifests.
+Their complete distributions are not part of the curated OpenAI source set.

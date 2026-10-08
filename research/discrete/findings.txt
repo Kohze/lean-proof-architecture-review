@@ -1,0 +1,214 @@
+Discrete/algorithmic source findings for the new Lean proof-architecture paper
+
+Pinned repository commit: fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb.
+All twenty selected source files in source-manifest.json were hashed as raw Git blobs and match the complete Git tree. This is source inspection, not a Lean build, kernel audit, runtime experiment, or independent verification of every imported mathematical bound. Evidence.json supplies ninety-two exact declaration locations, excerpts and commit-pinned GitHub links. Case-studies.json gives the structured research claims, hypotheses, chains and exclusions.
+
+COMMON BASES: MATHEMATICAL STATES, BANK SEMANTICS, VERIFIED COST COMPILATION, PHYSICAL TAPES
+
+The source supports a detailed case about end-to-end mathematical/operational correspondence. Its result is not merely the existence of a probabilistic function on abstract matroids. MainTheorem first chooses natural numbers k,s, a fixed finite-control program P, and constants C,d. Only then does it quantify over n,r, two matroids, an exact Boolean independence oracle, and epsilon,delta. This ordering matters: the program is uniform across input matroids. Both grounds must be Set.univ and both eRanks must equal r. Epsilon and delta are rational in (0,1). The budget is
+
+ B = C * (1+n+inputLength(n,r,epsilon,delta)
+              + ceil_nat(epsilon^(-1))
+              + Nat.clog 2 (ceil_nat(delta^(-1))))^d.
+
+For every infinite Bool tape, execution at step B has an output, uses at most B oracle calls and B bit operations, and produces a nonnegative rational. If the true count is zero, every tape produces zero. The success statement is a cardinality inequality over length-B tapes:
+
+ (1-delta)*2^B <= card { b : Fin B -> Bool |
+                       output(b) has relative error at most epsilon }.
+
+The mathematical encoding is already substantive. On a finite ground type alpha, pairedMatroid is M1.sum M2.dual on alpha+alpha. For A subset alpha, the transversal is inl(A) union inr(A-complement). The source proves that this transversal is a base of the paired matroid exactly when A is a base of both input matroids. Equal input ranks make the paired rank equal |alpha|. On Fin n, subsetDeficiency(A)=n-rank(pairedMatroid,transversal(A)); zero deficiency is equivalent to common-basehood. Explicit equivalences transfer subtype cardinality from Set to Finset bases, and transfer the weighted plain-slot partition sum to sum_A q^deficiency(A). The contamination bound is
+
+ Z <= partition(q) <= Z + 2^n*q, 0<=q<=1,
+
+where Z is commonBaseCount. These facts identify the exact mathematical quantity to which annealing applies. The direct-sum/dual/transversal choice, not the routine simplifier calls used to discharge basehood equations, is the useful representation evidence.
+
+The proof then removes mathematical rank access. rankOracle runs a greedy independence routine over an enumerated subset and proves equality to the actual matroid rank. oracleDeficiency and oracleAnneal inherit the exact paired-matroid semantics. A final sampled witness is checked by oracleGuard; an estimate is emitted only when the witness has zero deficiency. This is the concrete source of the every-tape zero-output guarantee, not a convention that allows a nonzero approximation to a zero count.
+
+Random experiments are represented as DrawTree A, whose constructors are a leaf or a finite uniform draw followed by a subtree for each outcome. Its expectation recurses by uniform averaging. A bounded implementation of an ideal tree uses a bank of Fin M -> Fin D -> BitWord H: M is a draw-depth budget, D the number of bounded rejection trials for each draw, H the bit width. Fits H M t bounds the relevant draw arities and depth. DrawTree.run_lower proves that for an indicator-like test function, the bounded experiment loses at most M*(1/2)^D relative to the ideal tree. This is a genuine finite fair-bit implementation bridge, distinct from simply assuming uniform sampling of arbitrary finite sets.
+
+The canonical mathematical walk is a lazy rational Metropolis exchange walk on paired-slot chain states. A uniform exchange removes a member and adds a nonmember. The source uses canonical enumerations for executable choices rather than requiring abstract Fintype enumeration to reduce to the same function. DrawTree.Reindexed explicitly permits a permutation of the finite draw index at each internal tree node. Its expectation theorem proves invariance for every real test function. This guards against conflating equality of random outputs on the same bit bank with equality of output distributions.
+
+The code language is typed by DataType (unit, bool, nat, word, products and lists). Expression includes composition, products, branching, folds, arithmetic, rank and independence query. encode gives bit-level representations. Effect a b is an ordinary deterministic Expression taking (input, BankData) and returning (optional output, remaining bank). Realizes relates execution on every bank pointwise to bankEval. RealizesLaw adds existence of a reindexed draw tree. The code proof for a single step is not an uninterpreted correctness field: stepCode_source composes the uniform proposal law, the actual exchange-set code, rank-derived acceptance calculation and Bernoulli code, then the lazy branch. algorithmCode_source composes phases, history accumulation and the final witness guard.
+
+Compilation is also concrete. compile lowers expressions structurally to Block 1, with nine stacks in the final k=1 machine (k+8 registers), using the instruction constructors push, pop, coin, query and halt. machineStep increments explicit oracleCalls and bitOperations. Oracle query payloads must have exactly n bits; malformed payloads produce zero. Halt decodes the numerator and denominator from registers 6 and 7. evaluate is the cost-bearing source semantics, returning Option(value,charge). compile_correct proves by induction on Expression that the compiled block transforms the encoded input into encoded output within the charge. The fold case is supported by an explicit list-loop execution argument. Bounded includes limits on machine steps, queries and bit operations, with Computes universally quantified over saved registers and tapes.
+
+Safe is a recursive intermediate-width certificate. It bounds encoded inputs/outputs and all intermediate successful subexpressions, including every fold step; it is not itself a totality theorem. compile_safe_bound combines Safe, successful source execution and compile_correct to derive a fixed expression-dependent polynomial in width+n. compile_majorant packages this as SizePolynomial. frozen_uniform_safe obtains input-uniform polynomials for the fixed preamble and postamble. These facts explain where the polynomial resource statement comes from, as opposed to recording an unproved abstract complexity field.
+
+The most distinctive final bridge is OutputCertificate. It asserts (i) the compiled-source postamble returns rationalPair(v(w)) for every fair finite word w, (ii) v(w) is nonnegative and exactly zero if the true count is zero, and (iii) for EVERY phi : Q -> R,
+
+ average_w phi(v(w)) = average_bank phi(canonicalBoundedOutput(bank)).
+
+Clause (iii) is equality of pushforward distributions/observable averages. It does not claim that v and the canonical function produce identical outputs from corresponding individual bank choices. The reindexing relation is precisely why such a law interface is useful.
+
+frozen_machine combines the output certificate, compiler majorants and a physical execution pipeline. The program is fprasBlock = pipeline (compile preambleCode) (compile postambleCode). It proves existence of v and a natural start offset such that, for ALL tapes bits, execution outputs v(physicalWord(start,m,bits)), with both resource counters bounded by B. Crucially start is existentially fixed before the universal quantification over tapes. Here m=fairBitCount(n,epsilon,delta), the TOTAL number of gathered bank bits. It is neither the number of Metropolis iterations nor the draw-depth M described above.
+
+physicalWord(start,m,bits)(i) = bits(start + 3*(m-1-i.val) + 1), i : Fin m.
+
+The reversal is due to pushing sampled bits onto a stack. The stride three is the actual instruction timing for the coin/push/loop sequence. The bound supplied by frozen_machine is start+3*m+1<=B; the corresponding physicalPosition is a Fin B value and is injective. At m=0 the injection is vacuous; for i : Fin m, the truncated-natural subtraction is ordinary valid reverse indexing. For positive m the largest read index is start+3*(m-1)+1; the stronger budget inequality includes control slack.
+
+physicalWord_law rewrites the finite tape reader to an injective coordinate embedding and invokes uniformAverage_bitEmbedding. Thus the physical sampled word is exactly uniform under the length-B uniform tape average. physical_accuracy instantiates OutputCertificate with the accuracy indicator, transports the canonical accuracy bound through this equality and through physicalWord_law, rewrites uniformAverage_indicator_card, multiplies by 2^B, and casts to the rational cardinality inequality in MainTheorem. The endpoint proof merely assembles these already substantial certificates.
+
+A defensible architectural claim is therefore: this file has a mathematical estimator-to-oracle-machine chain that reaches actual tape addresses, exact finite probability and bit cost. Verified compilation, semantic preservation and finite probability reasoning are established methods; novelty should not be claimed for these generic ideas. The concrete arrangement of bank semantics, reindexed draw trees, width-polynomial compilation, and reverse stride-three tape embedding is what this corpus shows. There is no evidence here of a practical runtime or a successful local build. Earlier variance, spectral and annealing lemmas were not all audited by this research contribution.
+
+SWITCH CHAIN: A TINY LOCAL TABLE CONTROLS A GRAPH-SPECIFIC ERROR SUBSPACE
+
+The inspected branch of switch_chain_main provides a second mathematical architecture case. The endpoint assumes n>=4, d(v)<=n-1, and a nonempty graph realization space. It proves the stated polynomial mixing result, singleton behavior, and a spectral-gap lower bound 1/(24*n^2*choose(n,4)) when there is more than one graph. This contribution follows the disjoint-pair interaction branch, not every ingredient of the spectral argument.
+
+GraphState n d is the subtype of SimpleGraph(Fin n) with the prescribed degrees. A switch proposal consists of a four-element vertex set and an ordered pair of distinct perfect matchings on it; validSwitch requires the removed matching edges to be present and the added matching edges to be absent. The local analysis starts with an injection e : Fin 4 -> V, grouped as pairs (e0,e1) and (e2,e3).
+
+SameCell fixes the outer graph, each pair's internal edge, and, for each outside vertex, its total incidence into the left pair and into the right pair. It leaves the four cross edges and which member of a pair receives a singleton boundary edge variable. SameCoordinates fixes those remaining choices. graph_eq_of_cell_coordinates proves the original graph is determined by this data, by separating outer/outer, outer/inside and inside/inside adjacency cases.
+
+The key feasibility lemma does real mathematical work. coordinate_degrees_iff reduces all four prescribed degree equations to three small constraints:
+
+ total(M) = original total,
+ row_0(M)+|U| = original row_0+|U_original|,
+ col_0(M)+|W| = original col_0+|W_original|.
+
+Here M is the 2x2 Bool matrix of cross edges, U the chosen singleton boundary neighbors of e0, and W those of e2. JointData is dependent left/right margin data plus a matrix fiber satisfying these constraints. coordinatesEquiv has explicit forward/inverse constructions, so it preserves feasibility and multiplicity rather than discarding degree constraints. stateCellCrossEquiv composes the graph-state, degree-cell and coordinate equivalences.
+
+CrossBlock.Matrix = Fin 2 -> Fin 2 -> Bool has sixteen values. count(s,r,c) counts matrices with total s, first row r and first column c. count_two is proved by decide. In row/column order 0,1,2 the table at total two is
+
+        0  1  2
+   0    0  1  0
+   1    1  2  1
+   2    0  1  0
+
+Equivalently, count(2,r,c)=2-offCenter(r)-offCenter(c), where offCenter(t)=1 when t!=1 and 0 otherwise. The table itself is not rank one. Its centered covariance is rank one, and a conditional average depends on the left data through just this one Boolean flag. For cross totals 0,1,3,4, count factors as independentMargin(s,r)*independentMargin(s,c); impossible totals give zero.
+
+CrossCellMoments.Cell retains both boundary data and their compatible matrix. sum_cell proves that summing over this subtype is a double sum weighted by the matrix table. conditionalRight_two_span then expresses conditional expectation as A+B*offCenter(r). CrossCellAffineComposition.expectation_first_second_affine combines the exceptional total-two case and the independent cases, proving B=0 unless total s=2. Its proof first factors expectation through the partition key and then invokes the actual conditional table formulas. This is the specific low-dimensional structure carried forward into analysis.
+
+The graph correspondence is explicit. expectation_ker_pullback transports finite-fiber averages through a genuine equivalence; its proof maps the finite fibers, proves their cardinalities agree and transports their sums. DisjointGraphAffine proves that graph pair conditional expectations equal the coordinate conditional expectations. DisjointEqualityFlags proves that offCenter of the first-row margin equals the graph observable checking whether e0 has equal adjacency bits to e2 and e3 (both edges present or both absent). Thus the flag is not a separately postulated graph statistic.
+
+AffineFlagImage says the relevant composed conditional expectation equals base+weight*observable, where base and weight are fiber-constant and weight vanishes unless crossTotal=2. Fluctuation subtracts the relevant conditional expectation. The equalitySpace submodule contains functions whose restriction to each active pair fiber is a scalar multiple of the centered equality flag, with zero on inactive fibers. It is rank one PER FIBER, not a globally one-dimensional subspace. fluctuation_mem_of_affineFlagImage shows the correlated fluctuation belongs to this space; hence its orthogonal projection fixes that fluctuation.
+
+An abstract finite-dimensional theorem, interaction_of_correlated_error_ranges, supplies the analytic inequality for symmetric idempotent conditional projections P,Q, switch-gain projection G, and error projections R,S. Its proof decomposes a vector with orthogonal projections onto ranges, proves norm/error identities and applies projection norm bounds. The graph-specific actual_named_interaction supplies the concrete switch and flag projections. The resulting inequality is of the form
+
+ 2*||gain_ab f||^2 - ||error_ab f||^2 - ||error_ba f||^2
+       <= 2*<fluctuation_a f, fluctuation_b f>.
+
+A separate pair_projection_budget bounds summed error-projection norms by summed gain norms. PairDisjointAssembly converts named quadruples into unordered pairs, sums the compensated interaction inequalities and pays for the error terms with the budget. The outcome is a nonnegative SUM of disjoint-pair inner products. It does not assert that every individual disjoint-pair inner product is nonnegative, nor does it assert that the two conditional projections commute.
+
+LocalGapEndgame takes this nonnegative sum, a triple-generator square bound and local pair-to-switch comparison, obtains a generator-square inequality and then the explicit spectral gap. Main composes this with a spectral-gap-to-mixing theorem. The inspected architecture has the sequence:
+
+ graph reconstruction -> degree/margin equivalence -> sixteen-state table
+ -> one-flag conditional image -> error subspace -> projection interaction
+ -> summed budget -> generator-square estimate -> spectral gap -> mixing.
+
+Finite decide is only the base of this tower. The interesting representation is the identification of all nonconstant local dependence with the equality flag at cross-total two and the compensation of its projection errors globally. Reflection and equivalence transport are established proof techniques. This case should claim a concrete mathematical bridge, not a new generic tactic. The independent triple and local-comparison branches were not audited deeply here, and no build or theorem-axiom audit was run.
+
+EXCLUSIONS AND LITERATURE POSITIONING
+
+The characteristic-two Kaplansky endpoint and presentation/torsion/output wrappers were downloaded and inspected. They select explicit witnesses and assemble products, finite presentation and torsion facts, but the underlying certificate-to-group-algebra mechanism was not followed deeply enough here. Do not cite these wrappers as proof of a novel certificate architecture. Generic simp/omega/nlinarith/ext/choose patterns and theorem-wrapper sizes are likewise not novelty evidence.
+
+The root agent owns primary baseline bibliography. CommonBases should be compared with probabilistic program semantic preservation and verified compilation (e.g. CertiCrypt/EasyCrypt and CakeML) without suggesting that semantic preservation is new. SwitchChain should be compared with established small-scale reflection and proof-by-computation without suggesting that finite decide is new. The two concrete bridges above are the evidence-based contribution.
+
+SELECTED EXACT SOURCE POINTERS
+
+cb.statement: lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean:110-132 (MainTheorem; blob 83e7e510797b85b7ef65b93d5983303245c3246b)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L110-L132
+
+cb.base_equiv: lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean:7156-7162 (transversal_isBase_iff; blob 83e7e510797b85b7ef65b93d5983303245c3246b)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L7156-L7162
+
+cb.deficiency: lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean:7576-7598 (subsetDeficiency_zero; blob 83e7e510797b85b7ef65b93d5983303245c3246b)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L7576-L7598
+
+cb.count_transfer: lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean:7606-7617 (zeroDeficiency_eq_commonBaseCount; blob 83e7e510797b85b7ef65b93d5983303245c3246b)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L7606-L7617
+
+cb.tree_lower: lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean:9346-9385 (run_lower; blob 83e7e510797b85b7ef65b93d5983303245c3246b)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L9346-L9385
+
+cb.reindex: lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean:11548-11551 (Reindexed; blob 83e7e510797b85b7ef65b93d5983303245c3246b)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L11548-L11551
+
+cb.walk_source: lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean:20649-20669 (stepCode_source; blob 83e7e510797b85b7ef65b93d5983303245c3246b)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L20649-L20669
+
+cb.algorithm_source: lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean:24074-24086 (algorithmCode_source; blob 83e7e510797b85b7ef65b93d5983303245c3246b)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L24074-L24086
+
+cb.compile_correct: lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean:16459-16620 (compile_correct; blob 83e7e510797b85b7ef65b93d5983303245c3246b)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L16459-L16620
+
+cb.safe: lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean:16855-16864 (Safe; blob 83e7e510797b85b7ef65b93d5983303245c3246b)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L16855-L16864
+
+cb.compile_majorant: lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean:25559-25566 (compile_majorant; blob 83e7e510797b85b7ef65b93d5983303245c3246b)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L25559-L25566
+
+cb.output_certificate: lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean:25962-25968 (OutputCertificate; blob 83e7e510797b85b7ef65b93d5983303245c3246b)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L25962-L25968
+
+cb.machine_transfer: lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean:26027-26069 (frozen_machine; blob 83e7e510797b85b7ef65b93d5983303245c3246b)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L26027-L26069
+
+cb.physical: lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean:25658-25659 (physicalWord; blob 83e7e510797b85b7ef65b93d5983303245c3246b)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L25658-L25659
+
+cb.physical_law: lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean:25683-25687 (physicalWord_law; blob 83e7e510797b85b7ef65b93d5983303245c3246b)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L25683-L25687
+
+cb.accuracy_transfer: lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean:26070-26092 (physical_accuracy; blob 83e7e510797b85b7ef65b93d5983303245c3246b)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L26070-L26092
+
+cb.target: lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean:26093-26126 (common_bases_fpras; blob 83e7e510797b85b7ef65b93d5983303245c3246b)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean#L26093-L26126
+
+sw.cell: lean/OAI/Probability/SwitchChain/DisjointEncoding.lean:20-30 (SameCell; blob 7b492a205d49c7b3d0603a003b7e0721df56b230)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/DisjointEncoding.lean#L20-L30
+
+sw.degree_feasible: lean/OAI/Probability/SwitchChain/DisjointCoordinateFeasibility.lean:22-108 (coordinate_degrees_iff; blob 7fdb3c4cea0981a6774d82549796943abc26b9e5)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/DisjointCoordinateFeasibility.lean#L22-L108
+
+sw.coordinate_equiv: lean/OAI/Probability/SwitchChain/DisjointCellCounting.lean:66-77 (coordinatesEquiv; blob c13ceb1aa4c381310efaf458dc8491f6040bea13)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/DisjointCellCounting.lean#L66-L77
+
+sw.count_two: lean/OAI/Probability/SwitchChain/CrossMatrix.lean:22-25 (count_two; blob 44bbbe6e200de3180e8c17421b25ca404607a429)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/CrossMatrix.lean#L22-L25
+
+sw.count_real: lean/OAI/Probability/SwitchChain/CrossMatrix.lean:81-89 (count_two_real; blob 44bbbe6e200de3180e8c17421b25ca404607a429)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/CrossMatrix.lean#L81-L89
+
+sw.product: lean/OAI/Probability/SwitchChain/CrossIndependent.lean:19-52 (count_eq_independent_product; blob f0ceb6ff77c5907c4609ef8882aa0a3d9afb1652)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/CrossIndependent.lean#L19-L52
+
+sw.conditional_span: lean/OAI/Probability/SwitchChain/CrossCellMoments.lean:132-141 (conditionalRight_two_span; blob 35c18f2a694dfa7e82af480e5cc4890d14d2a6e1)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/CrossCellMoments.lean#L132-L141
+
+sw.affine: lean/OAI/Probability/SwitchChain/CrossCellAffineComposition.lean:64-87 (expectation_first_second_affine; blob 038446c5326fb2a9b425bb535b528dde4b90a168)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/CrossCellAffineComposition.lean#L64-L87
+
+sw.state_equiv: lean/OAI/Probability/SwitchChain/DisjointCrossCellEquiv.lean:35-38 (stateCellCrossEquiv; blob c95d557e1a72217b73581861273d9aa0e63f11dd)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/DisjointCrossCellEquiv.lean#L35-L38
+
+sw.pullback: lean/OAI/Probability/SwitchChain/DisjointCrossCellEquiv.lean:68-96 (expectation_ker_pullback; blob c95d557e1a72217b73581861273d9aa0e63f11dd)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/DisjointCrossCellEquiv.lean#L68-L96
+
+sw.graph_affine: lean/OAI/Probability/SwitchChain/DisjointGraphAffine.lean:68-90 (right_left_expectation_cell_affine; blob 85abe54c38f295ba3111e7ebc516452436d5f6af)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/DisjointGraphAffine.lean#L68-L90
+
+sw.flag_correspondence: lean/OAI/Probability/SwitchChain/DisjointEqualityFlags.lean:46-63 (stateLeftFlag_eq_observable; blob ea47485f002ef6f7ae3e9c679ab2cd04a4c65286)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/DisjointEqualityFlags.lean#L46-L63
+
+sw.equality_space: lean/OAI/Probability/SwitchChain/PairEqualityProjection.lean:21-41 (equalitySpace; blob 7de0cafcfc18ed9c7e544966d156313e2ab7afb7)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/PairEqualityProjection.lean#L21-L41
+
+sw.interaction_general: lean/OAI/Probability/SwitchChain/ProjectionRangeInteraction.lean:138-222 (interaction_of_correlated_error_ranges; blob db186e150a6a82b01ab063691d379c1d60cc0d43)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/ProjectionRangeInteraction.lean#L138-L222
+
+sw.interaction: lean/OAI/Probability/SwitchChain/PairActualAffine.lean:81-101 (actual_named_interaction; blob c097d0cd33aee37331958ed04367f758c6e2cb38)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/PairActualAffine.lean#L81-L101
+
+sw.budget: lean/OAI/Probability/SwitchChain/PairEqualityBudgetUnordered.lean:42-60 (pair_projection_budget; blob a4fbc1dc304b5ba642cc1c6491f03e731b510c53)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/PairEqualityBudgetUnordered.lean#L42-L60
+
+sw.assembly: lean/OAI/Probability/SwitchChain/PairDisjointAssembly.lean:45-77 (disjoint_sum_nonneg_of_named_interaction_budget; blob 31b9bad18286c4ad5623d1e75a179955d3564626)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/PairDisjointAssembly.lean#L45-L77
+
+sw.spectral: lean/OAI/Probability/SwitchChain/LocalGapEndgame.lean:31-48 (spectralGap_of_triples_and_disjoint; blob 8ea6816375553a5149941140a3d04c353807829e)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/LocalGapEndgame.lean#L31-L48
+
+sw.target: lean/OAI/Probability/SwitchChain/Main.lean:18-29 (switch_chain_main; blob f57bfdeb78b3af3dec46c90aeaa145b85d044140)
+https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/Main.lean#L18-L29
+

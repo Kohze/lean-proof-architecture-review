@@ -1,0 +1,165 @@
+{
+  "reviewer": "lean_discrete_cases",
+  "review_date": "2026-10-08",
+  "corpus_commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "scope": "Full text-level review of all ten manuscript .tex files, the original Lean/Python examples, saved verification records, and previous independent case audits. This is not a new full-corpus build or PDF visual review. No manuscript source was edited.",
+  "overall_assessment": "A useful, technically careful source-driven review. The strongest material explains why a particular mathematical operation requires a particular semantic relation, rather than treating Lean syntax or tactics as novelty. The six cases offer substantial reader value when read selectively. No new blocking mathematical error was found in the worked examples or the repaired case accounts. The paper is more convincing as a carefully evidenced review and teaching resource than as a new general theory of proof architecture. The final synthesis has several statements broader than the examples justify; narrowing them will improve both correctness and credibility.",
+  "category_ratings_out_of_10": {
+    "reader_value": {
+      "rating": 8,
+      "reason": "The tape law, graph table, positive-cut limit and named-coordinate distinction are memorable and inspectable. The Crouzeix cancellation and Mahler derivative/locality distinction explain real mathematical dependencies. Readers outside the individual subjects will need to select cases rather than read every technical detail equally deeply."
+    },
+    "novelty_honesty": {
+      "rating": 9,
+      "reason": "The introduction, case endings and discussion consistently distinguish concrete compositions from established methods. Historical-first claims, generic tactic novelty and unsupported development-effort claims are avoided. The four preservation categories are rightly offered as a reading framework rather than a new formal method."
+    },
+    "comparative_contribution": {
+      "rating": 7,
+      "reason": "The case studies are stronger than the general taxonomy. Data, laws, estimates and locality overlap, as the paper acknowledges; the taxonomy is descriptive rather than an operational classification. A reader can reuse the three guiding questions, but the draft does not establish that the four categories are exhaustive or uniquely useful. It does not claim to, and should retain that restraint."
+    },
+    "flow_and_accessibility": {
+      "rating": 7,
+      "reason": "The introduction and overview provide a clear route. Six dense accounts in succession make the paper demanding, especially the produced-diagram case with several named records and constructors. The elementary examples help substantially, but currently arrive after all six cases. A little more cross-case signposting would improve the manuscript more than additional source detail."
+    },
+    "natural_language_and_precision": {
+      "rating": 8,
+      "reason": "Most paragraphs lead with a mathematical purpose and avoid an inventory of tactics. Some discussion sentences turn proof-specific requirements into universal impossibility statements. The repeated closing pattern of established methods plus case-specific composition is honest but slightly formulaic."
+    },
+    "mathematical_correctness_of_worked_examples": {
+      "rating": 9,
+      "reason": "The uniform tape-fiber argument, observable indicator argument, c0 trace example, derivative-at-a-point example and scaled-frame example are correct. The inference from the point example to a necessity claim about all boundary arguments needs qualification; the underlying examples themselves are sound."
+    },
+    "evidence_and_conclusion_alignment": {
+      "rating": 9,
+      "reason": "Endpoint/support distinctions, source pinning, static-versus-executable evidence and retained-versus-discharged hypotheses are unusually explicit. The final conclusions are suitably limited. Two compressed discussion formulations need correction to match the more precise case sections."
+    },
+    "reproducibility_as_currently_packaged": {
+      "rating": 8,
+      "reason": "The source hash matches the saved successful Lean log, the four printed axiom reports agree with verification.json, and exact Python enumeration data agree with the companion script. The manuscript promises a package README which did not yet exist at review time; adding it is required before delivery."
+    }
+  },
+  "major_findings": [
+    {
+      "id": "FULL-01",
+      "severity": "major deliverable gap; simple to repair",
+      "location": "discussion.tex:86-87; accompanying package root",
+      "claim_at_issue": "The package README gives reproduction commands and identifies the pinned external sources.",
+      "finding": "No README.md exists in papers/lean-proof-architecture at review time. The scripts and logs are present, but the promised entry point is missing.",
+      "required_correction": "Create the package README with commands for verify_examples.py, build.py and any render step; specify Lean 4.34.1, Python dependencies, TeX requirements, both external repository pins, the source-case static-analysis scope, and the locations of results and evidence ledgers. Alternatively remove the claim, although supplying the README is substantially better.",
+      "blocking_for_delivery": true
+    }
+  ],
+  "minor_findings": [
+    {
+      "id": "FULL-02",
+      "severity": "minor mathematical overstatement",
+      "location": "discussion.tex:20-21",
+      "claim_at_issue": "Pointwise scalar limits do not recover closed finite ideals of extended traces.",
+      "finding": "The c0 example proves that the pointwise scalar-zero limit need not equal the weight of the closed finite ideal. It does not prove that the ideal cannot be recovered from the pointwise limit: the pointwise limit is zero on positive elements with finite trace, and an additional closure operation can recover the closed ideal. The case section states the precise convergence distinction correctly.",
+      "required_correction": "Replace with: A pointwise scalar-zero limit need not equal the weight of the closed finite ideal. Keep the canonical-convergence and positive-cut explanations as written.",
+      "blocking_for_delivery": false
+    },
+    {
+      "id": "FULL-03",
+      "severity": "minor mathematical overstatement",
+      "location": "discussion.tex:19-20; worked-examples.tex:118-120 and 130-131",
+      "claim_at_issue": "Equality at boundary points does not determine the derivative used by Stokes; the examples show the stronger interfaces are mathematically necessary.",
+      "finding": "Agreement at one point does not determine an ambient derivative, as the example correctly shows. Agreement of smooth forms along an entire submanifold does determine the exterior derivative of their restrictions on tangent tuples, by naturality of pullback. The selected proof uses neighborhood equality to transfer ambient Frechet derivatives before the later tangent-density step, which is a more precise and fully supported statement. The current wording risks treating this source-specific congruence route as a universal necessity for any Stokes proof.",
+      "required_correction": "Say that pointwise agreement at a boundary point does not determine the ambient derivative, and that the source's cutoff proof uses neighborhood equality to transfer that derivative. In the worked example, replace needs with uses and narrow the final necessity statement to the downstream operations or the proof interfaces actually discussed.",
+      "blocking_for_delivery": false
+    },
+    {
+      "id": "FULL-04",
+      "severity": "minor methodological overstatement",
+      "location": "discussion.tex:17-18",
+      "claim_at_issue": "A finite enumeration does not describe a uniform graph fiber until multiplicities are transported through a bijection.",
+      "finding": "Multiplicity accounting is essential, but an explicit bijection is one way to establish it, not a universal prerequisite. Equal fiber cardinalities, a measure-preserving map, or direct counting can suffice. The source case does use an explicit equivalence, so the claim should describe that concrete mechanism rather than impose it on all formalizations.",
+      "required_correction": "Replace with: A finite table describes the relevant graph averages only after its multiplicities have been related to those of the graph fibers; here an explicit bijection supplies that relation.",
+      "blocking_for_delivery": false
+    },
+    {
+      "id": "FULL-05",
+      "severity": "minor verification-scope precision",
+      "location": "abstract.tex:16-17",
+      "claim_at_issue": "The accompanying Lean examples verify ... the recovery of finite laws from observables.",
+      "finding": "The Lean theorem proves equality of natural-number multiplicities from all natural-valued finite weighted sums. The prose in the worked section explains correctly how this corresponds to finite laws after normalization, but the abstract compresses the distinction between the mathematical probability proposition and its compiled integer-count analogue.",
+      "required_correction": "Prefer recovery of finite multiplicities from observables, or explicitly say a finite-count version of law recovery. This is a precision improvement, not a substantive defect in the example.",
+      "blocking_for_delivery": false
+    },
+    {
+      "id": "FULL-06",
+      "severity": "optional reader-value improvement",
+      "location": "worked-examples.tex or the end of the graph-switch case",
+      "finding": "The graph table is one of the paper's best mechanisms, but the examples do not show numerically why the exceptional direction needs compensation. A very short exact calculation can connect the local table to the global inequality more directly.",
+      "suggested_correction": "For a uniformly chosen total-two 2-by-2 Boolean matrix, the table has six matrices. With p(r)=1 when r differs from 1, E p(row0)=E p(col0)=1/3, while E[p(row0)p(col0)]=0. Their covariance is therefore -1/9. This shows immediately that the exceptional interaction can be negative and motivates the gain/error budget. Distinguish this six-matrix example from the weighted graph-cell experiment.",
+      "independent_check": "Enumerated all sixteen Boolean matrices during this review; total-two table [[0,1,0],[1,2,1],[0,1,0]], total six, each off-center margin count two, joint off-center count zero.",
+      "blocking_for_delivery": false
+    },
+    {
+      "id": "FULL-07",
+      "severity": "optional synthesis improvement",
+      "location": "discussion.tex:3-12 and 24-36",
+      "finding": "The four-category framework is clear but broad. The most useful cross-case distinction is that common bases deliberately weakens pointwise correspondence to equality of laws, whereas named graded maps and ambient differentiation require stronger equality. Making that contrast explicit would give the framework more operational reader value.",
+      "suggested_correction": "Add two or three sentences comparing when weakening is safe: an event probability factors through the output law, but a named-coordinate equation consumes the actual coordinate map and an ambient derivative consumes a germ of the field. State that this downstream-operation test, rather than a universal ordering of stronger and weaker relations, guides the choice.",
+      "blocking_for_delivery": false
+    },
+    {
+      "id": "FULL-08",
+      "severity": "optional flow improvement",
+      "location": "cases-architecture.tex, all-seams subsection; worked-examples.tex, final subsection",
+      "finding": "The scaled-frame example is an effective explanation of the named-map requirement, but it appears after the entire long case section. The all-seams account itself asks the reader to absorb several constructors before seeing this elementary distinction in action.",
+      "suggested_correction": "Add an early forward reference to the one-dimensional frame example, or move its two-sentence calculation into the case immediately after the named-graded-flag formula. Avoid adding more exact declaration names to compensate for the conceptual burden.",
+      "blocking_for_delivery": false
+    }
+  ],
+  "worked_examples_review": [
+    {
+      "example": "Injective tape positions",
+      "assessment": "Correct for all natural m,B satisfying the injection hypothesis, including m=0. The stated budget is sufficient and stronger than the maximum selected position requires. The original Lean code exactly uses the reversed stride-three convention and Fin bounds to handle truncated subtraction. The Python loop has 5 values of m and 3 starts, hence the stated fifteen checks."
+    },
+    {
+      "example": "All observables determine a finite law",
+      "assessment": "The singleton-indicator proof is correct. The two multiplicity vectors have total three and unnormalized first moment three, hence both normalized means are one, while the singleton-zero probabilities differ. The compiled theorem is an integer-count analogue, explicitly distinguished in the worked prose."
+    },
+    {
+      "example": "c0 extended trace and positive cuts",
+      "assessment": "Correct. Positive finite-support sequences have finite trace, and finite-support elements lie in the finite-square domain. They are norm dense in c0. Every fixed positive cut of a positive c0 element has finite support, giving the left canonical-limit inequality with zero; the right inequality is nonnegativity. The positive sequence 1/j lies in c0 with infinite trace, so its pointwise scalar-zero value stays infinite. This is a strong explanatory example, and it does not pretend to be a new mathematical result."
+    },
+    {
+      "example": "Local equality and framed flags",
+      "assessment": "The derivative example is correct at a point and the frame example is correct for a nonzero v, implicit in the word frame. The source-specific derivative-congruence inference should be qualified as in FULL-03. The one-dimensional named-map example correctly distinguishes equality of flags from equality of coordinate identifications."
+    }
+  ],
+  "verified_cross_case_claims": [
+    "The manuscript presents four public endpoints and two support results, and keeps producedMarkedValues_allSeams distinct from the stronger producedMarkedSolution.",
+    "The repaired trace account includes vanishing at zero and a proper-filter condition for uniqueness.",
+    "The repaired Crouzeix account explicitly normalizes the boundary polynomial before concluding gamma <= 2.",
+    "Common-base bank-bit count m remains distinct from machine-resource budget B, and the start offset is fixed before the universal tape quantifier.",
+    "The graph error direction is stated per fiber, rather than as a globally one-dimensional subspace.",
+    "The graph conclusion is nonnegativity of the summed compensated interaction, rather than pointwise nonnegative correlations or commuting conditional expectations.",
+    "The overview inventory count of 122875 Lean files, 173 catalogue source records and 200 main-result bindings was independently reproduced from the complete pinned tree and formalization.yaml.",
+    "The saved Lean source hash matches the current example file; the log and verification record both report successful compilation and only propext and Quot.sound for the four named theorems.",
+    "The manuscript does not claim that these independent examples import or certify the source-corpus endpoints.",
+    "No unsupported first-use, frequency, development-effort or effective-computation claim was found in the contribution and conclusion paragraphs."
+  ],
+  "recommended_revision_order": [
+    "Supply the promised package README before delivery.",
+    "Apply the three narrow discussion corrections FULL-02 through FULL-04.",
+    "Align the abstract's executable-example wording with the actual finite-count theorem (FULL-05).",
+    "If space permits, add the six-matrix negative-covariance calculation and the explicit cross-case downstream-operation contrast.",
+    "Keep the modest novelty framing, the source/evidence distinction, and the endpoint/support distinctions intact."
+  ],
+  "publication_positioning": "The paper is well positioned as an evidence-rich review of mathematical interfaces in a newly available collection, with independently compiled teaching examples. Its contribution would be weakened by presenting the descriptive taxonomy as a new universal design principle or by implying independent validation of the major mathematical endpoints. The current introduction and method mostly avoid those errors. The reader-value improvements suggested here should sharpen explanation rather than enlarge claims.",
+  "reviewed_file_sha256": {
+    "abstract.tex": "e76bfc629cbeee6872500a30ceb2b29549a7616a77dcb74d2bdd99becd976409",
+    "cases-analysis.tex": "e5d1c72ea8c3a0ed27d15985f052a4c6b40a260ee312dde0d30623aa9d0c4d22",
+    "cases-architecture.tex": "54432b62f866444333bc663c99122a0ef3aecfa80d6db66d8c1e414a66aee094",
+    "cases-discrete.tex": "d5d126ddbdba40fa6cc22a345389b14d9fb024d32f3fb720d4dd445c0c1a0bf4",
+    "cases.tex": "5c3c6e59a9405d9fcac2712fee483582f0cbf1a79a05b6c11bf5aa4af95e8657",
+    "discussion.tex": "fda99593f917cc38917b81dac7a4d91db825651cfd3076d32a2b851c7540ffb7",
+    "introduction.tex": "6d8d741c4980fa718fc12fe4f394e2e29f04516c074cf636159551b44cca0dae",
+    "main.tex": "3ca141eb826dbfa01d6c119d2eb52143970de5a759566f63bf9a94ea30bb7b40",
+    "method.tex": "4bc90c6d949625c387289eafb20b6aa084feb7b2468ec40d2bcfa63c05bd8f11",
+    "worked-examples.tex": "48028d11cd1461531d70a697f014ac8fce06d54a131c3efd9961f2b79d90bb12"
+  }
+}

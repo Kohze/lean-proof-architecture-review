@@ -1,0 +1,157 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        7
+      ]
+    ],
+    "date-time": "2026-10-07T18:05:59Z",
+    "timestamp": 1791396359581,
+    "version": "4.3.3"
+  },
+  "publisher-location": "Berlin, Heidelberg",
+  "reference-count": 0,
+  "publisher": "Springer Berlin Heidelberg",
+  "isbn-type": [
+    {
+      "value": "9783540049142",
+      "type": "print"
+    },
+    {
+      "value": "9783540362623",
+      "type": "electronic"
+    }
+  ],
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            1970,
+            1,
+            1
+          ]
+        ],
+        "date-time": "1970-01-01T00:00:00Z",
+        "timestamp": 0
+      },
+      "content-version": "unspecified",
+      "delay-in-days": 0,
+      "URL": "http://www.springer.com/tdm"
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "published-print": {
+    "date-parts": [
+      [
+        1970
+      ]
+    ]
+  },
+  "DOI": "10.1007/bfb0060623",
+  "type": "book-chapter",
+  "created": {
+    "date-parts": [
+      [
+        2006,
+        11,
+        10
+      ]
+    ],
+    "date-time": "2006-11-10T11:53:22Z",
+    "timestamp": 1163159602000
+  },
+  "page": "29-61",
+  "source": "Crossref",
+  "is-referenced-by-count": 88,
+  "title": [
+    "The mathematical language AUTOMATH, its usage, and some of its extensions"
+  ],
+  "prefix": "10.1007",
+  "author": [
+    {
+      "given": "N. G.",
+      "family": "de Bruijn",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "297",
+  "published-online": {
+    "date-parts": [
+      [
+        2006,
+        8,
+        23
+      ]
+    ]
+  },
+  "container-title": [
+    "Lecture Notes in Mathematics"
+  ],
+  "original-title": [],
+  "link": [
+    {
+      "URL": "http://link.springer.com/content/pdf/10.1007/BFb0060623",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2016,
+        10,
+        10
+      ]
+    ],
+    "date-time": "2016-10-10T02:35:27Z",
+    "timestamp": 1476066927000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://link.springer.com/10.1007/BFb0060623"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        1970
+      ]
+    ]
+  },
+  "ISBN": [
+    "9783540049142",
+    "9783540362623"
+  ],
+  "references-count": 0,
+  "URL": "http://dx.doi.org/10.1007/BFb0060623",
+  "relation": {},
+  "ISSN": [
+    "0075-8434",
+    "1617-9692"
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        1970
+      ]
+    ]
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "scope": "Source-level architecture research for a new paper, independent of mathematical validity review. No build or execution was attempted. Endpoint dependency branches were followed selectively, as specified below.",
+  "cases": [
+    {
+      "id": "common-bases-semantic-compilation",
+      "priority": "strongest",
+      "title": "An oracle FPRAS whose proof reaches the actual random-tape positions of a fixed stack-machine program",
+      "endpoint": "OAI.common_bases_fpras",
+      "file": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+      "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b",
+      "hypotheses": [
+        "Finite ground set Fin n; both matroid grounds are Set.univ.",
+        "Both eRanks equal the supplied natural number r.",
+        "The Boolean independence oracle answers the independence predicate for every set encoding and either matroid.",
+        "Rational epsilon and delta satisfy 0 < epsilon < 1 and 0 < delta < 1."
+      ],
+      "result": "Existence of one finite-register, finite-control program and constants C,d, chosen before n, matroids, oracle, epsilon and delta. It halts within a polynomial budget on every infinite tape, bounds oracle calls and bit operations by that budget, produces nonnegative rational output, returns zero on every execution when the common-base count is zero, and succeeds on at least (1-delta) times 2^B length-B tapes.",
+      "architecture_claim": "The mathematical estimator, fair bounded experiment, oracle expression code, compiler cost semantics and physical tape execution have explicit interfaces. The decisive bridge is equality of expectations for all test functions plus an injective embedding of the consumed coin bits into a longer machine tape.",
+      "chain": [
+        {
+          "layer": "Mathematical representation",
+          "description": "Encode a common base A of M1,M2 as the transversal inl(A) union inr(A-complement) of the direct-sum matroid M1 sum dual(M2). Zero rank deficiency of such a transversal is equivalent to common-basehood. Exact subtype equivalences transfer its cardinality and weighted partition sums.",
+          "evidence": [
+            "cb.paired",
+            "cb.transversal",
+            "cb.base_equiv",
+            "cb.deficiency",
+            "cb.count_transfer",
+            "cb.partition_transfer",
+            "cb.contamination"
+          ]
+        },
+        {
+          "layer": "Oracle semantics",
+          "description": "A greedy independence-oracle rank routine computes the matroid rank. oracleDeficiency and oracleAnneal are shown to equal the mathematical paired-matroid deficiency and annealing weights. The final oracleGuard emits the estimate only when a sampled witness has zero deficiency.",
+          "evidence": [
+            "cb.oracle_rank",
+            "cb.oracle_rank_correct",
+            "cb.oracle_weight",
+            "cb.oracle_semantics",
+            "cb.guard"
+          ]
+        },
+        {
+          "layer": "Randomized mathematical program",
+          "description": "DrawTree encodes finite uniform draws, with expectation semantics. canonicalMetropolis is a lazy exchange walk. Reindexed permits a permutation of each finite draw index, preserving expectations while allowing canonical executable enumerations to differ from abstract Fintype enumerations. A finite bank realizes bounded rejection sampling; DrawTree.run_lower bounds the loss from rejected draws.",
+          "evidence": [
+            "cb.tree",
+            "cb.tree_run",
+            "cb.tree_lower",
+            "cb.reindex",
+            "cb.reindex_expectation",
+            "cb.walk",
+            "cb.algorithm_tree",
+            "cb.canonical_correct"
+          ]
+        },
+        {
+          "layer": "Source-language semantics",
+          "description": "DataType and Expression give a typed deterministic language over booleans, naturals, bit words, lists and products. Effect is an expression on an explicit random-bit bank. Realizes relates all bank executions to bankEval pointwise; RealizesLaw allows draw-tree reindexing. stepCode_source identifies actual code with the lazy rational Metropolis walk, and algorithmCode_source composes histories, phases and witness guard.",
+          "evidence": [
+            "cb.types",
+            "cb.values",
+            "cb.encode",
+            "cb.expression",
+            "cb.effect",
+            "cb.bank_eval",
+            "cb.realizes",
+            "cb.realizes_law",
+            "cb.proposal_source",
+            "cb.walk_source",
+            "cb.algorithm_source"
+          ]
+        },
+        {
+          "layer": "Verified cost-bearing compilation",
+          "description": "compile structurally lowers typed expressions to Block 1, whose code uses push, pop, coin, query and halt. evaluate returns both value and a charge. compile_correct proves bounded machine realization of the encoded result by induction on expressions, with an explicit fold-loop simulation. Safe bounds intermediate encoding widths; compile_majorant converts that certificate into a size-polynomial machine bound.",
+          "evidence": [
+            "cb.instructions",
+            "cb.step",
+            "cb.bounded",
+            "cb.compile",
+            "cb.evaluate",
+            "cb.compile_correct",
+            "cb.safe",
+            "cb.compile_bound",
+            "cb.compile_majorant",
+            "cb.uniform_safe"
+          ]
+        },
+        {
+          "layer": "Physical execution and exact probability transfer",
+          "description": "OutputCertificate relates postamble output v to the canonical bounded experiment by equality of all real-valued test-function averages. frozen_machine supplies a deterministic start offset and shows every tape execution outputs v applied to physicalWord. physicalWord reads reversed, stride-three positions caused by coin and stack instructions. Injectivity of those positions transfers uniformity; physical_accuracy specializes the test function to an accuracy indicator and converts its real average to the exact rational cardinality endpoint.",
+          "evidence": [
+            "cb.program",
+            "cb.output_certificate",
+            "cb.certificate_exists",
+            "cb.machine_transfer",
+            "cb.physical",
+            "cb.physical_injective",
+            "cb.physical_law",
+            "cb.accuracy_transfer",
+            "cb.target"
+          ]
+        }
+      ],
+      "concrete_inference": "The compiler does not itself need a probabilistic correctness theorem: coins are gathered into an explicit finite bank, and the remaining preamble/postamble compilation is deterministic. Distributional correctness is then restored through the output certificate and tape-position embedding.",
+      "why_not_routine": "The finite machine theorem quantifies universally over physical tapes and tracks two resource counters, while its success claim is an exact finite-tape count. This goes beyond wrapping an idealized randomized mathematical function in an existence theorem.",
+      "limits": [
+        "No practical running-time claim: coefficients and degree majorants are large, and no benchmark or executable was run.",
+        "No full audit of all spectral/variance and annealing bounds in the earlier 11k lines. The selected mathematical representation and final semantic-compilation branch were inspected in detail.",
+        "Verified compilation and equality-of-distribution reasoning are established methods; novelty should be stated for this concrete corpus architecture, not for the generic methods."
+      ]
+    },
+    {
+      "id": "switch-chain-low-dimensional-error",
+      "priority": "second",
+      "title": "A four-vertex graph cell becomes a sixteen-matrix table, then a correlated-error projection bound",
+      "endpoint": "OAI.Problem315.switch_chain_main",
+      "file": "lean/OAI/Probability/SwitchChain/Main.lean",
+      "git_blob_sha1": "f57bfdeb78b3af3dec46c90aeaa145b85d044140",
+      "hypotheses": [
+        "n >= 4, graphical degree sequence d, and d(v) <= n-1.",
+        "The local cell argument works for an injection of four vertices into the graph vertex type and functions on the finite fixed-degree graph state space."
+      ],
+      "result": "At the endpoint: mixing time at total-variation threshold 1/4 bounded by 2*n^8; singleton state-space behavior; and spectral gap at least 1/(24*n^2*choose(n,4)) when more than one state exists. This study follows the disjoint-pair interaction branch that is one input to that endpoint.",
+      "architecture_claim": "An explicit graph reconstruction and degree-feasibility equivalence reduces correlated pair resampling to a tiny contingency-table law. The only nonconstant conditional dependence is carried by one equality flag when two cross edges are present. A graph-specific projection onto this error direction interfaces with an abstract finite-dimensional projection interaction inequality.",
+      "chain": [
+        {
+          "layer": "Graph state and coarse cell",
+          "description": "GraphState is the subtype of SimpleGraph(Fin n) realizing d. SameCell fixes the outer graph, the internal edges of each distinguished pair, and for each outside vertex its total incidence into each pair, leaving individual boundary choices and the four cross edges variable. Equality of cell coordinates determines the whole graph.",
+          "evidence": [
+            "sw.graphs",
+            "sw.proposals",
+            "sw.cell",
+            "sw.cell_injective"
+          ]
+        },
+        {
+          "layer": "Degree constraints become margin constraints",
+          "description": "coordinate_degrees_iff proves that the four degree equations reduce to preservation of cross-edge total plus two equations: row0(M)+|U| equals the original left degree contribution and col0(M)+|W| equals the original right contribution. JointData is dependent left/right boundary data plus a Boolean-matrix fiber satisfying these margins. Explicit equivalences preserve all states and multiplicities.",
+          "evidence": [
+            "sw.degree_feasible",
+            "sw.margin",
+            "sw.joint",
+            "sw.coordinate_equiv",
+            "sw.count_transfer",
+            "sw.state_equiv"
+          ]
+        },
+        {
+          "layer": "Sixteen finite matrices",
+          "description": "CrossBlock.Matrix is Fin 2 -> Fin 2 -> Bool. count(s,r,c) counts matrices with total s and specified first row/column margins. count_two is decided by finite computation; after casting, count(2,r,c)=2-1[r!=1]-1[c!=1]. For totals other than 2 the count factors as a product of independent margin weights.",
+          "evidence": [
+            "sw.cross",
+            "sw.cross_count",
+            "sw.count_two",
+            "sw.count_real",
+            "sw.product"
+          ]
+        },
+        {
+          "layer": "Low-dimensional conditional image",
+          "description": "conditionalRight_two_span identifies conditional expectation with A+B*offCenter(r); expectation_first_second_affine makes B zero unless total s=2. expectation_ker_pullback transports finite-fiber averages through the actual graph-cell equivalence. The margin flag equals the graph observable testing whether a distinguished vertex is adjacent to both or neither of the opposite pair.",
+          "evidence": [
+            "sw.cross_cell",
+            "sw.conditional_span",
+            "sw.affine",
+            "sw.pullback",
+            "sw.restriction",
+            "sw.graph_affine",
+            "sw.flag_correspondence",
+            "sw.observable"
+          ]
+        },
+        {
+          "layer": "Projection interaction and assembly",
+          "description": "AffineFlagImage expresses conditional images as fiber-constant base plus fiber-constant weight times the graph flag, with weight supported at cross-total two. Its fluctuation lies in equalitySpace, so the equality-space orthogonal projection fixes the correlated error. An abstract projection-range inequality then bounds the switch-gain norm by fluctuations plus two error-projection norms. Projection budgets allow summing over disjoint pairs; the resulting nonnegative disjoint cross term feeds the generator-square spectral-gap theorem and the main mixing endpoint.",
+          "evidence": [
+            "sw.affine_image",
+            "sw.equality_space",
+            "sw.error_projection",
+            "sw.interaction_general",
+            "sw.interaction",
+            "sw.budget",
+            "sw.assembly",
+            "sw.spectral",
+            "sw.target"
+          ]
+        }
+      ],
+      "concrete_inference": "The architecture isolates a one-dimensional error direction per fiber rather than asserting that the two pair-resampling projections commute or that every disjoint-pair inner product is nonnegative individually. The global theorem instead sums a compensated interaction inequality and pays for error projections with a separate budget.",
+      "why_not_routine": "The unusual mathematical object is the equality-flag correlated-error space obtained from graph-cell reconstruction and the exceptional total-two table. Finite decide and subsequent arithmetic tactics merely discharge small local obligations.",
+      "limits": [
+        "The triple-generator and local pair-to-switch comparison branches are inputs to the endpoint but were not audited deeply here.",
+        "The graph-space equalitySpace is fiberwise rank one; it need not be globally one dimensional.",
+        "No build, kernel axiom audit, or independent validation of the claimed global mixing bound was run.",
+        "Do not claim inventing finite reflection or representation transport; these are standard proof engineering methods."
+      ]
+    }
+  ],
+  "discarded_candidates": [
+    {
+      "candidate": "Characteristic-two Kaplansky endpoint",
+      "status": "not selected as a deep case in this research contribution",
+      "reason": "Downloaded endpoint and presentation/torsion/output wrappers. They assemble named facts into explicit witnesses but do not by themselves expose the nontrivial matrix/certificate-to-group-algebra mechanism. A deep claim would require following ChosenCriterion and its construction dependencies; this contribution does not pretend the inspected wrappers provide that evidence.",
+      "files": [
+        "lean/OAI/RingTheory/DirectFiniteness/FinitelyPresented.lean",
+        "lean/OAI/RingTheory/DirectFiniteness/PrescribedOutputs.lean",
+        "lean/OAI/RingTheory/DirectFiniteness/OddTorsion.lean"
+      ]
+    },
+    {
+      "candidate": "Generic simp, omega, nlinarith, ext, choose, and endpoint assembly",
+      "status": "discarded as novelty",
+      "reason": "Routine tactics and abstraction wrappers are only explanatory support. They are not the basis for the two selected architecture claims."
+    }
+  ],
+  "baseline_guidance": [
+    "Root agent is collecting primary baseline literature. Compare CommonBases with probabilistic semantic preservation and verified compilation, e.g. CertiCrypt/EasyCrypt and CakeML, while reserving novelty claims for the concrete oracle/tape/cost interfaces.",
+    "Compare CrossMatrix finite deciding and graph equivalence transport with established small-scale reflection and computation in proof assistants. The table-to-error-subspace mathematical representation is the case-specific content."
+  ]
+}

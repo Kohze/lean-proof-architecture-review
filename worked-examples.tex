@@ -1,0 +1,133 @@
+\section{Worked examples: why the stronger interface matters}
+\label{sec:worked}
+
+The following elementary arguments isolate mechanisms used in the case
+studies. Their purpose is to make the preservation requirements testable
+and understandable outside the full developments.
+
+\subsection{Injective tape positions preserve a uniform experiment}
+
+\begin{proposition}\label{prop:tape}
+Let $p:\{0,\ldots,m-1\}\to\{0,\ldots,B-1\}$ be injective. If
+$\beta$ is uniform on $\{0,1\}^B$, then
+$(\beta(p(0)),\ldots,\beta(p(m-1)))$ is uniform on $\{0,1\}^m$.
+Every word has exactly $2^{B-m}$ preimages.
+\end{proposition}
+\begin{proof}
+Prescribing the $m$ selected bits leaves precisely $B-m$ coordinates
+free. Each assignment to these remaining coordinates determines one
+preimage. Thus every word has the same number of preimages, and its
+probability is $2^{B-m}/2^B=2^{-m}$.
+\end{proof}
+
+For the common-base machine, the relevant map is
+$p(i)=s+3(m-1-i)+1$. Reversal and multiplication by three preserve
+distinctness. For $i<m$, its value is less than $B$ whenever
+$s+3m+1\leq B$. The latter bound is stronger than needed for the selected
+positions because it also accounts for the surrounding execution.
+The review's Lean file proves these arithmetic facts for arbitrary natural
+$s,m,B$, including the empty-word case. Its index definition is
+\begin{lstlisting}
+def physicalIndex (start m : Nat) (i : Fin m) : Nat :=
+  start + 3 * (m - 1 - i.val) + 1
+\end{lstlisting}
+The proof uses the bounds stored in \src{Fin m} to justify subtraction
+arithmetic. This matters: natural-number subtraction is truncated, so
+injectivity would fail on unrestricted natural indices. A range type is
+part of the mathematical interface, not a cosmetic annotation.
+
+For comparison, if $p(0)=p(1)$, the words $01$ and $10$ have no
+preimages. Reading fair individual bits does not by itself produce an
+independent word. Proposition~\ref{prop:tape} explains why the source proves
+injectivity of the physical positions before transporting the success
+probability. The Python companion exhaustively checks 15 small choices
+of $(s,m,B)$ against the exact fiber count.
+
+\subsection{Observables determine a finite law; its mean does not}
+
+\begin{proposition}\label{prop:law}
+Let $\mu,\nu$ be probability measures on a finite set $X$. Then
+$\E_\mu\varphi=\E_\nu\varphi$ for every $\varphi:X\to\R$ if and only
+if $\mu=\nu$.
+\end{proposition}
+\begin{proof}
+For each $x\in X$, take $\varphi=\mathbf1_{\{x\}}$ to obtain
+$\mu(\{x\})=\nu(\{x\})$. Summing singleton masses gives equality on every
+subset. The converse follows from the definition of finite expectation.
+\end{proof}
+
+In a uniform finite experiment, these expectations are normalized sums
+with integer multiplicities. The Lean companion proves the corresponding
+count statement: equality of weighted sums against every natural-valued
+observable determines each multiplicity. It then checks the measures on
+$X=\{0,1,2\}$ with multiplicities
+\[
+  (1,1,1)\quad\text{and}\quad(0,3,0).
+\]
+Both have total mass three and mean one after normalization. Their
+probabilities of $\{0\}$ are $1/3$ and zero. Thus preservation of the
+expected numerical output would be insufficient for an accuracy event.
+The universal observable certificate in Section~\ref{sec:common-bases}
+supports exactly the stronger conclusion required: substitute the
+indicator of the desired relative-error interval.
+
+This interpretation also explains why the source allows reindexing of
+draw outcomes. A permutation can change the result returned for a
+particular numbered bank without changing its distribution under uniform
+sampling. Law equality is the appropriate interface between those
+experiments; the deterministic compiler layer separately preserves the
+execution result for a supplied bank.
+
+\subsection{A cut-sensitive limit that is not pointwise}
+
+Consider the commutative $C^*$-algebra $c_0$ of complex sequences tending
+to zero, with pointwise operations and the supremum norm. On its positive
+cone define
+\[
+  \tau(a)=\sum_{j=1}^{\infty}a_j\in[0,\infty].
+\]
+The trace is additive, positively homogeneous, and tracial. It is lower
+semicontinuous because it is the supremum of its continuous finite partial
+sums. Finite-support sequences belong to $\mathcal N_\tau$, so the closed
+finite ideal $I_\tau$ in~\eqref{eq:finite-ideal} is all of $c_0$.
+
+For every positive $a\in c_0$ and $\varepsilon>0$, the sequence
+$(a-\varepsilon)_+$ has finite support. Consequently
+\[
+  \lim_{r\downarrow0}r\tau((a-\varepsilon)_+)=0,
+  \qquad 0\leq\liminf_{r\downarrow0}r\tau(a).
+\]
+These are precisely the two inequalities in
+\eqref{eq:trace-canonical-convergence} with limit trace
+$\iota_{c_0}=0$. But for $a_j=1/j$ one has $\tau(a)=\infty$, hence
+$r\tau(a)=\infty$ for every $r>0$. The pointwise limit at this element
+is infinity. The finite ideal and canonical limit are nevertheless
+unambiguous.
+
+This classical example makes the reason for the positive cuts concrete
+\citep{ElliottRobertSantiago2011}. Closure admits elements with infinite
+trace, while every fixed positive cut is controlled by a finite value.
+Replacing the source's convergence predicate by pointwise convergence
+would therefore alter the theorem.
+
+\subsection{Local equality and named maps carry extra information}
+\label{sec:local-examples}
+
+Two further short examples clarify the other cases. The real functions
+$f(x)=0$ and $g(x)=x$ agree at zero but have different derivatives there.
+Equality on a neighborhood of zero does imply equality of their
+derivatives at zero. The Mahler cutoff argument uses eventual
+equality near the boundary to transfer the ambient derivative, whereas agreement on tangent arguments
+suffices for the later comparison of integration densities. Mathlib's
+differential-form interface explicitly uses the derivative of a
+form-valued field \citep{MathlibForms}.
+
+Likewise, two frames of a one-dimensional vector space can induce the
+same flag but different named coordinate maps. If $e(u)=uv$ and
+$f(u)=2uv$ over a field of characteristic zero, both give the flag
+$0\subset\operatorname{span}(v)$, while
+$e^{-1}(v)=1$ and $f^{-1}(v)=1/2$. The all-seams predicate must therefore
+retain the named graded maps when those maps occur in the seam equation.
+These examples explain the extra information consumed by the source's
+ambient-derivative congruence and named-coordinate equations, even when
+the coarser objects agree.

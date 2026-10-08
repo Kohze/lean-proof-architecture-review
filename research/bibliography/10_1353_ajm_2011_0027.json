@@ -1,0 +1,149 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        6,
+        18
+      ]
+    ],
+    "date-time": "2026-06-18T20:56:55Z",
+    "timestamp": 1781816215062,
+    "version": "3.54.5"
+  },
+  "reference-count": 0,
+  "publisher": "Project MUSE",
+  "issue": "4",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "published-print": {
+    "date-parts": [
+      [
+        2011,
+        8
+      ]
+    ]
+  },
+  "abstract": "<jats:p xml:lang=\"en\"> The cone of lower semicontinuous traces is studied with a view to its use as an invariant. Its properties include compactness, Hausdorffness, and continuity with respect to inductive limits. A suitable notion of dual cone is given. The cone of lower semicontinuous 2-quasitraces on a (non-exact) C*-algebra is considered as well. These results are applied to the study of the Cuntz semigroup. It is shown that if a C*-algebra absorbs the Jiang-Su algebra, then the subsemigroup of its Cuntz semigroup consisting of the purely non-compact elements is isomorphic to the dual cone of the cone of lower semicontinuous 2-quasitraces. This yields a computation of the Cuntz semigroup for the following two classes of C*-algebras: C*-algebras that absorb the Jiang-Su algebra and have no non-zero simple subquotients, and simple C*-algebras that absorb the Jiang-Su algebra.</jats:p>",
+  "DOI": "10.1353/ajm.2011.0027",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2012,
+        2,
+        22
+      ]
+    ],
+    "date-time": "2012-02-22T22:58:14Z",
+    "timestamp": 1329951494000
+  },
+  "page": "969-1005",
+  "source": "Crossref",
+  "is-referenced-by-count": 76,
+  "title": [
+    "The cone of lower semicontinuous traces on a C*-algebra"
+  ],
+  "prefix": "10.1353",
+  "volume": "133",
+  "author": [
+    {
+      "given": "George A.",
+      "family": "Elliott",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Leonel",
+      "family": "Robert",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Luis",
+      "family": "Santiago",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "147",
+  "container-title": [
+    "American Journal of Mathematics"
+  ],
+  "original-title": [],
+  "language": "en",
+  "deposited": {
+    "date-parts": [
+      [
+        2024,
+        1,
+        21
+      ]
+    ],
+    "date-time": "2024-01-21T17:39:23Z",
+    "timestamp": 1705858763000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://muse.jhu.edu/article/446368"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2011,
+        8
+      ]
+    ]
+  },
+  "references-count": 0,
+  "journal-issue": {
+    "issue": "4",
+    "published-print": {
+      "date-parts": [
+        [
+          2011,
+          8
+        ]
+      ]
+    }
+  },
+  "URL": "http://dx.doi.org/10.1353/ajm.2011.0027",
+  "relation": {},
+  "ISSN": [
+    "1080-6377"
+  ],
+  "subject": [],
+  "container-title-short": "ajm",
+  "published": {
+    "date-parts": [
+      [
+        2011,
+        8
+      ]
+    ]
+  }
+}

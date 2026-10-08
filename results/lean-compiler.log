@@ -1,0 +1,4 @@
+'InterfaceExamples.physicalIndex_injective' depends on axioms: [propext, Quot.sound]
+'InterfaceExamples.physicalIndex_lt' depends on axioms: [propext, Quot.sound]
+'InterfaceExamples.moment_indicator' depends on axioms: [propext, Quot.sound]
+'InterfaceExamples.all_observables_determine_counts' depends on axioms: [propext, Quot.sound]

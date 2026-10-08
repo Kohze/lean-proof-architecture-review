@@ -1,0 +1,123 @@
+{
+  "reviewer": "lean_discrete_cases",
+  "review_date": "2026-10-08",
+  "previous_review": "audit/full-manuscript-review.json",
+  "scope": "Verification of FULL-01 through FULL-08 against the revised manuscript, README.txt, companion exact-enumeration code and saved results. No manuscript source edits; no new upstream theorem build or PDF visual review.",
+  "overall_result": "All eight original findings have been addressed. No remaining mathematical or wording error was identified in the revised passages. The additions improve the operational cross-case comparison and make the graph compensation more concrete. The README reproduction command filenames all exist. A separately promised review-resolution record was still being finalized during the reader check and is listed under packaging checks rather than as an unresolved manuscript finding.",
+  "resolved_findings": [
+    {
+      "id": "FULL-01",
+      "status": "resolved",
+      "evidence": "README.txt now supplies the package entry point, six reproduction commands, Lean 4.34.1, Python and TeX requirements, optional rendering requirements, source/evidence locations, the OpenAI corpus pin and references to separate Comparator/Mathlib pin records. Every reproduction command names an existing script. The README preserves the distinction between static source inspection and original-example execution."
+    },
+    {
+      "id": "FULL-02",
+      "status": "resolved",
+      "evidence": "Discussion now says that pointwise scalar-zero limits need not equal the weights of closed finite ideals. This states exactly the failure demonstrated by c0 without denying recovery after an additional closure operation."
+    },
+    {
+      "id": "FULL-03",
+      "status": "resolved",
+      "evidence": "Discussion now refers to the ambient derivative congruence used by this Stokes argument. The local worked example says the cutoff argument uses eventual equality to transfer the ambient derivative, and its final sentence identifies the particular downstream derivative and coordinate equations. It no longer presents the source's congruence route as a universal necessity for every boundary proof."
+    },
+    {
+      "id": "FULL-04",
+      "status": "resolved",
+      "evidence": "Discussion now requires relating table multiplicities to graph-fiber multiplicities, with an explicit bijection identified as the mechanism used here. It no longer treats a bijection as the only possible method."
+    },
+    {
+      "id": "FULL-05",
+      "status": "resolved",
+      "evidence": "Abstract now describes the compiled example as recovery of finite multiplicities from observables, matching the actual Lean theorem. The worked prose still correctly explains the corresponding normalized finite-law statement."
+    },
+    {
+      "id": "FULL-06",
+      "status": "resolved",
+      "evidence": "The graph-switch case includes the uniform six-matrix calculation, means 1/3 and product mean zero, hence covariance -1/9. It explicitly distinguishes this experiment from graph cells carrying boundary multiplicities. Companion check_examples.py uses exact Fraction arithmetic and the saved worked-examples.json reports the same values. Independent enumeration during this check agreed."
+    },
+    {
+      "id": "FULL-07",
+      "status": "resolved",
+      "evidence": "Discussion now compares an event probability factoring through the output law, a named-coordinate equation consuming the map itself, and ambient differentiation consuming the field near the point. The following sentence makes the downstream operation the test for a sufficient correspondence. This provides the requested operational contrast without asserting an exhaustive taxonomy."
+    },
+    {
+      "id": "FULL-08",
+      "status": "resolved",
+      "evidence": "The all-seams case now points to the one-dimensional frame example in Section sec:local-examples. That label occurs once and its target is the appropriate worked subsection."
+    }
+  ],
+  "remaining_manuscript_errors": [],
+  "remaining_required_manuscript_corrections": [],
+  "packaging_checks": {
+    "README.txt_exists": true,
+    "reproduction_command_files": {
+      "reproduce/verify_sources.py": true,
+      "reproduce/verify_examples.py": true,
+      "reproduce/assemble_references.py": true,
+      "reproduce/build.py": true,
+      "reproduce/verify_manuscript.py": true,
+      "reproduce/package_review.py": true
+    },
+    "all_reproduction_command_files_exist": true,
+    "other_README_artifacts": {
+      "audit/review-resolution.json": true
+    },
+    "source_pin_records": {
+      "OpenAI": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "Comparator": "ca04cfc72b550331658ec314bf47685281bfd4bf",
+      "Mathlib": "d13f23b723b8a846827a245b89c10fc7d3f11612"
+    }
+  },
+  "independent_covariance_check": {
+    "method": "Enumerated all sixteen 2-by-2 Boolean matrices, restricted to total two, and computed exact rational expectations with Python fractions.Fraction without modifying companion results.",
+    "matrices": 6,
+    "left_mean": "1/3",
+    "right_mean": "1/3",
+    "joint_mean": "0",
+    "covariance": "-1/9",
+    "matches_saved_record": true
+  },
+  "updated_ratings_out_of_10": {
+    "comparative_contribution": {
+      "previous": 7,
+      "updated": 8,
+      "reason": "The explicit downstream-operation comparison makes the general framework more useful than a descriptive grouping of cases."
+    },
+    "flow_and_accessibility": {
+      "previous": 7,
+      "updated": 8,
+      "reason": "The early frame-example reference and short negative-covariance calculation reduce conceptual jumps in two of the denser case accounts."
+    },
+    "natural_language_and_precision": {
+      "previous": 8,
+      "updated": 9,
+      "reason": "The three overgeneralized failure statements have been narrowed to the supported mechanisms, and the abstract now exactly describes the executable count theorem."
+    },
+    "reproducibility_as_currently_packaged": {
+      "previous": 8,
+      "updated": 9,
+      "reason": "The promised package entry point now exists and all reproduction command filenames resolve. Dependencies, source pins and the executable/static evidence distinction are documented. This rating does not imply that the reader check reran the complete package build."
+    }
+  },
+  "unchanged_rating_categories": [
+    "reader_value",
+    "novelty_honesty",
+    "mathematical_correctness_of_worked_examples",
+    "evidence_and_conclusion_alignment"
+  ],
+  "reviewed_file_sha256": {
+    "abstract.tex": "acca137f54da4780086cb4f10c3017ee9d080475525ab854bf5ca43486eedb47",
+    "cases-analysis.tex": "d1a9afb73e521c4fe6e9ea8042509f8b80786b5bc60f4b9d9ac5231114309c7c",
+    "cases-architecture.tex": "4ce1fc4493c6b29a5a2216e9a51846cf3f5350b41731d44b224dd3b08e5c8840",
+    "cases-discrete.tex": "6a5122f133626a9a7950782c2e15d0b81cb6e406d5e6f86db1226893ff436976",
+    "cases.tex": "5c3c6e59a9405d9fcac2712fee483582f0cbf1a79a05b6c11bf5aa4af95e8657",
+    "discussion.tex": "614516b7a2af3da0cf59e9e3b501a4ff84343065c73842bb08543bfbe7fe8287",
+    "introduction.tex": "6d8d741c4980fa718fc12fe4f394e2e29f04516c074cf636159551b44cca0dae",
+    "main.tex": "3ca141eb826dbfa01d6c119d2eb52143970de5a759566f63bf9a94ea30bb7b40",
+    "method.tex": "4bc90c6d949625c387289eafb20b6aa084feb7b2468ec40d2bcfa63c05bd8f11",
+    "worked-examples.tex": "ce4b273a7a13840bc5b1eac0d2d60f9a5ccd758ecda7ea8dc13b9d15f9f2cb26",
+    "README.txt": "c5a08e8a88cfc8cf926b19a67d7e83e856b1a5bac0e279cb6ca33c58de89d9c9",
+    "reproduce/check_examples.py": "86415c5bc467092f0a999096f7e0334f6392cb21a3836c35d6eb13d970d7f00c",
+    "results/worked-examples.json": "613bd984f7830dad27fadb0e301f5915c9b24713233b54db986da75bb9fe5439"
+  }
+}

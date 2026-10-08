@@ -1,0 +1,391 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        3,
+        3
+      ]
+    ],
+    "date-time": "2026-03-03T04:10:45Z",
+    "timestamp": 1772511045749,
+    "version": "3.50.1"
+  },
+  "publisher-location": "New York, NY, USA",
+  "reference-count": 26,
+  "publisher": "ACM",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2020,
+            1,
+            20
+          ]
+        ],
+        "date-time": "2020-01-20T00:00:00Z",
+        "timestamp": 1579478400000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "https://www.acm.org/publications/policies/copyright_policy#Background"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/501100001659",
+      "name": "Deutsche Forschungsgemeinschaft",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "GK1821"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "GK1821"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/501100001659",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "dl.acm.org"
+    ],
+    "crossmark-restriction": true
+  },
+  "published-print": {
+    "date-parts": [
+      [
+        2020,
+        1,
+        20
+      ]
+    ]
+  },
+  "DOI": "10.1145/3372885.3373830",
+  "type": "proceedings-article",
+  "created": {
+    "date-parts": [
+      [
+        2020,
+        1,
+        22
+      ]
+    ],
+    "date-time": "2020-01-22T13:09:33Z",
+    "timestamp": 1579698573000
+  },
+  "page": "299-312",
+  "update-policy": "https://doi.org/10.1145/crossmark-policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 26,
+  "title": [
+    "Formalising perfectoid spaces"
+  ],
+  "prefix": "10.1145",
+  "author": [
+    {
+      "given": "Kevin",
+      "family": "Buzzard",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Imperial College London, UK"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Johan",
+      "family": "Commelin",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of Freiburg, Germany"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Patrick",
+      "family": "Massot",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of Paris-Sud, France / CNRS, France"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "320",
+  "published-online": {
+    "date-parts": [
+      [
+        2020,
+        1,
+        22
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "e_1_3_2_1_1_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.jsc.2004.12.002"
+    },
+    {
+      "key": "e_1_3_2_1_2_1",
+      "volume-title": "Coquelicot: A User-Friendly Library of Real Analysis for Coq. Mathematics in Computer Science 9, 1 (01",
+      "author": "Boldo Sylvie",
+      "year": "2015",
+      "unstructured": "Sylvie Boldo , Catherine Lelay , and Guillaume Melquiond . 2015 . Coquelicot: A User-Friendly Library of Real Analysis for Coq. Mathematics in Computer Science 9, 1 (01 Mar 2015), 41–62. Sylvie Boldo, Catherine Lelay, and Guillaume Melquiond. 2015. Coquelicot: A User-Friendly Library of Real Analysis for Coq. Mathematics in Computer Science 9, 1 (01 Mar 2015), 41–62."
+    },
+    {
+      "key": "e_1_3_2_1_3_1",
+      "volume-title": "Paris",
+      "author": "Bourbaki Nicolas",
+      "unstructured": "Nicolas Bourbaki . 1966. Elements of mathematics. General topology. Part 1. Hermann , Paris ; Addison-Wesley Publishing Co. , Reading, Mass .-London-Don Mills, Ont. vii+437 pages. Nicolas Bourbaki. 1966. Elements of mathematics. General topology. Part 1. Hermann, Paris; Addison-Wesley Publishing Co., Reading, Mass.-London-Don Mills, Ont. vii+437 pages."
+    },
+    {
+      "key": "e_1_3_2_1_4_1",
+      "volume-title": "Commutative algebra",
+      "author": "Bourbaki Nicolas",
+      "year": "1989",
+      "unstructured": "Nicolas Bourbaki . 1998. Commutative algebra . Chapters 1–7. SpringerVerlag , Berlin . xxiv+625 pages. Translated from the French, Reprint of the 1989 English translation. Nicolas Bourbaki. 1998. Commutative algebra. Chapters 1–7. SpringerVerlag, Berlin. xxiv+625 pages. Translated from the French, Reprint of the 1989 English translation."
+    },
+    {
+      "key": "e_1_3_2_1_5_1",
+      "volume-title": "Chris Hughes, and Kenny Lau.",
+      "author": "Buzzard Kevin",
+      "year": "2019",
+      "unstructured": "Kevin Buzzard , Ramon Fernández Mir , Chris Hughes, and Kenny Lau. 2019 . Schemes in Lean . https://github.com/ramonfmir/lean-scheme Kevin Buzzard, Ramon Fernández Mir, Chris Hughes, and Kenny Lau. 2019. Schemes in Lean. https://github.com/ramonfmir/lean-scheme"
+    },
+    {
+      "key": "e_1_3_2_1_6_1",
+      "volume-title": "International Conference on Computer Logic, Tallinn, USSR",
+      "author": "Coquand Thierry",
+      "year": "1988",
+      "unstructured": "Thierry Coquand and Christine Paulin . 1988 . Inductively defined types. In COLOG-88 , International Conference on Computer Logic, Tallinn, USSR , December 1988, Proceedings. 50–66. Thierry Coquand and Christine Paulin. 1988. Inductively defined types. In COLOG-88, International Conference on Computer Logic, Tallinn, USSR, December 1988, Proceedings. 50–66."
+    },
+    {
+      "key": "e_1_3_2_1_7_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.4230/LIPIcs.ITP.2019.15"
+    },
+    {
+      "key": "e_1_3_2_1_8_1",
+      "volume-title": "Berlin",
+      "author": "de Moura Leonardo Mendonça",
+      "year": "2015",
+      "unstructured": "Leonardo Mendonça de Moura , Soonho Kong , Jeremy Avigad , Floris van Doorn , and Jakob von Raumer . 2015 . The Lean Theorem Prover (System Description). In Automated Deduction - CADE-25 - 25th International Conference on Automated Deduction , Berlin , Germany, August 1-7, 2015, Proceedings. 378–388. Leonardo Mendonça de Moura, Soonho Kong, Jeremy Avigad, Floris van Doorn, and Jakob von Raumer. 2015. The Lean Theorem Prover (System Description). In Automated Deduction - CADE-25 - 25th International Conference on Automated Deduction, Berlin, Germany, August 1-7, 2015, Proceedings. 378–388."
+    },
+    {
+      "key": "e_1_3_2_1_9_1",
+      "volume-title": "22nd International Conference, TPHOLs 2009, Munich, Germany, August 17-20, 2009. Proceedings. 327–342",
+      "author": "Garillot François",
+      "year": "2009",
+      "unstructured": "François Garillot , Georges Gonthier , Assia Mahboubi , and Laurence Rideau . 2009 . Packaging Mathematical Structures. In Theorem Proving in Higher Order Logics , 22nd International Conference, TPHOLs 2009, Munich, Germany, August 17-20, 2009. Proceedings. 327–342 . François Garillot, Georges Gonthier, Assia Mahboubi, and Laurence Rideau. 2009. Packaging Mathematical Structures. In Theorem Proving in Higher Order Logics, 22nd International Conference, TPHOLs 2009, Munich, Germany, August 17-20, 2009. Proceedings. 327–342."
+    },
+    {
+      "key": "e_1_3_2_1_10_1",
+      "volume-title": "8th Asian Symposium, ASCM 2007",
+      "author": "Gonthier Georges",
+      "year": "2007",
+      "unstructured": "Georges Gonthier . 2007 . The Four Colour Theorem: Engineering of a Formal Proof. In Computer Mathematics , 8th Asian Symposium, ASCM 2007 , Singapore , December 15-17, 2007. Revised and Invited Papers. 333. Georges Gonthier. 2007. The Four Colour Theorem: Engineering of a Formal Proof. In Computer Mathematics, 8th Asian Symposium, ASCM 2007, Singapore, December 15-17, 2007. Revised and Invited Papers. 333."
+    },
+    {
+      "key": "e_1_3_2_1_11_1",
+      "volume-title": "ITP 2013, Rennes, France, July 22-26, 2013. Proceedings. 163–179",
+      "author": "Gonthier Georges",
+      "year": "2013",
+      "unstructured": "Georges Gonthier , Andrea Asperti , Jeremy Avigad , Yves Bertot , Cyril Cohen , François Garillot , Stéphane Le Roux , Assia Mahboubi , Russell O’Connor , Sidi Ould Biha , Ioana Pasca , Laurence Rideau , Alexey Solovyev , Enrico Tassi , and Laurent Théry . 2013 . A Machine-Checked Proof of the Odd Order Theorem. In Interactive Theorem Proving - 4th International Conference , ITP 2013, Rennes, France, July 22-26, 2013. Proceedings. 163–179 . Georges Gonthier, Andrea Asperti, Jeremy Avigad, Yves Bertot, Cyril Cohen, François Garillot, Stéphane Le Roux, Assia Mahboubi, Russell O’Connor, Sidi Ould Biha, Ioana Pasca, Laurence Rideau, Alexey Solovyev, Enrico Tassi, and Laurent Théry. 2013. A Machine-Checked Proof of the Odd Order Theorem. In Interactive Theorem Proving - 4th International Conference, ITP 2013, Rennes, France, July 22-26, 2013. Proceedings. 163–179."
+    },
+    {
+      "key": "e_1_3_2_1_12_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.jfa.2019.02.021"
+    },
+    {
+      "key": "e_1_3_2_1_13_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1017/fmp.2017.1"
+    },
+    {
+      "key": "e_1_3_2_1_14_1",
+      "volume-title": "ITP 2013, Rennes, France, July 22-26, 2013. Proceedings. 279–294",
+      "author": "Hölzl Johannes",
+      "year": "2013",
+      "unstructured": "Johannes Hölzl , Fabian Immler , and Brian Huffman . 2013 . Type Classes and Filters for Mathematical Analysis in Isabelle/HOL. In Interactive Theorem Proving - 4th International Conference , ITP 2013, Rennes, France, July 22-26, 2013. Proceedings. 279–294 . Johannes Hölzl, Fabian Immler, and Brian Huffman. 2013. Type Classes and Filters for Mathematical Analysis in Isabelle/HOL. In Interactive Theorem Proving - 4th International Conference, ITP 2013, Rennes, France, July 22-26, 2013. Proceedings. 279–294."
+    },
+    {
+      "key": "e_1_3_2_1_15_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/BF02571668"
+    },
+    {
+      "key": "e_1_3_2_1_16_1",
+      "volume-title": "Étale cohomology of rigid analytic varieties and adic spaces. Friedr. Vieweg &amp",
+      "author": "Huber Roland",
+      "unstructured": "Roland Huber . 1996. Étale cohomology of rigid analytic varieties and adic spaces. Friedr. Vieweg &amp ; Sohn , Braunschweig . x+450 pages. Roland Huber. 1996. Étale cohomology of rigid analytic varieties and adic spaces. Friedr. Vieweg &amp; Sohn, Braunschweig. x+450 pages."
+    },
+    {
+      "key": "e_1_3_2_1_17_1",
+      "volume-title": "Topologies and uniformities",
+      "author": "James Ioan",
+      "unstructured": "Ioan James . 1999. Topologies and uniformities . Springer-Verlag London, Ltd. , London. xvi+230 pages. Revised version of Topological and uniform spaces [Springer, New York, 1987; MR0884154 (89b:54001)]. Ioan James. 1999. Topologies and uniformities. Springer-Verlag London, Ltd., London. xvi+230 pages. Revised version of Topological and uniform spaces [Springer, New York, 1987; MR0884154 (89b:54001)]."
+    },
+    {
+      "key": "e_1_3_2_1_18_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3293880.3294089"
+    },
+    {
+      "key": "e_1_3_2_1_19_1",
+      "unstructured": "Paul-Nicolas Madeleine. 2019. Arithmetic and Casting in Lean. https://lean-forward.github.io/internships/arithmetic_and_ casting_in_lean.pdf Internship report.  Paul-Nicolas Madeleine. 2019. Arithmetic and Casting in Lean. https://lean-forward.github.io/internships/arithmetic_and_ casting_in_lean.pdf Internship report."
+    },
+    {
+      "key": "e_1_3_2_1_20_1",
+      "unstructured": "Assia Mahboubi and Enrico Tassi. 2017. Mathematical Components. https://math-comp.github.io/mcb/  Assia Mahboubi and Enrico Tassi. 2017. Mathematical Components. https://math-comp.github.io/mcb/"
+    },
+    {
+      "key": "e_1_3_2_1_21_1",
+      "volume-title": "The Lean mathematical library. arXiv",
+      "author": "Community The",
+      "year": "1910",
+      "unstructured": "The mathlib Community . 2019. The Lean mathematical library. arXiv : 1910 .09336 The mathlib Community. 2019. The Lean mathematical library. arXiv: 1910.09336"
+    },
+    {
+      "key": "e_1_3_2_1_22_1",
+      "volume-title": "The work of Peter Scholze. (2019). arXiv",
+      "author": "Rapoport Michael",
+      "year": "1900",
+      "unstructured": "Michael Rapoport . 2019. The work of Peter Scholze. (2019). arXiv : 1900 .07222 Michael Rapoport. 2019. The work of Peter Scholze. (2019). arXiv: 1900.07222"
+    },
+    {
+      "key": "e_1_3_2_1_24_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s10240-012-0042-x"
+    },
+    {
+      "key": "e_1_3_2_1_25_1",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Peter Scholze. 2017. Etale cohomology of diamonds. arXiv: 1709.07343  Peter Scholze. 2017. Etale cohomology of diamonds. arXiv: 1709.07343",
+      "DOI": "10.2139/ssrn.3542189"
+    },
+    {
+      "key": "e_1_3_2_1_26_1",
+      "volume-title": "arXiv",
+      "author": "Wedhorn Torsten",
+      "year": "1910",
+      "unstructured": "Torsten Wedhorn . 2012. Adic Spaces . arXiv : 1910 .05934 Torsten Wedhorn. 2012. Adic Spaces. arXiv: 1910.05934"
+    },
+    {
+      "key": "e_1_3_2_1_27_1",
+      "volume-title": "On the work of Peter Scholze. arXiv",
+      "author": "Wedhorn Torsten",
+      "year": "1909",
+      "unstructured": "Torsten Wedhorn . 2019. On the work of Peter Scholze. arXiv : 1909 .11510 Torsten Wedhorn. 2019. On the work of Peter Scholze. arXiv: 1909.11510"
+    }
+  ],
+  "event": "POPL '20: 47th Annual ACM SIGPLAN Symposium on Principles of Programming Languages",
+  "container-title": [
+    "Proceedings of the 9th ACM SIGPLAN International Conference on Certified Programs and Proofs"
+  ],
+  "original-title": [],
+  "link": [
+    {
+      "URL": "https://dl.acm.org/doi/10.1145/3372885.3373830",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://dl.acm.org/doi/pdf/10.1145/3372885.3373830",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        6,
+        17
+      ]
+    ],
+    "date-time": "2025-06-17T23:13:22Z",
+    "timestamp": 1750202002000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://dl.acm.org/doi/10.1145/3372885.3373830"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2020,
+        1,
+        20
+      ]
+    ]
+  },
+  "references-count": 26,
+  "alternative-id": [
+    "10.1145/3372885.3373830",
+    "10.1145/3372885"
+  ],
+  "URL": "http://dx.doi.org/10.1145/3372885.3373830",
+  "relation": {},
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2020,
+        1,
+        20
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "2020-01-22",
+      "order": 2,
+      "name": "published",
+      "label": "Published",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    }
+  ]
+}

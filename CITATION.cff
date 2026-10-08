@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: >-
+  Please cite the manuscript using the preferred citation below. The MIT license
+  for original reproduction code is separate from manuscript reuse rights.
+type: software
+title: >-
+  Proof Architecture in the OpenAI Lean Library: manuscript and reproduction package
+authors:
+  - family-names: Gounder
+    given-names: Robin
+    affiliation: Vaionex Corporation
+    email: robin@gounder.com
+repository-code: https://github.com/Kohze/lean-proof-architecture-review
+url: https://github.com/Kohze/lean-proof-architecture-review
+abstract: >-
+  A source-driven comparative review of six proof interfaces in the OpenAI Lean
+  mathematics collection, with curated source evidence, internal review records,
+  and original executable examples. The upstream cases are studied statically;
+  executable checks concern the review's own examples.
+keywords:
+  - Lean
+  - formalized mathematics
+  - proof architecture
+  - semantic preservation
+  - reproducible research
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Gounder
+      given-names: Robin
+      affiliation: Vaionex Corporation
+  title: >-
+    Proof Architecture in the OpenAI Lean Library: Representation, Locality, and Semantic Transport
+  year: 2026
+  month: 10
+  notes: Manuscript, 8 October 2026. No DOI assigned.
+  url: https://github.com/Kohze/lean-proof-architecture-review

@@ -1,0 +1,667 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        6
+      ]
+    ],
+    "date-time": "2026-10-06T15:14:20Z",
+    "timestamp": 1791299660861,
+    "version": "4.1.0"
+  },
+  "reference-count": 51,
+  "publisher": "Association for Computing Machinery (ACM)",
+  "issue": "PLDI",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2025,
+            6,
+            13
+          ]
+        ],
+        "date-time": "2025-06-13T00:00:00Z",
+        "timestamp": 1749772800000
+      },
+      "content-version": "vor",
+      "delay-in-days": 3,
+      "URL": "http://www.acm.org/publications/policies/copyright_policy#Background"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/100000001",
+      "name": "National Science Foundation",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "2338317"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "2338317"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/100000001",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "dl.acm.org"
+    ],
+    "crossmark-restriction": true
+  },
+  "published-print": {
+    "date-parts": [
+      [
+        2025,
+        6,
+        10
+      ]
+    ]
+  },
+  "abstract": "<jats:p>Differential privacy (DP) has become the gold standard for privacy-preserving data analysis, but implementing it correctly has proven challenging. Prior work has focused on verifying DP at a high level, assuming either that the foundations are correct or that a perfect source of random noise is available. However, the underlying theory of differential privacy can be very complex and subtle. Flaws in basic mechanisms and random number generation have been a critical source of vulnerabilities in real-world DP systems.</jats:p>\n                  <jats:p>In this paper, we present SampCert, the first comprehensive, mechanized foundation for executable implementations of differential privacy. SampCert is written in Lean with over 12,000 lines of proof. It offers a generic and extensible notion of DP, a framework for constructing and composing DP mechanisms, and formally verified implementations of Laplace and Gaussian sampling algorithms. SampCert provides (1) a mechanized foundation for developing the next generation of differentially private algorithms, and (2) mechanically verified primitives that can be deployed in production systems. Indeed, SampCert’s verified algorithms power the DP offerings of Amazon Web Services, demonstrating its real-world impact.</jats:p>\n                  <jats:p>SampCert’s key innovations include: (1) A generic DP foundation that can be instantiated for various DP definitions (e.g., pure, concentrated, Rényi DP); (2) formally verified discrete Laplace and Gaussian sampling algorithms that avoid the pitfalls of floating-point implementations; and (3) a simple probability monad and novel proof techniques that streamline the formalization. To enable proving complex correctness properties of DP and random number generation, SampCert makes heavy use of Lean’s extensive Mathlib library, leveraging theorems in Fourier analysis, measure and probability theory, number theory, and topology.</jats:p>",
+  "DOI": "10.1145/3729294",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2025,
+        6,
+        13
+      ]
+    ],
+    "date-time": "2025-06-13T16:02:27Z",
+    "timestamp": 1749830547000
+  },
+  "page": "1094-1118",
+  "update-policy": "https://doi.org/10.1145/crossmark-policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 9,
+  "title": [
+    "Verified Foundations for Differential Privacy"
+  ],
+  "prefix": "10.1145",
+  "volume": "9",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0009-0005-3285-5032",
+      "authenticated-orcid": false,
+      "given": "Markus",
+      "family": "de Medeiros",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "New York University, New York, USA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0009-0009-0929-9057",
+      "authenticated-orcid": false,
+      "given": "Muhammad",
+      "family": "Naveed",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Amazon, Seattle, USA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-3796-042X",
+      "authenticated-orcid": false,
+      "given": "Tancrède",
+      "family": "Lepoint",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Amazon, New York, USA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-4616-5084",
+      "authenticated-orcid": false,
+      "given": "Temesghen",
+      "family": "Kahsai",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Amazon, Cupertino, USA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0009-0005-6967-3945",
+      "authenticated-orcid": false,
+      "given": "Tristan",
+      "family": "Ravitch",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Amazon, Denver, USA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0009-0001-1304-0613",
+      "authenticated-orcid": false,
+      "given": "Stefan",
+      "family": "Zetzsche",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Amazon, London, United Kingdom"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0009-0004-9398-7242",
+      "authenticated-orcid": false,
+      "given": "Anjali",
+      "family": "Joshi",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Amazon, Boston, USA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0001-5692-3347",
+      "authenticated-orcid": false,
+      "given": "Joseph",
+      "family": "Tassarotti",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "New York University, New York, USA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-4577-175X",
+      "authenticated-orcid": false,
+      "given": "Aws",
+      "family": "Albarghouthi",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Amazon, Madison, USA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-2574-7883",
+      "authenticated-orcid": false,
+      "given": "Jean-Baptiste",
+      "family": "Tristan",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Amazon, Boston, USA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "320",
+  "published-online": {
+    "date-parts": [
+      [
+        2025,
+        6,
+        13
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "e_1_3_2_2_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "John M Abowd. 2018. The US Census Bureau adopts differential privacy. In Proceedings of the 24th ACM SIGKDD international conference on knowledge discovery & data mining. 2867–2867.",
+      "DOI": "10.1145/3219819.3226070"
+    },
+    {
+      "key": "e_1_3_2_3_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/CSF51468.2021.00043"
+    },
+    {
+      "key": "e_1_3_2_4_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3158146"
+    },
+    {
+      "key": "e_1_3_2_5_2",
+      "unstructured": "Apple Inc. 2017. Differential Privacy Overview. https://images.apple.com/privacy/docs/Differential_Privacy_Overview.pdf. Accessed: [2024-10-31]."
+    },
+    {
+      "key": "e_1_3_2_6_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/11783596_6"
+    },
+    {
+      "key": "e_1_3_2_7_2",
+      "article-title": "Differential privacy on finite computers",
+      "author": "Balcer Victor",
+      "year": "2017",
+      "unstructured": "Victor Balcer and Salil Vadhan. 2017. Differential privacy on finite computers. arXiv preprint arXiv:1709.05396 (2017).",
+      "journal-title": "arXiv preprint arXiv:1709.05396"
+    },
+    {
+      "key": "e_1_3_2_8_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/2976749.2978391"
+    },
+    {
+      "key": "e_1_3_2_9_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/2933575.2934554"
+    },
+    {
+      "key": "e_1_3_2_10_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/2103656.2103670"
+    },
+    {
+      "key": "e_1_3_2_11_2",
+      "unstructured": "Skye Berghel Philip Bohannon Damien Desfontaines Charles Estes Sam Haney Luke Hartman Michael Hay Ashwin Machanavajjhala Tom Magerlein Gerome Miklau Amritha Pai William Sexton and Ruchit Shrestha. 2022. Tumult Analytics: a robust easy-to-use scalable and expressive framework for differential privacy. arXiv preprint arXiv:2212.04133 (Dec. 2022)."
+    },
+    {
+      "key": "e_1_3_2_12_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Benjamin Bichsel Timon Gehr Dana Drachsler-Cohen Petar Tsankov and Martin Vechev. 2018. DP-finder: Finding differential privacy violations by sampling and optimization. 508–524.",
+      "DOI": "10.1145/3243734.3243863"
+    },
+    {
+      "key": "e_1_3_2_13_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-662-53641-4_24"
+    },
+    {
+      "key": "e_1_3_2_14_2",
+      "first-page": "15676",
+      "article-title": "The discrete gaussian for differential privacy",
+      "volume": "33",
+      "author": "Canonne Clément L",
+      "year": "2020",
+      "unstructured": "Clément L Canonne, Gautam Kamath, and Thomas Steinke. 2020. The discrete gaussian for differential privacy. Advances in Neural Information Processing Systems 33 (2020), 15676–15688.",
+      "journal-title": "Advances in Neural Information Processing Systems"
+    },
+    {
+      "key": "e_1_3_2_15_2",
+      "unstructured": "Arthur Azevedo de Amorim Marco Gaboardi and Vivien Rindisbacher. 2023. Verified Differential Privacy for Finite Computers. Workshop on Coq for Programming Languages (2023)."
+    },
+    {
+      "key": "e_1_3_2_16_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Markus de Medeiros Muhammad Naveed Tancrède Lepoint Temesghen Kahsai Tristan Ravitch Stefan Zetzsche Anjali Joshi Joseph Tassarotti Aws Albarghouthi and Jean-Baptiste Tristan. 2024. Verified Foundations for Differential Privacy. arXiv:2412.01671 [cs.CR] https://arxiv.org/abs/2412.01671",
+      "DOI": "10.1145/3729294"
+    },
+    {
+      "key": "e_1_3_2_17_2",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Markus de Medeiros Muhammad Naveed Tancrède Lepoint Temesghen Kahsai Tristan Ravitch Stefan Zetzsche Anjali Joshi Joseph Tassarotti Aws Albarghouthi and Jean-Baptiste Tristan. 2025. Artifact for Verified Foundations for Differential Privacy. https://doi.org/10.5281/zenodo.15042645 10.5281/zenodo.15042645",
+      "DOI": "10.5281/zenodo.15042645"
+    },
+    {
+      "key": "e_1_3_2_18_2",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Markus de Medeiros Muhammad Naveed Tancrède Lepoint Temesghen Kahsai Tristan Ravitch Stefan Zetzsche Anjali Joshi Joseph Tassarotti Aws Albarghouthi and Jean-Baptiste Tristan. 2025. Artifact for Verified Foundations for Differential Privacy. https://doi.org/10.5281/zenodo.15042644 10.5281/zenodo.15042644",
+      "DOI": "10.5281/zenodo.15042644"
+    },
+    {
+      "key": "e_1_3_2_19_2",
+      "unstructured": "Damien Desfontaines. 2021. A list of real-world uses of differential privacy. https://desfontain.es/blog/real-world-differential-privacy.html Accessed: [2024-11-13]."
+    },
+    {
+      "key": "e_1_3_2_20_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Zeyu Ding Yuxin Wang Guanhong Wang Danfeng Zhang and Daniel Kifer. 2018. Detecting violations of differential privacy. In Proceedings of the 2018 ACM SIGSAC Conference on Computer and Communications Security. 475–489.",
+      "DOI": "10.1145/3243734.3243818"
+    },
+    {
+      "key": "e_1_3_2_21_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/11761679_29"
+    },
+    {
+      "key": "e_1_3_2_22_2",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Cynthia Dwork Frank McSherry Kobbi Nissim and Adam D. Smith. 2006. Calibrating Noise to Sensitivity in Private Data Analysis Vol. 3876. 265–284. https://doi.org/10.1007/11681878_14 10.1007/11681878_14",
+      "DOI": "10.1007/11681878_14"
+    },
+    {
+      "key": "e_1_3_2_23_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1561/0400000042"
+    },
+    {
+      "key": "e_1_3_2_24_2",
+      "unstructured": "Cynthia Dwork and Guy N Rothblum. 2016. Concentrated differential privacy. arXiv preprint arXiv:1603.01887 (2016)."
+    },
+    {
+      "key": "e_1_3_2_25_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-662-46669-8_4"
+    },
+    {
+      "key": "e_1_3_2_26_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-030-72019-3_8"
+    },
+    {
+      "key": "e_1_3_2_27_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s11225-010-9232-z"
+    },
+    {
+      "key": "e_1_3_2_28_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Marco Gaboardi Andreas Haeberlen Justin Hsu Arjun Narayan and Benjamin C Pierce. 2013. Linear dependent types for differential privacy. In Proceedings of the 40th annual ACM SIGPLAN-SIGACT symposium on Principles of programming languages. 357–370.",
+      "DOI": "10.1145/2429069.2429113"
+    },
+    {
+      "key": "e_1_3_2_29_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-319-41528-4_4"
+    },
+    {
+      "key": "e_1_3_2_30_2",
+      "unstructured": "Naoise Holohan Stefano Braghin Pól Mac Aonghusa and Killian Levacher. 2019. Diffprivlib: the IBM differential privacy library. ArXiv e-prints 1907.02444 [cs.CR] (July 2019)."
+    },
+    {
+      "key": "e_1_3_2_31_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.48456/tr-566"
+    },
+    {
+      "key": "e_1_3_2_32_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/SP46214.2022.9833672"
+    },
+    {
+      "key": "e_1_3_2_33_2",
+      "unstructured": "Lean. 2024. Mathlib. https://leanprover-community.github.io/mathlib-overview.html Accessed: [2024-11-13]."
+    },
+    {
+      "key": "e_1_3_2_34_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-642-17511-4_20"
+    },
+    {
+      "key": "e_1_3_2_35_2",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Min Lyu Dong Su and Ninghui Li. 2017. Understanding the Sparse Vector Technique for Differential Privacy. 10 6 (2017) 637–648. https://doi.org/10.14778/3055330.3055331 10.14778/3055330.3055331",
+      "DOI": "10.14778/3055330.3055331"
+    },
+    {
+      "key": "e_1_3_2_36_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Frank D McSherry. 2009. Privacy integrated queries: an extensible platform for privacy-preserving data analysis. In Proceedings of the 2009 ACM SIGMOD International Conference on Management of data. 19–30.",
+      "DOI": "10.1145/1559845.1559850"
+    },
+    {
+      "key": "e_1_3_2_37_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Ilya Mironov. 2012. On significance of the least significant bits for differential privacy. In Proceedings of the 2012 ACM conference on Computer and communications security. 650–661.",
+      "DOI": "10.1145/2382196.2382264"
+    },
+    {
+      "key": "e_1_3_2_38_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/CSF.2017.11"
+    },
+    {
+      "key": "e_1_3_2_39_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-030-79876-5_37"
+    },
+    {
+      "key": "e_1_3_2_40_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3360598"
+    },
+    {
+      "key": "e_1_3_2_41_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Jason Reed and Benjamin C Pierce. 2010. Distance makes the types grow stronger: a calculus for differential privacy. In Proceedings of the 15th ACM SIGPLAN international conference on Functional programming. 157–168.",
+      "DOI": "10.1145/1863543.1863568"
+    },
+    {
+      "key": "e_1_3_2_42_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/SP40001.2021.00060"
+    },
+    {
+      "key": "e_1_3_2_43_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3703595.3705875"
+    },
+    {
+      "key": "e_1_3_2_44_2",
+      "unstructured": "Latanya Sweeney. 2000. Simple Demographics Often Identify People Uniquely. (2000)."
+    },
+    {
+      "key": "e_1_3_2_45_2",
+      "unstructured": "Jun Tang Aleksandra Korolova Xiaolong Bai Xueqiang Wang and Xiaofeng Wang. 2017. Privacy loss in apple’s implementation of differential privacy on macos 10.12. arXiv preprint arXiv:1709.02753 (2017)."
+    },
+    {
+      "key": "e_1_3_2_46_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3589207"
+    },
+    {
+      "key": "e_1_3_2_47_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-642-02444-3_16"
+    },
+    {
+      "key": "e_1_3_2_48_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3372297.3417282"
+    },
+    {
+      "key": "e_1_3_2_49_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3314221.3314619"
+    },
+    {
+      "key": "e_1_3_2_50_2",
+      "unstructured": "Royce J Wilson Celia Yuxin Zhang William Lam Damien Desfontaines Daniel Simmons-Marengo and Bryant Gipson. 2019. Differentially private sql with bounded user contribution. arXiv preprint arXiv:1909.01917 (2019)."
+    },
+    {
+      "key": "e_1_3_2_51_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3009837.3009884"
+    },
+    {
+      "key": "e_1_3_2_52_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3428233"
+    }
+  ],
+  "container-title": [
+    "Proceedings of the ACM on Programming Languages"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://dl.acm.org/doi/pdf/10.1145/3729294",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "syndication"
+    },
+    {
+      "URL": "https://dl.acm.org/doi/pdf/10.1145/3729294",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2026,
+        7,
+        16
+      ]
+    ],
+    "date-time": "2026-07-16T10:04:08Z",
+    "timestamp": 1784196248000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://dl.acm.org/doi/10.1145/3729294"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2025,
+        6,
+        10
+      ]
+    ]
+  },
+  "references-count": 51,
+  "journal-issue": {
+    "issue": "PLDI",
+    "published-print": {
+      "date-parts": [
+        [
+          2025,
+          6,
+          10
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "10.1145/3729294"
+  ],
+  "URL": "http://dx.doi.org/10.1145/3729294",
+  "relation": {},
+  "ISSN": [
+    "2475-1421"
+  ],
+  "subject": [],
+  "container-title-short": "Proc. ACM Program. Lang.",
+  "published": {
+    "date-parts": [
+      [
+        2025,
+        6,
+        10
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "2024-11-14",
+      "order": 0,
+      "name": "received",
+      "label": "Received",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "2025-03-06",
+      "order": 2,
+      "name": "accepted",
+      "label": "Accepted",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "2025-06-13",
+      "order": 3,
+      "name": "published",
+      "label": "Published",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    }
+  ]
+}

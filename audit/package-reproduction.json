@@ -1,0 +1,30 @@
+{
+  "archive_tested_sha256": "0ca2e1821cda6fa11cf091cd4582acaa9da83aaa6c0655d85f1144942929f29a",
+  "test": "Extracted archive into an isolated temporary directory; ran documented reproduction commands.",
+  "commands": [
+    {
+      "script": "verify_sources.py",
+      "exit_code": 0
+    },
+    {
+      "script": "verify_examples.py",
+      "exit_code": 0
+    },
+    {
+      "script": "assemble_references.py",
+      "exit_code": 0
+    },
+    {
+      "script": "build.py",
+      "exit_code": 0
+    },
+    {
+      "script": "verify_manuscript.py",
+      "exit_code": 0
+    }
+  ],
+  "rebuilt_pdf_pages": 21,
+  "rebuilt_pdf_extracted_text_identical": true,
+  "rebuilt_bibliography_byte_identical": true,
+  "manuscript_sources_unchanged": true
+}

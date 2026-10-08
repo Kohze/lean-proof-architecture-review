@@ -1,0 +1,105 @@
+\section{Sources, selection, and reading method}
+\label{sec:method}
+
+The source inventory is the complete Git tree of \src{openai/math} at commit
+\src{fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb}, inspected on 8 October 2026.
+It contains 122,875 files with the \src{.lean} extension. This is an inventory
+count, including supporting modules, rather than a count of independently
+formalized manuscripts. The separate formalization catalogue lists 173
+source records and 200 main-result bindings \citep{OAICatalog}. Its metadata
+and the README's manuscript totals describe different units. Our selection
+and conclusions concern the six developments below.
+
+Selection was purposive. A case had to contain a mathematically meaningful
+change of representation, an identifiable preservation statement, and a
+visible use of that statement in a later argument. We favored diversity of
+mathematical setting and preservation requirement over coverage by file
+count. For each case we read backwards from the selected conclusion to its
+definitions and immediate hypotheses, then forwards through the concrete
+constructions that discharge those hypotheses. The accompanying evidence
+ledgers retain declaration names, line ranges, source excerpts, and Git
+blob identifiers. Downloaded files were checked against those identifiers.
+
+The distinction between a local interface and its instantiation is central
+to this reading. A conditional analytic theorem can be a useful component
+even when it assumes a flux identity or a resolvent estimate. The next
+question is whether the endpoint constructs that input for the stated
+objects. Similarly, an existence witness chosen classically has a proved
+body, whereas a theorem with an extra provider hypothesis retains that
+hypothesis. We follow these distinctions rather than inferring mathematical
+scope from declaration names.
+
+The collection also provides Comparator challenge configurations
+\citep{OAIComparator}. The separately inspected Comparator source at commit
+\src{ca04cfc72b550331658ec314bf47685281bfd4bf} implements statement comparison,
+dependent-declaration and axiom inspection, kernel replay, and an optional
+external checker \citep{ComparatorSource2026}. This checker snapshot was
+pinned for our infrastructure reading; the collection's installation
+instructions do not specify that revision. The architectural distinction
+between producing a proof and checking it has a long history
+\citep{deBruijn1970,BarendregtWiedijk2005}. Work on a Lean typechecker gives
+a contemporary example of examining the checking implementation itself
+\citep{Carneiro2025Lean4Lean}. Semantic agreement between a formal statement
+and its mathematical interpretation remains a separate reading task.
+
+Our evidence for the six source cases consists of static declaration and
+dependency analysis. Executable verification in this review concerns the
+original examples in Section~\ref{sec:worked}, compiled with the collection's
+specified Lean version, 4.34.1. This division records the scope of the
+evidence: the source analysis explains the selected architectures, while
+the small compiled examples check particular arithmetic and finite-law
+interfaces independently. Library maintenance and semantic linting offer
+complementary checks at another level \citep{vanDoornEbnerLewis2020}.
+
+Blueprints can connect informal arguments to declaration names and
+dependencies \citep{MassotLeanBlueprint}; LeanArchitect studies automation
+of that connection \citep{ZhuEtAl2026}. Here the evidence ledger serves a
+narrower purpose: making each discussed bridge inspectable. A dependency
+edge alone does not explain why a hypothesis is the right one, so the
+exposition supplies the relevant mathematical objects and equations.
+
+\clearpage
+\begingroup
+\setlength{\intextsep}{22pt}
+\setlength{\abovecaptionskip}{10pt}
+\setlength{\belowcaptionskip}{12pt}
+\begin{table}[!ht]
+\small
+\centering
+\renewcommand{\arraystretch}{1.14}
+\caption{Overview of the selected formal statements and the information
+preserved by each bridge.}\label{tab:overview}
+\begin{tabular}{@{}p{0.18\textwidth}p{0.38\textwidth}p{0.37\textwidth}@{}}
+\toprule
+Development & Representation bridge & Mathematical work exposed\\
+\midrule
+Common bases\newline Endpoint & Matroid transversals; finite random trees;
+oracle expressions; physical random tapes. & Output-law preservation joins
+bit-cost bounds and a fixed-program specification.\\[7pt]
+\midrule[0.3pt]\addlinespace[7pt]
+Graph switches\newline Endpoint & Fixed-degree graph cells;
+$2\times2$ Boolean matrices; conditional averaging operators. & A finite
+count isolates one exceptional direction per fiber; compensated estimates
+control its global contribution.\\[7pt]
+\midrule[0.3pt]\addlinespace[7pt]
+Mahler\newline Endpoint & Ordered shuffle forms; continuously bundled
+fields; boundary-local extensions. & Exact slot identifications preserve
+derivatives, signs, and multiplicities; locality makes Stokes applicable.\\[7pt]
+\midrule[0.3pt]\addlinespace[7pt]
+Crouzeix\newline Endpoint & Amplified polynomial evaluation;
+rectangular compressions; Fourier coefficient energies. & Finite dual
+witnesses and positive blocks give a scalar cancellation; outer domains
+remove strict-containment assumptions.\\[7pt]
+\midrule[0.3pt]\addlinespace[7pt]
+Trace ideals\newline Support result & Closed ideals; idempotent
+extended traces; positive cuts and scalar limits. & Algebraic recovery of
+ideals combines with canonical convergence to identify transported ideals.\\[7pt]
+\midrule[0.3pt]\addlinespace[7pt]
+All seams\newline Support result & A shared splitting witness;
+named graded maps; rebased matrices and produced diagram values. & Eight
+local seam families cover the constructed diagram; equality transport
+retains its named maps.\\
+\bottomrule
+\end{tabular}
+\end{table}
+\endgroup

@@ -1,0 +1,5 @@
+# Python 3.11+; versions used for the audited reproduction package.
+requests==2.32.3
+bibtexparser==1.4.1
+pypdf==5.5.0
+# Optional visual rendering also needs Pillow and the pdftoppm executable.

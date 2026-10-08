@@ -1,0 +1,929 @@
+{
+  "study_commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "mathlib_revision": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "inspection_status": {
+    "method": "Read endpoint implementations, definitions, named local lemmas and proof bodies; downloaded raw files pinned to the commit and independently matched their Git blob SHA-1 against the complete untruncated Git tree.",
+    "build_performed": false,
+    "kernel_validation_performed": false,
+    "scope_limit": "A source-level architectural review. No assertion that a local build or comparator audit succeeded. Selected bodies and immediate supporting mechanisms were inspected; this is not a full dependency-closure audit.",
+    "challenge_warning": "ComparatorChallenges/*.lean intentionally contain sorry placeholders. Those are statement/comparison files, not the solution bodies cited as evidence.",
+    "counts_warning": "No repository-wide counts are inferred from the truncated recursive API tree."
+  },
+  "cases": [
+    {
+      "id": "direct-crouzeix",
+      "title": "Compress a sharp norm bound into four Fourier energies",
+      "endpoint": "OAI.DirectCrouzeix.complete_crouzeix",
+      "endpoint_scope": "Finite complex matrices n>0, arbitrary coefficient size m>0, finite matrix-valued polynomials, constant 2, operator 2-norm, literal numerical range. No normality or numerical-range interior premise.",
+      "not_audited": "uniform_sharpness proof; arbitrary Hilbert-space, rational and holomorphic variants in other modules.",
+      "dependency_chain": [
+        "CompleteBound.complete_crouzeix -> Geometry.exists_exponential_outer + expLevel_domain_bound_scaled",
+        "DomainBound.expLevel_domain_bound -> exterior_collar_bound",
+        "ExteriorCollar.exterior_collar_bound -> faber_resolvent_data + faber_matrix_coefficient_bounds + analytic_domain_core",
+        "DomainCore.analytic_domain_core -> singular_diagonal_estimates + anti_diagonal_energy + anti_cross_energy + positive_compression_blocks + positive_block_hsSq",
+        "PolynomialEnergy.singular_diagonal_estimates -> singular_ordered_pairings + cross_boundary_estimate + polynomialEnergy_mul_le + weighted_sequence_dual",
+        "FaberEnergy.faber_hilbert_coefficient_bounds -> orthogonal positive/remainder split + markov_kernel_contraction"
+      ],
+      "formal_payoff": "Geometry, scalar boundary analysis, matrix amplification and norm optimization communicate through a small explicit analytic interface. The sharp inequality reduces to scalar energy cancellation; complete matrix sizes enter by rectangular reshaping and Kronecker pairings.",
+      "assumption_audit": [
+        {
+          "item": "analytic_domain_core Fourier/Faber/positivity data",
+          "status": "Conditional local theorem inputs",
+          "discharged_by": "ExteriorCollar.exterior_collar_bound and faber_resolvent_data"
+        },
+        {
+          "item": "boundaryKernel positivity and both marginals",
+          "status": "Required by the generic Markov contraction",
+          "discharged_by": "ExteriorCollar boundary geometry and BoundaryKernel/FaberEnergy named proofs"
+        },
+        {
+          "item": "positive gamma and nonzero energy a",
+          "status": "Derived local facts",
+          "discharged_by": "Zero operator branch, singular pair, cross_boundary_estimate"
+        },
+        {
+          "item": "smooth outer domain with strict containment",
+          "status": "Derived auxiliary object, not final theorem input",
+          "discharged_by": "Geometry.exists_exponential_outer for every compact nonempty convex K"
+        },
+        {
+          "item": "n,m positive",
+          "status": "Actual final endpoint inputs",
+          "discharged_by": null
+        }
+      ],
+      "novelty_assessment": "High pedagogical value in the combination of singular-pair compression, explicit weighted dual witnesses, Fourier bookkeeping and positive blocks. Each underlying device is established mathematics. Source evidence does not establish historical priority, rarity across Lean, or a new tactic. The contrast with Crouzeix-Palencia is a comparison of two proof architectures, not a claim that all earlier proofs follow one pattern.",
+      "evidence": [
+        {
+          "id": "D1",
+          "claim": "The public endpoint quantifies over arbitrary positive matrix and coefficient sizes and is implemented by a strict outer-neighborhood estimate followed by epsilon removal.",
+          "primary_locator": {
+            "path": "lean/OAI/Analysis/DirectCrouzeix/CompleteBound.lean",
+            "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+            "bytes": 2757,
+            "git_blob_sha1": "a504007c267984cb20e977b0e8c31c4198bad757",
+            "sha256": "c8f0706d92662aaca2d1a26fe7647b3719035f72177d68fbf5b490028f12e891",
+            "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\CompleteBound.lean",
+            "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/CompleteBound.lean",
+            "declaration": "OAI.DirectCrouzeix.complete_crouzeix",
+            "line_start": 65,
+            "line_end": 97,
+            "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/CompleteBound.lean#L65-L97",
+            "explanation": "The proof sets rho=M+epsilon/2, puts the compact numerical range inside the open norm sublevel, chooses an exponential outer approximation, applies the scaled domain estimate, and obtains 2M+epsilon.",
+            "excerpt_ranges": [
+              [
+                65,
+                66
+              ],
+              [
+                72,
+                76
+              ],
+              [
+                93,
+                97
+              ]
+            ],
+            "excerpt": "theorem complete_crouzeix : UniversalBound 2 := by\n  intro n m d hn hm A B\n  apply le_of_forall_pos_le_add\n  intro ε hε\n  let ρ := M+ε/2\n  have hρ : 0 < ρ := by dsimp [ρ]; positivity\n  have hMρ : M < ρ := by dsimp [ρ]; linarith\n  have hh := expLevel_domain_bound_scaled hn hm A v b hc hW (coefficientPolynomial B) hρ hbound\n  rw [tensorPolynomial_coefficientPolynomial] at hh\n  calc\n    ‖tensorEvaluation A B‖ ≤ 2*ρ := hh\n    _ = 2*rangeMaximum A B+ε := by dsimp [ρ,M]; ring"
+          },
+          "supporting_locators": [
+            {
+              "path": "lean/OAI/Analysis/DirectCrouzeix/Model.lean",
+              "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+              "bytes": 1208,
+              "git_blob_sha1": "bb0abb06d42480e15073530da46cfac0f4a7c636",
+              "sha256": "3be01360e343e41c9712883d81e8845122ef13b2418640fa32c5e2fd22cdba84",
+              "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\Model.lean",
+              "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/Model.lean",
+              "declaration": "OAI.DirectCrouzeix.UniversalBound",
+              "line_start": 11,
+              "line_end": 32,
+              "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/Model.lean#L11-L32",
+              "explanation": "Literal Euclidean numerical range, matrix-valued polynomial sum, Kronecker tensor evaluation, and supremum target."
+            }
+          ]
+        },
+        {
+          "id": "D2",
+          "claim": "A finite singular pair turns the operator-norm target into four compressed-resolvent energies, whose positive block estimate closes the sharp constant.",
+          "primary_locator": {
+            "path": "lean/OAI/Analysis/DirectCrouzeix/DomainCore.lean",
+            "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+            "bytes": 7826,
+            "git_blob_sha1": "7648fc2c1447cf95cbe7ead792e70455230b0cb8",
+            "sha256": "8c3ad69737fe2343607e665b27087a8016d43221a146eebd4b6879d833ddcb40",
+            "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\DomainCore.lean",
+            "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/DomainCore.lean",
+            "declaration": "OAI.DirectCrouzeix.analytic_domain_core",
+            "line_start": 15,
+            "line_end": 117,
+            "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/DomainCore.lean#L15-L117",
+            "explanation": "Abstract analytic interface plus concrete body: choose singular vectors, reshape into X and Y, form P,Q,M,L, prove a>0, bound diagonal energies by 4a/gamma^2, and cancel a in 2a<=8a/gamma^2.",
+            "excerpt_ranges": [
+              [
+                38,
+                50
+              ],
+              [
+                105,
+                117
+              ]
+            ],
+            "excerpt": "  let T := Matrix.toEuclideanCLM (n := Fin n × Fin m) (𝕜 := ℂ) (tensorPolynomial A F)\n  have hT : ‖T‖ = γ := Matrix.l2_opNorm_toEuclideanCLM _\n  obtain ⟨x,y,hx,hy,hxy,hyx⟩ := exists_singular_pair T (hT ▸ hγ)\n  rw [hT] at hxy hyx\n  let X := matrixify x\n  let Y := matrixify y\n  have hFx : T (hsVector X) = (γ : ℂ) • hsVector Y := by simpa only [X,Y,hsVector_matrixify] using hxy\n  have hFy : ContinuousLinearMap.adjoint T (hsVector Y) = (γ : ℂ) • hsVector X := by\n    simpa only [X,Y,hsVector_matrixify] using hyx\n  let P := fun t => Xᴴ * R t * X\n  let Q := fun t => Yᴴ * R t * Y\n  let M := fun t => Yᴴ * R t * X\n  let L := fun t => Xᴴ * R t * Y\n  have hblock : 2 * (∫ t, hsSq (M t + (L t)ᴴ) ∂circleMeasure) ≤\n      (∫ t, hsSq (P t + (P t)ᴴ) ∂circleMeasure) +\n      ∫ t, hsSq (Q t + (Q t)ᴴ) ∂circleMeasure := by\n    rw [← integral_const_mul,← integral_add hpi hqi]\n    exact integral_mono (hmi.const_mul 2) (hpi.add hqi)\n      (fun t => positive_block_hsSq (positive_compression_blocks (R t) X Y (hpositive t)))\n  have hb : 2*a ≤ 8*a/γ^2 := by\n    simp only [mul_div_assoc] at hPE hQE ⊢\n    linarith\n  have hmul := (le_div_iff₀ (sq_pos_of_pos hγ)).mp hb\n  change γ ≤ 2\n  have hg2 : γ^2 ≤ 4 := by nlinarith [hapos]\n  nlinarith"
+          },
+          "supporting_locators": [
+            {
+              "path": "lean/OAI/Analysis/DirectCrouzeix/SingularPairs.lean",
+              "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+              "bytes": 5006,
+              "git_blob_sha1": "30a999e394b4cbf3b0aacabc48b3571716133eeb",
+              "sha256": "148b39d7df6831d6fc7ba50327f1594a0ba816668a28661fc8c1d6e82991f920",
+              "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\SingularPairs.lean",
+              "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/SingularPairs.lean",
+              "declaration": "OAI.DirectCrouzeix.exists_singular_pair",
+              "line_start": 30,
+              "line_end": 86,
+              "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/SingularPairs.lean#L30-L86",
+              "explanation": "Compactness yields a unit norm attainer; adjoint equality follows from a squared-distance calculation, without invoking a full singular-value decomposition."
+            },
+            {
+              "path": "lean/OAI/Analysis/DirectCrouzeix/PositiveBlocks.lean",
+              "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+              "bytes": 2550,
+              "git_blob_sha1": "b7787904dedc05f3fea0e20106353b88ab7474f7",
+              "sha256": "74695a483d53771ef5cbde120f37e677659f42fe9dc9592bb4875fc7769774a9",
+              "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\PositiveBlocks.lean",
+              "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/PositiveBlocks.lean",
+              "declaration": "OAI.DirectCrouzeix.positive_block_hsSq",
+              "line_start": 22,
+              "line_end": 62,
+              "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/PositiveBlocks.lean#L22-L62",
+              "explanation": "Trace positivity with D>=0 and J=diag(1,-1) proves 2 HS^2(Z)<=HS^2(U)+HS^2(V)."
+            },
+            {
+              "path": "lean/OAI/Analysis/DirectCrouzeix/SingularPairs.lean",
+              "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+              "bytes": 5006,
+              "git_blob_sha1": "30a999e394b4cbf3b0aacabc48b3571716133eeb",
+              "sha256": "148b39d7df6831d6fc7ba50327f1594a0ba816668a28661fc8c1d6e82991f920",
+              "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\SingularPairs.lean",
+              "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/SingularPairs.lean",
+              "declaration": "OAI.DirectCrouzeix.positive_compression_blocks",
+              "line_start": 15,
+              "line_end": 28,
+              "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/SingularPairs.lean#L15-L28",
+              "explanation": "Compresses R+R* by the concatenated columns [X Y] to obtain the required positive 2x2 matrix block."
+            }
+          ]
+        },
+        {
+          "id": "D3",
+          "claim": "The diagonal estimates use explicit finite dual witnesses, then bounded partial sums, rather than assuming an infinite-dimensional duality theorem.",
+          "primary_locator": {
+            "path": "lean/OAI/Analysis/DirectCrouzeix/Duality.lean",
+            "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+            "bytes": 3285,
+            "git_blob_sha1": "6023e50cc85a8415e3bd8af16f3f42fa4de8ecfb",
+            "sha256": "3b717a4dbb596ed52e342f3b3d7da991f5a70cf1a73e77a68678cd93fc2dc090",
+            "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\Duality.lean",
+            "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/Duality.lean",
+            "declaration": "OAI.DirectCrouzeix.weighted_coefficient_dual",
+            "line_start": 15,
+            "line_end": 46,
+            "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/Duality.lean#L15-L46",
+            "explanation": "Tests the universal pairing estimate at C_k=w_k^{-1} conjugate(P_k), so both pairing and test energy reduce to s=sum HS^2(P_k)/w_k. The resulting s^2<=bs gives s<=b.",
+            "excerpt_ranges": [
+              [
+                19,
+                25
+              ],
+              [
+                38,
+                46
+              ]
+            ],
+            "excerpt": "    (h : ∀ C : ρ → Matrix ι κ ℂ,\n      ‖∑ k, entryPair (P k) (C k)‖ ^ 2 ≤ b * ∑ k, w k * hsSq (C k)) :\n    (∑ k, hsSq (P k) / w k) ≤ b := by\n  let C : ρ → Matrix ι κ ℂ := fun k => ((w k : ℂ)⁻¹) • (P k).map star\n  let s : ℝ := ∑ k, hsSq (P k) / w k\n  have hs : 0 ≤ s := Finset.sum_nonneg (fun k _ => div_nonneg (hsSq_nonneg _) (hw k).le)\n  have hp : (∑ k, entryPair (P k) (C k)) = (s : ℂ) := by\n  have ht := h C\n  rw [hp, he, Complex.norm_real, Real.norm_eq_abs, abs_of_nonneg hs] at ht\n  by_cases hs0 : s = 0\n  · change s ≤ b\n    simpa [hs0] using hb\n  · have hspos : 0 < s := lt_of_le_of_ne hs (Ne.symm hs0)\n    change s ≤ b\n    apply (mul_le_mul_iff_left₀ hspos).mp\n    nlinarith"
+          },
+          "supporting_locators": [
+            {
+              "path": "lean/OAI/Analysis/DirectCrouzeix/BoundaryEnergy.lean",
+              "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+              "bytes": 6470,
+              "git_blob_sha1": "35ad5040edd4ed9d4cf11fa8012d24e02cf814e5",
+              "sha256": "1bc293fb8f61ec3b924e0179a348b94f9dac5cb27e4b4be2a8070247873eef30",
+              "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\BoundaryEnergy.lean",
+              "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/BoundaryEnergy.lean",
+              "declaration": "OAI.DirectCrouzeix.weighted_sequence_dual",
+              "line_start": 112,
+              "line_end": 133,
+              "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/BoundaryEnergy.lean#L112-L133",
+              "explanation": "Applies the finite dual bound to each prefix, proves summability from nonnegative bounded partial sums, and separates the constant term from the half-weighted positive tail."
+            },
+            {
+              "path": "lean/OAI/Analysis/DirectCrouzeix/PolynomialEnergy.lean",
+              "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+              "bytes": 12029,
+              "git_blob_sha1": "443ca47dfbb234e50ddb3d546ad0bdbe0b649079",
+              "sha256": "7015c78df7181bd32d8aaa1632da7b92a9a56df241321c13a763857e4d4c7309",
+              "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\PolynomialEnergy.lean",
+              "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/PolynomialEnergy.lean",
+              "declaration": "OAI.DirectCrouzeix.singular_ordered_pairings; singular_diagonal_estimates",
+              "line_start": 146,
+              "line_end": 219,
+              "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/PolynomialEnergy.lean#L146-L219",
+              "explanation": "Both polynomial orders F*G and G*F matter: the adjoint and forward singular identities yield separate diagonal estimates; the finite weighted dual witnesses are applied at the end."
+            }
+          ]
+        },
+        {
+          "id": "D4",
+          "claim": "The Faber interface gets its exact coefficient weights from orthogonal Fourier remainder plus a positive kernel with both marginals equal to one.",
+          "primary_locator": {
+            "path": "lean/OAI/Analysis/DirectCrouzeix/FaberEnergy.lean",
+            "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+            "bytes": 11084,
+            "git_blob_sha1": "968cd9a5547cac6cfe965b57faabd10287254b18",
+            "sha256": "a7a4914685716845b1161f075ac562f2e20b3f395fe087e688b8299b9c7bcf08",
+            "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\FaberEnergy.lean",
+            "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/FaberEnergy.lean",
+            "declaration": "OAI.DirectCrouzeix.Faber.faber_hilbert_coefficient_bounds",
+            "line_start": 77,
+            "line_end": 110,
+            "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/FaberEnergy.lean#L77-L110",
+            "explanation": "The boundary series is positive Fourier series plus a remainder with no nonnegative coefficients. Orthogonality gives exact energy splitting. A doubly normalized positive boundary kernel contracts the nonconstant series, yielding weight 1 at k=0 and weight 2 otherwise.",
+            "excerpt_ranges": [
+              [
+                87,
+                100
+              ]
+            ],
+            "excerpt": "  have he : (∫ t, ‖faberBoundarySeries c g C t‖^2 ∂angularMeasure) =\n      (∑ k, ‖C k‖^2) + ∫ t, ‖boundaryRemainder c g C t‖^2 ∂angularMeasure := by\n    simp_rw [faberBoundarySeries_decomp hR hg hc hH]\n    exact energy_orthogonal_positiveSeries C _ hr (boundaryRemainder_no_nonnegative hR hg hH C)\n  have hrnonneg : 0 ≤ ∫ t, ‖boundaryRemainder c g C t‖^2 ∂angularMeasure :=\n    integral_nonneg (fun _ => sq_nonneg _)\n  have hrbound : (∫ t, ‖boundaryRemainder c g C t‖^2 ∂angularMeasure) ≤\n      ∑ k, ‖nonconstantCoefficients C k‖^2 := by\n    let : InnerProductSpace ℝ E := InnerProductSpace.rclikeToReal ℂ E\n    have hm := boundaryKernel_marginals hR hg hH\n    have ht := markov_kernel_contraction angularMeasure angularMeasure (boundaryKernel c g)\n      (positiveSeries (nonconstantCoefficients C)) (continuous_boundaryKernel hS)\n      (continuous_positiveSeries _) hpositive hm.1 hm.2\n    simp_rw [boundaryKernel_action hR hg hH C,energy_positiveSeries] at ht"
+          },
+          "supporting_locators": [
+            {
+              "path": "lean/OAI/Analysis/DirectCrouzeix/KernelContraction.lean",
+              "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+              "bytes": 9458,
+              "git_blob_sha1": "82b0e6ebe2c2e47746e97d131f52015e48e5132c",
+              "sha256": "2a648dce84f28a064555c98f4da0dc49c98520a7d29a218ecbef32a31fa9148e",
+              "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\KernelContraction.lean",
+              "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/KernelContraction.lean",
+              "declaration": "OAI.DirectCrouzeix.Faber.markov_kernel_contraction",
+              "line_start": 65,
+              "line_end": 95,
+              "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/KernelContraction.lean#L65-L95",
+              "explanation": "Pointwise weighted squared-norm estimate, Fubini swap, and the second marginal yield L2 contraction. All continuity, integrability, positivity, and normalization premises are visible."
+            },
+            {
+              "path": "lean/OAI/Analysis/DirectCrouzeix/KernelContraction.lean",
+              "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+              "bytes": 9458,
+              "git_blob_sha1": "82b0e6ebe2c2e47746e97d131f52015e48e5132c",
+              "sha256": "2a648dce84f28a064555c98f4da0dc49c98520a7d29a218ecbef32a31fa9148e",
+              "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\KernelContraction.lean",
+              "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/KernelContraction.lean",
+              "declaration": "OAI.DirectCrouzeix.Faber.energy_orthogonal_positiveSeries",
+              "line_start": 162,
+              "line_end": 186,
+              "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/KernelContraction.lean#L162-L186",
+              "explanation": "The vanished nonnegative Fourier coefficients kill the integrated cross term explicitly."
+            }
+          ]
+        },
+        {
+          "id": "D5",
+          "claim": "The abstract analytic core is connected to actual exterior-domain data; its Fourier and positive-resolvent properties are conclusions of named proofs.",
+          "primary_locator": {
+            "path": "lean/OAI/Analysis/DirectCrouzeix/ExteriorCollar.lean",
+            "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+            "bytes": 5353,
+            "git_blob_sha1": "84fc72e9a7afd7bc980589285aa45630c270bea0",
+            "sha256": "05ebbcf8152552db266eceb0af5e9a22b354d635e001e266d5ba763fe5286657",
+            "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\ExteriorCollar.lean",
+            "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/ExteriorCollar.lean",
+            "declaration": "OAI.DirectCrouzeix.exterior_collar_bound",
+            "line_start": 76,
+            "line_end": 96,
+            "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/ExteriorCollar.lean#L76-L96",
+            "explanation": "Constructs nonzero divided differences from conformal injectivity, obtains kernel positivity, Faber coefficient bounds and the resolvent Fourier data, then applies analytic_domain_core.",
+            "excerpt_ranges": [
+              [
+                88,
+                96
+              ]
+            ],
+            "excerpt": "  have hH : ∀ u ∈ ball 0 R, ∀ v ∈ ball 0 R, Faber.chordDenominator c g u v ≠ 0 :=\n    fun _ hu _ hv => Faber.chordDenominator_ne_zero (convex_ball 0 R) hg hc hinj hder hu hv\n  have hp := Faber.boundaryKernel_nonnegative hR hg hH hboundary\n  have hcs (N : ℕ) (C : Fin N → Matrix (Fin m) (Fin m) ℂ) := faber_matrix_coefficient_bounds hR hg hc hH hp C\n  obtain ⟨Q,hQ,hcoeff,hpos,hPSD⟩ := faber_resolvent_data hn A hR hg hc houtside hsupport\n  apply analytic_domain_core hn hm A (Faber.faberBasis c g) (Faber.faberBasis_zero hc g)\n    (Faber.boundary c g) (Faber.continuous_boundary hR hg c)\n    (faber_expansion_of_degree hm _ (Faber.faberBasis_degree hc (hg 0 (mem_ball_self (by linarith)))))\n    (fun N C => (hcs N C).1) (fun N C => (hcs N C).2) Q hQ hcoeff hpos hPSD F hF"
+          },
+          "supporting_locators": [
+            {
+              "path": "lean/OAI/Analysis/DirectCrouzeix/ExteriorCollar.lean",
+              "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+              "bytes": 5353,
+              "git_blob_sha1": "84fc72e9a7afd7bc980589285aa45630c270bea0",
+              "sha256": "05ebbcf8152552db266eceb0af5e9a22b354d635e001e266d5ba763fe5286657",
+              "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\ExteriorCollar.lean",
+              "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/ExteriorCollar.lean",
+              "declaration": "OAI.DirectCrouzeix.faber_resolvent_data",
+              "line_start": 40,
+              "line_end": 74,
+              "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/ExteriorCollar.lean#L40-L74",
+              "explanation": "Defines Q as inverse algebraGenerating, obtains its Fourier coefficients and vanishing positive frequencies, and derives positive Q+Q* from geometric supporting halfplanes."
+            },
+            {
+              "path": "lean/OAI/Analysis/DirectCrouzeix/DomainBound.lean",
+              "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+              "bytes": 4202,
+              "git_blob_sha1": "db6e87404ed69425330844b3e187241251e8f09f",
+              "sha256": "792e5f24630ef2911ba5287df5bc042c4df4a741f9ae2d47dcfb8901616ecd70",
+              "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\DomainBound.lean",
+              "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/DomainBound.lean",
+              "declaration": "OAI.DirectCrouzeix.expLevel_domain_bound; expLevel_domain_bound_scaled",
+              "line_start": 63,
+              "line_end": 113,
+              "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/DomainBound.lean#L63-L113",
+              "explanation": "Provides the collar and supporting-halfplane data from a compact exponential sublevel and normalizes a rho-bounded matrix polynomial by rho inverse."
+            }
+          ]
+        },
+        {
+          "id": "D6",
+          "claim": "The final limiting step does not require interior in the numerical range because arbitrary compact nonempty convex sets receive explicit smooth outer approximants.",
+          "primary_locator": {
+            "path": "lean/OAI/Analysis/DirectCrouzeix/OuterApproximation.lean",
+            "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+            "bytes": 5236,
+            "git_blob_sha1": "90b384e860ab4d1f1dc3a068c16a747a0c341521",
+            "sha256": "a7cc6181472d8830f53ef28e1efef4ffcd3eb88c71de671b4a92504b3aa7b245",
+            "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\OuterApproximation.lean",
+            "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/OuterApproximation.lean",
+            "declaration": "OAI.DirectCrouzeix.Geometry.exists_exponential_outer",
+            "line_start": 59,
+            "line_end": 122,
+            "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/OuterApproximation.lean#L59-L122",
+            "explanation": "Uses finite direction nets, including four coordinate axes, then a finite sum of exponentials of affine support inequalities. Axes bound the sublevel; the finer net places it in an epsilon neighborhood. K need not have interior.",
+            "excerpt_ranges": [
+              [
+                59,
+                64
+              ],
+              [
+                77,
+                85
+              ],
+              [
+                115,
+                122
+              ]
+            ],
+            "excerpt": "theorem exists_exponential_outer {K : Set ℂ} (hK : IsCompact K) (hne : K.Nonempty)\n    (hv : Convex ℝ K) {ε : ℝ} (hε : 0 < ε) :\n    ∃ (D : Finset ℂ) (v : D → ℂ) (b : D → ℝ),\n      (∀ z ∈ K, expLevel v b z < 1) ∧\n      IsCompact {z | expLevel v b z ≤ 1} ∧\n      (∀ z, expLevel v b z ≤ 1 → ∃ w ∈ K, ‖z-w‖ < ε) := by\n  obtain ⟨D,hD,h1,hm1,hI,hmI,hnet⟩ := exists_axis_net hδ\n  let N : ℝ := Fintype.card D\n  have hN : 0 ≤ N := by dsimp [N]; positivity\n  let t := (N+1)/δ\n  have ht : 0 < t := div_pos (by linarith) hδ\n  have htδ : t*δ = N+1 := div_mul_cancel₀ _ (ne_of_gt hδ)\n  let v : D → ℂ := fun ν => t • (ν:ℂ)\n  let b : D → ℝ := fun ν => -t*(convexSupport K ν+δ)\n  have he (z : ℂ) (ν : D) : inner ℝ (v ν) z+b ν = t*(inner ℝ (ν:ℂ) z-convexSupport K ν-δ) := by\n  refine ⟨D,v,b,hinside,?_,?_⟩\n  · apply (isCompact_closedBall (0:ℂ) L).of_isClosed_subset\n    · exact isClosed_le (expLevel_contDiff v b).continuous continuous_const\n    · intro z hz\n      exact mem_closedBall_zero_iff.mpr (hbound z hz)\n  · intro z hz\n    obtain ⟨w,hw,hzw⟩ := direction_net_distance hK hne hv hδ hM hnet (hbound z hz) (hsupport z hz)\n    exact ⟨w,hw,lt_of_le_of_lt hzw hδε⟩"
+          },
+          "supporting_locators": [
+            {
+              "path": "lean/OAI/Analysis/DirectCrouzeix/CompleteBound.lean",
+              "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+              "bytes": 2757,
+              "git_blob_sha1": "a504007c267984cb20e977b0e8c31c4198bad757",
+              "sha256": "c8f0706d92662aaca2d1a26fe7647b3719035f72177d68fbf5b490028f12e891",
+              "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\DirectCrouzeix\\CompleteBound.lean",
+              "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/CompleteBound.lean",
+              "declaration": "OAI.DirectCrouzeix.convex_numericalRange",
+              "line_start": 61,
+              "line_end": 63,
+              "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/CompleteBound.lean#L61-L63",
+              "explanation": "Supplies convexity by the quadratic-range theorem. Compactness and nonemptiness are also supplied before the outer approximation is invoked."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "symmetric-mahler",
+      "title": "Reconcile ordered exterior algebra with local analytic integration",
+      "endpoint": "OAI.SymmetricMahler.symmetric_mahler",
+      "endpoint_scope": "Positive finite dimension; compact convex origin-symmetric set in Fin n -> R with nonempty interior; ordinary Lebesgue volume and the literal coordinate polar.",
+      "not_audited": "Equality classification, nonsymmetric Mahler, symplectic-width conclusions, or every upstream convex approximation step.",
+      "dependency_chain": [
+        "MainTheorem.symmetric_mahler -> symmetric_mahler_from_special_homogeneous_values + euclideanSpecial_massHypotheses.homogeneousSphereFlux_value",
+        "HomogeneousEndpoint.homogeneousSphereFlux_value -> circle calculation (dimension one) or homogeneous_flux_endpoints (higher dimensions)",
+        "HomogeneousEndpoint.homogeneous_flux_endpoints -> conditional homogeneousFlux_endpoints_of_transgression, with transgression discharged after primitive equality rewrite",
+        "HomogeneousTransgression.sphere_residual_transgression -> full ambient extDeriv formula + sphere_beta_wedge_power_zero + residual multiplicity",
+        "SphereForms.sphere_beta_wedge_power_zero -> horizontal_top_eq_zero on sphere tangent using i*z",
+        "HomogeneousTransgressionFTC -> tangent exact-form flux zero -> sphere-local cutoff extension + coordinate Stokes + d squared zero"
+      ],
+      "formal_payoff": "Preserve rich slot types for recursive wedge algebra, use Fin-indexed continuous fields for derivative and integration APIs, then prove an exact representation bridge once. Boundary locality prevents an unnecessary regularity requirement at the singular origin. Explicit conditional theorem names expose the outstanding local formula until it is actually discharged.",
+      "assumption_audit": [
+        {
+          "item": "MassHypotheses",
+          "status": "Actual hypotheses of the generic analytic results, not a desired-inequality field",
+          "discharged_by": "EuclideanSpecialMap.euclideanSpecial_massHypotheses for the finite-strip special family"
+        },
+        {
+          "item": "local transgression identity ht",
+          "status": "Explicit input to HomogeneousTransgressionFTC intermediate theorems",
+          "discharged_by": "HomogeneousEndpoint.homogeneous_flux_endpoints using sphere_residual_transgression and equality of the two primitives"
+        },
+        {
+          "item": "C2 regularity of primitive on punctured space",
+          "status": "Derived from MassHypotheses",
+          "discharged_by": "HomogeneousPrimitiveRegularity.sourceHomogeneousPrimitive_C2"
+        },
+        {
+          "item": "primitive regularity throughout closed ball",
+          "status": "Not required",
+          "discharged_by": "ClosedBoundaryStokes cutoff extension from a sphere neighborhood"
+        },
+        {
+          "item": "noncriticality of special positive levels",
+          "status": "Derived for the concrete special family",
+          "discharged_by": "SpecialSourceMass.euclideanSpecial_positive_regular_nonzero"
+        },
+        {
+          "item": "special-family homogeneous numerical value hvalue",
+          "status": "Input of conditional body-reduction lemma, not final endpoint input",
+          "discharged_by": "MainTheorem via euclideanSpecial_massHypotheses and homogeneousSphereFlux_value"
+        },
+        {
+          "item": "compactness, convexity, symmetry, interior, n>=1",
+          "status": "Actual final endpoint inputs",
+          "discharged_by": null
+        }
+      ],
+      "novelty_assessment": "The most distinctive source-level feature is the verified seam among recursive ordered slot types, unbundled shuffle forms, continuously bundled fields and sphere-area integration. Top-degree horizontality and smooth cutoff extension are standard mathematics, and Mathlib already supplies extDeriv and d squared zero. No claim of first formalization or global rarity is supported. The source supports a concrete design lesson rather than a generic claim about tactic use.",
+      "evidence": [
+        {
+          "id": "M1",
+          "claim": "The supposedly discarded ambient term is proved zero on the sphere tangent space by a concrete top-degree horizontal-form argument.",
+          "primary_locator": {
+            "path": "lean/OAI/Analysis/Mahler/HorizontalForms.lean",
+            "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+            "bytes": 5397,
+            "git_blob_sha1": "5dfbf7c57bc06e9486303540b628a4f0055b257f",
+            "sha256": "5ecf0de601a9be291a0670a73bce254f94253b512d3017a01474435f623b76b9",
+            "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\HorizontalForms.lean",
+            "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HorizontalForms.lean",
+            "declaration": "OAI.Mahler.horizontal_top_eq_zero",
+            "line_start": 19,
+            "line_end": 50,
+            "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HorizontalForms.lean#L19-L50",
+            "explanation": "For an independent tuple, turn it into a basis, choose a nonzero coordinate of V, replace that slot by V, and expand. Alternation kills all terms but the selected one; nonzero scalar cancellation forces the original evaluation to vanish. Dependent tuples vanish by alternation.",
+            "excerpt_ranges": [
+              [
+                27,
+                39
+              ],
+              [
+                43,
+                50
+              ]
+            ],
+            "excerpt": "  · let b := basisOfLinearIndependentOfCardEqFinrank' v hv hdim\n    have hb (i : ι) : b i = v i :=\n      congrFun (coe_basisOfLinearIndependentOfCardEqFinrank' v hv hdim) i\n    obtain ⟨i, hi⟩ : ∃ i, b.repr V i ≠ 0 := by\n      by_contra hn\n      push Not at hn\n      apply hV\n      apply b.repr.injective\n      ext i\n      simpa using hn i\n    have hz := ha (Function.update v i V) i (Function.update_self ..)\n    have he : V = ∑ j, b.repr V j • v j := by\n      simpa only [← hb] using (b.sum_repr V).symm\n      rw [Finset.sum_eq_single i]\n      · rw [a.map_update_smul, Function.update_eq_self]\n      · intro j hj hji\n        rw [a.map_update_smul, a.map_update_self _ hji.symm, smul_zero]\n      · simp\n    rw [hs] at hz\n    exact (smul_eq_zero.mp hz).resolve_left hi\n  · exact a.map_linearDependent v hv"
+          },
+          "supporting_locators": [
+            {
+              "path": "lean/OAI/Analysis/Mahler/HorizontalForms.lean",
+              "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+              "bytes": 5397,
+              "git_blob_sha1": "5dfbf7c57bc06e9486303540b628a4f0055b257f",
+              "sha256": "5ecf0de601a9be291a0670a73bce254f94253b512d3017a01474435f623b76b9",
+              "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\HorizontalForms.lean",
+              "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HorizontalForms.lean",
+              "declaration": "OAI.Mahler.beta_wedge_power_eq_zero",
+              "line_start": 121,
+              "line_end": 129,
+              "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HorizontalForms.lean#L121-L129",
+              "explanation": "Combines top-degree dimensional equality with preservation of horizontality under wedge and wedge powers."
+            },
+            {
+              "path": "lean/OAI/Analysis/Mahler/SphereForms.lean",
+              "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+              "bytes": 4967,
+              "git_blob_sha1": "a4d458689fc4df77591f63435dc1228d955cd5d9",
+              "sha256": "ec25a18b86b5df18348a571ed2b506a2856513f55dcdeb26d169bf9b8c911556",
+              "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\SphereForms.lean",
+              "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/SphereForms.lean",
+              "declaration": "OAI.Mahler.MassHypotheses.sphere_beta_wedge_power_zero",
+              "line_start": 84,
+              "line_end": 111,
+              "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/SphereForms.lean#L84-L111",
+              "explanation": "Uses dim_R sphereTangent=2(n-1)+1 and the nonzero circle tangent i*z, obtaining horizontality from homogeneous polynomial identities."
+            }
+          ]
+        },
+        {
+          "id": "M2",
+          "claim": "Actual ambient differentiation is separated from restriction to sphere tangents, preserving the residual, its minus sign, and its multiplicity.",
+          "primary_locator": {
+            "path": "lean/OAI/Analysis/Mahler/HomogeneousTransgression.lean",
+            "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+            "bytes": 8303,
+            "git_blob_sha1": "c381fcf297116fe1c5174f8c0f622d3912eea597",
+            "sha256": "70ddaa59dd91b03c9d2446aa05c52fcf2a25a82d581b9544caefee612a2d8bc1",
+            "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\HomogeneousTransgression.lean",
+            "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousTransgression.lean",
+            "declaration": "OAI.Mahler.MassHypotheses.sphere_residual_transgression",
+            "line_start": 65,
+            "line_end": 97,
+            "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousTransgression.lean#L65-L97",
+            "explanation": "Builds tangent vectors as a subtype, kills the top horizontal term using M1, applies the full ambient exterior derivative identity, and reinstates multiplicity k+1. The identity is proved rather than postulated.",
+            "excerpt_ranges": [
+              [
+                75,
+                83
+              ],
+              [
+                89,
+                97
+              ]
+            ],
+            "excerpt": "  let a := alphaPath (polynomialMap G) (coordinateMap (k+2)) m t\n  let b := betaLinear (polynomialMap G) (coordinateMap (k+2)) m\n  have hzero : (wedge (oneForm b x).toAlternatingMap\n      (wedgePower (extDeriv (oneForm a) x).toAlternatingMap (k+1))).domDomCongr\n        (boundaryFinEquiv (k+1)) v = 0 := by\n    let w : Fin 1 ⊕ WedgePowerSlots (k+1) → sphereTangent x := fun i =>\n      ⟨v (boundaryFinEquiv (k+1) i), Submodule.mem_orthogonal_singleton_iff_inner_right.mpr (hv _)⟩\n    have hz0 := h.sphere_beta_wedge_power_zero hx t\n    rw [show k+2-1=k+1 by omega] at hz0\n  have he := congrArg (fun B => B v) (h.homogeneousPrimitive_extDeriv hx t)\n  change extDeriv (homogeneousPrimitive (m := m) G t) x v =\n    (wedge (oneForm b x).toAlternatingMap\n      (wedgePower (extDeriv (oneForm a) x).toAlternatingMap (k+1))).domDomCongr\n        (boundaryFinEquiv (k+1)) v - boundarySingleResidualFin a b x v at he\n  rw [hzero, zero_sub] at he\n  rw [boundaryResidualFin_succ, AlternatingMap.smul_apply, he]\n  change _ * _ = _ * _\n  ring"
+          },
+          "supporting_locators": [
+            {
+              "path": "lean/OAI/Analysis/Mahler/HomogeneousTransgression.lean",
+              "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+              "bytes": 8303,
+              "git_blob_sha1": "c381fcf297116fe1c5174f8c0f622d3912eea597",
+              "sha256": "70ddaa59dd91b03c9d2446aa05c52fcf2a25a82d581b9544caefee612a2d8bc1",
+              "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\HomogeneousTransgression.lean",
+              "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousTransgression.lean",
+              "declaration": "OAI.Mahler.MassHypotheses.homogeneousPrimitive_extDeriv",
+              "line_start": 26,
+              "line_end": 52,
+              "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousTransgression.lean#L26-L52",
+              "explanation": "The ambient exterior derivative contains both a horizontal wedge term and a negative single residual; no premature deletion occurs."
+            },
+            {
+              "path": "lean/OAI/Analysis/Mahler/PowerTransgression.lean",
+              "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+              "bytes": 6205,
+              "git_blob_sha1": "1707a44523003ff153693bb5e50b7bb7b3f4f25a",
+              "sha256": "930eeedf56aadd16a0309d6128f6c3232cfddbe5a85fd74456200b67b023a1fd",
+              "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\PowerTransgression.lean",
+              "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/PowerTransgression.lean",
+              "declaration": "OAI.Mahler.extDeriv_powerTransgressionPrimitive",
+              "line_start": 68,
+              "line_end": 106,
+              "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/PowerTransgression.lean#L68-L106",
+              "explanation": "Derives the ambient product identity from differentiability, actual exterior derivative product rules and d^2 alpha=0; resolves slot instances by proof irrelevance."
+            },
+            {
+              "path": "lean/OAI/Analysis/Mahler/HomogeneousVariationCoefficient.lean",
+              "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+              "bytes": 2644,
+              "git_blob_sha1": "9e5a64ca71749f2d1746add37ad6de50ca598db1",
+              "sha256": "ebe7a93d5d1644e027478b3e9ddee030319d607178f8f39f2cd030405926fa83",
+              "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\HomogeneousVariationCoefficient.lean",
+              "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousVariationCoefficient.lean",
+              "declaration": "OAI.Mahler.boundaryResidualFin_succ",
+              "line_start": 25,
+              "line_end": 50,
+              "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousVariationCoefficient.lean#L25-L50",
+              "explanation": "All possible d-beta placements give the exact positive multiplicity k+1."
+            }
+          ]
+        },
+        {
+          "id": "M3",
+          "claim": "An explicit slot equivalence reconciles two continuous primitive constructions, allowing algebraic transgression to cross into analytic Stokes/FTC.",
+          "primary_locator": {
+            "path": "lean/OAI/Analysis/Mahler/HomogeneousEndpoint.lean",
+            "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+            "bytes": 2572,
+            "git_blob_sha1": "882afa1e3d92d2fbfe07cf067fcef06ffb958183",
+            "sha256": "b1c23ab0ded1757208ef0756f1af7dfec22a6231c109bea2caa9f1b9403d3169",
+            "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\HomogeneousEndpoint.lean",
+            "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousEndpoint.lean",
+            "declaration": "OAI.Mahler.sourcePrimitiveSlots_eq_primitiveFinEquiv; sourceHomogeneousPrimitive_eq_homogeneousPrimitive; MassHypotheses.homogeneous_flux_endpoints",
+            "line_start": 12,
+            "line_end": 45,
+            "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousEndpoint.lean#L12-L45",
+            "explanation": "Proves the slot maps equal by cases on Fin-sum slots; uses injectivity of the underlying AlternatingMap projection to identify whole continuous fields; rewrites that field equality in the transgression supplied to the conditional analytic endpoint.",
+            "excerpt_ranges": [
+              [
+                14,
+                20
+              ],
+              [
+                27,
+                31
+              ],
+              [
+                41,
+                45
+              ]
+            ],
+            "excerpt": "lemma sourcePrimitiveSlots_eq_primitiveFinEquiv (k : ℕ) :\n    sourcePrimitiveSlots k = primitiveFinEquiv k := by\n  ext i\n  rcases i with i | (i | i)\n  · fin_cases i; rfl\n  · fin_cases i; rfl\n  · rfl\n  funext x\n  apply ContinuousAlternatingMap.toAlternatingMap_injective\n  rw [sourceHomogeneousPrimitive_eq, homogeneousPrimitive_is_wedge]\n  unfold sourcePrimitiveFin\n  rw [sourcePrimitiveSlots_eq_primitiveFinEquiv]\n  apply h.homogeneousFlux_endpoints_of_transgression\n  intro t x hx v hv\n  have hn : x ≠ 0 := by intro he; simp [he] at hx\n  have ht := h.sphere_residual_transgression hn t v hv\n  rwa [← sourceHomogeneousPrimitive_eq_homogeneousPrimitive G t] at ht"
+          },
+          "supporting_locators": [
+            {
+              "path": "lean/OAI/Analysis/Mahler/HomogeneousPrimitiveRegularity.lean",
+              "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+              "bytes": 4131,
+              "git_blob_sha1": "b3d247040eb52cee3c9c8120b9f72a0ccea1c158",
+              "sha256": "357e02cce0c0ad4b01de34fa7c3c8fb96bf3e2591aea96e6b479ef4f45dfe6f2",
+              "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\HomogeneousPrimitiveRegularity.lean",
+              "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousPrimitiveRegularity.lean",
+              "declaration": "OAI.Mahler.sourcePrimitiveFin; sourceHomogeneousPrimitive; MassHypotheses.sourceHomogeneousPrimitive_C2",
+              "line_start": 31,
+              "line_end": 88,
+              "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousPrimitiveRegularity.lean#L31-L88",
+              "explanation": "One representation uses finite basis expansion to bundle the literal shuffle form and obtains every finite regularity order on the punctured space."
+            },
+            {
+              "path": "lean/OAI/Analysis/Mahler/PowerTransgression.lean",
+              "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+              "bytes": 6205,
+              "git_blob_sha1": "1707a44523003ff153693bb5e50b7bb7b3f4f25a",
+              "sha256": "930eeedf56aadd16a0309d6128f6c3232cfddbe5a85fd74456200b67b023a1fd",
+              "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\PowerTransgression.lean",
+              "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/PowerTransgression.lean",
+              "declaration": "OAI.Mahler.powerTransgressionPrimitive; primitiveFinEquiv; powerTransgressionPrimitive_is_wedge",
+              "line_start": 37,
+              "line_end": 66,
+              "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/PowerTransgression.lean#L37-L66",
+              "explanation": "The other representation builds a continuous product from pairExterior and continuous wedge powers, then proves its unbundled shuffle identity."
+            }
+          ]
+        },
+        {
+          "id": "M4",
+          "claim": "Exact-form flux can be used with regularity only near the boundary, even though the actual primitive may be singular at the origin.",
+          "primary_locator": {
+            "path": "lean/OAI/Analysis/Mahler/ClosedBoundaryStokes.lean",
+            "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+            "bytes": 3175,
+            "git_blob_sha1": "fc98a4b561c4407d6e5d428d014164b2034cdd1f",
+            "sha256": "0b107f76a665e055b95d2f24c05110f498bcbec93b3d0f8761d9a8f13c72c721",
+            "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\ClosedBoundaryStokes.lean",
+            "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/ClosedBoundaryStokes.lean",
+            "declaration": "OAI.MahlerStokes.exists_closed_set_form_extension; sphereFlux_extDeriv_eq_zero",
+            "line_start": 18,
+            "line_end": 63,
+            "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/ClosedBoundaryStokes.lean#L18-L63",
+            "explanation": "Smooth separation gives chi=1 near closed K and chi=0 near U complement. eta=chi*omega is globally C2 and eventually equal to omega at K. Equality of Frechet derivatives preserves d-omega on the sphere; coordinate Stokes plus d^2 eta=0 then gives zero flux.",
+            "excerpt_ranges": [
+              [
+                29,
+                41
+              ],
+              [
+                52,
+                63
+              ]
+            ],
+            "excerpt": "  obtain ⟨χ, hχ0, hχ1, _⟩ := exists_contMDiffMap_zero_one_nhds_of_isClosed\n    𝓘(ℝ, Fin d → ℝ) hU.isClosed_compl hK hdis (n := 2)\n  have hχ : ContDiff ℝ 2 χ := χ.contMDiff.contDiff\n  refine ⟨fun x => χ x • ω x, contDiff_iff_contDiffAt.mpr ?_, ?_⟩\n  · intro x\n    by_cases hx : x ∈ U\n    · exact hχ.contDiffAt.smul (hω.contDiffAt (hU.mem_nhds hx))\n    · have hz : ∀ᶠ y in 𝓝 x, χ y = 0 := hχ0.filter_mono (nhds_le_nhdsSet hx)\n      apply (contDiffAt_const (c := (0 : (Fin d → ℝ) [⋀^Fin n]→L[ℝ] ℝ))).congr_of_eventuallyEq\n      filter_upwards [hz] with y hy\n      simp [hy]\n  · intro x hx\n    have ho : ∀ᶠ y in 𝓝 x, χ y = 1 := hχ1.filter_mono (nhds_le_nhdsSet hx)\n  obtain ⟨η, hη, he⟩ := exists_closed_set_form_extension hU\n    (isClosed_eq (continuous_radiusSq _) continuous_const) hSU ω hω\n  have hde (x) (hx : radiusSq x = r^2) : extDeriv η x = extDeriv ω x := by\n    unfold extDeriv\n    rw [(he x hx).fderiv_eq]\n  rw [← sphereFlux_congr r (extDeriv η) (extDeriv ω) hde]\n  have hs := integral_extDeriv_ball_local r (extDeriv η) isOpen_univ\n    (contDiff_iff_contDiffAt.mpr (fun x => contDiffAt_extDeriv hη.contDiffAt)).contDiffOn\n    (subset_univ _)\n  rw [← hs]\n  have hd : extDeriv (extDeriv η) = 0 := extDeriv_extDeriv hη (by simp)\n  simp [hd]"
+          },
+          "supporting_locators": [
+            {
+              "path": "lean/OAI/Analysis/Mahler/ExactSphereStokes.lean",
+              "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+              "bytes": 2806,
+              "git_blob_sha1": "2215702c8343d5b3c2a0f49d57ba4ea4f87525fb",
+              "sha256": "40b5cd4a1fafafdba30a32004fee9c3a0b9b959c6c2884b509882e6a0034d6bd",
+              "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\ExactSphereStokes.lean",
+              "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/ExactSphereStokes.lean",
+              "declaration": "OAI.Mahler.sphereFlux_extDeriv_eq_zero_of_C2",
+              "line_start": 41,
+              "line_end": 56,
+              "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/ExactSphereStokes.lean#L41-L56",
+              "explanation": "Transports the coordinate theorem to the complex Euclidean sphere through a pullback, requiring only an open neighborhood of the sphere."
+            },
+            {
+              "path": "lean/OAI/Analysis/Mahler/SourcePrimitiveStokes.lean",
+              "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+              "bytes": 3305,
+              "git_blob_sha1": "76bb81f3e8e8ce40dfc6e0935286febd11cc8221",
+              "sha256": "c1f857871d04b7b08501684635d578933ea07ee7a70558a11188f920a85e3def",
+              "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\SourcePrimitiveStokes.lean",
+              "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/SourcePrimitiveStokes.lean",
+              "declaration": "OAI.Mahler.sphereFlux_eq_zero_of_tangent_exact_C2",
+              "line_start": 26,
+              "line_end": 52,
+              "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/SourcePrimitiveStokes.lean#L26-L52",
+              "explanation": "Only agreement on sphere-tangent tuples is needed; orientedDensity_congr_on_tangent transfers it to the integral."
+            },
+            {
+              "path": "lean/OAI/Analysis/Mahler/HomogeneousTransgressionFTC.lean",
+              "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+              "bytes": 4275,
+              "git_blob_sha1": "9282748f7e2b0be254fd9b76c95a0e8a3dc6b837",
+              "sha256": "b4d2389c84dee13ef8d3522b3fb364a53b905a7690493e9a44de855247587762",
+              "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\HomogeneousTransgressionFTC.lean",
+              "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousTransgressionFTC.lean",
+              "declaration": "OAI.Mahler.MassHypotheses.homogeneousResidualFlux_eq_zero_of_transgression; homogeneousPathFlux_constant_of_transgression; homogeneousFlux_endpoints_of_transgression",
+              "line_start": 14,
+              "line_end": 66,
+              "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousTransgressionFTC.lean#L14-L66",
+              "explanation": "These intermediate theorems explicitly retain local transgression as a premise. Zero derivative flux makes the path flux constant by the FTC; M3 discharges that premise."
+            }
+          ]
+        },
+        {
+          "id": "M5",
+          "claim": "The analysis hypothesis package contains regularity and Taylor data, not the desired mass inequality; it is constructed for the actual finite-strip maps.",
+          "primary_locator": {
+            "path": "lean/OAI/Analysis/Mahler/EuclideanSpecialMap.lean",
+            "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+            "bytes": 5228,
+            "git_blob_sha1": "ae986cfb6716e6ee011c2db32e8bed96575a8e91",
+            "sha256": "77068c0e5dce13e0fcec035dbfddefa8673fb5fa2fc1f09ab9f2857b9dbd2809",
+            "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\EuclideanSpecialMap.lean",
+            "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/EuclideanSpecialMap.lean",
+            "declaration": "OAI.SymmetricMahler.euclideanSpecial_massHypotheses",
+            "line_start": 67,
+            "line_end": 97,
+            "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/EuclideanSpecialMap.lean#L67-L97",
+            "explanation": "Given positive dimension, an injective real measurement matrix and m>=2, constructs every MassHypotheses field: open domain, zero in domain, holomorphicity, isolated zero, homogeneous leading polynomial, nonvanishing leading map, Taylor remainder and compact sublevels.",
+            "excerpt_ranges": [
+              [
+                69,
+                75
+              ],
+              [
+                88,
+                97
+              ]
+            ],
+            "excerpt": "theorem euclideanSpecial_massHypotheses (A : Matrix (Fin N) (Fin n) ℝ)\n    (hn : 1 ≤ n) (hA : Function.Injective (measurement A)) {m : ℕ} (hm : 2 ≤ m) :\n    Mahler.MassHypotheses n N m (euclideanStripDomain A)\n      (euclideanSpecialMap A m) (specialLeadingPolynomial A m) := by\n  have hm0 : 0 < m := by omega\n  refine ⟨hn,by omega,?_,?_,differentiableOn_euclideanSpecialMap A m,?_,\n    specialLeadingPolynomial_homogeneous A m,?_,euclideanSpecial_remainder A m,?_⟩\n  · intro z hz\n    by_contra h\n    push Not at h\n    have he : specialLeadingMap A m (euclideanCoordinates z) = 0 := by\n      funext j\n      simpa only [specialLeadingPolynomial_eval,euclideanCoordinates,PiLp.coe_continuousLinearEquiv,Pi.zero_apply] using! h j\n    have hz0 := (specialLeadingMap_eq_zero_iff A hA hm0 _).mp he\n    exact hz (euclideanCoordinates.injective (hz0.trans (map_zero _).symm))\n  · intro R hR hR1\n    exact euclideanSpecial_compact_closure A hA hm0 hR hR1"
+          },
+          "supporting_locators": [
+            {
+              "path": "lean/OAI/Analysis/Mahler/MassTarget.lean",
+              "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+              "bytes": 2407,
+              "git_blob_sha1": "c97437040a367116cb04067b32a16e34db84d3c2",
+              "sha256": "01e57540d5c45e9e507bc81593a66fda96c20e95c262b9bddfe4cfd4b1369112",
+              "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\MassTarget.lean",
+              "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/MassTarget.lean",
+              "declaration": "OAI.Mahler.MassHypotheses",
+              "line_start": 14,
+              "line_end": 33,
+              "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/MassTarget.lean#L14-L33",
+              "explanation": "The structure has exactly geometric/analytic hypotheses. massIntegral and MassBoundTarget are separately defined at lines 35-51."
+            },
+            {
+              "path": "lean/OAI/Analysis/Mahler/EuclideanSpecialMap.lean",
+              "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+              "bytes": 5228,
+              "git_blob_sha1": "ae986cfb6716e6ee011c2db32e8bed96575a8e91",
+              "sha256": "77068c0e5dce13e0fcec035dbfddefa8673fb5fa2fc1f09ab9f2857b9dbd2809",
+              "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\EuclideanSpecialMap.lean",
+              "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/EuclideanSpecialMap.lean",
+              "declaration": "OAI.SymmetricMahler.euclideanSpecial_remainder",
+              "line_start": 31,
+              "line_end": 48,
+              "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/EuclideanSpecialMap.lean#L31-L48",
+              "explanation": "Transports an actual Big-O Taylor remainder through the PiLp continuous linear equivalence in both domain and codomain, controlling the Euclidean norm powers."
+            },
+            {
+              "path": "lean/OAI/Analysis/Mahler/SpecialSourceMass.lean",
+              "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+              "bytes": 2667,
+              "git_blob_sha1": "f2ab1771d017b1dc5db1dc28ffcfb0c9d8f6e67a",
+              "sha256": "5ca6f729dd257889d261226f9d97acc99f33acade382286344e6f2ddfc9916a0",
+              "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\SpecialSourceMass.lean",
+              "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/SpecialSourceMass.lean",
+              "declaration": "OAI.SymmetricMahler.euclideanSpecial_positive_regular_nonzero; special_regular_mass_of_source_flux_limit",
+              "line_start": 11,
+              "line_end": 37,
+              "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/SpecialSourceMass.lean#L11-L37",
+              "explanation": "Positive-level noncriticality is supplied for the special map; a general Sard theorem is not a remaining argument to the endpoint."
+            }
+          ]
+        },
+        {
+          "id": "M6",
+          "claim": "The final symmetric-body endpoint discharges the homogeneous-flux premise rather than retaining it as an external hypothesis.",
+          "primary_locator": {
+            "path": "lean/OAI/Analysis/Mahler/MainTheorem.lean",
+            "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+            "bytes": 882,
+            "git_blob_sha1": "d5c55dee7e95a66312217de1f875ea8cb7508e62",
+            "sha256": "ff4222bb24b6b48e571c63a481f6cbe430ce68f8c707da065c2117d7e94f058e",
+            "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\MainTheorem.lean",
+            "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/MainTheorem.lean",
+            "declaration": "OAI.SymmetricMahler.symmetric_mahler",
+            "line_start": 12,
+            "line_end": 22,
+            "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/MainTheorem.lean#L12-L22",
+            "explanation": "The theorem assumes only positive dimension and a compact, convex, origin-symmetric body with nonempty interior. It invokes the conditional finite-strip reduction and supplies the numerical homogeneous value using the concretely constructed MassHypotheses.",
+            "excerpt_ranges": [
+              [
+                12,
+                22
+              ]
+            ],
+            "excerpt": "theorem symmetric_mahler {n : ℕ} (hn : 1 ≤ n)\n    {K : Set (Fin n → ℝ)} (hK : IsCompact K) (hconv : Convex ℝ K)\n    (hsym : ∀ x ∈ K, -x ∈ K) (hint : (interior K).Nonempty) :\n    (4:ℝ)^n/(Nat.factorial n:ℝ) ≤\n      (volume K).toReal*(volume (coordinatePolar K)).toReal := by\n  cases n with\n  | zero => omega\n  | succ k =>\n    apply symmetric_mahler_from_special_homogeneous_values k _ hK hconv hsym hint\n    intro N A hA m hm\n    exact (euclideanSpecial_massHypotheses A (by omega) hA hm).homogeneousSphereFlux_value"
+          },
+          "supporting_locators": [
+            {
+              "path": "lean/OAI/Analysis/Mahler/HomogeneousMassAssembly.lean",
+              "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+              "bytes": 1991,
+              "git_blob_sha1": "3d3d897e72635fe4cb1f4382b9173749c592c3c5",
+              "sha256": "adeef41de850349f05b61f71904c9ffe42ce974385ef778829f6a33da39e4e46",
+              "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\HomogeneousMassAssembly.lean",
+              "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousMassAssembly.lean",
+              "declaration": "OAI.SymmetricMahler.symmetric_mahler_from_special_homogeneous_values",
+              "line_start": 26,
+              "line_end": 41,
+              "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousMassAssembly.lean#L26-L41",
+              "explanation": "This intermediate theorem is conditional on the special-family homogeneous flux values and converts them into coordinate small-sphere limits."
+            },
+            {
+              "path": "lean/OAI/Analysis/Mahler/HomogeneousEndpoint.lean",
+              "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+              "bytes": 2572,
+              "git_blob_sha1": "882afa1e3d92d2fbfe07cf067fcef06ffb958183",
+              "sha256": "b1c23ab0ded1757208ef0756f1af7dfec22a6231c109bea2caa9f1b9403d3169",
+              "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\HomogeneousEndpoint.lean",
+              "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousEndpoint.lean",
+              "declaration": "OAI.Mahler.MassHypotheses.homogeneousSphereFlux_value",
+              "line_start": 47,
+              "line_end": 55,
+              "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousEndpoint.lean#L47-L55",
+              "explanation": "Positive dimensions split into the one-complex-dimensional circle calculation and the higher-dimensional transgression/FTC endpoint."
+            },
+            {
+              "path": "lean/OAI/Analysis/Mahler/ActualFiniteStrips.lean",
+              "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+              "bytes": 3841,
+              "git_blob_sha1": "12a2bd80e5feeb7716747f91c189bf1edf2a1887",
+              "sha256": "db8fd13fcdf965677174dbd1b066a74cad74bfebccce282ce8c2ba5642eed9a7",
+              "local_path": "C:\\Users\\robin\\math_ai\\tmp\\lean-study\\source\\lean\\OAI\\Analysis\\Mahler\\ActualFiniteStrips.lean",
+              "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/ActualFiniteStrips.lean",
+              "declaration": "OAI.SymmetricMahler.coordinatePolar",
+              "line_start": 62,
+              "line_end": 64,
+              "locator": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/ActualFiniteStrips.lean#L62-L64",
+              "explanation": "The final polar is the literal coordinate-pairing polar {p | forall v in K, sum p_i*v_i<=1}."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "discarded_candidates": [
+    {
+      "candidate": "PiExponent.Main",
+      "reason": "Inspected endpoint. Its proof is a short connection from AdmissibleMatrixInterpolation.globalInterpolation to eventual rational lower bounds and exponent equality. The substantive geometric/interpolation chain is large and was not followed deeply enough in this subtask; do not present the wrapper as proof-architecture evidence or infer superficiality of the full development."
+    },
+    {
+      "candidate": "TwoPointCorrelations.FinalMain",
+      "reason": "Inspected endpoint is aliases to TwoPointCorrelations theorem names imported from TwoPoint.Main. No internal analytic correlation mechanism was audited here; avoid selecting merely because the claimed theorem is famous."
+    }
+  ],
+  "primary_comparators": [
+    {
+      "id": "P1",
+      "title": "Crouzeix and Palencia, The numerical range as a spectral set (2017)",
+      "url": "https://arxiv.org/abs/1702.00668",
+      "claim_used": "An established comparison proof obtains complete constant 1+sqrt(2) and centers the Cauchy transform of conjugate holomorphic functions. This is a comparison of architecture, not a survey of all Crouzeix proofs.",
+      "accessed": "2026-10-08",
+      "kind": "primary research paper",
+      "derived_words_budget": 200
+    },
+    {
+      "id": "P2",
+      "title": "Mathlib DifferentialForm.Basic, pinned dependency revision",
+      "url": "https://github.com/leanprover-community/mathlib4/blob/d13f23b723b8a846827a245b89c10fc7d3f11612/Mathlib/Analysis/Calculus/DifferentialForm/Basic.lean",
+      "lines": [
+        14,
+        40,
+        61,
+        74,
+        229,
+        237
+      ],
+      "claim_used": "Normed-space forms are functions to continuous alternating maps; extDeriv is alternatized actual Frechet derivative; d squared is already in Mathlib under smoothness. The project contributes ordered wedge/transgression/integration connections, not extDeriv itself.",
+      "kind": "primary library source"
+    },
+    {
+      "id": "P3",
+      "title": "Mathlib Polynomial.Sequence, pinned dependency revision",
+      "url": "https://github.com/leanprover-community/mathlib4/blob/d13f23b723b8a846827a245b89c10fc7d3f11612/Mathlib/Algebra/Polynomial/Sequence.lean",
+      "lines": [
+        90,
+        96
+      ],
+      "claim_used": "span_degreeLT already states that degree-indexed polynomials with unit leading coefficients span the polynomial degree filtration. DirectCrouzeix.DomainCore 119-151 adapts this library result to matrix coefficients; that adaptation is not a new basis theorem.",
+      "kind": "primary library source"
+    },
+    {
+      "id": "P4",
+      "title": "Mathlib MeasureTheory.Integral.DivergenceTheorem, pinned dependency revision",
+      "url": "https://github.com/leanprover-community/mathlib4/blob/d13f23b723b8a846827a245b89c10fc7d3f11612/Mathlib/MeasureTheory/Integral/DivergenceTheorem.lean",
+      "claim_used": "Existing Bochner-integral divergence machinery is explicitly imported by Mahler.ChartStokes. The sphere and exact-form locality interfaces reviewed here are project constructions layered on that integration infrastructure.",
+      "kind": "primary library source"
+    },
+    {
+      "id": "P5",
+      "title": "Mathlib DifferentialForm.Basic online documentation",
+      "url": "https://leanprover-community.github.io/mathlib4_docs/Mathlib/Analysis/Calculus/DifferentialForm/Basic.html",
+      "claim_used": "Online documentation corroborates the form representation and derivative API. Exact revision claims use P2 rather than the moving documentation.",
+      "accessed": "2026-10-08",
+      "kind": "official library documentation",
+      "derived_words_budget": 200
+    }
+  ]
+}

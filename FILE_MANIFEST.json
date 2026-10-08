@@ -1,0 +1,1291 @@
+{
+  "algorithm": "sha256",
+  "release": "v1.0.0",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 34,
+      "sha256": "f366cddb2f7b38cc6e511cf44a787164d16c21504e0f27d576600a14dfc43899"
+    },
+    {
+      "path": ".github/workflows/review.yml",
+      "bytes": 3827,
+      "sha256": "bc32de2321814bc9d94f9587206436dc3ad83ad0d5d12fb76ecc3580d0850668"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 424,
+      "sha256": "9d56a1fe3e55e8b2fd60bbfce4dd8069fb06115d051fc51439f2845849079871"
+    },
+    {
+      "path": "abstract.tex",
+      "bytes": 1527,
+      "sha256": "acca137f54da4780086cb4f10c3017ee9d080475525ab854bf5ca43486eedb47"
+    },
+    {
+      "path": "audit/artifact-manifest.json",
+      "bytes": 53309,
+      "sha256": "dcce96cd519390558ab8299c8ccbd7a2d6797d392b44fb97a7d64f3c28ff8a05"
+    },
+    {
+      "path": "audit/bibliography-build.log",
+      "bytes": 1059,
+      "sha256": "ad9cbe257233aba0351ba2ee22bfb4d96b2153185fbc0d37ed8609e7160a6a21"
+    },
+    {
+      "path": "audit/build-pass-1.log",
+      "bytes": 15663,
+      "sha256": "aead12146cd195e7e376861cc832b13c84ebcfd545d2d9fc64b8c67e8cfa2ef0"
+    },
+    {
+      "path": "audit/build-pass-2.log",
+      "bytes": 150,
+      "sha256": "f7d00a8223c4fda3f826659bd46f3757342af248a5a12c9312c5916c4558b917"
+    },
+    {
+      "path": "audit/build-pass-3.log",
+      "bytes": 14149,
+      "sha256": "9d9eaf272685d8526f94df8924be3209a946c75724f311e641011a361a92ed16"
+    },
+    {
+      "path": "audit/build-pass-4.log",
+      "bytes": 9235,
+      "sha256": "20e84e3c6085715d67fe0d2893e3e5147c35c1d6dcf8a4efe2bbeb85190cbbdc"
+    },
+    {
+      "path": "audit/build.json",
+      "bytes": 765,
+      "sha256": "afd7d9868e2d504683a1acae90528c293de379ac041812a90332c69370b489ec"
+    },
+    {
+      "path": "audit/citation-verification.json",
+      "bytes": 38469,
+      "sha256": "5e00636028a4a4ee8d013feef31c5cb9d6ffc1978712299fe6b094f2d1be11be"
+    },
+    {
+      "path": "audit/cross-review-analysis.json",
+      "bytes": 19259,
+      "sha256": "78ca08a58dd2b189707f600ff1f20828fed722b865a44a4e44f290dee082e8e5"
+    },
+    {
+      "path": "audit/cross-review-architecture.json",
+      "bytes": 25834,
+      "sha256": "4e3ae0fc7062af60b90f98d54302137965b78d832a90bb40153d5dadabd21cf9"
+    },
+    {
+      "path": "audit/cross-review-discrete.json",
+      "bytes": 43218,
+      "sha256": "5d70f3306f8de21d0c2096109c8ec36c7a3c58d032adc6986815ebd75306fd79"
+    },
+    {
+      "path": "audit/final-audit.json",
+      "bytes": 8209,
+      "sha256": "27b0ee5b280b73e951d2b3b5d39eb7c2f521d57fc2865aa802f177a47dbe3d34"
+    },
+    {
+      "path": "audit/final-reader-check.json",
+      "bytes": 7829,
+      "sha256": "ff35c112f089134afdc6d4319b9261cf25966d414560138c4f75f8bb098269e8"
+    },
+    {
+      "path": "audit/full-manuscript-review.json",
+      "bytes": 17832,
+      "sha256": "53db7de6ca0f89c6637a02687611055cafd4b14ef10e216689dcf21cc7b31c63"
+    },
+    {
+      "path": "audit/latex-final.log",
+      "bytes": 30454,
+      "sha256": "9a98348b66ecfaea82d44156ea286e1be543c1a683f100240ceb33e3931c805f"
+    },
+    {
+      "path": "audit/package-reproduction.json",
+      "bytes": 772,
+      "sha256": "4bc43aaf22c2c17d0cb421480ab66a1328ff1e4cf3b71d4209e4976fbb59fd7c"
+    },
+    {
+      "path": "audit/prior-comparison-check.json",
+      "bytes": 8405,
+      "sha256": "18e6c4661b33fe597482559bf6fd5178e7dd78c46f6853de7e6ff4c07e5f6f5c"
+    },
+    {
+      "path": "audit/references-rendered.bbl",
+      "bytes": 15678,
+      "sha256": "c9d4fed39c5446582186131374ab0d2a1b9fb6990130ce3afa42a1971a425003"
+    },
+    {
+      "path": "audit/review-resolution.json",
+      "bytes": 4085,
+      "sha256": "8a43b6df0cc5a3d2d7c2dc509ec8d7a1dcebdb4ca77e8ae4d9e4bdc14ddda707"
+    },
+    {
+      "path": "audit/source-integrity.json",
+      "bytes": 40462,
+      "sha256": "49e798f96f333b9685a4c0d6d6eff320db10d316825b8b07ec9928e46d7984d8"
+    },
+    {
+      "path": "audit/visual-review.json",
+      "bytes": 785,
+      "sha256": "b63deb467bac28b187ebc1487fb27a3ca0f0f43d681123d9e408a68abd7a50c2"
+    },
+    {
+      "path": "cases-analysis.tex",
+      "bytes": 16117,
+      "sha256": "d1a9afb73e521c4fe6e9ea8042509f8b80786b5bc60f4b9d9ac5231114309c7c"
+    },
+    {
+      "path": "cases-architecture.tex",
+      "bytes": 12083,
+      "sha256": "4ce1fc4493c6b29a5a2216e9a51846cf3f5350b41731d44b224dd3b08e5c8840"
+    },
+    {
+      "path": "cases-discrete.tex",
+      "bytes": 16107,
+      "sha256": "6a5122f133626a9a7950782c2e15d0b81cb6e406d5e6f86db1226893ff436976"
+    },
+    {
+      "path": "cases.tex",
+      "bytes": 431,
+      "sha256": "5c3c6e59a9405d9fcac2712fee483582f0cbf1a79a05b6c11bf5aa4af95e8657"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 1377,
+      "sha256": "8858cfa6d3f2895498fc72dfe84a5c42cb75d0cc572d9b75771fc488046aacf8"
+    },
+    {
+      "path": "discussion.tex",
+      "bytes": 5866,
+      "sha256": "614516b7a2af3da0cf59e9e3b501a4ff84343065c73842bb08543bfbe7fe8287"
+    },
+    {
+      "path": "introduction.tex",
+      "bytes": 4021,
+      "sha256": "6d8d741c4980fa718fc12fe4f394e2e29f04516c074cf636159551b44cca0dae"
+    },
+    {
+      "path": "lean-proof-architecture.pdf",
+      "bytes": 548234,
+      "sha256": "6cd797cd0c6bb3dbbc8c82bdf253053917553f0a9ccda0af64ffc16573123dec"
+    },
+    {
+      "path": "LICENSE-CODE",
+      "bytes": 1234,
+      "sha256": "32a934139e910f84d2061eebf8703a498b5d052a98bd0d8e60dff78c784f1645"
+    },
+    {
+      "path": "main.tex",
+      "bytes": 1715,
+      "sha256": "3ca141eb826dbfa01d6c119d2eb52143970de5a759566f63bf9a94ea30bb7b40"
+    },
+    {
+      "path": "method.tex",
+      "bytes": 5912,
+      "sha256": "4bc90c6d949625c387289eafb20b6aa084feb7b2468ec40d2bcfa63c05bd8f11"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5986,
+      "sha256": "e50599405fed8e6230a19c11868f099483c6c8d2ab29fb6264af5916fdf6ba42"
+    },
+    {
+      "path": "README.txt",
+      "bytes": 3145,
+      "sha256": "4015f423388eb5850e0e959f8ad5ea0b7205c24c048a62b17df9e5016a4be207"
+    },
+    {
+      "path": "references.bib",
+      "bytes": 14729,
+      "sha256": "09c53753277ec2b32f94f657ee60aeac34c89951ef3c32204935b9483d726460"
+    },
+    {
+      "path": "reproduce/assemble_references.py",
+      "bytes": 9239,
+      "sha256": "3e6a446e1113bc0333557e21f31dda7f67ee666d5004bf0dbe2baf2b389aa25a"
+    },
+    {
+      "path": "reproduce/build.py",
+      "bytes": 2298,
+      "sha256": "ad63a18fad9d69b54cf78e5a84fed4feef8179eccd4020ea7033a64dfb1ecccb"
+    },
+    {
+      "path": "reproduce/check_examples.py",
+      "bytes": 2501,
+      "sha256": "86415c5bc467092f0a999096f7e0334f6392cb21a3836c35d6eb13d970d7f00c"
+    },
+    {
+      "path": "reproduce/InterfaceExamples.lean",
+      "bytes": 2547,
+      "sha256": "c12b07d8b7ee9619f5209d85953d6fc81a056717d8fb1fcabebdc46f7285ee66"
+    },
+    {
+      "path": "reproduce/package_review.py",
+      "bytes": 2608,
+      "sha256": "c1883b23dd4e20cb2cdd18f2f13e9750717dcbc9907829cd21a21a8d99543805"
+    },
+    {
+      "path": "reproduce/render_review.py",
+      "bytes": 1185,
+      "sha256": "f1b6927a0284f00bd6a679a0a8879fb7eee905bd7d82cffe33483e93447b9da8"
+    },
+    {
+      "path": "reproduce/verify_examples.py",
+      "bytes": 1915,
+      "sha256": "184dd1f44a3495642b7109ee3e840b4dfba37905b7517aac4abcb379685dc7fe"
+    },
+    {
+      "path": "reproduce/verify_manuscript.py",
+      "bytes": 4455,
+      "sha256": "3c35693cc75ef21fc127eee8a3f950210d6e76c0252b751cf64efcb03bf8ff91"
+    },
+    {
+      "path": "reproduce/verify_sources.py",
+      "bytes": 1135,
+      "sha256": "20ccbe42eca87411f875095a4e5ec0efc4e26a492d4a5eaced4b9468421e0bb7"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 193,
+      "sha256": "623f19ec046de9bd7f78ed98c83329b8e97a4f9e90e8dcb1a200f95ae0961428"
+    },
+    {
+      "path": "research/analysis/additional-prior-references.json",
+      "bytes": 10513,
+      "sha256": "e72cb9cca4308e58ff31f8f660f870438c38a3c1ffa0535e4eb2f85004465a6a"
+    },
+    {
+      "path": "research/analysis/findings.json",
+      "bytes": 75470,
+      "sha256": "d0afaec70beabf8d4c158e0cbcd539cb1bfda0a924fa753c71e7644c519c748c"
+    },
+    {
+      "path": "research/analysis/primary-library-manifest.json",
+      "bytes": 1227,
+      "sha256": "ada8d73a11ddba5cc4027651efc19ed14ee5279aa7d3b573405a17f8d61d3c6c"
+    },
+    {
+      "path": "research/analysis/reader-notes.txt",
+      "bytes": 18119,
+      "sha256": "997c77ed9b9d11bd4822f6e867db318f0ece69a5faddd8c36944866645cf12e3"
+    },
+    {
+      "path": "research/analysis/source-manifest.json",
+      "bytes": 25846,
+      "sha256": "92d94b00ea71ca9b0c3d5854591edb781a46a7879900bbacf7427fa559b564d0"
+    },
+    {
+      "path": "research/architecture/audit_sources.py",
+      "bytes": 3387,
+      "sha256": "2800424f9f5619a745c39534257dc0f2e623f0ff8e0c9749f356eb2297738164"
+    },
+    {
+      "path": "research/architecture/comparator-source-audit.json",
+      "bytes": 1111,
+      "sha256": "cd902009ceb1a72ccfd33ac4335edadf7d6ab21b92e9d68a2e86fff7c3f8412a"
+    },
+    {
+      "path": "research/architecture/findings.json",
+      "bytes": 17904,
+      "sha256": "a17b009916973aecc65dbf96eb124c859630c3e8108036bc076d83a793d30f8d"
+    },
+    {
+      "path": "research/architecture/notes.txt",
+      "bytes": 8564,
+      "sha256": "d27d9b4930b3896fcf854db84026eb6f5d3cfb92b22711490a642736a526b00a"
+    },
+    {
+      "path": "research/architecture/references.json",
+      "bytes": 15258,
+      "sha256": "4dab3e730d039c706cdecd11bb4582c6293b8204b4ca6dfa0ab2e9bcd972f521"
+    },
+    {
+      "path": "research/architecture/source-audit.json",
+      "bytes": 61039,
+      "sha256": "892d1669186a7b2645964b364c1aae17a26cd5e181237f85d5112305b4d0fd32"
+    },
+    {
+      "path": "research/bibliography/10_1007_978_3_030_53518_6_16.json",
+      "bytes": 18678,
+      "sha256": "64dbb6215a2959692c75e66bfc7766a0a59f5549f86f0c730cdbee64f27bf191"
+    },
+    {
+      "path": "research/bibliography/10_1007_978_3_030_79876_5_37.json",
+      "bytes": 15929,
+      "sha256": "69faa0dfda34cd3bf05a319ef9de30f53af1c2dc2cb975454d2990e85d2e3f87"
+    },
+    {
+      "path": "research/bibliography/10_1007_978_3_642_03359_9_23.json",
+      "bytes": 12303,
+      "sha256": "0b5a155051b06f5a30b5b8ad8dac0df27fa4166cfbd38e97a64d3f94f0a2b04f"
+    },
+    {
+      "path": "research/bibliography/10_1007_978_3_642_22792_9_5.json",
+      "bytes": 13637,
+      "sha256": "707df65727ebf0dbed2b6240aec65b377034837d6a863baedea2ccb640ad776e"
+    },
+    {
+      "path": "research/bibliography/10_1007_978_3_642_39634_2_14.json",
+      "bytes": 19687,
+      "sha256": "ac7c9533a124ed16ae8e3f2d1ddd9ca5c3d08799aaebf2964a385e7fdef3f5c8"
+    },
+    {
+      "path": "research/bibliography/10_1007_BFb0060623.json",
+      "bytes": 2935,
+      "sha256": "f06626549fbacfbb6a6f2260f312f76b693337edc734c4ae04340ba26e970da6"
+    },
+    {
+      "path": "research/bibliography/10_1016_j_scico_2007_09_002.json",
+      "bytes": 11806,
+      "sha256": "98882161c703a0b126cdd765ee110876edf4369aa9c0b13e61c44d83ee1bc84b"
+    },
+    {
+      "path": "research/bibliography/10_1017_fmp_2017_1.json",
+      "bytes": 17900,
+      "sha256": "9a9b93b86853debc7893a483fa3e8f0ee35c7e97afbaf0d9ebcaf956fb0b92de"
+    },
+    {
+      "path": "research/bibliography/10_1080_10586458_2021_1983489.json",
+      "bytes": 8428,
+      "sha256": "9bc149536e6091ed293e2138792b2d66a33053b455ec7827e7ed7f64974ac89f"
+    },
+    {
+      "path": "research/bibliography/10_1090_bull_1831.json",
+      "bytes": 10438,
+      "sha256": "5fa12e65fb68391912fbf9fca91caf163982f7d6093b599f7b526609e99d781a"
+    },
+    {
+      "path": "research/bibliography/10_1098_rsta_2005_1650.json",
+      "bytes": 16343,
+      "sha256": "94c1c788d7fbf5cfcf47fa4be6c0b8aac39f46fc61c2d695e76c8482ddad0fc8"
+    },
+    {
+      "path": "research/bibliography/10_1137_17M1116672.json",
+      "bytes": 6249,
+      "sha256": "588722677319ed69349dd292eb585707bcbcf17b2fae85020bf228c21f61ca77"
+    },
+    {
+      "path": "research/bibliography/10_1145_1480881_1480894.json",
+      "bytes": 11319,
+      "sha256": "0e037a97bbf6a5edae5fe0805928a090657f36cecda48b78794d924be647f894"
+    },
+    {
+      "path": "research/bibliography/10_1145_1538788_1538814.json",
+      "bytes": 11608,
+      "sha256": "ed4c9d78ef90ed1097563372808e5971f4646fdc8bcfda7418b2d0aed2b33b05"
+    },
+    {
+      "path": "research/bibliography/10_1145_2535838_2535841.json",
+      "bytes": 9197,
+      "sha256": "cde3a28edfffeb3502f0129da74783bcb40937ab8ff56e59f61666e0fd1b0b96"
+    },
+    {
+      "path": "research/bibliography/10_1145_3372885_3373824.json",
+      "bytes": 15342,
+      "sha256": "e98270de4a76ab7db229d3c519725384ad96531243fefae814a197d5e391d19d"
+    },
+    {
+      "path": "research/bibliography/10_1145_3372885_3373830.json",
+      "bytes": 15646,
+      "sha256": "510d6c1a4d022b71665a8d49f4d05eb00518e997b2386c9bb9983d2131f2d148"
+    },
+    {
+      "path": "research/bibliography/10_1145_3729294.json",
+      "bytes": 21628,
+      "sha256": "12223469c55c33318426b7ca7e6b769fa13eec716ce363e5d80dae024d751d16"
+    },
+    {
+      "path": "research/bibliography/10_1353_ajm_2011_0027.json",
+      "bytes": 3602,
+      "sha256": "5937efb4444b29e242688ea9d81a0d9a649dc838ca97a01b23c0e76d5ee6825c"
+    },
+    {
+      "path": "research/bibliography/10_2168_LMCS_8_1_2_2012.json",
+      "bytes": 18091,
+      "sha256": "13c9819e2eaaa1d636d543dfb508d06dbb3d857d5dd3813f0e5aa694af7caf64"
+    },
+    {
+      "path": "research/bibliography/10_4230_LIPIcs_ITP_2022_23.json",
+      "bytes": 1862,
+      "sha256": "2cdc27a6f56f2f20528c1c797678318783e30dcc1c7ee681711f0698a6ec8078"
+    },
+    {
+      "path": "research/bibliography/10_4230_LIPIcs_ITP_2022_4.json",
+      "bytes": 1753,
+      "sha256": "2f11f42eb44413b4ad8b40a90f53f876b64517a1cb86ba99bef64978e346e1dc"
+    },
+    {
+      "path": "research/corpus-inventory.json",
+      "bytes": 63448,
+      "sha256": "11745b53cf26f029368e6fab519b8499d3c2f53e0e8bdc39f836670d1afe4630"
+    },
+    {
+      "path": "research/discrete/case-studies.json",
+      "bytes": 15688,
+      "sha256": "bc2f18cf6af8711539e63182784b56ded0675f6e636f0726e60a85343b027a43"
+    },
+    {
+      "path": "research/discrete/evidence.json",
+      "bytes": 87976,
+      "sha256": "6b1a71162b68711111fe3e7910c89cfa18910471215aca2702609aa68b4ace9a"
+    },
+    {
+      "path": "research/discrete/extract_evidence.py",
+      "bytes": 7354,
+      "sha256": "69f80207c4092cdd2ec3bd5dbc6433113e2c9d2e95dea83cfaab5c01d2cf0c04"
+    },
+    {
+      "path": "research/discrete/findings.txt",
+      "bytes": 28567,
+      "sha256": "dbbc1ec948055d8588525bde33a402e4ab5d55ee16e742c0652d3b8ad52d859b"
+    },
+    {
+      "path": "research/discrete/source-manifest.json",
+      "bytes": 8998,
+      "sha256": "b9063426492075fd8ba9fbd11c41bd57d9485d4b4ebac81fd1dbbc7e06e2954e"
+    },
+    {
+      "path": "research/source/openai-math/lean/ComparatorChallenges/CartierChartCompactnessSupport.json",
+      "bytes": 390,
+      "sha256": "242cadf7dd3f4675b1db7043075221e2044ddc7786837ed97971138a31b62c0f"
+    },
+    {
+      "path": "research/source/openai-math/lean/ComparatorChallenges/CartierChartCompactnessSupport.lean",
+      "bytes": 1365,
+      "sha256": "05de6915fb577137d01be2fcaab5ebcc252d80f628ffb913bea4bef87b54ea64"
+    },
+    {
+      "path": "research/source/openai-math/lean/ComparatorChallenges/CharacterVarietiesAllSeamsSupport.json",
+      "bytes": 429,
+      "sha256": "c6bc7eb2e8d770e64482e642a8a6f25f020d73a0df5927a0b6b03b835798fe8b"
+    },
+    {
+      "path": "research/source/openai-math/lean/ComparatorChallenges/CharacterVarietiesAllSeamsSupport.lean",
+      "bytes": 900,
+      "sha256": "ebc3129bfb5ef4a47e0de1d89f0f406ef6603df32355bdfbb9ce278627c1a1f1"
+    },
+    {
+      "path": "research/source/openai-math/lean/ComparatorChallenges/DirectCrouzeix.json",
+      "bytes": 371,
+      "sha256": "26346f0920c9862517f30c4c3a016a5aea03913cca5c151dd1a26eee3e7a9f82"
+    },
+    {
+      "path": "research/source/openai-math/lean/ComparatorChallenges/DirectCrouzeix.lean",
+      "bytes": 1353,
+      "sha256": "6aff79e03dee428cf5a677dba39da0fe14fe3d9a989a7e6d4bc0f3bf2a148d22"
+    },
+    {
+      "path": "research/source/openai-math/lean/ComparatorChallenges/MahlerConjecture.json",
+      "bytes": 328,
+      "sha256": "fdf11d50fc36b5ae3d13aeea074aa6e40071c6bacd8de44fc399ac9ac9251959"
+    },
+    {
+      "path": "research/source/openai-math/lean/ComparatorChallenges/MahlerConjecture.lean",
+      "bytes": 585,
+      "sha256": "40718172f61fe01f6c96b4c28324a1d76491eb84af4776d8507d8cdcb3120ea0"
+    },
+    {
+      "path": "research/source/openai-math/lean/ComparatorChallenges/README.md",
+      "bytes": 1060,
+      "sha256": "2ed835b3c59709be6feffe0dec54fc9783fb26aa22d35517475a82ef5199c555"
+    },
+    {
+      "path": "research/source/openai-math/lean/ComparatorChallenges/SurfaceConeCandidateSupport.json",
+      "bytes": 357,
+      "sha256": "dce1e6a3d800cb5b61ab13b7dd5cd76566960b963678f1dd238f922fcc4801f1"
+    },
+    {
+      "path": "research/source/openai-math/lean/ComparatorChallenges/SurfaceConeCandidateSupport.lean",
+      "bytes": 494,
+      "sha256": "c75e9be97bcb12a6c289b6652337fc32398064fe8bef7cd910110a9d96fae56e"
+    },
+    {
+      "path": "research/source/openai-math/lean/ComparatorChallenges/TraceIdealTransportSupport.json",
+      "bytes": 1518,
+      "sha256": "0d717e97d8b472826a27af8c44a68da8bc92261020684c08aae97265c9fe3173"
+    },
+    {
+      "path": "research/source/openai-math/lean/ComparatorChallenges/TraceIdealTransportSupport.lean",
+      "bytes": 10021,
+      "sha256": "d6c228b57bb7df92e03b09d12d23e0d3d9dda330a165e986fecfc2aabd4a2b05"
+    },
+    {
+      "path": "research/source/openai-math/lean/docs/087.md",
+      "bytes": 2474,
+      "sha256": "85fdda35b4d2c609d330331cde9972b51dcda6127eef31d42e451c1bb644b0eb"
+    },
+    {
+      "path": "research/source/openai-math/lean/docs/325.md",
+      "bytes": 2508,
+      "sha256": "e44548f4f54b1e408506529aac102b3a2bfcf930ddb5145afb4b193a97dee54b"
+    },
+    {
+      "path": "research/source/openai-math/lean/formalization.yaml",
+      "bytes": 79482,
+      "sha256": "5a8a164259591208886cd018416e61552665265ec9e20cff636f9d51117c2278"
+    },
+    {
+      "path": "research/source/openai-math/lean/lake-manifest.json",
+      "bytes": 14622,
+      "sha256": "cf6105a25d9dca2f166b241d9191bd12c7e13305890dc9c4d0952351cccc0794"
+    },
+    {
+      "path": "research/source/openai-math/lean/lakefile.lean",
+      "bytes": 15457,
+      "sha256": "4cca977ebece444b6c999d99755c1ad3c93119bafc127ea761f7f703c7279e74"
+    },
+    {
+      "path": "research/source/openai-math/lean/lean-toolchain",
+      "bytes": 25,
+      "sha256": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b"
+    },
+    {
+      "path": "research/source/openai-math/lean/LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CartierSections/ChartCompactness.lean",
+      "bytes": 2350,
+      "sha256": "c51e40d84349c8cbc26f15a3444e250134090a201ab8da7d23b3a1fdfbc3a50a"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/AtomicFrames.lean",
+      "bytes": 9586,
+      "sha256": "c18e42ad63992b03784a72eb5d116891f91c20a9e6cd83e16bd727d38dec6b17"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/AtomicGallery.lean",
+      "bytes": 30855,
+      "sha256": "83b06889c39882e36f9f2bba052ab4fc5e6417122d483b9a1ac9c187ae8c7437"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/BoundaryEnumeration.lean",
+      "bytes": 15744,
+      "sha256": "6c8de419da0e3eb6a5c55f89628d081b80cb989bff2225c20d72ed25785b749f"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/BoundarySurgery.lean",
+      "bytes": 31693,
+      "sha256": "cacb010e82dd811b216bb72aaaf76ebd4efe2b0a1cb30a151a1eda66fee2d17d"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/DoubledStrips.lean",
+      "bytes": 25459,
+      "sha256": "02b2a07bf24fa256f8de4e4c2d5017a6af04b10b391669e741a8d3e339f48b39"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/FreshGallery.lean",
+      "bytes": 41798,
+      "sha256": "03bc6dc8412236efb81ab1fb7555f3ff4e2a2b02c9904b256a12b4328b48d02d"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/GraftCircuits.lean",
+      "bytes": 45522,
+      "sha256": "b257bf1fc75bf0d4c42624391d4b9dc8ec54016b0f108d9d8490cef61d3c530f"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/Grafting.lean",
+      "bytes": 60512,
+      "sha256": "50d3fdaa1ffb7fddc4220578ea2644eb220d9166ee449e8171ae82b9411d20a8"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/GraftValues.lean",
+      "bytes": 21120,
+      "sha256": "0f423745f885d9665ff35d8d4b66951369d69b6f470cd347219a53e21165391e"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/MarkedDiagram.lean",
+      "bytes": 6902,
+      "sha256": "3191c4bbd5348c802eabe3c3c7b3ca01c7c3926d80aae5af85dcf45b7109b843"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/PortSurgery.lean",
+      "bytes": 25851,
+      "sha256": "f8457fca8ea3fe538b37ee8193385b729a75e5243454d7d65751f34d5ec71bed"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/RefinedDiagram.lean",
+      "bytes": 31815,
+      "sha256": "968d5a68cf0487fd29a48b074a4ba8b3fd9a0a3feab0b8f277cafba844907006"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/StripFacets.lean",
+      "bytes": 40122,
+      "sha256": "83ff80de6bf61e89abfd8ffc618e7227b9d10eb4d707a225cf59a33029c0ecc9"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/StripForest.lean",
+      "bytes": 22763,
+      "sha256": "97ff940793081084281700fbea546e6d749c7b95b488b0b9527e8ec490a82178"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BandCut.lean",
+      "bytes": 35890,
+      "sha256": "ebe9d957cc8a91f223a3fe09b66cff4aa6df869e7424fbee6aa366dbc2ce8618"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BandCutTopology.lean",
+      "bytes": 13262,
+      "sha256": "be87cf0c88a2c31353d0caff8654294451d8d8d29ae78d1422b63f470d3bffca"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BandCycles.lean",
+      "bytes": 11538,
+      "sha256": "398444074f4e7593382eb8a36840f450ab5294a9c4e439b51fda29d22b0c8cde"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BandIncidence.lean",
+      "bytes": 22217,
+      "sha256": "dd7d2c5925d600305a367ee020f08708322c25fd2f0e283a6a7a2896c4f04203"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BoundaryBands.lean",
+      "bytes": 15362,
+      "sha256": "695a05daf5bd698f836d8cae8cc056f7624df70a8d9863e33adb08df05106ad2"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BoundaryCycles.lean",
+      "bytes": 21485,
+      "sha256": "c7dc483155d5f61ca1c7bab6c6e4997e2ec90f080d6ec40e4df030e3126f0bf4"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BoundaryFrames.lean",
+      "bytes": 16978,
+      "sha256": "7e2548494bc5cc1e3a93ea90abe2c456c81175eeb6abcaa286a7b0376e0deb77"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/BoundaryReordering.lean",
+      "bytes": 9939,
+      "sha256": "0890150d3f08276bd70dd81559fe7cabd22c982e1b1dc9efcebb5979c2f76f87"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/ComplementaryPatches.lean",
+      "bytes": 40251,
+      "sha256": "9a4296f8f0da290eeb43e492c3a09572a5932ee8f093f2804e9d144f3ed1daf9"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/CornerGauge.lean",
+      "bytes": 12441,
+      "sha256": "0c18bfd3693e4b2c5fb40f2b542a1de619de808252c2f0dbe2c3f527cc28ec0c"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/CutCircleIndex.lean",
+      "bytes": 2778,
+      "sha256": "fd1bba37345bcc08c5d42c412604c656a134c6a89194be77eabb9cb8480d0c37"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/DiskGauge.lean",
+      "bytes": 14084,
+      "sha256": "df63a0038156c23043007bdd52691214122a063909e6ac6ebf3ed8ca311e10e0"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/FlagGalleries.lean",
+      "bytes": 28721,
+      "sha256": "074f36a1e6824e12ac4eb5899c29a37bdb56a1b94ffdaf886edf7a895645efc7"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/Flags.lean",
+      "bytes": 13837,
+      "sha256": "0a5412a7d8bf468799a766580cd66647e299bb94b0f8ffc62ed15db3d0542fcb"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/GeneratorGauge.lean",
+      "bytes": 11834,
+      "sha256": "bd702283534cde3f405705e7767cfa767c040c9a12692a685226d8e4a0ed4d8a"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/Incidence.lean",
+      "bytes": 17101,
+      "sha256": "2fffa90d905943cea29115230b87fcdd93b2aaac3a33137265ad192e03a3a48a"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/MatrixExpressions.lean",
+      "bytes": 9416,
+      "sha256": "ca37156a02617cfb605ca20f2743adb40dc5a094fef4a1d9890e87ccf7eb7d3f"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/MatrixPresentation.lean",
+      "bytes": 7570,
+      "sha256": "d108c8d57e24295c8000ba6162e762a94ba86725b9a005d9058e4586505c2081"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/PatchCycles.lean",
+      "bytes": 26759,
+      "sha256": "9d1fe36c82a24db570b509412a6fb925c96cf38f61a290cad0e573266de00255"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/PortPatches.lean",
+      "bytes": 20024,
+      "sha256": "7fc965a6b2cd6ee4202f888980c28570fa34aea1e429438efd7042e549270295"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/RoutedFamilies.lean",
+      "bytes": 28990,
+      "sha256": "14cd1bab885fc0d6863b342445170b6d08ca9472697f7aaef39463bb2c2d6e5f"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/SplitFlags.lean",
+      "bytes": 16823,
+      "sha256": "e850306aae38bb29a2b5b894c2114f23b065eb80982f59a7f4294e8e0cf6d4f2"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/SurfacePresentation.lean",
+      "bytes": 31793,
+      "sha256": "1030f673451af317691dec29b2ae4a8eb9e6c242e8723966dfccd5124497c5db"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/SurfaceSurgery.lean",
+      "bytes": 10756,
+      "sha256": "3b73867f4099c938af3970ad6048c1d75a7c43ba59d84c33cca70bcb840c4b22"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/VertexFrames.lean",
+      "bytes": 14606,
+      "sha256": "c7815746c9b3e76ccbaab66c637ad58619f848131339c2f913ef17448dda2ae4"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/VertexGauge.lean",
+      "bytes": 16827,
+      "sha256": "d8841ea315aa4ac972f7fea8f22cf9ca8c3c18a6d57ffea2e037544135025971"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/AtomicFlags.lean",
+      "bytes": 2265,
+      "sha256": "0ffacc11715e24abff00fe2e27b40aacb0b1c6ca10620ea96025271093fe30de"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/BandBases.lean",
+      "bytes": 9633,
+      "sha256": "b0acd4e240c053747a46a1967b453db85eb96d38dadd847c19d1053307f6c684"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/BandGauges.lean",
+      "bytes": 13291,
+      "sha256": "a459e8469de543859fd373fed747cad0ec2d63117cbe3187cada9f9893e4b40c"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/BoundaryMarking.lean",
+      "bytes": 2434,
+      "sha256": "d761870376d9ed22f645c3b78900149178c4b8f5f37004ece05dc764c622afac"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/CutFrames.lean",
+      "bytes": 6615,
+      "sha256": "6b23f5a126a70c69c61ab57ee205d963d2b95a7bea50a5df485b65b01b77e463"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/Endpoints.lean",
+      "bytes": 21824,
+      "sha256": "b101181228f53dfeb10fba4c1308c0760ee5d27eff90612487f76b7f83fc3f3b"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/FramedFlags.lean",
+      "bytes": 29950,
+      "sha256": "37d9c2a24e16a7a5fcb54cbaa0d844a6a80d310ba9ea8f57baec4f353cc57ea4"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/FrameTransport.lean",
+      "bytes": 4588,
+      "sha256": "895e212e8024f909736fc7ded72f7565c984e576d5debdd4b2b468fc2e3ff61c"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/Graded.lean",
+      "bytes": 10832,
+      "sha256": "5a6a4b4913f7fdc5147d8eaf6e7dd53bfeeac313425fcb5ad78bf423ac12211c"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/GradeMaps.lean",
+      "bytes": 8072,
+      "sha256": "ae2e9a8e490bc740d0e2907ff8be7cce1a6a6a02b356aafe3cae0562edecc4df"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/InheritedFrames.lean",
+      "bytes": 5301,
+      "sha256": "4336458931b5f76fe1d21a2c7b42499c4528371ea211456fdeadbdd7779e27d5"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/InheritedSeams.lean",
+      "bytes": 8591,
+      "sha256": "3923081de2adf2e058f746f30bf557ff58ba1d228a56081e4ed70a4dcc79a665"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/LocalFrames.lean",
+      "bytes": 1109,
+      "sha256": "c8b19ad28b400486fed9f60792d8deaa91aa4fec3937aa641e311e6fe624fe9f"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MarkedFrames.lean",
+      "bytes": 3635,
+      "sha256": "fdd053185deaac30577ce93f4b4a47e90775bd6351b571bcb13708807f6c6df7"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/Mirror.lean",
+      "bytes": 11316,
+      "sha256": "ce08de497540c1b014334b01a74a1cb50666e0383ce13f5c7bf8e36b4e274a25"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MirrorCoordinates.lean",
+      "bytes": 9569,
+      "sha256": "77286f0c1246ad06ccf1967d7b014592658d71c6d2ec84b41f63cfb295556c98"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MirrorSeamCoordinates.lean",
+      "bytes": 16894,
+      "sha256": "e239d4fa8e761c2e1a0b083899e6700ecd35c8ef8f3af955c2f41093d7e2635d"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/MirrorSeams.lean",
+      "bytes": 8338,
+      "sha256": "de82671074b8f434ad01dafaf7e9ea9b1ef5bb406f8f75c6921b3b76a267838a"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/NamedSeams.lean",
+      "bytes": 7141,
+      "sha256": "2c14619c012b0164533e13b64ca39c3beaa1e5fb0e487519553cd0b91320283f"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/PortCoordinates.lean",
+      "bytes": 23026,
+      "sha256": "080c7842198352800bed6963b5996e5a2373b4eb530a3c554f667603627c8380"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/PortValues.lean",
+      "bytes": 5133,
+      "sha256": "a60ebab6cc3e2d14ad7ec73ee0ccd2ae39cf4c73d9133722a1e1631e35e6b88d"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/PositiveCoordinates.lean",
+      "bytes": 17276,
+      "sha256": "e19ca71d03456badf85ecfef33b55af76687be7333ecfe1801551fb1ec403132"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/SeamCoordinates.lean",
+      "bytes": 8049,
+      "sha256": "9d14cbc90d7e87b6ece1d913ae1d047e611e8b323f62b4b171798f24964457a3"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/SeamFactors.lean",
+      "bytes": 2833,
+      "sha256": "69017cad36c1fff41730577e0200201fd27bf6553e59da875389d050f66c5e9e"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/ShortCoordinates.lean",
+      "bytes": 22394,
+      "sha256": "e0806d1e81793eaa88527edbd5866f565b7ceade244038493f16a66f2333f3d7"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/ShortSeams.lean",
+      "bytes": 142,
+      "sha256": "a96d6230580ad68ba6ebe2a00af824b232188b4a8d472a2d530b11fd65ddab83"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/AllSeams.lean",
+      "bytes": 11640,
+      "sha256": "a89dcde435cb1b67de56cc5e91cbaf6346d1763e98591f28270d5549c61cacea"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/BoundaryWords.lean",
+      "bytes": 24313,
+      "sha256": "b78b5c5ca2aa12591c2d0d1ca83b16a27fe33c991da8eb1767cc1b571a5662c1"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/CutWords.lean",
+      "bytes": 17650,
+      "sha256": "a231f656d6958d2a0c658acfdf8454fda45b7d2569cd58c7362dc66f4d75a47c"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/FirstShortSeam.lean",
+      "bytes": 14278,
+      "sha256": "89a4d7cd436ef8bb15b9b80bc7ccd25c773fde7c78b590acb47a3895dc747d67"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/Handles.lean",
+      "bytes": 8920,
+      "sha256": "24bcebe3c1e5173e9f4d47e47991bf65805affb10abdebd8c3f0034aea5647ed"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/InternalSeams.lean",
+      "bytes": 63893,
+      "sha256": "325b0396866bb34a177f79f7ea981487147f7729701115a3548aea6add58a60f"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/InverseSolution.lean",
+      "bytes": 19493,
+      "sha256": "43e3d88790df824f986f23cdbd3efd858b1c490f1ad8bec440374b6d69dd96de"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/MarkedSeams.lean",
+      "bytes": 7702,
+      "sha256": "052fcfe550cd46c7542681769a19b666f1979551f2281fd10e923c38c9f7f5a3"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/MarkedSurface.lean",
+      "bytes": 15386,
+      "sha256": "daee1598370ce162cbb52ed6bf8184592f9dc0accd1016e0bca56e4ae33a5c79"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/PortEquations.lean",
+      "bytes": 1290,
+      "sha256": "85e3d6610258172fd2ac666ce0b3e2342bd7025bc6d8ccb81d5fbadd8855d62a"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedDiagram.lean",
+      "bytes": 7943,
+      "sha256": "5eac5b9103bec2d0f642d5bf56817afcab427bae742ef9b05962fae6a4c8329b"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedEquations.lean",
+      "bytes": 2206,
+      "sha256": "2812714a68c122afd3cb5055bf256a61c797ebcfa90e9f211dd2e020604eb418"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedSolution.lean",
+      "bytes": 7694,
+      "sha256": "bf360b65bff8f3405123df8f469cee58609367e2c1f8a8db7cd8dc796f4a4816"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/AlgebraicGeometry/SurfaceCones/CandidateRing.lean",
+      "bytes": 1057,
+      "sha256": "bea971e387a6c77c5ff5c3d533a6a3663aa9deb58f0247c203bd763cf5735aa7"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/DirectCrouzeix/BoundaryEnergy.lean",
+      "bytes": 6470,
+      "sha256": "1bc293fb8f61ec3b924e0179a348b94f9dac5cb27e4b4be2a8070247873eef30"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/DirectCrouzeix/CompleteBound.lean",
+      "bytes": 2757,
+      "sha256": "c8f0706d92662aaca2d1a26fe7647b3719035f72177d68fbf5b490028f12e891"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/DirectCrouzeix/DomainBound.lean",
+      "bytes": 4202,
+      "sha256": "792e5f24630ef2911ba5287df5bc042c4df4a741f9ae2d47dcfb8901616ecd70"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/DirectCrouzeix/DomainCore.lean",
+      "bytes": 7826,
+      "sha256": "8c3ad69737fe2343607e665b27087a8016d43221a146eebd4b6879d833ddcb40"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/DirectCrouzeix/Duality.lean",
+      "bytes": 3285,
+      "sha256": "3b717a4dbb596ed52e342f3b3d7da991f5a70cf1a73e77a68678cd93fc2dc090"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/DirectCrouzeix/ExteriorCollar.lean",
+      "bytes": 5353,
+      "sha256": "05ebbcf8152552db266eceb0af5e9a22b354d635e001e266d5ba763fe5286657"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/DirectCrouzeix/FaberEnergy.lean",
+      "bytes": 11084,
+      "sha256": "a7a4914685716845b1161f075ac562f2e20b3f395fe087e688b8299b9c7bcf08"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/DirectCrouzeix/KernelContraction.lean",
+      "bytes": 9458,
+      "sha256": "2a648dce84f28a064555c98f4da0dc49c98520a7d29a218ecbef32a31fa9148e"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/DirectCrouzeix/Main.lean",
+      "bytes": 2051,
+      "sha256": "0a259924198d24e07a91764943aa2623b0cde487747f7c74a863d15dd50d3e71"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/DirectCrouzeix/Model.lean",
+      "bytes": 1208,
+      "sha256": "3be01360e343e41c9712883d81e8845122ef13b2418640fa32c5e2fd22cdba84"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/DirectCrouzeix/OuterApproximation.lean",
+      "bytes": 5236,
+      "sha256": "a7cc6181472d8830f53ef28e1efef4ffcd3eb88c71de671b4a92504b3aa7b245"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/DirectCrouzeix/PolynomialEnergy.lean",
+      "bytes": 12029,
+      "sha256": "7015c78df7181bd32d8aaa1632da7b92a9a56df241321c13a763857e4d4c7309"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/DirectCrouzeix/PositiveBlocks.lean",
+      "bytes": 2550,
+      "sha256": "74695a483d53771ef5cbde120f37e677659f42fe9dc9592bb4875fc7769774a9"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/DirectCrouzeix/SingularPairs.lean",
+      "bytes": 5006,
+      "sha256": "148b39d7df6831d6fc7ba50327f1594a0ba816668a28661fc8c1d6e82991f920"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/Mahler/ActualFiniteStrips.lean",
+      "bytes": 3841,
+      "sha256": "db8fd13fcdf965677174dbd1b066a74cad74bfebccce282ce8c2ba5642eed9a7"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/Mahler/ChartStokes.lean",
+      "bytes": 6402,
+      "sha256": "cba27c7bcedfc20105c3c71eec50c832331a6b17e22eda17c56a0c77729757e2"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/Mahler/ClosedBoundaryStokes.lean",
+      "bytes": 3175,
+      "sha256": "0b107f76a665e055b95d2f24c05110f498bcbec93b3d0f8761d9a8f13c72c721"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/Mahler/ComplexStripMap.lean",
+      "bytes": 5622,
+      "sha256": "cab24b8ec4f7a2d303f54473e5e5df9afabb3312658e30a96032acb0a075a423"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/Mahler/ContinuousWedge.lean",
+      "bytes": 5713,
+      "sha256": "f0822c8ee8ccae57527921983a3a5a9c9a25bd2bddbcc9bed4ac1d5574a06909"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/Mahler/EuclideanSpecialMap.lean",
+      "bytes": 5228,
+      "sha256": "77068c0e5dce13e0fcec035dbfddefa8673fb5fa2fc1f09ab9f2857b9dbd2809"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/Mahler/ExactSphereStokes.lean",
+      "bytes": 2806,
+      "sha256": "40b5cd4a1fafafdba30a32004fee9c3a0b9b959c6c2884b509882e6a0034d6bd"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/Mahler/HomogeneousEndpoint.lean",
+      "bytes": 2572,
+      "sha256": "b1c23ab0ded1757208ef0756f1af7dfec22a6231c109bea2caa9f1b9403d3169"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/Mahler/HomogeneousMassAssembly.lean",
+      "bytes": 1991,
+      "sha256": "adeef41de850349f05b61f71904c9ffe42ce974385ef778829f6a33da39e4e46"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/Mahler/HomogeneousPrimitiveRegularity.lean",
+      "bytes": 4131,
+      "sha256": "357e02cce0c0ad4b01de34fa7c3c8fb96bf3e2591aea96e6b479ef4f45dfe6f2"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/Mahler/HomogeneousTransgression.lean",
+      "bytes": 8303,
+      "sha256": "70ddaa59dd91b03c9d2446aa05c52fcf2a25a82d581b9544caefee612a2d8bc1"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/Mahler/HomogeneousTransgressionFTC.lean",
+      "bytes": 4275,
+      "sha256": "b4d2389c84dee13ef8d3522b3fb364a53b905a7690493e9a44de855247587762"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/Mahler/HomogeneousVariationCoefficient.lean",
+      "bytes": 2644,
+      "sha256": "ebe7a93d5d1644e027478b3e9ddee030319d607178f8f39f2cd030405926fa83"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/Mahler/HorizontalForms.lean",
+      "bytes": 5397,
+      "sha256": "5ecf0de601a9be291a0670a73bce254f94253b512d3017a01474435f623b76b9"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/Mahler/MainTheorem.lean",
+      "bytes": 882,
+      "sha256": "ff4222bb24b6b48e571c63a481f6cbe430ce68f8c707da065c2117d7e94f058e"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/Mahler/MassTarget.lean",
+      "bytes": 2407,
+      "sha256": "01e57540d5c45e9e507bc81593a66fda96c20e95c262b9bddfe4cfd4b1369112"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/Mahler/PowerTransgression.lean",
+      "bytes": 6205,
+      "sha256": "930eeedf56aadd16a0309d6128f6c3232cfddbe5a85fd74456200b67b023a1fd"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/Mahler/SourcePrimitiveStokes.lean",
+      "bytes": 3305,
+      "sha256": "c1f857871d04b7b08501684635d578933ea07ee7a70558a11188f920a85e3def"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/Mahler/SpecialLeadingTerm.lean",
+      "bytes": 4420,
+      "sha256": "3a7eafec1688c2bcf6070155ed2ead2541685ae8c89ac03fe928a7206a7e10ed"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/Mahler/SpecialSourceMass.lean",
+      "bytes": 2667,
+      "sha256": "5ca6f729dd257889d261226f9d97acc99f33acade382286344e6f2ddfc9916a0"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/Mahler/SphereForms.lean",
+      "bytes": 4967,
+      "sha256": "ec25a18b86b5df18348a571ed2b506a2856513f55dcdeb26d169bf9b8c911556"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/TraceCone/Basic.lean",
+      "bytes": 14258,
+      "sha256": "de409f3d3d82a547500c73c72c193cbaf25388b11b704e7a6cdbb1036420b720"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/TraceCone/FiniteIdeal.lean",
+      "bytes": 18017,
+      "sha256": "dc498c5106478f01ea03a6dd6f59db25576cd1d466dde99fddef90cab4c4662a"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/TraceCone/IdealTransport.lean",
+      "bytes": 18222,
+      "sha256": "ce1b2e54486dd3bf4cc80aa676234ae18a3946fea652746e042a4da9f3e21ff7"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Analysis/TraceCone/Main.lean",
+      "bytes": 143,
+      "sha256": "c7a8f9ece6754ab219f3fb10c17d4e376e218dc6a693181628b6603983824a27"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+      "bytes": 1336009,
+      "sha256": "0e5fa4d146154656ca6f89fad0d255159ca3e895b76b8bc3af731882e28725a9"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/NumberTheory/PiExponent/Main.lean",
+      "bytes": 1361,
+      "sha256": "51a034738b1a61a17b076f19b0e12e4297e3974299bbca186b65f6e0826f0933"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/NumberTheory/TwoPointCorrelations/FinalMain.lean",
+      "bytes": 1461,
+      "sha256": "5c03b192161ba203e82cfededd01b435f390a8cc03a430ef408734342161c7df"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Probability/SwitchChain/CrossCellAffineComposition.lean",
+      "bytes": 5238,
+      "sha256": "8ef3312911467872d25fc40b777572694945fe4387c8ef8979c03d37976afa1f"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Probability/SwitchChain/CrossCellMoments.lean",
+      "bytes": 10164,
+      "sha256": "6feabcda1ea00ea2e5a3465a589d82f06a6d29e4a6fc5adb35389fe3359d874f"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Probability/SwitchChain/CrossIndependent.lean",
+      "bytes": 9955,
+      "sha256": "1bf19842ae0c2a91c739ef3febbed58ec3455e16b72448c606fd1433cb6fbb02"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Probability/SwitchChain/CrossMatrix.lean",
+      "bytes": 2426,
+      "sha256": "840ed656ed02ada5a8771540f37dad04251aa74e1ec2dc59dfc34649ca504ed6"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Probability/SwitchChain/Definitions.lean",
+      "bytes": 4722,
+      "sha256": "62cd5736b5403852e1102e71a5ef17efe6fc03e80417c625e030b54ffe3b747c"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Probability/SwitchChain/DisjointCellCounting.lean",
+      "bytes": 7031,
+      "sha256": "f4bdc3d19c0867d9d999a53067d9bf2331009f91f9bd92e795a78fab980d9afb"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Probability/SwitchChain/DisjointCoordinateFeasibility.lean",
+      "bytes": 4591,
+      "sha256": "b497fbf488120f5dc160f73d1b306f1b8f54d5fdfd23671e4b1da494aa43481e"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Probability/SwitchChain/DisjointCrossCellEquiv.lean",
+      "bytes": 7490,
+      "sha256": "eaf8fb663153e9c3acf71160f0a9a1782dc881c26ecad7a7c3e319ac70c08c6f"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Probability/SwitchChain/DisjointEncoding.lean",
+      "bytes": 6279,
+      "sha256": "2f71b4b0644b4f6e6932a335a10a9d98072e403d05725bc76ffe566377c1fde9"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Probability/SwitchChain/DisjointEqualityFlags.lean",
+      "bytes": 5300,
+      "sha256": "483366d566098d2ae3645aa64b31290f2c23e7e6216a82a4a775262122fdc772"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Probability/SwitchChain/DisjointGraphAffine.lean",
+      "bytes": 5617,
+      "sha256": "ccd69d396b9aaf8969429a9de8888ef3877b9af0412b074e4cc46670ca504d83"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Probability/SwitchChain/LocalGapEndgame.lean",
+      "bytes": 2042,
+      "sha256": "fcb0a1e0d7b06489c8ee125337118d643d8d185d442667be4a16b1526bd2af79"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Probability/SwitchChain/Main.lean",
+      "bytes": 2119,
+      "sha256": "ade00e55a157ee7bc2dc1fff71777e8cf717cbba7463819938f62de639c32d15"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Probability/SwitchChain/PairActualAffine.lean",
+      "bytes": 3957,
+      "sha256": "81521f5ad99fd0cd2d8c214a7dbec5f5bb365510c69f5d2ffa4342b9d629078c"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Probability/SwitchChain/PairAffineInteraction.lean",
+      "bytes": 4778,
+      "sha256": "37ebfd5f3d2513521b6ecb88083b38d4fc33cceb5a6e99071b9320ed2455a8a3"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Probability/SwitchChain/PairDisjointAssembly.lean",
+      "bytes": 3575,
+      "sha256": "7dd67cb22cbab2f0ad7ef9fa8981e1f7399e817dbb6c86e557bfd6af0ddb380e"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Probability/SwitchChain/PairEqualityBudgetUnordered.lean",
+      "bytes": 3314,
+      "sha256": "c4834dc1308763f26f570841215aa7f908e867b2976bec9adab42433a8cf323e"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Probability/SwitchChain/PairEqualityProjection.lean",
+      "bytes": 8133,
+      "sha256": "c38a28a4abde4aa0baf7e5edcac68cd924ff2594a4b9fe27b04b2942b2cfbed4"
+    },
+    {
+      "path": "research/source/openai-math/lean/OAI/Probability/SwitchChain/ProjectionRangeInteraction.lean",
+      "bytes": 9613,
+      "sha256": "5a001bed26185f8ced573ecdcabcf78591fb695dda91ed9a5231debe5184702a"
+    },
+    {
+      "path": "research/source/openai-math/LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "research/source/openai-math/README.md",
+      "bytes": 4190,
+      "sha256": "5e8878ee04866f52ec942852552b9c28db278f65691c7ab49a87c9e93a9199fd"
+    },
+    {
+      "path": "results/lean-compiler.log",
+      "bytes": 335,
+      "sha256": "d4243b4776481631db8830a592af11ca20a45f84d3cd94d8e586122626c692eb"
+    },
+    {
+      "path": "results/verification.json",
+      "bytes": 933,
+      "sha256": "8e7362f2df81d7141d5aea1e46173da495937527432688078d4cc113bfb977cd"
+    },
+    {
+      "path": "results/worked-examples.json",
+      "bytes": 3204,
+      "sha256": "613bd984f7830dad27fadb0e301f5915c9b24713233b54db986da75bb9fe5439"
+    },
+    {
+      "path": "THIRD-PARTY.txt",
+      "bytes": 868,
+      "sha256": "0aa07ecd9802c164277631f52428df963c5081be4ecd8767664c8da5692a1ae0"
+    },
+    {
+      "path": "worked-examples.tex",
+      "bytes": 6527,
+      "sha256": "ce4b273a7a13840bc5b1eac0d2d60f9a5ccd758ecda7ea8dc13b9d15f9f2cb26"
+    }
+  ]
+}

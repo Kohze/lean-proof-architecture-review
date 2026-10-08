@@ -1,0 +1,52 @@
+{
+  "type": "",
+  "id": "https://doi.org/10.4230/lipics.itp.2022.4",
+  "categories": [
+    "formalization of mathematics",
+    "dependent type theory",
+    "typeclasses",
+    "algebraic hierarchy",
+    "Lean prover",
+    "Theory of computation → Logic and verification",
+    "Theory of computation → Type theory"
+  ],
+  "language": "en",
+  "author": [
+    {
+      "family": "Baanen",
+      "given": "Anne"
+    }
+  ],
+  "editor": [
+    {
+      "family": "Andronick",
+      "given": "June"
+    },
+    {
+      "family": "de Moura",
+      "given": "Leonardo"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2022
+      ]
+    ]
+  },
+  "abstract": "The Lean mathematical library mathlib features extensive use of the typeclass pattern for organising mathematical structures, based on Lean’s mechanism of instance parameters. Related mechanisms for typeclasses are available in other provers including Agda, Coq and Isabelle with varying degrees of adoption. This paper analyses representative examples of design patterns involving instance parameters in the current Lean 3 version of mathlib, focussing on complications arising at scale and how the mathlib community deals with them.",
+  "container-title": [
+    "LIPIcs, Volume 237, ITP 2022"
+  ],
+  "DOI": "10.4230/LIPICS.ITP.2022.4",
+  "volume": "237",
+  "number": "4",
+  "page": "4:1-4:20",
+  "page-first": "4:1",
+  "publisher": "Schloss Dagstuhl – Leibniz-Zentrum für Informatik",
+  "title": [
+    "Use and Abuse of Instance Parameters in the Lean Mathematical Library"
+  ],
+  "URL": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2022.4",
+  "copyright": "Creative Commons Attribution 4.0 International license"
+}

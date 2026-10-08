@@ -1,0 +1,208 @@
+{
+  "date": "2026-10-08",
+  "review_type": "Verification of newly integrated closest-prior comparisons and the six-matrix illustration",
+  "reviewed_file_sha256": {
+    "cases-discrete.tex": "6a5122f133626a9a7950782c2e15d0b81cb6e406d5e6f86db1226893ff436976",
+    "cases-analysis.tex": "d1a9afb73e521c4fe6e9ea8042509f8b80786b5bc60f4b9d9ac5231114309c7c",
+    "references.bib": "09c53753277ec2b32f94f657ee60aeac34c89951ef3c32204935b9483d726460"
+  },
+  "verdict": "All new comparisons align with the cited primary texts. The six-matrix covariance is correct and explicitly distinguished from the graph-cell experiment. No correction required.",
+  "source_revision": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "reference_record": "research/analysis/additional-prior-references.json",
+  "checks": [
+    {
+      "id": "P-01",
+      "status": "aligned",
+      "manuscript": "cases-analysis.tex:125–133",
+      "claim": "Kudryashov transfers a divergence theorem between integration theories and derives Cauchy–Goursat under carefully chosen differentiability assumptions; its rectangular domains are explicitly named.",
+      "support": {
+        "key": "Kudryashov2022",
+        "doi": "10.4230/LIPIcs.ITP.2022.23",
+        "primary_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2022.23",
+        "primary_text": "Sections 4.10–4.11 and 5, printed pp. 23:14–23:16"
+      },
+      "assessment": "Correct. GP/Bochner transport and regularity assumptions are direct topics of the paper. The manuscript distinguishes this rectangular-domain predecessor from the selected sphere-local form argument and makes no general-manifold Stokes or historical-first claim."
+    },
+    {
+      "id": "P-02",
+      "status": "aligned",
+      "manuscript": "cases-discrete.tex:52–53",
+      "claim": "Expectation-functional semantics for randomized programs is established.",
+      "support": {
+        "key": "AudebaudPaulinMohring2009",
+        "doi": "10.1016/j.scico.2007.09.002",
+        "primary_url": "https://www.sciencedirect.com/science/article/pii/S0167642309000240",
+        "primary_text": "Sections 1.3, 2.2 and 2.5.1 of the author manuscript; section 2.5.1 defines equality of measures by equality on every observable."
+      },
+      "assessment": "Correct. The cited work models randomized expressions by functionals (A -> [0,1]) -> [0,1]. The manuscript does not attribute the selected fixed-machine cost or tape theorem to this prior work."
+    },
+    {
+      "id": "P-03",
+      "status": "aligned",
+      "manuscript": "cases-discrete.tex:53–56",
+      "claim": "SampCert separates Lean sampling procedures from normalized distribution semantics and proves exact sampler laws.",
+      "support": {
+        "key": "deMedeirosEtAl2025",
+        "doi": "10.1145/3729294",
+        "primary_url": "https://dl.acm.org/doi/10.1145/3729294",
+        "primary_text": "Sections 3–3.1, printed pp. 191:12–191:14; section 3.3.1, printed p. 191:17; compilation boundary in section 4.1, printed p. 191:19."
+      },
+      "assessment": "Correct. SLang uses unnormalized mass functions and normalization promotes completed samplers to PMFs. Exact equal distributions support interchangeable Laplace implementations. The wording claims sampler laws in Lean and does not overstate guarantees for the external runtime."
+    },
+    {
+      "id": "P-04",
+      "status": "aligned",
+      "manuscript": "references.bib:182–216",
+      "claim": "All three added bibliographic records retain the primary title, complete authors, publication year, venue, volume, pagination and DOI.",
+      "assessment": "Matched the integrated records against the independently retained reference records. Audebaud–Paulin-Mohring correctly uses the 2009 journal version, not the earlier conference year; SampCert correctly uses the 2025 article rather than its 2024 preprint."
+    },
+    {
+      "id": "M-01",
+      "status": "correct",
+      "manuscript": "cases-discrete.tex:84–87",
+      "claim": "For a uniform choice among six total-two Boolean 2x2 matrices, each off-center margin flag has mean 1/3, their product is zero, and covariance is -1/9.",
+      "assessment": "Independent exact enumeration confirms every number. Exactly two of the six matrices have an off-center first row; exactly two have an off-center first column; none has both.",
+      "independent_exact_computation": {
+        "sample_count": 6,
+        "row_flag_mean": "1/3",
+        "column_flag_mean": "1/3",
+        "flag_product_mean": "0",
+        "covariance": "-1/9",
+        "enumerated_samples": [
+          {
+            "matrix": [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "first_row_sum": 0,
+            "first_column_sum": 1,
+            "row_off_center": 1,
+            "column_off_center": 0
+          },
+          {
+            "matrix": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "first_row_sum": 1,
+            "first_column_sum": 0,
+            "row_off_center": 0,
+            "column_off_center": 1
+          },
+          {
+            "matrix": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ]
+            ],
+            "first_row_sum": 1,
+            "first_column_sum": 1,
+            "row_off_center": 0,
+            "column_off_center": 0
+          },
+          {
+            "matrix": [
+              [
+                1,
+                0
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "first_row_sum": 1,
+            "first_column_sum": 1,
+            "row_off_center": 0,
+            "column_off_center": 0
+          },
+          {
+            "matrix": [
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                0
+              ]
+            ],
+            "first_row_sum": 1,
+            "first_column_sum": 2,
+            "row_off_center": 0,
+            "column_off_center": 1
+          },
+          {
+            "matrix": [
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "first_row_sum": 2,
+            "first_column_sum": 1,
+            "row_off_center": 1,
+            "column_off_center": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "M-02",
+      "status": "clearly_distinguished",
+      "manuscript": "cases-discrete.tex:74 and 87–90",
+      "claim": "The -1/9 calculation is a uniform six-matrix illustration; graph cells carry additional boundary multiplicities.",
+      "support": [
+        {
+          "path": "lean/OAI/Probability/SwitchChain/DisjointCellCounting.lean",
+          "declarations": [
+            "MarginData",
+            "JointData",
+            "sum_degreeCell_joint"
+          ],
+          "lines": [
+            14,
+            106
+          ]
+        },
+        {
+          "path": "lean/OAI/Probability/SwitchChain/CrossCellMoments.lean",
+          "declarations": [
+            "sum_cell",
+            "average_offCenter_product",
+            "covariance_rank_one"
+          ],
+          "lines": [
+            23,
+            158
+          ]
+        }
+      ],
+      "assessment": "Clear and accurate. Projected margin probabilities in a graph cell are proportional to L_r R_t c_2(r,t), where L_r and R_t count compatible boundary choices. Those multiplicities change the two flag means, so -1/9 is not asserted as a universal graph-cell covariance. The following paragraph returns to the general transported affine formula."
+    }
+  ],
+  "findings": [],
+  "recommended_corrections": [],
+  "novelty_assessment": "The integrated text treats expectation semantics, verified sampling and integration interfaces as established approaches. It identifies the particular inspected compositions without asserting first use or empirical rarity."
+}

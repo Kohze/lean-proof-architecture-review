@@ -1,0 +1,379 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        9,
+        3
+      ]
+    ],
+    "date-time": "2026-09-03T20:48:04Z",
+    "timestamp": 1788468484059,
+    "version": "build-2803163510"
+  },
+  "reference-count": 10,
+  "publisher": "Informa UK Limited",
+  "issue": "2",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2021,
+            11,
+            25
+          ]
+        ],
+        "date-time": "2021-11-25T00:00:00Z",
+        "timestamp": 1637798400000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "http://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/501100000266",
+      "name": "EPSRC",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "EP/L025485/1"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "EP/L025485/1"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/501100000266",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    },
+    {
+      "DOI": "10.13039/501100000923",
+      "name": "Australian Research Council",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "ARC DP200100067"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "ARC DP200100067"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/501100000923",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "www.tandfonline.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "published-print": {
+    "date-parts": [
+      [
+        2022,
+        4,
+        3
+      ]
+    ]
+  },
+  "DOI": "10.1080/10586458.2021.1983489",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2021,
+        11,
+        25
+      ]
+    ],
+    "date-time": "2021-11-25T11:59:48Z",
+    "timestamp": 1637841588000
+  },
+  "page": "355-363",
+  "update-policy": "https://doi.org/10.1080/tandf_crossmark_01",
+  "source": "Crossref",
+  "is-referenced-by-count": 5,
+  "title": [
+    "Schemes in Lean"
+  ],
+  "prefix": "10.1080",
+  "volume": "31",
+  "author": [
+    {
+      "given": "Kevin",
+      "family": "Buzzard",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Department of Mathematics, Imperial College London, London, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Chris",
+      "family": "Hughes",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Mathematics, Imperial College London, London, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Kenny",
+      "family": "Lau",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Mathematics, Imperial College London, London, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Amelia",
+      "family": "Livingston",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Mathematics, Imperial College London, London, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Ramon Fernández",
+      "family": "Mir",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "School of Informatics, University of Edinburgh, Edinburgh, UK"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Scott",
+      "family": "Morrison",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "School of Mathematics and Statistics, University of Sydney, Sydney, Australia"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "301",
+  "published-online": {
+    "date-parts": [
+      [
+        2021,
+        11,
+        25
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "CIT0001",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3372885.3373830"
+    },
+    {
+      "key": "CIT0002",
+      "unstructured": "Buzzard, K., Hughes, C., Lau, K. (2018). Formal verification of parts of the Stacks project in Lean, https://github.com/kbuzzard/lean-stacks-project."
+    },
+    {
+      "key": "CIT0003",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-319-21401-6_26"
+    },
+    {
+      "key": "CIT0004",
+      "unstructured": "Fernández Mir, R. (2019). Schemes in Lean (v2), https://github.com/ramonfmir/lean-scheme."
+    },
+    {
+      "issue": "4",
+      "key": "CIT0005",
+      "first-page": "228",
+      "author": "Grothendieck A.",
+      "year": "1960",
+      "journal-title": "Inst. Hautes Études Sci. Publ. Math"
+    },
+    {
+      "key": "CIT0006",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-1-4757-3849-0"
+    },
+    {
+      "key": "CIT0007",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3372885.3373824"
+    },
+    {
+      "key": "CIT0008",
+      "unstructured": "The Stacks Project Authors. (2021). Stacks Project. Available at: https://stacks.math.columbia.edu."
+    },
+    {
+      "key": "CIT0009",
+      "volume-title": "Foundations of Algebraic Geometry, American Mathematical Society Colloquium Publications",
+      "volume": "29",
+      "author": "Weil A.",
+      "year": "1946"
+    },
+    {
+      "key": "CIT0010",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.2307/1968482"
+    }
+  ],
+  "container-title": [
+    "Experimental Mathematics"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://www.tandfonline.com/doi/pdf/10.1080/10586458.2021.1983489",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2022,
+        8,
+        8
+      ]
+    ],
+    "date-time": "2022-08-08T16:08:58Z",
+    "timestamp": 1659974938000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://www.tandfonline.com/doi/full/10.1080/10586458.2021.1983489"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2021,
+        11,
+        25
+      ]
+    ]
+  },
+  "references-count": 10,
+  "journal-issue": {
+    "issue": "2",
+    "published-print": {
+      "date-parts": [
+        [
+          2022,
+          4,
+          3
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "10.1080/10586458.2021.1983489"
+  ],
+  "URL": "http://dx.doi.org/10.1080/10586458.2021.1983489",
+  "relation": {},
+  "ISSN": [
+    "1058-6458",
+    "1944-950X"
+  ],
+  "subject": [],
+  "container-title-short": "Experimental Mathematics",
+  "published": {
+    "date-parts": [
+      [
+        2021,
+        11,
+        25
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "The publishing and review policy for this title is described in its Aims & Scope.",
+      "order": 1,
+      "name": "peerreview_statement",
+      "label": "Peer Review Statement"
+    },
+    {
+      "value": "http://www.tandfonline.com/action/journalInformation?show=aimsScope&journalCode=uexm20",
+      "URL": "http://www.tandfonline.com/action/journalInformation?show=aimsScope&journalCode=uexm20",
+      "order": 2,
+      "name": "aims_and_scope_url",
+      "label": "Aim & Scope"
+    },
+    {
+      "value": "2021-11-25",
+      "order": 3,
+      "name": "published",
+      "label": "Published",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    }
+  ]
+}
