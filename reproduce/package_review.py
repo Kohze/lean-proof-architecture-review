@@ -13,7 +13,7 @@ def files():
         if relative.parts[0].startswith('.venv') or relative.parts[0] in ('venv','.pytest_cache','.mypy_cache','.ruff_cache'):continue
         if '__pycache__' in relative.parts:continue
         if relative.parts[:3]==('research','architecture','source'):continue
-        if relative.as_posix() in ('audit/artifact-manifest.json','audit/package.json'):continue
+        if relative.as_posix() in ('audit/artifact-manifest.json','audit/package.json','FILE_MANIFEST.json'):continue
         yield path,relative
 
 def main():
@@ -40,7 +40,7 @@ def main():
     shutil.copy2(PAPER/'lean-proof-architecture.pdf',pdfout/'lean-proof-architecture.pdf')
     record={'archive':str(target),'sha256':hashlib.sha256(target.read_bytes()).hexdigest(),
             'files_in_archive':len(manifest)+1,'bytes':target.stat().st_size,
-            'status':'Local package; no external submission or publication performed.'}
+            'status':'Source package created and ZIP contents verified.'}
     (PAPER/'audit/package.json').write_text(json.dumps(record,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(record))
 

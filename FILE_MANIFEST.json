@@ -1,6 +1,6 @@
 {
   "algorithm": "sha256",
-  "release": "v1.0.0",
+  "release": "v1.0.1",
   "files": [
     {
       "path": ".gitattributes",
@@ -25,7 +25,7 @@
     {
       "path": "audit/artifact-manifest.json",
       "bytes": 53309,
-      "sha256": "dcce96cd519390558ab8299c8ccbd7a2d6797d392b44fb97a7d64f3c28ff8a05"
+      "sha256": "1d20351b5d6a24950cc2f19c72e86402081a1234db7625c9545c8c1e68994ee7"
     },
     {
       "path": "audit/bibliography-build.log",
@@ -219,8 +219,8 @@
     },
     {
       "path": "reproduce/package_review.py",
-      "bytes": 2608,
-      "sha256": "c1883b23dd4e20cb2cdd18f2f13e9750717dcbc9907829cd21a21a8d99543805"
+      "bytes": 2615,
+      "sha256": "33064bd47a832b4ac4f21138d6c6fba67657a5166acd6e4fcf84e2e2416da6fd"
     },
     {
       "path": "reproduce/render_review.py",
