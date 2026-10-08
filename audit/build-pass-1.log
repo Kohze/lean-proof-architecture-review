@@ -81,7 +81,9 @@ ounter.sty)))
     but found:
         2025/11/14 1.11b (Carsten Heinz)
     so I'm assuming it got fixed.
-(C:\Users\robin\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd)
+(C:\Users\robin\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty)
+(C:\Users\robin\AppData\Local\Programs\MiKTeX\tex/latex/needspace\needspace.sty
+) (C:\Users\robin\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd)
 (C:\Users\robin\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def)
 No file main.aux.
@@ -114,303 +116,323 @@ fg)))
 (C:\Users\robin\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd)
 (abstract.tex) (introduction.tex
 
-Package natbib Warning: Citation `deMouraUllrich2021' on page 1 undefined on in
-put line 13.
-
-
-Package natbib Warning: Citation `mathlib2020' on page 1 undefined on input lin
-e 14.
-
-
-Package natbib Warning: Citation `AvigadEtAl2024Anatomy' on page 1 undefined on
- input line 19.
-
-
-Package natbib Warning: Citation `CommelinTopaz2024' on page 1 undefined on inp
-ut line 19.
+Package natbib Warning: Citation `OAIRepository' on page 1 undefined on input l
+ine 20.
 
 [1{C:/Users/robin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/ro
 bin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/robin/
 AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
 
+Package natbib Warning: Citation `deMouraUllrich2021' on page 2 undefined on in
+put line 38.
+
+
+Package natbib Warning: Citation `mathlib2020' on page 2 undefined on input lin
+e 39.
+
+
 Package natbib Warning: Citation `AvigadEtAl2024Anatomy' on page 2 undefined on
- input line 22.
+ input line 40.
 
 
 Package natbib Warning: Citation `CommelinTopaz2024' on page 2 undefined on inp
-ut line 24.
+ut line 42.
 
 
 Package natbib Warning: Citation `GonthierEtAl2013' on page 2 undefined on inpu
-t line 35.
+t line 49.
 
 
 Package natbib Warning: Citation `HalesEtAl2017' on page 2 undefined on input l
-ine 35.
+ine 49.
 
 
 Package natbib Warning: Citation `Perfectoid2020' on page 2 undefined on input 
-line 37.
+line 51.
 
 
 Package natbib Warning: Citation `Schemes2021' on page 2 undefined on input lin
-e 37.
+e 51.
 
 
-Package natbib Warning: Citation `OAIRepository' on page 2 undefined on input l
-ine 43.
+LaTeX Warning: Reference `sec:method' on page 2 undefined on input line 57.
 
 
-LaTeX Warning: Reference `sec:method' on page 2 undefined on input line 71.
+LaTeX Warning: Reference `sec:cases' on page 2 undefined on input line 58.
 
 
-LaTeX Warning: Reference `tab:overview' on page 2 undefined on input line 72.
+LaTeX Warning: Reference `tab:overview' on page 2 undefined on input line 59.
 
 
-LaTeX Warning: Reference `sec:cases' on page 2 undefined on input line 73.
+LaTeX Warning: Reference `sec:worked' on page 2 undefined on input line 60.
 
 
-LaTeX Warning: Reference `sec:worked' on page 2 undefined on input line 73.
-
-
-LaTeX Warning: Reference `sec:discussion' on page 2 undefined on input line 74.
+LaTeX Warning: Reference `sec:discussion' on page 2 undefined on input line 61.
 
 
 ) (method.tex
-(C:\Users\robin\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd)
 
-Package natbib Warning: Citation `OAICatalog' on page 2 undefined on input line
- 9.
+LaTeX Warning: Reference `sec:worked' on page 2 undefined on input line 35.
 
-[2]
-
-Package natbib Warning: Citation `OAIComparator' on page 3 undefined on input l
-ine 54.
-
-
-Package natbib Warning: Citation `ComparatorSource2026' on page 3 undefined on 
-input line 57.
-
-
-Package natbib Warning: Citation `deBruijn1970' on page 3 undefined on input li
-ne 61.
-
-
-Package natbib Warning: Citation `BarendregtWiedijk2005' on page 3 undefined on
- input line 61.
-
-
-Package natbib Warning: Citation `Carneiro2025Lean4Lean' on page 3 undefined on
- input line 63.
-
-
-LaTeX Warning: Reference `sec:worked' on page 3 undefined on input line 68.
-
-
-Package natbib Warning: Citation `vanDoornEbnerLewis2020' on page 3 undefined o
-n input line 73.
-
+[2{C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.en
+c}]
 
 Package natbib Warning: Citation `MassotLeanBlueprint' on page 3 undefined on i
-nput line 76.
+nput line 41.
 
 
 Package natbib Warning: Citation `ZhuEtAl2026' on page 3 undefined on input lin
-e 77.
+e 42.
 
-[3{C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.en
-c}]) (cases.tex (cases-discrete.tex
+) (cases.tex
 
-Package natbib Warning: Citation `OAICommonBases' on page 4 undefined on input 
+LaTeX Warning: Reference `tab:overview' on page 3 undefined on input line 5.
+
+
+LaTeX Warning: Reference `sec:worked' on page 3 undefined on input line 9.
+
+(overview.tex) (cases-discrete.tex
+
+Package natbib Warning: Citation `OAICommonBases' on page 3 undefined on input 
 line 4.
 
-[4{C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C
-:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
-[5{C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.en
-c}]
+[3
+pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 
+    {C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}
+{C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}
+] [4{C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.
+enc}]
 
-Package natbib Warning: Citation `Leroy2009' on page 6 undefined on input line 
-66.
-
-
-Package natbib Warning: Citation `CakeML2014' on page 6 undefined on input line
- 66.
-
-
-Package natbib Warning: Citation `CertiCrypt2009' on page 6 undefined on input 
-line 66.
+Package natbib Warning: Citation `Leroy2009' on page 5 undefined on input line 
+69.
 
 
-Package natbib Warning: Citation `EasyCrypt2011' on page 6 undefined on input l
-ine 66.
+Package natbib Warning: Citation `CakeML2014' on page 5 undefined on input line
+ 69.
 
 
-Package natbib Warning: Citation `AudebaudPaulinMohring2009' on page 6 undefine
-d on input line 67.
+Package natbib Warning: Citation `CertiCrypt2009' on page 5 undefined on input 
+line 69.
 
 
-Package natbib Warning: Citation `deMedeirosEtAl2025' on page 6 undefined on in
-put line 69.
+Package natbib Warning: Citation `EasyCrypt2011' on page 5 undefined on input l
+ine 69.
 
 
-Package natbib Warning: Citation `OAISwitch' on page 6 undefined on input line 
-75.
-
-[6] [7]
-
-Package natbib Warning: Citation `Harrison1995' on page 8 undefined on input li
-ne 129.
+Package natbib Warning: Citation `AudebaudPaulinMohring2009' on page 5 undefine
+d on input line 70.
 
 
-Package natbib Warning: Citation `CohenMahboubi2012' on page 8 undefined on inp
-ut line 129.
+Package natbib Warning: Citation `deMedeirosEtAl2025' on page 5 undefined on in
+put line 72.
 
-) (cases-analysis.tex
+
+LaTeX Warning: Reference `sec:tape-example' on page 5 undefined on input line 7
+3.
+
+
+LaTeX Warning: Reference `sec:success-budget' on page 5 undefined on input line
+ 73.
+
+
+Package natbib Warning: Citation `OAISwitch' on page 5 undefined on input line 
+78.
+
+[5] [6] (C:\Users\robin\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd)
+
+Package natbib Warning: Citation `Harrison1995' on page 7 undefined on input li
+ne 134.
+
+
+Package natbib Warning: Citation `CohenMahboubi2012' on page 7 undefined on inp
+ut line 134.
+
+) (cases-analysis.tex [7]
 
 Package natbib Warning: Citation `OAIMahler' on page 8 undefined on input line 
-15.
+17.
 
-[8] [9]
+[8]
 
-Package natbib Warning: Citation `MathlibForms' on page 10 undefined on input l
-ine 138.
+Package natbib Warning: Citation `MathlibForms' on page 9 undefined on input li
+ne 143.
 
 
-Package natbib Warning: Citation `Kudryashov2022' on page 10 undefined on input
- line 140.
+Package natbib Warning: Citation `Kudryashov2022' on page 9 undefined on input 
+line 145.
 
+
+LaTeX Warning: Reference `sec:local-forms' on page 9 undefined on input line 15
+1.
+
+[9]
 
 Package natbib Warning: Citation `OAICrouzeix' on page 10 undefined on input li
-ne 161.
+ne 167.
 
 [10] [11]
 
 Package natbib Warning: Citation `CrouzeixPalencia2017' on page 12 undefined on
- input line 294.
+ input line 303.
 
 ) (cases-architecture.tex
 
 Package natbib Warning: Citation `ElliottRobertSantiago2011' on page 12 undefin
-ed on input line 8.
+ed on input line 10.
 
 
 Package natbib Warning: Citation `OAITraceIdeals' on page 12 undefined on input
- line 11.
+ line 13.
 
 [12]
 
 LaTeX Warning: Reference `eq:finite-ideal-cuts' on page 13 undefined on input l
-ine 96.
+ine 98.
 
 
 LaTeX Warning: Reference `eq:trace-canonical-convergence' on page 13 undefined 
-on input line 101.
+on input line 103.
 
 
 Package natbib Warning: Citation `ElliottRobertSantiago2011' on page 13 undefin
-ed on input line 107.
+ed on input line 109.
+
+
+LaTeX Warning: Reference `sec:trace-example' on page 13 undefined on input line
+ 113.
+
+
+Package natbib Warning: Citation `Perfectoid2020' on page 13 undefined on input
+ line 133.
+
+
+Package natbib Warning: Citation `CommelinTopaz2024' on page 13 undefined on in
+put line 133.
 
 [13]
 
-Package natbib Warning: Citation `Perfectoid2020' on page 14 undefined on input
- line 129.
-
-
-Package natbib Warning: Citation `CommelinTopaz2024' on page 14 undefined on in
-put line 129.
-
-
 Package natbib Warning: Citation `OAIAllSeams' on page 14 undefined on input li
-ne 141.
+ne 145.
 
 
-LaTeX Warning: Reference `sec:local-examples' on page 14 undefined on input lin
-e 176.
-
-[14]
-
-Package natbib Warning: Citation `GarillotEtAl2009' on page 15 undefined on inp
-ut line 197.
+LaTeX Warning: Reference `sec:named-maps' on page 14 undefined on input line 18
+1.
 
 
-Package natbib Warning: Citation `Baanen2022' on page 15 undefined on input lin
-e 197.
+Package natbib Warning: Citation `GarillotEtAl2009' on page 14 undefined on inp
+ut line 203.
 
 
-LaTeX Warning: Reference `eq:named-graded-flag' on page 15 undefined on input l
-ine 199.
+Package natbib Warning: Citation `Baanen2022' on page 14 undefined on input lin
+e 203.
 
-)) (worked-examples.tex [15]
 
-LaTeX Warning: Reference `prop:tape' on page 16 undefined on input line 41.
+LaTeX Warning: Reference `eq:named-graded-flag' on page 14 undefined on input l
+ine 205.
+
+[14])) (worked-examples.tex [15]
+
+LaTeX Warning: Reference `prop:tape' on page 16 undefined on input line 49.
 
 
 LaTeX Warning: Reference `sec:common-bases' on page 16 undefined on input line 
-75.
+86.
 
 [16]
 
 LaTeX Warning: Reference `sec:common-bases' on page 17 undefined on input line 
-91.
+102.
 
 
-LaTeX Warning: Reference `prop:tape' on page 17 undefined on input line 115.
+LaTeX Warning: Reference `prop:tape' on page 17 undefined on input line 127.
 
 
-LaTeX Warning: Reference `eq:finite-ideal' on page 17 undefined on input line 1
-58.
+Package natbib Warning: Citation `MathlibForms' on page 17 undefined on input l
+ine 175.
 
 [17]
 
+LaTeX Warning: Reference `eq:finite-ideal' on page 18 undefined on input line 1
+90.
+
+
 LaTeX Warning: Reference `eq:trace-canonical-convergence' on page 18 undefined 
-on input line 167.
+on input line 199.
 
 
 Package natbib Warning: Citation `ElliottRobertSantiago2011' on page 18 undefin
-ed on input line 174.
+ed on input line 206.
 
-
-Package natbib Warning: Citation `MathlibForms' on page 18 undefined on input l
-ine 193.
-
-) (discussion.tex
-
-LaTeX Warning: Reference `sec:worked' on page 18 undefined on input line 28.
-
-[18]
-
-LaTeX Warning: Reference `prop:success-budget' on page 19 undefined on input li
-ne 45.
-
+) (discussion.tex [18]
 
 Package natbib Warning: Citation `Leroy2009' on page 19 undefined on input line
- 68.
+ 35.
 
 
 Package natbib Warning: Citation `CakeML2014' on page 19 undefined on input lin
-e 68.
+e 35.
 
 
 Package natbib Warning: Citation `CertiCrypt2009' on page 19 undefined on input
- line 70.
+ line 36.
 
 
 Package natbib Warning: Citation `EasyCrypt2011' on page 19 undefined on input 
-line 70.
+line 36.
 
 
 Package natbib Warning: Citation `GarillotEtAl2009' on page 19 undefined on inp
-ut line 72.
+ut line 39.
 
 
 Package natbib Warning: Citation `Baanen2022' on page 19 undefined on input lin
-e 72.
+e 39.
 
 
 Package natbib Warning: Citation `CommelinTopaz2024' on page 19 undefined on in
-put line 72.
+put line 39.
 
-[19])
+
+LaTeX Warning: Reference `sec:worked' on page 19 undefined on input line 52.
+
+
+LaTeX Warning: Reference `prop:success-budget' on page 19 undefined on input li
+ne 58.
+
+[19]
+
+Package natbib Warning: Citation `OAICatalog' on page 20 undefined on input lin
+e 106.
+
+
+Package natbib Warning: Citation `OAIComparator' on page 20 undefined on input 
+line 111.
+
+
+Package natbib Warning: Citation `ComparatorSource2026' on page 20 undefined on
+ input line 114.
+
+
+Package natbib Warning: Citation `deBruijn1970' on page 20 undefined on input l
+ine 119.
+
+
+Package natbib Warning: Citation `BarendregtWiedijk2005' on page 20 undefined o
+n input line 119.
+
+
+Package natbib Warning: Citation `Carneiro2025Lean4Lean' on page 20 undefined o
+n input line 120.
+
+
+Package natbib Warning: Citation `vanDoornEbnerLewis2020' on page 20 undefined 
+on input line 122.
+
+)
 No file main.bbl.
 
 Package natbib Warning: There were undefined citations.
@@ -427,26 +449,27 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
 (rerunfilecheck)                or use package `bookmark'.
 
- )<C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pf
-b><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pf
-b><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pf
-b><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pf
-b><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb
-><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb>
-<C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi9.pfb><
-C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C
-:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:
-/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/
-Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Us
-ers/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/User
-s/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/
-robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/
-robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/
-robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/r
-obin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/ro
-bin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/ro
-bin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb><C:/Users/rob
-in/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb
->
-Output written on main.pdf (20 pages, 514506 bytes).
+ )
+(see the transcript file for additional information)<C:/Users/robin/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/robin/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/robin/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/robin/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/robin/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/robin/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/robin/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/lm/lmmi9.pfb><C:/Users/robin/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/robin/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/robin/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/robin/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/robin/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/robin/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/robin/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/robin/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/robin/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/robin/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/robin/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/robin/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/lm/lmtt9.pfb><C:/Users/robin/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (20 pages, 521119 bytes).
 Transcript written on main.log.

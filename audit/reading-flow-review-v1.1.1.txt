@@ -1,0 +1,57 @@
+PROOF ARCHITECTURE IN THE OPENAI LEAN LIBRARY
+READING FLOW AND ORGANIZATION REVIEW - v1.1.1
+
+Verdict: Ready for submission from a natural reading-flow and organization standpoint, for a specialist review audience.
+Overall editorial assessment: 8.5/10.
+
+Internal sequential reading and editing assessment; not external peer review. Scores concern reader experience and do not change the prior novelty rating.
+
+CATEGORY RATINGS
+Opening and reader orientation: 8/10 -> 8.5/10
+  The abstract and introduction establish the preservation question before the six-case inventory. The key term, audience and three reading questions are explicit.
+
+Overall organization: 8/10 -> 9/10
+  Motivation leads to a concise method, overview table, paired cases, ordered examples and a three-part discussion. Technical repository/checker details are in end matter.
+
+Transitions and continuity: 7.5/10 -> 8.5/10
+  Transitions explain the move from probability laws to correlated averages, then analysis and algebraic data. Targeted example links connect detailed mechanisms to their simpler illustrations.
+
+Organization within technical cases: 8/10 -> 9/10
+  Short mathematical signposts identify the stages of each longer argument without introducing another numbered heading level.
+
+Natural prose and pacing: 8/10 -> 8.5/10
+  The introduction puts purpose before background. Repeated conclusions and several defensive formulations are replaced by direct explanations. The technical middle remains appropriately demanding.
+
+Notation and local definitions: 8/10 -> 9/10
+  The Mahler calculation uses N for its complex dimension, distinct from the earlier convex-body dimension; the Crouzeix polynomial F and test polynomial G are introduced where used.
+
+Discussion and ending: 8/10 -> 9/10
+  The discussion distinguishes comparative findings, practical use and scope. It ends with a concrete reading and formalization benefit instead of repeating all six cases again.
+
+Reading through the PDF: 9/10 -> 9/10
+  The overview remains on one page with clear row separation. Proposition statements stay with proofs; code stays with its introduction; the availability statement begins as a coherent block.
+
+APPLIED REVISIONS
+FLOW-01 [RESOLVED] Opening density: Rewrote the abstract and introduction around the mathematical question, defined preservation interfaces, and identified the intended reader.
+FLOW-02 [RESOLVED] Early administrative detail: Moved corpus counts, source pins and checking-infrastructure discussion to the data and code availability statement.
+FLOW-03 [RESOLVED] Overview placement: Moved the table into the case section before its first detailed case; removed the forced page break that left a large gap.
+FLOW-04 [RESOLVED] Long technical passages: Added short mathematical paragraph headings within the six cases.
+FLOW-05 [RESOLVED] Abrupt changes of subject: Added transitions explaining the three pairs of cases and the change in preservation requirement.
+FLOW-06 [RESOLVED] Disconnected example navigation: Added precise case-to-example references and a roadmap for the worked-example section.
+FLOW-07 [RESOLVED] Uneven worked-example order: Separated locality and named-coordinate examples, and ordered the nonprobabilistic examples to follow their cases.
+FLOW-08 [RESOLVED] Repeated synthesis: Reorganized the discussion into findings, use in a new formalization, and scope/further work.
+FLOW-09 [RESOLVED] Notation introduced too implicitly: Separated the Mahler dimension notation and introduced the Crouzeix polynomial notation explicitly.
+FLOW-10 [RESOLVED] Page breaks interrupting arguments: Kept proposition/proof blocks and code introductions together and protected the start of the availability statement.
+FLOW-11 [RESOLVED] Build/render verification after reorganization: Made the builder converge cross-references and the renderer remove only its own stale page images before counting pages.
+
+FINAL CHECKS
+23 pages and 38 cited references. No missing or unused references. Original source anchors, bibliography, Lean examples and exact Python examples are unchanged. Endpoint claims and quantitative assumptions are retained.
+All 23 final pages inspected through three contact sheets; full final pages 3, 16, 17 and 20 inspected for overview placement, code, propositions and end matter. No clipping, overlaps, missing glyphs or unresolved layout defects seen.
+PDF SHA256: 7a7213b9a94197145e430d1dc9692b7c376061482e53fd4c91632e52bad6190e
+
+REMAINING EDITORIAL TRADEOFFS
+The six cases retain technical detail so that the review explains actual mechanisms; specialist background is still needed for the analytic and structural arguments.
+The three sampling examples form one connected composition, while the graph calculation and Crouzeix energy argument stay beside their source cases.
+Evidence ledgers and full source anchors remain available without dominating the opening narrative.
+
+No required flow or organization correction remains. A general-audience treatment would require a different level of mathematical detail; the present specialist-review structure is coherent.

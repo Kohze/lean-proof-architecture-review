@@ -3,6 +3,7 @@
 
 The common-bases development connects an approximate counting argument to a fixed oracle machine, including its bit operations and the tape positions from which it obtains randomness \citep{OAICommonBases}. Its organizing choice is to give the mathematical estimator, the finite random experiment, and the compiled program separate semantics, then prove the correspondences between them.
 
+\paragraph{Encoding the counting problem.}
 The mathematical problem is to count the common bases of two equal-rank matroids $M_1,M_2$ on an enumerated ground set $E=\operatorname{Fin}n$. The first representation replaces two simultaneous base conditions by one base condition. On $E\sqcup E$, set
 \[
  N=M_1\oplus M_2^*,\qquad
@@ -17,6 +18,7 @@ This representation identifies the quantity approximated by the sampling argumen
 
 The next correspondence replaces rank access by independence queries. A greedy oracle routine computes the rank of an enumerated subset; its correctness identifies the oracle-defined deficiency and annealing weights with their mathematical counterparts. The estimator also uses a sampled zero-deficiency witness as a final guard. This gives the exact zero-count behavior later required of every machine execution.
 
+\paragraph{From experiments to a bounded program.}
 Finite random experiments are represented by trees whose internal nodes choose uniformly from a finite index set. A bounded implementation supplies each draw with a finite bank of rejection trials. Its fit condition requires at most $M$ successive draws and $H\geq\lceil\log_2 a\rceil$ bits per trial at every draw of arity $a$. With $D$ trials per draw, the development then bounds the loss in a $[0,1]$-valued observable by $M2^{-D}$. Both depth and width matter: insufficient trial width can force immediate failure regardless of $D$. A separate relation permits permutations of the outcome indices at each node and proves that these reindexings preserve expectations. Thus the abstract exchange walk and its code can use different finite enumerations while retaining the same output law.
 
 The code layer makes randomness explicit input. Its typed expressions take
@@ -37,7 +39,8 @@ polynomials bound steps, oracle calls, and bit operations. Thus output
 semantics and size control meet at the fixed program, while remaining
 separately reusable for its preamble and bank-processing postamble.\footnote{\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\#L16459-L16620}{Cost-bearing compiler correctness}; \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\#L25559-L25566}{polynomial majorant}.}
 
-The final probabilistic interface is especially revealing. Let $V$ be the canonical bounded experiment, and let $v$ be the rational output function implemented by the postamble. The certificate asserts
+\paragraph{From output laws to successful tapes.}
+The final probabilistic interface connects the program to its accuracy guarantee. Let $V$ be the canonical bounded experiment, and let $v$ be the rational output function implemented by the postamble. The certificate asserts
 \[
  \E_w\,\varphi(v(w))=\E_b\,\varphi(V(b))
  \quad\text{for every }\varphi:\mathbb Q\to\R,
@@ -67,17 +70,18 @@ The specification packages this success count with the universal resource and ze
 \citep{AudebaudPaulinMohring2009}. In Lean, SampCert separates sampling
 procedures from normalized distribution semantics and proves exact sampler
 laws \citep{deMedeirosEtAl2025}. The distinctive evidence here is the
-concrete integration: the proof carries the counting quantity through oracle code, width bounds, and physical tape coordinates to an exact finite success count.
+concrete integration: the proof carries the counting quantity through oracle code, width bounds, and physical tape coordinates to an exact finite success count. Sections~\ref{sec:tape-example}--\ref{sec:success-budget} isolate the uniformity, law, and error-budget arguments behind this last step.
 
 \subsection{Graph switches: a local table and a fiberwise error direction}
 \label{sec:switch-chain}
 
-The switch-chain development connects a four-vertex graph representation to a spectral estimate \citep{OAISwitch}. At each step the chain stays put with probability $1/2$; otherwise it chooses uniformly a four-vertex set and an ordered pair of distinct perfect matchings on it. It replaces the first matching by the second when the removed edges are present and the added edges absent, and stays put otherwise. Each of the $6\binom n4$ proposals thus has probability $1/(12\binom n4)$. Its endpoint assumes $n\geq4$ and a graphical degree sequence $d$ with $d(v)\leq n-1$. It bounds the mixing time at total-variation threshold $1/4$ by $2n^8$ and, when there is more than one realization, gives spectral gap at least
+The common-base case needs preservation of an entire output law. The graph case instead needs control of the interaction between conditional averages. Its switch-chain development connects a four-vertex graph representation to a spectral estimate \citep{OAISwitch}. At each step the chain stays put with probability $1/2$; otherwise it chooses uniformly a four-vertex set and an ordered pair of distinct perfect matchings on it. It replaces the first matching by the second when the removed edges are present and the added edges absent, and stays put otherwise. Each of the $6\binom n4$ proposals thus has probability $1/(12\binom n4)$. Its endpoint assumes $n\geq4$ and a graphical degree sequence $d$ with $d(v)\leq n-1$. It bounds the mixing time at total-variation threshold $1/4$ by $2n^8$ and, when there is more than one realization, gives spectral gap at least
 \[
  \frac{1}{24n^2\binom n4}.
 \]
 The disjoint-pair branch of its proof is organized around a small exceptional direction in conditional averaging.
 
+\paragraph{Reducing a graph cell to a matrix count.}
 States are simple graphs on $\operatorname{Fin}n$ realizing $d$. Fix four distinct vertices, grouped into pairs $a=\{i,j\}$ and $b=\{k,l\}$. A coarse cell fixes the outer graph, the internal edge of each pair, and every outside vertex's total incidence into each pair. The remaining data consist of a $2\times2$ Boolean matrix $M$ of cross edges and two sets $U,W$ recording the singleton boundary choices at $i$ and $k$. The source proves that these coordinates determine the graph.\footnote{\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/DisjointEncoding.lean\#L20-L30}{The coarse graph cell}; \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/DisjointCoordinateFeasibility.lean\#L22-L108}{degree feasibility in coordinates}.}
 
 The important feasibility step reduces all four degree equations to preservation of the cross-edge total and two margin equations:
@@ -103,6 +107,7 @@ cells also carry boundary multiplicities. It explains why a blanket claim
 of independent margins or nonnegative local correlation would fail and
 why the proof isolates a compensated error direction.
 
+\paragraph{Paying for the exceptional correlation.}
 In the finite coordinate model, composing the two conditional averages therefore gives $A+Bp(r)$, with $B=0$ unless $s=2$. The graph-cell equivalence transports this formula back to actual graph states. This transport includes a proof that corresponding fibers have equal cardinalities and corresponding sums, and an identification of the flag: $p(r)$ says that $i$ has equal adjacency bits to $k$ and $l$, meaning both cross edges are present or both are absent.\footnote{\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/CrossCellAffineComposition.lean\#L64-L87}{The affine conditional image}; \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/DisjointGraphAffine.lean\#L68-L90}{its graph interpretation}.}
 
 Work in the real function space on the finite graph state space $\Omega$,

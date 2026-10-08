@@ -231,17 +231,18 @@
   "disclosure_confined_to_dedicated_section": true,
   "review_type": "Source-driven comparative narrative review with original explanatory examples.",
   "novelty_scope": "Comparative synthesis; the elementary propositions are not presented as new theorems.",
-  "pdf_sha256": "8b527f105f1f412ba99a26922ac031c4467ee7d655bf47e5d6244e5c325938f5",
+  "pdf_sha256": "7a7213b9a94197145e430d1dc9692b7c376061482e53fd4c91632e52bad6190e",
   "tex_hashes": {
-    "abstract.tex": "92548c01bb7d6b61ba7c415150bfc7b6971015f28b567c9f4215c5b9c5476c4a",
-    "cases-analysis.tex": "90d777900e9763b06ddededf35039a302e229b5645047cf544ce6531c41b15c4",
-    "cases-architecture.tex": "d5499424ea3a5293620ae7531fb1fdc01316e974369a7dbfa96de5ef4a722b7b",
-    "cases-discrete.tex": "dc08689ec2dc4aa830999858a46a43c3612ce81b088d69b7d78b55bd4fd8ce52",
-    "cases.tex": "5c3c6e59a9405d9fcac2712fee483582f0cbf1a79a05b6c11bf5aa4af95e8657",
-    "discussion.tex": "cbd8dfc5e118a998ef1cb90ceefd75ad91296f1287f45c4f47f8de10783524d4",
-    "introduction.tex": "27ed47af505289aeb1c389894f2c377679955c2a26a2eb7a3696c93d11542b89",
-    "main.tex": "3ca141eb826dbfa01d6c119d2eb52143970de5a759566f63bf9a94ea30bb7b40",
-    "method.tex": "5ab53ce6a6b66f18131ea64df17c28d3175cc3fcfd2b2e3483f3fe3ad7b168bc",
-    "worked-examples.tex": "32e11ae7eaf04124fc6ad9580ea956850a7477a7430fccbd2f0b4a9bda903c3c"
+    "abstract.tex": "45869b953eff20e3cd36040fca0372d10d10dde557fcb52c979db620dadc5b2d",
+    "cases-analysis.tex": "e71e887f930ea67d70b742ab933176a3ad10afa4ba90255a9814ec899afcc49d",
+    "cases-architecture.tex": "6377083c7b3e7463d69acf5529b5c527883c60e81a4fa6009277ebd945888686",
+    "cases-discrete.tex": "f03297bad6a4ba54bc1df24a9b4ade58dfa93b41290502848b70f51bf11e3048",
+    "cases.tex": "177ef064b2793ee2cb74fab8fdd313e0acb8ac4e03995e1735a8bae10ce5eb32",
+    "discussion.tex": "1c82d1451e4bffcfe14513dd4aac1d57c612c19b061b10f25fa7a7d84e376569",
+    "introduction.tex": "3f870b7eeaa8d6241a310afcfd2b1a19cd8c8c2cb4c73bc9e9cec7031b23de23",
+    "main.tex": "03e6e81d9b2036567506d0c2040b63cb5672902d98468b655466155c8facc9c2",
+    "method.tex": "2705a542379d8d4aa67286880551ceb79b4f31cbd8ea2f871528c72f8449b5d5",
+    "overview.tex": "bdb203e167e1204a6f1b1f863a08cd96fcd47f6d7aa1e0606e7a7651671b562c",
+    "worked-examples.tex": "b90f1d57f868c6e7382ac49ac49db1fcd6b6081a589b2d3dea4f71d72d1e32c0"
   }
 }

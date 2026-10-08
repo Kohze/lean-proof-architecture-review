@@ -21,9 +21,10 @@ audit/citation-verification.json: primary bibliography records and DOI evidence.
 audit/cross-review-*.json: internal reviews across case authors.
 audit/full-manuscript-review.json: internal reader and novelty assessment.
 audit/review-resolution.json: disposition of the initial review findings.
-audit/publication-review-oct8.txt: latest category review and audit fixes.
+audit/publication-review-oct8.txt: mathematical category review and audit fixes.
+audit/reading-flow-review-v1.1.1.txt: current reading-flow and organization review.
 audit/publication-review-oct8.json: machine-readable revision/recheck record.
-Current edition v1.1.0: 23 pages, 38 references, 168 retained source files,
+Current edition v1.1.1: 23 pages, 38 references, 168 retained source files,
 five compiled original Lean lemmas, and an exact 640/1024 success fixture.
 results/: original Lean compiler output and exact finite example results.
 

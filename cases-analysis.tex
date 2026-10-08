@@ -1,6 +1,8 @@
 \subsection{Mahler: ordered forms and boundary locality}
 \label{sec:mahler}
 
+The analytic cases shift the preservation question from finite laws to
+identities and estimates used in differentiation and integration.
 The symmetric Mahler development connects exterior algebra, complex analysis,
 and convex geometry through several representations of the same differential
 form. Its selected endpoint, \src{OAI.SymmetricMahler.symmetric_mahler}, states
@@ -16,6 +18,7 @@ finite intersections of strips~\citep{OAIMahler}. For the architectural review,
 the instructive point is how a local transgression identity becomes a numerical
 flux value usable by the convex-body reduction.
 
+\paragraph{The analytic inputs and the transgression identity.}
 The generic analytic results take a structure named \src{MassHypotheses}.
 Its fields require an open domain containing zero, holomorphic components
 $f_j$, zero as their unique common zero in the domain, a homogeneous degree-$m$ leading
@@ -33,7 +36,7 @@ construction are
 \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/MainTheorem.lean\#L12-L22}{\src{Mahler/MainTheorem.lean}, lines 12--22}, and
 \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/EuclideanSpecialMap.lean\#L67-L97}{\src{Mahler/EuclideanSpecialMap.lean}, lines 67--97}.}
 
-Write the complex dimension as $n=k+2$, let $q(z)=z$, and set
+For the transgression calculation, write the complex dimension as $N=k+2$, let $q(z)=z$, and set
 $\tau(H)(z)=\sum_j|H_j(z)|^2$. The source convention is
 $d^cu(z)[v]=-Du(z)[iv]/4$. On punctured space the degree-$m$
 homogeneous map $G$ defines
@@ -62,7 +65,7 @@ Keeping the ambient identity separate from its tangential consequence makes
 the vanished term, sign, and multiplicity individually accountable.
 
 The disappearance of the first term has a concrete linear-algebra proof.
-At $z\ne0$, the sphere tangent space has real dimension $2n-1$ and contains
+At $z\ne0$, the sphere tangent space has real dimension $2N-1$ and contains
 the nonzero circle tangent $iz$. Homogeneity gives $\beta_z(iz)=0$ and
 $(\alpha_t)_z(iz)=m/2$. Rotation invariance, together with this constant
 circle evaluation, gives $d\alpha_t(iz,v)=0$.
@@ -81,7 +84,8 @@ nonzero coordinate proves that evaluation zero. A dependent tuple already
 vanishes by alternation. The sphere theorem instantiates this argument with
 the verified tangent dimension and $iz$.
 
-The representation seam occurs because the development constructs $\eta_t$
+\paragraph{Identifying two representations of the form.}
+The representation change occurs because the development constructs $\eta_t$
 in two useful ways. One bundles a literal shuffle form through finite basis
 expansion, supporting regularity proofs by evaluation. The other builds a
 continuous product from a two-form and continuous wedge powers, supporting
@@ -114,6 +118,7 @@ appropriate stages: whole-field equality for differentiation and tangential
 agreement for oriented density. Keeping those principles separate clarifies
 which information each mathematical operation consumes.
 
+\paragraph{Applying Stokes near the boundary.}
 A second interface controls locality. The primitive is $C^2$ on punctured
 space, while the flux argument needs regularity near the sphere.
 \src{exists_closed_set_form_extension} takes a form $\omega$ that is $C^2$
@@ -130,7 +135,7 @@ extension and exact-form flux theorem are
 \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/ClosedBoundaryStokes.lean\#L18-L63}{\src{Mahler/ClosedBoundaryStokes.lean}, lines 18--63}.}
 
 Zero residual flux makes the deformation's path flux constant by the
-fundamental theorem of calculus. Comparing endpoints supplies $(\pi m)^n$;
+fundamental theorem of calculus. Comparing endpoints supplies $(\pi m)^N$;
 the small-sphere limit and special strip-map reduction use that value in the
 body inequality. Dimension one is handled by a separate circle calculation.
 The mathematical devices are familiar. Mathlib already provides continuous
@@ -143,7 +148,7 @@ interfaces. The distinctive step here identifies ordered exterior algebra
 with continuously bundled fields and combines that equality with a locality
 theorem that imposes regularity where the
 integral uses it. These interfaces expose and discharge the substantive
-premises without requiring regularity at the singular center.
+premises without requiring regularity at the singular center. The elementary boundary-form example in Section~\ref{sec:local-forms} separates the ambient and tangential information used at these two stages.
 
 \subsection{Crouzeix: compression, energy, and strict neighborhoods}
 \label{sec:crouzeix}
@@ -155,13 +160,15 @@ $n,m>0$, \src{OAI.DirectCrouzeix.complete_crouzeix} states
  \norm{\sum_{k=0}^d A^k\otimes B_k}
  \leq 2\sup_{z\in W(A)}\norm{\sum_{k=0}^d z^kB_k}.
 \]
-The source uses the operator $2$-norm, literal matrix Kronecker products,
+Write $F(z)=\sum_{k=0}^d z^kB_k$; $F(A)$ denotes the amplified
+evaluation on the left. The source uses the operator $2$-norm, literal matrix Kronecker products,
 and $W(A)=\{\langle u,Au\rangle:\norm{u}=1\}$.
 Its endpoint quantifies over arbitrary $A$ and coefficient matrices.
 The accompanying argument~\citep{OAICrouzeix} is organized around boundary
 analysis; the formal implementation makes particularly clear how positivity
 and Fourier energy combine to produce the constant two.
 
+\paragraph{Closing the compressed energy estimate.}
 The local interface \src{analytic_domain_core} accepts a polynomial sequence
 $b_k$ with $b_0=1$, a continuous boundary parametrization, and a matrix resolvent field
 $R(t)$. Its hypotheses give finite Faber expansions, lower and upper
@@ -223,8 +230,9 @@ $\gamma\leq2$.\footnote{The four compressions and closing cancellation
 appear in
 \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/DomainCore.lean\#L15-L117}{\src{DirectCrouzeix/DomainCore.lean}, lines 15--117}.}
 
+\paragraph{Where the sharp energy weights come from.}
 Two details explain why this reduction works sharply. First,
-\src{singular_diagonal_estimates} tests both ordered products $FG$ and $GF$.
+\src{singular_diagonal_estimates} tests both ordered products $FG$ and $GF$, where $G$ is a test polynomial.
 The forward and adjoint singular relations turn them into different diagonal
 compressions, preserving the noncommutative order of matrix coefficients.
 The dual step is explicit: from bounds on every finite test family $C_k$,
@@ -268,6 +276,7 @@ preserve the order of multiplication. Together with rectangular reshaping,
 this explains how the scalar boundary analysis supplies estimates uniformly
 in the matrix coefficient size, the defining feature of the complete bound.
 
+\paragraph{Removing the auxiliary domain assumptions.}
 The final interface removes strict-domain geometry. For every compact,
 nonempty convex $K\subseteq\mathbb C$, \src{exists_exponential_outer}
 constructs a compact sublevel of a finite sum of exponentials of affine

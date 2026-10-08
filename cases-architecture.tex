@@ -1,7 +1,9 @@
 \subsection{Recovering ideals from extended traces and canonical limits}
 \label{sec:trace-ideals}
 
-The trace-cone development reconstructs actual closed ideals from an analytic
+The final pair of cases concerns the mathematical data retained by an
+invariant or a coordinate change. The trace-cone development reconstructs
+actual closed ideals from an analytic
 invariant and then proves that an equivalence of invariants transports two
 distinguished ideals. The mathematical setting is the cone of extended,
 lower-semicontinuous traces, studied as an invariant of $C^*$-algebras by
@@ -10,6 +12,7 @@ ideal correspondence. Their hypotheses are nonunital complex $C^*$-algebras
 with compatible order and star structures; they impose no density condition
 on the finite domain of a trace \citep{OAITraceIdeals}.
 
+\paragraph{Recovering the ideal order algebraically.}
 An \src{ExtendedTrace A} is a function on positive elements with values in
 $[0,\infty]$, together with proofs of vanishing at zero, additivity, positive homogeneity,
 traciality, and lower semicontinuity. For a closed two-sided star ideal $I$,
@@ -20,8 +23,7 @@ the code constructs the extended trace
   \qquad a\geq 0.
   \label{eq:ideal-weight}
 \end{equation}
-This requires mathematical proofs, rather than only a convenient wrapper.
-For positive $a,b$, heredity of closed ideals gives
+To establish additivity for positive $a,b$, heredity of closed ideals gives
 $a+b\in I$ exactly when both summands belong to $I$, proving additivity.
 The equivalence $x^*x\in I\Longleftrightarrow x\in I$ and star invariance
 give traciality; closed sublevel sets give lower semicontinuity. The
@@ -59,8 +61,8 @@ scalars is required for this part. The subsequent analytic argument
 identifies which ideals this order isomorphism assigns to a given trace.
 This separation makes the strength of each interface field visible.
 
-The relevant topology cannot be replaced silently by pointwise
-convergence. Write $(a-\varepsilon)_+$ for the positive cut defined by
+\paragraph{Identifying the transported ideals by limits.}
+The analytic step uses a cut-regularized notion of convergence. Write $(a-\varepsilon)_+$ for the positive cut defined by
 continuous functional calculus. The development proves
 \begin{equation}
   a\in I_\tau\quad\Longleftrightarrow\quad
@@ -97,7 +99,7 @@ characterization in~\eqref{eq:finite-ideal-cuts}. Whenever
 $a\in I_\tau$ but $\tau(a)=\infty$, every positive scalar multiple
 still has value $(r\tau)(a)=\infty$, although
 $\iota_{I_\tau}(a)=0$. A claimed pointwise scalar-zero limit would therefore
-give the wrong assertion. Finite values on all positive cuts reconcile
+miss the recovered ideal. Finite values on all positive cuts reconcile
 this behavior with~\eqref{eq:trace-canonical-convergence}. The
 scalar-infinity limit, by contrast, is first proved pointwise using the
 trace that is zero on $\tau$'s zero set and infinity elsewhere.
@@ -108,7 +110,9 @@ are classical parts of the trace-cone analysis of
 formal dependencies explicit: additive structure recovers the ideal
 order, while convergence and scalar compatibility identify the two
 ideals attached to an arbitrary trace. The review's comparison concerns
-that separation and its implementation.
+that separation and its implementation. Section~\ref{sec:trace-example}
+gives a sequence-space example in which the canonical scalar-zero limit
+and the pointwise limit differ.
 
 Finally, a \src{TraceConeEquiv} packages an additive bijection, preservation
 of zero and positive scaling, and canonical convergence in both
@@ -153,6 +157,7 @@ inherited, mirror, and branch families used below.\footnote{See the
 constructor description in
 \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/MarkedDiagram.lean\#L79-L104}{\src{Cutting/MarkedDiagram.lean}, lines 79--104}.}
 
+\paragraph{The information in a named graded map.}
 The seam equation is stronger than equality of flags. For a graded index
 set with grade function $a$ and a frame $e$, let
 \[
@@ -173,9 +178,10 @@ subspaces.\footnote{See the definition of
 In the produced seam equations, the two frames are obtained
 from evaluations of the seam's left and right matrix words. Losing these
 named maps during a change of basis would weaken the theorem's meaning.
-The one-dimensional frame example in Section~\ref{sec:local-examples}
+The one-dimensional frame example in Section~\ref{sec:named-maps}
 illustrates this distinction without the surface construction.
 
+\paragraph{Keeping one witness across the construction.}
 The intermediate construction records precisely the data needed to
 prevent that loss. An \src{IdentifiedBand} contains a common frame for a
 simultaneous splitting, a rank shape, and row and column identifications
@@ -198,6 +204,7 @@ standard techniques \citep{GarillotEtAl2009,Baanen2022}; the case-specific
 payload is the simultaneous preservation of the named graded maps
 in~\eqref{eq:named-graded-flag}.
 
+\paragraph{From local seams to the produced values.}
 The global seam proof is assembled from eight local families: the chosen
 old seam, the other inherited seams, the first and internal original
 seams, the last and internal mirror seams, and the positive and negative

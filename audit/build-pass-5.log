@@ -114,62 +114,12 @@ fg)))
 (C:\Users\robin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd)
 (C:\Users\robin\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg)
 (C:\Users\robin\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd)
-(abstract.tex) (introduction.tex
-
-Package natbib Warning: Citation `OAIRepository' on page 1 undefined on input l
-ine 20.
-
-[1{C:/Users/robin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/ro
-bin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/robin/
-AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
-
-Package natbib Warning: Citation `deMouraUllrich2021' on page 2 undefined on in
-put line 38.
-
-
-Package natbib Warning: Citation `mathlib2020' on page 2 undefined on input lin
-e 39.
-
-
-Package natbib Warning: Citation `AvigadEtAl2024Anatomy' on page 2 undefined on
- input line 40.
-
-
-Package natbib Warning: Citation `CommelinTopaz2024' on page 2 undefined on inp
-ut line 42.
-
-
-Package natbib Warning: Citation `GonthierEtAl2013' on page 2 undefined on inpu
-t line 49.
-
-
-Package natbib Warning: Citation `HalesEtAl2017' on page 2 undefined on input l
-ine 49.
-
-
-Package natbib Warning: Citation `Perfectoid2020' on page 2 undefined on input 
-line 51.
-
-
-Package natbib Warning: Citation `Schemes2021' on page 2 undefined on input lin
-e 51.
-
-) (method.tex [2{C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/l
-m/lm-mathit.enc}]
-
-Package natbib Warning: Citation `MassotLeanBlueprint' on page 3 undefined on i
-nput line 41.
-
-
-Package natbib Warning: Citation `ZhuEtAl2026' on page 3 undefined on input lin
-e 42.
-
-) (cases.tex (overview.tex) (cases-discrete.tex
-
-Package natbib Warning: Citation `OAICommonBases' on page 3 undefined on input 
-line 4.
-
-[3
+(abstract.tex) (introduction.tex [1{C:/Users/robin/AppData/Local/MiKTeX/fonts/m
+ap/pdftex/pdftex.map}{C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/enc/dv
+ips/lm/lm-ec.enc}{C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/
+lm/lm-ts1.enc}]) (method.tex [2{C:/Users/robin/AppData/Local/Programs/MiKTeX/fo
+nts/enc/dvips/lm/lm-mathit.enc}]) (cases.tex (overview.tex) (cases-discrete.tex
+ [3
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -178,181 +128,11 @@ l.5
     {C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}
 {C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}
 ] [4{C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.
-enc}]
-
-Package natbib Warning: Citation `Leroy2009' on page 5 undefined on input line 
-69.
-
-
-Package natbib Warning: Citation `CakeML2014' on page 5 undefined on input line
- 69.
-
-
-Package natbib Warning: Citation `CertiCrypt2009' on page 5 undefined on input 
-line 69.
-
-
-Package natbib Warning: Citation `EasyCrypt2011' on page 5 undefined on input l
-ine 69.
-
-
-Package natbib Warning: Citation `AudebaudPaulinMohring2009' on page 5 undefine
-d on input line 70.
-
-
-Package natbib Warning: Citation `deMedeirosEtAl2025' on page 5 undefined on in
-put line 72.
-
-
-Package natbib Warning: Citation `OAISwitch' on page 5 undefined on input line 
-78.
-
-[5] [6] (C:\Users\robin\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd)
-
-Package natbib Warning: Citation `Harrison1995' on page 7 undefined on input li
-ne 134.
-
-
-Package natbib Warning: Citation `CohenMahboubi2012' on page 7 undefined on inp
-ut line 134.
-
-) (cases-analysis.tex [7]
-
-Package natbib Warning: Citation `OAIMahler' on page 8 undefined on input line 
-17.
-
-[8]
-
-Package natbib Warning: Citation `MathlibForms' on page 9 undefined on input li
-ne 143.
-
-
-Package natbib Warning: Citation `Kudryashov2022' on page 9 undefined on input 
-line 145.
-
-[9]
-
-Package natbib Warning: Citation `OAICrouzeix' on page 10 undefined on input li
-ne 167.
-
-[10] [11]
-
-Package natbib Warning: Citation `CrouzeixPalencia2017' on page 12 undefined on
- input line 303.
-
-) (cases-architecture.tex
-
-Package natbib Warning: Citation `ElliottRobertSantiago2011' on page 12 undefin
-ed on input line 10.
-
-
-Package natbib Warning: Citation `OAITraceIdeals' on page 12 undefined on input
- line 13.
-
-[12]
-
-Package natbib Warning: Citation `ElliottRobertSantiago2011' on page 13 undefin
-ed on input line 109.
-
-
-Package natbib Warning: Citation `Perfectoid2020' on page 13 undefined on input
- line 133.
-
-
-Package natbib Warning: Citation `CommelinTopaz2024' on page 13 undefined on in
-put line 133.
-
-[13]
-
-Package natbib Warning: Citation `OAIAllSeams' on page 14 undefined on input li
-ne 145.
-
-
-Package natbib Warning: Citation `GarillotEtAl2009' on page 14 undefined on inp
-ut line 203.
-
-
-Package natbib Warning: Citation `Baanen2022' on page 14 undefined on input lin
-e 203.
-
-[14])) (worked-examples.tex [15] [16]
-
-Package natbib Warning: Citation `MathlibForms' on page 17 undefined on input l
-ine 175.
-
-[17]
-
-Package natbib Warning: Citation `ElliottRobertSantiago2011' on page 18 undefin
-ed on input line 206.
-
-) (discussion.tex [18]
-
-Package natbib Warning: Citation `Leroy2009' on page 19 undefined on input line
- 35.
-
-
-Package natbib Warning: Citation `CakeML2014' on page 19 undefined on input lin
-e 35.
-
-
-Package natbib Warning: Citation `CertiCrypt2009' on page 19 undefined on input
- line 36.
-
-
-Package natbib Warning: Citation `EasyCrypt2011' on page 19 undefined on input 
-line 36.
-
-
-Package natbib Warning: Citation `GarillotEtAl2009' on page 19 undefined on inp
-ut line 39.
-
-
-Package natbib Warning: Citation `Baanen2022' on page 19 undefined on input lin
-e 39.
-
-
-Package natbib Warning: Citation `CommelinTopaz2024' on page 19 undefined on in
-put line 39.
-
-[19]
-
-Package natbib Warning: Citation `OAICatalog' on page 20 undefined on input lin
-e 106.
-
-
-Package natbib Warning: Citation `OAIComparator' on page 20 undefined on input 
-line 111.
-
-
-Package natbib Warning: Citation `ComparatorSource2026' on page 20 undefined on
- input line 114.
-
-
-Package natbib Warning: Citation `deBruijn1970' on page 20 undefined on input l
-ine 119.
-
-
-Package natbib Warning: Citation `BarendregtWiedijk2005' on page 20 undefined o
-n input line 119.
-
-
-Package natbib Warning: Citation `Carneiro2025Lean4Lean' on page 20 undefined o
-n input line 120.
-
-
-Package natbib Warning: Citation `vanDoornEbnerLewis2020' on page 20 undefined 
-on input line 122.
-
-) (main.bbl [20] [21] [22])
-
-Package natbib Warning: There were undefined citations.
-
-[23] (main.aux
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-) )
+enc}] [5] [6]
+(C:\Users\robin\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd))
+(cases-analysis.tex [7] [8] [9] [10] [11]) (cases-architecture.tex [12]
+[13] [14])) (worked-examples.tex [15] [16] [17]) (discussion.tex [18] [19])
+(main.bbl [20] [21] [22]) [23] (main.aux) )
 (see the transcript file for additional information)<C:/Users/robin/AppData/Loc
 al/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/robin/AppData/Loc
 al/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/robin/AppData/Loc
@@ -374,5 +154,5 @@ iKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/robin/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/robin/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/lm/lmtt9.pfb><C:/Users/robin/AppData/Local/Programs/MiK
 TeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (23 pages, 581069 bytes).
+Output written on main.pdf (23 pages, 591124 bytes).
 Transcript written on main.log.

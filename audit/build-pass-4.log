@@ -81,7 +81,9 @@ ounter.sty)))
     but found:
         2025/11/14 1.11b (Carsten Heinz)
     so I'm assuming it got fixed.
-(C:\Users\robin\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd)
+(C:\Users\robin\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty)
+(C:\Users\robin\AppData\Local\Programs\MiKTeX\tex/latex/needspace\needspace.sty
+) (C:\Users\robin\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd)
 (C:\Users\robin\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def) (main.aux)
 *geometry* driver: auto-detecting
@@ -115,35 +117,46 @@ fg)))
 (abstract.tex) (introduction.tex [1{C:/Users/robin/AppData/Local/MiKTeX/fonts/m
 ap/pdftex/pdftex.map}{C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/enc/dv
 ips/lm/lm-ec.enc}{C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/
-lm/lm-ts1.enc}]) (method.tex
-(C:\Users\robin\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd) [2]
-[3{C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.en
-c}]) (cases.tex (cases-discrete.tex [4{C:/Users/robin/AppData/Local/Programs/Mi
-KTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/robin/AppData/Local/Programs/MiKTeX
-/fonts/enc/dvips/lm/lm-mathsy.enc}] [5{C:/Users/robin/AppData/Local/Programs/Mi
-KTeX/fonts/enc/dvips/lm/lm-mathex.enc}] [6] [7]) (cases-analysis.tex [8]
-[9] [10] [11]) (cases-architecture.tex [12] [13] [14])) (worked-examples.tex
-[15] [16] [17]) (discussion.tex [18] [19]) (main.bbl [20] [21] [22]) [23]
-(main.aux) )<C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
-/lmbx10.pfb><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
-/lmbx12.pfb><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
-/lmex10.pfb><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
-/lmmi10.pfb><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
-/lmmi6.pfb><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
-lmmi8.pfb><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
-mmi9.pfb><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
-r10.pfb><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr
-12.pfb><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr1
-7.pfb><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.
-pfb><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pf
-b><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb>
-<C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb>
-<C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
-<C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><
-C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C
-:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C
-:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb><C:
-/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/
-msbm10.pfb>
-Output written on main.pdf (23 pages, 580954 bytes).
+lm/lm-ts1.enc}]) (method.tex [2{C:/Users/robin/AppData/Local/Programs/MiKTeX/fo
+nts/enc/dvips/lm/lm-mathit.enc}]) (cases.tex (overview.tex) (cases-discrete.tex
+ [3
+pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 
+    {C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}
+{C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}
+] [4{C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.
+enc}] [5] [6]
+(C:\Users\robin\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd))
+(cases-analysis.tex [7] [8] [9] [10] [11]) (cases-architecture.tex [12]
+[13] [14])) (worked-examples.tex [15] [16] [17]) (discussion.tex [18] [19])
+(main.bbl [20] [21] [22]) [23] (main.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)<C:/Users/robin/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/robin/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/robin/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/robin/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/robin/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/robin/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/robin/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/lm/lmmi9.pfb><C:/Users/robin/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/robin/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/robin/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/robin/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/robin/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/robin/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/robin/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/robin/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/robin/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/robin/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/robin/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/robin/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/lm/lmtt9.pfb><C:/Users/robin/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (23 pages, 591124 bytes).
 Transcript written on main.log.

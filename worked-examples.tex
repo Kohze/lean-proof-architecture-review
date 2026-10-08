@@ -1,12 +1,16 @@
 \section{Worked examples: why the stronger interface matters}
 \label{sec:worked}
 
-The following elementary arguments isolate mechanisms used in the case
-studies. Their purpose is to make the preservation requirements testable
-and understandable outside the full developments.
+The first three examples unpack the common-base case: selecting random
+bits, preserving the output law, and composing an error budget. The
+remaining examples return to boundary locality, trace limits, and named
+coordinates. Each isolates the information needed by a later operation
+without the surrounding formal development.
 
 \subsection{Injective tape positions preserve a uniform experiment}
+\label{sec:tape-example}
 
+\begin{samepage}
 \begin{proposition}\label{prop:tape}
 Let $p:\{0,\ldots,m-1\}\to\{0,\ldots,B-1\}$ be injective. If
 $\beta$ is uniform on $\{0,1\}^B$, then
@@ -19,6 +23,7 @@ free. Each assignment to these remaining coordinates determines one
 preimage. Thus every word has the same number of preimages, and its
 probability is $2^{B-m}/2^B=2^{-m}$.
 \end{proof}
+\end{samepage}
 
 For the common-base machine, the relevant map is
 $p(i)=s+3(m-1-i)+1$. Reversal and multiplication by three preserve
@@ -26,7 +31,10 @@ distinctness. For $i<m$, its value is less than $B$ whenever
 $s+3m+1\leq B$. The latter bound is stronger than needed for the selected
 positions because it also accounts for the surrounding execution.
 The review's Lean file proves these arithmetic facts for arbitrary natural
-$s,m,B$, including the empty-word case. Its index definition is
+$s,m,B$, including the empty-word case.
+
+\Needspace{7\baselineskip}
+The index map is defined by
 \begin{lstlisting}
 def physicalIndex (start m : Nat) (i : Fin m) : Nat :=
   start + 3 * (m - 1 - i.val) + 1
@@ -44,7 +52,9 @@ probability. The Python companion exhaustively checks 15 small choices
 of $(s,m,B)$ against the exact fiber count.
 
 \subsection{Observables determine a finite law; its mean does not}
+\label{sec:law-example}
 
+\begin{samepage}
 \begin{proposition}\label{prop:law}
 Let $\mu,\nu$ be probability measures on a finite set $X$. Then
 $\E_\mu\varphi=\E_\nu\varphi$ for every $\varphi:X\to\R$ if and only
@@ -55,6 +65,7 @@ For each $x\in X$, take $\varphi=\mathbf1_{\{x\}}$ to obtain
 $\mu(\{x\})=\nu(\{x\})$. Summing singleton masses gives equality on every
 subset. The converse follows from the definition of finite expectation.
 \end{proof}
+\end{samepage}
 
 In a uniform finite experiment, these expectations are normalized sums
 with integer multiplicities. The Lean companion proves the corresponding
@@ -90,6 +101,7 @@ The preceding two interfaces can be composed with a quantitative error
 bound. This gives a concrete way to read the final accuracy statement of
 Section~\ref{sec:common-bases}.
 
+\begin{samepage}
 \begin{proposition}\label{prop:success-budget}
 Let $X$ be finite, adjoin a failure symbol $\bot$, and let $U$ be an
 ideal $X$-valued output. Let $V$ be a bounded implementation driven by a
@@ -116,6 +128,7 @@ $\Pr(V\in A)\geq1-\delta_0-\eta$. Proposition~\ref{prop:tape}
 shows that the tape projection has the required uniform word law.
 Multiplying its success probability by $2^B$ gives the count.
 \end{proof}
+\end{samepage}
 
 For a single accuracy event, only its indicator is needed; the
 all-observables hypothesis makes the estimate reusable for other events.
@@ -144,7 +157,26 @@ $5\cdot2^7=640$ successful tapes out of $1024$. The Python companion
 enumerates those tapes and all event indicators. This fixture illustrates
 the composed bound independently of the upstream rejection sampler.
 
+\subsection{Boundary values and ambient derivatives}
+\label{sec:local-forms}
+
+The Mahler case uses local equality to identify ambient derivatives.
+On $\R^2$, the
+one-forms $\omega=0$ and $\eta=(x^2+y^2-1)\,dx$ agree at every point
+of the unit circle. Their ambient exterior derivatives need not agree:
+$d\eta=-2y\,dx\wedge dy$, which is nonzero at $(0,1)$.
+Equality on a neighborhood does imply equality of the ambient derivatives.
+The Mahler cutoff argument uses this sufficient condition to transfer
+its ambient derivative; agreement on tangent arguments suffices for the
+later comparison of integration densities. Intrinsic differentiation
+after pullback to the circle uses different data: both pulled-back forms,
+and their exterior derivatives, vanish. Mathlib's
+differential-form interface explicitly uses the derivative of a
+form-valued field \citep{MathlibForms}.
+
+
 \subsection{A cut-sensitive limit that is not pointwise}
+\label{sec:trace-example}
 
 Consider the commutative $C^*$-algebra $c_0$ of complex sequences tending
 to zero, with pointwise operations and the supremum norm. On its positive
@@ -176,28 +208,17 @@ trace, while every fixed positive cut is controlled by a finite value.
 Replacing the source's convergence predicate by pointwise convergence
 would therefore alter the theorem.
 
-\subsection{Local equality and named maps carry extra information}
-\label{sec:local-examples}
 
-Two further short examples clarify the other cases. On $\R^2$, the
-one-forms $\omega=0$ and $\eta=(x^2+y^2-1)\,dx$ agree at every point
-of the unit circle. Their ambient exterior derivatives need not agree:
-$d\eta=-2y\,dx\wedge dy$, which is nonzero at $(0,1)$.
-Equality on a neighborhood does imply equality of the ambient derivatives.
-The Mahler cutoff argument uses this sufficient condition to transfer
-its ambient derivative; agreement on tangent arguments suffices for the
-later comparison of integration densities. Intrinsic differentiation
-after pullback to the circle uses different data: both pulled-back forms,
-and their exterior derivatives, vanish. Mathlib's
-differential-form interface explicitly uses the derivative of a
-form-valued field \citep{MathlibForms}.
+\subsection{Equal flags and different named coordinates}
+\label{sec:named-maps}
 
-Likewise, two frames of a one-dimensional vector space can induce the
+The character-variety case preserves more than the flag of subspaces.
+Two frames of a one-dimensional vector space can induce the
 same flag but different named coordinate maps. If $e(u)=uv$ and
 $f(u)=2uv$ over a field of characteristic zero, both give the flag
 $0\subset\operatorname{span}(v)$, while
 $e^{-1}(v)=1$ and $f^{-1}(v)=1/2$. The all-seams predicate must therefore
 retain the named graded maps when those maps occur in the seam equation.
-These examples explain the extra information consumed by the source's
-ambient-derivative congruence and named-coordinate equations, even when
-the coarser objects agree.
+The coordinate equation consumes information that equality of the
+underlying flag has forgotten. This is the small-scale reason for
+retaining named graded maps throughout the surface construction.

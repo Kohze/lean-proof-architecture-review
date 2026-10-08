@@ -29,6 +29,18 @@ def main():
                 print((run.stdout+run.stderr).decode('utf-8',errors='replace')[-6000:])
                 raise SystemExit(run.returncode)
         log=(build/'main.log').read_text(encoding='utf-8',errors='replace')
+        # Pagination-sensitive references can need another pass after restructuring.
+        for _ in range(2):
+            if not re.search(r'Label\(s\) may have changed|Rerun to get cross-references right',log):
+                break
+            command=['pdflatex','-interaction=nonstopmode','-halt-on-error','main.tex']
+            run=subprocess.run(command,cwd=build,capture_output=True)
+            (audit/f'build-pass-{len(records)+1}.log').write_bytes(run.stdout+run.stderr)
+            records.append({'command':command,'exit_code':run.returncode})
+            if run.returncode:
+                print((run.stdout+run.stderr).decode('utf-8',errors='replace')[-6000:])
+                raise SystemExit(run.returncode)
+            log=(build/'main.log').read_text(encoding='utf-8',errors='replace')
         (audit/'latex-final.log').write_text(log,encoding='utf-8')
         (audit/'bibliography-build.log').write_bytes((build/'main.blg').read_bytes())
         shutil.copy2(build/'main.bbl',audit/'references-rendered.bbl')

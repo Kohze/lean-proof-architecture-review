@@ -3,6 +3,8 @@ from pathlib import Path
 from PIL import Image,ImageOps,ImageDraw
 import subprocess
 import json
+import re
+from pypdf import PdfReader
 
 PAPER=Path(__file__).resolve().parents[1]
 ROOT=PAPER.parents[1] if PAPER.parent.name=='papers' else PAPER
@@ -10,8 +12,14 @@ OUT=ROOT/'tmp/pdfs/lean-proof-architecture'
 
 def main():
     OUT.mkdir(parents=True,exist_ok=True)
+    assert OUT.resolve().is_relative_to((ROOT/'tmp/pdfs').resolve())
+    for path in OUT.iterdir():
+        if path.is_file() and re.fullmatch(r'(?:page|contact)-\d+\.png',path.name):
+            assert path.resolve().is_relative_to(OUT.resolve())
+            path.unlink()
     subprocess.run(['pdftoppm','-r','110','-png',str(PAPER/'lean-proof-architecture.pdf'),str(OUT/'page')],check=True)
     pages=sorted(OUT.glob('page-*.png'))
+    assert len(pages)==len(PdfReader(PAPER/'lean-proof-architecture.pdf').pages)
     for start in range(0,len(pages),8):
         group=pages[start:start+8]
         canvas=Image.new('RGB',(4*390,2*560),'#d0d0d0')

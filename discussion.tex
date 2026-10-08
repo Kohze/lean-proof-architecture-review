@@ -1,108 +1,91 @@
-\section{What is distinctive, and what can be reused?}
+\section{Discussion: preservation and reuse}
 \label{sec:discussion}
 
-The six cases suggest four kinds of preservation requirement. Exact data
-must survive when a later construction uses named coordinates or a
-particular polynomial expansion. Probability laws must survive when the
-next statement concerns an event rather than an average output. Estimates
-must survive when error terms are summed or a constant is optimized.
-Local differential information must survive when a derivative or boundary
-integral is formed. A single development can require several of these:
-the common-base proof uses both deterministic execution equality and
-distributional equality, while Mahler uses whole-field equality and then
-boundary-local agreement. An event probability factors through the output
-law, so reindexing can be harmless in the first case. A named-coordinate
-equation consumes the coordinate map itself; ambient differentiation
-consumes the field near the point. The operation to be performed determines
-which correspondence is sufficient.
+\subsection{What the comparison reveals}
 
-This classification is useful because it identifies the failure caused by
-an interface that is too weak. A mean does not determine an accuracy
-probability. A finite table describes the graph averages only after its
-multiplicities have been related to those of the graph fibers; here an
-explicit bijection supplies that relation. Equal subspaces
-do not determine named quotient coordinates. Equality at boundary points
-does not establish the ambient derivative congruence used by this Stokes
-argument. Pointwise scalar-zero limits need not equal the weights of the
-closed finite ideals of extended traces. These are concrete
-mathematical failures, illustrated in Section~\ref{sec:worked}, rather than
-generic objections to abstraction.
+Across the six cases, the downstream operation determines the strength of
+the required correspondence. An accuracy probability depends on the
+output law. A named-coordinate equation depends on the coordinate map.
+Ambient differentiation uses local information about a field. An
+optimized inequality depends on the normalization and weights of its
+estimates. The four recurring requirements---preservation of exact data,
+laws, estimates, and local differential information---can occur together
+within one development.
 
-The comparison can guide a new formalization before its representations
-are fixed. Start from the downstream operation and write the equation or
-inequality that it needs. An accuracy event needs its indicator
-expectation; a finite implementation may supply only a lower bound with
-an error allowance. For ambient differentiation, agreement near the
-evaluation point is sufficient, while the later boundary integral may need only
-agreement on tangent tuples. A named seam equation needs the coordinate
-map that occurs in the equation. These requirements select different
-preservation statements even when the underlying objects are equivalent.
+The most revealing comparisons concern a change in what the proof needs.
+The common-base construction preserves a distribution through
+reindexing, then preserves execution for a fixed input bank. Mahler first
+identifies whole form-valued fields so that it can differentiate them,
+then uses agreement on tangent tuples to compare boundary integrals.
+The trace-cone construction recovers ideal order from addition alone,
+then uses convergence and scalar compatibility to recognize the ideals
+of a particular trace. In each case, following the next operation
+explains why the interface has the fields it does.
 
-Next, identify what the representation changes: counting multiplicities,
-coordinate order, multiplication order, or a neighborhood of definition.
-Prove the corresponding identity before applying the downstream theorem.
-Finally, distinguish hypotheses constructed for the actual inputs from
-those still supplied by a caller. Proposition~\ref{prop:success-budget}
-illustrates this process quantitatively: sampling loss, tape uniformity,
-and deterministic execution combine into one finite success count, with
-their separate obligations visible. The framework's reusable output is
-this choice of a sufficient specification and an explicit account of its
-cost, rather than a single abstraction intended for every case.
+Two cases also show how a small calculation can govern a large estimate.
+For graph switches, the total-two matrix table identifies an exceptional
+direction whose aggregate contribution is paid for by a projection
+budget. For Crouzeix, rectangular compressions and two polynomial orders
+produce energy bounds that close at the constant two. The important
+relation is between the local calculation and the global quantity it
+controls.
 
-Several reusable patterns emerge. First, use a representation in which
-the local calculation is small, then prove an explicit correspondence to
-the original state space. The switch-chain matrix table is useful because
-the graph-cell equivalence identifies its counting measure and its
-conditional fibers. Second, give the semantic relation the strength of
-the downstream claim. The all-observables certificate handles changes of
-enumeration without imposing an unnecessary same-bank equality. Third,
-keep hypothesis discharge visible. The Mahler strip map constructs the
-analytic inputs; the Crouzeix exterior domain constructs the resolvent
-and coefficient estimates. Fourth, preserve a common witness across
-dependent constructions. The marked-cut diagram and its values use the
-same splitting data, so the final seam theorem refers to the actual
-produced object.
+These patterns have substantial antecedents. Verified compilers establish
+semantic preservation between source and implementation
+\citep{Leroy2009,CakeML2014}; probabilistic program logics reason about
+distributions and observations \citep{CertiCrypt2009,EasyCrypt2011}.
+Algebraic hierarchy design and specification-driven collaboration treat
+interfaces as mathematical objects
+\citep{GarillotEtAl2009,Baanen2022,CommelinTopaz2024}. The contribution of
+this comparison lies in showing the specific mathematical payload of
+those interfaces and how their composition supports the selected proofs.
 
-These patterns have substantial antecedents. Verified compilers prove
-semantic preservation and make the relationship between a source language
-and its implementation explicit \citep{Leroy2009,CakeML2014}. Probabilistic
-program logics already reason about output distributions and observations
-\citep{CertiCrypt2009,EasyCrypt2011}. Algebraic hierarchy design and
-specification-driven collaboration already treat interfaces as mathematical
-objects \citep{GarillotEtAl2009,Baanen2022,CommelinTopaz2024}. Accordingly,
-the evidence supports a claim of informative, concrete compositions of
-established methods. It does not establish a historical first use of
-transport, finite decision, dependent records, or compiler correctness.
+\subsection{Using the comparison in a new formalization}
 
-What makes the selected steps worth studying is their mathematical
-specificity. The random tape map records a real execution convention and
-feeds an exact success count. The exceptional graph direction is identified
-by the total-two matrix table and controlled by a projection budget.
-The ordered form identity retains the sign and multiplicity needed for
-transgression. Rectangular compressions organize amplification so that two
-energy bounds close at the constant two. Positive cuts recover the ideal
-hidden by infinite trace values. Named graded maps keep the produced
-diagram's equations intact under rebasing. These choices explain more of
-the proofs than a description of tactics or file size would.
+Start with the intended downstream statement. Write the equation,
+inequality, or event probability that the next step requires. Then identify
+what the proposed representation changes: multiplicities, coordinate
+order, multiplication order, or a neighborhood of definition. The
+preservation statement should connect those changed data to the quantity
+the next theorem consumes.
 
-The review also has clear limits. Selection favors readable, explicit
-bridges, so it cannot estimate how frequent these techniques are across
-the collection or compare development effort with other projects. The
-source analysis establishes what the inspected declarations state and how
-their displayed constructions connect. A full assessment of the headline
-mathematical results additionally involves rebuilding their dependencies
-and examining the underlying mathematical arguments. Those tasks should
-retain the same endpoint distinctions used here, particularly for the two
-support results.
+The examples in Section~\ref{sec:worked} make this choice concrete. For an
+accuracy event, preserving a mean is insufficient; its indicator
+expectation is enough, and a full output-law identity makes the interface
+reusable for other events. For ambient differentiation, neighborhood
+agreement is sufficient, while the later boundary integral may require
+only agreement on tangent tuples. A named seam equation needs its
+coordinate map. Proposition~\ref{prop:success-budget} then shows how
+several such obligations can meet: sampling loss, tape uniformity, and
+deterministic execution give one finite success count.
 
-For a mathematician, the practical benefit is a route into the source:
-identify the next operation, ask what it consumes, and inspect the lemma
-that preserves that information. For a formalizer, the cases suggest
-interfaces worth extracting into smaller libraries or examples. Their
-value lies in making a mathematical dependency explicit enough to inspect,
-reuse, and test. The worked examples demonstrate a modest version of that
-process without requiring the entire surrounding development.
+Finally, follow the construction of the hypotheses for the actual inputs.
+The Mahler strip maps supply the analytic data, while the Crouzeix outer
+domains supply strict containment and the required estimates. In the
+marked-surface construction, using one splitting witness for the diagram
+and its values keeps their identifications coherent. These examples
+suggest reusable interfaces for a library: a small local model with a
+measure-preserving correspondence, a sufficient semantic relation, and
+explicit construction of the inputs that relation requires.
 
+\subsection{Scope and further work}
+
+Selection favored explicit interfaces that could be traced in depth.
+It supports the present comparisons but does not estimate their frequency
+or development cost across the collection. The source analysis establishes
+what the inspected declarations state and how their constructions connect.
+A full assessment of the headline mathematical results additionally
+requires rebuilding their dependencies and examining the underlying
+arguments, with the endpoint and support-result distinctions retained.
+
+For a mathematician, these cases offer a route into substantial formal
+source: locate the next operation, identify what it consumes, and follow
+the theorem that preserves that information. For a formalizer, they point
+to interfaces worth extracting into smaller libraries. The worked
+examples provide a modest version of that extraction, exposing a
+mathematical dependency in a form that can be inspected, reused, and tested.
+
+\Needspace{24\baselineskip}
 \section*{Data and code availability}
 
 The accompanying source package contains the LaTeX manuscript, verified
@@ -113,3 +96,29 @@ named theorems. The Python checks enumerate tape fibers and Boolean matrix
 counts using exact integers. The package README gives reproduction
 commands and identifies the pinned external sources. Public source links
 in the manuscript resolve to the reviewed repository revision.
+
+The source inventory is the complete Git tree of \src{openai/math},
+inspected on 8 October 2026.\footnote{Reviewed revision:
+\src{fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb}. Public source links refer
+to that revision.} It contains 122,875 files with the \src{.lean}
+extension, including supporting modules. The separate formalization
+catalogue lists 173 source records and 200 main-result bindings
+\citep{OAICatalog}. These counts describe different units; none is a count
+of the developments studied in depth here.
+
+
+Proof checking supplies complementary evidence. The collection provides
+Comparator challenge configurations \citep{OAIComparator}; the separately
+inspected checker implements statement comparison, dependency and axiom
+inspection, kernel replay, and an optional external checker
+\citep{ComparatorSource2026}.\footnote{Checker source revision:
+\src{ca04cfc72b550331658ec314bf47685281bfd4bf}. This pin records our
+infrastructure reading; the collection's installation instructions do
+not specify that revision.}
+The distinction between constructing a proof and checking it has a long
+history \citep{deBruijn1970,BarendregtWiedijk2005}; Lean typechecker
+verification provides a contemporary example \citep{Carneiro2025Lean4Lean}.
+Library maintenance addresses consistency at another level
+\citep{vanDoornEbnerLewis2020}. Understanding why a formal statement
+captures the intended mathematics still requires reading its objects
+and hypotheses.

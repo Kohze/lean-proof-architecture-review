@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-08",
+  "edition": "v1.1.0",
+  "pdf_sha256": "8b527f105f1f412ba99a26922ac031c4467ee7d655bf47e5d6244e5c325938f5",
+  "method": "Poppler rendered all 23 pages at 110 dpi. Root inspected all three contact sheets for the final PDF, and full-size final pages 9, 14 and 17. Earlier in this revision, full-size pages 4, 9, 11, 17 and 23 were also inspected.",
+  "pages_rendered_and_inspected": 23,
+  "overview_table": "Six rows precede the detailed cases; thin row rules, row padding and space above/below separate the content clearly.",
+  "checks": [
+    "No clipping or overlap seen",
+    "No missing glyphs seen",
+    "Equations and proof text legible",
+    "Footnotes fit their pages; long filenames replaced by descriptive link labels where needed",
+    "Code example fits its box",
+    "AI disclosure in its dedicated section",
+    "References legible and line-wrapped",
+    "Page numbers consistent",
+    "Success-budget proposition and its numerical fixture are readable together"
+  ],
+  "unresolved_visual_defects": [],
+  "final_latex_build_problems": []
+}

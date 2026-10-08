@@ -1,25 +1,23 @@
 \begin{abstract}
-Large formalizations can be mathematically revealing at the points where a
-proof changes representation. This source-driven review studies six such
-points in the OpenAI Lean mathematics collection: common-base counting,
-graph switch chains, the symmetric Mahler inequality, the complete Crouzeix
-bound, extended trace cones, and marked character-variety constructions.
-The cases connect finite random experiments to physical tape positions,
-small matrix counts to conditional expectations on graph states, ordered
-exterior products to differentiable fields, matrix amplification to
-rectangular compression, positive cuts to closed ideals, and named graded
-maps to a constructed surface diagram. Their common feature is an explicit
-preservation theorem strong enough for the next mathematical operation.
-We organize these correspondences by what they preserve: exact data,
-probability laws, quantitative estimates, or local differential information.
-Elementary worked examples explain why weaker correspondences can fail;
-the accompanying Lean examples verify the tape-index arithmetic and the
-recovery of finite multiplicities from observables, including experiments
-of different sizes. A composed success-budget argument makes the separate
-sampling, tape-uniformity, and execution obligations explicit.
-Comparison with established
-formalization and verified-programming literature locates the interest in
-the concrete mathematical interfaces and their composition. The resulting
-analysis offers a way to read substantial Lean developments as mathematical
-arguments and to identify interfaces useful beyond their original endpoints.
+Formal proofs often become most informative where they change
+representation: a graph is encoded by a small matrix, or a random
+experiment becomes a program reading specified tape bits. The mathematical
+question is what must be preserved for the next proof step to remain
+valid. This source-driven review examines that question in six developments
+from the OpenAI Lean collection: common-base counting, graph switch chains,
+the symmetric Mahler inequality, the complete Crouzeix bound, extended
+trace cones, and marked character-variety constructions. We trace the
+correspondences between representations and identify their downstream use.
+Across the cases, the required information includes exact coordinates,
+output laws, quantitative estimates, and local differential data. The
+comparison explains why an output mean cannot replace a probability law,
+why ordered form identities and boundary locality have different roles,
+and why equal subspaces need not preserve a named-coordinate equation.
+Elementary worked examples isolate these distinctions; a composed
+success-budget argument connects sampling loss and tape uniformity to
+an exact finite success count. Comparison with established formalization
+and verified-programming literature locates the contribution in the
+concrete composition of these interfaces. The review offers mathematicians
+and formalizers a route from a theorem statement to the preservation
+arguments that make its construction work.
 \end{abstract}

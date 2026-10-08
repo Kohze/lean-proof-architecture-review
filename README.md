@@ -7,11 +7,11 @@ Robin Gounder · Vaionex Corporation · 8 October 2026
 
 This source-driven review examines six mathematical interfaces in the OpenAI Lean collection: common-base counting, graph switch chains, the symmetric Mahler inequality, the complete Crouzeix bound, extended trace cones, and marked character-variety constructions. It studies the preservation theorems that connect representations and make the next mathematical operation possible. Original elementary examples explain tape-index arithmetic, normalized finite laws, and the composition of sampling loss with exact physical-tape success counts.
 
-**Audited source edition v1.1.0:** a 23-page manuscript with 38 references (26 scholarly works and 12 source or software records). The package includes internal source, citation, reader, and visual audits. Internal review is distinct from external peer review.
+**Audited source edition v1.1.1:** a 23-page manuscript with 38 references (26 scholarly works and 12 source or software records). The package includes internal source, citation, reader, and visual audits. Internal review is distinct from external peer review.
 
 Repository: [Kohze/lean-proof-architecture-review](https://github.com/Kohze/lean-proof-architecture-review).
 
-The [publication review](audit/publication-review-oct8.txt) gives category ratings, resolved findings, and the scope of the verification. Five original Lean lemmas compile with Lean 4.34.1; exhaustive finite checks include a tight 640/1024 successful-tape example.
+The [mathematical publication review](audit/publication-review-oct8.txt) records the v1.1.0 audit. The [reading-flow review](audit/reading-flow-review-v1.1.1.txt) records the current organization, prose, and layout revision. Five original Lean lemmas compile with Lean 4.34.1; exhaustive finite checks include a tight 640/1024 successful-tape example.
 
 ## Contents
 
