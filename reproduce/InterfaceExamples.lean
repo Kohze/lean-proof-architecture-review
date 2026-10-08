@@ -54,6 +54,21 @@ theorem all_observables_determine_counts (n : Nat) (counts other : Nat → Nat)
   simpa [moment_indicator, hj] using witness
 
 def flatCounts (_ : Nat) : Nat := 1
+
+theorem normalized_observables_determine_counts
+    (n total otherTotal : Nat) (counts other : Nat → Nat)
+    (h : ∀ observable,
+      otherTotal * moment n counts observable = total * moment n other observable)
+    (j : Nat) (hj : j < n) : otherTotal * counts j = total * other j := by
+  have witness := h (fun i => if i = j then 1 else 0)
+  simpa [moment_indicator, hj] using witness
+
+def doubledCounts (_ : Nat) : Nat := 2
+
+example : 6 * moment 3 flatCounts id = 3 * moment 3 doubledCounts id := by decide
+
+example : flatCounts 0 ≠ doubledCounts 0 := by decide
+
 def concentratedCounts (i : Nat) : Nat := if i = 1 then 3 else 0
 
 example : moment 3 flatCounts (fun _ => 1) =
@@ -68,5 +83,6 @@ example : moment 3 flatCounts (fun i => if i = 0 then 1 else 0) ≠
 #print axioms physicalIndex_lt
 #print axioms moment_indicator
 #print axioms all_observables_determine_counts
+#print axioms normalized_observables_determine_counts
 
 end InterfaceExamples

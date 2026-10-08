@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-08",
+  "review_type": "Editorial recheck after root revisions E1–E7",
+  "scope": "Reread revised introduction, method, discussion, abstract, common-bases exposition, architecture cases, worked examples, and the two updated bibliography records. No full support-source repeat or upstream build was performed; the prior fresh source audit remains the technical evidence for the support cases.",
+  "reviewer_disclosure": "Internal red-team recheck by an agent that previously contributed the architecture exposition; this is not external journal peer review.",
+  "overall_verdict": {
+    "worth_reading": true,
+    "ready_for_submission_as_expository_comparative_review": true,
+    "qualification": "Two minor wording refinements are recommended below. The earlier major editorial revision requirements have been met in substance. Another major revision cycle is not necessary to complete this review task.",
+    "appropriate_contribution": "A mathematically substantive, source-grounded comparison of preservation interfaces in six formalizations, supported by elementary failure examples and a composed success-budget argument.",
+    "not_established": "A new mathematical theorem, a new general verification technique, an exhaustive taxonomy, a representative corpus survey, or certification of the headline upstream mathematics.",
+    "realistic_submission_assessment": "The revised article has a defensible scholarly purpose and can reasonably be submitted to a venue receptive to expository or comparative formalization studies. A venue requiring new verification methods or new mathematical results may still judge its novelty insufficient. Acceptance cannot be predicted or guaranteed."
+  },
+  "ratings_out_of_10": {
+    "novelty_of_comparative_review": {
+      "before": 6,
+      "after": 6,
+      "reason": "The revisions clarify the contribution rather than create historical or methodological novelty. The concrete synthesis and examples remain useful original exposition. Keeping this score unchanged avoids confusing improved positioning with a newly invented method."
+    },
+    "positioning_against_closest_work": {
+      "before": 6,
+      "after": 8,
+      "reason": "The introduction now directly contrasts the units of analysis in Anatomy and Commelin–Topaz, and the trace section expressly attributes its classical mathematical ingredients to Elliott–Robert–Santiago. The source-reading contribution is intelligible and appropriately limited."
+    },
+    "selection_and_method": {
+      "before": 6,
+      "after": 8,
+      "reason": "The comparison chain is defined, the exploratory route and actual omissions are disclosed, and complete inventory is clearly separated from selective deep reading. The account makes no fabricated prospective screening or representativeness claim."
+    },
+    "natural_readability": {
+      "before": 7,
+      "after": 8,
+      "reason": "The all-seams roadmap provides a needed mental picture, routine compiler prose is more focused, and the success-budget proposition connects the conceptual advice to a usable finite calculation. The article remains technically dense, appropriately so for its intended readership."
+    },
+    "technical_fidelity_of_rechecked_support_cases": {
+      "before": 9,
+      "after": 9,
+      "reason": "The revisions preserve the precise canonical-convergence and endpoint-scope distinctions already checked against pinned source. No new mathematical blocker was found in the revised descriptions."
+    },
+    "reader_value_for_target_audience": {
+      "before": 8,
+      "after": 8,
+      "reason": "The strongest value remains the detailed mathematics behind stronger interfaces. The revised framing makes that value easier to find and apply, without changing the underlying source contribution."
+    }
+  },
+  "completion_criteria_recheck": [
+    {
+      "id": "E1",
+      "status": "Satisfied",
+      "locations": ["introduction.tex:21-30", "method.tex:23-32"],
+      "assessment": "The added paragraph identifies Anatomy as following a linear-algebra proof and its existing library interface, Commelin–Topaz as studying construction/collaboration and semantic alignment, and the present review as comparing already-written preservation chains across settings. This is supported by the primary sources previously checked and reads naturally."
+    },
+    {
+      "id": "E2",
+      "status": "Satisfied, with one minor naming refinement",
+      "locations": ["method.tex:13-42"],
+      "assessment": "The revised method truthfully describes exploratory endpoint inspection, deeper tracing, and omitted candidates whose mechanisms were not traced to comparable depth. It correctly avoids judging the omitted mathematics or claiming a prospective complete screen.",
+      "minor_refinement": "Use 'the π irrationality-exponent endpoint' rather than 'the π-irrationality endpoint'. PiExponent.Main states irrationalityExponent Real.pi = 2 and related approximation bounds; the more precise name avoids suggesting that its selected result is merely irrationality of π."
+    },
+    {
+      "id": "E3",
+      "status": "Satisfied",
+      "locations": ["cases-architecture.tex:105-111"],
+      "assessment": "The new paragraph expressly attributes ideal weights, cut topology, and both scalar limits to Elliott–Robert–Santiago Sections 3.1–3.2. It locates the review's interest in the formal separation between additive reconstruction and convergence/scalar transport. This meets the attribution and novelty criterion."
+    },
+    {
+      "id": "E4",
+      "status": "Satisfied in substance; one precise wording change recommended",
+      "locations": ["cases-architecture.tex:144-154"],
+      "assessment": "The roadmap now explains surface pieces, seams, a splitting-determined band, the retained old boundary circles, a mirror boundary, and parent-genus reduction before the formal predicate and eight families. A new geometric diagram is not necessary for completion.",
+      "minor_refinement": "Replace 'introduces fresh genus-zero strips' by 'introduces a genus-zero disk for each fresh strip'. Cutting/MarkedDiagram.lean describes each fresh strip as precisely one genus-zero disk. The current phrase is not a false genus statement, but it omits the more informative and exact surface type.",
+      "optional_style_refinement": "The last sentence could say the roadmap 'locates the old and newly introduced seam families' rather than claiming it fully explains the branch families, which remain source-specific labels. This is not a submission blocker.",
+      "source_locator": "AlgebraicGeometry/CharacterVarieties/Cutting/MarkedDiagram.lean:79-104"
+    },
+    {
+      "id": "E5",
+      "status": "Satisfied",
+      "locations": ["discussion.tex:31-50", "worked-examples.tex:86-145"],
+      "assessment": "The operational synthesis starts from the downstream operation and distinguishes indicator estimates, near-point field agreement, tangent agreement, and named maps. The success-budget proposition then composes observable loss, injective tape projection, and deterministic execution into a finite count. The elementary proof is correct: take the success indicator, transport the uniform word law, and multiply by the number of tapes. The finite example attains the stated five-eighths bound."
+    },
+    {
+      "id": "E6",
+      "status": "Satisfied sufficiently for submission",
+      "locations": ["cases-discrete.tex:22-38", "discussion.tex:31-64"],
+      "assessment": "The compiler discussion is shorter and centered on the distinction between output semantics and resource control. Some repetition of the interface theme remains, but it no longer prevents the reader from following the main argument. Further compression would be ordinary copyediting, not required additional research or a major rewrite."
+    },
+    {
+      "id": "E7",
+      "status": "Satisfied",
+      "locations": ["references.bib:AvigadEtAl2024Anatomy", "references.bib:ZhuEtAl2026"],
+      "assessment": "The entries now use the published Notices AMS and ITP 2026 versions with the previously verified DOI, pages, and author information. LeanArchitect's published author order is correct. The retained BibTeX key with 2024 in its identifier is harmless; displayed publication year is 2025."
+    }
+  ],
+  "naturalness_assessment": {
+    "improvement": "The revised prose reads as a purposeful comparative review rather than a catalogue with defensive novelty disclaimers. Added comparisons and operational examples earn their space.",
+    "remaining_density": "The all-seams account still requires attentive reading, particularly the record fields and rebasing chain. Those details substantiate its selected mathematical point. They are not evidence of stylistic failure or a mandatory need for a larger tutorial.",
+    "remaining_optional_editing": ["Avoid repeated assertions that a construction is explicit when the adjacent formula already demonstrates it.", "A final venue-specific pass may shorten source-navigation details if the journal has a strict page limit."]
+  },
+  "required_remaining_work_from_this_reviewer": {
+    "major_revisions": [],
+    "minor_wording_recommendations": ["Name the π irrationality-exponent endpoint precisely.", "Describe each fresh strip's new surface piece as a genus-zero disk."],
+    "new_source_or_build_audit_required": false,
+    "manuscript_or_public_checkout_edits_by_this_agent": false
+  }
+}

@@ -7,7 +7,7 @@
   "complete_git_tree_text_sha256": "7897f610a5bbf4c89e93a15321e32986aead2e1c7d2007a45655af93fe5ba5f4",
   "tracked_files": 133955,
   "lean_extension_files": 122875,
-  "selected_file_count": 164,
+  "selected_file_count": 168,
   "selected_files": [
     {
       "path": "LICENSE",
@@ -836,11 +836,32 @@
       "archived_path": "research/source/openai-math/lean/OAI/Analysis/Mahler/ExactSphereStokes.lean"
     },
     {
+      "path": "lean/OAI/Analysis/Mahler/Hessian.lean",
+      "git_blob_sha1": "6e4ca86881ca4bf6370b8f145c7ec2a52938c227",
+      "sha256": "482a2f2dc52185ced727857277714f7464a3c53cebd3d3d4d53603ec684378d0",
+      "bytes": 12491,
+      "archived_path": "research/source/openai-math/lean/OAI/Analysis/Mahler/Hessian.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HomogeneousDeformation.lean",
+      "git_blob_sha1": "c210be10d8872c788158141c26c0ac9f412ba74d",
+      "sha256": "fd1b2a1f42770e4f9bcda387b489420c09cdb00827864f44d50afab15e2a7ce6",
+      "bytes": 5569,
+      "archived_path": "research/source/openai-math/lean/OAI/Analysis/Mahler/HomogeneousDeformation.lean"
+    },
+    {
       "path": "lean/OAI/Analysis/Mahler/HomogeneousEndpoint.lean",
       "git_blob_sha1": "882afa1e3d92d2fbfe07cf067fcef06ffb958183",
       "sha256": "b1c23ab0ded1757208ef0756f1af7dfec22a6231c109bea2caa9f1b9403d3169",
       "bytes": 2572,
       "archived_path": "research/source/openai-math/lean/OAI/Analysis/Mahler/HomogeneousEndpoint.lean"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HomogeneousFlux.lean",
+      "git_blob_sha1": "d6b304c20d142edc2643cfddd4ccd44f1adae116",
+      "sha256": "274a9fd3da9c2554cc0d579d756112751a7cc1609e6ff97523003de0c8cc5e93",
+      "bytes": 5704,
+      "archived_path": "research/source/openai-math/lean/OAI/Analysis/Mahler/HomogeneousFlux.lean"
     },
     {
       "path": "lean/OAI/Analysis/Mahler/HomogeneousMassAssembly.lean",
@@ -1072,6 +1093,13 @@
       "sha256": "ade00e55a157ee7bc2dc1fff71777e8cf717cbba7463819938f62de639c32d15",
       "bytes": 2119,
       "archived_path": "research/source/openai-math/lean/OAI/Probability/SwitchChain/Main.lean"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/OrthogonalPairResampling.lean",
+      "git_blob_sha1": "c341bbbd3d45b334dc74832f315519d979d6b018",
+      "sha256": "03e80f02380e3142b99011951cdd7bac1e05e0b98a08dbd7f6d551820390b22e",
+      "bytes": 10549,
+      "archived_path": "research/source/openai-math/lean/OAI/Probability/SwitchChain/OrthogonalPairResampling.lean"
     },
     {
       "path": "lean/OAI/Probability/SwitchChain/PairActualAffine.lean",

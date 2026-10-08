@@ -127,21 +127,26 @@
     },
     {
       "key": "ZhuEtAl2026",
-      "type": "misc",
+      "type": "inproceedings",
       "title": "LeanArchitect: Automating Blueprint Generation for Humans and AI",
       "authors": [
         "Thomas Zhu",
         "Pietro Monticone",
-        "Jeremy Avigad",
-        "Sean Welleck"
+        "Sean Welleck",
+        "Jeremy Avigad"
       ],
       "year": 2026,
-      "venue": "arXiv preprint",
-      "eprint": "2601.22554",
-      "doi": "10.48550/arXiv.2601.22554",
-      "primary_url": "https://arxiv.org/abs/2601.22554v1",
+      "venue": "17th International Conference on Interactive Theorem Proving (ITP 2026)",
+      "doi": "10.4230/LIPIcs.ITP.2026.25",
+      "primary_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2026.25",
       "claim_supported": "Blueprint metadata and automatically inferred declaration dependencies can be extracted directly from Lean code and exported to synchronized exposition.",
-      "limitation": "The corpus's lakefile pins LeanArchitect, but that dependency alone does not show that every case study uses annotations or an exported blueprint. The arXiv record was verified; no publication venue is asserted."
+      "limitation": "The pinned dependency alone does not show that every case uses annotations or an exported blueprint. Published metadata and author order are taken from the publisher.",
+      "series": "Leibniz International Proceedings in Informatics (LIPIcs)",
+      "volume": "382",
+      "pages": "25:1--25:16",
+      "version_read": "https://arxiv.org/abs/2601.22554v1",
+      "publisher_metadata_title": "LeanArchitect: Automating Blueprint Generation for Humans and AI",
+      "publisher_metadata_verified": true
     },
     {
       "key": "Carneiro2025Lean4Lean",
@@ -313,7 +318,7 @@
     },
     {
       "key": "AvigadEtAl2024Anatomy",
-      "type": "misc",
+      "type": "article",
       "title": "Anatomy of a Formal Proof",
       "authors": [
         "Jeremy Avigad",
@@ -321,13 +326,19 @@
         "Heather Macbeth",
         "Adam Topaz"
       ],
-      "year": 2024,
-      "venue": "arXiv preprint",
-      "eprint": "2411.11885",
-      "doi": "10.48550/arXiv.2411.11885",
-      "primary_url": "https://arxiv.org/abs/2411.11885v1",
-      "claim_supported": "Formal proof assistants make definitions and theorem statements explicit and check proofs against a formal axiomatic foundation; their practical impact includes mathematical exposition and collaboration.",
-      "limitation": "General framing, not source-level evidence about the inspected repository."
+      "year": 2025,
+      "venue": "Notices of the American Mathematical Society",
+      "doi": "10.1090/noti3114",
+      "primary_url": "https://doi.org/10.1090/noti3114",
+      "claim_supported": "A linear-algebra example is followed through a Lean proof, generalization, and connection with the existing Mathlib eigenvector interface; used as a direct comparator for the review unit of analysis.",
+      "limitation": "A close expository precedent, not source evidence or proof validation for the reviewed corpus.",
+      "volume": "72",
+      "number": "2",
+      "pages": "188--195",
+      "author_publication_record": "https://www.andrew.cmu.edu/user/avigad/papers.html",
+      "version_read": "https://arxiv.org/html/2411.11885v1",
+      "publisher_metadata_title": "Anatomy of a Formal Proof",
+      "publisher_metadata_verified": true
     },
     {
       "key": "ComparatorSource2026",
@@ -655,7 +666,7 @@
       "pages": "969-1005",
       "doi": "10.1353/ajm.2011.0027",
       "primary_url": "https://arxiv.org/abs/0805.3122",
-      "claim_supported": "Lower-semicontinuous trace cones provide the mathematical context for cut-sensitive convergence.",
+      "claim_supported": "Sections 3.1--3.2 contain ideal weights/idempotents, cut-sensitive convergence, and scalar-zero/infinity limits; these are classical mathematical antecedents of the reviewed formal architecture.",
       "publisher_metadata_title": "The cone of lower semicontinuous traces on a C*-algebra",
       "publisher_metadata_verified": true
     },

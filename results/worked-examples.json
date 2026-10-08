@@ -190,5 +190,22 @@
     "joint_mean": "0",
     "covariance": "-1/9"
   },
+  "composed_success_budget_example": {
+    "ideal_event_probability": "3/4",
+    "bounded_event_probability": "5/8",
+    "maximum_indicator_loss": "1/8",
+    "ideal_failure_budget": "1/4",
+    "word_bits": 3,
+    "tape_bits": 10,
+    "positions": [
+      7,
+      4,
+      1
+    ],
+    "successful_tapes": 640,
+    "all_tapes": 1024,
+    "failure_tapes": 128,
+    "scope": "Original tight finite fixture, not a run of the upstream rejection sampler."
+  },
   "scope": "Finite examples of general arguments explained in the review."
 }

@@ -117,31 +117,33 @@ ap/pdftex/pdftex.map}{C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/enc/dv
 ips/lm/lm-ec.enc}{C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/
 lm/lm-ts1.enc}]) (method.tex
 (C:\Users\robin\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd) [2]
-[3]) (cases.tex (cases-discrete.tex [4{C:/Users/robin/AppData/Local/Programs/Mi
+[3{C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.en
+c}]) (cases.tex (cases-discrete.tex [4{C:/Users/robin/AppData/Local/Programs/Mi
 KTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/robin/AppData/Local/Programs/MiKTeX
-/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/robin/AppData/Local/Programs/MiKTeX
-/fonts/enc/dvips/lm/lm-mathit.enc}] [5{C:/Users/robin/AppData/Local/Programs/Mi
+/fonts/enc/dvips/lm/lm-mathsy.enc}] [5{C:/Users/robin/AppData/Local/Programs/Mi
 KTeX/fonts/enc/dvips/lm/lm-mathex.enc}] [6] [7]) (cases-analysis.tex [8]
-[9] [10]) (cases-architecture.tex [11] [12] [13])) (worked-examples.tex
-[14] [15]) (discussion.tex [16] [17]) (main.bbl [18] [19] [20]) [21] (main.aux)
- )<C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pf
-b><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pf
-b><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pf
-b><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pf
-b><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb
-><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb>
-<C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><
-C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C
-:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:
-/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/U
-sers/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Use
-rs/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users
-/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users
-/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users
-/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/
-robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/
-robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb><C:/Users/r
-obin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.p
-fb>
-Output written on main.pdf (21 pages, 548234 bytes).
+[9] [10] [11]) (cases-architecture.tex [12] [13] [14])) (worked-examples.tex
+[15] [16] [17]) (discussion.tex [18] [19]) (main.bbl [20] [21] [22]) [23]
+(main.aux) )<C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
+/lmbx10.pfb><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
+/lmbx12.pfb><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
+/lmex10.pfb><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
+/lmmi10.pfb><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
+/lmmi6.pfb><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
+lmmi8.pfb><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
+mmi9.pfb><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+r10.pfb><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr
+12.pfb><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr1
+7.pfb><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.
+pfb><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pf
+b><C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb>
+<C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb>
+<C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
+<C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><
+C:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C
+:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C
+:/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb><C:
+/Users/robin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/
+msbm10.pfb>
+Output written on main.pdf (23 pages, 580954 bytes).
 Transcript written on main.log.

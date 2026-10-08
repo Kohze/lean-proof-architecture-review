@@ -20,6 +20,27 @@ constructions that discharge those hypotheses. The accompanying evidence
 ledgers retain declaration names, line ranges, source excerpts, and Git
 blob identifiers. Downloaded files were checked against those identifiers.
 
+The unit of comparison is a chain consisting of an initial representation,
+a preservation statement, and its downstream use. This is smaller than
+a complete theorem development: it permits a precise comparison even
+when the surrounding mathematical problems differ. For background we use
+system and library papers; the case discussions then compare the closest
+identified mathematical or formalization mechanisms. The comparison asks
+which device is inherited, which concrete relation is proved here, and
+which later obligation that relation discharges. It therefore assesses
+the selected compositions without treating the selection as a survey
+of the frequency of these techniques in Lean.
+
+The discovery trail is exploratory. The retained analysis, finite-probability,
+and structural findings record endpoint inspection followed by deeper
+tracing of candidate bridges. For example, the analysis ledger records
+examining the irrationality-exponent-of-$\pi$ and two-point-correlation endpoints but
+leaving them outside this review because their internal mechanisms had
+not been traced at comparable depth. That decision concerns the available
+analysis, rather than the mathematical quality of those developments.
+The package retains these selection reasons; it contains no prospective
+complete-screening protocol.
+
 The distinction between a local interface and its instantiation is central
 to this reading. A conditional analytic theorem can be a useful component
 even when it assumes a flux identity or a resolvent estimate. The next

@@ -1,0 +1,216 @@
+{
+  "review_date": "2026-10-08",
+  "scope": "Recheck of revised analytical equations, boundary-form example, and all pinned source footnotes in cases-analysis.tex; follow-up to publication-review-analysis-oct8.json.",
+  "source_revision": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "method": "Freshly read revised prose and corresponding pinned definitions/proof bodies; independently checked the elementary exterior-derivative and block-trace calculations. Rehashed every linked source file against the complete pinned Git tree. This recheck assesses exposition/source alignment, not a new kernel validation or upstream theorem rebuild.",
+  "after_ratings_out_of_10": {
+    "mathematical_correctness": 9.2,
+    "technical_depth": 9.0,
+    "rationale": "The revisions preserve all previously checked signs, constants, quantifiers, and discharge distinctions. Explicit one-form definitions, zero-frequency premises, exact Fourier energy, and the block-trace calculation now expose the two central cancellations. The boundary example correctly separates equality of ambient derivatives from intrinsic pullback differentiation."
+  },
+  "verdict": "A01-A05 are resolved. No remaining mathematical or source-footnote issue found in the reviewed revisions.",
+  "remaining_mandatory_issues": [],
+  "remaining_advisory_issues": [],
+  "resolution_checks": [
+    {
+      "id": "A01",
+      "status": "resolved",
+      "prose": [
+        "cases-analysis.tex:165-170",
+        "cases-analysis.tex:197-205",
+        "cases-analysis.tex:245-255"
+      ],
+      "assessment": "b_0=1 is now stated. The compressed zero coefficients are correctly P-hat(0)=X*X, Q-hat(0)=Y*Y, and L-hat(0)*=M-hat(0). Positive Fourier coefficients vanish for all compressions. The exact diagonal identity is 4(||P-hat(0)||_HS^2+(1/2) sum_{k>=1}||P-hat(-k)||_HS^2); the factor four and paired tail frequencies are correct.",
+      "source": [
+        "DirectCrouzeix/DomainCore.lean:16",
+        "DirectCrouzeix/DomainCore.lean:53-62",
+        "DirectCrouzeix/DomainCore.lean:77-98",
+        "DirectCrouzeix/BoundaryEnergy.lean:57-88"
+      ]
+    },
+    {
+      "id": "A02",
+      "status": "resolved",
+      "prose": [
+        "cases-analysis.tex:36-43",
+        "cases-analysis.tex:64-73"
+      ],
+      "assessment": "tau(H)=sum_j|H_j|^2 and q(z)=z match source. d^c u(z)[v]=-Du(z)[iv]/4 has the correct negative sign and denominator four. beta=d^c log tau(G)-m d^c log tau(q) and alpha_t=m d^c log tau(q)+t beta match betaLinear and alphaPath. Homogeneity gives beta_z(iz)=0 and alpha_t,z(iz)=m/2, with rotation invariance supplying d alpha_t(iz,v)=0. No pi or factor-two normalization error introduced.",
+      "source": [
+        "Mahler/Hessian.lean:131-133",
+        "Mahler/HomogeneousFlux.lean:12-13",
+        "Mahler/HomogeneousDeformation.lean:14-20",
+        "Mahler/HomogeneousDeformation.lean:23-31",
+        "Mahler/HomogeneousDeformation.lean:46-101"
+      ],
+      "footnote_precision": "The normalization footnote correctly points to HomogeneousFlux.lean lines 12-13, which define dc, rather than Hessian.lean line 131, which defines tau. HomogeneousDeformation.lean lines 14-101 support the definitions, circle values, and horizontality."
+    },
+    {
+      "id": "A03",
+      "status": "resolved",
+      "prose": [
+        "worked-examples.tex:182-193"
+      ],
+      "assessment": "eta=(x^2+y^2-1)dx vanishes as an ambient one-form at every point of the unit circle. Its exterior derivative is (2x dx+2y dy) wedge dx=-2y dx wedge dy, nonzero at (0,1). Both pulled-back one-forms are zero, hence their intrinsic exterior derivatives are zero. The prose now explicitly calls neighborhood equality the sufficient condition used by the ambient derivative API.",
+      "source": [
+        "Mahler/ClosedBoundaryStokes.lean:54-57",
+        "Mahler/SourcePrimitiveStokes.lean:28-52"
+      ],
+      "verification_kind": "Independent elementary calculation and source-interface comparison; the example itself is not claimed as a new Lean proof."
+    },
+    {
+      "id": "A04",
+      "status": "resolved",
+      "prose": [
+        "cases-analysis.tex:206-224"
+      ],
+      "assessment": "For D=[[U,Z*],[Z,V]] positive and J=diag(I,-I), JDJ is positive because J=J*. The real trace of D times JDJ is nonnegative. Block multiplication and trace cyclicity give Re tr(DJDJ)=||U||_HS^2+||V||_HS^2-2||Z||_HS^2, using the Hermiticity of the positive diagonal blocks. The integrated inequality and subsequent gamma<=2 cancellation remain correct.",
+      "source": [
+        "DirectCrouzeix/PositiveBlocks.lean:22-62",
+        "DirectCrouzeix/SingularPairs.lean:15-28",
+        "DirectCrouzeix/DomainCore.lean:105-117"
+      ]
+    },
+    {
+      "id": "A05",
+      "status": "resolved",
+      "prose": [
+        "introduction.tex:42-43"
+      ],
+      "assessment": "Broad replaces unusually broad; no unsupported empirical rarity implication remains in this sentence."
+    }
+  ],
+  "source_footnotes": {
+    "anchors_checked": 12,
+    "all_pass": true,
+    "anchors": [
+      {
+        "path": "lean/OAI/Analysis/Mahler/MainTheorem.lean",
+        "lines": [
+          12,
+          22
+        ],
+        "git_blob_sha1": "d5c55dee7e95a66312217de1f875ea8cb7508e62",
+        "result": "Pinned revision, blob bytes, valid range, and supporting content checked."
+      },
+      {
+        "path": "lean/OAI/Analysis/Mahler/EuclideanSpecialMap.lean",
+        "lines": [
+          67,
+          97
+        ],
+        "git_blob_sha1": "ae986cfb6716e6ee011c2db32e8bed96575a8e91",
+        "result": "Pinned revision, blob bytes, valid range, and supporting content checked."
+      },
+      {
+        "path": "lean/OAI/Analysis/Mahler/HomogeneousFlux.lean",
+        "lines": [
+          12,
+          13
+        ],
+        "git_blob_sha1": "d6b304c20d142edc2643cfddd4ccd44f1adae116",
+        "result": "Pinned revision, blob bytes, valid range, and supporting content checked."
+      },
+      {
+        "path": "lean/OAI/Analysis/Mahler/HomogeneousDeformation.lean",
+        "lines": [
+          14,
+          101
+        ],
+        "git_blob_sha1": "c210be10d8872c788158141c26c0ac9f412ba74d",
+        "result": "Pinned revision, blob bytes, valid range, and supporting content checked."
+      },
+      {
+        "path": "lean/OAI/Analysis/Mahler/HomogeneousEndpoint.lean",
+        "lines": [
+          12,
+          45
+        ],
+        "git_blob_sha1": "882afa1e3d92d2fbfe07cf067fcef06ffb958183",
+        "result": "Pinned revision, blob bytes, valid range, and supporting content checked."
+      },
+      {
+        "path": "lean/OAI/Analysis/Mahler/HomogeneousTransgression.lean",
+        "lines": [
+          65,
+          97
+        ],
+        "git_blob_sha1": "c381fcf297116fe1c5174f8c0f622d3912eea597",
+        "result": "Pinned revision, blob bytes, valid range, and supporting content checked."
+      },
+      {
+        "path": "lean/OAI/Analysis/Mahler/ClosedBoundaryStokes.lean",
+        "lines": [
+          18,
+          63
+        ],
+        "git_blob_sha1": "fc98a4b561c4407d6e5d428d014164b2034cdd1f",
+        "result": "Pinned revision, blob bytes, valid range, and supporting content checked."
+      },
+      {
+        "path": "lean/OAI/Analysis/DirectCrouzeix/DomainCore.lean",
+        "lines": [
+          15,
+          117
+        ],
+        "git_blob_sha1": "7648fc2c1447cf95cbe7ead792e70455230b0cb8",
+        "result": "Pinned revision, blob bytes, valid range, and supporting content checked."
+      },
+      {
+        "path": "lean/OAI/Analysis/DirectCrouzeix/BoundaryEnergy.lean",
+        "lines": [
+          57,
+          88
+        ],
+        "git_blob_sha1": "35ad5040edd4ed9d4cf11fa8012d24e02cf814e5",
+        "result": "Pinned revision, blob bytes, valid range, and supporting content checked."
+      },
+      {
+        "path": "lean/OAI/Analysis/DirectCrouzeix/PositiveBlocks.lean",
+        "lines": [
+          22,
+          62
+        ],
+        "git_blob_sha1": "b7787904dedc05f3fea0e20106353b88ab7474f7",
+        "result": "Pinned revision, blob bytes, valid range, and supporting content checked."
+      },
+      {
+        "path": "lean/OAI/Analysis/DirectCrouzeix/OuterApproximation.lean",
+        "lines": [
+          59,
+          122
+        ],
+        "git_blob_sha1": "90b384e860ab4d1f1dc3a068c16a747a0c341521",
+        "result": "Pinned revision, blob bytes, valid range, and supporting content checked."
+      },
+      {
+        "path": "lean/OAI/Analysis/DirectCrouzeix/CompleteBound.lean",
+        "lines": [
+          65,
+          97
+        ],
+        "git_blob_sha1": "a504007c267984cb20e977b0e8c31c4198bad757",
+        "result": "Pinned revision, blob bytes, valid range, and supporting content checked."
+      }
+    ]
+  },
+  "reviewed_manuscript_files": [
+    {
+      "path": "papers/lean-proof-architecture/cases-analysis.tex",
+      "sha256": "c4c7554105584afc433470627c911bbd41945ccfcc190d7771cfe1a731cc2094"
+    },
+    {
+      "path": "papers/lean-proof-architecture/worked-examples.tex",
+      "sha256": "32e11ae7eaf04124fc6ad9580ea956850a7477a7430fccbd2f0b4a9bda903c3c"
+    },
+    {
+      "path": "papers/lean-proof-architecture/introduction.tex",
+      "sha256": "27ed47af505289aeb1c389894f2c377679955c2a26a2eb7a3696c93d11542b89"
+    }
+  ],
+  "edits_and_builds": {
+    "manuscript_edited": false,
+    "published_checkout_edited": false,
+    "build_rerun": false
+  }
+}

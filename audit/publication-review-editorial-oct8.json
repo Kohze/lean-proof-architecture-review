@@ -1,0 +1,176 @@
+{
+  "review_date": "2026-10-08",
+  "review_type": "Fresh skeptical editorial and source review; internal red-team review, not an external journal referee report",
+  "reviewer_role_disclosure": "This agent previously contributed the architecture case exposition. This review reread the current manuscript and the relevant source bodies and checked closest primary literature afresh; it is not blind or institutionally independent peer review.",
+  "snapshot": {
+    "directory": "papers/lean-proof-architecture",
+    "baseline_public_version": "v1.0.1",
+    "baseline_public_commit": "59424d951ecc85459cab44ce54bfd61a945210dd",
+    "rating_scope": "The pre-revision manuscript read at the start of this review. Root began implementing the communicated editorial revisions while this report was being completed. These ratings do not assess those later changes.",
+    "upstream_commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb"
+  },
+  "verdict": {
+    "worth_reading": true,
+    "worth_reading_as": "A technically substantive comparative account for mathematicians learning to read formalizations and formalizers interested in concrete representation interfaces.",
+    "journal_recommendation_for_baseline": "Major editorial revision before submission as a comparative formalization review. The baseline is a useful public technical preprint, but its positioning and selection account are not yet as sharp as its case-level exposition.",
+    "research_novelty_limit": "It supplies no new mathematical theorem or new general formalization method. Its defensible contribution is the source-grounded comparison, explanatory counterexamples, and identification of specific preservation chains in this corpus.",
+    "technical_blocker_found_in_support_cases": false,
+    "acceptance_guarantee": false,
+    "venue_fit": "An expository or survey-style formalization article is more plausible than a research submission whose principal criterion is a new verification technique. Venue-specific requirements remain a separate assessment."
+  },
+  "ratings_out_of_10": {
+    "novelty_of_comparative_review": {
+      "score": 6,
+      "reason": "The selected corpus and detailed comparisons are useful new exposition. The four preservation categories and advice about explicit bridges largely organize established practice rather than constitute a new method or validated taxonomy."
+    },
+    "positioning_against_closest_work": {
+      "score": 6,
+      "reason": "The manuscript appropriately rejects historical-first claims and cites substantial precedents. However, the closest accounts of proof anatomy, specification-driven development, and the exact trace-cone mathematics are acknowledged more than directly compared."
+    },
+    "selection_and_method": {
+      "score": 6,
+      "reason": "Pinned sources, exact endpoint distinctions, source ledgers, and an explicit static-versus-executable evidence boundary are strong. Purposive criteria are clear, but the actual exploratory discovery route and stopping rationale are missing from the paper; the huge inventory does not establish representative coverage."
+    },
+    "natural_readability": {
+      "score": 7,
+      "reason": "The formulas and failure examples provide real mathematical explanations. The all-seams account assumes too much local surface vocabulary, the common-bases account has a long sequence of implementation layers, and several closing paragraphs repeat generic interface language."
+    },
+    "technical_fidelity_of_rechecked_support_cases": {
+      "score": 9,
+      "reason": "Fresh inspection confirmed the exact cut convergence, finite-ideal closure, field assumptions, constructed witness, named-map predicate, and boundary-hypothesis separation. This score concerns correspondence to inspected source declarations and displayed constructions, not a new upstream compilation or certification of the surrounding mathematical manuscripts."
+    },
+    "reader_value_for_target_audience": {
+      "score": 8,
+      "reason": "The finite random tape coordinates, compensated graph direction, ambient-versus-tangential form equality, infinite trace example, and named coordinates make the review materially more informative than a list of tactics or theorem titles."
+    }
+  },
+  "ranked_findings": [
+    {
+      "id": "E1",
+      "priority": "P1: required for strong scholarly positioning",
+      "locations": ["introduction.tex:18", "introduction.tex:51", "discussion.tex:45"],
+      "finding": "The closest-work discussion does not yet say precisely what the present unit of analysis adds. The familiar advice to preserve the information consumed by the next operation is not, by itself, sufficient research novelty.",
+      "revision": "Add a direct comparison of the elementary proof-development unit in Anatomy, the construction/specification and collaboration unit in Commelin–Topaz, and this review's already-written preservation chain across several settings. State the contribution as comparative exposition supported by pinned declarations and explicit failure examples. Do not manufacture a new-method claim.",
+      "completion_criterion": "A reader can identify the actual added deliverable and its difference from the closest articles without inferring it from a string of citations.",
+      "primary_sources": ["https://arxiv.org/html/2411.11885v1", "https://math.commelin.net/files/abstraction_boundaries.pdf"]
+    },
+    {
+      "id": "E2",
+      "priority": "P1: required for a transparent review method",
+      "locations": ["method.tex:4", "method.tex:13", "discussion.tex:67"],
+      "finding": "Purposive selection is disclosed, but the paper reports eligibility criteria without its actual exploratory discovery route. The precise corpus count is not a substitute for explaining which parts were screened or how these six cases were reached.",
+      "revision": "Describe selection as exploratory endpoint/challenge inspection followed by deeper tracing of promising bridges, explain that diversity and inspectable downstream use drove the final choices, and say that no prospective complete screen or representativeness estimate was attempted. Use only the actual retained research record; do not invent a rejected-candidate log, screening denominator, or formal saturation criterion.",
+      "completion_criterion": "The method distinguishes complete repository inventory from selective deep reading and gives a truthful route from discovery to the six accounts.",
+      "evidence": ["research/architecture/findings.json", "research/analysis/reader-notes.txt:332", "research/discrete/findings.txt:101"]
+    },
+    {
+      "id": "E3",
+      "priority": "P1: attribution and novelty precision",
+      "locations": ["cases-architecture.tex:6", "cases-architecture.tex:45", "cases-architecture.tex:72", "cases-architecture.tex:87"],
+      "finding": "Elliott–Robert–Santiago is cited as the trace-cone setting, but it already contains the substantive idempotent/ideal identification, cut-based convergence, and scalar limits being explained. Those mathematical ingredients should be attributed at their use rather than left looking like merely contextual prior work.",
+      "revision": "Explicitly cite the ideals/idempotents discussion preceding Proposition 3.4 and Section 3.2, equations (3.3)–(3.4), for the topology and limits. Locate the review's interest in the Lean implementation's separation of additive reconstruction from the later convergence transport and its explicit construction obligations.",
+      "completion_criterion": "A reader understands that the underlying trace-cone mathematics has a precise prior source and that the reviewed contribution is its formal architecture and comparison.",
+      "primary_source": "https://arxiv.org/pdf/0805.3122"
+    },
+    {
+      "id": "E4",
+      "priority": "P1 for accessibility to the advertised mathematical audience",
+      "locations": ["cases-architecture.tex:126", "cases-architecture.tex:159", "cases-architecture.tex:181"],
+      "finding": "The all-seams section defines the crucial named-coordinate predicate well, but the surrounding surface construction is hard to imagine. Parent facets, bands, original/mirror seams, branches, and punctures arrive before an intelligible construction roadmap. Listing eight families is evidence of exhaustive proof coverage, not itself an explanation of their geometry.",
+      "revision": "Insert a short plain-language roadmap grounded in the actual marked-diagram constructor: surface pieces joined along seams, a band determined by the common splitting, retained order and base occurrences of old boundary circles, a mirror boundary at the parent, fresh genus-zero disks, and the parent genus decrease. Keep the seam-only endpoint scope clear. A new diagram is optional; an accurate verbal roadmap suffices.",
+      "completion_criterion": "A non-specialist can tell what the produced object changes and why new seams have to be checked before encountering the family enumeration.",
+      "source_locators": ["Cutting/MarkedDiagram.lean:79-104", "Frames/BandBases.lean:134-162", "Seams/ProducedDiagram.lean:36-59"]
+    },
+    {
+      "id": "E5",
+      "priority": "P2: high-value synthesis",
+      "locations": ["method.tex:70", "discussion.tex:4", "discussion.tex:31"],
+      "finding": "The overview table and discussion summarize the cases but leave the comparative framework close to an illustrated checklist. Four overlapping preservation kinds are useful reading categories, not an established exhaustive taxonomy.",
+      "revision": "Strengthen one compact cross-case comparison around the next operation, the tempting insufficient relation, the sufficient preservation statement, and its discharge point. The existing counterexamples already provide the evidence. Explain overlap and the fact that there can be different sufficient relations, rather than implying one uniquely minimal interface.",
+      "completion_criterion": "The synthesis helps a reader decide which relation to inspect in a new development and gives at least one reason two superficially similar cases require different strengths. This does not require new experiments or a larger case corpus."
+    },
+    {
+      "id": "E6",
+      "priority": "P2: readability and emphasis",
+      "locations": ["cases-discrete.tex:18", "cases-discrete.tex:24", "cases-architecture.tex:165", "discussion.tex:31"],
+      "finding": "Some paragraphs spend as much space on standard machinery as on the unusual mathematical payload. The long common-bases implementation chain and repeated assertions about explicit interfaces can obscure the decisive law-to-event and tape-coordinate steps.",
+      "revision": "Compress routine compiler/record facts where possible and make the decisive mathematical bridge the subject of the paragraph. Retain source names that aid navigation, but introduce them after their mathematical role. Reduce repetitive section-end statements that the devices are established and their composition is illuminating; one exact comparison is more persuasive.",
+      "completion_criterion": "Each case has a clear conceptual center and a reader can explain why its stronger interface matters without remembering every Lean declaration name."
+    },
+    {
+      "id": "E7",
+      "priority": "P2: current scholarly metadata",
+      "locations": ["references.bib:AvigadEtAl2024Anatomy", "references.bib:ZhuEtAl2026"],
+      "finding": "The cited pinned arXiv versions are genuine and their metadata is not erroneous. Published versions are now available, however, and would improve the bibliography for a journal submission unless the text specifically analyzes an earlier version.",
+      "revision": "Prefer Anatomy of a Formal Proof, Notices AMS 72(2), 188–195 (2025), DOI 10.1090/noti3114; and LeanArchitect, ITP 2026, LIPIcs 382, 25:1–25:16, DOI 10.4230/LIPIcs.ITP.2026.25. For the latter published version, use the publisher's author order Zhu, Monticone, Welleck, Avigad. Retain links to the exact version read when relevant.",
+      "primary_sources": ["https://www.andrew.cmu.edu/user/avigad/papers.html", "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2026.25"],
+      "access_note": "The Anatomy DOI link is supplied by the author's publication list; direct publisher access returned HTTP 403 during this review. LeanArchitect publisher metadata was directly accessible."
+    }
+  ],
+  "support_case_checks": {
+    "trace_ideals": {
+      "status": "No mathematical or endpoint-scope correction found in the inspected exposition",
+      "confirmed": [
+        "The finite ideal is the norm closure of the finite-square domain, not simply the set of positive elements on which the trace is finite.",
+        "Positive membership is characterized by finiteness on every strictly positive cut. The displayed limsup/liminf inequalities match Basic.lean.",
+        "Canonical-limit uniqueness requires a proper filter and the manuscript states this qualification.",
+        "An additive bijection alone yields the ideal order isomorphism. Positive scaling and forward convergence preservation are subsequently used to identify the finite and zero ideals.",
+        "The scalar-zero statement is canonical convergence and can fail pointwise on positive elements in the closed finite ideal with infinite trace value. The scalar-infinity proof first establishes pointwise convergence of the support weight.",
+        "TraceConeEquiv includes convergence preservation in both directions, while the two displayed endpoint proofs use the forward field."
+      ],
+      "source_locators": ["Analysis/TraceCone/Basic.lean:65-69", "Analysis/TraceCone/FiniteIdeal.lean:172-244", "Analysis/TraceCone/FiniteIdeal.lean:290-324", "Analysis/TraceCone/IdealTransport.lean:140-224", "Analysis/TraceCone/IdealTransport.lean:262-278", "Analysis/TraceCone/IdealTransport.lean:320-418"],
+      "editorial_issue": "Make the exact mathematical antecedents in Elliott–Robert–Santiago explicit, as in E3."
+    },
+    "all_seams": {
+      "status": "No mathematical or endpoint-scope correction found in the inspected exposition",
+      "confirmed": [
+        "SameFramedFlag requires both equality of prefix subspaces and equality of the named graded-coordinate maps on the next prefix.",
+        "IdentifiedBand contains a common frame, rank shape, row/column grade identifications, and named-map laws. Its chosen witness is obtained from a proved Nonempty statement.",
+        "The opaque cutGeneratorWitness has an explicit construction body; it is not an unproved provider assumption.",
+        "The same producedCutBand record supplies the shape and rank equalities of the actual produced diagram, frames, punctures, and generator values.",
+        "The eight families exhaust seams by the graft equivalence and finite endpoint cases. Inherited seam transport uses coordinate equalities and grade preservation.",
+        "The final all-seams proof transports through side values and valuesFromPorts, then applies framedSeamEquations_of_values_eq to the actual produced assignment.",
+        "producedMarkedValues_allSeams retains an existing field-valued solution, properness, maximal selected parent rank, and positive parent genus. It does not require hb. The later producedMarkedSolution does require hb for its surface component."
+      ],
+      "source_locators": ["AlgebraicGeometry/CharacterVarieties/Foundation/Flags.lean:147-157", "AlgebraicGeometry/CharacterVarieties/Frames/BandBases.lean:134-162", "AlgebraicGeometry/CharacterVarieties/Frames/MarkedFrames.lean:18-24", "AlgebraicGeometry/CharacterVarieties/Seams/ProducedDiagram.lean:36-59", "AlgebraicGeometry/CharacterVarieties/Frames/InheritedSeams.lean:117-155", "AlgebraicGeometry/CharacterVarieties/Seams/AllSeams.lean:43-62", "AlgebraicGeometry/CharacterVarieties/Seams/ProducedEquations.lean:25-30", "AlgebraicGeometry/CharacterVarieties/Seams/ProducedSolution.lean:29-92", "AlgebraicGeometry/CharacterVarieties/Seams/ProducedSolution.lean:144-153"],
+      "editorial_issue": "The mathematical setting and construction require a short readable roadmap, as in E4."
+    }
+  },
+  "primary_literature_checks": [
+    {
+      "work": "Avigad, Commelin, Macbeth, Topaz, Anatomy of a Formal Proof",
+      "primary_url": "https://arxiv.org/html/2411.11885v1",
+      "locators": "Generalizing the hypotheses and Strengthening the theorem; especially the final discussion of HasEigenvector and the existing library theorem",
+      "supported_comparison": "Its central worked unit is a linear-algebra proof developed and generalized in Lean, with attention to tactics and existing library interfaces. A multi-case account of already-written mathematical preservation chains has a different expository focus, not a claim to originate interface-aware reading."
+    },
+    {
+      "work": "Commelin and Topaz, Abstraction boundaries and spec driven development in pure mathematics",
+      "primary_url": "https://math.commelin.net/files/abstraction_boundaries.pdf",
+      "doi": "10.1090/bull/1831",
+      "locators": "Sections 4 and 5, author PDF pages 6 and 10–11",
+      "supported_comparison": "This work already treats specifications as a way to organize construction and collaboration, and curated usable properties as evidence of formal/informal alignment. The review should directly acknowledge this close antecedent and distinguish its comparative source-reading deliverable."
+    },
+    {
+      "work": "Elliott, Robert, Santiago, The cone of lower semicontinuous traces on a C*-algebra",
+      "primary_url": "https://arxiv.org/pdf/0805.3122",
+      "doi": "10.1353/ajm.2011.0027",
+      "locators": "Discussion preceding Proposition 3.4, page 5; Section 3.2, equations (3.3)–(3.4), pages 6–7",
+      "supported_comparison": "The paper explicitly gives ideal weights and their idempotent characterization, the cut-based convergence condition, and scalar-zero/infinity limits to the finiteness/kernel ideal weights. The Lean case's interest lies in its formal implementation and separation of obligations, not newly discovering those mathematical facts."
+    },
+    {
+      "work": "Zhu, Monticone, Welleck, Avigad, LeanArchitect: Automating Blueprint Generation for Humans and AI",
+      "primary_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2026.25",
+      "doi": "10.4230/LIPIcs.ITP.2026.25",
+      "locators": "Publisher abstract and publication metadata",
+      "supported_comparison": "The description of LeanArchitect as associating informal blueprint metadata with declarations and inferring dependencies is supported. The current manuscript correctly distinguishes a dependency edge from an explanation of why a preservation statement suffices."
+    }
+  ],
+  "audit_work_performed": {
+    "manuscript_read": ["main.tex", "abstract.tex", "introduction.tex", "method.tex", "cases.tex", "cases-discrete.tex", "cases-analysis.tex", "cases-architecture.tex", "worked-examples.tex", "discussion.tex"],
+    "fresh_support_source_files_hash_checked": 16,
+    "hash_checks": "All 16 reread support and construction source files match both SHA-256 and Git blob identifiers in research/corpus-inventory.json.",
+    "upstream_build_claim": "None. No upstream compilation was performed for this review.",
+    "not_required_for_editorial_completion": ["An invented prospective systematic review protocol", "More case studies merely to raise the case count", "A new theorem or a historical-first claim", "A full upstream build to restate this accurately scoped source-analysis article", "A guarantee of journal acceptance"],
+    "mutations": "Only this report was written by this reviewer. No manuscript or public checkout was edited."
+  }
+}

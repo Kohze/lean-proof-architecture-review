@@ -1,0 +1,215 @@
+{
+  "reviewer": "lean_discrete_cases",
+  "date": "2026-10-08",
+  "corpus_commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "scope": "Fresh publication review of cases-discrete.tex, worked-examples.tex, InterfaceExamples.lean and the exact Python companion. Earlier green reports were not used as correctness evidence. Direct source bodies, a fresh Lean compilation and a fresh in-memory execution of the Python companion supplied the checks. Manuscript changes described below were made by the parent agent during the review, not by this reviewer.",
+  "overall_assessment": "The revised discrete cases correctly distinguish deterministic execution, normalized output laws, raw multiplicities, bounded-run loss, and physical-tape counting. The graph argument correctly isolates a flag direction per fiber and pays for its aggregate interaction; it does not assert globally rank-one error, pairwise independence, or nonnegative local covariance. The fresh review found a real omitted draw-width premise and imprecise squared-norm wording. Both have been corrected during review. The new normalized-multiplicity theorem and success-budget proposition give a useful reusable explanation beyond the earlier arithmetic examples. No unresolved substantive mathematical error remains in the passages checked at completion.",
+  "ratings_out_of_10": {
+    "mathematical_accuracy": {
+      "rating": 9,
+      "reason": "The current hypotheses, finite-law/count normalization, one-sided loss, tape quantifiers, graph normalization and compensated inequalities match the inspected sources. The success-budget proposition is correct with a finite output set, adjoined failure symbol, nonnegative budgets and fixed injective tape coordinates. This rating concerns the audited exposition and small examples, not independent validity of the unbuilt release endpoints."
+    },
+    "executable_evidence": {
+      "rating": 8.5,
+      "reason": "The current five original theorems compiled freshly with Lean 4.34.1 and reported only propext and Quot.sound. The current Python program freshly reproduced all fifteen tape-fiber checks, all sixteen matrix counts and the exact -1/9 covariance. These executable checks are deliberately narrower than full uniform-law or machine-correctness formalizations; the manuscript keeps that distinction visible. The new success-budget proof is mathematical exposition, not a newly compiled source-endpoint verification."
+    },
+    "reader_value": {
+      "rating": 9,
+      "reason": "The normalized-count distinction and the composed loss/uniformity/execution guarantee now tell readers what they can safely reuse. The graph table, explicit negative covariance, per-fiber dimension warning and squared-error budget form a coherent mathematical narrative. A short tight numerical budget illustration would add value, but is not necessary for correctness."
+    }
+  },
+  "ranked_findings": [
+    {
+      "id": "PUB-DIS-01",
+      "priority": "P1 mathematical hypothesis",
+      "location": "cases-discrete.tex:20; worked-examples.tex:122-125",
+      "initial_issue": "The bounded-run description gave M draws and D trials without spelling out the trial-width hypothesis of Fits H M t.",
+      "source": {
+        "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+        "lines": [
+          9299,
+          9302,
+          9308,
+          9313,
+          9346,
+          9349
+        ],
+        "git_blob_sha1": "83e7e510797b85b7ef65b93d5983303245c3246b"
+      },
+      "reason": "Fits requires both a depth bound and ceil(log2(a)) <= H for every draw arity a. If H=0 for a binary draw, run returns none before using its trials. With M=1 and large D, event probability can fall from one to zero, contradicting the claimed small loss if width is omitted.",
+      "concrete_correction": "State at every use that trials have H bits with H >= ceil(log2(a)) for each draw arity, in addition to depth <= M.",
+      "status": "resolved during review; both passages now state the depth and width condition, and the case explains immediate failure when width is insufficient"
+    },
+    {
+      "id": "PUB-DIS-02",
+      "priority": "P2 quantitative precision",
+      "location": "cases-discrete.tex:104-105",
+      "initial_issue": "The budget sentence described sums of error and gain norms, although the source controls their squares.",
+      "source": {
+        "path": "lean/OAI/Probability/SwitchChain/PairEqualityBudgetUnordered.lean",
+        "lines": [
+          42,
+          44
+        ],
+        "supporting_path": "lean/OAI/Probability/SwitchChain/PairDisjointAssembly.lean",
+        "supporting_lines": [
+          52,
+          54
+        ]
+      },
+      "reason": "The cancellation in the displayed interaction inequality requires sums of squared norms. A bound on those sums does not generally imply the corresponding bound on sums of norms.",
+      "concrete_correction": "Use sum of squared error norms and sum of squared gain norms.",
+      "status": "resolved during review"
+    },
+    {
+      "id": "PUB-DIS-03",
+      "priority": "P2 source normalization",
+      "location": "cases-discrete.tex:94-97",
+      "initial_issue": "A newly added global L2 description used uniform probability normalization, whereas the source's StateSpace has the counting inner product.",
+      "source": {
+        "path": "lean/OAI/Probability/SwitchChain/OrthogonalPairResampling.lean",
+        "git_blob_sha1": "c341bbbd3d45b334dc74832f315519d979d6b018",
+        "definition_line": 81,
+        "counting_inner_product_lines": [
+          191,
+          193
+        ],
+        "conditional_average_lines": [
+          231,
+          232
+        ]
+      },
+      "reason": "Global Euclidean inner products sum over states, while each conditional expectation divides by its own fiber cardinality. Those two normalizations should not be conflated. Dividing every squared norm and inner product in the homogeneous displayed inequalities by the common positive state count gives the equivalent uniform-probability convention; it does not change the operators or constants.",
+      "concrete_correction": "State the source's counting inner product explicitly, retaining normalized fiber averages.",
+      "status": "resolved during review; the new source module was archived byte-identically and added as one selected inventory file at the parent's explicit request"
+    },
+    {
+      "id": "PUB-DIS-04",
+      "priority": "P2 high-value semantic clarification",
+      "location": "worked-examples.tex:59-68; reproduce/InterfaceExamples.lean:58-64",
+      "initial_issue": "The original Lean count theorem proves equality of unnormalized sums, which does not by itself express equality of laws when sample-space sizes differ.",
+      "reason": "For counts c,c' obtained from N,N'>0 equally likely samples, equality of laws gives N' c(x) = N c'(x). Raw counts can differ, as with (1,1,1) and (2,2,2). In the source, bankWordEquiv relates equally sized structured banks and bit words, but the physical B-bit tape and gathered m-bit word generally have different cardinalities.",
+      "source": {
+        "path": "lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean",
+        "bank_equivalence_line": 11902,
+        "output_certificate_lines": [
+          25962,
+          25968
+        ],
+        "physical_law_lines": [
+          25683,
+          25686
+        ]
+      },
+      "concrete_improvement": "Keep the unnormalized theorem and explicitly add the cross-multiplied normalized version, explaining that positive totals and the interpretation as sample counts are external mathematical premises rather than a probability structure imported by the Lean theorem.",
+      "status": "implemented during review; current normalized_observables_determine_counts compiled in the fresh Lean run and the prose states N,N'>0"
+    },
+    {
+      "id": "PUB-DIS-05",
+      "priority": "P2 reusable explanatory improvement",
+      "location": "worked-examples.tex:86-135; discussion.tex:31-49",
+      "improvement": "Compose the one-sided bounded-observable loss with an ideal success bound and fixed injective physical positions to obtain an exact finite success count.",
+      "clean_conditions": [
+        "U has a probability law on a finite output set X.",
+        "V is a deterministic function of a uniform m-bit word into X with an adjoined failure symbol; failure receives observable value zero.",
+        "For every phi:X->[0,1], E phi(V) >= E phi(U) - eta. A single fixed accuracy event only needs its own indicator case.",
+        "eta,delta0 >= 0, and P(U in A) >= 1-delta0.",
+        "The machine returns V on bits gathered at fixed injective coordinates in a length-B uniform tape. This deterministic execution relation is a separate input."
+      ],
+      "conclusion": "#successful length-B tapes >= (1-delta0-eta) 2^B. The formula remains valid but can be vacuous if the combined budget exceeds one.",
+      "source_direction": "run_lower is expressly one-sided, with eta=M 2^(-D); a two-sided probability-distance estimate is not needed for the lower success guarantee.",
+      "totalization_note": "If a source implementation replaces failure by an ordinary output, a nonnegative event indicator receives a value at least its failure-as-zero value, so the same lower bound still holds. Whether failure itself is successful must be stated when interpreting counts.",
+      "budget_note": "For 0<delta<1, delta0<=delta/2 and M 2^(-D)<=delta/2 suffice. For M>0 the displayed ceiling-log choice of D is sufficient; M=0 needs no logarithm. H still has to satisfy the separate arity fit condition.",
+      "status": "implemented during review and mathematically checked; the finite set, adjoined failure, budget signs and positive desired delta are now explicit"
+    },
+    {
+      "id": "PUB-DIS-06",
+      "priority": "P3 executable-scope documentation",
+      "location": "discussion.tex:111-112; reproduce/verify_examples.py:19-20",
+      "initial_issue": "The new normalized theorem increased the named executable theorem count from four to five.",
+      "concrete_correction": "Update the verifier's expected list and the data-availability count together.",
+      "status": "resolved during review; both currently specify five"
+    }
+  ],
+  "fresh_checks": {
+    "retained_source_integrity": "Rehashed all twenty original discrete manifest files directly as Git blobs; zero mismatches at the pinned commit.",
+    "additional_normalization_source": "Fetched raw pinned OrthogonalPairResampling.lean, checked its Git blob against the complete pinned tree, then archived its exact 10549 bytes at the parent's request. GitHub web rendering compressed blank lines; all source anchors in this report use raw-file line numbers.",
+    "lean_command": "lean +leanprover/lean4:v4.34.1 papers/lean-proof-architecture/reproduce/InterfaceExamples.lean",
+    "lean_exit_code": 0,
+    "named_theorems": [
+      "physicalIndex_injective",
+      "physicalIndex_lt",
+      "moment_indicator",
+      "all_observables_determine_counts",
+      "normalized_observables_determine_counts"
+    ],
+    "reported_axioms_for_each": [
+      "propext",
+      "Quot.sound"
+    ],
+    "python_execution": "Executed the current companion's main function with its sole results-file write intercepted in memory, then compared the computed JSON with the retained record. No canonical result file was changed by this check.",
+    "python_result": {
+      "tape_fiber_checks": 15,
+      "boolean_matrices_enumerated": 16,
+      "total_two_matrix_count": 6,
+      "off_center_left_mean": "1/3",
+      "off_center_right_mean": "1/3",
+      "joint_mean": "0",
+      "covariance": "-1/9",
+      "computed_record_equals_retained_record": true
+    },
+    "upstream_proof_build": "Not performed; direct source interpretation and the original examples are the scope of this review."
+  },
+  "confirmed_probability_chain": [
+    "DrawTree nodes have nonempty Fin(v+1) outcomes; Fits carries both remaining depth and trial-width obligations.",
+    "optionValue none=0 makes run_lower a bounded-observable lower bound for successful subprobability mass; it is not a claim that failed runs disappear from a normalized conditional distribution.",
+    "Reindexed.expectation preserves normalized finite expectations while allowing different numbered outcomes to return different values on the same numbered bank.",
+    "OutputCertificate gives execution on every gathered word, exact nonnegativity/zero behavior, and equality against every rational-output observable. It does not assert equality of outputs for matched bank indices.",
+    "The source's bankWordEquiv gives an actual equivalence between gathered bit words and structured banks. The later physical tape space has cardinality 2^B, generally larger than 2^m.",
+    "For any output event, an injective physical-coordinate map gives tape multiplicity 2^(B-m) times word multiplicity. Equality of normalized laws survives even though raw sample counts change.",
+    "physicalWord uses start+3*(m-1-i)+1 with i:Fin m; start is quantified before all tapes. The budget bounds every chosen coordinate. The empty-word case is vacuous and safe.",
+    "physical_accuracy applies the exact accuracy indicator, then physicalWord_law, then uniformAverage_indicator_card and positive multiplication by 2^B. No equality of means is substituted for law preservation."
+  ],
+  "confirmed_graph_chain": [
+    "The six equally likely total-two matrices produce the displayed table and covariance -1/9. This is explicitly distinguished from graph cells with additional boundary multiplicities.",
+    "The total-two count matrix itself is not claimed to have rank one; the centered covariance and conditional image factor through the off-center flag.",
+    "The graph-cell correspondence preserves both fiber cardinalities and sums before conditional-average formulas are transported.",
+    "The active-fiber condition and equalitySpace definition allow a separate coefficient on each fiber. The full error subspace can therefore have many dimensions.",
+    "The source uses the counting state-space inner product and normalized conditional averages. The current prose matches this convention.",
+    "The source's error budget uses squared norms. Combining both oriented errors with the gain terms yields a nonnegative aggregate disjoint sum, not nonnegative individual correlations."
+  ],
+  "remaining_errors": [],
+  "remaining_required_corrections": [],
+  "optional_small_payoff": {
+    "purpose": "Make the new success-budget proposition concrete with a tight illustration spanning all three layers, rather than another isolated arithmetic test.",
+    "ideal_counts_on_eight_samples": {
+      "a": 6,
+      "b": 2
+    },
+    "bounded_counts_on_eight_words": {
+      "a": 5,
+      "b": 2,
+      "failure": 1
+    },
+    "loss_formula": "Eideal(phi)-Ebounded(phi)=(1/8)phi(a), so eta=1/8 for all phi in [0,1].",
+    "success_event": "A={a}; delta0=1/4; bounded success is exactly5/8.",
+    "physical_example": "m=3, start=0, B=10; positions [7,4,1]; exactly5*2^(10-3)=640 successful tapes, equal to (1-delta0-eta)2^10.",
+    "independent_check": "Verified exact rational loss on the four vertices of the two-observable unit square, and directly counted the 1024 physical tapes. The affine loss formula proves the bound for the whole unit square.",
+    "scope": "An illustrative implementation of the generic proposition, not execution of the source's rejection sampler or FPRAS. No claim that this is a historically new theorem."
+  },
+  "worked_examples_rigor": {
+    "tape_fiber_argument": "Correct with finite injection, hence m<=B. Fixed positions and equal fibers justify the exact probability; individual fair marginals alone do not imply independent gathered bits.",
+    "finite_law_argument": "Singleton indicators correctly recover a finite law. The unnormalized and normalized integer analogues are now distinguished. The Lean theorem's totals are parameters; their positive-mass probability interpretation is explained in prose rather than encoded as a full distribution structure.",
+    "c0_example": "The positive summation trace is lower semicontinuous as a supremum of continuous finite partial sums. Finite support is dense; every fixed positive cut has finite support; 1/j has infinite trace. The claimed canonical-versus-pointwise distinction is correct. This example is not presented as a compiled theorem.",
+    "locality_and_frame_examples": "The point derivative example and the scaled one-dimensional frame example are correct. Neighborhood equality is described as the source's ambient-derivative congruence route, while later integration only consumes tangent agreement. The word frame entails the chosen vector is nonzero."
+  },
+  "reviewed_file_sha256": {
+    "papers/lean-proof-architecture/cases-discrete.tex": "4efc6ad7c5b57d33fcc83dd122216095dcc95e3a00841c14caa5ed6d4528a837",
+    "papers/lean-proof-architecture/worked-examples.tex": "6c6bc035d671f7bc1f8d62c8d409dbc855d913847453bab5b05be6967db6ef88",
+    "papers/lean-proof-architecture/discussion.tex": "e239038b0f388239da04ce965f27383dd8b873592c63544aa5cd8622dd0e2094",
+    "papers/lean-proof-architecture/reproduce/InterfaceExamples.lean": "113bedfd927ff66d608a04cf02de076c331df3116e46da5f746bc1ca02a8f64c",
+    "papers/lean-proof-architecture/reproduce/check_examples.py": "86415c5bc467092f0a999096f7e0334f6392cb21a3836c35d6eb13d970d7f00c",
+    "papers/lean-proof-architecture/reproduce/verify_examples.py": "25d1f0c10203ad44ad69cebe9a7c7a7f1082a2c78b8211f426d540f0786fda35",
+    "papers/lean-proof-architecture/research/source/openai-math/lean/OAI/Probability/SwitchChain/OrthogonalPairResampling.lean": "03e80f02380e3142b99011951cdd7bac1e05e0b98a08dbd7f6d551820390b22e"
+  }
+}

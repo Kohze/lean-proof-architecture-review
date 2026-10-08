@@ -5,11 +5,13 @@ Robin Gounder · Vaionex Corporation · 8 October 2026
 
 [Read the manuscript](lean-proof-architecture.pdf) · [Citation metadata](CITATION.cff) · [Reproduction instructions](#reproduce)
 
-This source-driven review examines six mathematical interfaces in the OpenAI Lean collection: common-base counting, graph switch chains, the symmetric Mahler inequality, the complete Crouzeix bound, extended trace cones, and marked character-variety constructions. It studies the preservation theorems that connect representations and make the next mathematical operation possible. Original elementary examples illustrate tape-index arithmetic and recovery of finite multiplicities from observables.
+This source-driven review examines six mathematical interfaces in the OpenAI Lean collection: common-base counting, graph switch chains, the symmetric Mahler inequality, the complete Crouzeix bound, extended trace cones, and marked character-variety constructions. It studies the preservation theorems that connect representations and make the next mathematical operation possible. Original elementary examples explain tape-index arithmetic, normalized finite laws, and the composition of sampling loss with exact physical-tape success counts.
 
-**Public source edition:** of a 21-page manuscript with 38 references. The package includes internal source, citation, reader, and visual audits. Internal review is distinct from external peer review.
+**Audited source edition v1.1.0:** a 23-page manuscript with 38 references (26 scholarly works and 12 source or software records). The package includes internal source, citation, reader, and visual audits. Internal review is distinct from external peer review.
 
 Repository: [Kohze/lean-proof-architecture-review](https://github.com/Kohze/lean-proof-architecture-review).
+
+The [publication review](audit/publication-review-oct8.txt) gives category ratings, resolved findings, and the scope of the verification. Five original Lean lemmas compile with Lean 4.34.1; exhaustive finite checks include a tight 640/1024 successful-tape example.
 
 ## Contents
 
@@ -25,7 +27,7 @@ Repository: [Kohze/lean-proof-architecture-review](https://github.com/Kohze/lean
 | `research/bibliography/` | Retained publisher DOI metadata |
 | `audit/` | Build, source-integrity, citation, and internal review records |
 
-The reviewed OpenAI corpus is pinned to commit [`fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb`](https://github.com/openai/math/tree/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb). The package retains 164 curated files from that revision. Separate Mathlib and Comparator revisions are recorded in the research manifests. The curated source set supports inspection; it is not a complete upstream checkout.
+The reviewed OpenAI corpus is pinned to commit [`fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb`](https://github.com/openai/math/tree/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb). The package retains 168 curated files from that revision. Separate Mathlib and Comparator revisions are recorded in the research manifests. The curated source set supports inspection; it is not a complete upstream checkout.
 
 ## Reproduce
 
@@ -43,7 +45,7 @@ elan toolchain install leanprover/lean4:v4.34.1
 python reproduce/verify_examples.py
 ```
 
-`verify_examples.py` compiles `InterfaceExamples.lean`, checks the four reported axiom lists, and runs the exhaustive finite Python examples. The verification records describe these original explanatory examples. The six upstream case studies were reviewed through static source analysis; the workflow does not compile their headline theorems or run Comparator on them.
+`verify_examples.py` compiles `InterfaceExamples.lean`, checks the five reported axiom lists, and runs the exhaustive finite Python examples. The verification records describe these original explanatory examples. The six upstream case studies were reviewed through static source analysis; the workflow does not compile their headline theorems or run Comparator on them.
 
 For the manuscript, install pdfLaTeX, BibTeX, and the packages named in `main.tex`. On Ubuntu, the workflow uses `texlive-latex-base`, `texlive-latex-extra`, `texlive-fonts-recommended`, and `lmodern`.
 

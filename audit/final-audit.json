@@ -1,9 +1,9 @@
 {
-  "pages": 21,
+  "pages": 23,
   "cited_references": 38,
   "scholarly_references": 26,
-  "published_scholarly_references_with_doi": 22,
-  "preprints": 3,
+  "published_scholarly_references_with_doi": 24,
+  "preprints": 1,
   "technical_reports": 1,
   "source_and_software_references": 12,
   "unused_reference_keys": [],
@@ -65,6 +65,15 @@
       ]
     },
     {
+      "key": "ZhuEtAl2026",
+      "doi": "10.4230/LIPIcs.ITP.2026.25",
+      "title_identity": true,
+      "recorded_title": "LeanArchitect: Automating Blueprint Generation for Humans and AI",
+      "publisher_titles": [
+        "LeanArchitect: Automating Blueprint Generation for Humans and AI"
+      ]
+    },
+    {
       "key": "deBruijn1970",
       "doi": "10.1007/BFb0060623",
       "title_identity": true,
@@ -107,6 +116,15 @@
       "recorded_title": "A formal proof of the Kepler conjecture",
       "publisher_titles": [
         "A FORMAL PROOF OF THE KEPLER CONJECTURE"
+      ]
+    },
+    {
+      "key": "AvigadEtAl2024Anatomy",
+      "doi": "10.1090/noti3114",
+      "title_identity": true,
+      "recorded_title": "Anatomy of a Formal Proof",
+      "publisher_titles": [
+        "Anatomy of a Formal Proof"
       ]
     },
     {
@@ -213,17 +231,17 @@
   "disclosure_confined_to_dedicated_section": true,
   "review_type": "Source-driven comparative narrative review with original explanatory examples.",
   "novelty_scope": "Comparative synthesis; the elementary propositions are not presented as new theorems.",
-  "pdf_sha256": "6cd797cd0c6bb3dbbc8c82bdf253053917553f0a9ccda0af64ffc16573123dec",
+  "pdf_sha256": "8b527f105f1f412ba99a26922ac031c4467ee7d655bf47e5d6244e5c325938f5",
   "tex_hashes": {
-    "abstract.tex": "acca137f54da4780086cb4f10c3017ee9d080475525ab854bf5ca43486eedb47",
-    "cases-analysis.tex": "d1a9afb73e521c4fe6e9ea8042509f8b80786b5bc60f4b9d9ac5231114309c7c",
-    "cases-architecture.tex": "4ce1fc4493c6b29a5a2216e9a51846cf3f5350b41731d44b224dd3b08e5c8840",
-    "cases-discrete.tex": "6a5122f133626a9a7950782c2e15d0b81cb6e406d5e6f86db1226893ff436976",
+    "abstract.tex": "92548c01bb7d6b61ba7c415150bfc7b6971015f28b567c9f4215c5b9c5476c4a",
+    "cases-analysis.tex": "90d777900e9763b06ddededf35039a302e229b5645047cf544ce6531c41b15c4",
+    "cases-architecture.tex": "d5499424ea3a5293620ae7531fb1fdc01316e974369a7dbfa96de5ef4a722b7b",
+    "cases-discrete.tex": "dc08689ec2dc4aa830999858a46a43c3612ce81b088d69b7d78b55bd4fd8ce52",
     "cases.tex": "5c3c6e59a9405d9fcac2712fee483582f0cbf1a79a05b6c11bf5aa4af95e8657",
-    "discussion.tex": "614516b7a2af3da0cf59e9e3b501a4ff84343065c73842bb08543bfbe7fe8287",
-    "introduction.tex": "6d8d741c4980fa718fc12fe4f394e2e29f04516c074cf636159551b44cca0dae",
+    "discussion.tex": "cbd8dfc5e118a998ef1cb90ceefd75ad91296f1287f45c4f47f8de10783524d4",
+    "introduction.tex": "27ed47af505289aeb1c389894f2c377679955c2a26a2eb7a3696c93d11542b89",
     "main.tex": "3ca141eb826dbfa01d6c119d2eb52143970de5a759566f63bf9a94ea30bb7b40",
-    "method.tex": "4bc90c6d949625c387289eafb20b6aa084feb7b2468ec40d2bcfa63c05bd8f11",
-    "worked-examples.tex": "ce4b273a7a13840bc5b1eac0d2d60f9a5ccd758ecda7ea8dc13b9d15f9f2cb26"
+    "method.tex": "5ab53ce6a6b66f18131ea64df17c28d3175cc3fcfd2b2e3483f3fe3ad7b168bc",
+    "worked-examples.tex": "32e11ae7eaf04124fc6ad9580ea956850a7477a7430fccbd2f0b4a9bda903c3c"
   }
 }

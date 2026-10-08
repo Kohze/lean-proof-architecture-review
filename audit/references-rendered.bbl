@@ -14,11 +14,14 @@ Philippe Audebaud and Christine Paulin-Mohring.
 \newblock URL
   \url{https://www.sciencedirect.com/science/article/pii/S0167642309000240}.
 
-\bibitem[Avigad et~al.(2024)Avigad, Commelin, Macbeth, and
+\bibitem[Avigad et~al.(2025)Avigad, Commelin, Macbeth, and
   Topaz]{AvigadEtAl2024Anatomy}
 Jeremy Avigad, Johan Commelin, Heather Macbeth, and Adam Topaz.
-\newblock {Anatomy of a Formal Proof}, 2024.
-\newblock URL \url{https://arxiv.org/abs/2411.11885v1}.
+\newblock {Anatomy of a Formal Proof}.
+\newblock \emph{Notices of the American Mathematical Society}, 72\penalty0
+  (2):\penalty0 188--195, 2025.
+\newblock \doi{10.1090/noti3114}.
+\newblock URL \url{https://doi.org/10.1090/noti3114}.
 
 \bibitem[Baanen(2022)]{Baanen2022}
 Anne Baanen.
@@ -323,10 +326,14 @@ Floris van Doorn, Gabriel Ebner, and Robert~Y. Lewis.
 \newblock URL
   \url{https://link.springer.com/chapter/10.1007/978-3-030-53518-6_16}.
 
-\bibitem[Zhu et~al.(2026)Zhu, Monticone, Avigad, and Welleck]{ZhuEtAl2026}
-Thomas Zhu, Pietro Monticone, Jeremy Avigad, and Sean Welleck.
-\newblock {LeanArchitect: Automating Blueprint Generation for Humans and AI},
-  2026.
-\newblock URL \url{https://arxiv.org/abs/2601.22554v1}.
+\bibitem[Zhu et~al.(2026)Zhu, Monticone, Welleck, and Avigad]{ZhuEtAl2026}
+Thomas Zhu, Pietro Monticone, Sean Welleck, and Jeremy Avigad.
+\newblock {LeanArchitect: Automating Blueprint Generation for Humans and AI}.
+\newblock In \emph{17th International Conference on Interactive Theorem Proving
+  (ITP 2026)}, volume 382 of \emph{Leibniz International Proceedings in
+  Informatics (LIPIcs)}, pages 25:1--25:16, 2026.
+\newblock \doi{10.4230/LIPIcs.ITP.2026.25}.
+\newblock URL
+  \url{https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2026.25}.
 
 \end{thebibliography}

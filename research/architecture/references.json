@@ -6,7 +6,10 @@
       "key": "deMouraUllrich2021",
       "type": "inproceedings",
       "title": "The Lean 4 Theorem Prover and Programming Language",
-      "authors": ["Leonardo de Moura", "Sebastian Ullrich"],
+      "authors": [
+        "Leonardo de Moura",
+        "Sebastian Ullrich"
+      ],
       "year": 2021,
       "venue": "Automated Deduction – CADE 28",
       "series": "Lecture Notes in Computer Science",
@@ -21,7 +24,9 @@
       "key": "mathlib2020",
       "type": "inproceedings",
       "title": "The Lean Mathematical Library",
-      "authors": ["The mathlib Community"],
+      "authors": [
+        "The mathlib Community"
+      ],
       "year": 2020,
       "venue": "Proceedings of the 9th ACM SIGPLAN International Conference on Certified Programs and Proofs",
       "pages": "367–381",
@@ -34,7 +39,11 @@
       "key": "vanDoornEbnerLewis2020",
       "type": "inproceedings",
       "title": "Maintaining a Library of Formal Mathematics",
-      "authors": ["Floris van Doorn", "Gabriel Ebner", "Robert Y. Lewis"],
+      "authors": [
+        "Floris van Doorn",
+        "Gabriel Ebner",
+        "Robert Y. Lewis"
+      ],
       "year": 2020,
       "venue": "Intelligent Computer Mathematics (CICM 2020)",
       "series": "Lecture Notes in Computer Science",
@@ -50,7 +59,9 @@
       "key": "Baanen2022",
       "type": "inproceedings",
       "title": "Use and Abuse of Instance Parameters in the Lean Mathematical Library",
-      "authors": ["Anne Baanen"],
+      "authors": [
+        "Anne Baanen"
+      ],
       "year": 2022,
       "venue": "13th International Conference on Interactive Theorem Proving (ITP 2022)",
       "series": "Leibniz International Proceedings in Informatics",
@@ -65,7 +76,12 @@
       "key": "GarillotEtAl2009",
       "type": "inproceedings",
       "title": "Packaging Mathematical Structures",
-      "authors": ["François Garillot", "Georges Gonthier", "Assia Mahboubi", "Laurence Rideau"],
+      "authors": [
+        "François Garillot",
+        "Georges Gonthier",
+        "Assia Mahboubi",
+        "Laurence Rideau"
+      ],
       "year": 2009,
       "venue": "Theorem Proving in Higher Order Logics (TPHOLs 2009)",
       "series": "Lecture Notes in Computer Science",
@@ -81,7 +97,10 @@
       "key": "CommelinTopaz2024",
       "type": "article",
       "title": "Abstraction boundaries and spec driven development in pure mathematics",
-      "authors": ["Johan Commelin", "Adam Topaz"],
+      "authors": [
+        "Johan Commelin",
+        "Adam Topaz"
+      ],
       "year": 2024,
       "venue": "Bulletin of the American Mathematical Society",
       "volume": "61",
@@ -96,22 +115,32 @@
     },
     {
       "key": "ZhuEtAl2026",
-      "type": "misc",
+      "type": "inproceedings",
       "title": "LeanArchitect: Automating Blueprint Generation for Humans and AI",
-      "authors": ["Thomas Zhu", "Pietro Monticone", "Jeremy Avigad", "Sean Welleck"],
+      "authors": [
+        "Thomas Zhu",
+        "Pietro Monticone",
+        "Sean Welleck",
+        "Jeremy Avigad"
+      ],
       "year": 2026,
-      "venue": "arXiv preprint",
-      "eprint": "2601.22554",
-      "doi": "10.48550/arXiv.2601.22554",
-      "primary_url": "https://arxiv.org/abs/2601.22554v1",
+      "venue": "17th International Conference on Interactive Theorem Proving (ITP 2026)",
+      "doi": "10.4230/LIPIcs.ITP.2026.25",
+      "primary_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2026.25",
       "claim_supported": "Blueprint metadata and automatically inferred declaration dependencies can be extracted directly from Lean code and exported to synchronized exposition.",
-      "limitation": "The corpus's lakefile pins LeanArchitect, but that dependency alone does not show that every case study uses annotations or an exported blueprint. The arXiv record was verified; no publication venue is asserted."
+      "limitation": "The pinned dependency alone does not show that every case uses annotations or an exported blueprint. Published metadata and author order are taken from the publisher.",
+      "series": "Leibniz International Proceedings in Informatics (LIPIcs)",
+      "volume": "382",
+      "pages": "25:1--25:16",
+      "version_read": "https://arxiv.org/abs/2601.22554v1"
     },
     {
       "key": "Carneiro2025Lean4Lean",
       "type": "misc",
       "title": "Lean4Lean: Verifying a Typechecker for Lean, in Lean",
-      "authors": ["Mario Carneiro"],
+      "authors": [
+        "Mario Carneiro"
+      ],
       "year": 2025,
       "venue": "arXiv preprint, version 3",
       "eprint": "2403.14064",
@@ -126,7 +155,9 @@
       "key": "deBruijn1970",
       "type": "inproceedings",
       "title": "The mathematical language AUTOMATH, its usage and some of its extensions",
-      "authors": ["N. G. de Bruijn"],
+      "authors": [
+        "N. G. de Bruijn"
+      ],
       "year": 1970,
       "venue": "Symposium on Automatic Demonstration (Versailles, December 1968)",
       "series": "Lecture Notes in Mathematics",
@@ -142,7 +173,10 @@
       "key": "BarendregtWiedijk2005",
       "type": "article",
       "title": "The challenge of computer mathematics",
-      "authors": ["Henk Barendregt", "Freek Wiedijk"],
+      "authors": [
+        "Henk Barendregt",
+        "Freek Wiedijk"
+      ],
       "year": 2005,
       "venue": "Philosophical Transactions of the Royal Society A",
       "volume": "363",
@@ -157,7 +191,9 @@
       "key": "Harrison1995",
       "type": "techreport",
       "title": "Metatheory and Reflection in Theorem Proving: A Survey and Critique",
-      "authors": ["John Harrison"],
+      "authors": [
+        "John Harrison"
+      ],
       "year": 1995,
       "institution": "SRI International Cambridge Computer Science Research Centre",
       "number": "CRC-053",
@@ -170,7 +206,10 @@
       "key": "CohenMahboubi2012",
       "type": "article",
       "title": "Formal proofs in real algebraic geometry: from ordered fields to quantifier elimination",
-      "authors": ["Cyril Cohen", "Assia Mahboubi"],
+      "authors": [
+        "Cyril Cohen",
+        "Assia Mahboubi"
+      ],
       "year": 2012,
       "venue": "Logical Methods in Computer Science",
       "volume": "8",
@@ -186,7 +225,23 @@
       "key": "GonthierEtAl2013",
       "type": "inproceedings",
       "title": "A Machine-Checked Proof of the Odd Order Theorem",
-      "authors": ["Georges Gonthier", "Andrea Asperti", "Jeremy Avigad", "Yves Bertot", "Cyril Cohen", "François Garillot", "Stéphane Le Roux", "Assia Mahboubi", "Russell O'Connor", "Sidi Ould Biha", "Ioana Pasca", "Laurence Rideau", "Alexey Solovyev", "Enrico Tassi", "Laurent Théry"],
+      "authors": [
+        "Georges Gonthier",
+        "Andrea Asperti",
+        "Jeremy Avigad",
+        "Yves Bertot",
+        "Cyril Cohen",
+        "François Garillot",
+        "Stéphane Le Roux",
+        "Assia Mahboubi",
+        "Russell O'Connor",
+        "Sidi Ould Biha",
+        "Ioana Pasca",
+        "Laurence Rideau",
+        "Alexey Solovyev",
+        "Enrico Tassi",
+        "Laurent Théry"
+      ],
       "year": 2013,
       "venue": "Interactive Theorem Proving (ITP 2013)",
       "series": "Lecture Notes in Computer Science",
@@ -201,7 +256,30 @@
       "key": "HalesEtAl2017",
       "type": "article",
       "title": "A formal proof of the Kepler conjecture",
-      "authors": ["Thomas Hales", "Mark Adams", "Gertrud Bauer", "Dat Tat Dang", "John Harrison", "Truong Le Hoang", "Cezary Kaliszyk", "Victor Magron", "Sean McLaughlin", "Thang Tat Nguyen", "Truong Quang Nguyen", "Tobias Nipkow", "Steven Obua", "Joseph Pleso", "Jason Rute", "Alexey Solovyev", "An Hoai Thi Ta", "Trung Nam Tran", "Diep Thi Trieu", "Josef Urban", "Ky Khac Vu", "Roland Zumkeller"],
+      "authors": [
+        "Thomas Hales",
+        "Mark Adams",
+        "Gertrud Bauer",
+        "Dat Tat Dang",
+        "John Harrison",
+        "Truong Le Hoang",
+        "Cezary Kaliszyk",
+        "Victor Magron",
+        "Sean McLaughlin",
+        "Thang Tat Nguyen",
+        "Truong Quang Nguyen",
+        "Tobias Nipkow",
+        "Steven Obua",
+        "Joseph Pleso",
+        "Jason Rute",
+        "Alexey Solovyev",
+        "An Hoai Thi Ta",
+        "Trung Nam Tran",
+        "Diep Thi Trieu",
+        "Josef Urban",
+        "Ky Khac Vu",
+        "Roland Zumkeller"
+      ],
       "year": 2017,
       "venue": "Forum of Mathematics, Pi",
       "volume": "5",
@@ -214,23 +292,35 @@
     },
     {
       "key": "AvigadEtAl2024Anatomy",
-      "type": "misc",
+      "type": "article",
       "title": "Anatomy of a Formal Proof",
-      "authors": ["Jeremy Avigad", "Johan Commelin", "Heather Macbeth", "Adam Topaz"],
-      "year": 2024,
-      "venue": "arXiv preprint",
-      "eprint": "2411.11885",
-      "doi": "10.48550/arXiv.2411.11885",
-      "primary_url": "https://arxiv.org/abs/2411.11885v1",
-      "claim_supported": "Formal proof assistants make definitions and theorem statements explicit and check proofs against a formal axiomatic foundation; their practical impact includes mathematical exposition and collaboration.",
-      "limitation": "General framing, not source-level evidence about the inspected repository."
+      "authors": [
+        "Jeremy Avigad",
+        "Johan Commelin",
+        "Heather Macbeth",
+        "Adam Topaz"
+      ],
+      "year": 2025,
+      "venue": "Notices of the American Mathematical Society",
+      "doi": "10.1090/noti3114",
+      "primary_url": "https://doi.org/10.1090/noti3114",
+      "claim_supported": "A linear-algebra example is followed through a Lean proof, generalization, and connection with the existing Mathlib eigenvector interface; used as a direct comparator for the review unit of analysis.",
+      "limitation": "A close expository precedent, not source evidence or proof validation for the reviewed corpus.",
+      "volume": "72",
+      "number": "2",
+      "pages": "188--195",
+      "author_publication_record": "https://www.andrew.cmu.edu/user/avigad/papers.html",
+      "version_read": "https://arxiv.org/html/2411.11885v1"
     }
   ],
   "additional_primary_software_sources": [
     {
       "key": "ComparatorSource2026",
       "title": "Comparator",
-      "authors": ["Henrik Böving", "Lean FRO"],
+      "authors": [
+        "Henrik Böving",
+        "Lean FRO"
+      ],
       "version": "ca04cfc72b550331658ec314bf47685281bfd4bf",
       "primary_url": "https://github.com/leanprover/comparator/tree/ca04cfc72b550331658ec314bf47685281bfd4bf",
       "claim_supported": "Source-level comparison of theorem statements and dependent declarations, transitive axiom inspection, builtin kernel replay, and optional external kernel checking.",
@@ -239,10 +329,23 @@
     {
       "key": "MassotLeanBlueprint",
       "title": "LeanBlueprint",
-      "authors": ["Patrick Massot", "contributors"],
+      "authors": [
+        "Patrick Massot",
+        "contributors"
+      ],
       "primary_url": "https://github.com/PatrickMassot/leanblueprint",
       "claim_supported": "Blueprint tooling links informal labels to Lean declaration names and records dependencies/status through explicit metadata.",
       "limitation": "Primary software documentation, separate from the 15 literature references."
     }
-  ]
+  ],
+  "publication_metadata_update_2026_10_08": {
+    "scope": "Two genuine preprints updated to their published versions; stable citation keys retained.",
+    "sources": [
+      "https://www.andrew.cmu.edu/user/avigad/papers.html",
+      "https://api.crossref.org/works/10.1090/noti3114",
+      "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2026.25",
+      "https://doi.org/10.4230/LIPIcs.ITP.2026.25"
+    ],
+    "direct_ams_access": "Publisher page unavailable to the review client; author record and publisher-deposited DOI metadata corroborate the published identity."
+  }
 }

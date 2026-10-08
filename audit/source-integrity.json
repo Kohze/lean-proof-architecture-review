@@ -1,6 +1,6 @@
 {
   "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
-  "source_files_verified": 164,
+  "source_files_verified": 168,
   "scope": "Byte identity of curated sources; independent of proof compilation.",
   "files": [
     {
@@ -594,9 +594,24 @@
       "sha256": "40b5cd4a1fafafdba30a32004fee9c3a0b9b959c6c2884b509882e6a0034d6bd"
     },
     {
+      "path": "lean/OAI/Analysis/Mahler/Hessian.lean",
+      "git_blob_sha1": "6e4ca86881ca4bf6370b8f145c7ec2a52938c227",
+      "sha256": "482a2f2dc52185ced727857277714f7464a3c53cebd3d3d4d53603ec684378d0"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HomogeneousDeformation.lean",
+      "git_blob_sha1": "c210be10d8872c788158141c26c0ac9f412ba74d",
+      "sha256": "fd1b2a1f42770e4f9bcda387b489420c09cdb00827864f44d50afab15e2a7ce6"
+    },
+    {
       "path": "lean/OAI/Analysis/Mahler/HomogeneousEndpoint.lean",
       "git_blob_sha1": "882afa1e3d92d2fbfe07cf067fcef06ffb958183",
       "sha256": "b1c23ab0ded1757208ef0756f1af7dfec22a6231c109bea2caa9f1b9403d3169"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HomogeneousFlux.lean",
+      "git_blob_sha1": "d6b304c20d142edc2643cfddd4ccd44f1adae116",
+      "sha256": "274a9fd3da9c2554cc0d579d756112751a7cc1609e6ff97523003de0c8cc5e93"
     },
     {
       "path": "lean/OAI/Analysis/Mahler/HomogeneousMassAssembly.lean",
@@ -762,6 +777,11 @@
       "path": "lean/OAI/Probability/SwitchChain/Main.lean",
       "git_blob_sha1": "f57bfdeb78b3af3dec46c90aeaa145b85d044140",
       "sha256": "ade00e55a157ee7bc2dc1fff71777e8cf717cbba7463819938f62de639c32d15"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/OrthogonalPairResampling.lean",
+      "git_blob_sha1": "c341bbbd3d45b334dc74832f315519d979d6b018",
+      "sha256": "03e80f02380e3142b99011951cdd7bac1e05e0b98a08dbd7f6d551820390b22e"
     },
     {
       "path": "lean/OAI/Probability/SwitchChain/PairActualAffine.lean",

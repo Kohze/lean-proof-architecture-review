@@ -58,8 +58,13 @@ subset. The converse follows from the definition of finite expectation.
 
 In a uniform finite experiment, these expectations are normalized sums
 with integer multiplicities. The Lean companion proves the corresponding
-count statement: equality of weighted sums against every natural-valued
-observable determines each multiplicity. It then checks the measures on
+count statement: equality of unnormalized sums against every natural-valued
+observable determines each multiplicity. If two sampling spaces have
+different cardinalities $N,N'>0$, equality of their output laws instead
+means $N'c(x)=Nc'(x)$ for each output $x$. The companion also proves this
+cross-multiplied statement from equality of normalized observables.
+For example, multiplicities $(1,1,1)$ and $(2,2,2)$ describe the same law,
+although their unnormalized counts differ. It then checks the measures on
 $X=\{0,1,2\}$ with multiplicities
 \[
   (1,1,1)\quad\text{and}\quad(0,3,0).
@@ -77,6 +82,67 @@ particular numbered bank without changing its distribution under uniform
 sampling. Law equality is the appropriate interface between those
 experiments; the deterministic compiler layer separately preserves the
 execution result for a supplied bank.
+
+\subsection{From a bounded experiment to a finite success count}
+\label{sec:success-budget}
+
+The preceding two interfaces can be composed with a quantitative error
+bound. This gives a concrete way to read the final accuracy statement of
+Section~\ref{sec:common-bases}.
+
+\begin{proposition}\label{prop:success-budget}
+Let $X$ be finite, adjoin a failure symbol $\bot$, and let $U$ be an
+ideal $X$-valued output. Let $V$ be a bounded implementation driven by a
+uniform $m$-bit word, taking values in $X\cup\{\bot\}$.
+For $\varphi:X\to[0,1]$, set
+$\varphi(\bot)=0$. Suppose
+\[
+  \E\varphi(V)\geq\E\varphi(U)-\eta
+  \quad\text{for every such }\varphi.
+\]
+Let $\eta,\delta_0\geq0$ and
+$A\subseteq X$ satisfy $\Pr(U\in A)\geq1-\delta_0$.
+If a machine obtains its word from fixed injective positions in a
+uniform $B$-bit tape and returns $V$ on that word, then
+\[
+  \#\{\text{successful }B\text{-bit tapes}\}
+  \geq(1-\delta_0-\eta)2^B,
+\]
+where success means returning an element of $A$.
+\end{proposition}
+\begin{proof}
+Choose $\varphi=\mathbf1_A$ to obtain
+$\Pr(V\in A)\geq1-\delta_0-\eta$. Proposition~\ref{prop:tape}
+shows that the tape projection has the required uniform word law.
+Multiplying its success probability by $2^B$ gives the count.
+\end{proof}
+
+For a single accuracy event, only its indicator is needed; the
+all-observables hypothesis makes the estimate reusable for other events.
+In the source's bounded draw-tree implementation, the fit condition
+requires at most $M$ successive draws and $H\geq\lceil\log_2 a\rceil$
+trial bits for every draw arity $a$. With $D$ trials per draw,
+$\eta=M2^{-D}$, with failed runs assigned
+observable value zero.\footnote{See
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\#L9346-L9349}{\src{CommonBases.lean}, \src{run_lower}}.}
+For a desired failure budget $0<\delta<1$, choosing
+$\delta_0\leq\delta/2$ and $M2^{-D}\leq\delta/2$ suffices.
+When $M>0$, one may take
+$D\geq\max\{0,\lceil\log_2(2M/\delta)\rceil\}$.
+The required tape length and execution bound must still be proved
+separately. Thus the accuracy budget, the uniformity of the gathered
+bits, and the deterministic machine specification are distinct inputs
+to a single final guarantee.
+
+A tight finite example joins the layers. Let the ideal probabilities of
+$a,b$ be $6/8,2/8$, and assign the eight implementation words to five
+copies of $a$, two of $b$, and one failure. The observable loss is exactly
+$\varphi(a)/8$, hence at most $\eta=1/8$. For $A=\{a\}$,
+$\delta_0=1/4$ and the lower bound is $5/8$. Embedding the three-bit word
+at positions $7,4,1$ in a ten-bit tape gives exactly
+$5\cdot2^7=640$ successful tapes out of $1024$. The Python companion
+enumerates those tapes and all event indicators. This fixture illustrates
+the composed bound independently of the upstream rejection sampler.
 
 \subsection{A cut-sensitive limit that is not pointwise}
 
@@ -113,12 +179,16 @@ would therefore alter the theorem.
 \subsection{Local equality and named maps carry extra information}
 \label{sec:local-examples}
 
-Two further short examples clarify the other cases. The real functions
-$f(x)=0$ and $g(x)=x$ agree at zero but have different derivatives there.
-Equality on a neighborhood of zero does imply equality of their
-derivatives at zero. The Mahler cutoff argument uses eventual
-equality near the boundary to transfer the ambient derivative, whereas agreement on tangent arguments
-suffices for the later comparison of integration densities. Mathlib's
+Two further short examples clarify the other cases. On $\R^2$, the
+one-forms $\omega=0$ and $\eta=(x^2+y^2-1)\,dx$ agree at every point
+of the unit circle. Their ambient exterior derivatives need not agree:
+$d\eta=-2y\,dx\wedge dy$, which is nonzero at $(0,1)$.
+Equality on a neighborhood does imply equality of the ambient derivatives.
+The Mahler cutoff argument uses this sufficient condition to transfer
+its ambient derivative; agreement on tangent arguments suffices for the
+later comparison of integration densities. Intrinsic differentiation
+after pullback to the circle uses different data: both pulled-back forms,
+and their exterior derivatives, vanish. Mathlib's
 differential-form interface explicitly uses the derivative of a
 form-valued field \citep{MathlibForms}.
 

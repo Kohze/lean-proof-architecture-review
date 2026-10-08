@@ -58,9 +58,13 @@ def main():
     assert (PAPER/'README.txt').is_file()
     for script in re.findall(r'python (reproduce/\S+\.py)',(PAPER/'README.txt').read_text(encoding='utf-8')):
         assert (PAPER/script).is_file(),script
+    scholarly=[r for r in records if r.get('doi') or r.get('type')=='techreport']
+    preprints=[r for r in scholarly if r.get('doi','').startswith('10.48550/')]
+    technical=[r for r in scholarly if r.get('type')=='techreport']
     summary={'pages':len(reader.pages),'cited_references':len(cited),
-             'scholarly_references':26,'published_scholarly_references_with_doi':len(metadata_checks),
-             'preprints':3,'technical_reports':1,'source_and_software_references':len(cited)-26,
+             'scholarly_references':len(scholarly),'published_scholarly_references_with_doi':len(metadata_checks),
+             'preprints':len(preprints),'technical_reports':len(technical),
+             'source_and_software_references':len(cited)-len(scholarly),
              'unused_reference_keys':[],'missing_citation_keys':[], 'latex_problems':[],
              'doi_title_checks':metadata_checks,'disclosure_confined_to_dedicated_section':True,
              'review_type':'Source-driven comparative narrative review with original explanatory examples.',

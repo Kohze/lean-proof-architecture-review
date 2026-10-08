@@ -18,6 +18,17 @@ argument becomes possible after that specification has been proved.
 Accounts of proof anatomy and specification-driven development make this
 perspective explicit \citep{AvigadEtAl2024Anatomy,CommelinTopaz2024}.
 
+These accounts provide close points of comparison.
+\citet{AvigadEtAl2024Anatomy} follow a linear-algebra example through
+its formal proof, generalization, and connection with an existing
+Mathlib theorem. \citet{CommelinTopaz2024} study abstraction boundaries
+for mathematical construction and collaboration; their Section~5 uses
+usable specifications as evidence of alignment with informal mathematics.
+Here we read already-written developments across several mathematical
+settings and compare the preservation statement required by each next
+operation. Source-anchored chains and small failure examples make that
+comparison concrete.
+
 Substantial precedents also matter when assessing a new collection. The
 formalizations of the odd-order theorem and the Kepler conjecture already
 combined extensive libraries with large proof decompositions and verified
@@ -28,7 +39,7 @@ presence of a difficult theorem, or a large number of declarations, is
 insufficient evidence for a new formalization method. A useful review must
 locate a more specific mechanism and explain its mathematical purpose.
 
-The OpenAI collection offers an unusually broad setting in which to look
+The OpenAI collection offers a broad setting in which to look
 for these mechanisms \citep{OAIRepository}. We select six developments
 whose sources expose a substantial transition between representations.
 The first two concern finite probability and algorithms; the next two

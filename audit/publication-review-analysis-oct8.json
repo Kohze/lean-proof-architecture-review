@@ -1,0 +1,500 @@
+{
+  "review_date": "2026-10-08",
+  "reviewer": "lean_analysis_cases; fresh skeptical source review",
+  "scope": [
+    "cases-analysis.tex (both sections)",
+    "worked-examples.tex (locality and c0 analytical passages)",
+    "abstract.tex",
+    "introduction.tex",
+    "discussion.tex"
+  ],
+  "instruction_compliance": {
+    "manuscript_modified": false,
+    "published_checkout_modified": false,
+    "new_upstream_build_attempted": false,
+    "previous_green_audits_used_as_evidence": false
+  },
+  "source_revision": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "method": "Read theorem statements, definitions, proof bodies, and the concrete assembly chain afresh; rechecked the displayed mathematical identities independently where elementary. The 31 retained source files below were rehashed against the complete pinned Git tree. This is source inspection and mathematical exposition review, not kernel validation of the imported developments or an independent proof of the headline Mahler/Crouzeix results. No upstream build was performed for this review.",
+  "before_ratings_out_of_10": {
+    "mathematical_correctness": 9.0,
+    "technical_depth": 8.0,
+    "rating_scope": "Scores assess the accuracy and explanatory depth of the reviewed manuscript passages against the inspected source, not the independent acceptance or kernel validity of upstream headline theorems.",
+    "rationale": "No erroneous sign, constant, quantifier, hypothesis-discharge claim, or cut-limit example was found. The central formulas align with pinned proof bodies. Technical depth is already substantial, but the missing definitions of the Mahler forms and the compressed zero-frequency normalization leave two key transitions less transparent than they could be."
+  },
+  "verdict": "No mandatory correctness correction identified in the reviewed passages. Recommend A01 and A02 before submission because they expose precisely the hypothesis-to-operation dependencies the paper promises; A03 would materially improve the analytical worked example. A04 and A05 are optional refinements.",
+  "mandatory_issues": [],
+  "findings": [
+    {
+      "id": "A01",
+      "priority": "high-value",
+      "severity": "minor",
+      "category": "mathematical completeness of exposition",
+      "location": {
+        "path": "cases-analysis.tex",
+        "lines": [
+          152,
+          161,
+          210,
+          218
+        ]
+      },
+      "finding": "The account of the sharp Crouzeix energy mechanism omits b_0=1, even though the proof uses it to obtain Hermitian diagonal zero coefficients and the cross zero-coefficient adjoint identity. All displayed inequalities are correct, but readers cannot yet see why their zero-frequency premises hold.",
+      "required_for_correctness": false,
+      "recommended_action": "Add b_0=1 to the analytic-core description and show P-hat(0)=X*X, Q-hat(0)=Y*Y, L-hat(0)*=M-hat(0). Display the exact anti_diagonal_energy identity once; it explains both the half-tail and the factor four.",
+      "suggested_text": "The normalization b_0=1 gives P-hat(0)=X*X and Q-hat(0)=Y*Y, hence Hermitian zero coefficients, and L-hat(0)*=M-hat(0). Consequently integral ||P+P*||_HS^2 = 4(||P-hat(0)||_HS^2 + (1/2) sum_{k>=1} ||P-hat(-k)||_HS^2).",
+      "evidence": [
+        "DirectCrouzeix/DomainCore.lean:16",
+        "DirectCrouzeix/DomainCore.lean:60-62",
+        "DirectCrouzeix/DomainCore.lean:77-98",
+        "DirectCrouzeix/BoundaryEnergy.lean:57-88"
+      ],
+      "expected_value": "Makes the quantitative estimate independently followable and connects a source hypothesis to its exact downstream use."
+    },
+    {
+      "id": "A02",
+      "priority": "high-value",
+      "severity": "minor",
+      "category": "technical depth",
+      "location": {
+        "path": "cases-analysis.tex",
+        "lines": [
+          36,
+          64
+        ]
+      },
+      "finding": "alpha_t and beta are introduced only by name. The central claim that homogeneity makes the forms horizontal is accurate but leaves the distinctive mathematical cancellation unexplained.",
+      "required_for_correctness": false,
+      "recommended_action": "Define q(z)=z, tau(H)=sum_j|H_j|^2, beta=d^c log tau(G)-m d^c log tau(q), and alpha_t=m d^c log tau(q)+t beta. State the source convention d^c u(z)[v]=-Du(z)[iv]/4. Homogeneity gives beta(iz)=0 and alpha_t(iz)=m/2; rotation invariance plus the latter constant yields d-alpha_t(iz,v)=0.",
+      "evidence": [
+        "Mahler/Hessian.lean:131-133",
+        "Mahler/HomogeneousFlux.lean:12-13",
+        "Mahler/HomogeneousDeformation.lean:14-20",
+        "Mahler/HomogeneousDeformation.lean:23-31",
+        "Mahler/HomogeneousDeformation.lean:46-101"
+      ],
+      "expected_value": "Replaces an opaque appeal to homogeneity with the actual mechanism, fixes normalization for the subsequent (pi m)^n value, and strengthens reader value without adding another case."
+    },
+    {
+      "id": "A03",
+      "priority": "high-value",
+      "severity": "minor",
+      "category": "worked example precision",
+      "location": {
+        "path": "worked-examples.tex",
+        "lines": [
+          116,
+          123
+        ]
+      },
+      "finding": "The pointwise scalar example is correct but is less specific than the other worked examples and may tempt a reader to infer that neighborhood equality is necessary for every boundary Stokes argument. The manuscript correctly qualifies ambient differentiation, so no mathematical contradiction is present.",
+      "required_for_correctness": false,
+      "recommended_action": "Use or supplement it with omega=0 and eta=(x^2+y^2-1)dx on R^2. These ambient one-forms agree at every point of the unit circle, but d eta=-2y dx wedge dy differs from zero, for example at (0,1). Then explicitly say the neighborhood condition is the sufficient interface used for equality of ambient derivatives in this implementation; intrinsic pullback differentiation can use tangential data.",
+      "evidence": [
+        "Mahler/ClosedBoundaryStokes.lean:54-57",
+        "Mahler/SourcePrimitiveStokes.lean:28-52"
+      ],
+      "independent_check": "d((x^2+y^2-1)dx)=(2x dx+2y dy) wedge dx=-2y dx wedge dy. Its tangential pullback to the circle vanishes, consistently with pullback commuting with d.",
+      "expected_value": "Provides an actual boundary-form example and avoids conflating the chosen formal API with minimal mathematical hypotheses."
+    },
+    {
+      "id": "A04",
+      "priority": "optional",
+      "severity": "minor",
+      "category": "technical depth",
+      "location": {
+        "path": "cases-analysis.tex",
+        "lines": [
+          185,
+          194
+        ]
+      },
+      "finding": "The positive-block estimate is attributed only to a trace estimate. The source contains a concise, reusable proof worth exposing if space permits.",
+      "required_for_correctness": false,
+      "recommended_action": "For D=[[U,Z*],[Z,V]] positive and J=diag(I,-I), show 0<=Re tr(DJDJ)=||U||_HS^2+||V||_HS^2-2||Z||_HS^2. This identifies the precise positivity argument behind the closing inequality.",
+      "evidence": [
+        "DirectCrouzeix/PositiveBlocks.lean:22-62"
+      ],
+      "expected_value": "Turns a black-box estimate into a short transport-independent mathematical lemma."
+    },
+    {
+      "id": "A05",
+      "priority": "optional",
+      "severity": "minor",
+      "category": "claim scope",
+      "location": {
+        "path": "introduction.tex",
+        "lines": [
+          31,
+          32
+        ]
+      },
+      "finding": "Unusually broad is an unquantified comparative adjective. The rest of the novelty framing is appropriately careful and does not imply empirical rarity.",
+      "required_for_correctness": false,
+      "recommended_action": "Replace unusually broad with broad, unless an explicit comparator and breadth metric are intended.",
+      "evidence": [
+        "introduction.tex:31-32",
+        "discussion.tex:67-69"
+      ],
+      "expected_value": "Keeps the framing aligned with the stated non-empirical selection method."
+    }
+  ],
+  "claim_checks": [
+    {
+      "id": "M1",
+      "prose": "cases-analysis.tex:6-34",
+      "assessment": "Accurate endpoint and retained body assumptions. The final theorem derives the strip-map MassHypotheses and supplies homogeneousSphereFlux_value to the conditional convex-body reduction; it does not retain a mass inequality, Sard theorem, or transgression identity as an input.",
+      "source": [
+        "Mahler/MainTheorem.lean:12-22",
+        "Mahler/EuclideanSpecialMap.lean:69-97",
+        "Mahler/HomogeneousMassAssembly.lean:29-41",
+        "Mahler/SpecialSourceMass.lean:13-55"
+      ]
+    },
+    {
+      "id": "M2",
+      "prose": "cases-analysis.tex:19-28",
+      "assessment": "Accurate description of MassHypotheses. Unique common zero means the equivalence for every point in U; compact sublevels mean closure(U intersect {tau f<R}), not an unrestricted global sublevel. The Euclidean remainder is genuinely vector-valued big-O in the punctured Euclidean neighborhood.",
+      "source": [
+        "Mahler/MassTarget.lean:16-33",
+        "Mahler/EuclideanSpecialMap.lean:31-97"
+      ]
+    },
+    {
+      "id": "M3",
+      "prose": "cases-analysis.tex:36-55",
+      "assessment": "Ambient identity and negative tangent residual sign are correct. The primitive degree is 2k+2 and residual degree 2k+3 for complex dimension k+2. The source retains the ambient beta-wedge term before applying tangent horizontality. The variation multiplicity is k+1 without an omitted factorial.",
+      "source": [
+        "Mahler/HomogeneousTransgression.lean:16-52",
+        "Mahler/HomogeneousTransgression.lean:65-97",
+        "Mahler/HomogeneousVariationCoefficient.lean:8-50"
+      ]
+    },
+    {
+      "id": "M4",
+      "prose": "cases-analysis.tex:57-69",
+      "assessment": "Correct dimension and linear-algebra argument. Homogeneity plus rotation invariance and the constant circle evaluation gives d-alpha horizontality. A nonzero circle tangent and top-degree annihilation imply the top wedge vanishes. The manuscript would be more informative if it supplied the actual one-forms and normalization.",
+      "source": [
+        "Mahler/HomogeneousDeformation.lean:14-20",
+        "Mahler/HomogeneousDeformation.lean:23-31",
+        "Mahler/HomogeneousDeformation.lean:46-101",
+        "Mahler/HorizontalForms.lean:20-50",
+        "Mahler/SphereForms.lean:30-56",
+        "Mahler/SphereForms.lean:84-111"
+      ]
+    },
+    {
+      "id": "M5",
+      "prose": "cases-analysis.tex:71-102",
+      "assessment": "Correct representation transport. sourceHomogeneousPrimitive is bundled from literal shuffle forms by finite basis expansion; the differentiated representation is homogeneousPrimitive. Equal slot equivalences and projection injectivity prove whole-field equality. This supplies the local formula premise to homogeneousFlux_endpoints_of_transgression.",
+      "source": [
+        "Mahler/HomogeneousPrimitiveRegularity.lean:32-88",
+        "Mahler/HomogeneousEndpoint.lean:12-45",
+        "Mahler/HomogeneousTransgression.lean:27-61"
+      ]
+    },
+    {
+      "id": "M6",
+      "prose": "cases-analysis.tex:104-122",
+      "assessment": "Correct boundary locality, including the absence of a center regularity input. The separator is constructed at order C2 (calling the general method smooth separation is reasonable); the product is globally C2 and equal on neighborhoods of the closed set. Eventual equality gives ambient derivative equality; exact-form sphere flux follows from coordinate Stokes and d-squared zero, then tangent density transports the residual.",
+      "source": [
+        "Mahler/ClosedBoundaryStokes.lean:19-63",
+        "Mahler/ExactSphereStokes.lean:24-56",
+        "Mahler/SourcePrimitiveStokes.lean:13-52",
+        "Mahler/HomogeneousTransgressionFTC.lean:14-73",
+        "Mahler/HomogeneousEndpoint.lean:35-55"
+      ]
+    },
+    {
+      "id": "C1",
+      "prose": "cases-analysis.tex:138-147",
+      "assessment": "Endpoint quantifiers and formula are accurate: finite matrices, positive n and m, arbitrary polynomial degree and coefficients, operator 2-norm, literal Kronecker product, and numerical range of the Euclidean complex operator. Complete here means uniformity over matrix coefficient size.",
+      "source": [
+        "DirectCrouzeix/Model.lean:11-32",
+        "DirectCrouzeix/CompleteBound.lean:65-97"
+      ]
+    },
+    {
+      "id": "C2",
+      "prose": "cases-analysis.tex:152-161",
+      "assessment": "Correct distinction between conditional analytic core and constructed geometric data. The summary omits the explicit b_0=1 normalization, which is used later to identify all compressed zero Fourier coefficients. ExteriorCollar proves coefficient bounds and positive resolvent from conformal collar and support data; DomainBound constructs those data for exponential sublevels.",
+      "source": [
+        "DirectCrouzeix/DomainCore.lean:15-28",
+        "DirectCrouzeix/ExteriorCollar.lean:21-96",
+        "DirectCrouzeix/DomainBound.lean:63-97"
+      ]
+    },
+    {
+      "id": "C3",
+      "prose": "cases-analysis.tex:163-177",
+      "assessment": "Singular pair, rectangular reshaping, and positivity of a match the proof. For gamma>0, compactness gives a norm attainer and a squared-distance identity gives the adjoint singular equation. a>0 follows from gamma squared <= a times polynomialEnergy(F); no division by a=0 is suppressed.",
+      "source": [
+        "DirectCrouzeix/SingularPairs.lean:30-86",
+        "DirectCrouzeix/DomainCore.lean:32-74",
+        "DirectCrouzeix/PolynomialEnergy.lean:121-144"
+      ]
+    },
+    {
+      "id": "C4",
+      "prose": "cases-analysis.tex:174-194",
+      "assessment": "All four compression orders and all displayed constants are correct. Compression by [X Y] produces the block with lower-left M+L* and upper-right its adjoint. The integrated positive-block inequality yields 2a<=8a/gamma^2; a>0 and gamma>0 justify gamma<=2.",
+      "source": [
+        "DirectCrouzeix/DomainCore.lean:47-117",
+        "DirectCrouzeix/SingularPairs.lean:15-28",
+        "DirectCrouzeix/PositiveBlocks.lean:35-62"
+      ]
+    },
+    {
+      "id": "C5",
+      "prose": "cases-analysis.tex:199-208",
+      "assessment": "Correct noncommutative ordering and dual witness. FG is paired using the adjoint relation and GF using the forward relation. The witness is entrywise complex conjugation of P, not conjugate transpose: C_k=(w_k)^(-1) conjugate(P_k). Its pairing and weighted squared energy both equal s. Bounded nonnegative partial sums produce the infinite half-tail bound.",
+      "source": [
+        "DirectCrouzeix/PolynomialEnergy.lean:146-219",
+        "DirectCrouzeix/Duality.lean:15-46",
+        "DirectCrouzeix/BoundaryEnergy.lean:112-133"
+      ]
+    },
+    {
+      "id": "C6",
+      "prose": "cases-analysis.tex:210-218",
+      "assessment": "Correct Fourier/kernel explanation. The Faber remainder has no nonnegative Fourier coefficients; the kernel acts on nonconstant positive Fourier series and has both marginals one. Orthogonality plus kernel contraction gives weights 1,2. anti_diagonal_energy gives exactly 4(||P-hat(0)||_HS^2+one-half sum_{k>=1}||P-hat(-k)||_HS^2).",
+      "source": [
+        "DirectCrouzeix/FaberEnergy.lean:23-110",
+        "DirectCrouzeix/BoundaryEnergy.lean:57-88",
+        "DirectCrouzeix/BoundaryEnergy.lean:106-133"
+      ]
+    },
+    {
+      "id": "C7",
+      "prose": "cases-analysis.tex:220-232",
+      "assessment": "Correct scalar-to-matrix Faber expansion transport. Positive matrix size gives the nontrivial coefficient ring, scalar leading coefficients map to units, and degree-filtered spanning yields a finite matrix coefficient witness. Evaluation maps preserve product order.",
+      "source": [
+        "DirectCrouzeix/DomainCore.lean:119-151",
+        "DirectCrouzeix/PolynomialEnergy.lean:17-81"
+      ]
+    },
+    {
+      "id": "C8",
+      "prose": "cases-analysis.tex:234-249",
+      "assessment": "Correct removal of strict geometry. The outer theorem requires compact, nonempty, convex K and epsilon>0; it gives strict inclusion into a compact exponential sublevel, within an epsilon-thickening of K. Four axis directions bound the sublevel. Applied to the compact numerical range and rho=M+epsilon/2, scaling and epsilon removal leave no geometric hypothesis at the public endpoint.",
+      "source": [
+        "DirectCrouzeix/OuterApproximation.lean:59-122",
+        "DirectCrouzeix/DomainBound.lean:99-113",
+        "DirectCrouzeix/CompleteBound.lean:65-97"
+      ]
+    },
+    {
+      "id": "W1",
+      "prose": "worked-examples.tex:116-123; discussion.tex:24-26",
+      "assessment": "The elementary function example and the claim about ambient derivative congruence are mathematically correct. They do not show that neighborhood equality is a necessary assumption for every intrinsic boundary argument: pullback commutes with exterior differentiation for smooth forms. Wording already says ambient, so this is a pedagogical clarification, not a detected false claim.",
+      "source": [
+        "Mahler/ClosedBoundaryStokes.lean:54-57",
+        "Mahler/SourcePrimitiveStokes.lean:28-52"
+      ]
+    },
+    {
+      "id": "W2",
+      "prose": "worked-examples.tex:81-111",
+      "assessment": "The c0 example is mathematically correct. Finite-support elements have finite square trace and are norm dense; every fixed positive cut of a positive null sequence has finite support. The harmonic null sequence is positive and has infinite trace, so positive scalar multiples remain infinite. The cut-sensitive convergence inequalities with zero limit hold despite this pointwise behavior.",
+      "source": [
+        "cases-architecture.tex:32-36",
+        "cases-architecture.tex:72-103"
+      ],
+      "verification_kind": "Independent elementary mathematical check, with the manuscript trace predicate read for scope; no new Lean realization of this example."
+    },
+    {
+      "id": "S1",
+      "prose": "abstract.tex:3-21; introduction.tex:51-58; discussion.tex:45-75",
+      "assessment": "The source-driven scope and novelty caveats are appropriately limited. They do not claim a new transgression, Stokes theorem, positivity method, or complete independent verification of the headline endpoints. Current discussion separates source connections from a full assessment requiring dependency rebuilds and mathematical argument review. The single adjective unusually at introduction:31 is unnecessary without an explicit comparator corpus.",
+      "source": []
+    }
+  ],
+  "reviewed_manuscript_files": [
+    {
+      "path": "papers/lean-proof-architecture/cases-analysis.tex",
+      "sha256": "d1a9afb73e521c4fe6e9ea8042509f8b80786b5bc60f4b9d9ac5231114309c7c"
+    },
+    {
+      "path": "papers/lean-proof-architecture/worked-examples.tex",
+      "sha256": "faa01522f01e7812f7f8dcc24bc2001525205f6d4fed46b6bad73fd13b789775"
+    },
+    {
+      "path": "papers/lean-proof-architecture/abstract.tex",
+      "sha256": "acca137f54da4780086cb4f10c3017ee9d080475525ab854bf5ca43486eedb47"
+    },
+    {
+      "path": "papers/lean-proof-architecture/introduction.tex",
+      "sha256": "6d8d741c4980fa718fc12fe4f394e2e29f04516c074cf636159551b44cca0dae"
+    },
+    {
+      "path": "papers/lean-proof-architecture/discussion.tex",
+      "sha256": "614516b7a2af3da0cf59e9e3b501a4ff84343065c73842bb08543bfbe7fe8287"
+    },
+    {
+      "path": "papers/lean-proof-architecture/cases-architecture.tex",
+      "sha256": "4ce1fc4493c6b29a5a2216e9a51846cf3f5350b41731d44b224dd3b08e5c8840"
+    }
+  ],
+  "source_integrity": {
+    "files_checked": 31,
+    "all_git_blob_hashes_match": true,
+    "files": [
+      {
+        "path": "lean/OAI/Analysis/Mahler/MainTheorem.lean",
+        "git_blob_sha1": "d5c55dee7e95a66312217de1f875ea8cb7508e62",
+        "sha256": "ff4222bb24b6b48e571c63a481f6cbe430ce68f8c707da065c2117d7e94f058e"
+      },
+      {
+        "path": "lean/OAI/Analysis/Mahler/EuclideanSpecialMap.lean",
+        "git_blob_sha1": "ae986cfb6716e6ee011c2db32e8bed96575a8e91",
+        "sha256": "77068c0e5dce13e0fcec035dbfddefa8673fb5fa2fc1f09ab9f2857b9dbd2809"
+      },
+      {
+        "path": "lean/OAI/Analysis/Mahler/MassTarget.lean",
+        "git_blob_sha1": "c97437040a367116cb04067b32a16e34db84d3c2",
+        "sha256": "01e57540d5c45e9e507bc81593a66fda96c20e95c262b9bddfe4cfd4b1369112"
+      },
+      {
+        "path": "lean/OAI/Analysis/Mahler/HomogeneousDeformation.lean",
+        "git_blob_sha1": "c210be10d8872c788158141c26c0ac9f412ba74d",
+        "sha256": "fd1b2a1f42770e4f9bcda387b489420c09cdb00827864f44d50afab15e2a7ce6"
+      },
+      {
+        "path": "lean/OAI/Analysis/Mahler/HorizontalForms.lean",
+        "git_blob_sha1": "5dfbf7c57bc06e9486303540b628a4f0055b257f",
+        "sha256": "5ecf0de601a9be291a0670a73bce254f94253b512d3017a01474435f623b76b9"
+      },
+      {
+        "path": "lean/OAI/Analysis/Mahler/SphereForms.lean",
+        "git_blob_sha1": "a4d458689fc4df77591f63435dc1228d955cd5d9",
+        "sha256": "ec25a18b86b5df18348a571ed2b506a2856513f55dcdeb26d169bf9b8c911556"
+      },
+      {
+        "path": "lean/OAI/Analysis/Mahler/HomogeneousTransgression.lean",
+        "git_blob_sha1": "c381fcf297116fe1c5174f8c0f622d3912eea597",
+        "sha256": "70ddaa59dd91b03c9d2446aa05c52fcf2a25a82d581b9544caefee612a2d8bc1"
+      },
+      {
+        "path": "lean/OAI/Analysis/Mahler/HomogeneousEndpoint.lean",
+        "git_blob_sha1": "882afa1e3d92d2fbfe07cf067fcef06ffb958183",
+        "sha256": "b1c23ab0ded1757208ef0756f1af7dfec22a6231c109bea2caa9f1b9403d3169"
+      },
+      {
+        "path": "lean/OAI/Analysis/Mahler/HomogeneousPrimitiveRegularity.lean",
+        "git_blob_sha1": "b3d247040eb52cee3c9c8120b9f72a0ccea1c158",
+        "sha256": "357e02cce0c0ad4b01de34fa7c3c8fb96bf3e2591aea96e6b479ef4f45dfe6f2"
+      },
+      {
+        "path": "lean/OAI/Analysis/Mahler/ClosedBoundaryStokes.lean",
+        "git_blob_sha1": "fc98a4b561c4407d6e5d428d014164b2034cdd1f",
+        "sha256": "0b107f76a665e055b95d2f24c05110f498bcbec93b3d0f8761d9a8f13c72c721"
+      },
+      {
+        "path": "lean/OAI/Analysis/Mahler/ExactSphereStokes.lean",
+        "git_blob_sha1": "2215702c8343d5b3c2a0f49d57ba4ea4f87525fb",
+        "sha256": "40b5cd4a1fafafdba30a32004fee9c3a0b9b959c6c2884b509882e6a0034d6bd"
+      },
+      {
+        "path": "lean/OAI/Analysis/Mahler/SourcePrimitiveStokes.lean",
+        "git_blob_sha1": "76bb81f3e8e8ce40dfc6e0935286febd11cc8221",
+        "sha256": "c1f857871d04b7b08501684635d578933ea07ee7a70558a11188f920a85e3def"
+      },
+      {
+        "path": "lean/OAI/Analysis/Mahler/HomogeneousTransgressionFTC.lean",
+        "git_blob_sha1": "9282748f7e2b0be254fd9b76c95a0e8a3dc6b837",
+        "sha256": "b4d2389c84dee13ef8d3522b3fb364a53b905a7690493e9a44de855247587762"
+      },
+      {
+        "path": "lean/OAI/Analysis/Mahler/HomogeneousMassAssembly.lean",
+        "git_blob_sha1": "3d3d897e72635fe4cb1f4382b9173749c592c3c5",
+        "sha256": "adeef41de850349f05b61f71904c9ffe42ce974385ef778829f6a33da39e4e46"
+      },
+      {
+        "path": "lean/OAI/Analysis/Mahler/SpecialSourceMass.lean",
+        "git_blob_sha1": "f2ab1771d017b1dc5db1dc28ffcfb0c9d8f6e67a",
+        "sha256": "5ca6f729dd257889d261226f9d97acc99f33acade382286344e6f2ddfc9916a0"
+      },
+      {
+        "path": "lean/OAI/Analysis/Mahler/Hessian.lean",
+        "git_blob_sha1": "6e4ca86881ca4bf6370b8f145c7ec2a52938c227",
+        "sha256": "482a2f2dc52185ced727857277714f7464a3c53cebd3d3d4d53603ec684378d0"
+      },
+      {
+        "path": "lean/OAI/Analysis/Mahler/ExteriorFlux.lean",
+        "git_blob_sha1": "c81fe50021edaa39f415a693733a51ab7af51fcb",
+        "sha256": "6447980d9572b2abe2cd87196163548674bc1d1a29b7735a94baa5840bbbd9e2"
+      },
+      {
+        "path": "lean/OAI/Analysis/Mahler/HomogeneousFlux.lean",
+        "git_blob_sha1": "d6b304c20d142edc2643cfddd4ccd44f1adae116",
+        "sha256": "274a9fd3da9c2554cc0d579d756112751a7cc1609e6ff97523003de0c8cc5e93"
+      },
+      {
+        "path": "lean/OAI/Analysis/Mahler/HomogeneousVariationCoefficient.lean",
+        "git_blob_sha1": "9e5a64ca71749f2d1746add37ad6de50ca598db1",
+        "sha256": "ebe7a93d5d1644e027478b3e9ddee030319d607178f8f39f2cd030405926fa83"
+      },
+      {
+        "path": "lean/OAI/Analysis/DirectCrouzeix/Model.lean",
+        "git_blob_sha1": "bb0abb06d42480e15073530da46cfac0f4a7c636",
+        "sha256": "3be01360e343e41c9712883d81e8845122ef13b2418640fa32c5e2fd22cdba84"
+      },
+      {
+        "path": "lean/OAI/Analysis/DirectCrouzeix/DomainCore.lean",
+        "git_blob_sha1": "7648fc2c1447cf95cbe7ead792e70455230b0cb8",
+        "sha256": "8c3ad69737fe2343607e665b27087a8016d43221a146eebd4b6879d833ddcb40"
+      },
+      {
+        "path": "lean/OAI/Analysis/DirectCrouzeix/PolynomialEnergy.lean",
+        "git_blob_sha1": "443ca47dfbb234e50ddb3d546ad0bdbe0b649079",
+        "sha256": "7015c78df7181bd32d8aaa1632da7b92a9a56df241321c13a763857e4d4c7309"
+      },
+      {
+        "path": "lean/OAI/Analysis/DirectCrouzeix/BoundaryEnergy.lean",
+        "git_blob_sha1": "35ad5040edd4ed9d4cf11fa8012d24e02cf814e5",
+        "sha256": "1bc293fb8f61ec3b924e0179a348b94f9dac5cb27e4b4be2a8070247873eef30"
+      },
+      {
+        "path": "lean/OAI/Analysis/DirectCrouzeix/Duality.lean",
+        "git_blob_sha1": "6023e50cc85a8415e3bd8af16f3f42fa4de8ecfb",
+        "sha256": "3b717a4dbb596ed52e342f3b3d7da991f5a70cf1a73e77a68678cd93fc2dc090"
+      },
+      {
+        "path": "lean/OAI/Analysis/DirectCrouzeix/SingularPairs.lean",
+        "git_blob_sha1": "30a999e394b4cbf3b0aacabc48b3571716133eeb",
+        "sha256": "148b39d7df6831d6fc7ba50327f1594a0ba816668a28661fc8c1d6e82991f920"
+      },
+      {
+        "path": "lean/OAI/Analysis/DirectCrouzeix/PositiveBlocks.lean",
+        "git_blob_sha1": "b7787904dedc05f3fea0e20106353b88ab7474f7",
+        "sha256": "74695a483d53771ef5cbde120f37e677659f42fe9dc9592bb4875fc7769774a9"
+      },
+      {
+        "path": "lean/OAI/Analysis/DirectCrouzeix/FaberEnergy.lean",
+        "git_blob_sha1": "968cd9a5547cac6cfe965b57faabd10287254b18",
+        "sha256": "a7a4914685716845b1161f075ac562f2e20b3f395fe087e688b8299b9c7bcf08"
+      },
+      {
+        "path": "lean/OAI/Analysis/DirectCrouzeix/ExteriorCollar.lean",
+        "git_blob_sha1": "84fc72e9a7afd7bc980589285aa45630c270bea0",
+        "sha256": "05ebbcf8152552db266eceb0af5e9a22b354d635e001e266d5ba763fe5286657"
+      },
+      {
+        "path": "lean/OAI/Analysis/DirectCrouzeix/OuterApproximation.lean",
+        "git_blob_sha1": "90b384e860ab4d1f1dc3a068c16a747a0c341521",
+        "sha256": "a7cc6181472d8830f53ef28e1efef4ffcd3eb88c71de671b4a92504b3aa7b245"
+      },
+      {
+        "path": "lean/OAI/Analysis/DirectCrouzeix/DomainBound.lean",
+        "git_blob_sha1": "db6e87404ed69425330844b3e187241251e8f09f",
+        "sha256": "792e5f24630ef2911ba5287df5bc042c4df4a741f9ae2d47dcfb8901616ecd70"
+      },
+      {
+        "path": "lean/OAI/Analysis/DirectCrouzeix/CompleteBound.lean",
+        "git_blob_sha1": "a504007c267984cb20e977b0e8c31c4198bad757",
+        "sha256": "c8f0706d92662aaca2d1a26fe7647b3719035f72177d68fbf5b490028f12e891"
+      }
+    ]
+  },
+  "candid_reader_value": "The two sections offer useful mathematical entry points rather than a tactic catalogue. The strongest material is the ordered-form/continuous-field/locality chain and the noncommutative singular-pair/weighted-duality/positive-compression chain. Their value is concrete composition and visible hypothesis discharge; the record supports neither first-use claims nor an empirical rarity comparison. With A01/A02, a mathematically trained reader can verify why the two sharp cancellations work without opening a hundred-line Lean theorem."
+}

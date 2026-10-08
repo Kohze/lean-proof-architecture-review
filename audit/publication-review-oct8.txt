@@ -1,0 +1,73 @@
+Proof Architecture in the OpenAI Lean Library: Representation, Locality, and Semantic Transport
+PUBLICATION REVIEW AND REVISION AUDIT - 8 OCTOBER 2026
+
+Verdict: Ready for submission as a specialist expository/comparative formalization review.
+Overall: 8/10.
+
+These are internal critical reviews, not external peer review. Scores are editorial judgments, not acceptance probabilities.
+
+CATEGORY RATINGS
+Mathematical accuracy and source fidelity: 9/10
+  The omitted draw-width premise, squared-norm wording and graph inner-product convention are corrected. Source bodies and hypotheses were rechecked; the rating is for the exposition, not a full upstream proof build.
+
+Technical depth: 8/10 -> 9/10
+  The actual Mahler forms, Crouzeix zero-mode normalization, Fourier identity and positive-block calculation are now explicit.
+
+Novelty of the review and synthesis: 6/10 -> 6/10
+  A useful cross-case synthesis and original exposition, including a composed success-budget example. It does not establish a new theorem or a historically new verification method.
+
+Literature positioning and attribution: 6/10 -> 8/10
+  Direct comparison with Anatomy of a Formal Proof and specification-driven development; explicit attribution of the classical trace-cone mathematics.
+
+Selection and review method: 6/10 -> 8/10
+  The unit of comparison, exploratory selection trail, actual omitted candidates and difference between inventory and deep reading are specified.
+
+Clarity, natural prose and reader value: 7/10 -> 8/10
+  The all-seams construction has a plain-language roadmap, routine compiler description is tighter, and the new budget example connects abstract interfaces to a finite calculation.
+
+Reproducibility of the review evidence: 9/10
+  168 retained upstream files have pinned byte identities; five original Lean lemmas compile, and exact Python checks reproduce the illustrative results. The proof of the composed budget remains prose rather than a full Lean formalization.
+
+References and citation integrity: 9/10
+  All 38 entries are cited and have retained primary identity evidence; 24 published scholarly DOI records, one preprint, one technical report and 12 source/software records. Two genuine preprints were updated to their published versions.
+
+Presentation and PDF layout: 9/10
+  The 23-page PDF builds without recorded LaTeX problems; overview rows, equations, footnotes and references passed rendered inspection.
+
+NOVELTY ASSESSMENT
+The contribution is a source-grounded comparative synthesis of six preservation chains, with original explanatory examples. The revised success-budget argument gives readers a concrete composition of approximation loss, random-tape uniformity and deterministic execution. Its ingredients are elementary and established; better exposition does not turn them into a new mathematical discovery. The novelty score remains 6/10 deliberately.
+
+AUDIT FINDINGS AND FIXES
+PUB-DIS-01 [RESOLVED]: Added Fits depth and bit-width hypotheses to the bounded sampling-loss estimate.
+PUB-DIS-02 [RESOLVED]: Corrected the projection-budget prose to sums of squared norms.
+PUB-DIS-03 [RESOLVED]: Distinguished the global counting inner product from normalized conditional fiber averages.
+PUB-DIS-04 [RESOLVED]: Separated raw counts from normalized laws on different-sized spaces; added a cross-multiplied-count Lean lemma.
+PUB-DIS-05 [RESOLVED]: Added the composed success-budget proposition, explicit failure semantics, trial budget and tight 640/1024 tape fixture.
+PUB-DIS-06 [RESOLVED]: Updated documentation to match five compiled lemmas.
+A01 [RESOLVED]: Made b_0=1, Hermitian zero coefficients and the exact Fourier-energy normalization explicit.
+A02 [RESOLVED]: Defined the actual Mahler forms and d^c convention, and explained horizontal cancellation.
+A03 [RESOLVED]: Used a boundary one-form counterexample and distinguished ambient derivatives from intrinsic pullbacks.
+A04 [RESOLVED]: Added the short positive-block trace calculation.
+A05 [RESOLVED]: Removed an unsupported comparative adjective about corpus breadth.
+E1 [RESOLVED]: Compared the review directly with the closest proof-anatomy and specification-driven-development literature.
+E2 [RESOLVED]: Explained the actual exploratory selection trail and named omitted endpoints; used the precise pi irrationality-exponent label.
+E3 [RESOLVED]: Attributed the ideal weights, cut topology and scalar limits to Elliott-Robert-Santiago Sections 3.1-3.2.
+E4 [RESOLVED]: Added the marked-surface construction roadmap, including a genus-zero disk for each fresh strip.
+E5 [RESOLVED]: Turned the comparative conclusions into an operational sequence for reading preservation interfaces.
+E6 [RESOLVED]: Compressed routine compiler exposition while retaining the probability, representation and cost distinctions.
+E7 [RESOLVED]: Updated Anatomy of a Formal Proof and LeanArchitect to verified published metadata, including the latter author order.
+
+FINAL VALIDATION
+23 pages; 38 cited references, including 26 scholarly works (24 published DOI records, one preprint and one technical report) and 12 source/software records. No fabricated reference identity was found. No missing citation keys or unused references remain.
+168 retained upstream files match pinned source identities. Five original Lean lemmas compile with Lean 4.34.1, using only the reported axioms propext and Quot.sound. Exact Python checks reproduce 15 tape-fiber cases, all 16 Boolean matrices, covariance -1/9 and the tight 640/1024 success fixture.
+The final PDF has no recorded LaTeX problems and passed rendered inspection of all pages through contact sheets, with selected full-page checks.
+PDF SHA256: 8b527f105f1f412ba99a26922ac031c4467ee7d655bf47e5d6244e5c325938f5
+
+REMAINING LIMITS
+Case selection is purposive and exploratory, not an exhaustive or representative corpus survey.
+The review contributes comparative synthesis and explanatory mathematics; historical rarity and a new verification method are not established.
+Complete upstream headline theorems and their Comparator configurations have not been independently built by this review.
+The composed success-budget proposition is proved in prose; the executable Lean results cover the five named supporting lemmas.
+The article remains technically dense and is aimed at mathematicians and formalization researchers.
+
+No required audit correction remains. This manuscript is suitable for submission as a specialist review; venue fit and external peer review will determine acceptance.

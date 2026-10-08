@@ -16,7 +16,8 @@ def main():
     run=subprocess.run(command,capture_output=True)
     (results/'lean-compiler.log').write_bytes(run.stdout+run.stderr)
     output=run.stdout.decode('utf-8',errors='replace')
-    expected=['physicalIndex_injective','physicalIndex_lt','moment_indicator','all_observables_determine_counts']
+    expected=['physicalIndex_injective','physicalIndex_lt','moment_indicator',
+              'all_observables_determine_counts','normalized_observables_determine_counts']
     axioms={}
     for name in expected:
         matching=[line for line in output.splitlines() if "'InterfaceExamples."+name+"' depends on axioms:" in line]

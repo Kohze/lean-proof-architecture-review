@@ -1,0 +1,10 @@
+{
+  "pdf_sha256": "6cd797cd0c6bb3dbbc8c82bdf253053917553f0a9ccda0af64ffc16573123dec",
+  "date": "2026-10-08",
+  "method": "Poppler rendered all 21 pages at 110 dpi; root inspected all three contact sheets and full-size pages 4, 10, 13, and 15.",
+  "pages_rendered_and_inspected": 21,
+  "overview_table": "Six rows on one page before the detailed cases, thin rules and ample spacing; caption and following section visibly separated.",
+  "checks": ["No clipping or overlap seen", "No missing glyphs seen", "Equations and proof text legible", "Footnotes fit their page", "Code example fits its box", "AI disclosure occurs in its dedicated section", "References legible and line-wrapped", "Page numbers consistent"],
+  "unresolved_visual_defects": [],
+  "final_latex_build_problems": []
+}

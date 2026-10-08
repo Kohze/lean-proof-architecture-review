@@ -37,17 +37,41 @@ def main():
     joint=Fraction(sum(r!=1 and c!=1 for r,c in six),len(six))
     covariance=joint-mean_left*mean_right
     assert (mean_left,mean_right,joint,covariance)==(Fraction(1,3),Fraction(1,3),0,Fraction(-1,9))
+    # A tight compositional example: a lost a-outcome is explicit failure,
+    # and the actual fixed tape projection supplies the bounded word law.
+    ideal={'a':Fraction(6,8),'b':Fraction(2,8)}
+    bounded=('a',)*5+('b',)*2+(None,)
+    bounded_mass={x:Fraction(bounded.count(x),len(bounded)) for x in ideal}
+    indicator_losses=[sum(ideal[x]-bounded_mass[x] for x,on in zip(ideal,mask) if on)
+                      for mask in product((False,True),repeat=len(ideal))]
+    eta=max(indicator_losses)
+    assert eta==Fraction(1,8)
+    m,B,start=3,10,0
+    positions=[start+3*(m-1-i)+1 for i in range(m)]
+    actual=Counter(bounded[sum(tape[pos] << i for i,pos in enumerate(positions))]
+                   for tape in product((0,1),repeat=B))
+    delta0=1-ideal['a']
+    assert actual==Counter({'a':640,'b':256,None:128})
+    assert Fraction(actual['a'],2**B)==1-delta0-eta==Fraction(5,8)
     result = {'status':'passed', 'method':'exhaustive finite enumeration',
               'physical_tape_fibers':fibers, 'two_by_two_binary_total_two_counts':table,
               'binary_matrices_enumerated':len(matrices),
               'uniform_total_two_flag_example':{'matrices':len(six),
                 'left_mean':str(mean_left),'right_mean':str(mean_right),
                 'joint_mean':str(joint),'covariance':str(covariance)},
+              'composed_success_budget_example':{
+                'ideal_event_probability':str(ideal['a']),
+                'bounded_event_probability':str(bounded_mass['a']),
+                'maximum_indicator_loss':str(eta),'ideal_failure_budget':str(delta0),
+                'word_bits':m,'tape_bits':B,'positions':positions,
+                'successful_tapes':actual['a'],'all_tapes':2**B,
+                'failure_tapes':actual[None],
+                'scope':'Original tight finite fixture, not a run of the upstream rejection sampler.'},
               'scope':'Finite examples of general arguments explained in the review.'}
     target = PAPER / 'results/worked-examples.json'
     target.parent.mkdir(parents=True,exist_ok=True)
     target.write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
-    print('Passed: 15 exact tape-fiber checks and all 16 binary 2-by-2 matrices.')
+    print('Passed: 15 tape-fiber checks, all 16 binary matrices, and the tight 640/1024 success-budget example.')
 
 if __name__ == '__main__':
     main()

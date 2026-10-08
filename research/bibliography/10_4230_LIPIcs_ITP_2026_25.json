@@ -1,0 +1,65 @@
+{
+  "type": "",
+  "id": "https://doi.org/10.4230/lipics.itp.2026.25",
+  "categories": [
+    "Lean theorem prover",
+    "interactive theorem proving",
+    "proof assistants",
+    "formal methods",
+    "human-computer interface",
+    "software development tools",
+    "Theory of computation → Interactive proof systems",
+    "Software and its engineering → Software maintenance tools"
+  ],
+  "language": "en",
+  "author": [
+    {
+      "family": "Zhu",
+      "given": "Thomas"
+    },
+    {
+      "family": "Monticone",
+      "given": "Pietro"
+    },
+    {
+      "family": "Welleck",
+      "given": "Sean"
+    },
+    {
+      "family": "Avigad",
+      "given": "Jeremy"
+    }
+  ],
+  "editor": [
+    {
+      "family": "Komendantskaya",
+      "given": "Ekaterina"
+    },
+    {
+      "family": "Nipkow",
+      "given": "Tobias"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2026
+      ]
+    ]
+  },
+  "abstract": "Large-scale formalization projects in Lean rely on blueprints: structured dependency graphs linking informal mathematical exposition to formal declarations. While blueprints are central to human collaboration, existing tooling treats the informal (LaTeX) and formal (Lean) components as largely decoupled artifacts, leading to maintenance overhead and limiting integration with AI automation. We present LeanArchitect, a Lean package for extracting, managing, and exporting blueprint data directly from Lean code. LeanArchitect introduces a declarative annotation mechanism that associates formal declarations with blueprint metadata, automatically infers dependency information, and generates LaTeX blueprint content synchronized with the Lean development. This design eliminates duplication between formal and informal representations and eases fine-grained progress tracking for both human contributors and AI-based theorem provers. We demonstrate the practicality of LeanArchitect through the automated conversion of several large existing blueprint-driven projects, and through a human-AI collaboration case study formalizing a multivariate Taylor theorem. Our results show that LeanArchitect improves maintainability, exposes latent inconsistencies in existing blueprints, and provides an effective interface for integrating AI tools into real-world formalization workflows.",
+  "container-title": [
+    "LIPIcs, Volume 382, ITP 2026"
+  ],
+  "DOI": "10.4230/LIPICS.ITP.2026.25",
+  "volume": "382",
+  "number": "25",
+  "page": "25:1-25:16",
+  "page-first": "25:1",
+  "publisher": "Schloss Dagstuhl – Leibniz-Zentrum für Informatik",
+  "title": [
+    "LeanArchitect: Automating Blueprint Generation for Humans and AI"
+  ],
+  "URL": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2026.25",
+  "copyright": "Creative Commons Attribution 4.0 International license"
+}

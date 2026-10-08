@@ -1,0 +1,219 @@
+{
+  "date": "2026-10-08",
+  "edition": "v1.1.0",
+  "baseline_edition": "v1.0.1",
+  "title": "Proof Architecture in the OpenAI Lean Library: Representation, Locality, and Semantic Transport",
+  "review_process": "Three parallel internal critical reviews, root synthesis and edits, followed by mathematical, editorial and rendered-PDF rechecks. Review agents previously contributed to the manuscript; this is not blind or external peer review.",
+  "verdict": "Ready for submission as a specialist expository/comparative formalization review.",
+  "overall_rating_out_of_10": 8,
+  "rating_interpretation": "Qualitative editorial judgments for this manuscript type, not an acceptance probability or a weighted statistical score. Before scores are included only where a reviewer recorded a comparable baseline.",
+  "ratings": [
+    {
+      "category": "Mathematical accuracy and source fidelity",
+      "after": 9,
+      "reason": "The omitted draw-width premise, squared-norm wording and graph inner-product convention are corrected. Source bodies and hypotheses were rechecked; the rating is for the exposition, not a full upstream proof build."
+    },
+    {
+      "category": "Technical depth",
+      "before": 8,
+      "after": 9,
+      "reason": "The actual Mahler forms, Crouzeix zero-mode normalization, Fourier identity and positive-block calculation are now explicit."
+    },
+    {
+      "category": "Novelty of the review and synthesis",
+      "before": 6,
+      "after": 6,
+      "reason": "A useful cross-case synthesis and original exposition, including a composed success-budget example. It does not establish a new theorem or a historically new verification method."
+    },
+    {
+      "category": "Literature positioning and attribution",
+      "before": 6,
+      "after": 8,
+      "reason": "Direct comparison with Anatomy of a Formal Proof and specification-driven development; explicit attribution of the classical trace-cone mathematics."
+    },
+    {
+      "category": "Selection and review method",
+      "before": 6,
+      "after": 8,
+      "reason": "The unit of comparison, exploratory selection trail, actual omitted candidates and difference between inventory and deep reading are specified."
+    },
+    {
+      "category": "Clarity, natural prose and reader value",
+      "before": 7,
+      "after": 8,
+      "reason": "The all-seams construction has a plain-language roadmap, routine compiler description is tighter, and the new budget example connects abstract interfaces to a finite calculation."
+    },
+    {
+      "category": "Reproducibility of the review evidence",
+      "after": 9,
+      "reason": "168 retained upstream files have pinned byte identities; five original Lean lemmas compile, and exact Python checks reproduce the illustrative results. The proof of the composed budget remains prose rather than a full Lean formalization."
+    },
+    {
+      "category": "References and citation integrity",
+      "after": 9,
+      "reason": "All 38 entries are cited and have retained primary identity evidence; 24 published scholarly DOI records, one preprint, one technical report and 12 source/software records. Two genuine preprints were updated to their published versions."
+    },
+    {
+      "category": "Presentation and PDF layout",
+      "after": 9,
+      "reason": "The 23-page PDF builds without recorded LaTeX problems; overview rows, equations, footnotes and references passed rendered inspection."
+    }
+  ],
+  "resolved_findings": [
+    {
+      "id": "PUB-DIS-01",
+      "status": "resolved",
+      "fix": "Added Fits depth and bit-width hypotheses to the bounded sampling-loss estimate."
+    },
+    {
+      "id": "PUB-DIS-02",
+      "status": "resolved",
+      "fix": "Corrected the projection-budget prose to sums of squared norms."
+    },
+    {
+      "id": "PUB-DIS-03",
+      "status": "resolved",
+      "fix": "Distinguished the global counting inner product from normalized conditional fiber averages."
+    },
+    {
+      "id": "PUB-DIS-04",
+      "status": "resolved",
+      "fix": "Separated raw counts from normalized laws on different-sized spaces; added a cross-multiplied-count Lean lemma."
+    },
+    {
+      "id": "PUB-DIS-05",
+      "status": "resolved",
+      "fix": "Added the composed success-budget proposition, explicit failure semantics, trial budget and tight 640/1024 tape fixture."
+    },
+    {
+      "id": "PUB-DIS-06",
+      "status": "resolved",
+      "fix": "Updated documentation to match five compiled lemmas."
+    },
+    {
+      "id": "A01",
+      "status": "resolved",
+      "fix": "Made b_0=1, Hermitian zero coefficients and the exact Fourier-energy normalization explicit."
+    },
+    {
+      "id": "A02",
+      "status": "resolved",
+      "fix": "Defined the actual Mahler forms and d^c convention, and explained horizontal cancellation."
+    },
+    {
+      "id": "A03",
+      "status": "resolved",
+      "fix": "Used a boundary one-form counterexample and distinguished ambient derivatives from intrinsic pullbacks."
+    },
+    {
+      "id": "A04",
+      "status": "resolved",
+      "fix": "Added the short positive-block trace calculation."
+    },
+    {
+      "id": "A05",
+      "status": "resolved",
+      "fix": "Removed an unsupported comparative adjective about corpus breadth."
+    },
+    {
+      "id": "E1",
+      "status": "resolved",
+      "fix": "Compared the review directly with the closest proof-anatomy and specification-driven-development literature."
+    },
+    {
+      "id": "E2",
+      "status": "resolved",
+      "fix": "Explained the actual exploratory selection trail and named omitted endpoints; used the precise pi irrationality-exponent label."
+    },
+    {
+      "id": "E3",
+      "status": "resolved",
+      "fix": "Attributed the ideal weights, cut topology and scalar limits to Elliott-Robert-Santiago Sections 3.1-3.2."
+    },
+    {
+      "id": "E4",
+      "status": "resolved",
+      "fix": "Added the marked-surface construction roadmap, including a genus-zero disk for each fresh strip."
+    },
+    {
+      "id": "E5",
+      "status": "resolved",
+      "fix": "Turned the comparative conclusions into an operational sequence for reading preservation interfaces."
+    },
+    {
+      "id": "E6",
+      "status": "resolved",
+      "fix": "Compressed routine compiler exposition while retaining the probability, representation and cost distinctions."
+    },
+    {
+      "id": "E7",
+      "status": "resolved",
+      "fix": "Updated Anatomy of a Formal Proof and LeanArchitect to verified published metadata, including the latter author order."
+    }
+  ],
+  "remaining_required_corrections": [],
+  "strengths": [
+    "Six detailed preservation chains rather than a catalogue of endpoint theorem names",
+    "Concrete counterexamples explain why weaker interfaces fail",
+    "A reusable composed accuracy/uniformity/execution argument with a tight exact fixture",
+    "Primary-source anchors and portable original examples"
+  ],
+  "remaining_limits": [
+    "Case selection is purposive and exploratory, not an exhaustive or representative corpus survey.",
+    "The review contributes comparative synthesis and explanatory mathematics; historical rarity and a new verification method are not established.",
+    "Complete upstream headline theorems and their Comparator configurations have not been independently built by this review.",
+    "The composed success-budget proposition is proved in prose; the executable Lean results cover the five named supporting lemmas.",
+    "The article remains technically dense and is aimed at mathematicians and formalization researchers."
+  ],
+  "optional_future_research": [
+    "Formalize the complete composed success-budget theorem, including finite probability and tape fibers.",
+    "Evaluate the preservation framework prospectively on independently selected formalizations.",
+    "Add full upstream build evidence where the source toolchains and resources permit it."
+  ],
+  "validation": {
+    "pages": 23,
+    "pdf_sha256": "8b527f105f1f412ba99a26922ac031c4467ee7d655bf47e5d6244e5c325938f5",
+    "cited_references": 38,
+    "scholarly_references": 26,
+    "published_scholarly_doi_references": 24,
+    "preprints": 1,
+    "technical_reports": 1,
+    "source_software_references": 12,
+    "missing_citations": [],
+    "unused_references": [],
+    "latex_problems": [],
+    "curated_source_files_verified": 168,
+    "original_lean_compile_exit_code": 0,
+    "original_lean_lemmas": [
+      "physicalIndex_injective",
+      "physicalIndex_lt",
+      "moment_indicator",
+      "all_observables_determine_counts",
+      "normalized_observables_determine_counts"
+    ],
+    "original_lean_axioms": [
+      "propext",
+      "Quot.sound"
+    ],
+    "exact_example_checks": [
+      "15 tape-fiber cases",
+      "all 16 Boolean 2x2 matrices",
+      "exact covariance -1/9",
+      "all 1024 physical tapes and all four event indicators in the tight success-budget fixture"
+    ],
+    "disclosure_confined_to_dedicated_section": true,
+    "fabricated_reference_identities_found": 0,
+    "citation_audit_scope": "Retained primary identities, DOI/title matches, source artifact identity and source-level claim-support reviews. Metadata identity is distinct from validation of every argument in a cited work."
+  },
+  "supporting_reports": [
+    "publication-review-analysis-oct8.json",
+    "publication-review-analysis-recheck-oct8.json",
+    "publication-review-discrete-oct8.json",
+    "publication-review-discrete-recheck-oct8.json",
+    "publication-review-editorial-oct8.json",
+    "publication-review-editorial-recheck-oct8.json",
+    "visual-review.json",
+    "final-audit.json",
+    "source-integrity.json"
+  ]
+}

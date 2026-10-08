@@ -2,7 +2,7 @@
   "command": [
     "lean",
     "+leanprover/lean4:v4.34.1",
-    "C:\\Users\\robin\\math_ai\\output\\github\\lean-proof-architecture-review\\reproduce\\InterfaceExamples.lean"
+    "C:\\Users\\robin\\math_ai\\papers\\lean-proof-architecture\\reproduce\\InterfaceExamples.lean"
   ],
   "toolchain": "leanprover/lean4:v4.34.1",
   "version": "Lean (version 4.34.1, x86_64-w64-windows-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)",
@@ -23,9 +23,13 @@
     "all_observables_determine_counts": [
       "propext",
       "Quot.sound"
+    ],
+    "normalized_observables_determine_counts": [
+      "propext",
+      "Quot.sound"
     ]
   },
-  "lean_source_sha256": "c12b07d8b7ee9619f5209d85953d6fc81a056717d8fb1fcabebdc46f7285ee66",
+  "lean_source_sha256": "113bedfd927ff66d608a04cf02de076c331df3116e46da5f746bc1ca02a8f64c",
   "finite_check_exit_code": 0,
   "scope": "Original review examples; source-corpus endpoints were studied statically."
 }

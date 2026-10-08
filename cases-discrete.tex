@@ -17,11 +17,25 @@ This representation identifies the quantity approximated by the sampling argumen
 
 The next correspondence replaces rank access by independence queries. A greedy oracle routine computes the rank of an enumerated subset; its correctness identifies the oracle-defined deficiency and annealing weights with their mathematical counterparts. The estimator also uses a sampled zero-deficiency witness as a final guard. This gives the exact zero-count behavior later required of every machine execution.
 
-Finite random experiments are represented by trees whose internal nodes choose uniformly from a finite index set. A bounded implementation supplies each draw with a finite bank of rejection trials. For a tree with at most $M$ successive draws and $D$ trials per draw, the development bounds the loss in a $[0,1]$-valued observable by $M2^{-D}$. A separate relation permits permutations of the outcome indices at each node and proves that these reindexings preserve expectations. Thus the abstract exchange walk and its code can use different finite enumerations while retaining the same output law.
+Finite random experiments are represented by trees whose internal nodes choose uniformly from a finite index set. A bounded implementation supplies each draw with a finite bank of rejection trials. Its fit condition requires at most $M$ successive draws and $H\geq\lceil\log_2 a\rceil$ bits per trial at every draw of arity $a$. With $D$ trials per draw, the development then bounds the loss in a $[0,1]$-valued observable by $M2^{-D}$. Both depth and width matter: insufficient trial width can force immediate failure regardless of $D$. A separate relation permits permutations of the outcome indices at each node and proves that these reindexings preserve expectations. Thus the abstract exchange walk and its code can use different finite enumerations while retaining the same output law.
 
-The code layer makes randomness explicit input. A typed expression language handles words, natural numbers, products, lists, folds, arithmetic, and oracle queries. An effect is an ordinary expression that takes an input and a random bank, and returns an optional value together with the unused bank. Its realization theorem relates execution on every bank to the corresponding random tree. For a Metropolis step, this theorem is assembled from the actual exchange proposal, acceptance calculation, Bernoulli experiment, and lazy branch. The complete estimator composes phase histories with the witness guard.
+The code layer makes randomness explicit input. Its typed expressions take
+an input and a random bank, returning an optional value and the unused
+bank. A realization theorem relates execution on every bank to the
+corresponding random tree. For a Metropolis step, the construction follows
+the actual proposal, acceptance calculation, Bernoulli experiment, and
+lazy branch. The complete estimator composes these experiments with
+the witness guard.
 
-These expressions are then compiled into stack-machine blocks. The constructed program has nine registers and instructions for pushing, popping, taking a coin branch, querying an oracle, and halting. Its source evaluation semantics returns a value and a charge. A structural compiler-correctness proof shows that successful evaluation yields the same encoded output within that charge, including a separate simulation argument for list folds. A recursive certificate bounds intermediate encoding widths; expression-dependent polynomials then bound machine steps, oracle calls, and bit operations. The width certificate is combined with successful source evaluation: it controls the sizes visited by computation, while the realization and output certificates establish what is returned. Keeping these obligations separate makes the compiler theorem reusable for the deterministic preamble and the bank-processing postamble.\footnote{\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\#L16459-L16620}{Cost-bearing compiler correctness}; \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\#L25559-L25566}{polynomial majorant}.}
+Compilation supplies two distinct conclusions: the same encoded output
+and a bound on its cost. The constructed nine-register stack machine
+implements the expressions, with a structural simulation proof including
+list folds. Source evaluation returns a value and a charge; successful
+evaluation gives the same machine output within that charge. A separate
+recursive certificate bounds intermediate encoding widths, from which
+polynomials bound steps, oracle calls, and bit operations. Thus output
+semantics and size control meet at the fixed program, while remaining
+separately reusable for its preamble and bank-processing postamble.\footnote{\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\#L16459-L16620}{Cost-bearing compiler correctness}; \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\#L25559-L25566}{polynomial majorant}.}
 
 The final probabilistic interface is especially revealing. Let $V$ be the canonical bounded experiment, and let $v$ be the rational output function implemented by the postamble. The certificate asserts
 \[
@@ -91,14 +105,21 @@ why the proof isolates a compensated error direction.
 
 In the finite coordinate model, composing the two conditional averages therefore gives $A+Bp(r)$, with $B=0$ unless $s=2$. The graph-cell equivalence transports this formula back to actual graph states. This transport includes a proof that corresponding fibers have equal cardinalities and corresponding sums, and an identification of the flag: $p(r)$ says that $i$ has equal adjacency bits to $k$ and $l$, meaning both cross edges are present or both are absent.\footnote{\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/CrossCellAffineComposition.lean\#L64-L87}{The affine conditional image}; \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/DisjointGraphAffine.lean\#L68-L90}{its graph interpretation}.}
 
-Write $E_a$ for averaging over a pair-resampling fiber. The transported formula expresses the relevant conditional image as a fiber-constant base plus a fiber-constant weight times the equality flag; the weight is supported where the cross total is two. For this purpose a fiber is active when $k$ and $l$ each have exactly one neighbor in $a$. Subtracting $E_a$ leaves a multiple of the centered flag on each active fiber. These functions form an error subspace whose orthogonal projection is denoted $R_{ab}$. The description is at most one dimensional on each fiber; the complete graph-space subspace can have many independent fiber components.
+Work in the real function space on the finite graph state space $\Omega$,
+with counting inner product $\langle f,g\rangle=\sum_{G\in\Omega}f(G)g(G)$.
+Fiber averages themselves are divided by the fiber cardinality.\footnote{See
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/OrthogonalPairResampling.lean\#L191-L193}{\src{OrthogonalPairResampling.lean}, lines 191--193}, and
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/OrthogonalPairResampling.lean\#L231-L232}{lines 231--232}.}
+Write $E_a$ for averaging over a
+pair-resampling fiber. The transported formula expresses the relevant conditional image as a fiber-constant base plus a fiber-constant weight times the equality flag; the weight is supported where the cross total is two. For this purpose a fiber is active when $k$ and $l$ each have exactly one neighbor in $a$. Subtracting $E_a$ leaves a multiple of the centered flag on each active fiber. These functions form an error subspace whose orthogonal projection is denoted $R_{ab}$. The description is at most one dimensional on each fiber; the complete graph-space subspace can have many independent fiber components.
 
 This representation supplies the hypotheses of an abstract projection interaction inequality. Conditional averaging is a symmetric idempotent operator, and the error projection fixes the correlated fluctuation just identified. The analytic argument decomposes the state-space function using ranges and orthogonal complements of these projections. This turns the graph-specific conditional formula into precisely the range conditions required by the operator theorem. With $G_{ab}$ the appropriate switch-gain projection, its graph instance yields
 \[
  2\norm{G_{ab}f}^2-\norm{R_{ab}f}^2-\norm{R_{ba}f}^2
  \leq2\langle(I-E_a)f,(I-E_b)f\rangle.
 \]
-A separately proved projection budget bounds the sum of error norms by the sum of gain norms. Summing the compensated inequality over ordered disjoint two-element vertex sets $a,b$ then gives
+A separately proved projection budget bounds the sum of squared error norms
+by the sum of squared gain norms. Summing the compensated inequality over ordered disjoint two-element vertex sets $a,b$ then gives
 \[
  \sum_{a,b:\,a\cap b=\varnothing}
    \langle(I-E_a)f,(I-E_b)f\rangle\geq0.

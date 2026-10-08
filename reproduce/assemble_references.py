@@ -23,7 +23,7 @@ EXTRA = [
  ('Leroy2009','10.1145/1538788.1538814','https://xavierleroy.org/publi/compcert-CACM.pdf',
   'Compiler semantic preservation is an established independent proof obligation.'),
  ('ElliottRobertSantiago2011','10.1353/ajm.2011.0027','https://arxiv.org/abs/0805.3122',
-  'Lower-semicontinuous trace cones provide the mathematical context for cut-sensitive convergence.'),
+  'Sections 3.1--3.2 contain ideal weights/idempotents, cut-sensitive convergence, and scalar-zero/infinity limits; these are classical mathematical antecedents of the reviewed formal architecture.'),
  ('CrouzeixPalencia2017','10.1137/17M1116672','https://arxiv.org/abs/1702.00668',
   'Established complete spectral-set bound 1+sqrt(2), used as an architecture comparator.')]
 

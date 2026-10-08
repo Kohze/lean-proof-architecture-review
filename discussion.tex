@@ -28,6 +28,27 @@ closed finite ideals of extended traces. These are concrete
 mathematical failures, illustrated in Section~\ref{sec:worked}, rather than
 generic objections to abstraction.
 
+The comparison can guide a new formalization before its representations
+are fixed. Start from the downstream operation and write the equation or
+inequality that it needs. An accuracy event needs its indicator
+expectation; a finite implementation may supply only a lower bound with
+an error allowance. For ambient differentiation, agreement near the
+evaluation point is sufficient, while the later boundary integral may need only
+agreement on tangent tuples. A named seam equation needs the coordinate
+map that occurs in the equation. These requirements select different
+preservation statements even when the underlying objects are equivalent.
+
+Next, identify what the representation changes: counting multiplicities,
+coordinate order, multiplication order, or a neighborhood of definition.
+Prove the corresponding identity before applying the downstream theorem.
+Finally, distinguish hypotheses constructed for the actual inputs from
+those still supplied by a caller. Proposition~\ref{prop:success-budget}
+illustrates this process quantitatively: sampling loss, tape uniformity,
+and deterministic execution combine into one finite success count, with
+their separate obligations visible. The framework's reusable output is
+this choice of a sufficient specification and an explicit account of its
+cost, rather than a single abstraction intended for every case.
+
 Several reusable patterns emerge. First, use a representation in which
 the local calculation is small, then prove an explicit correspondence to
 the original state space. The switch-chain matrix table is useful because
@@ -87,7 +108,7 @@ process without requiring the entire surrounding development.
 The accompanying source package contains the LaTeX manuscript, verified
 reference records, declaration evidence ledgers, original Lean examples,
 and Python checks. The Lean examples use Lean 4.34.1 and import only
-\src{Lean}; their compiler log records the axioms reported for the four
+\src{Lean}; their compiler log records the axioms reported for the five
 named theorems. The Python checks enumerate tape fibers and Boolean matrix
 counts using exact integers. The package README gives reproduction
 commands and identifies the pinned external sources. Public source links

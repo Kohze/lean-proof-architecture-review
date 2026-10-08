@@ -33,8 +33,15 @@ construction are
 \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/MainTheorem.lean\#L12-L22}{\src{Mahler/MainTheorem.lean}, lines 12--22}, and
 \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/EuclideanSpecialMap.lean\#L67-L97}{\src{Mahler/EuclideanSpecialMap.lean}, lines 67--97}.}
 
-Write the complex dimension as $n=k+2$. The deformation involves one-forms
-$\alpha_t$ and $\beta$, with an ordered primitive
+Write the complex dimension as $n=k+2$, let $q(z)=z$, and set
+$\tau(H)(z)=\sum_j|H_j(z)|^2$. The source convention is
+$d^cu(z)[v]=-Du(z)[iv]/4$. On punctured space the degree-$m$
+homogeneous map $G$ defines
+\[
+ \beta=d^c\log\tau(G)-m\,d^c\log\tau(q),\qquad
+ \alpha_t=m\,d^c\log\tau(q)+t\beta.
+\]
+The deformation uses the ordered primitive
 \[
   \eta_t=\alpha_t\wedge\beta\wedge(d\alpha_t)^k.
 \]
@@ -56,8 +63,14 @@ the vanished term, sign, and multiplicity individually accountable.
 
 The disappearance of the first term has a concrete linear-algebra proof.
 At $z\ne0$, the sphere tangent space has real dimension $2n-1$ and contains
-the nonzero circle tangent $iz$. Homogeneity makes $\beta$ and $d\alpha_t$
-horizontal in this direction: inserting $iz$ in any slot gives zero.
+the nonzero circle tangent $iz$. Homogeneity gives $\beta_z(iz)=0$ and
+$(\alpha_t)_z(iz)=m/2$. Rotation invariance, together with this constant
+circle evaluation, gives $d\alpha_t(iz,v)=0$.
+Thus $\beta$ and $d\alpha_t$ are horizontal in this direction:
+inserting $iz$ in any slot gives zero.\footnote{The normalization and
+circle evaluations are in
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousFlux.lean\#L12-L13}{the $d^c$ definition, lines 12--13}, and
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousDeformation.lean\#L14-L101}{the deformation and circle identities, lines 14--101}.}
 Their top-degree wedge therefore vanishes. The lemma
 \src{horizontal_top_eq_zero} proves the general assertion explicitly.
 An independent top-degree tuple determines a basis. Choose a nonzero basis
@@ -81,9 +94,9 @@ This field equality transports the proved transgression into the analytic
 theorem expecting the other representation. Thus the intermediate theorem
 \src{homogeneousFlux_endpoints_of_transgression} has an explicit local-formula
 premise, which \src{homogeneous_flux_endpoints} discharges.\footnote{See
-\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousEndpoint.lean\#L12-L45}{\src{Mahler/HomogeneousEndpoint.lean}, lines 12--45}.
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousEndpoint.lean\#L12-L45}{the homogeneous endpoint, lines 12--45}.
 The underlying tangent identity is proved in
-\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousTransgression.lean\#L65-L97}{\src{HomogeneousTransgression.lean}, lines 65--97}.}
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousTransgression.lean\#L65-L97}{the tangent transgression theorem, lines 65--97}.}
 
 Each representation carries different proof obligations. The literal shuffle
 description keeps permutation signs and factor order available to algebraic
@@ -150,7 +163,7 @@ analysis; the formal implementation makes particularly clear how positivity
 and Fourier energy combine to produce the constant two.
 
 The local interface \src{analytic_domain_core} accepts a polynomial sequence
-$b_k$, a continuous boundary parametrization, and a matrix resolvent field
+$b_k$ with $b_0=1$, a continuous boundary parametrization, and a matrix resolvent field
 $R(t)$. Its hypotheses give finite Faber expansions, lower and upper
 coefficient-energy bounds, exact coefficients
 $\widehat R(-k)=b_k(A)$, vanishing positive Fourier coefficients, and
@@ -181,10 +194,25 @@ produce the diagonal bounds
  \qquad
  \int\norm{Q+Q^*}_{\mathrm{HS}}^2\leq\frac{4a}{\gamma^2}.
 \]
-Fourier identities give $a\leq\int\norm{M+L^*}_{\mathrm{HS}}^2$.
+The normalization $b_0=1$ identifies the zero Fourier coefficients:
+\[
+ \widehat P(0)=X^*X,\qquad \widehat Q(0)=Y^*Y,\qquad
+ \widehat L(0)^*=\widehat M(0).
+\]
+The first two are Hermitian; the last is the zero-frequency premise of
+the cross-energy comparison. All four compressions inherit the vanishing
+of the positive Fourier coefficients of $R$.
+Fourier identities then give $a\leq\int\norm{M+L^*}_{\mathrm{HS}}^2$.
 Compressing $R+R^*$ by the concatenated columns $[X\ Y]$ yields a positive
-block matrix with these diagonal and off-diagonal blocks. A trace estimate
-then gives
+block matrix with these diagonal and off-diagonal blocks. For a positive
+block matrix $D=\left(\begin{smallmatrix}U&Z^*\\Z&V\end{smallmatrix}\right)$
+and $J=\operatorname{diag}(I,-I)$, positivity of $D$ and $JDJ$ gives
+\[
+ 0\leq\operatorname{Re}\operatorname{tr}(DJDJ)
+   =\norm U_{\mathrm{HS}}^2+\norm V_{\mathrm{HS}}^2
+     -2\norm Z_{\mathrm{HS}}^2.
+\]
+Integrating this estimate gives
 \[
  2\int\norm{M+L^*}_{\mathrm{HS}}^2
  \leq\int\norm{P+P^*}_{\mathrm{HS}}^2
@@ -214,8 +242,17 @@ the sum of coefficient energy and remainder energy. The remainder is also
 the action of a nonnegative kernel with both marginals one on the
 nonconstant series. A weighted squared-norm inequality and Fubini prove
 kernel contraction. Consequently $w_0=1$ and $w_k=2$ for $k>0$.
-The resulting half-weighted coefficient tail fits the exact Fourier energy
-of $P+P^*$; the constant coefficient receives its own factor four.
+The resulting half-weighted coefficient tail fits the exact Fourier identity
+\[
+ \int\norm{P+P^*}_{\mathrm{HS}}^2
+ =4\left(\norm{\widehat P(0)}_{\mathrm{HS}}^2
+    +\frac12\sum_{k\geq1}\norm{\widehat P(-k)}_{\mathrm{HS}}^2\right).
+\]
+Its factor four at frequency zero uses Hermiticity of $\widehat P(0)$;
+the negative coefficients contribute in paired positive and negative
+frequencies.\footnote{See
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/BoundaryEnergy.lean\#L57-L88}{\src{BoundaryEnergy.lean}, lines 57--88}, and
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/PositiveBlocks.lean\#L22-L62}{\src{PositiveBlocks.lean}, lines 22--62}.}
 
 A further interface supplies matrix-valued Faber expansions from scalar
 polynomials. A scalar sequence with its $k$th polynomial of degree $k$ is

@@ -1,0 +1,102 @@
+{
+  "reviewer": "lean_discrete_cases",
+  "date": "2026-10-08",
+  "corpus_commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "scope": "Final recheck of the revised discrete cases, worked examples and exact success-budget fixture. No manuscript or public-checkout edits were made.",
+  "verdict": "The revised passages and executable fixture are correct. No remaining mathematical, denominator, output-law or physical-tape issue was found in the checked material.",
+  "ratings_out_of_10": {
+    "mathematical_accuracy": 9,
+    "executable_evidence": 8.5,
+    "reader_value": 9
+  },
+  "ratings_note": "Ratings remain as in the fresh review. The tight fixture supplies the previously optional concrete payoff. The executable-evidence rating continues to reflect the deliberately narrow scope of the original examples, rather than a build of the upstream release endpoints.",
+  "confirmed_corrections": [
+    {
+      "id": "PUB-DIS-01",
+      "status": "resolved",
+      "location": "cases-discrete.tex:20; worked-examples.tex:122",
+      "check": "Both descriptions now include at most M successive draws and H at least the ceiling binary logarithm of every draw arity. This matches Fits and the premise of run_lower. The case explains why width insufficiency cannot be repaired by increasing the number of trials."
+    },
+    {
+      "id": "PUB-DIS-02",
+      "status": "resolved",
+      "location": "cases-discrete.tex:121",
+      "check": "The projection budget is explicitly stated in squared error norms and squared gain norms. The displayed interaction and the aggregate disjoint sum are consistent with that budget."
+    },
+    {
+      "id": "PUB-DIS-03",
+      "status": "resolved",
+      "location": "cases-discrete.tex:109-113",
+      "check": "The global graph function space uses the counting inner product; conditional fiber averages are normalized by fiber cardinality. The raw pinned-source anchors L191-L193 and L231-L232 were checked directly and support exactly those two conventions."
+    },
+    {
+      "id": "PUB-DIS-04",
+      "status": "resolved",
+      "location": "worked-examples.tex:59-68; reproduce/InterfaceExamples.lean:58-64",
+      "check": "The exposition distinguishes unnormalized multiplicity equality from equality of normalized laws on differently sized spaces. Cross multiplication N'c(x)=Nc'(x) has the correct orientation. The five-theorem Lean source is byte-identical to the version freshly compiled in the preceding audit."
+    },
+    {
+      "id": "PUB-DIS-05",
+      "status": "resolved",
+      "location": "worked-examples.tex:93-135",
+      "check": "The success-budget proposition has finite X, an adjoined failure symbol with observable value zero, nonnegative budgets, an ideal event guarantee and fixed injective physical positions. Taking the event indicator gives the one-sided success lower bound; uniform tape projection then converts it to an exact length-B count. The source application includes the Fits width/depth premise, eta=M*2^(-D), desired 0<delta<1 and a correct sufficient integer trial count when M>0."
+    }
+  ],
+  "tight_fixture": {
+    "location": "worked-examples.tex:137-147; reproduce/check_examples.py:40-55",
+    "ideal_law": {
+      "a": "6/8",
+      "b": "2/8"
+    },
+    "bounded_law_on_eight_words": {
+      "a": "5/8",
+      "b": "2/8",
+      "failure": "1/8"
+    },
+    "loss_identity": "Eideal(phi)-Ebounded(phi)=phi(a)/8 with phi(failure)=0. This proves the all-[0,1]-observables lower bound with eta=1/8; it is not a claim based only on matching numerical means.",
+    "event_and_budget": "For A={a}, delta0=1/4 and the implementation success probability is exactly 1-delta0-eta=5/8.",
+    "physical_parameters": {
+      "m": 3,
+      "B": 10,
+      "start": 0,
+      "positions": [
+        7,
+        4,
+        1
+      ]
+    },
+    "fiber_argument": "The three positions are distinct and in range. Each of the eight gathered words has 2^(10-3)=128 preimages. The five successful words therefore give 5*128=640 successful physical tapes.",
+    "exhaustive_physical_counts": {
+      "a": 640,
+      "b": 256,
+      "failure": 128,
+      "all_tapes": 1024
+    },
+    "denominator_check": "The implementation-word success fraction 5/8 equals the physical-tape fraction 640/1024. Raw word and tape counts are not equated; their different denominators are accounted for by the common fiber size.",
+    "indicator_check": "The Python companion enumerates all four event indicators on X={a,b}. Their maximum loss is 1/8. The displayed affine loss identity separately establishes the estimate for all observables in the unit square.",
+    "scope_check": "Both the manuscript and machine-readable result explicitly identify this as an original fixture, independent of execution of the upstream rejection sampler. It does not claim to instantiate that sampler's trial parameters."
+  },
+  "fresh_recheck_execution": {
+    "method": "Executed the current check_examples.py with its sole output write intercepted in memory; compared the computed JSON with the retained results/worked-examples.json.",
+    "exit_code": 0,
+    "computed_matches_retained": true,
+    "retained_bytes_unchanged": true,
+    "stdout": "Passed: 15 tape-fiber checks, all 16 binary matrices, and the tight 640/1024 success-budget example.",
+    "lean_source_unchanged_since_fresh_compile": true
+  },
+  "graph_recheck": {
+    "table_and_covariance": "The total-two table and the -1/9 covariance still refer to the six uniformly sampled matrices, while graph-cell boundary multiplicities are explicitly distinguished.",
+    "fiberwise_scope": "The error direction is described as at most one dimensional per fiber, with potentially many independent global fiber components.",
+    "aggregate_scope": "The conclusion is nonnegativity of the summed compensated interaction, not nonnegativity of each local covariance."
+  },
+  "remaining_errors": [],
+  "remaining_required_corrections": [],
+  "reviewed_file_sha256": {
+    "papers/lean-proof-architecture/cases-discrete.tex": "dc08689ec2dc4aa830999858a46a43c3612ce81b088d69b7d78b55bd4fd8ce52",
+    "papers/lean-proof-architecture/worked-examples.tex": "32e11ae7eaf04124fc6ad9580ea956850a7477a7430fccbd2f0b4a9bda903c3c",
+    "papers/lean-proof-architecture/reproduce/InterfaceExamples.lean": "113bedfd927ff66d608a04cf02de076c331df3116e46da5f746bc1ca02a8f64c",
+    "papers/lean-proof-architecture/reproduce/check_examples.py": "2758ef7f6fd278745ed5ac3dd4fe45cbe25dd1b7b60a244585f7df3aeecfe840",
+    "papers/lean-proof-architecture/results/worked-examples.json": "d83a07ab82fb316c34aaf86e3654db89235fefb6707e670dffed8b8ff7547219",
+    "papers/lean-proof-architecture/research/source/openai-math/lean/OAI/Probability/SwitchChain/OrthogonalPairResampling.lean": "03e80f02380e3142b99011951cdd7bac1e05e0b98a08dbd7f6d551820390b22e"
+  }
+}
