@@ -3,6 +3,9 @@ the source tree at https://github.com/openai/math, revision
 fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb. Their original path names are retained.
 They are distributed under the upstream Apache License 2.0. Full license
 texts are included as research/source/openai-math/LICENSE and lean/LICENSE.
+The additional byte-identical OpenAI modules in research/method-survey/source/
+have the same source revision and Apache License 2.0 terms; see the retained
+sample manifest for individual paths and blob identities.
 The review does not relabel these files as original work by its author.
 
 Research evidence ledgers retain quotations from these open source files

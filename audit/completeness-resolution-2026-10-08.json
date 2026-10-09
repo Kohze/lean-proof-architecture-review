@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-08",
+  "edition": "1.5.0-local",
+  "pdf_sha256": "03df4180462e114120e3bfbc9b0164099c5bb3d015a8254bd434af3f87192d35",
+  "verdict": "Complete for the focused source-driven review and paragraph-improvement objective. The remaining opportunities are additional research and validation, not unreported results already established by the manuscript.",
+  "scope": "Six purposively selected interfaces, an exploratory source-method survey and original explanatory examples; not an exhaustive mathematical or formal audit of the full OpenAI collection.",
+  "original_manuscript_blocks_reviewed": 161,
+  "revised_or_reorganized_blocks": 115,
+  "retained_and_reviewed_blocks": 46,
+  "prior_gap_disposition": [
+    {
+      "id": "A1",
+      "status": "addressed",
+      "result": "Joint subject/length results integrated in abstract, Table 3, introduction and discussion. Identical module/body measure reconciled by an independent direct sum; all 69 cell weights and rates retained."
+    },
+    {
+      "id": "A2",
+      "status": "remaining research opportunity",
+      "result": "Written-token scope and non-held-out validation stated precisely. Literal source excerpts now show concrete mechanisms, but executed goal traces and independent parser-error estimates remain unmeasured."
+    },
+    {
+      "id": "A3",
+      "status": "remaining research opportunity",
+      "result": "Fresh verification again compiles three unchanged TraceCone modules and the reuse corollary. Analytical and graph endpoints are still statically studied; their full compilation is a distinct next experiment."
+    },
+    {
+      "id": "A4",
+      "status": "remaining research opportunity",
+      "result": "Subject/length and directory-family sensitivity are integrated. Same-task, declaration-role and author-provenance matching remain outside the present survey."
+    },
+    {
+      "id": "A5",
+      "status": "strengthened; further comparisons possible",
+      "result": "Case endings distinguish established compiler, probabilistic semantics, finite computation, form calculus and trace-cone devices from the particular integration read here. More close comparisons with analogous formal projects would deepen the review."
+    },
+    {
+      "id": "A6",
+      "status": "addressed for source-level exposition",
+      "result": "Two annotated literal Lean excerpts expose the induction/invariant and energy/positivity inputs to closing arithmetic tactics. Their text is automatically checked against retained source lines; no executed goal states are asserted."
+    }
+  ],
+  "additional_mathematical_improvement": "Mahler now follows complex-valued real forms through real-part projection, linear coordinate pullback, exterior-derivative naturality, orientation +1 and measure-preserving sphere flux transfer before Stokes.",
+  "joint_difference_pp": {
+    "mode_tactic": 10.37874014783472,
+    "local_claims_calc": 5.8136211209517725,
+    "arithmetic_algebra": 22.7618506638375,
+    "restricted_simplification": 7.714972715737421,
+    "finite_decision": 4.329811475401676
+  },
+  "checks": {
+    "pages": 33,
+    "cited_references": 44,
+    "published_doi_title_identity_checks": 25,
+    "missing_or_unused_citation_keys": 0,
+    "latex_warnings": 0,
+    "source_artifacts_verified": 546,
+    "survey_source_blobs_verified": 800,
+    "detailed_evidence_records": 21,
+    "manuscript_source_locators_checked": 55,
+    "literal_upstream_excerpts_checked": 2,
+    "original_lean_lemmas_compiled": 5,
+    "upstream_tracecone_modules_compiled": 3,
+    "upstream_reuse_corollary_compiled": true,
+    "finite_tape_example": "640 successful tapes / 1024; tight 5/8 lower bound",
+    "all_pages_rendered_and_contact_sheets_inspected": true
+  },
+  "evidence_files": [
+    "audit/paragraph-review-2026-10-08.json",
+    "audit/final-audit.json",
+    "audit/visual-review.json",
+    "audit/depth-evidence-verification.json",
+    "audit/method-survey-verification.json",
+    "research/method-survey/joint-standardization.json",
+    "results/verification.json",
+    "results/upstream-reuse-verification.json"
+  ],
+  "publication_status": "Local revised edition; earlier public v1.1.1 metadata preserved."
+}

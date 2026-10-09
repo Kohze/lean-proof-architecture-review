@@ -1,0 +1,65 @@
+LEAN PROOF ARCHITECTURE: DEPTH REVISION REVIEW
+8 October 2026 | Local edition 1.2.0-local | 27 pages | 42 references
+
+VERDICT
+The specific depth gaps in the earlier audit have been addressed. The manuscript is stronger as a focused comparative review of formal interfaces; its novelty rests on synthesis and explanatory analysis.
+
+APPLIED CHANGES
+Common-base compiler: Explained Safe, fold charges, PolySafe substitution and AttrSafe numerical invariants; distinguished binary width from the value of an exponent.
+
+Graph switches: Traced the two-block Gram comparison, isometric slice reindexing, exact restriction normalization, gain factor and ordered/unordered budget conversion.
+
+Mahler: Explained the finite-dimensional construction of a continuous bilinear wedge and distinguished inherited exterior-derivative infrastructure from the project bridges.
+
+Crouzeix: Traced the finite Taylor remainder and Fourier orientation, local boundary-germ compatibility, analytic collar, injective neighborhood and inverse disk thickening.
+
+Trace ideals: Explained image-filter extension to arbitrary nets and added a compiled corollary composing the actual upstream ideal correspondence.
+
+All seams: Explained a local atomic-coordinate producer and the six concrete obligations consumed by inherited-seam transport.
+
+Predecessor comparison: Added Zar with verified ACM metadata and compared its compilation/equidistribution specification and SampCert law semantics with the selected every-tape complexity specification.
+
+Reproduction and reading flow: Retained all six literal OAI import closures, added checked evidence spans and portable Mathlib preparation/reuse scripts, and tightened the method so the overview fits without a large gap.
+
+CATEGORY JUDGMENTS (out of 10; internal editorial assessment)
+Depth of actual Lean analysis: 7.5 -> 8.5.
+New proof-body explanations address each targeted gap, including both the graph lifting chain and Crouzeix input construction.
+
+Mathematical exposition: 8.5 -> 8.5.
+The added detail explains the mechanisms while retaining the existing six-case structure and elementary examples.
+
+Lean-specific implementation analysis: 7 -> 8.5.
+Size and numerical invariants, finite-dimensional bundling, image filters, analytic germs, coordinate injectivity and actual API reuse now have explicit explanations.
+
+Tracing premises through constructions: 7.5 -> 8.5.
+The projection budget and analytic collar are followed through their producers, with exact retained source locations.
+
+Evidence for unusualness or formalization novelty: 6.5 -> 7.
+Zar and SampCert give a closer specification comparison, but this remains a focused synthesis rather than a corpus-wide demonstration of unprecedented Lean methods.
+
+VERIFICATION
+546 retained artifacts match their pinned Git blob and SHA-256 identities.
+Six literal OAI import closures checked: common bases 1; graph switches 165;
+Mahler 229; Crouzeix 41; trace ideals 3; all seams 79. Unique modules: 518.
+17 new evidence spans and 49 manuscript source locators pass retention and line-range checks.
+Three unchanged OAI TraceCone modules and the importing composition corollary compile.
+Corollary axioms: propext, Classical.choice, Quot.sound; no sorryAx or compiler warnings.
+Five independent elementary review lemmas and exact finite Python checks pass.
+42 cited references; 25 retained publisher DOI/title matches; no missing or unused citations.
+New Zar reference verified against ACM metadata and the primary paper.
+PDF builds without LaTeX problems. All 27 pages visually inspected.
+Overview table retained on page 3 with visible row boundaries and spacing.
+
+SCOPE AND NOVELTY
+The depth review and ratings are internal judgments by the editing agent, not external peer review or acceptance probabilities.
+Compilation covers three unmodified TraceCone modules and one importing corollary, plus five separate elementary examples. The other five selected OAI cases and Comparator were studied statically in this revision.
+The 546 retained artifacts and 518-module closure count measure source availability. They do not assert that every retained proof body was analyzed in depth.
+The composition corollary is elementary and demonstrates API reuse. It is not presented as a new mathematical theorem.
+Predecessor comparisons support the specific architectural distinctions discussed; they do not establish that the techniques are unprecedented across formal mathematics.
+
+DELIVERY
+Manuscript: papers/lean-proof-architecture/lean-proof-architecture.pdf
+Reader copy: output/pdf/lean-proof-architecture.pdf
+Source/data archive: output/releases/lean-proof-architecture-review.zip
+No GitHub publication performed for this local revision.
+PDF SHA-256: 7ca16773389f918dc9f03a0e1eae688a2a26388fe70ad95711e899c60155ab43

@@ -25,7 +25,9 @@ EXTRA = [
  ('ElliottRobertSantiago2011','10.1353/ajm.2011.0027','https://arxiv.org/abs/0805.3122',
   'Sections 3.1--3.2 contain ideal weights/idempotents, cut-sensitive convergence, and scalar-zero/infinity limits; these are classical mathematical antecedents of the reviewed formal architecture.'),
  ('CrouzeixPalencia2017','10.1137/17M1116672','https://arxiv.org/abs/1702.00668',
-  'Established complete spectral-set bound 1+sqrt(2), used as an architecture comparator.')]
+  'Established complete spectral-set bound 1+sqrt(2), used as an architecture comparator.'),
+ ('BagnallStewartBanerjee2023','10.1145/3591220','https://arxiv.org/abs/2211.06747v3',
+  'Zar is a Coq-verified compiler from probabilistic programs through choice-fix and interaction trees to random-bit samplers, with equidistribution correctness. This is a close baseline for the counting compiler; the reviewed OAI specification additionally tracks its own width, value-attribute and every-tape resource guarantees.')]
 
 def crossref(doi):
     target = PAPER / 'research/bibliography' / (re.sub(r'[^a-zA-Z0-9]+','_',doi)+'.json')
@@ -52,10 +54,16 @@ def clean(value):
 def main():
     base = json.loads((PAPER/'research/architecture/references.json').read_text(encoding='utf-8'))
     refs = base['references'] + base['additional_primary_software_sources']
+    companions = PAPER/'research/companion-reviews.json'
+    if companions.exists():
+        refs += json.loads(companions.read_text(encoding='utf-8'))['references']
     additional = PAPER/'research/analysis/additional-prior-references.json'
     if additional.exists():
         extra_data = json.loads(additional.read_text(encoding='utf-8'))
         refs += extra_data['references']
+    editorial = PAPER/'research/style-review/references.json'
+    if editorial.exists():
+        refs += json.loads(editorial.read_text(encoding='utf-8'))['references']
     for ref in refs:
         ref.setdefault('type', 'misc')
         ref.setdefault('year', 2026)
@@ -114,6 +122,19 @@ def main():
                  'primary_url':'https://github.com/leanprover-community/mathlib4/blob/d13f23b723b8a846827a245b89c10fc7d3f11612/Mathlib/Analysis/Calculus/DifferentialForm/Basic.lean',
                  'note':'Pinned dependency source; accessed 8 October 2026',
                  'claim_supported':'Continuous alternating maps, Frechet exterior derivative, and d squared under smoothness.'})
+    refs.extend([
+        {'key':'LeanDecideSource','type':'misc',
+         'title':'Tactic syntax and decision-procedure documentation: Lean 4.34.1 source',
+         'authors':['The Lean developers'],'year':2026,
+         'primary_url':'https://github.com/leanprover/lean4/blob/v4.34.1/src/Init/Tactics.lean',
+         'note':'Version-pinned source, lines 1411--1430; accessed 8 October 2026',
+         'claim_supported':'The documented semantics of decide +kernel in the reviewed Lean toolchain.'},
+        {'key':'MathlibStyle','type':'misc','title':'Library Style Guidelines',
+         'authors':['The mathlib Community'],'year':2026,
+         'primary_url':'https://leanprover-community.github.io/contribute/style.html',
+         'note':'Living contributor documentation; accessed 8 October 2026',
+         'claim_supported':'Term and tactic styles, explicit local claims, and the context-dependent tradeoffs of squeezing simp calls.'}
+    ])
     bib = []
     for ref in refs:
         doi = ref.get('doi')
@@ -122,7 +143,7 @@ def main():
             ref['publisher_metadata_title'] = data['title'][0]
             ref['publisher_metadata_verified'] = True
             # Metadata title differences are retained for explicit human review.
-        authors = ' and '.join('{'+a+'}' if a in ('OpenAI','The mathlib Community','Lean FRO') else a for a in ref.get('authors',[]))
+        authors = ' and '.join('{'+a+'}' if a in ('OpenAI','The mathlib Community','Lean FRO','The Lean developers') else a for a in ref.get('authors',[]))
         fields = {'title':'{'+clean(ref['title'])+'}', 'author':authors, 'year':ref['year']}
         if ref.get('venue'):
             fields['journal' if ref['type']=='article' else 'booktitle'] = ref['venue']
@@ -138,7 +159,7 @@ def main():
         target.write_text(rendered,encoding='utf-8',newline='\n')
     audit = PAPER/'audit'
     audit.mkdir(parents=True,exist_ok=True)
-    (audit/'citation-verification.json').write_text(json.dumps({'date':'2026-10-08',
+    (audit/'citation-verification.json').write_text(json.dumps({'date':'2026-10-09',
         'method':'Primary literature records plus retained DOI publisher metadata, and pinned Git-tree artifacts.',
         'references':refs,'reference_count':len(refs)},indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
     print(json.dumps({'references':len(refs), 'crossref_records':len(metadata),

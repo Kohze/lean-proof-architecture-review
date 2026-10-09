@@ -1,0 +1,587 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        5,
+        18
+      ]
+    ],
+    "date-time": "2026-05-18T07:01:47Z",
+    "timestamp": 1779087707295,
+    "version": "3.51.4"
+  },
+  "reference-count": 63,
+  "publisher": "Association for Computing Machinery (ACM)",
+  "issue": "PLDI",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2023,
+            6,
+            6
+          ]
+        ],
+        "date-time": "2023-06-06T00:00:00Z",
+        "timestamp": 1686009600000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "dl.acm.org"
+    ],
+    "crossmark-restriction": true
+  },
+  "published-print": {
+    "date-parts": [
+      [
+        2023,
+        6,
+        6
+      ]
+    ]
+  },
+  "abstract": "<jats:p>We present Zar: a formally verified compiler pipeline from discrete probabilistic programs with unbounded loops in the conditional probabilistic guarded command language (cpGCL) to proved-correct executable samplers in the random bit model. We exploit the key idea that all discrete probability distributions can be reduced to unbiased coin-flipping schemes. The compiler pipeline first translates cpGCL programs into choice-fix trees, an intermediate representation suitable for reduction of biased probabilistic choices. Choice-fix trees are then translated to coinductive interaction trees for execution within the random bit model. The correctness of the composed translations establishes the sampling equidistribution theorem: compiled samplers are correct wrt. the conditional weakest pre-expectation semantics of cpGCL source programs. Zar is implemented and fully verified in the Coq proof assistant. We extract verified samplers to OCaml and Python and empirically validate them on a number of illustrative examples.</jats:p>",
+  "DOI": "10.1145/3591220",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2023,
+        6,
+        6
+      ]
+    ],
+    "date-time": "2023-06-06T20:06:24Z",
+    "timestamp": 1686081984000
+  },
+  "page": "1-24",
+  "update-policy": "https://doi.org/10.1145/crossmark-policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 6,
+  "title": [
+    "Formally Verified Samplers from Probabilistic Programs with Loops and Conditioning"
+  ],
+  "prefix": "10.1145",
+  "volume": "7",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0001-6593-0661",
+      "authenticated-orcid": false,
+      "given": "Alexander",
+      "family": "Bagnall",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Ohio University, USA"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-0244-2980",
+      "authenticated-orcid": false,
+      "given": "Gordon",
+      "family": "Stewart",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Bedrock Systems, USA"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0001-9979-1292",
+      "authenticated-orcid": false,
+      "given": "Anindya",
+      "family": "Banerjee",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "IMDEA Software Institute, Spain"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "320",
+  "published-online": {
+    "date-parts": [
+      [
+        2023,
+        6,
+        6
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "e_1_2_1_1_1",
+      "volume-title": "Handbook of Logic in Computer Science",
+      "author": "Abramsky Samson",
+      "year": "1985",
+      "unstructured": "Samson Abramsky and Achim Jung . 1994. Domain Theory . In Handbook of Logic in Computer Science , S. Abramsky, D. M. Gabbay, and T. S. E. Maibaum (Eds.). 3, Clarendon Press , 1–168. isbn:0 1985 3762X https://global.oup.com/academic/product/handbook-of-logic-in-computer-science-9780198537625 Samson Abramsky and Achim Jung. 1994. Domain Theory. In Handbook of Logic in Computer Science, S. Abramsky, D. M. Gabbay, and T. S. E. Maibaum (Eds.). 3, Clarendon Press, 1–168. isbn:019853762X https://global.oup.com/academic/product/handbook-of-logic-in-computer-science-9780198537625"
+    },
+    {
+      "key": "e_1_2_1_2_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/TC.1978.1675141"
+    },
+    {
+      "key": "e_1_2_1_3_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/29873.29875"
+    },
+    {
+      "key": "e_1_2_1_4_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3372297.3417268"
+    },
+    {
+      "key": "e_1_2_1_5_1",
+      "volume-title": "Long-Range Forecasting: From Crystal Ball to Computer",
+      "author": "Armstrong J. Scott",
+      "unstructured": "J. Scott Armstrong . 1985. Long-Range Forecasting: From Crystal Ball to Computer . John Wiley & Sons , New York . J. Scott Armstrong. 1985. Long-Range Forecasting: From Crystal Ball to Computer. John Wiley & Sons, New York."
+    },
+    {
+      "key": "e_1_2_1_6_1",
+      "volume-title": "Coinductive Trees for Exact Inference of Probabilistic Programs. In LAFI 2020: Languages for Inference.",
+      "author": "Bagnall Alexander",
+      "year": "2020",
+      "unstructured": "Alexander Bagnall , Gordon Stewart , and Anindya Banerjee . 2020 . Coinductive Trees for Exact Inference of Probabilistic Programs. In LAFI 2020: Languages for Inference. Alexander Bagnall, Gordon Stewart, and Anindya Banerjee. 2020. Coinductive Trees for Exact Inference of Probabilistic Programs. In LAFI 2020: Languages for Inference."
+    },
+    {
+      "key": "e_1_2_1_7_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.5281/zenodo.7809333"
+    },
+    {
+      "key": "e_1_2_1_8_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.ic.2021.104857"
+    },
+    {
+      "key": "e_1_2_1_9_1",
+      "article-title": "Pyro: Deep Universal Probabilistic Programming",
+      "volume": "20",
+      "author": "Bingham Eli",
+      "year": "2019",
+      "unstructured": "Eli Bingham , Jonathan P. Chen , Martin Jankowiak , Fritz Obermeyer , Neeraj Pradhan , Theofanis Karaletsos , Rohit Singh , Paul A. Szerlip , Paul Horsfall , and Noah D. Goodman . 2019 . Pyro: Deep Universal Probabilistic Programming . J. Mach. Learn. Res. , 20 (2019), 28:1–28:6. http://jmlr.org/papers/v20/18-403.html Eli Bingham, Jonathan P. Chen, Martin Jankowiak, Fritz Obermeyer, Neeraj Pradhan, Theofanis Karaletsos, Rohit Singh, Paul A. Szerlip, Paul Horsfall, and Noah D. Goodman. 2019. Pyro: Deep Universal Probabilistic Programming. J. Mach. Learn. Res., 20 (2019), 28:1–28:6. http://jmlr.org/papers/v20/18-403.html",
+      "journal-title": "J. Mach. Learn. Res."
+    },
+    {
+      "key": "e_1_2_1_10_1",
+      "volume-title": "Tiao",
+      "author": "Box George E.",
+      "year": "2011",
+      "unstructured": "George E. .P. Box and George C . Tiao . 2011 . Bayesian Inference in Statistical Analysis. John Wiley & Sons . George E. .P. Box and George C. Tiao. 2011. Bayesian Inference in Statistical Analysis. John Wiley & Sons."
+    },
+    {
+      "key": "e_1_2_1_11_1",
+      "first-page": "15676",
+      "article-title": "The discrete gaussian for differential privacy",
+      "volume": "33",
+      "author": "Canonne Clément L",
+      "year": "2020",
+      "unstructured": "Clément L Canonne , Gautam Kamath , and Thomas Steinke . 2020 . The discrete gaussian for differential privacy . Advances in Neural Information Processing Systems , 33 (2020), 15676 – 15688 . Clément L Canonne, Gautam Kamath, and Thomas Steinke. 2020. The discrete gaussian for differential privacy. Advances in Neural Information Processing Systems, 33 (2020), 15676–15688.",
+      "journal-title": "Advances in Neural Information Processing Systems"
+    },
+    {
+      "key": "e_1_2_1_12_1",
+      "unstructured": "Arthur Charguéraud. 2017. CoqAndAxioms. https://github.com/coq/coq/wiki/CoqAndAxioms \t\t\t\t  Arthur Charguéraud. 2017. CoqAndAxioms. https://github.com/coq/coq/wiki/CoqAndAxioms"
+    },
+    {
+      "key": "e_1_2_1_13_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.artint.2007.11.002"
+    },
+    {
+      "key": "e_1_2_1_14_1",
+      "volume-title": "Certified Programming with Dependent Types - A Pragmatic Introduction to the Coq Proof Assistant",
+      "author": "Chlipala Adam",
+      "unstructured": "Adam Chlipala . 2013. Certified Programming with Dependent Types - A Pragmatic Introduction to the Coq Proof Assistant . MIT Press . isbn:978-0-262-02665-9 http://mitpress.mit.edu/books/certified-programming-dependent-types Adam Chlipala. 2013. Certified Programming with Dependent Types - A Pragmatic Introduction to the Coq Proof Assistant. MIT Press. isbn:978-0-262-02665-9 http://mitpress.mit.edu/books/certified-programming-dependent-types"
+    },
+    {
+      "key": "e_1_2_1_15_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1613/jair.989"
+    },
+    {
+      "key": "e_1_2_1_16_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-319-21401-6_26"
+    },
+    {
+      "key": "e_1_2_1_17_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/360933.360975"
+    },
+    {
+      "key": "e_1_2_1_18_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.2178/jsl/1082418542"
+    },
+    {
+      "key": "e_1_2_1_19_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3236024.3236057"
+    },
+    {
+      "key": "e_1_2_1_20_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3338906.3338972"
+    },
+    {
+      "key": "e_1_2_1_21_1",
+      "unstructured": "Derek Elkins. 2021. Tying the Knot. https://wiki.haskell.org/Tying_the_Knot \t\t\t\t  Derek Elkins. 2021. Tying the Knot. https://wiki.haskell.org/Tying_the_Knot"
+    },
+    {
+      "key": "e_1_2_1_22_1",
+      "volume-title": "Introduction to Markov Chain Monte Carlo. Handbook of markov chain monte carlo",
+      "author": "Geyer Charles",
+      "year": "2011",
+      "unstructured": "Charles Geyer . 2011. Introduction to Markov Chain Monte Carlo. Handbook of markov chain monte carlo , 2011 6022 (2011), 45. Charles Geyer. 2011. Introduction to Markov Chain Monte Carlo. Handbook of markov chain monte carlo, 20116022 (2011), 45."
+    },
+    {
+      "key": "e_1_2_1_23_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/1536414.1536464"
+    },
+    {
+      "key": "e_1_2_1_24_1",
+      "volume-title": "Tenenbaum",
+      "author": "Goodman Noah D.",
+      "year": "2012",
+      "unstructured": "Noah D. Goodman , Vikash Mansinghka , Daniel M. Roy , Kallista A. Bonawitz , and Joshua B . Tenenbaum . 2012 . Church: a language for generative models. CoRR , abs/1206.3255 (2012), arXiv:1206.3255. arxiv:1206.3255 Noah D. Goodman, Vikash Mansinghka, Daniel M. Roy, Kallista A. Bonawitz, and Joshua B. Tenenbaum. 2012. Church: a language for generative models. CoRR, abs/1206.3255 (2012), arXiv:1206.3255. arxiv:1206.3255"
+    },
+    {
+      "key": "e_1_2_1_25_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/2593882.2593900"
+    },
+    {
+      "key": "e_1_2_1_26_1",
+      "volume-title": "Semantics of programming languages - structures and techniques",
+      "author": "Gunter Carl A.",
+      "unstructured": "Carl A. Gunter . 1993. Semantics of programming languages - structures and techniques . MIT Press . isbn:978-0-262-07143-7 Carl A. Gunter. 1993. Semantics of programming languages - structures and techniques. MIT Press. isbn:978-0-262-07143-7"
+    },
+    {
+      "key": "e_1_2_1_27_1",
+      "volume-title": "Measure theory. 18",
+      "author": "Halmos Paul R",
+      "unstructured": "Paul R Halmos . 2013. Measure theory. 18 , Springer . Paul R Halmos. 2013. Measure theory. 18, Springer."
+    },
+    {
+      "key": "e_1_2_1_28_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3428208"
+    },
+    {
+      "key": "e_1_2_1_29_1",
+      "volume-title": "Symbolic Exact Inference for Discrete Probabilistic Programs. CoRR, abs/1904.02079",
+      "author": "Holtzen Steven",
+      "year": "2019",
+      "unstructured": "Steven Holtzen , Todd D. Millstein , and Guy Van den Broeck . 2019. Symbolic Exact Inference for Discrete Probabilistic Programs. CoRR, abs/1904.02079 ( 2019 ), arXiv:1904.02079. arxiv:1904.02079 Steven Holtzen, Todd D. Millstein, and Guy Van den Broeck. 2019. Symbolic Exact Inference for Discrete Probabilistic Programs. CoRR, abs/1904.02079 (2019), arXiv:1904.02079. arxiv:1904.02079"
+    },
+    {
+      "key": "e_1_2_1_30_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3062341.3062375"
+    },
+    {
+      "key": "e_1_2_1_31_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/2429069.2429093"
+    },
+    {
+      "key": "e_1_2_1_32_1",
+      "volume-title": "Advanced weakest precondition calculi for probabilistic programs. Ph. D. Dissertation",
+      "author": "Kaminski Benjamin Lucien",
+      "unstructured": "Benjamin Lucien Kaminski . 2019. Advanced weakest precondition calculi for probabilistic programs. Ph. D. Dissertation . RWTH Aachen University , Germany . http://publications.rwth-aachen.de/record/755408 Benjamin Lucien Kaminski. 2019. Advanced weakest precondition calculi for probabilistic programs. Ph. D. Dissertation. RWTH Aachen University, Germany. http://publications.rwth-aachen.de/record/755408"
+    },
+    {
+      "key": "e_1_2_1_33_1",
+      "volume-title": "Yao",
+      "author": "Knuth Donald E.",
+      "year": "1976",
+      "unstructured": "Donald E. Knuth and Andrew C . Yao . 1976 . The Complexity of Nonuniform Random Number Generation. In Algorithms and Complexity: New Directions and Recent Results, Joseph F. Traub (Ed.). Academic Press . Donald E. Knuth and Andrew C. Yao. 1976. The Complexity of Nonuniform Random Number Generation. In Algorithms and Complexity: New Directions and Recent Results, Joseph F. Traub (Ed.). Academic Press."
+    },
+    {
+      "key": "e_1_2_1_34_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3293880.3294106"
+    },
+    {
+      "key": "e_1_2_1_35_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1017/S0960129515000493"
+    },
+    {
+      "key": "e_1_2_1_36_1",
+      "volume-title": "Uniform distribution of sequences",
+      "author": "Kuipers Lauwerens",
+      "unstructured": "Lauwerens Kuipers and Harald Niederreiter . 2012. Uniform distribution of sequences . Courier Corporation . Lauwerens Kuipers and Harald Niederreiter. 2012. Uniform distribution of sequences. Courier Corporation."
+    },
+    {
+      "key": "e_1_2_1_37_1",
+      "volume-title": "On information and sufficiency. The annals of mathematical statistics, 22, 1",
+      "author": "Kullback Solomon",
+      "year": "1951",
+      "unstructured": "Solomon Kullback and Richard A Leibler . 1951. On information and sufficiency. The annals of mathematical statistics, 22, 1 ( 1951 ), 79–86. Solomon Kullback and Richard A Leibler. 1951. On information and sufficiency. The annals of mathematical statistics, 22, 1 (1951), 79–86."
+    },
+    {
+      "key": "e_1_2_1_38_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/5.726791"
+    },
+    {
+      "key": "e_1_2_1_39_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/1538788.1538814"
+    },
+    {
+      "key": "e_1_2_1_40_1",
+      "unstructured": "Xavier Leroy Damien Doligez Alain Frisch Jacques Garrigue Didier Rémy and Jérôme Vouillon. 2021. The OCaml system release 4.13: Documentation and user’s manual. Inria 1–876. https://hal.inria.fr/hal-00930213 \t\t\t\t  Xavier Leroy Damien Doligez Alain Frisch Jacques Garrigue Didier Rémy and Jérôme Vouillon. 2021. The OCaml system release 4.13: Documentation and user’s manual. Inria 1–876. https://hal.inria.fr/hal-00930213"
+    },
+    {
+      "key": "e_1_2_1_41_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3527324"
+    },
+    {
+      "key": "e_1_2_1_42_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3372885.3373812"
+    },
+    {
+      "key": "e_1_2_1_43_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-540-69407-6_39"
+    },
+    {
+      "key": "e_1_2_1_44_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/S0019-9958(66)80018-9"
+    },
+    {
+      "key": "e_1_2_1_45_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3156018"
+    },
+    {
+      "key": "e_1_2_1_46_1",
+      "volume-title": "2016 31st Annual ACM/IEEE Symposium on Logic in Computer Science (LICS). 1–10",
+      "author": "Olmedo Federico",
+      "year": "2016",
+      "unstructured": "Federico Olmedo , Benjamin Lucien Kaminski , Joost-Pieter Katoen , and Christoph Matheja . 2016 . Reasoning about recursive probabilistic programs . In 2016 31st Annual ACM/IEEE Symposium on Logic in Computer Science (LICS). 1–10 . Federico Olmedo, Benjamin Lucien Kaminski, Joost-Pieter Katoen, and Christoph Matheja. 2016. Reasoning about recursive probabilistic programs. In 2016 31st Annual ACM/IEEE Symposium on Logic in Computer Science (LICS). 1–10."
+    },
+    {
+      "key": "e_1_2_1_47_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3341689"
+    },
+    {
+      "key": "e_1_2_1_48_1",
+      "unstructured": "pythonlib. 2022. pythonlib. https://github.com/janestreet/pythonlib \t\t\t\t  pythonlib. 2022. pythonlib. https://github.com/janestreet/pythonlib"
+    },
+    {
+      "key": "e_1_2_1_49_1",
+      "volume-title": "Python machine learning: Machine learning and deep learning with Python, scikit-learn, and TensorFlow 2",
+      "author": "Raschka Sebastian",
+      "unstructured": "Sebastian Raschka and Vahid Mirjalili . 2019. Python machine learning: Machine learning and deep learning with Python, scikit-learn, and TensorFlow 2 . Packt Publishing Ltd . Sebastian Raschka and Vahid Mirjalili. 2019. Python machine learning: Machine learning and deep learning with Python, scikit-learn, and TensorFlow 2. Packt Publishing Ltd."
+    },
+    {
+      "key": "e_1_2_1_50_1",
+      "volume-title": "Simulation and the Monte Carlo method",
+      "author": "Rubinstein Reuven Y",
+      "unstructured": "Reuven Y Rubinstein and Dirk P Kroese . 2016. Simulation and the Monte Carlo method . John Wiley & Sons . Reuven Y Rubinstein and Dirk P Kroese. 2016. Simulation and the Monte Carlo method. John Wiley & Sons."
+    },
+    {
+      "key": "e_1_2_1_51_1",
+      "volume-title": "The Fast Loaded Dice Roller: A Near-Optimal Exact Sampler for Discrete Probability Distributions. In The 23rd International Conference on Artificial Intelligence and Statistics, AISTATS 2020",
+      "volume": "1046",
+      "author": "Saad Feras",
+      "year": "2020",
+      "unstructured": "Feras Saad , Cameron E. Freer , Martin C. Rinard , and Vikash Mansinghka . 2020 . The Fast Loaded Dice Roller: A Near-Optimal Exact Sampler for Discrete Probability Distributions. In The 23rd International Conference on Artificial Intelligence and Statistics, AISTATS 2020 , 26-28 August 2020, Online [Palermo, Sicily, Italy], Silvia Chiappa and Roberto Calandra (Eds.) (Proceedings of Machine Learning Research , Vol. 108). PMLR, 1036– 1046 . http://proceedings.mlr.press/v108/saad20a.html Feras Saad, Cameron E. Freer, Martin C. Rinard, and Vikash Mansinghka. 2020. The Fast Loaded Dice Roller: A Near-Optimal Exact Sampler for Discrete Probability Distributions. In The 23rd International Conference on Artificial Intelligence and Statistics, AISTATS 2020, 26-28 August 2020, Online [Palermo, Sicily, Italy], Silvia Chiappa and Roberto Calandra (Eds.) (Proceedings of Machine Learning Research, Vol. 108). PMLR, 1036–1046. http://proceedings.mlr.press/v108/saad20a.html"
+    },
+    {
+      "key": "e_1_2_1_52_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3371104"
+    },
+    {
+      "key": "e_1_2_1_53_1",
+      "unstructured": "SciPy. 2022. scipy.stats. https://docs.scipy.org/doc/scipy/reference/stats.html \t\t\t\t  SciPy. 2022. scipy.stats. https://docs.scipy.org/doc/scipy/reference/stats.html"
+    },
+    {
+      "key": "e_1_2_1_54_1",
+      "unstructured": "Kudelski Security. 2020. The definitive guide to \"Modulo Bias and how to avoid it\"!. https://research.kudelskisecurity.com/2020/07/28/the-definitive-guide-to-modulo-bias-and-how-to-avoid-it/ \t\t\t\t  Kudelski Security. 2020. The definitive guide to \"Modulo Bias and how to avoid it\"!. https://research.kudelskisecurity.com/2020/07/28/the-definitive-guide-to-modulo-bias-and-how-to-avoid-it/"
+    },
+    {
+      "key": "e_1_2_1_55_1",
+      "volume-title": "Workshop on Probabilistic Programming Languages, Semantics, and Systems.",
+      "author": "Selsam Daniel",
+      "year": "2018",
+      "unstructured": "Daniel Selsam , Percy Liang , and David L Dill . 2018 . Formal methods for probabilistic programming . In Workshop on Probabilistic Programming Languages, Semantics, and Systems. Daniel Selsam, Percy Liang, and David L Dill. 2018. Formal methods for probabilistic programming. In Workshop on Probabilistic Programming Languages, Semantics, and Systems."
+    },
+    {
+      "key": "e_1_2_1_56_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/j.1538-7305.1948.tb01338.x"
+    },
+    {
+      "key": "e_1_2_1_57_1",
+      "volume-title": "Weakest Preexpectation Semantics for Bayesian Inference. CoRR, abs/2005.09013",
+      "author": "Szymczak Marcin",
+      "year": "2020",
+      "unstructured": "Marcin Szymczak and Joost-Pieter Katoen . 2020. Weakest Preexpectation Semantics for Bayesian Inference. CoRR, abs/2005.09013 ( 2020 ), arXiv:2005.09013. arxiv:2005.09013 Marcin Szymczak and Joost-Pieter Katoen. 2020. Weakest Preexpectation Semantics for Bayesian Inference. CoRR, abs/2005.09013 (2020), arXiv:2005.09013. arxiv:2005.09013"
+    },
+    {
+      "key": "e_1_2_1_58_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3453483.3454077"
+    },
+    {
+      "key": "e_1_2_1_59_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/BF01475864"
+    },
+    {
+      "key": "e_1_2_1_60_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3371119"
+    },
+    {
+      "key": "e_1_2_1_61_1",
+      "volume-title": "Understanding belief propagation and its generalizations. Exploring artificial intelligence in the new millennium, 8",
+      "author": "Yedidia Jonathan S",
+      "year": "2003",
+      "unstructured": "Jonathan S Yedidia , William T Freeman , and Yair Weiss . 2003. Understanding belief propagation and its generalizations. Exploring artificial intelligence in the new millennium, 8 ( 2003 ), 236–239. Jonathan S Yedidia, William T Freeman, and Yair Weiss. 2003. Understanding belief propagation and its generalizations. Exploring artificial intelligence in the new millennium, 8 (2003), 236–239."
+    },
+    {
+      "key": "e_1_2_1_62_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.4230/LIPIcs.ITP.2021.32"
+    },
+    {
+      "key": "e_1_2_1_63_1",
+      "volume-title": "International Conference on Post-Quantum Cryptography. 284–303",
+      "author": "Zhao Raymond K",
+      "year": "2020",
+      "unstructured": "Raymond K Zhao , Ron Steinfeld , and Amin Sakzad . 2020 . COSAC: Compact and scalable arbitrary-centered discrete Gaussian sampling over integers . In International Conference on Post-Quantum Cryptography. 284–303 . Raymond K Zhao, Ron Steinfeld, and Amin Sakzad. 2020. COSAC: Compact and scalable arbitrary-centered discrete Gaussian sampling over integers. In International Conference on Post-Quantum Cryptography. 284–303."
+    }
+  ],
+  "container-title": [
+    "Proceedings of the ACM on Programming Languages"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://dl.acm.org/doi/10.1145/3591220",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://dl.acm.org/doi/pdf/10.1145/3591220",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        6,
+        17
+      ]
+    ],
+    "date-time": "2025-06-17T16:47:46Z",
+    "timestamp": 1750178866000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://dl.acm.org/doi/10.1145/3591220"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2023,
+        6,
+        6
+      ]
+    ]
+  },
+  "references-count": 63,
+  "journal-issue": {
+    "issue": "PLDI",
+    "published-print": {
+      "date-parts": [
+        [
+          2023,
+          6,
+          6
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "10.1145/3591220"
+  ],
+  "URL": "http://dx.doi.org/10.1145/3591220",
+  "relation": {},
+  "ISSN": [
+    "2475-1421"
+  ],
+  "subject": [],
+  "container-title-short": "Proc. ACM Program. Lang.",
+  "published": {
+    "date-parts": [
+      [
+        2023,
+        6,
+        6
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "2023-06-06",
+      "order": 2,
+      "name": "published",
+      "label": "Published",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    }
+  ]
+}

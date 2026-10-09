@@ -1,0 +1,50 @@
+{
+  "commands": [
+    {
+      "command": [
+        "pdflatex",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "main.tex"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "bibtex",
+        "main"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "pdflatex",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "main.tex"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "pdflatex",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "main.tex"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "pdflatex",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "main.tex"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "pages": 24,
+  "warnings": [],
+  "pdf_sha256": "18b9567467c10d697bc71bd1572e16343b5a1e9211a6c799f4b2070ac3303b0c"
+}

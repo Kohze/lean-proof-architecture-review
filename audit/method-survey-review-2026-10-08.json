@@ -1,0 +1,291 @@
+{
+  "date": "2026-10-08",
+  "edition": "1.3.0-local",
+  "status": "Local manuscript and reproduction data checked",
+  "pages": 31,
+  "cited_references": 44,
+  "pdf_sha256": "9b91bced568878a112a9c28ee7985343c1aaa157a70b6ea6ed43625ece577990",
+  "review_scope": "Original descriptive lexical survey; the six mathematical case studies retain their source-driven review scope.",
+  "sampling": {
+    "population_modules": 122457,
+    "sample_modules": 800,
+    "rank_seed": "lean-method-profile-2026-10-08-v1",
+    "replacement": false,
+    "membership_fixed_before_content_fetch": true,
+    "retained_population_sha256": "a16d494878cf972cc6984751737f943f8350c081daa8a1b563cda9991cd9de13"
+  },
+  "source_counts": {
+    "OAI": 800,
+    "Mathlib": 8070
+  },
+  "extracted_body_counts": {
+    "OAI": 13309,
+    "Mathlib": 186751
+  },
+  "verification": {
+    "status": "passed",
+    "synthetic_edge_case_checks": 11,
+    "sampled_source_blobs_verified": 800,
+    "population_modules": 122457,
+    "hash_rank_membership_verified": true,
+    "manually_inspected_bodies": 40,
+    "initial_manual_validation_errors_corrected": 2,
+    "source_file_counts": {
+      "OAI": 800,
+      "Mathlib": 8070
+    },
+    "extracted_body_counts": {
+      "OAI": 13309,
+      "Mathlib": 186751
+    },
+    "scope": "Lexer/boundary fixtures, retained CSV hashes and count reconciliation; source reading remains necessary for mathematical interpretation."
+  },
+  "validation_corrections": [
+    {
+      "id": "OAI-19",
+      "reason": "Outer let binding in theorem type consumed as proof assignment by initial extractor.",
+      "changes": {
+        "mode": {
+          "initial": "term_with_tactic",
+          "corrected": "tactic"
+        },
+        "body_line": {
+          "initial": 173,
+          "corrected": 180
+        },
+        "body_lines": {
+          "initial": 27,
+          "corrected": 20
+        }
+      }
+    },
+    {
+      "id": "OAI-20",
+      "reason": "Outer let binding in theorem type consumed as proof assignment by initial extractor.",
+      "changes": {
+        "mode": {
+          "initial": "term_with_tactic",
+          "corrected": "tactic"
+        },
+        "body_line": {
+          "initial": 69,
+          "corrected": 83
+        },
+        "body_lines": {
+          "initial": 41,
+          "corrected": 27
+        }
+      }
+    }
+  ],
+  "estimands": {
+    "pooled": "Equal weight per extracted named theorem/lemma body.",
+    "module_balanced": "Choose a proof-bearing module uniformly, then one extracted named body uniformly within it.",
+    "analysis_status": "Exploratory sensitivity analysis added after observing certificate-batch concentration; not the original pooled estimand."
+  },
+  "findings": {
+    "module_balanced_rates_percent": {
+      "OAI": {
+        "rewrite_simplify": 72.51419921287537,
+        "arithmetic_algebra": 38.17425008221132,
+        "search_automation": 0.06690065991185207,
+        "cases_induction": 19.834359670439934,
+        "extensionality_congruence": 13.696187811314836,
+        "local_claims_calc": 61.14103882561944,
+        "finite_decision": 6.326803635098913,
+        "restricted_simplification": 38.53468995172559,
+        "explicit_classical": 5.150346715074161,
+        "kernel_decision_flag": 4.5692202004355735,
+        "native_decision": 0.0,
+        "mode_tactic": 92.82459095326455,
+        "mode_term_with_tactic": 0.5170751584653864,
+        "mode_term_only": 6.658333888270077
+      },
+      "Mathlib": {
+        "rewrite_simplify": 52.40590199443774,
+        "arithmetic_algebra": 2.675756420370401,
+        "search_automation": 3.3491989701696596,
+        "cases_induction": 12.785100883739348,
+        "extensionality_congruence": 11.291517123796227,
+        "local_claims_calc": 20.978547155034057,
+        "finite_decision": 0.18489427564628866,
+        "restricted_simplification": 12.992362198009271,
+        "explicit_classical": 1.903670980705569,
+        "kernel_decision_flag": 0.002243932164839014,
+        "native_decision": 0.0,
+        "mode_tactic": 54.49528000017161,
+        "mode_term_with_tactic": 5.710841555371643,
+        "mode_term_only": 39.793878444456745
+      }
+    },
+    "concentration": {
+      "largest_module_body_share_percent": 14.914719362837177,
+      "top_10_module_body_share_percent": 48.18543842512585,
+      "top_modules": [
+        {
+          "path": "lean/OAI/MathematicalPhysics/Transonic/Certificates/BarrierData53.lean",
+          "bodies": 1985,
+          "finite_decision_percent": 66.49874055415617
+        },
+        {
+          "path": "lean/OAI/Analysis/PlanarPacking/Certificate/LowBlock36_10.lean",
+          "bodies": 872,
+          "finite_decision_percent": 90.82568807339449
+        },
+        {
+          "path": "lean/OAI/MathematicalPhysics/Transonic/Certificates/Barrier59.lean",
+          "bodies": 674,
+          "finite_decision_percent": 95.10385756676558
+        },
+        {
+          "path": "lean/OAI/MathematicalPhysics/Transonic/Certificates/Barrier46.lean",
+          "bodies": 674,
+          "finite_decision_percent": 95.10385756676558
+        },
+        {
+          "path": "lean/OAI/Analysis/PlanarPacking/Certificate/TableMoments84.lean",
+          "bodies": 436,
+          "finite_decision_percent": 90.82568807339449
+        },
+        {
+          "path": "lean/OAI/MathematicalPhysics/Transonic/Certificates/Jet08.lean",
+          "bodies": 434,
+          "finite_decision_percent": 100.0
+        },
+        {
+          "path": "lean/OAI/RepresentationTheory/UniversalSquare/Semigroup/SemigroupNodes95.lean",
+          "bodies": 400,
+          "finite_decision_percent": 100.0
+        },
+        {
+          "path": "lean/OAI/Analysis/MutuallyUnbiased/GramRows/Block172.lean",
+          "bodies": 384,
+          "finite_decision_percent": 66.66666666666666
+        },
+        {
+          "path": "lean/OAI/Analysis/PlanarPacking/Certificate/Bernstein4.lean",
+          "bodies": 312,
+          "finite_decision_percent": 60.256410256410255
+        },
+        {
+          "path": "lean/OAI/GameTheory/SnakyTwentyOne/Cards/Height13Part02.lean",
+          "bodies": 242,
+          "finite_decision_percent": 81.81818181818183
+        }
+      ]
+    },
+    "common_domain_control": {
+      "domains": [
+        "Algebra",
+        "AlgebraicGeometry",
+        "Analysis",
+        "CategoryTheory",
+        "Combinatorics",
+        "Computability",
+        "Dynamics",
+        "Geometry",
+        "GroupTheory",
+        "InformationTheory",
+        "LinearAlgebra",
+        "MeasureTheory",
+        "NumberTheory",
+        "Probability",
+        "RepresentationTheory",
+        "RingTheory",
+        "SetTheory",
+        "Topology"
+      ],
+      "oai_proof_bearing_modules": 735,
+      "oai_module_coverage_percent": 93.75,
+      "oai_rates_percent": {
+        "rewrite_simplify": 73.05949420639173,
+        "arithmetic_algebra": 37.61863581553887,
+        "search_automation": 0.07136070390597553,
+        "cases_induction": 19.84841210573403,
+        "extensionality_congruence": 13.830575435530456,
+        "local_claims_calc": 61.37489327265961,
+        "finite_decision": 5.511000702459567,
+        "restricted_simplification": 38.701812868279525,
+        "explicit_classical": 5.477696760184748,
+        "kernel_decision_flag": 4.029831044649577,
+        "native_decision": 0.0,
+        "mode_tactic": 92.95394470260531,
+        "mode_term_with_tactic": 0.3048724983056695,
+        "mode_term_only": 6.741182799089028
+      },
+      "mathlib_domain_standardized_rates_percent": {
+        "rewrite_simplify": 61.891380762510444,
+        "arithmetic_algebra": 7.124647178847303,
+        "search_automation": 4.884971593275046,
+        "cases_induction": 15.685656990306642,
+        "extensionality_congruence": 13.092625759924656,
+        "local_claims_calc": 27.260401351457126,
+        "finite_decision": 0.6339392687301103,
+        "restricted_simplification": 15.754655153616156,
+        "explicit_classical": 2.2995148903828158,
+        "kernel_decision_flag": 0.01642599476712201,
+        "native_decision": 0.0,
+        "mode_tactic": 63.77565448640985,
+        "mode_term_with_tactic": 5.670138853097237,
+        "mode_term_only": 30.554206660492916
+      },
+      "domain_module_counts": {
+        "Geometry": 75,
+        "SetTheory": 5,
+        "Analysis": 156,
+        "RingTheory": 4,
+        "Algebra": 16,
+        "Combinatorics": 101,
+        "LinearAlgebra": 9,
+        "NumberTheory": 175,
+        "Probability": 83,
+        "Computability": 32,
+        "Dynamics": 7,
+        "MeasureTheory": 20,
+        "GroupTheory": 25,
+        "AlgebraicGeometry": 7,
+        "InformationTheory": 3,
+        "RepresentationTheory": 10,
+        "Topology": 6,
+        "CategoryTheory": 1
+      }
+    }
+  },
+  "interpretation_checks": [
+    "Do not equate lexical feature shares with percentages of novel mathematics.",
+    "Report both module-balanced and pooled results because certificate batches dominate pooled counts.",
+    "Shared directory domains and length bands are descriptive controls, not task-matched causal comparisons.",
+    "Limited listed search-token prevalence does not imply limited automation overall.",
+    "Coverage percentages concern detected source-written named declarations, not all elaborated declarations.",
+    "Compilation evidence is confined to the earlier elementary examples and targeted upstream reuse experiment; survey profiling reads source."
+  ],
+  "citations": {
+    "published_doi_title_identities_checked": 25,
+    "source_and_software_records": 14,
+    "scholarly_records": 30,
+    "new_primary_records": [
+      "LeanDecideSource",
+      "MathlibStyle"
+    ]
+  },
+  "visual_review": {
+    "date": "2026-10-08",
+    "pdf_sha256": "9b91bced568878a112a9c28ee7985343c1aaa157a70b6ea6ed43625ece577990",
+    "pages_rendered": 31,
+    "all_contact_sheets_inspected": true,
+    "full_size_pages_inspected": [
+      20,
+      21
+    ],
+    "latest_full_size_page_rechecked": 21,
+    "comparison_chart_inspected": true,
+    "checks": [
+      "Tables have distinct rows, readable columns and whitespace around captions.",
+      "All 31 rendered pages checked in contact sheets for clipping, overlap, blank pages and section flow.",
+      "Multiword Lean code preserves spaces; no duplicate table destination warning after package ordering fix.",
+      "Plot text clears bootstrap whiskers; legend and footnotes are readable."
+    ],
+    "unresolved_visual_defects": []
+  },
+  "public_release": "Earlier v1.1.1 release unchanged; new work is local."
+}

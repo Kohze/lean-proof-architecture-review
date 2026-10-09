@@ -3,8 +3,8 @@ message: >-
   Please cite the manuscript using the preferred citation below. The MIT license
   for original reproduction code is separate from manuscript reuse rights.
 type: software
-version: 1.1.1
-date-released: 2026-10-08
+version: 1.6.0
+date-released: 2026-10-09
 title: >-
   Proof Architecture in the OpenAI Lean Library: manuscript and reproduction package
 authors:
@@ -17,8 +17,15 @@ url: https://github.com/Kohze/lean-proof-architecture-review
 abstract: >-
   A source-driven comparative review of six proof interfaces in the OpenAI Lean
   mathematics collection, with curated source evidence, internal review records,
-  and original executable examples. The upstream cases are studied statically;
-  executable checks concern the review's own examples.
+  and original executable examples. All six cases use static proof-body
+  analysis. A targeted reuse experiment also compiles three unchanged
+  upstream trace-cone modules and an original ideal-transport corollary.
+  An exploratory lexical survey compares 800 uniformly sampled OpenAI modules
+  with 8,070 mathematical Mathlib modules at the pinned dependency revision.
+  The review connects the measured tactic profile to the division of proof work
+  in source-traced compiler cost bounds and analytic estimates. Joint subject
+  and proof-length standardization distinguishes persistent arithmetic emphasis
+  from broader differences in proof form and length composition.
 keywords:
   - Lean
   - formalized mathematics
@@ -35,5 +42,5 @@ preferred-citation:
     Proof Architecture in the OpenAI Lean Library: Representation, Locality, and Semantic Transport
   year: 2026
   month: 10
-  notes: Manuscript, 8 October 2026. No DOI assigned.
+  notes: Manuscript, 9 October 2026. No DOI assigned.
   url: https://github.com/Kohze/lean-proof-architecture-review

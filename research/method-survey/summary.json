@@ -1,0 +1,1524 @@
+{
+  "oai_commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "mathlib_commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "unit": "Extracted named theorem/lemma body; multiple lexical features may occur in one body.",
+  "extraction": "Nested comments and quoted strings masked; declarations found at source-command starts; outer := identified outside bracketed binders/types; body ends at the next command at no greater indentation.",
+  "features": {
+    "rewrite_simplify": [
+      "rw",
+      "rwa",
+      "simp",
+      "simpa",
+      "simp_all",
+      "simp_rw",
+      "dsimp",
+      "erw",
+      "nth_rw",
+      "conv"
+    ],
+    "arithmetic_algebra": [
+      "omega",
+      "linarith",
+      "nlinarith",
+      "ring",
+      "ring_nf",
+      "norm_num",
+      "positivity",
+      "field_simp",
+      "linear_combination",
+      "simp_arith",
+      "abel",
+      "noncomm_ring"
+    ],
+    "search_automation": [
+      "aesop",
+      "tauto",
+      "grind",
+      "solve_by_elim",
+      "exact?",
+      "apply?",
+      "library_search"
+    ],
+    "cases_induction": [
+      "cases",
+      "cases'",
+      "rcases",
+      "rintro",
+      "by_cases",
+      "by_contra",
+      "split",
+      "split_ifs",
+      "induction",
+      "induction'",
+      "fun_induction",
+      "interval_cases",
+      "fin_cases"
+    ],
+    "extensionality_congruence": [
+      "ext",
+      "ext1",
+      "funext",
+      "congr",
+      "congr!",
+      "congrm",
+      "convert",
+      "convert!"
+    ],
+    "local_claims_calc": [
+      "have",
+      "suffices",
+      "obtain",
+      "calc"
+    ],
+    "finite_decision": [
+      "decide",
+      "native_decide"
+    ],
+    "restricted_simplification": [],
+    "explicit_classical": [
+      "classical"
+    ],
+    "kernel_decision_flag": [],
+    "native_decision": []
+  },
+  "source_file_counts": {
+    "OAI": 800,
+    "Mathlib": 8070
+  },
+  "proof_body_counts": {
+    "OAI": 13309,
+    "Mathlib": 186751
+  },
+  "file_summary": {
+    "OAI": {
+      "median_source_lines": 99.0,
+      "median_extracted_proofs": 4.0,
+      "median_imports": 2.0,
+      "broad_mathlib_import_percent": 27.25,
+      "oai_import_percent": 93.25,
+      "zero_named_proof_files": 16
+    },
+    "Mathlib": {
+      "median_source_lines": 188.0,
+      "median_extracted_proofs": 11.0,
+      "median_imports": 3.0,
+      "broad_mathlib_import_percent": 0.0,
+      "oai_import_percent": 0.0,
+      "zero_named_proof_files": 719
+    }
+  },
+  "proof_modes": {
+    "OAI": {
+      "tactic": {
+        "count": 11438,
+        "percent": 85.94184386505373
+      },
+      "term_with_tactic": {
+        "count": 1251,
+        "percent": 9.399654369223834
+      },
+      "term_only": {
+        "count": 620,
+        "percent": 4.658501765722444
+      }
+    },
+    "Mathlib": {
+      "tactic": {
+        "count": 92909,
+        "percent": 49.75020214081852
+      },
+      "term_with_tactic": {
+        "count": 10623,
+        "percent": 5.688322954093954
+      },
+      "term_only": {
+        "count": 83219,
+        "percent": 44.56147490508752
+      }
+    }
+  },
+  "feature_rates_percent": {
+    "OAI": {
+      "rewrite_simplify": 41.51326170260726,
+      "arithmetic_algebra": 16.980990307310844,
+      "search_automation": 0.04508227515215268,
+      "cases_induction": 10.263731309640093,
+      "extensionality_congruence": 6.010970020287024,
+      "local_claims_calc": 23.84100984296341,
+      "finite_decision": 48.89924111503494,
+      "restricted_simplification": 16.372379592756783,
+      "explicit_classical": 1.7281538808325194,
+      "kernel_decision_flag": 44.65399353820723,
+      "native_decision": 0.0
+    },
+    "Mathlib": {
+      "rewrite_simplify": 48.799738689484926,
+      "arithmetic_algebra": 1.9260941039137676,
+      "search_automation": 2.7651793029220726,
+      "cases_induction": 10.522032010538096,
+      "extensionality_congruence": 9.20691187731257,
+      "local_claims_calc": 13.8307157659129,
+      "finite_decision": 0.19919572050484335,
+      "restricted_simplification": 10.379596360929794,
+      "explicit_classical": 1.3445711134076925,
+      "kernel_decision_flag": 0.0026773618347425182,
+      "native_decision": 0.0
+    }
+  },
+  "proof_length_nonempty_lines": {
+    "OAI": {
+      "median": 2,
+      "q25": 1.0,
+      "q75": 6.0,
+      "p90": 15.0,
+      "p99": 50.0,
+      "max": 441,
+      "bands": {
+        "11-30": 1639,
+        "1-3": 8470,
+        "31+": 429,
+        "4-10": 2771
+      }
+    },
+    "Mathlib": {
+      "median": 2,
+      "q25": 1.0,
+      "q75": 4.0,
+      "p90": 8.0,
+      "p99": 28.0,
+      "max": 214,
+      "bands": {
+        "1-3": 138960,
+        "31+": 1498,
+        "4-10": 35927,
+        "11-30": 10366
+      }
+    }
+  },
+  "coverage": {
+    "OAI": {
+      "named_declarations_detected": 13311,
+      "bodies_extracted": 13309,
+      "unextracted": 2,
+      "percent_extracted": 99.98497483284501,
+      "unrecognized_named_declaration_tokens": 0
+    },
+    "Mathlib": {
+      "named_declarations_detected": 188100,
+      "bodies_extracted": 186751,
+      "unextracted": 1349,
+      "percent_extracted": 99.28282828282828,
+      "unrecognized_named_declaration_tokens": 2
+    }
+  },
+  "oai_95_percent_module_bootstrap_intervals": {
+    "rewrite_simplify": [
+      33.15828742330084,
+      53.32398201947315
+    ],
+    "arithmetic_algebra": [
+      11.429330316543936,
+      25.221063876499645
+    ],
+    "search_automation": [
+      0.00877247090930451,
+      0.09985459868675957
+    ],
+    "cases_induction": [
+      7.354420114773857,
+      14.467295882456094
+    ],
+    "extensionality_congruence": [
+      4.025329912169316,
+      9.06127971911849
+    ],
+    "local_claims_calc": [
+      16.386665670718678,
+      35.25915688165324
+    ],
+    "finite_decision": [
+      33.7755997511469,
+      58.246236516999055
+    ],
+    "restricted_simplification": [
+      11.191270777479307,
+      24.354881878233737
+    ],
+    "explicit_classical": [
+      1.1319177907610674,
+      2.630455083810097
+    ],
+    "kernel_decision_flag": [
+      28.111846468682565,
+      55.13615587285969
+    ],
+    "native_decision": [
+      0.0,
+      0.0
+    ],
+    "mode_tactic": [
+      72.33643560868651,
+      95.69576373605166
+    ],
+    "mode_term_with_tactic": [
+      0.1936499124717275,
+      22.714122101498592
+    ],
+    "mode_term_only": [
+      3.1004764473860305,
+      7.0820018594012835
+    ]
+  },
+  "bootstrap": {
+    "replicates": 1500,
+    "seed": 764982,
+    "unit": "800 source modules, including files with zero named proofs",
+    "scope": "Percentile cluster bootstrap; exploratory descriptive uncertainty, without a finite-population correction."
+  },
+  "module_balanced": {
+    "OAI": {
+      "proof_bearing_modules": 784,
+      "rates_percent": {
+        "rewrite_simplify": 72.51419921287537,
+        "arithmetic_algebra": 38.17425008221132,
+        "search_automation": 0.06690065991185207,
+        "cases_induction": 19.834359670439934,
+        "extensionality_congruence": 13.696187811314836,
+        "local_claims_calc": 61.14103882561944,
+        "finite_decision": 6.326803635098913,
+        "restricted_simplification": 38.53468995172559,
+        "explicit_classical": 5.150346715074161,
+        "kernel_decision_flag": 4.5692202004355735,
+        "native_decision": 0.0,
+        "mode_tactic": 92.82459095326455,
+        "mode_term_with_tactic": 0.5170751584653864,
+        "mode_term_only": 6.658333888270077
+      }
+    },
+    "Mathlib": {
+      "proof_bearing_modules": 7348,
+      "rates_percent": {
+        "rewrite_simplify": 52.40590199443774,
+        "arithmetic_algebra": 2.675756420370401,
+        "search_automation": 3.3491989701696596,
+        "cases_induction": 12.785100883739348,
+        "extensionality_congruence": 11.291517123796227,
+        "local_claims_calc": 20.978547155034057,
+        "finite_decision": 0.18489427564628866,
+        "restricted_simplification": 12.992362198009271,
+        "explicit_classical": 1.903670980705569,
+        "kernel_decision_flag": 0.002243932164839014,
+        "native_decision": 0.0,
+        "mode_tactic": 54.49528000017161,
+        "mode_term_with_tactic": 5.710841555371643,
+        "mode_term_only": 39.793878444456745
+      }
+    },
+    "oai_95_percent_module_bootstrap_intervals": {
+      "rewrite_simplify": [
+        70.33797619078327,
+        74.63602250076502
+      ],
+      "arithmetic_algebra": [
+        35.54618832310122,
+        40.77278773808648
+      ],
+      "search_automation": [
+        0.0057824626329405,
+        0.17785329911013695
+      ],
+      "cases_induction": [
+        18.042386967188794,
+        21.77247976067017
+      ],
+      "extensionality_congruence": [
+        12.004887357519967,
+        15.464797595124198
+      ],
+      "local_claims_calc": [
+        58.78155788940921,
+        63.558895051764864
+      ],
+      "finite_decision": [
+        4.854177671797245,
+        7.79433156733461
+      ],
+      "restricted_simplification": [
+        36.368640187562676,
+        40.902649091365106
+      ],
+      "explicit_classical": [
+        4.007380397669253,
+        6.3886734614749106
+      ],
+      "kernel_decision_flag": [
+        3.213605895588326,
+        5.9333367876520775
+      ],
+      "native_decision": [
+        0.0,
+        0.0
+      ],
+      "mode_tactic": [
+        91.77827051064055,
+        93.88754022063549
+      ],
+      "mode_term_with_tactic": [
+        0.20713982946471846,
+        0.8799335627917927
+      ],
+      "mode_term_only": [
+        5.666870935501439,
+        7.654223433594166
+      ]
+    },
+    "estimand": "Choose a proof-bearing module uniformly, then one extracted named body uniformly within it.",
+    "analysis_status": "Exploratory sensitivity analysis added after observing certificate-batch concentration; not the original pooled estimand."
+  },
+  "concentration": {
+    "largest_module_body_share_percent": 14.914719362837177,
+    "top_10_module_body_share_percent": 48.18543842512585,
+    "top_modules": [
+      {
+        "path": "lean/OAI/MathematicalPhysics/Transonic/Certificates/BarrierData53.lean",
+        "bodies": 1985,
+        "finite_decision_percent": 66.49874055415617
+      },
+      {
+        "path": "lean/OAI/Analysis/PlanarPacking/Certificate/LowBlock36_10.lean",
+        "bodies": 872,
+        "finite_decision_percent": 90.82568807339449
+      },
+      {
+        "path": "lean/OAI/MathematicalPhysics/Transonic/Certificates/Barrier59.lean",
+        "bodies": 674,
+        "finite_decision_percent": 95.10385756676558
+      },
+      {
+        "path": "lean/OAI/MathematicalPhysics/Transonic/Certificates/Barrier46.lean",
+        "bodies": 674,
+        "finite_decision_percent": 95.10385756676558
+      },
+      {
+        "path": "lean/OAI/Analysis/PlanarPacking/Certificate/TableMoments84.lean",
+        "bodies": 436,
+        "finite_decision_percent": 90.82568807339449
+      },
+      {
+        "path": "lean/OAI/MathematicalPhysics/Transonic/Certificates/Jet08.lean",
+        "bodies": 434,
+        "finite_decision_percent": 100.0
+      },
+      {
+        "path": "lean/OAI/RepresentationTheory/UniversalSquare/Semigroup/SemigroupNodes95.lean",
+        "bodies": 400,
+        "finite_decision_percent": 100.0
+      },
+      {
+        "path": "lean/OAI/Analysis/MutuallyUnbiased/GramRows/Block172.lean",
+        "bodies": 384,
+        "finite_decision_percent": 66.66666666666666
+      },
+      {
+        "path": "lean/OAI/Analysis/PlanarPacking/Certificate/Bernstein4.lean",
+        "bodies": 312,
+        "finite_decision_percent": 60.256410256410255
+      },
+      {
+        "path": "lean/OAI/GameTheory/SnakyTwentyOne/Cards/Height13Part02.lean",
+        "bodies": 242,
+        "finite_decision_percent": 81.81818181818183
+      }
+    ]
+  },
+  "without_finite_decision_bodies": {
+    "OAI": {
+      "bodies": 6801,
+      "rates_percent": {
+        "rewrite_simplify": 71.85707984119982,
+        "arithmetic_algebra": 29.819144243493604,
+        "search_automation": 0.08822232024702249,
+        "cases_induction": 17.159241288045877,
+        "extensionality_congruence": 11.365975591824732,
+        "local_claims_calc": 40.27348919276577,
+        "finite_decision": 0.0,
+        "restricted_simplification": 28.878106160858696,
+        "explicit_classical": 3.352448169386855,
+        "kernel_decision_flag": 0.0,
+        "native_decision": 0.0
+      }
+    },
+    "Mathlib": {
+      "bodies": 186379,
+      "rates_percent": {
+        "rewrite_simplify": 48.77427177954598,
+        "arithmetic_algebra": 1.9095498956427495,
+        "search_automation": 2.758894510647659,
+        "cases_induction": 10.47650218103971,
+        "extensionality_congruence": 9.20114390569753,
+        "local_claims_calc": 13.77462053128303,
+        "finite_decision": 0.0,
+        "restricted_simplification": 10.368657413120577,
+        "explicit_classical": 1.3440355404847113,
+        "kernel_decision_flag": 0.0,
+        "native_decision": 0.0
+      }
+    }
+  },
+  "common_domain_control": {
+    "domains": [
+      "Algebra",
+      "AlgebraicGeometry",
+      "Analysis",
+      "CategoryTheory",
+      "Combinatorics",
+      "Computability",
+      "Dynamics",
+      "Geometry",
+      "GroupTheory",
+      "InformationTheory",
+      "LinearAlgebra",
+      "MeasureTheory",
+      "NumberTheory",
+      "Probability",
+      "RepresentationTheory",
+      "RingTheory",
+      "SetTheory",
+      "Topology"
+    ],
+    "oai_bodies": 8807,
+    "oai_coverage_percent": 66.17326621083477,
+    "mathlib_bodies": 149474,
+    "oai_domain_body_counts": {
+      "Geometry": 440,
+      "SetTheory": 23,
+      "Analysis": 3633,
+      "RingTheory": 42,
+      "Algebra": 99,
+      "Combinatorics": 1169,
+      "LinearAlgebra": 343,
+      "NumberTheory": 923,
+      "Probability": 741,
+      "Computability": 454,
+      "Dynamics": 55,
+      "MeasureTheory": 80,
+      "GroupTheory": 162,
+      "AlgebraicGeometry": 65,
+      "InformationTheory": 23,
+      "RepresentationTheory": 528,
+      "Topology": 22,
+      "CategoryTheory": 5
+    },
+    "oai_rates_percent": {
+      "rewrite_simplify": 53.446122402634266,
+      "arithmetic_algebra": 24.071761099125695,
+      "search_automation": 0.06812762575224253,
+      "cases_induction": 13.409787668899739,
+      "extensionality_congruence": 8.743045304871126,
+      "local_claims_calc": 34.68831611218349,
+      "finite_decision": 34.57477006926309,
+      "restricted_simplification": 23.980924264789373,
+      "explicit_classical": 2.5888497785852165,
+      "kernel_decision_flag": 28.613602815941864,
+      "native_decision": 0.0
+    },
+    "mathlib_domain_standardized_rates_percent": {
+      "rewrite_simplify": 55.15788015321712,
+      "arithmetic_algebra": 4.609800369055211,
+      "search_automation": 3.3069940549353425,
+      "cases_induction": 12.229155007869995,
+      "extensionality_congruence": 10.908587288684519,
+      "local_claims_calc": 17.311595772944035,
+      "finite_decision": 0.34286462972680254,
+      "restricted_simplification": 12.139541315711833,
+      "explicit_classical": 1.4001091949364066,
+      "kernel_decision_flag": 0.009360753627682485,
+      "native_decision": 0.0
+    }
+  },
+  "common_domain_module_balanced_control": {
+    "domains": [
+      "Algebra",
+      "AlgebraicGeometry",
+      "Analysis",
+      "CategoryTheory",
+      "Combinatorics",
+      "Computability",
+      "Dynamics",
+      "Geometry",
+      "GroupTheory",
+      "InformationTheory",
+      "LinearAlgebra",
+      "MeasureTheory",
+      "NumberTheory",
+      "Probability",
+      "RepresentationTheory",
+      "RingTheory",
+      "SetTheory",
+      "Topology"
+    ],
+    "oai_proof_bearing_modules": 735,
+    "oai_module_coverage_percent": 93.75,
+    "oai_rates_percent": {
+      "rewrite_simplify": 73.05949420639173,
+      "arithmetic_algebra": 37.61863581553887,
+      "search_automation": 0.07136070390597553,
+      "cases_induction": 19.84841210573403,
+      "extensionality_congruence": 13.830575435530456,
+      "local_claims_calc": 61.37489327265961,
+      "finite_decision": 5.511000702459567,
+      "restricted_simplification": 38.701812868279525,
+      "explicit_classical": 5.477696760184748,
+      "kernel_decision_flag": 4.029831044649577,
+      "native_decision": 0.0,
+      "mode_tactic": 92.95394470260531,
+      "mode_term_with_tactic": 0.3048724983056695,
+      "mode_term_only": 6.741182799089028
+    },
+    "mathlib_domain_standardized_rates_percent": {
+      "rewrite_simplify": 61.891380762510444,
+      "arithmetic_algebra": 7.124647178847303,
+      "search_automation": 4.884971593275046,
+      "cases_induction": 15.685656990306642,
+      "extensionality_congruence": 13.092625759924656,
+      "local_claims_calc": 27.260401351457126,
+      "finite_decision": 0.6339392687301103,
+      "restricted_simplification": 15.754655153616156,
+      "explicit_classical": 2.2995148903828158,
+      "kernel_decision_flag": 0.01642599476712201,
+      "native_decision": 0.0,
+      "mode_tactic": 63.77565448640985,
+      "mode_term_with_tactic": 5.670138853097237,
+      "mode_term_only": 30.554206660492916
+    },
+    "domain_module_counts": {
+      "Geometry": 75,
+      "SetTheory": 5,
+      "Analysis": 156,
+      "RingTheory": 4,
+      "Algebra": 16,
+      "Combinatorics": 101,
+      "LinearAlgebra": 9,
+      "NumberTheory": 175,
+      "Probability": 83,
+      "Computability": 32,
+      "Dynamics": 7,
+      "MeasureTheory": 20,
+      "GroupTheory": 25,
+      "AlgebraicGeometry": 7,
+      "InformationTheory": 3,
+      "RepresentationTheory": 10,
+      "Topology": 6,
+      "CategoryTheory": 1
+    }
+  },
+  "length_band_controls": {
+    "1-3": {
+      "OAI": {
+        "bodies": 4321,
+        "rates_percent": {
+          "rewrite_simplify": 22.193936588752603,
+          "arithmetic_algebra": 8.562832677620921,
+          "search_automation": 0.0,
+          "cases_induction": 1.2034251330710484,
+          "extensionality_congruence": 1.2497107151122426,
+          "local_claims_calc": 1.5274242073594075,
+          "finite_decision": 58.36611895394584,
+          "restricted_simplification": 6.9428373061791255,
+          "explicit_classical": 0.3008562832677621,
+          "kernel_decision_flag": 48.83128905345985,
+          "native_decision": 0.0
+        }
+      },
+      "Mathlib": {
+        "bodies": 108301,
+        "rates_percent": {
+          "rewrite_simplify": 36.1224734766992,
+          "arithmetic_algebra": 0.5263109297236406,
+          "search_automation": 1.0249212841986686,
+          "cases_induction": 1.6943518527068078,
+          "extensionality_congruence": 5.072898680529265,
+          "local_claims_calc": 1.820851146342139,
+          "finite_decision": 0.08956519330384762,
+          "restricted_simplification": 4.585368556153683,
+          "explicit_classical": 0.27515904746955244,
+          "kernel_decision_flag": 0.0027700575248612662,
+          "native_decision": 0.0
+        }
+      },
+      "domain_standardized": {
+        "oai_bodies": 4321,
+        "oai_rates_percent": {
+          "rewrite_simplify": 22.193936588752603,
+          "arithmetic_algebra": 8.562832677620921,
+          "search_automation": 0.0,
+          "cases_induction": 1.2034251330710484,
+          "extensionality_congruence": 1.2497107151122426,
+          "local_claims_calc": 1.5274242073594075,
+          "finite_decision": 58.36611895394584,
+          "restricted_simplification": 6.9428373061791255,
+          "explicit_classical": 0.3008562832677621,
+          "kernel_decision_flag": 48.83128905345985,
+          "native_decision": 0.0
+        },
+        "mathlib_rates_percent": {
+          "rewrite_simplify": 38.5176768321468,
+          "arithmetic_algebra": 1.0510745438849531,
+          "search_automation": 1.1944671874761055,
+          "cases_induction": 2.0292118088484714,
+          "extensionality_congruence": 5.6692471194885545,
+          "local_claims_calc": 1.6414582546945837,
+          "finite_decision": 0.11630532161282266,
+          "restricted_simplification": 4.687240902509266,
+          "explicit_classical": 0.20095611586720757,
+          "kernel_decision_flag": 0.00534064408167625,
+          "native_decision": 0.0
+        }
+      }
+    },
+    "4-10": {
+      "OAI": {
+        "bodies": 2516,
+        "rates_percent": {
+          "rewrite_simplify": 78.89507154213037,
+          "arithmetic_algebra": 31.120826709062005,
+          "search_automation": 0.1192368839427663,
+          "cases_induction": 19.236883942766294,
+          "extensionality_congruence": 13.07631160572337,
+          "local_claims_calc": 47.69475357710652,
+          "finite_decision": 8.783783783783784,
+          "restricted_simplification": 35.21462639109698,
+          "explicit_classical": 2.742448330683625,
+          "kernel_decision_flag": 5.206677265500795,
+          "native_decision": 0.0
+        }
+      },
+      "Mathlib": {
+        "bodies": 30568,
+        "rates_percent": {
+          "rewrite_simplify": 86.1783564511908,
+          "arithmetic_algebra": 4.275713164093169,
+          "search_automation": 4.187385501177702,
+          "cases_induction": 26.21041612143418,
+          "extensionality_congruence": 17.796388380005233,
+          "local_claims_calc": 37.93182412980895,
+          "finite_decision": 0.2420832242868359,
+          "restricted_simplification": 20.46584663700602,
+          "explicit_classical": 3.0064119340486783,
+          "kernel_decision_flag": 0.00654278984559016,
+          "native_decision": 0.0
+        }
+      },
+      "domain_standardized": {
+        "oai_bodies": 2516,
+        "oai_rates_percent": {
+          "rewrite_simplify": 78.89507154213037,
+          "arithmetic_algebra": 31.120826709062005,
+          "search_automation": 0.1192368839427663,
+          "cases_induction": 19.236883942766294,
+          "extensionality_congruence": 13.07631160572337,
+          "local_claims_calc": 47.69475357710652,
+          "finite_decision": 8.783783783783784,
+          "restricted_simplification": 35.21462639109698,
+          "explicit_classical": 2.742448330683625,
+          "kernel_decision_flag": 5.206677265500795,
+          "native_decision": 0.0
+        },
+        "mathlib_rates_percent": {
+          "rewrite_simplify": 87.45896487130338,
+          "arithmetic_algebra": 6.791872260941892,
+          "search_automation": 6.103608695086175,
+          "cases_induction": 27.73492550499827,
+          "extensionality_congruence": 17.266907757592122,
+          "local_claims_calc": 39.106308598698384,
+          "finite_decision": 0.47802978764810417,
+          "restricted_simplification": 20.345118338978768,
+          "explicit_classical": 2.8987465554318415,
+          "kernel_decision_flag": 0.016767317805380086,
+          "native_decision": 0.0
+        }
+      }
+    },
+    "11-30": {
+      "OAI": {
+        "bodies": 1581,
+        "rates_percent": {
+          "rewrite_simplify": 88.3617963314358,
+          "arithmetic_algebra": 43.20050600885516,
+          "search_automation": 0.06325110689437065,
+          "cases_induction": 31.499051233396585,
+          "extensionality_congruence": 18.026565464895636,
+          "local_claims_calc": 89.81657179000632,
+          "finite_decision": 14.358001265022137,
+          "restricted_simplification": 44.212523719165084,
+          "explicit_classical": 6.325110689437065,
+          "kernel_decision_flag": 13.472485768500949,
+          "native_decision": 0.0
+        }
+      },
+      "Mathlib": {
+        "bodies": 9197,
+        "rates_percent": {
+          "rewrite_simplify": 97.30346852234425,
+          "arithmetic_algebra": 12.808524518864846,
+          "search_automation": 9.22039795585517,
+          "cases_induction": 51.54941828857236,
+          "extensionality_congruence": 31.118843101011198,
+          "local_claims_calc": 83.77731869087746,
+          "finite_decision": 0.7719908665869305,
+          "restricted_simplification": 44.188322279004026,
+          "explicit_classical": 7.143633793628357,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      },
+      "domain_standardized": {
+        "oai_bodies": 1581,
+        "oai_rates_percent": {
+          "rewrite_simplify": 88.3617963314358,
+          "arithmetic_algebra": 43.20050600885516,
+          "search_automation": 0.06325110689437065,
+          "cases_induction": 31.499051233396585,
+          "extensionality_congruence": 18.026565464895636,
+          "local_claims_calc": 89.81657179000632,
+          "finite_decision": 14.358001265022137,
+          "restricted_simplification": 44.212523719165084,
+          "explicit_classical": 6.325110689437065,
+          "kernel_decision_flag": 13.472485768500949,
+          "native_decision": 0.0
+        },
+        "mathlib_rates_percent": {
+          "rewrite_simplify": 97.74842380035297,
+          "arithmetic_algebra": 20.98545152251332,
+          "search_automation": 11.624037053376355,
+          "cases_induction": 51.68574143080914,
+          "extensionality_congruence": 32.06795880753535,
+          "local_claims_calc": 85.18137970723726,
+          "finite_decision": 1.4627787786426247,
+          "restricted_simplification": 46.63280497234715,
+          "explicit_classical": 7.04108578771439,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      }
+    },
+    "31+": {
+      "OAI": {
+        "bodies": 389,
+        "rates_percent": {
+          "rewrite_simplify": 94.08740359897172,
+          "arithmetic_algebra": 73.00771208226222,
+          "search_automation": 0.5141388174807198,
+          "cases_induction": 37.789203084832906,
+          "extensionality_congruence": 26.22107969151671,
+          "local_claims_calc": 94.8586118251928,
+          "finite_decision": 19.28020565552699,
+          "restricted_simplification": 58.354755784061695,
+          "explicit_classical": 11.825192802056556,
+          "kernel_decision_flag": 16.966580976863753,
+          "native_decision": 0.0
+        }
+      },
+      "Mathlib": {
+        "bodies": 1408,
+        "rates_percent": {
+          "rewrite_simplify": 99.7159090909091,
+          "arithmetic_algebra": 29.97159090909091,
+          "search_automation": 16.90340909090909,
+          "cases_induction": 73.86363636363636,
+          "extensionality_congruence": 52.69886363636363,
+          "local_claims_calc": 98.22443181818181,
+          "finite_decision": 1.4914772727272727,
+          "restricted_simplification": 74.78693181818181,
+          "explicit_classical": 14.488636363636363,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      },
+      "domain_standardized": {
+        "oai_bodies": 389,
+        "oai_rates_percent": {
+          "rewrite_simplify": 94.08740359897172,
+          "arithmetic_algebra": 73.00771208226222,
+          "search_automation": 0.5141388174807198,
+          "cases_induction": 37.789203084832906,
+          "extensionality_congruence": 26.22107969151671,
+          "local_claims_calc": 94.8586118251928,
+          "finite_decision": 19.28020565552699,
+          "restricted_simplification": 58.354755784061695,
+          "explicit_classical": 11.825192802056556,
+          "kernel_decision_flag": 16.966580976863753,
+          "native_decision": 0.0
+        },
+        "mathlib_rates_percent": {
+          "rewrite_simplify": 99.85523684366106,
+          "arithmetic_algebra": 41.695377131524296,
+          "search_automation": 18.034531392565455,
+          "cases_induction": 72.16576280476816,
+          "extensionality_congruence": 53.83137039146461,
+          "local_claims_calc": 99.5542301474254,
+          "finite_decision": 2.535441624645312,
+          "restricted_simplification": 74.67097058381655,
+          "explicit_classical": 11.573318259273016,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      }
+    }
+  },
+  "domain_details": {
+    "Algebra": {
+      "OAI": {
+        "modules": 17,
+        "bodies": 99,
+        "rates_percent": {
+          "rewrite_simplify": 74.74747474747475,
+          "arithmetic_algebra": 18.181818181818183,
+          "search_automation": 0.0,
+          "cases_induction": 16.161616161616163,
+          "extensionality_congruence": 13.131313131313131,
+          "local_claims_calc": 44.44444444444444,
+          "finite_decision": 1.0101010101010102,
+          "restricted_simplification": 35.35353535353536,
+          "explicit_classical": 7.070707070707071,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      },
+      "Mathlib": {
+        "modules": 1361,
+        "bodies": 29246,
+        "rates_percent": {
+          "rewrite_simplify": 44.809546604663886,
+          "arithmetic_algebra": 0.6291458661013472,
+          "search_automation": 2.010531354715175,
+          "cases_induction": 7.949805101552349,
+          "extensionality_congruence": 7.532654038159064,
+          "local_claims_calc": 9.047391096218286,
+          "finite_decision": 0.07180469123982768,
+          "restricted_simplification": 8.51740408944813,
+          "explicit_classical": 1.3266771524311016,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      }
+    },
+    "AlgebraicGeometry": {
+      "OAI": {
+        "modules": 8,
+        "bodies": 65,
+        "rates_percent": {
+          "rewrite_simplify": 61.53846153846154,
+          "arithmetic_algebra": 3.076923076923077,
+          "search_automation": 0.0,
+          "cases_induction": 13.846153846153847,
+          "extensionality_congruence": 0.0,
+          "local_claims_calc": 40.0,
+          "finite_decision": 0.0,
+          "restricted_simplification": 32.30769230769231,
+          "explicit_classical": 7.6923076923076925,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      },
+      "Mathlib": {
+        "modules": 140,
+        "bodies": 3191,
+        "rates_percent": {
+          "rewrite_simplify": 61.29739893450329,
+          "arithmetic_algebra": 3.8232528987778127,
+          "search_automation": 1.3788780946411783,
+          "cases_induction": 7.897210905672203,
+          "extensionality_congruence": 13.914133500470072,
+          "local_claims_calc": 16.640551551237856,
+          "finite_decision": 0.2820432466311501,
+          "restricted_simplification": 14.885615794421811,
+          "explicit_classical": 0.5640864932623002,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      }
+    },
+    "Analysis": {
+      "OAI": {
+        "modules": 160,
+        "bodies": 3633,
+        "rates_percent": {
+          "rewrite_simplify": 39.85686760253234,
+          "arithmetic_algebra": 17.671345995045417,
+          "search_automation": 0.055050922102945224,
+          "cases_induction": 6.881365262868153,
+          "extensionality_congruence": 5.202312138728324,
+          "local_claims_calc": 21.524910542251583,
+          "finite_decision": 62.59289843104872,
+          "restricted_simplification": 11.505642719515551,
+          "explicit_classical": 0.7707129094412332,
+          "kernel_decision_flag": 61.904761904761905,
+          "native_decision": 0.0
+        }
+      },
+      "Mathlib": {
+        "modules": 810,
+        "bodies": 23297,
+        "rates_percent": {
+          "rewrite_simplify": 51.74056745503713,
+          "arithmetic_algebra": 5.78186032536378,
+          "search_automation": 2.8458599819719277,
+          "cases_induction": 10.795381379576769,
+          "extensionality_congruence": 9.572047903163497,
+          "local_claims_calc": 16.12224749967807,
+          "finite_decision": 0.05150877795424304,
+          "restricted_simplification": 12.847147701420784,
+          "explicit_classical": 0.9614971884792033,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      }
+    },
+    "CategoryTheory": {
+      "OAI": {
+        "modules": 1,
+        "bodies": 5,
+        "rates_percent": {
+          "rewrite_simplify": 40.0,
+          "arithmetic_algebra": 0.0,
+          "search_automation": 0.0,
+          "cases_induction": 0.0,
+          "extensionality_congruence": 0.0,
+          "local_claims_calc": 40.0,
+          "finite_decision": 0.0,
+          "restricted_simplification": 0.0,
+          "explicit_classical": 0.0,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      },
+      "Mathlib": {
+        "modules": 1117,
+        "bodies": 12885,
+        "rates_percent": {
+          "rewrite_simplify": 44.384943733022894,
+          "arithmetic_algebra": 0.007760962359332557,
+          "search_automation": 1.1098176173845558,
+          "cases_induction": 5.634458672875437,
+          "extensionality_congruence": 8.808692277842452,
+          "local_claims_calc": 12.937524253007373,
+          "finite_decision": 0.015521924718665115,
+          "restricted_simplification": 8.76988746604579,
+          "explicit_classical": 0.42685292976329064,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      }
+    },
+    "Combinatorics": {
+      "OAI": {
+        "modules": 103,
+        "bodies": 1169,
+        "rates_percent": {
+          "rewrite_simplify": 73.82378100940976,
+          "arithmetic_algebra": 24.550898203592816,
+          "search_automation": 0.0,
+          "cases_induction": 19.503849443969205,
+          "extensionality_congruence": 12.660393498716852,
+          "local_claims_calc": 39.69204448246364,
+          "finite_decision": 3.165098374679213,
+          "restricted_simplification": 43.969204448246366,
+          "explicit_classical": 5.731394354148845,
+          "kernel_decision_flag": 2.737382378100941,
+          "native_decision": 0.0
+        }
+      },
+      "Mathlib": {
+        "modules": 202,
+        "bodies": 5918,
+        "rates_percent": {
+          "rewrite_simplify": 57.570125042244,
+          "arithmetic_algebra": 2.027712064886786,
+          "search_automation": 6.454883406556269,
+          "cases_induction": 13.872930043933762,
+          "extensionality_congruence": 7.553227441703278,
+          "local_claims_calc": 18.452179790469753,
+          "finite_decision": 0.16897600540723218,
+          "restricted_simplification": 8.060155457924974,
+          "explicit_classical": 2.46704967894559,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      }
+    },
+    "Computability": {
+      "OAI": {
+        "modules": 33,
+        "bodies": 454,
+        "rates_percent": {
+          "rewrite_simplify": 66.74008810572687,
+          "arithmetic_algebra": 25.110132158590307,
+          "search_automation": 0.0,
+          "cases_induction": 32.158590308370044,
+          "extensionality_congruence": 12.775330396475772,
+          "local_claims_calc": 41.18942731277533,
+          "finite_decision": 4.185022026431718,
+          "restricted_simplification": 26.431718061674008,
+          "explicit_classical": 6.167400881057269,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      },
+      "Mathlib": {
+        "modules": 29,
+        "bodies": 1119,
+        "rates_percent": {
+          "rewrite_simplify": 47.184986595174266,
+          "arithmetic_algebra": 3.485254691689008,
+          "search_automation": 3.9320822162645217,
+          "cases_induction": 25.022341376228777,
+          "extensionality_congruence": 8.400357462019661,
+          "local_claims_calc": 15.907059874888294,
+          "finite_decision": 0.8042895442359249,
+          "restricted_simplification": 15.281501340482574,
+          "explicit_classical": 0.5361930294906166,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      }
+    },
+    "Dynamics": {
+      "OAI": {
+        "modules": 7,
+        "bodies": 55,
+        "rates_percent": {
+          "rewrite_simplify": 58.18181818181818,
+          "arithmetic_algebra": 40.0,
+          "search_automation": 0.0,
+          "cases_induction": 21.818181818181817,
+          "extensionality_congruence": 9.090909090909092,
+          "local_claims_calc": 41.81818181818182,
+          "finite_decision": 0.0,
+          "restricted_simplification": 23.636363636363637,
+          "explicit_classical": 14.545454545454545,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      },
+      "Mathlib": {
+        "modules": 34,
+        "bodies": 704,
+        "rates_percent": {
+          "rewrite_simplify": 46.44886363636363,
+          "arithmetic_algebra": 0.2840909090909091,
+          "search_automation": 0.2840909090909091,
+          "cases_induction": 8.522727272727273,
+          "extensionality_congruence": 6.534090909090909,
+          "local_claims_calc": 14.630681818181818,
+          "finite_decision": 0.0,
+          "restricted_simplification": 14.204545454545455,
+          "explicit_classical": 1.7045454545454546,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      }
+    },
+    "Geometry": {
+      "OAI": {
+        "modules": 76,
+        "bodies": 440,
+        "rates_percent": {
+          "rewrite_simplify": 75.22727272727273,
+          "arithmetic_algebra": 39.09090909090909,
+          "search_automation": 0.0,
+          "cases_induction": 22.045454545454547,
+          "extensionality_congruence": 11.590909090909092,
+          "local_claims_calc": 68.18181818181819,
+          "finite_decision": 11.136363636363637,
+          "restricted_simplification": 35.45454545454545,
+          "explicit_classical": 0.9090909090909091,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      },
+      "Mathlib": {
+        "modules": 158,
+        "bodies": 4732,
+        "rates_percent": {
+          "rewrite_simplify": 51.8174133558749,
+          "arithmetic_algebra": 3.275570583262891,
+          "search_automation": 2.0287404902789516,
+          "cases_induction": 9.9323753169907,
+          "extensionality_congruence": 9.404057480980558,
+          "local_claims_calc": 14.85629754860524,
+          "finite_decision": 0.7819103972950127,
+          "restricted_simplification": 9.657650042265427,
+          "explicit_classical": 0.6762468300929839,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      }
+    },
+    "GroupTheory": {
+      "OAI": {
+        "modules": 26,
+        "bodies": 162,
+        "rates_percent": {
+          "rewrite_simplify": 72.8395061728395,
+          "arithmetic_algebra": 20.987654320987655,
+          "search_automation": 0.6172839506172839,
+          "cases_induction": 18.51851851851852,
+          "extensionality_congruence": 17.28395061728395,
+          "local_claims_calc": 58.641975308641975,
+          "finite_decision": 0.0,
+          "restricted_simplification": 38.888888888888886,
+          "explicit_classical": 3.7037037037037037,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      },
+      "Mathlib": {
+        "modules": 170,
+        "bodies": 4186,
+        "rates_percent": {
+          "rewrite_simplify": 55.637840420449116,
+          "arithmetic_algebra": 0.716674629718108,
+          "search_automation": 2.7472527472527473,
+          "cases_induction": 16.220735785953178,
+          "extensionality_congruence": 8.098423315814621,
+          "local_claims_calc": 18.84854276158624,
+          "finite_decision": 0.33444816053511706,
+          "restricted_simplification": 9.9617773530817,
+          "explicit_classical": 2.3172479694218824,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      }
+    },
+    "InformationTheory": {
+      "OAI": {
+        "modules": 3,
+        "bodies": 23,
+        "rates_percent": {
+          "rewrite_simplify": 65.21739130434783,
+          "arithmetic_algebra": 4.3478260869565215,
+          "search_automation": 4.3478260869565215,
+          "cases_induction": 17.391304347826086,
+          "extensionality_congruence": 34.78260869565217,
+          "local_claims_calc": 43.47826086956522,
+          "finite_decision": 0.0,
+          "restricted_simplification": 26.08695652173913,
+          "explicit_classical": 0.0,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      },
+      "Mathlib": {
+        "modules": 9,
+        "bodies": 139,
+        "rates_percent": {
+          "rewrite_simplify": 62.589928057553955,
+          "arithmetic_algebra": 5.0359712230215825,
+          "search_automation": 2.8776978417266186,
+          "cases_induction": 15.827338129496402,
+          "extensionality_congruence": 8.633093525179856,
+          "local_claims_calc": 23.02158273381295,
+          "finite_decision": 0.0,
+          "restricted_simplification": 12.949640287769784,
+          "explicit_classical": 2.158273381294964,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      }
+    },
+    "LinearAlgebra": {
+      "OAI": {
+        "modules": 10,
+        "bodies": 343,
+        "rates_percent": {
+          "rewrite_simplify": 22.157434402332363,
+          "arithmetic_algebra": 3.206997084548105,
+          "search_automation": 0.2915451895043732,
+          "cases_induction": 7.288629737609329,
+          "extensionality_congruence": 2.9154518950437316,
+          "local_claims_calc": 10.204081632653061,
+          "finite_decision": 45.18950437317784,
+          "restricted_simplification": 12.536443148688047,
+          "explicit_classical": 1.1661807580174928,
+          "kernel_decision_flag": 42.857142857142854,
+          "native_decision": 0.0
+        }
+      },
+      "Mathlib": {
+        "modules": 381,
+        "bodies": 9750,
+        "rates_percent": {
+          "rewrite_simplify": 56.03076923076923,
+          "arithmetic_algebra": 1.1692307692307693,
+          "search_automation": 2.6666666666666665,
+          "cases_induction": 10.707692307692307,
+          "extensionality_congruence": 15.446153846153846,
+          "local_claims_calc": 14.902564102564103,
+          "finite_decision": 0.31794871794871793,
+          "restricted_simplification": 10.502564102564103,
+          "explicit_classical": 2.194871794871795,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      }
+    },
+    "MeasureTheory": {
+      "OAI": {
+        "modules": 20,
+        "bodies": 80,
+        "rates_percent": {
+          "rewrite_simplify": 78.75,
+          "arithmetic_algebra": 40.0,
+          "search_automation": 0.0,
+          "cases_induction": 13.75,
+          "extensionality_congruence": 18.75,
+          "local_claims_calc": 55.0,
+          "finite_decision": 0.0,
+          "restricted_simplification": 41.25,
+          "explicit_classical": 7.5,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      },
+      "Mathlib": {
+        "modules": 337,
+        "bodies": 9795,
+        "rates_percent": {
+          "rewrite_simplify": 57.4170495150587,
+          "arithmetic_algebra": 2.7054619703930576,
+          "search_automation": 1.7151607963246553,
+          "cases_induction": 14.09903011740684,
+          "extensionality_congruence": 10.3420112302195,
+          "local_claims_calc": 20.316488004083716,
+          "finite_decision": 0.030627871362940276,
+          "restricted_simplification": 15.94691168963757,
+          "explicit_classical": 1.582440020418581,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      }
+    },
+    "NumberTheory": {
+      "OAI": {
+        "modules": 176,
+        "bodies": 923,
+        "rates_percent": {
+          "rewrite_simplify": 72.80606717226435,
+          "arithmetic_algebra": 48.21235102925244,
+          "search_automation": 0.0,
+          "cases_induction": 17.768147345612135,
+          "extensionality_congruence": 11.80931744312026,
+          "local_claims_calc": 56.01300108342362,
+          "finite_decision": 4.658721560130011,
+          "restricted_simplification": 36.94474539544962,
+          "explicit_classical": 2.7085590465872156,
+          "kernel_decision_flag": 2.816901408450704,
+          "native_decision": 0.0
+        }
+      },
+      "Mathlib": {
+        "modules": 249,
+        "bodies": 5598,
+        "rates_percent": {
+          "rewrite_simplify": 68.47088245802072,
+          "arithmetic_algebra": 10.575205430510897,
+          "search_automation": 5.519828510182208,
+          "cases_induction": 15.916398713826366,
+          "extensionality_congruence": 13.576277241872097,
+          "local_claims_calc": 28.331546981064665,
+          "finite_decision": 1.8756698821007503,
+          "restricted_simplification": 16.077170418006432,
+          "explicit_classical": 1.7684887459807075,
+          "kernel_decision_flag": 0.08931761343336907,
+          "native_decision": 0.0
+        }
+      }
+    },
+    "Probability": {
+      "OAI": {
+        "modules": 83,
+        "bodies": 741,
+        "rates_percent": {
+          "rewrite_simplify": 72.73954116059379,
+          "arithmetic_algebra": 39.94601889338731,
+          "search_automation": 0.1349527665317139,
+          "cases_induction": 21.05263157894737,
+          "extensionality_congruence": 14.979757085020243,
+          "local_claims_calc": 56.41025641025641,
+          "finite_decision": 5.668016194331984,
+          "restricted_simplification": 38.73144399460189,
+          "explicit_classical": 3.508771929824561,
+          "kernel_decision_flag": 5.53306342780027,
+          "native_decision": 0.0
+        }
+      },
+      "Mathlib": {
+        "modules": 140,
+        "bodies": 3476,
+        "rates_percent": {
+          "rewrite_simplify": 64.4994246260069,
+          "arithmetic_algebra": 3.768699654775604,
+          "search_automation": 1.812428078250863,
+          "cases_induction": 10.874568469505178,
+          "extensionality_congruence": 17.002301495972382,
+          "local_claims_calc": 20.540851553509782,
+          "finite_decision": 0.0,
+          "restricted_simplification": 13.60759493670886,
+          "explicit_classical": 2.186421173762946,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      }
+    },
+    "RepresentationTheory": {
+      "OAI": {
+        "modules": 11,
+        "bodies": 528,
+        "rates_percent": {
+          "rewrite_simplify": 14.393939393939394,
+          "arithmetic_algebra": 4.545454545454546,
+          "search_automation": 0.0,
+          "cases_induction": 3.5984848484848486,
+          "extensionality_congruence": 3.977272727272727,
+          "local_claims_calc": 11.553030303030303,
+          "finite_decision": 80.49242424242425,
+          "restricted_simplification": 7.765151515151516,
+          "explicit_classical": 2.6515151515151514,
+          "kernel_decision_flag": 4.734848484848484,
+          "native_decision": 0.0
+        }
+      },
+      "Mathlib": {
+        "modules": 44,
+        "bodies": 971,
+        "rates_percent": {
+          "rewrite_simplify": 48.094747682801234,
+          "arithmetic_algebra": 0.7209062821833162,
+          "search_automation": 0.2059732234809475,
+          "cases_induction": 6.07621009268795,
+          "extensionality_congruence": 16.889804325437694,
+          "local_claims_calc": 4.94335736354274,
+          "finite_decision": 0.0,
+          "restricted_simplification": 8.444902162718847,
+          "explicit_classical": 0.82389289392379,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      }
+    },
+    "RingTheory": {
+      "OAI": {
+        "modules": 4,
+        "bodies": 42,
+        "rates_percent": {
+          "rewrite_simplify": 76.19047619047619,
+          "arithmetic_algebra": 45.23809523809524,
+          "search_automation": 0.0,
+          "cases_induction": 11.904761904761905,
+          "extensionality_congruence": 2.380952380952381,
+          "local_claims_calc": 64.28571428571429,
+          "finite_decision": 0.0,
+          "restricted_simplification": 30.952380952380953,
+          "explicit_classical": 0.0,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      },
+      "Mathlib": {
+        "modules": 728,
+        "bodies": 14259,
+        "rates_percent": {
+          "rewrite_simplify": 56.54674240830353,
+          "arithmetic_algebra": 1.7813310891366856,
+          "search_automation": 1.7743179746125255,
+          "cases_induction": 13.27582579423522,
+          "extensionality_congruence": 12.88309138088225,
+          "local_claims_calc": 21.221684550108705,
+          "finite_decision": 0.05610491619328144,
+          "restricted_simplification": 12.216845501087032,
+          "explicit_classical": 2.854337611333193,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      }
+    },
+    "SetTheory": {
+      "OAI": {
+        "modules": 5,
+        "bodies": 23,
+        "rates_percent": {
+          "rewrite_simplify": 39.130434782608695,
+          "arithmetic_algebra": 0.0,
+          "search_automation": 0.0,
+          "cases_induction": 13.043478260869565,
+          "extensionality_congruence": 0.0,
+          "local_claims_calc": 43.47826086956522,
+          "finite_decision": 0.0,
+          "restricted_simplification": 17.391304347826086,
+          "explicit_classical": 0.0,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      },
+      "Mathlib": {
+        "modules": 56,
+        "bodies": 2791,
+        "rates_percent": {
+          "rewrite_simplify": 52.70512361160874,
+          "arithmetic_algebra": 0.03582945180938732,
+          "search_automation": 1.2898602651379434,
+          "cases_induction": 10.211393765675385,
+          "extensionality_congruence": 3.9412396990326046,
+          "local_claims_calc": 11.680401289860265,
+          "finite_decision": 0.03582945180938732,
+          "restricted_simplification": 4.048728054460767,
+          "explicit_classical": 1.0032246506628448,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      }
+    },
+    "Topology": {
+      "OAI": {
+        "modules": 6,
+        "bodies": 22,
+        "rates_percent": {
+          "rewrite_simplify": 63.63636363636363,
+          "arithmetic_algebra": 4.545454545454546,
+          "search_automation": 0.0,
+          "cases_induction": 27.272727272727273,
+          "extensionality_congruence": 13.636363636363637,
+          "local_claims_calc": 45.45454545454545,
+          "finite_decision": 0.0,
+          "restricted_simplification": 18.181818181818183,
+          "explicit_classical": 0.0,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      },
+      "Mathlib": {
+        "modules": 695,
+        "bodies": 17417,
+        "rates_percent": {
+          "rewrite_simplify": 38.41074811965321,
+          "arithmetic_algebra": 0.6086007923293334,
+          "search_automation": 1.7454211402652582,
+          "cases_induction": 8.882126657863008,
+          "extensionality_congruence": 6.671642647987598,
+          "local_claims_calc": 11.569156571166102,
+          "finite_decision": 0.005741516908767296,
+          "restricted_simplification": 9.840959981627146,
+          "explicit_classical": 0.6315668599644026,
+          "kernel_decision_flag": 0.0,
+          "native_decision": 0.0
+        }
+      }
+    }
+  },
+  "artifact_sha256": {
+    "files.csv": "409a3217ed12b9f1053ae13f7578ae4c137451dc3d71e563e468353f8dfd24ca",
+    "proofs.csv_uncompressed": "b82ee9d6c84924ea29a1cd8ad4ffe805729dba81e59d825820aa4de6e6504d82",
+    "population.csv_uncompressed": "a16d494878cf972cc6984751737f943f8350c081daa8a1b563cda9991cd9de13"
+  }
+}

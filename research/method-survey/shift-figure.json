@@ -1,0 +1,109 @@
+{
+  "date": "2026-10-09",
+  "kind": "Descriptive cross-sectional difference plot",
+  "source_summary_sha256": "a1423b07bb628793b31aedebe14b9cdb830edba3346b68d7a8a9dc9b27247113",
+  "embedded_png_sha256": "7728a6536322276b977b8db916b56f7fce67f36334cfdb7fbce62c8e2647fee8",
+  "embedded_pdf_sha256": "04d93d24a0590024e4269bd1ac65882f227cd10a50228d6c833c454ea26d429c",
+  "unit": "OpenAI minus Mathlib, in percentage points of mean within-module feature prevalence.",
+  "full_comparison_proof_bearing_modules": {
+    "OAI": 784,
+    "Mathlib": 7348
+  },
+  "common_domain_oai_proof_bearing_modules": 735,
+  "shared_domains": 18,
+  "labels": "Hollow markers: full comparison. Green markers: shared-domain standardized comparison. Both markers share each row height; no connectors or point-value annotations.",
+  "uncertainty": "Point estimates. Full-comparison OpenAI intervals appear in Table 2.",
+  "features_overlap": true,
+  "data": [
+    {
+      "feature": "mode_tactic",
+      "label": "Outer tactic block",
+      "oai_full_percent": 92.82459095326455,
+      "mathlib_full_percent": 54.49528000017161,
+      "full_difference_pp": 38.329310953092936,
+      "oai_common_domains_percent": 92.95394470260531,
+      "mathlib_domain_standardized_percent": 63.77565448640985,
+      "common_domain_difference_pp": 29.178290216195464
+    },
+    {
+      "feature": "mode_term_only",
+      "label": "Term-only proof",
+      "oai_full_percent": 6.658333888270077,
+      "mathlib_full_percent": 39.793878444456745,
+      "full_difference_pp": -33.135544556186666,
+      "oai_common_domains_percent": 6.741182799089028,
+      "mathlib_domain_standardized_percent": 30.554206660492916,
+      "common_domain_difference_pp": -23.813023861403888
+    },
+    {
+      "feature": "local_claims_calc",
+      "label": "Local claims / calculation chains",
+      "oai_full_percent": 61.14103882561944,
+      "mathlib_full_percent": 20.978547155034057,
+      "full_difference_pp": 40.16249167058538,
+      "oai_common_domains_percent": 61.37489327265961,
+      "mathlib_domain_standardized_percent": 27.260401351457126,
+      "common_domain_difference_pp": 34.114491921202486
+    },
+    {
+      "feature": "arithmetic_algebra",
+      "label": "Arithmetic / algebra tactics",
+      "oai_full_percent": 38.17425008221132,
+      "mathlib_full_percent": 2.675756420370401,
+      "full_difference_pp": 35.498493661840925,
+      "oai_common_domains_percent": 37.61863581553887,
+      "mathlib_domain_standardized_percent": 7.124647178847303,
+      "common_domain_difference_pp": 30.49398863669157
+    },
+    {
+      "feature": "restricted_simplification",
+      "label": "Restricted simplification",
+      "oai_full_percent": 38.53468995172559,
+      "mathlib_full_percent": 12.992362198009271,
+      "full_difference_pp": 25.542327753716318,
+      "oai_common_domains_percent": 38.701812868279525,
+      "mathlib_domain_standardized_percent": 15.754655153616156,
+      "common_domain_difference_pp": 22.94715771466337
+    },
+    {
+      "feature": "rewrite_simplify",
+      "label": "Rewrite / simplify",
+      "oai_full_percent": 72.51419921287537,
+      "mathlib_full_percent": 52.40590199443774,
+      "full_difference_pp": 20.108297218437627,
+      "oai_common_domains_percent": 73.05949420639173,
+      "mathlib_domain_standardized_percent": 61.891380762510444,
+      "common_domain_difference_pp": 11.168113443881289
+    },
+    {
+      "feature": "cases_induction",
+      "label": "Cases / induction",
+      "oai_full_percent": 19.834359670439934,
+      "mathlib_full_percent": 12.785100883739348,
+      "full_difference_pp": 7.049258786700586,
+      "oai_common_domains_percent": 19.84841210573403,
+      "mathlib_domain_standardized_percent": 15.685656990306642,
+      "common_domain_difference_pp": 4.162755115427389
+    },
+    {
+      "feature": "finite_decision",
+      "label": "Finite decision",
+      "oai_full_percent": 6.326803635098913,
+      "mathlib_full_percent": 0.18489427564628866,
+      "full_difference_pp": 6.141909359452624,
+      "oai_common_domains_percent": 5.511000702459567,
+      "mathlib_domain_standardized_percent": 0.6339392687301103,
+      "common_domain_difference_pp": 4.877061433729457
+    },
+    {
+      "feature": "extensionality_congruence",
+      "label": "Extensionality / congruence",
+      "oai_full_percent": 13.696187811314836,
+      "mathlib_full_percent": 11.291517123796227,
+      "full_difference_pp": 2.4046706875186086,
+      "oai_common_domains_percent": 13.830575435530456,
+      "mathlib_domain_standardized_percent": 13.092625759924656,
+      "common_domain_difference_pp": 0.7379496756057993
+    }
+  ]
+}

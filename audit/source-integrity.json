@@ -1,6 +1,6 @@
 {
   "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
-  "source_files_verified": 168,
+  "source_files_verified": 546,
   "scope": "Byte identity of curated sources; independent of proof compilation.",
   "files": [
     {
@@ -489,14 +489,64 @@
       "sha256": "bea971e387a6c77c5ff5c3d533a6a3663aa9deb58f0247c203bd763cf5735aa7"
     },
     {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/AnalyticCharts.lean",
+      "git_blob_sha1": "5bd7c14b0ddeddfc22d440e3a4b3c21b17042da5",
+      "sha256": "58e2a7afd7612773e7c0f2a04af97c658fdb356cf3554de3e94a7d1588922d68"
+    },
+    {
       "path": "lean/OAI/Analysis/DirectCrouzeix/BoundaryEnergy.lean",
       "git_blob_sha1": "35ad5040edd4ed9d4cf11fa8012d24e02cf814e5",
       "sha256": "1bc293fb8f61ec3b924e0179a348b94f9dac5cb27e4b4be2a8070247873eef30"
     },
     {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/BoundaryKernel.lean",
+      "git_blob_sha1": "bd751b87eae6c89113b9816475275a4b4780063a",
+      "sha256": "79745513ff0095bba31cee63592b9ca768699b858699f2f4a5de2dc8c2cf9929"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/BoundaryParametrization.lean",
+      "git_blob_sha1": "adffe7dabcaec921a5936189b8aff9eea53b16ee",
+      "sha256": "ae989f0f69973b5317c2f8d2ca485284a6c00b3708cbeff2765329283b618e3b"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/CircleFourier.lean",
+      "git_blob_sha1": "75b14c55d9f904813d87b28f699deecbc1ef1b15",
+      "sha256": "66476bed4c94326508f1d43d0a524e7250b3d90c1c820e643dfd2173dfa4ac67"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/CompactIntegrals.lean",
+      "git_blob_sha1": "13097dc06f042d188302419b7a6746e103a9532a",
+      "sha256": "226760ab0f9ef8a8b0eedcb3e86b9d3e606a4175d0b3f87edacdf8787d515090"
+    },
+    {
       "path": "lean/OAI/Analysis/DirectCrouzeix/CompleteBound.lean",
       "git_blob_sha1": "a504007c267984cb20e977b0e8c31c4198bad757",
       "sha256": "c8f0706d92662aaca2d1a26fe7647b3719035f72177d68fbf5b490028f12e891"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/ConformalCollar.lean",
+      "git_blob_sha1": "442942ce4e644e841f23a9fa68c3cfdc41c45964",
+      "sha256": "948b7204ae61dad649302f1bae992d3c1cf8331d3cc7d13a543fdcb0c4c8d9af"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/Continuation.lean",
+      "git_blob_sha1": "019cae91ba3b8db44d84f442c034c77a33600ee0",
+      "sha256": "8df83dbfdc4843ab3dd383b917f70385702902acfb1aa1412bf854d86e66db1a"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/Convexity.lean",
+      "git_blob_sha1": "1edd31ab2ee198806c5c33f368a4a51d6e07ab8a",
+      "sha256": "e280e090b4570059746193f1148d93ea806c720b76faa0a1862d7d72a88600a0"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/DiskMapping.lean",
+      "git_blob_sha1": "fc78897fd3659856b9e4a35ac1a7ac9a7da847cc",
+      "sha256": "0c1e418d9e28c5782a1b1b036e6996e4bed96098ac91fa33d2441e63f55c06a5"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/DividedDifferences.lean",
+      "git_blob_sha1": "3dd69710d797cc743c528204aa05bc4398f21a02",
+      "sha256": "c1faf2bfa177e5b0cd5bb384a3273b271b1e53de5782a7dd757f46c0b957f94f"
     },
     {
       "path": "lean/OAI/Analysis/DirectCrouzeix/DomainBound.lean",
@@ -514,14 +564,64 @@
       "sha256": "3b717a4dbb596ed52e342f3b3d7da991f5a70cf1a73e77a68678cd93fc2dc090"
     },
     {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/ExponentialLevels.lean",
+      "git_blob_sha1": "3c6e2082ffc443768683b2a39bff1b194fb385e4",
+      "sha256": "b0cbc3f7a690b7e48252b7a78431584e5ae16ad02db2e6a760d7108fa730d4ce"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/ExponentialSupport.lean",
+      "git_blob_sha1": "ceece18c23a7f6d6c073a9be4d31a875aeb476b3",
+      "sha256": "f383e5b2ff2806eafaa315aa2d0f7e2cf122dd450460aaabec719837d0c05d0c"
+    },
+    {
       "path": "lean/OAI/Analysis/DirectCrouzeix/ExteriorCollar.lean",
       "git_blob_sha1": "84fc72e9a7afd7bc980589285aa45630c270bea0",
       "sha256": "05ebbcf8152552db266eceb0af5e9a22b354d635e001e266d5ba763fe5286657"
     },
     {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/ExteriorMapping.lean",
+      "git_blob_sha1": "28af98f3e4c6861027a98c240ce6b6a34e8578e8",
+      "sha256": "2ea44bcaab8feca0b6466ab0e8e84c9489d34a10c38bceea0a08abe618d4b044"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/ExtremalEmbedding.lean",
+      "git_blob_sha1": "a93a0f8e2d08d2b882da98c5604374dc5c55fdaf",
+      "sha256": "ae3e043f44d41a5651bfd258e302f8f4c2dc0a88260664fd5f9d342b8ba654c3"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/FaberCalculus.lean",
+      "git_blob_sha1": "bcb8270e97e65f434ddc8db00f05d23149fec37f",
+      "sha256": "f20170fdd57852a897afd84181628d881ee95227b9b9ae0d1457443c96ee5758"
+    },
+    {
       "path": "lean/OAI/Analysis/DirectCrouzeix/FaberEnergy.lean",
       "git_blob_sha1": "968cd9a5547cac6cfe965b57faabd10287254b18",
       "sha256": "a7a4914685716845b1161f075ac562f2e20b3f395fe087e688b8299b9c7bcf08"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/FaberPolynomials.lean",
+      "git_blob_sha1": "893fff41f6952c884606fd9bd4d5b6358b6d6ecd",
+      "sha256": "2fc2fa56c8c54f616c584363177ecfbc049f23fa81cb31d5112a6a0fe14b0ee1"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/HarmonicReflection.lean",
+      "git_blob_sha1": "7e491b602620d001b3afe40ff46e2be47569f53a",
+      "sha256": "c7caeecb17b69302268889ddbccb8022b93f30012f872e81e8f7bb25df836017"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/HilbertSchmidt.lean",
+      "git_blob_sha1": "462489a4253570ebc3fd86f1980bd470430cc8fe",
+      "sha256": "af64ac40c300a40f7a88d197c533ec5291451bba5356111ceac2b6b4523c60a5"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/HolomorphicReflection.lean",
+      "git_blob_sha1": "1c3a4866ac22315881b776b3bd17a909b0718078",
+      "sha256": "7f13871bad8b852f5af2c999d9451dc8419f52bbc4ea9aca2300a89ab3e70663"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/InverseExterior.lean",
+      "git_blob_sha1": "47eac88413322d3dd2e864aff6d8109709d20892",
+      "sha256": "b4aaf52916067ba98b8ec44771a6d2ae08b7ee0f396a1a9eb61917acb72cbe75"
     },
     {
       "path": "lean/OAI/Analysis/DirectCrouzeix/KernelContraction.lean",
@@ -539,9 +639,29 @@
       "sha256": "3be01360e343e41c9712883d81e8845122ef13b2418640fa32c5e2fd22cdba84"
     },
     {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/NormalFamilies.lean",
+      "git_blob_sha1": "1cba5f4393e11dc9b8d5b23d2ed2906a3ebdc8dc",
+      "sha256": "cf9591c1497eca2d65d70b46d3479dd6f31385f6b17ff191cdd66586de1c2a8b"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/NumericalRange.lean",
+      "git_blob_sha1": "6ca96cec135dc598eda756e92a706fab49837caf",
+      "sha256": "3b29e7e106eb2aafdcb4e2aa302ae0a1978c65c0dceb746344e6322a37bfb919"
+    },
+    {
       "path": "lean/OAI/Analysis/DirectCrouzeix/OuterApproximation.lean",
       "git_blob_sha1": "90b384e860ab4d1f1dc3a068c16a747a0c341521",
       "sha256": "a7cc6181472d8830f53ef28e1efef4ffcd3eb88c71de671b4a92504b3aa7b245"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/PoissonBoundary.lean",
+      "git_blob_sha1": "cbc2d979c88f38d68f85668d750778d4d62ba7e6",
+      "sha256": "0c0146c3e3bbed7e0481fe30665aee9641da62da822ec7d33ceb21790a46b4d0"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/PolynomialCalculus.lean",
+      "git_blob_sha1": "1007f8162e45a92f70d8ff9080e2392f8a8080fb",
+      "sha256": "15b09b9cfb85b29628b0fe08cae2b1e0c9e1f122a84815ca3c0b5641eeb28c1a"
     },
     {
       "path": "lean/OAI/Analysis/DirectCrouzeix/PolynomialEnergy.lean",
@@ -554,14 +674,79 @@
       "sha256": "74695a483d53771ef5cbde120f37e677659f42fe9dc9592bb4875fc7769774a9"
     },
     {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/Resolvent.lean",
+      "git_blob_sha1": "8e8a548b2d7f073c9e8174f19d9d804e22539cb9",
+      "sha256": "f6203e38b4543a691624aae33bfaa6fe9d391ac8bf3f90d8b9f6a4f8c87714cf"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/Sharpness.lean",
+      "git_blob_sha1": "ce4fdab0ae6bbffc28e00c45fa06975152b47d1f",
+      "sha256": "5c771889ea3273fd2eae905ab99dd8cd206605afad102929d27d5559b6b6338a"
+    },
+    {
       "path": "lean/OAI/Analysis/DirectCrouzeix/SingularPairs.lean",
       "git_blob_sha1": "30a999e394b4cbf3b0aacabc48b3571716133eeb",
       "sha256": "148b39d7df6831d6fc7ba50327f1594a0ba816668a28661fc8c1d6e82991f920"
     },
     {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/SupportNets.lean",
+      "git_blob_sha1": "f0c3dc37c8550ad0b00b75490b28b2beb9ab53bf",
+      "sha256": "977dd328ac3812c075e264b757b9a38b2a95e7faa8f3b8f8f3176d8b77290134"
+    },
+    {
+      "path": "lean/OAI/Analysis/DirectCrouzeix/TaylorFourier.lean",
+      "git_blob_sha1": "b871a3c46ef8bceb03aacb319141eed693774fd8",
+      "sha256": "31ab51406c444c711a2421a93a73b26130134a338c93f543a902c61de753b914"
+    },
+    {
       "path": "lean/OAI/Analysis/Mahler/ActualFiniteStrips.lean",
       "git_blob_sha1": "12a2bd80e5feeb7716747f91c189bf1edf2a1887",
       "sha256": "db8fd13fcdf965677174dbd1b066a74cad74bfebccce282ce8c2ba5642eed9a7"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ActualVerticalPrimitive.lean",
+      "git_blob_sha1": "a3b0a32ceb0c5c624ef43314731cf8359fe77fc8",
+      "sha256": "9f4a3c8130313974df4a26b907cd9b0446af7cb2f55ec4d5bee1e6a804dfde93"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/AngularEndpoint.lean",
+      "git_blob_sha1": "aef8bc290e9946d6239c1ab862b7fafc6d7ed573",
+      "sha256": "45840cde23282ff3be796305bf6c97f1938edbadb558e0119160b3be21257160"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/AngularFibers.lean",
+      "git_blob_sha1": "cd1fef211b2e0a8d42f16f7fa204e92d8e5ab207",
+      "sha256": "7d685912001f5e87c579f0b5e4b541c4173f440b8ad698b4634114485f3d0bd8"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/AngularGeometry.lean",
+      "git_blob_sha1": "dc5edc2fc945441b8e3e96a2315da733d06b0acd",
+      "sha256": "f43e6d0e0942a3d0ed5ff05c3580c1f45ccbb0cb1c762a72605da7476a7db417"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/AngularIntegrals.lean",
+      "git_blob_sha1": "3e17c50922417f777d042a0add3eb927cb13cf74",
+      "sha256": "8225ea6bd11090cfda6d2aada73da5c407f2eab99d42859cea739b4286fad556"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/AngularStrip.lean",
+      "git_blob_sha1": "c668fc6dcbb7abcf169ad120375a58583c40b6ff",
+      "sha256": "9111e0ef3e1da6fcc4beadacbcfc0fb89e240aa81b64223bd3f59ca1d72a29f0"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/BasisContinuousWedge.lean",
+      "git_blob_sha1": "1a68af2a1681890a4fa60029b9b17cf769d379f7",
+      "sha256": "411f955f9e3e001d9047517e99013bb3bad899227011bef869f0fc4be0b3fb3c"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/BoundaryJet.lean",
+      "git_blob_sha1": "911b895ba1635db41ef3dd0417e9287f0d583b0e",
+      "sha256": "b6142f969dbe2e54128cee5f751ce5e676e590a78329085170956863db5292f6"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ChartExtension.lean",
+      "git_blob_sha1": "d840db4831e2da6041549f667558ab290caa123d",
+      "sha256": "5b7d3103a988d7b6f7e0ad6cb9e99a88a6e63b5cb8d53d9beb113f3df69b8f3b"
     },
     {
       "path": "lean/OAI/Analysis/Mahler/ChartStokes.lean",
@@ -574,9 +759,54 @@
       "sha256": "0b107f76a665e055b95d2f24c05110f498bcbec93b3d0f8761d9a8f13c72c721"
     },
     {
+      "path": "lean/OAI/Analysis/Mahler/ClosedWedgePowers.lean",
+      "git_blob_sha1": "4453005f12649b74cc873bbea56d0f28fda8589c",
+      "sha256": "b9f0df6c667835c967ab51b7df7f8d8a2d6a9610a1b468ba1ec08aecfaee52db"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/CompactFluxDifferentiation.lean",
+      "git_blob_sha1": "221dc090dc34776c7a185e4a120e950bdfbc90ec",
+      "sha256": "b9b88f2cf6dd5c86b734e7829f7518fd2c5a49fb0483039b1c57d792a438bdc4"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/CompactIntegral.lean",
+      "git_blob_sha1": "c34c3c09aae3b24fb989d6a2e569b9b944c54091",
+      "sha256": "03c193c0045df7bca7aeea791ba280725be9bcb15f514aa53b1d6bca1b7a80d6"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ComplexCoordinates.lean",
+      "git_blob_sha1": "88ba013c7755a528766b5f5f4ec9061351482e16",
+      "sha256": "38bcc022903ad89ee7aa2143073905302da60b1120e3f37045cbf0427ad99fad"
+    },
+    {
       "path": "lean/OAI/Analysis/Mahler/ComplexStripMap.lean",
       "git_blob_sha1": "51344b98cc226d5b3fb590a1c66487959c32537c",
       "sha256": "cab24b8ec4f7a2d303f54473e5e5df9afabb3312658e30a96032acb0a075a423"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ComplexVolume.lean",
+      "git_blob_sha1": "03e2833b7a55b409167486f77ba7a7a010f16fb5",
+      "sha256": "41872cfd69974e2f9aa2cab381a00e4e20a8dec50d8333ba537337447fb229af"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ConformalInjectivity.lean",
+      "git_blob_sha1": "a27b580c8601ef97cf8b5034ad83da88c840f2f0",
+      "sha256": "93712cc44be0a5cb22554b7420bf5735c3d477f537fbefc44c4ddca7d5dee161"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ConformalInverse.lean",
+      "git_blob_sha1": "ff8cf1807c45b0b2805e329a3dc90fc656e22aa0",
+      "sha256": "31d18736f3ae6a7f752d9c00801b089e39c1860f7272c41a58921c199073ad0a"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ConformalRadialRegularity.lean",
+      "git_blob_sha1": "dbafe8d924c3f57d3c5888fe120ee646b331a8b5",
+      "sha256": "c2d6983856b20bfd61bc6f6ea7f05b71eca32d028d1f033fa9b504125a275852"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ConformalSeries.lean",
+      "git_blob_sha1": "a18579199b0a20a12b47357738b4952f2d0dcbc7",
+      "sha256": "a0fb5c554c07dda04c8dd340bb919aa8ad9e0477e49e45a716454a92d94b65a0"
     },
     {
       "path": "lean/OAI/Analysis/Mahler/ContinuousWedge.lean",
@@ -584,9 +814,124 @@
       "sha256": "f0822c8ee8ccae57527921983a3a5a9c9a25bd2bddbcc9bed4ac1d5574a06909"
     },
     {
+      "path": "lean/OAI/Analysis/Mahler/ContinuousWedgeDerivative.lean",
+      "git_blob_sha1": "f42a79406541c795a7b9ed7e445177fb3ce8e7fc",
+      "sha256": "a7a172ebcbabf73f5b646de25e41e4e8fd31a569c5c88458d90a89a11588d115"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ConvexApproximation.lean",
+      "git_blob_sha1": "e6bccc48fba4a3fd12873109265032dd7732a0fb",
+      "sha256": "49ec6363516efa95717f2ef449791c11f7d0d06f3a7c0b6badd5f32fc9a5aca7"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ConvexCompletion.lean",
+      "git_blob_sha1": "f5d692cc4844dc89ac826dd04de42b0bb5560642",
+      "sha256": "cdf1a50a490e2ebebdbc2d929d87c5902650f1c8c3c80f563f870619f9e8d45d"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ConvexENNRealTransfer.lean",
+      "git_blob_sha1": "635839639f848ecc57de6078a693d8c4206a0a0a",
+      "sha256": "112bc400cea7d1f18dcf82211b04c3cd510e9cc206059c68b467c3920fa50bac"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ConvexGeometry.lean",
+      "git_blob_sha1": "e2824513482509e9bcb4860a8b9410c80d24dd86",
+      "sha256": "fb661f20a73ce1f32aec0c9b40cca28246064c82df461a040cf27bc4cc97488a"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ConvexMain.lean",
+      "git_blob_sha1": "c271d397c329bf052853df7a9fa80a770c4ede6a",
+      "sha256": "9f130b81c749c9f0fc5572e31aa3553def7bc5597b25b8a023a26d78e0414c23"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ConvexMassReduction.lean",
+      "git_blob_sha1": "e832be91a4988ea2a414f00a694b50664b7669ee",
+      "sha256": "73a09855cb031967808cc9e47850b495b56f78379c1abbf97ef55d538f1d2ea5"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ConvexPolarBody.lean",
+      "git_blob_sha1": "e6ad7eb45db8fcb5d40fe85c557566515d0809f2",
+      "sha256": "b1d94160644876cf6a2a7f0a350ab9ef56007dc63ac3cdc3d153e51a52a76b6e"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ConvexSequence.lean",
+      "git_blob_sha1": "86a117e0275738ff827d30b2d446832fd74260bf",
+      "sha256": "28475ca18281968cc2d559cb6b7a83be11eda09cf3d98f4a8c20c096f48315b4"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ConvexTransfer.lean",
+      "git_blob_sha1": "80b342c52553c0e847a1729c3be00e8bc3f3a793",
+      "sha256": "289578e2c8ac9b14203224827ce4b7b1390e6f46fdc14048db1a3526109f1b00"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/CoordinateAnnulus.lean",
+      "git_blob_sha1": "50d8e78d27dad8566560c93c61b105fbb472618a",
+      "sha256": "3bb711a8bc556eeca8912c3466a37558e3ce04d8093ccd9cfca5a24a5d9af749"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/CoordinateBall.lean",
+      "git_blob_sha1": "fc9d23fda4ee97f03b20a7d6be2be01b8b66e0a0",
+      "sha256": "045bab76a695e6ac76ad7ee8617aae49140c37bd840635aa123ded3fab103397"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/CoordinateEuclidean.lean",
+      "git_blob_sha1": "158a32939932b898b2d236d02d269bbdc5b82c76",
+      "sha256": "894d95522a89a29da858d0304323d19b1773003e6146d0c11980b8204d2beaf2"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/CoordinateSphere.lean",
+      "git_blob_sha1": "74e282ec046091f3d6037dd071851a3a47d6e934",
+      "sha256": "7f268b209a3587fecb12b0c9f6afe5cc638a39cded61ca03c2826f34a691b1c6"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/CovectorVolume.lean",
+      "git_blob_sha1": "491d56222f925791bb4c0085c7927add46b2619b",
+      "sha256": "0658d432005008eec9e34252046182fa44bb3cf989db3a9f7cd92dfeadda93a3"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/DCForms.lean",
+      "git_blob_sha1": "2cd27c2d769488839f9cb26a091debf898a0ff35",
+      "sha256": "e147eb552345d6f30999d6fe91ad87e3da862478a363a02bff62cd0be28f1074"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/DCRegularity.lean",
+      "git_blob_sha1": "a3482c4e6715261780bbae2304017f5cc397180a",
+      "sha256": "5ea20fac905ba8855a595e7b77314f161ad81bdac0bf0be8f9e36c6fd45db0ae"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/DilationTransport.lean",
+      "git_blob_sha1": "0f50ae972eabd5b0900f1f77e68a2e809292823c",
+      "sha256": "a812d7779512883a6c290747dfcdf0e762bdb1be357db7218caecd16fa24beca"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ErrorBound.lean",
+      "git_blob_sha1": "3d8b0dc39f84246ad154a9d668af293703ac98df",
+      "sha256": "083ff7dc2885dcaa8a1fe752dd333c9249308226290c5f93055c532ae409b7c9"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/EuclideanMassDensity.lean",
+      "git_blob_sha1": "171d9e690eaa4a784c7a267401d64bea24d13c5c",
+      "sha256": "f7a1fad727cde1183239d9e2dc94b25524a260e4cfbed7b219f62b916a794f93"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/EuclideanRegularLevels.lean",
+      "git_blob_sha1": "a81f3960f5e78ce9e7fde5b9a227bfa433427b32",
+      "sha256": "9babc53de6e9cee864ef5f3376a8c85c694754f01cc118ce137d62b4a5af0454"
+    },
+    {
       "path": "lean/OAI/Analysis/Mahler/EuclideanSpecialMap.lean",
       "git_blob_sha1": "ae986cfb6716e6ee011c2db32e8bed96575a8e91",
       "sha256": "77068c0e5dce13e0fcec035dbfddefa8673fb5fa2fc1f09ab9f2857b9dbd2809"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ExactFormCoordinates.lean",
+      "git_blob_sha1": "b0164e041ca5978d11caa64973e40656c6a7dde9",
+      "sha256": "9af0cc7e5bd5b32db54b5fbde6c4d4043834c126fab1f7659447eb53ece46c45"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ExactSphereFluxBridge.lean",
+      "git_blob_sha1": "9fdd011d09a7796803a86f925080dd92e8c6acdd",
+      "sha256": "42ab3e9ccf01bba98afe7d1d058f5178dcbaf15295da72aeb4c536eb1701ab0e"
     },
     {
       "path": "lean/OAI/Analysis/Mahler/ExactSphereStokes.lean",
@@ -594,14 +939,169 @@
       "sha256": "40b5cd4a1fafafdba30a32004fee9c3a0b9b959c6c2884b509882e6a0034d6bd"
     },
     {
+      "path": "lean/OAI/Analysis/Mahler/ExteriorAlternatization.lean",
+      "git_blob_sha1": "990487092f1c5248fa9681f01177c21247ca91f5",
+      "sha256": "4b2c5e6bdc635a1ad11a80731711af38f1c2c98ee68213798498f57c064113a6"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ExteriorCoefficient.lean",
+      "git_blob_sha1": "0e98d4091d5c533036f7b897c383699ffaafa4c0",
+      "sha256": "ec6f71ac66c9d7c549ac13195af5a5394a3e2fbb5cd00c8689e7349737da04ba"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ExteriorCoordinates.lean",
+      "git_blob_sha1": "323313f3a71409f2192dd7f953c8caf1f1484a31",
+      "sha256": "f78301c7a8d536ac602b7d338e974b6fd29abf4ddd82075cb6cb42712551a4ca"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ExteriorDirectional.lean",
+      "git_blob_sha1": "8430264baf9f56f562dba4d45b4071fa8842c78c",
+      "sha256": "aac10f9c79a239351d0088cf0a3464a8afedec84b1da29147c3250e760e737ca"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ExteriorFlux.lean",
+      "git_blob_sha1": "c81fe50021edaa39f415a693733a51ab7af51fcb",
+      "sha256": "6447980d9572b2abe2cd87196163548674bc1d1a29b7735a94baa5840bbbd9e2"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ExteriorHessian.lean",
+      "git_blob_sha1": "b8d3278da475395b08dbec704da71f4013e51df2",
+      "sha256": "83aa5901f68e8f7b196cca12a9bbbe23bd74036fa297083d3cce29862660d3df"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ExteriorLeibnizTwo.lean",
+      "git_blob_sha1": "0c9441f00a5f3fa3b3415e44aca1dd683378bbd8",
+      "sha256": "442b1c0f314ed9cfd8bae73c8ce1e527498e0a7e7c7b510aa4ba2af9f4b4e454"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ExteriorPower.lean",
+      "git_blob_sha1": "30379aab272d4ea86baba59907c57ddfdcae6866",
+      "sha256": "8ef56c14b5665cc7da6c17c3e10f529782bdc36cc46de1fe5de64fb82ad26a4f"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/FiberEndpoint.lean",
+      "git_blob_sha1": "fa6bd9df1f8a05f9078b264a39104721387ba070",
+      "sha256": "c8c88f9807c51be5c2b646bb94b77d82055496963291a6256f4428621ff4b982"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/FiberHeight.lean",
+      "git_blob_sha1": "2d68f2d0300e5a16758c148b514cce84962c0d29",
+      "sha256": "eec28215ea0cb1fa341d5664e2ac8481380836573fdc6704e26925bed785f87f"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/FiberPreimageEndpoint.lean",
+      "git_blob_sha1": "aa82d99cd99d08fca8bcda540b18501df6959f32",
+      "sha256": "fcd9f652edf38efc38ddcbf8568b7ba90bcbf120afebe980b3e05430cec0426d"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/FiberPrimitive.lean",
+      "git_blob_sha1": "1420c133472c2c67673eb0d4ee8d65189c71f187",
+      "sha256": "a2a924bf1b8b47716676554742ad9b1714ebd7437d2995cf625d93295f111295"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/FiniteStripReduction.lean",
+      "git_blob_sha1": "40b06d75f8784ed641650aba29991a4885f539ef",
+      "sha256": "71ee81cd3c729788bfaf222484ee4627d4479fa8022bb785eccff24d53547c4a"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/FiniteStrips.lean",
+      "git_blob_sha1": "55ef31a7b1986c882ab2218017355e40e5c61f68",
+      "sha256": "5bcb103a46133100ff4923b72578b03cab8be8a4eafa4a263ea3505b306d2f95"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/FluxVariation.lean",
+      "git_blob_sha1": "10f7bd854656cbe4d8571f4dc988f2e3ba4aeab1",
+      "sha256": "1c5df7b6f7416e4b101702305eb108faf1fcd84e4f3018f83b4090310ab24551"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/FormLocalization.lean",
+      "git_blob_sha1": "0d350a9aab51d12824c36a06356644a52b4f5809",
+      "sha256": "7eef1bb744b82c27026d173da5c199517ea4c1b71a41e08924d5e32b22268a95"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/FormStokes.lean",
+      "git_blob_sha1": "c6baf2210aeceef9d773d0b361d9e5fae337a523",
+      "sha256": "be508fbb919adb42225c126d37440f6b26ff6c8b36609dcd645d68fd5df3c6de"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/GlobalFiberParametrization.lean",
+      "git_blob_sha1": "e014fcd22d06db5cad0bfeb1d83e361f90d2efac",
+      "sha256": "955691250252f3e2b8315394dac4340498faf75e65ef1babeef20ed470fa01ce"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/GlobalPlanarBound.lean",
+      "git_blob_sha1": "da00cf4162d0595524f38226c1a2228bee484537",
+      "sha256": "560f8ac790aa6854070a5f43a9c673b654d5d4740b68f01a4f42fce18f8698ee"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/GlobalPlanarMonotonicity.lean",
+      "git_blob_sha1": "0be3603fde45c7758bf64674c4b70322f473bf83",
+      "sha256": "7458012c58b325987e7ce9583d66b69618541881899200efcd01876f3eef27ce"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/GlobalVerticalGeometry.lean",
+      "git_blob_sha1": "765f96699b2cf34f4b31866d9b2afb57cbfae1a3",
+      "sha256": "f23aec04f146ddb3465ea374b3eb16a7e5d054c3e446788fc33077911d0c1e02"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HalfspaceStokes.lean",
+      "git_blob_sha1": "cc26d4060944b8354128be290860eb62bedc5d4c",
+      "sha256": "e325c589c30091adb8e4b97b5b15bd9d42487cea644706671d07b823dd4a28f8"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HemisphereArea.lean",
+      "git_blob_sha1": "8f8d8a25174919f9a4d12713fa142d5969e6748e",
+      "sha256": "790895d212b4349a48f4acd95f990ccffac1b8c23801ea653add3f1a3e10d31d"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HemisphereChart.lean",
+      "git_blob_sha1": "9d1ec39b0788a633252dbc792809dbb92ead6beb",
+      "sha256": "b2a9f8aa475ed0b5d00296d20f951d425b7f2bb09e19c00fd25ed04e8f066c75"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HemisphereFlux.lean",
+      "git_blob_sha1": "4f604fb8213b9434b7b15f5c80b55536202d7d2b",
+      "sha256": "42f464e65838c65567c0152fcac82fa21fb1cb705e5267ad12509caa67262ed8"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HemisphereJacobian.lean",
+      "git_blob_sha1": "b464618957b5379bcd2f1d3b64a4e1a6d29efa62",
+      "sha256": "f368d5b4aa8408b717e7a2e4fdd962ce84631836e106ebde26a47a2a18cee093"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HemisphereMeasure.lean",
+      "git_blob_sha1": "4614dec7b4a52df18f67bf08effe0fe93c49049d",
+      "sha256": "4cc8d7e59c0f2e1a95970328b84e6075a585655ae3d10a99a2d32cb323eb1cba"
+    },
+    {
       "path": "lean/OAI/Analysis/Mahler/Hessian.lean",
       "git_blob_sha1": "6e4ca86881ca4bf6370b8f145c7ec2a52938c227",
       "sha256": "482a2f2dc52185ced727857277714f7464a3c53cebd3d3d4d53603ec684378d0"
     },
     {
+      "path": "lean/OAI/Analysis/Mahler/HolomorphicLogC2.lean",
+      "git_blob_sha1": "425667693706809e1dfbaf969bb4c7decec90e25",
+      "sha256": "f8ab7d44eb062243bdc1d3763751ccbde914a8821ac9fe1e99bab54e3e9ac16b"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HolomorphicRegularity.lean",
+      "git_blob_sha1": "2437e77a99a80d42a200e125d52488e3c1ad3211",
+      "sha256": "bc5a60ceb8d59a5c982e754f5224cca8b60fe3e6d4b2a218739257dcb41e8fda"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HomogeneousCircleIntegral.lean",
+      "git_blob_sha1": "6f61cb027376703fbfb9d15befc27a6e105a1b56",
+      "sha256": "7602b0d5e6ae805933ae5ce4e6174b29afcfbccf38bcb1be9cf7b4fb5924b294"
+    },
+    {
       "path": "lean/OAI/Analysis/Mahler/HomogeneousDeformation.lean",
       "git_blob_sha1": "c210be10d8872c788158141c26c0ac9f412ba74d",
       "sha256": "fd1b2a1f42770e4f9bcda387b489420c09cdb00827864f44d50afab15e2a7ce6"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HomogeneousDensityVariation.lean",
+      "git_blob_sha1": "068bf9ad7a3c9508d7dec4084186e42365cde1fc",
+      "sha256": "7cb051ab696d60d613dcfd2e6efcc2a7485e38d391ee102149e5eb96de517004"
     },
     {
       "path": "lean/OAI/Analysis/Mahler/HomogeneousEndpoint.lean",
@@ -614,6 +1114,16 @@
       "sha256": "274a9fd3da9c2554cc0d579d756112751a7cc1609e6ff97523003de0c8cc5e93"
     },
     {
+      "path": "lean/OAI/Analysis/Mahler/HomogeneousFluxDifferentiation.lean",
+      "git_blob_sha1": "f25cae2947d5b991a18281c67e8b28f62b66872e",
+      "sha256": "f5bd46d16a02d492ae8c334924b9bf9578f5a46a8850b54df9bc6873d1bc0b59"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HomogeneousFluxFTC.lean",
+      "git_blob_sha1": "22d447fd714fe804fbe1beef5f4b91900d5b826d",
+      "sha256": "29900b5d711e2212ae85994176c44094a569b6bea38274dcbd409c8100bef4c4"
+    },
+    {
       "path": "lean/OAI/Analysis/Mahler/HomogeneousMassAssembly.lean",
       "git_blob_sha1": "3d3d897e72635fe4cb1f4382b9173749c592c3c5",
       "sha256": "adeef41de850349f05b61f71904c9ffe42ce974385ef778829f6a33da39e4e46"
@@ -622,6 +1132,16 @@
       "path": "lean/OAI/Analysis/Mahler/HomogeneousPrimitiveRegularity.lean",
       "git_blob_sha1": "b3d247040eb52cee3c9c8120b9f72a0ccea1c158",
       "sha256": "357e02cce0c0ad4b01de34fa7c3c8fb96bf3e2591aea96e6b479ef4f45dfe6f2"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HomogeneousSmoothForms.lean",
+      "git_blob_sha1": "5d345627f781a5312925328a8100dfbbf6e1529c",
+      "sha256": "14cb664f35899c47a4bfc8bb6e7a41b88bffc17c84e7f982b06a97ca4113898c"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/HomogeneousSphereIntegral.lean",
+      "git_blob_sha1": "d7903ff7cbd4f48ed939bbf7a4a8cf44487dfa80",
+      "sha256": "54ba786bc1ee29dcee8f7ac0b492684f5991ad241a635a9a2b63af71fc4dcd17"
     },
     {
       "path": "lean/OAI/Analysis/Mahler/HomogeneousTransgression.lean",
@@ -644,9 +1164,69 @@
       "sha256": "5ecf0de601a9be291a0670a73bce254f94253b512d3017a01474435f623b76b9"
     },
     {
+      "path": "lean/OAI/Analysis/Mahler/ImplicitAngle.lean",
+      "git_blob_sha1": "d6c7ef17642aa26e965f6c452a117f02895cfc2c",
+      "sha256": "74c28a141cd7783d6e0aab713f31f1137283da27d2354ec4aec507f16d13ceb3"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/InteriorStokes.lean",
+      "git_blob_sha1": "a03390f12c4a74b5afcbd940a8573cc64a85336d",
+      "sha256": "3a1afac809b2fbe19fdcf7223bd50db4d83844d098167db9be89b63e993cdd9f"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/InverseRadialRegularity.lean",
+      "git_blob_sha1": "fca7cabaecdbebfff98b70c866d5eba81efdb388",
+      "sha256": "74bd25d7f469b030f2c4660be45090a9113f38da72a7dc1ea8a1fcd392c990e7"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/Jacobian.lean",
+      "git_blob_sha1": "3cab0659a7a55fdbb5e4bd7034f6289f2069b3d2",
+      "sha256": "1d282e7a68dc9ffd032ae5486cc3d15877aa4353d688bba8304089125bdb70f2"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/LevelFace.lean",
+      "git_blob_sha1": "c2686d38abc242f631eae5a56e9df722de31f4f9",
+      "sha256": "5fa5a82554af45c94a5829e4f8a9c79ce18d367a756e6b8802652cef5bbd684a"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/LevelForms.lean",
+      "git_blob_sha1": "828a7f1111480992b081169ef4187cf49fdbd289",
+      "sha256": "96bbb3adf344a31939b85d74f567ea2804a855cbd4e4b23d37eb6224124369ff"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/LogDilation.lean",
+      "git_blob_sha1": "422aeb39cbd454dc3c3776dafc272c88c4c464c2",
+      "sha256": "35985c773f415abf3de8f7d0067058dffba4dbf95542468345db07e5aa9a6874"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/LogJet.lean",
+      "git_blob_sha1": "347498e305f0df2972bb3e32c124b79f7069325d",
+      "sha256": "8420702727a58f03f1997950844dd8b70539f2cca10512d0c11a7164245c9d6c"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/LogNormSquare.lean",
+      "git_blob_sha1": "c3553f049dd1a447818a14b1328f25aed0f9a886",
+      "sha256": "cf1d0fd8291b3243291d3f7d7f04067fe38b6b9f01969588af775758b7a0ea78"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/LogScalarJet.lean",
+      "git_blob_sha1": "fa1357106a830e0c4a4c55105038c8f8b272ddb4",
+      "sha256": "dbfce09fe51d975cacd0d8449933df3c4933b215616e3722a90dba280d488ce1"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/LogUniform.lean",
+      "git_blob_sha1": "bd585a925443e50de4092ecb7c5617340146084e",
+      "sha256": "09126709bf8363b9abe61a3ba537fc394c8b6b084a0531120fe4375a97516c1f"
+    },
+    {
       "path": "lean/OAI/Analysis/Mahler/MainTheorem.lean",
       "git_blob_sha1": "d5c55dee7e95a66312217de1f875ea8cb7508e62",
       "sha256": "ff4222bb24b6b48e571c63a481f6cbe430ce68f8c707da065c2117d7e94f058e"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/MassLimit.lean",
+      "git_blob_sha1": "b4535f248d7f12eae82097b392b0554d9f7a8387",
+      "sha256": "200e171fc9b1e8b21d779a94410fd66900b22771ae65a5b700a3d04a7e0f1d5a"
     },
     {
       "path": "lean/OAI/Analysis/Mahler/MassTarget.lean",
@@ -654,9 +1234,329 @@
       "sha256": "01e57540d5c45e9e507bc81593a66fda96c20e95c262b9bddfe4cfd4b1369112"
     },
     {
+      "path": "lean/OAI/Analysis/Mahler/MatrixExteriorPower.lean",
+      "git_blob_sha1": "8c2b809490ae83706097d024680e48d9616c89d9",
+      "sha256": "468f31df5f6d68166418962e5bb354487b696444848a5fd9dabba6a52a31361e"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/MatrixHessian.lean",
+      "git_blob_sha1": "3165f6c791324b3d8dc0a27e0e4e8d02c9914d5f",
+      "sha256": "3a89361f59b8b5e97335b0d06b6631a5fca42bb4aa70d9f1dfe903d596aeb7f0"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/NormExteriorPower.lean",
+      "git_blob_sha1": "79b124182c62e97793abbf0e34e140ce1e7d1dfd",
+      "sha256": "e1539c93e0688b000ca90bb2b9590771c400fa613d7d3779e404e72f11f07454"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/NormSquareForm.lean",
+      "git_blob_sha1": "a1d0f609158bd2833a3f1b8e411b7e56798333e5",
+      "sha256": "d1d4f2025572a7fa0b1e189f82616ef361671e987485da8c483e7e137debc29d"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/NormSquareJet.lean",
+      "git_blob_sha1": "7ac0ea35c87f8f2b51242807d64e3545158f4649",
+      "sha256": "a81e9af55c150ed94acf17a7b93364db7bdbe09ddbe13b1bd18aabc43018e80c"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/OpenExteriorNormalization.lean",
+      "git_blob_sha1": "dd7345fb571444f891ea56a77460d0717a32c1fd",
+      "sha256": "df29b4d468d09700b2ac5abbfa0d79611c922eef441bdc36e8533a2f2f25e544"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/OpenHessian.lean",
+      "git_blob_sha1": "6b255d344e84fdb4e20c58010db3848c5ec3737a",
+      "sha256": "0d1da26b55219e834bf9649c083dc2a4beca4517651b1142d52dfd374052436c"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/OrientedChartIntegral.lean",
+      "git_blob_sha1": "aa52e6686d743f60dabe20e4b303b76e9310092d",
+      "sha256": "49264b56192e1b4c12c75470d4b50dc2c55a03485541d9cd5370072a6cb86e9e"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/OrientedSphereDensity.lean",
+      "git_blob_sha1": "054fa50b6759eef1f2b1bcfb8f538ad7b3bf3afe",
+      "sha256": "2a994d2f78da188839b0ecb28b6f542e226465d722d6c315c6d57847fef47854"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/PairExteriorBridge.lean",
+      "git_blob_sha1": "42573b0413efc70233d43a2cb872f93784bc0926",
+      "sha256": "d9a143a43c501de833f1408ef58bbed873d90014d7bac726d53babf11bd8d01f"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/PairTransgression.lean",
+      "git_blob_sha1": "111ce2992668804b6d1e0b4a228f4c6955e1905a",
+      "sha256": "8068b41f49e8964108c3a78e119f3499ae1db065f7bf52f9ef9999ec729b3295"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/PlanarDensity.lean",
+      "git_blob_sha1": "6bccd23c1158f8db994b82669ed131bd02f88b0d",
+      "sha256": "7cd23d9f109bf1addafb52a91d01b12d01ff8fd5ec3d4abca8f2c2973d913783"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/PlanarErrorRate.lean",
+      "git_blob_sha1": "c0623194b6907bfe91248dbaf8877a9dfe29ef47",
+      "sha256": "18c4bf56c128644e2e241fc399d226ff19cc754635f98a8317a7cd0fcf0fd704"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/PlanarEstimates.lean",
+      "git_blob_sha1": "559b8cf12a8fdb1c81479f4a44971e7be32f770f",
+      "sha256": "98fd9dc89a82e7f4387d8147597e7630e521dc0fe5bd494817905ce3245a65f0"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/PlanarIntegralRegularity.lean",
+      "git_blob_sha1": "db75c0691fc8cc16d39e9c7b13cad2142d879a95",
+      "sha256": "1ef826a51d18f7562f154746373bdc6534c6a1c773c8494deee7172e75faa5dc"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/PlanarRegularity.lean",
+      "git_blob_sha1": "6a8e740101c5a9db056edc2fd0be53a8f8b3ddba",
+      "sha256": "78c1838cedab91f51d6cb75c7afca11e36f9b78fe2b852fd6acd783caa49bc5e"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/PlanarSymmetry.lean",
+      "git_blob_sha1": "b06e01f62512f004da242eb567beaf90d9506923",
+      "sha256": "9b842e82cbcd875428f48f5eb4de017f3666be7abe0a415cc70c20017ab70da2"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/Positivity.lean",
+      "git_blob_sha1": "143a3d97815903ce12d816d23d395ce6711a3658",
+      "sha256": "ca1422abd1fc1a150f5f5a880f50d0f73954940d33d09f9a88a1ddf28ad82862"
+    },
+    {
       "path": "lean/OAI/Analysis/Mahler/PowerTransgression.lean",
       "git_blob_sha1": "1707a44523003ff153693bb5e50b7bb7b3f4f25a",
       "sha256": "930eeedf56aadd16a0309d6128f6c3232cfddbe5a85fd74456200b67b023a1fd"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/PrimitiveBound.lean",
+      "git_blob_sha1": "09071619148dc285f51e2ab9d2c1b62cf6658c6b",
+      "sha256": "cb5371f615129da3d8d3d256864fc4351c436a68b7cda88c4c1e8523a3f9b5f4"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/PrimitiveEquality.lean",
+      "git_blob_sha1": "3f1be1967d602c28598626112fc5782c84b43d73",
+      "sha256": "a6867f727a70e274bee6a64c0c848b38bc4634d39093cce47f2ddbb29338aa58"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/PrimitiveRegularity.lean",
+      "git_blob_sha1": "b9da339866601a29b99fd444c3d5c24e71aff23e",
+      "sha256": "bc4939677c42832650e66bd2144760724dfab5ff49fb52cef28662698c136736"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/PullbackRegularity.lean",
+      "git_blob_sha1": "c650be34fc95312d08937c742007b0fd8cfff078",
+      "sha256": "2235eac81d96f7416ede7c4cfd920ea167e96ca49f68cbd9e5bd4266bc434ff4"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/PunctureCutoff.lean",
+      "git_blob_sha1": "39dc82b05e6c273d949db170d2c00878a69cb6ea",
+      "sha256": "9deb86be8ed19e0d1e9f69561554e73ee64cc5866bed349c353a254e6f1fa00f"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/PuncturedBallStokes.lean",
+      "git_blob_sha1": "12f837f2c9a0eff252051f3dd0454ad6fa66da52",
+      "sha256": "d193427589b3011247d8a5eb8a3ee41ecdb9ba4e474c272b83bfca9750ec97aa"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/PuncturedSublevelStokes.lean",
+      "git_blob_sha1": "e9ca1c2733dbaf6b1a533b30b8464d2e15d7dce8",
+      "sha256": "74fdfab067e2d19be5697c3a3b478bad9eae19631105e4d416f2e06cada00181"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/RadialBridge.lean",
+      "git_blob_sha1": "1c715c89d74d1162f5f3426eef3187fba3e48611",
+      "sha256": "347515c172d32dfebeddbb6e53ad216bb0d75596e4b2582061c7a3a2da96c1e8"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/RadialPrimitiveDeriv.lean",
+      "git_blob_sha1": "4d84812aaca9f5a9ff3f46fc5f64bb2567f5b50c",
+      "sha256": "b5aeb55198d5c45a37370446f0581634e78bb4c4729c21d7f16e58d4f18a84c0"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/RawAlternatingCalculus.lean",
+      "git_blob_sha1": "141b3612866948d515af5de14784a21921cebea3",
+      "sha256": "7efa2a1a075c2c45070b31eeb9159812056406b43ab3c026faaf43217ad8a55b"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/RawAlternationDerivative.lean",
+      "git_blob_sha1": "e72a23c919686342836eb7b69b0d2bdac669e63d",
+      "sha256": "2a6d2569b2e471e560e42c92037083a25d4ea03f9e6010123e3b871af45fe247"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/RawClosedPower.lean",
+      "git_blob_sha1": "e07efdc06bc6cf10919baea30bf93286009fb4fd",
+      "sha256": "45f5a67b3262fdc646f41b4a35f88dbf761cb93d861cca5a0913ba4f60a89a5c"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/RawClosedProduct.lean",
+      "git_blob_sha1": "3d3792de7048b3979e6a37b94f9645c05300beb9",
+      "sha256": "2fdf9b904e9ea32b06ffd7dbf133b28f9a15a8777d464233a3bb55b66d316181"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/RawCoefficientDerivative.lean",
+      "git_blob_sha1": "021bee201ff758267ed196c5fc7516af703f5cb5",
+      "sha256": "c73ca45d3d9eb2d29d707e5fcd661a020ff8e1494e52c3a2e70c61237309d234"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/RawExteriorPower.lean",
+      "git_blob_sha1": "5facccdc8854fe9c4b1a47a63300a062efca0734",
+      "sha256": "69b152c7e91c72343005664adee3b90a857536b96ddd09986003540ee7a87b10"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/RawReindexedDerivative.lean",
+      "git_blob_sha1": "931102308f2121512a9854ed94df7de1b8649ad5",
+      "sha256": "2ad1206c0a8f42146466398e7b0e57b829c8de8f9da7b76d6c15f2569da63f7e"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/RealLogBridge.lean",
+      "git_blob_sha1": "c0323164a1c380853a71e89c0090957eef6f2ff9",
+      "sha256": "cf3d5f00fa4249684af584aaf909806ff2afa9fafdf75420998e20d5e7aa6266"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ReferencePole.lean",
+      "git_blob_sha1": "a0333686a0382c428e0ff8604413f2257673a792",
+      "sha256": "b2204832d888df234b11b543abdaee0382fe76faaac5facdb61382ee11998a20"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ReferencePoleFrame.lean",
+      "git_blob_sha1": "ae5a6435598cf5f83d0cce7f9fba80d0a03ff2f6",
+      "sha256": "f3ac4eae47308e45755f7dd5f157a461a5cd01c9bbe42f2f00a33a340160748b"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ReferenceSphere.lean",
+      "git_blob_sha1": "da4ddf36046b1610af41949628d8eb3a1cb02eca",
+      "sha256": "53d45e8091f92163157642b65c1625abba0b3711718d830ad06a8c91b7dda6ff"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ReferenceSphereIntegral.lean",
+      "git_blob_sha1": "512eb8672514284ea2cae36668ae1399716723cd",
+      "sha256": "3fb0fb065bc874d1a1bd322b55f4a9ac7729b5e1fcf41ae0843d6a7bf46864e8"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/RegularBoundaryAtlas.lean",
+      "git_blob_sha1": "40f1ec166c1a4dfb97b1500d8ca51fbfed3a31ba",
+      "sha256": "c238842a79dabc37568b274e49979bc38c6be060bb22fe4fe3e88e345abc97f5"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/RegularChartStokes.lean",
+      "git_blob_sha1": "bcd6be0118261cf8937cb8f0b30ac1519f5b05da",
+      "sha256": "c6f09e9cc9ecb392bd832a9c4c329b877baf2ba1cd014a6528aecc1e7642dbe4"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/RegularLevelCharts.lean",
+      "git_blob_sha1": "e768cb7e2fc515ca53e3b34771a1ef218a3fd399",
+      "sha256": "355adc7953340365db21863f6620f017be940ad78af4fae2383a9e4fdd1dbe3a"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/RegularMassReduction.lean",
+      "git_blob_sha1": "9fbd74f61da7730fe9078fae8b9b1731d9daed2f",
+      "sha256": "f64a9ba55f2a56270e536bcecd5b1b327dbdf77f703cc55a7570b0b94d881cdb"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/RegularPartition.lean",
+      "git_blob_sha1": "a231d63db05bf707ca0619b0d17fbd6b07e03086",
+      "sha256": "f220171101ef8e36b7a1a1332172fada2c5bdd0fc7d08083fc0c4aa30e545f5d"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/RegularStokesAssembly.lean",
+      "git_blob_sha1": "c664ceacc8f5650b7b050ebaae6acbbb962af5d2",
+      "sha256": "cbf48bc17702250c8db0d0dc47d08c1098a33d9ae7ac0ebeccf853a8bbd509c5"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/RegularSublevel.lean",
+      "git_blob_sha1": "5f63259c8566e7a160b49d2f06659d2a5b17a1c4",
+      "sha256": "fbda5b6f84e879e849831616677cbcc91470e876e2f30c2af16c642ac0b68052"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/RescaledHolomorphic.lean",
+      "git_blob_sha1": "6974dd0174f997427aa2a4759cc41d8dda016daa",
+      "sha256": "edb1a903401a72f20749d95e37317128a5de925882f3af851ce8aaab6640f0f8"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/RescaledMassMap.lean",
+      "git_blob_sha1": "54d6bc3b90de5a15effd41cb7a6134719fb61b7f",
+      "sha256": "2fe7ef3106fae942c36c5390b6937c413c492f3c964bc13c563cea68add1daaa"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/RescalingEstimates.lean",
+      "git_blob_sha1": "66313c9fcce48216cef9236ac73ec967e871b9f9",
+      "sha256": "343d4b9166dbf42e687b4d28acaa8e83fa15bb573e85870bb95eda49274d7bf9"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/ShellRegularity.lean",
+      "git_blob_sha1": "068d39835b472e659d40dc0c42397876b5a43c61",
+      "sha256": "3684a2cc99681e57388962a2232f93eefbe66fa97320f044db650b41130d25f2"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SineBound.lean",
+      "git_blob_sha1": "953018095d25bb07091efcc53b3687c8d5d33a3d",
+      "sha256": "12df98fcc968a8062460bd80dd0887d850555cfec551615eeb5f7a1b2bcee015"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SmallSphereLimits.lean",
+      "git_blob_sha1": "778cafe8d50180e995e2c7eb0d2a0d093dca019f",
+      "sha256": "eb5d43dedffa80806ef025c0f5551306559713df1a514887884a068c325fe69f"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SourceBoundaryIntegral.lean",
+      "git_blob_sha1": "d0bcc6012348a0d18518f342504b4bf58291a036",
+      "sha256": "379919fd9599489b020443ce1c206cc9f5261ec8eff83fca26b9f8a5c0f21b1d"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SourceCanonicalMeasure.lean",
+      "git_blob_sha1": "a92f1b7d3da0e604f3a17fd88ba0a03113a2ff44",
+      "sha256": "7f47853248e3b555774bf7bfb48dea0a9ae13275f9d564cf0b24fba802b5d7e1"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SourceCoordinateExterior.lean",
+      "git_blob_sha1": "ce502e5c4375a055ddb192a313a6d83c91f77825",
+      "sha256": "436d22e2f8a42501245c0e17e0498cf98451f4fee25881ede92f32a8a36cea9e"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SourceCoordinateForms.lean",
+      "git_blob_sha1": "293a7d2f97348c69da64cc86d464c545ebf81715",
+      "sha256": "5fd6ae3f8aa78b34bd5f931321ef68bf292876e9dbcc2abfcc992f12465e8bb6"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SourceCoordinateMeasure.lean",
+      "git_blob_sha1": "8763432c8bae7498d46d95bfaa698147714f48d7",
+      "sha256": "e50dec7ac67cb777b99f64a3f054230f4dbd62fc36ec1569550dba8075e71a36"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SourceExteriorDerivative.lean",
+      "git_blob_sha1": "0d9c31157ec195ffda6af2bb4152ab01352a059d",
+      "sha256": "61ace8da998669df4cf43db0fce2500e565d8fb254f8001bd230389297ea71df"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SourceFluxCoordinates.lean",
+      "git_blob_sha1": "adb4a6b034d5cf219994cb2d3f3e7feb2726326e",
+      "sha256": "a41d5c89bd84a5df6f0d41195a4f0d218dfe3afd81ddbee3c1b8f355d433e7f6"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SourceFluxRegularity.lean",
+      "git_blob_sha1": "e2e71952b5d1b185c03f10c9f97be5e69a96b330",
+      "sha256": "e303475e70234fb4ad3fe3ced763f99b6d5caadf31eb3fe6ff0b9102b9f119df"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SourceFullExterior.lean",
+      "git_blob_sha1": "5c41b8e35e4da7934cd9bad7ea88c3a49dd46dac",
+      "sha256": "81664eaa0efb483fdd3f9462a704bdeeab9f9344105f5f556d4a629198a3afe9"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SourceHomogeneous.lean",
+      "git_blob_sha1": "03d826a2ab228d7dd2f6dfa54e471cbbc9e0fa6c",
+      "sha256": "b5e2b96a153abcf3df2aaac9cb99d002cb29588799a0184bad3f8d663e15cfb9"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SourceLevelFlux.lean",
+      "git_blob_sha1": "66a5225a5d08e6970108224f807b12f86a449be3",
+      "sha256": "f4c38d717e86ed1399509453dbb3adda674f07a09a4d655a3645873b16976b63"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SourceLogC2.lean",
+      "git_blob_sha1": "fa3de23ea3c7615e84fa2d6b735b166f7ad83e92",
+      "sha256": "9c1db52b86c741ea6beac05df36148b6508acdf78d6579a0b13194e5bc40a4d7"
     },
     {
       "path": "lean/OAI/Analysis/Mahler/SourcePrimitiveStokes.lean",
@@ -664,9 +1564,84 @@
       "sha256": "c1f857871d04b7b08501684635d578933ea07ee7a70558a11188f920a85e3def"
     },
     {
+      "path": "lean/OAI/Analysis/Mahler/SourceRadiusFlux.lean",
+      "git_blob_sha1": "a5ecc15b2f67a116b30492d5f56963ffeffd8d06",
+      "sha256": "4a60c1f74db317cb27e94270b9b834b0f9d9332e678ab16f80cc15c88d4d9ac5"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SourceRawCoefficient.lean",
+      "git_blob_sha1": "8ffe51875be95b98e485c275b664ba21ba4d2bda",
+      "sha256": "3ab335701352a87a386070084d6a6f56797f1e5e4d68d51dbcdfc82795a28acb"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SourceRawJets.lean",
+      "git_blob_sha1": "a13c7e6d2a174803a2fbf78ba70157cd4fcdb978",
+      "sha256": "3d8a905d4b28db688d0f91ced298c5d011a03f411204929e3af97a3734da8a55"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SourceRawOrientation.lean",
+      "git_blob_sha1": "757c8dbf622ed3d5f282ab162fb5cc3b9f2da60a",
+      "sha256": "1a642f2757ad3fb114d1a8b56bb57b0d72476e46d10ec53de79d1a1ed2824f0f"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SourceRealExterior.lean",
+      "git_blob_sha1": "385563bcfeeec87f49315e0e7223352bcc32192b",
+      "sha256": "3908ed57c2b4cf6d60876fcefbcde2cd27397297f5faa68cb63ec8ab6b044378"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SourceRegularFlux.lean",
+      "git_blob_sha1": "2c9f9e7d7b4f81c99a22c88a151793f00b87ff22",
+      "sha256": "c7b77565b8a08faf0cf64fd8a6e42ec31d6fe122552747408ddb09339afa38dd"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SourceRegularLimit.lean",
+      "git_blob_sha1": "4f269d3cc3f04ac00de9c9a23722154319619d5a",
+      "sha256": "55fcf1fc52d0c0fa341392bbace8ab52e7f7cdefd0917b6d0c01b99619b5b36d"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SourceRegularMass.lean",
+      "git_blob_sha1": "e15d618dae30c881eccc2aa58f98ef5986890b02",
+      "sha256": "14b6f3bbfc05f5971f482d848efd0644d3dc1ed8bc229d3676fb7dd550e6a352"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SourceRescaling.lean",
+      "git_blob_sha1": "1b5577c5f252b3a2a4c4474916dd97ff6723c56e",
+      "sha256": "5730a72e37de30152bf379f5ac802bdd955533d7d761fa186cd559f0e70dba90"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SourceSphereLimit.lean",
+      "git_blob_sha1": "2b52e468adb6a1e1f89f497a5e9a7583dd44ab14",
+      "sha256": "672fb25b8b43d36f098cc4690eab9b73ddbcf0d2704f9f9dbd1882ea69cc7f57"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SourceStokes.lean",
+      "git_blob_sha1": "723c646e0c106152036f91e9ff7f818cb33b7f1a",
+      "sha256": "406270e14cad59ec0b49a9fcff2c4305057a5ed9da6289650f1e7cf567431c1a"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SourceTopCoordinates.lean",
+      "git_blob_sha1": "4fe70e51411a14da94348b55832abb19f3685a02",
+      "sha256": "c6aaddbabbacbe67386898b0bbaab0f7981846e8d247d4a23e905dfde83112a4"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SpecialJacobian.lean",
+      "git_blob_sha1": "7443e172ec46ebe69405f2659d1db54128494887",
+      "sha256": "e974270ee3bbf000d80218c85e9ca60eec34c906cbb7cb4641e14f01463ba00d"
+    },
+    {
       "path": "lean/OAI/Analysis/Mahler/SpecialLeadingTerm.lean",
       "git_blob_sha1": "1a20a382b93bf4119198867ec306a4bafdb5ca66",
       "sha256": "3a7eafec1688c2bcf6070155ed2ead2541685ae8c89ac03fe928a7206a7e10ed"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SpecialMassBridge.lean",
+      "git_blob_sha1": "31d01cdd65dc6d9ff2507932158c39cebee455ca",
+      "sha256": "2b4fdae57a67f65f329f550fe25860295e576e1aeb81ad69261ccf7401907a35"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SpecialMassHypotheses.lean",
+      "git_blob_sha1": "1c7152afcac545a5affec2de1ddcf5b0382cf2fb",
+      "sha256": "0d9fbc4e0c7cb1a076cac32cc2e4429d57457dbb56b5591250b09523cec578a6"
     },
     {
       "path": "lean/OAI/Analysis/Mahler/SpecialSourceMass.lean",
@@ -674,9 +1649,199 @@
       "sha256": "5ca6f729dd257889d261226f9d97acc99f33acade382286344e6f2ddfc9916a0"
     },
     {
+      "path": "lean/OAI/Analysis/Mahler/SphereAreaTransport.lean",
+      "git_blob_sha1": "f06da63bf15ef93aa1811dd81866b8f684b1924c",
+      "sha256": "f21e44a034b0514f8b7d8adb91648d4bd4a2050dd1d612f87f1ec33b42725b1d"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SphereCoordinateIntegral.lean",
+      "git_blob_sha1": "cffd6ad56f1c369c39df70b1ce3b6764262be023",
+      "sha256": "e9a4912ec843773c54b224589de86f7f2812c74da173fdda46e087d0e5d474a6"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SphereDensityBridge.lean",
+      "git_blob_sha1": "4f09105592f73bdf297675ad551604cbe3bdd627",
+      "sha256": "58c31b9f1d45f477830308c2b24ec0c69f42d0318a3d56db544e3fa033d268a6"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SphereDensityRestriction.lean",
+      "git_blob_sha1": "b028a28e2d44550eb5985bd17139f53f24abc23d",
+      "sha256": "af8a40dcee2703fd82c1988cccd4c85a914530facda318001d95188619c8333c"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SphereFlux.lean",
+      "git_blob_sha1": "f7134b2456f2a5c0f7878d81680c43fd58345ccc",
+      "sha256": "b8f8948fce493d6a76d4fc2a1688f90a607141f78da2c665f6e50030830ca9cc"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SphereFluxDifferentiation.lean",
+      "git_blob_sha1": "57c6d6dfc9d85df126ad8a86628894d7708151e1",
+      "sha256": "f86300ac3381e572426f9fd1f093b8883419d46da0b9b444ffbc2acd1e019501"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SphereFluxIntegral.lean",
+      "git_blob_sha1": "29d8d24fb97624cb2c8b179c5441741f6bbe8042",
+      "sha256": "2c36657d99988f82e64c31880f088fb89914ed220fd590e5747c6c4931568bc7"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SphereFluxLimit.lean",
+      "git_blob_sha1": "0c8386577696244e9f80cf932171aa76100fb74b",
+      "sha256": "55d08da46ef7614584d6958a3b71ac8511e3fd3bd3a49b2a943889f17bc9f033"
+    },
+    {
       "path": "lean/OAI/Analysis/Mahler/SphereForms.lean",
       "git_blob_sha1": "a4d458689fc4df77591f63435dc1228d955cd5d9",
       "sha256": "ec25a18b86b5df18348a571ed2b506a2856513f55dcdeb26d169bf9b8c911556"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SphereNormalization.lean",
+      "git_blob_sha1": "39cc75ce7554d9cbc72d191a3d0cf792bf488ce6",
+      "sha256": "b4ad2bdd97ca4b182dbcdf120762fe33f6c02d0a00c49a25a97c78a5f2ad771e"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SphereOrientation.lean",
+      "git_blob_sha1": "71bbb93a2decb9bd215d111f1eefcd445e906b47",
+      "sha256": "ceb5b9f43f6c264459f05f2954ac724a5d88b46dad619170ab12dc1d17ecd635"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SphereRadius.lean",
+      "git_blob_sha1": "278376796f7ba60a4afbab27f410c21b51f0c3ea",
+      "sha256": "6d91fc8f673ce8b5c321f66eed542a744d12d78082442561e3aa40a61115cfbc"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SphereTransport.lean",
+      "git_blob_sha1": "76489316215fbce968fd6819e95b3503d567cdda",
+      "sha256": "83d095461c29cb2f95287a4006af13d1d25b3d676bbec0bc0ddc2e08e582ca56"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/SphereVolumeOrientation.lean",
+      "git_blob_sha1": "e1dbdb1229fb560b41b5766ef15dacd88542413b",
+      "sha256": "51be8f3534aefcea5a60bf5d2c763c51bc474cd413aa6722cc82efc9c8a8f737"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/StripCompactSublevels.lean",
+      "git_blob_sha1": "571dddbe6e10a86d0886a19e16b1975813a14f7f",
+      "sha256": "72f28d5333d2db6f8e64e8004deafd985e9a57ed6cb89bea63c6b008f4c8c269"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/StripDifferential.lean",
+      "git_blob_sha1": "b998e3f75aba3f88b79a68cc00bed39b9612da2a",
+      "sha256": "52c6221efcfd9698d31a9ae0fa74762b85e1c6f8fb52c0c638787594b02b6f45"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/StripGeometry.lean",
+      "git_blob_sha1": "2b9dde52fda31a2c9c181be704bab1bc5019d835",
+      "sha256": "8fed8d9d2ccf20bfc374bff60a8ec0c66ee99e7ed80109ed20278084266717b4"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/StripJacobian.lean",
+      "git_blob_sha1": "be688f76c187201ce9daf2ad88adaf8df419df54",
+      "sha256": "4b2d335d921266d78d2b81b58f99a36977c73007f961f8fd25fabd1aa1ed8dfc"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/StripLevelGeometry.lean",
+      "git_blob_sha1": "6749b26993cfb95879b57e449b4589ec16e3ac19",
+      "sha256": "1fc1973db92e23bab56f4c35f1022c1f0b2ac978b2bc8c201ab13bd4ea58403a"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/StripMassExhaustion.lean",
+      "git_blob_sha1": "82c3e17591b905023ee426bb437006fbe4c67333",
+      "sha256": "0ec468f18bf02882edcee9a502a94dddd1580ddd521722f89926dc9a17c0f2fa"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/StripRankGeometry.lean",
+      "git_blob_sha1": "3c762e52e1c210252400f448a06f1fbda99a450c",
+      "sha256": "5ef8dccd9ee975e577de01a48675630e8b24e6cf4d53c46c3d1364879cffbb19"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/StripRegularLevels.lean",
+      "git_blob_sha1": "b14f34e254760aa14526b3330f1c6f88a4bac939",
+      "sha256": "afa9b3f31efeea896fca7f51c8883234d441d430395fa44b843f571a26753b73"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/StripRegularValues.lean",
+      "git_blob_sha1": "b1c62f5ee95d1b7b802a32b39b7542f549c47849",
+      "sha256": "85307a7c093440986c71b7293060d94a6ecdd5ebe47e9ecf30b417fb34ae03e3"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/StripSublevelTopology.lean",
+      "git_blob_sha1": "c4639133dc4812b935194debe6e971a3b747037e",
+      "sha256": "5437c4e1153f6b53c99a2f78a01789a19ea19c804b7f5e7c72a391afc8614dd4"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/StripVolume.lean",
+      "git_blob_sha1": "487af22b01e81d453d0fc0d81e3be5a573e4670d",
+      "sha256": "b2925301b264893c1ee6ff9e0038714bffa4ddbb94e6b58177d9938e980e8d26"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/TailIntegral.lean",
+      "git_blob_sha1": "4da971f60ab51ea8261290502dcb54d7db96adba",
+      "sha256": "66777e1051d53684ab459323ee3b1509645143e61a1cba255dad0dc34def754b"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/UniformError.lean",
+      "git_blob_sha1": "5b19583339aa902996e04e7f2eafd1dd6b6a1789",
+      "sha256": "7a7d9cfc7ef2e5e3edaa55e8447b00371f81b8777f35e566af86a378d7d1b247"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/UniformJet.lean",
+      "git_blob_sha1": "52cc41ae2fa9761975b023586b2ce6d051f8a729",
+      "sha256": "480087e4b84184665aaf7eb186cb98bc1d016298a8843394989e513b6fd321fe"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/UnitaryReference.lean",
+      "git_blob_sha1": "4a6e260cfbf78d0546f69bc53fd0b1b6147a965f",
+      "sha256": "98739168be3ddd8e8bec01f884694aa44774063fbbdfcc97968f9b87a4bb141d"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/VerticalRadius.lean",
+      "git_blob_sha1": "e0049f5d967d46835b88128cba8fdddbd2fb1458",
+      "sha256": "cc4cda408743080ad31a38f501f7f593481666cfff15b2db205688f94fdd2c36"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/VerticalSpeed.lean",
+      "git_blob_sha1": "b9759356be10ccc6b565cc5b4f3b103d0ba28b5f",
+      "sha256": "9451d3db3b1716f1f6fa523dc929b36ca4c07e2198749c594738537251dbb6bb"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/WedgeAlgebra.lean",
+      "git_blob_sha1": "c1633284ab4d1367c4051baee5127c2af28bc3f6",
+      "sha256": "3026c60e72cb8e7ab35e95ed1d53ef8cbc6cbff7854b357c1aca6bf162a3200b"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/WedgeAssociativity.lean",
+      "git_blob_sha1": "6cc8a7450c47ad40a2a10ebdb071d43d3554e377",
+      "sha256": "7f77b1d9925a44039dd08b61cb121215451fb917a3df93819acc687595e90f57"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/WedgeCalculus.lean",
+      "git_blob_sha1": "d117e686c2842a4e5d0bd973c73ecc620a6c9111",
+      "sha256": "e6c7ab5226c26b474af55e8cbb6e03933e6049485050a6cfac5365f3b42a6b29"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/WedgeDecomposition.lean",
+      "git_blob_sha1": "503d235226e3786fbd9844b832cc696e33d510ff",
+      "sha256": "c1d40ffc61a8e46f4c8faff4cd77f7c13ff3af5897cc63f6083e91736f4a3189"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/WedgeEven.lean",
+      "git_blob_sha1": "8eafa5c087e340fe562f9e03fded4190e8128f4d",
+      "sha256": "1f118d1e2f92933efd4047b09c81f66d2e47ca3b9f408c5e89b46c3f24c0fd98"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/WedgeOne.lean",
+      "git_blob_sha1": "a1c0c470a8f4ef598c9cbec5c864b611da9d0298",
+      "sha256": "93734abbf5ee5a76e1bab59b6725a0cbd45f1493896a81b2039716ba9441834b"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/WedgeTwoDifferentialAlgebra.lean",
+      "git_blob_sha1": "5b5dcc4d9d7744b0b6c0333b07e56018354f7a80",
+      "sha256": "3fa331867939c27a5e5e67b4cd6fbfb30aecb15e651496da2dd7ce78be05a881"
+    },
+    {
+      "path": "lean/OAI/Analysis/Mahler/WedgeUnit.lean",
+      "git_blob_sha1": "e4de8d8c45d1614ca1afb5fcc4c1aaca21e1cd67",
+      "sha256": "5fa3db58867f47badd325a382a4adff9d1fbb3713caab424f87bad0d0f158ba7"
     },
     {
       "path": "lean/OAI/Analysis/TraceCone/Basic.lean",
@@ -714,14 +1879,69 @@
       "sha256": "5c03b192161ba203e82cfededd01b435f390a8cc03a430ef408734342161c7df"
     },
     {
+      "path": "lean/OAI/Probability/SwitchChain/ActualTripleSquare.lean",
+      "git_blob_sha1": "a129df84499e9a9e51081d109aee1e6f43a955b5",
+      "sha256": "bdaa7a751df0774e7f00af7b5b90fad66105e385cd1db46d158da37308cd1fd9"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/BalancedBlockVariance.lean",
+      "git_blob_sha1": "b8530f7bdb3c63db05f00a811d83c10b156711ee",
+      "sha256": "75f29e043b63dcd80180389a72a7d9b0f2a8f380cab93c77babc2de909ac200e"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/BinaryAssignments.lean",
+      "git_blob_sha1": "8aee13285647939e4b002f265b31a8ef23fe8a08",
+      "sha256": "66501f891b8f0f57e49e1e4730b92da036adba1e46e97373581f80cc19279293"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/BinaryColumnPartitions.lean",
+      "git_blob_sha1": "f1b7cf0e6ed3500783f59569614ffc238a0dbac0",
+      "sha256": "169cdcd4cb6f29d587cc380a66ea45e2204ca2272714fa429a536072fb4fce08"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/CellProjectionTransport.lean",
+      "git_blob_sha1": "8b19da766eb5308d5d5c732a94083d71e0737cb9",
+      "sha256": "cf7478273ff92e1e522256de44bccf608ec6a9d6d24bbf677d191af45f1a98c7"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/CountCoupling.lean",
+      "git_blob_sha1": "efeceed66e9c013e61409c068eb9ffd4c407b263",
+      "sha256": "0f5aa62f85b9531624df49147bb7cb681b2cfa6903f259444dfc5cf774461478"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/CountCovering.lean",
+      "git_blob_sha1": "9636aeed7141ca72ccf0055489d329037e12244d",
+      "sha256": "5ce30f9daffc03dc72b7850047ad26fd1fdd99cc7b1454758c9a5aa09f5c33ff"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/CountEigenEquation.lean",
+      "git_blob_sha1": "0abcc49ddcb88ac902899e23094603773b5103ee",
+      "sha256": "f39bdd800cba3688b55552b248177cc4eec9475440fe0d441aa01a85b5dc75ed"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/CountEigenvalue.lean",
+      "git_blob_sha1": "bde6720dfd0e12032e5e41b844ba80147841a966",
+      "sha256": "4c56deda7e93e76988612e08c8f6beb0caab8eadc000a29f848c81a3a6fcd202"
+    },
+    {
       "path": "lean/OAI/Probability/SwitchChain/CrossCellAffineComposition.lean",
       "git_blob_sha1": "038446c5326fb2a9b425bb535b528dde4b90a168",
       "sha256": "8ef3312911467872d25fc40b777572694945fe4387c8ef8979c03d37976afa1f"
     },
     {
+      "path": "lean/OAI/Probability/SwitchChain/CrossCellConditionalExpectation.lean",
+      "git_blob_sha1": "a1dbc7632c997aa043c1d7c5d1c389f52dfec4a9",
+      "sha256": "e8e6a48bb0d0daa759213972025b1ba3a8b6e96cf166220f2259f4fbb947f5ea"
+    },
+    {
       "path": "lean/OAI/Probability/SwitchChain/CrossCellMoments.lean",
       "git_blob_sha1": "35c18f2a694dfa7e82af480e5cc4890d14d2a6e1",
       "sha256": "6feabcda1ea00ea2e5a3465a589d82f06a6d29e4a6fc5adb35389fe3359d874f"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/CrossCovariance.lean",
+      "git_blob_sha1": "4652418b9e2e2cc386ee36b58d42ae13e4e948bd",
+      "sha256": "e860c47dbae2bfe233c8e65de870647ba48cf609e2c2395b865c052a581af565"
     },
     {
       "path": "lean/OAI/Probability/SwitchChain/CrossIndependent.lean",
@@ -734,14 +1954,39 @@
       "sha256": "840ed656ed02ada5a8771540f37dad04251aa74e1ec2dc59dfc34649ca504ed6"
     },
     {
+      "path": "lean/OAI/Probability/SwitchChain/CrossToggleCells.lean",
+      "git_blob_sha1": "1414e9ef3f88431d3cca7a91c5a2b7e3283c4ab2",
+      "sha256": "88fcce3ad0b4f9d5cadc6c8fa1ac6d92c291f679fd2753ff6d3603c10bdcffaa"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/CrossToggleGain.lean",
+      "git_blob_sha1": "e3c095452f5f2e2e65d30e21fb455f8f0d54b5f2",
+      "sha256": "9f24f379ae134607ee194fb052ff51d1a56e1fca74ab9971212a1eae9dbadd6e"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/CrossTogglePairs.lean",
+      "git_blob_sha1": "7b42b0ed930aebe4fa1580683af215d1e5d1adc3",
+      "sha256": "6be8a12dd2bf80fce4cd29ceafe70249d5a90ba34a7a564c823477f01488be43"
+    },
+    {
       "path": "lean/OAI/Probability/SwitchChain/Definitions.lean",
       "git_blob_sha1": "5801f8189cfa3ce4b53d2287627a0a740a6f6810",
       "sha256": "62cd5736b5403852e1102e71a5ef17efe6fc03e80417c625e030b54ffe3b747c"
     },
     {
+      "path": "lean/OAI/Probability/SwitchChain/DisjointBoundary.lean",
+      "git_blob_sha1": "bdbc16b36ee93a502dab17b43d5d23331e0133e7",
+      "sha256": "249875416b320014af4dbde2f9ea6324c3dd1f18a8840d27481968a7582df07c"
+    },
+    {
       "path": "lean/OAI/Probability/SwitchChain/DisjointCellCounting.lean",
       "git_blob_sha1": "c13ceb1aa4c381310efaf458dc8491f6040bea13",
       "sha256": "f4bdc3d19c0867d9d999a53067d9bf2331009f91f9bd92e795a78fab980d9afb"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/DisjointCellGlobal.lean",
+      "git_blob_sha1": "4e8f1a8f864912880677b879a54eb8e58e50692d",
+      "sha256": "13467de85493d8a801972c7432dee01c210e6926584c76c727d3191a426e993c"
     },
     {
       "path": "lean/OAI/Probability/SwitchChain/DisjointCoordinateFeasibility.lean",
@@ -764,9 +2009,149 @@
       "sha256": "483366d566098d2ae3645aa64b31290f2c23e7e6216a82a4a775262122fdc772"
     },
     {
+      "path": "lean/OAI/Probability/SwitchChain/DisjointFiberCell.lean",
+      "git_blob_sha1": "7b04b95140f1345a86a0fdf391dc655f26359c45",
+      "sha256": "d7aeaff25610ca38c658cea26e93173e079d55f101d7ce99d1cd2b81b4ce8c96"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/DisjointFiberCoordinates.lean",
+      "git_blob_sha1": "4a01b6a9fbd8a59a378cd263f2663742df1be759",
+      "sha256": "2f492bfd07e7f8878cdecb40923ce77d5b66513ac775abed7d6ae0484f130d92"
+    },
+    {
       "path": "lean/OAI/Probability/SwitchChain/DisjointGraphAffine.lean",
       "git_blob_sha1": "85abe54c38f295ba3111e7ebc516452436d5f6af",
       "sha256": "ccd69d396b9aaf8969429a9de8888ef3877b9af0412b074e4cc46670ca504d83"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/DisjointInternal.lean",
+      "git_blob_sha1": "d12fb7c1183712d0a3e7050e752249a3a3b84742",
+      "sha256": "24a45d7db395fffe6aa75527240b41093fe4490fa16fe358339fe4be1c273b01"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/DisjointProjectionCell.lean",
+      "git_blob_sha1": "9ec5d6095714c76d06f9af95627a7d5e64fca9f9",
+      "sha256": "ad076531d00f0e5fe8f92ba5d8e0c2a9601ed59df6418280ff160cc9b6c5e855"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/DisjointRealization.lean",
+      "git_blob_sha1": "f494d164c6fb417e90a30d9aa8a4e12a64a3730d",
+      "sha256": "e316ea394f16aacf16d302198741d66ee70f3c2afb6324e6349653172634bbcb"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/DisjointReconstruct.lean",
+      "git_blob_sha1": "581da132f21f7858561fcec46d7952fd30b65b38",
+      "sha256": "30f6308971a51b0aff62c2bd470306015d7e08ff18cf19335d943ca2d8a1070d"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/DisjointStateCell.lean",
+      "git_blob_sha1": "3c61575b9350afdfcf547fc981e5b232f28427fa",
+      "sha256": "4e3d030daadae63ea1d65e7f4358b427153632629eb7f6959ad5ddf9b95d5a68"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/DisjointStateLaw.lean",
+      "git_blob_sha1": "a08741f86e6ff58c272cdf82d06ad9c0c5eb2d05",
+      "sha256": "6e5d68442b8a34b0d7a22b82adbf77bbf4e1debdb9c00e3e3c11e4714225f52f"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/EnergyTransfer.lean",
+      "git_blob_sha1": "8d5de3d1dc848ee9151fdba7ef8b84a0791d6063",
+      "sha256": "1d7d8cbca36e7b4e6a1fd04b934547dd8d9b840a7c2ba3355272fba7b2c0a14d"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/FiberLabelCounting.lean",
+      "git_blob_sha1": "7c3c012ac1c7ad7a7d6048a994967a179a532013",
+      "sha256": "0834ea4e09113f824542d3576902a401cdefbe357bf05b7c12292cf8855281ba"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/FiniteKernelAlgebra.lean",
+      "git_blob_sha1": "cfc1d2d73fb37ef29d20bf168c2374e2db595c04",
+      "sha256": "b33335c3bd4c03ba9e771ff306b718070cea363c72ce9583e287d3f348cdbeee"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/FiniteKernelTV.lean",
+      "git_blob_sha1": "cef0c3a03cd6e7bb3cc9aee30537b31e7a63a9d5",
+      "sha256": "69a2b5ecd241e72b47adc223c666d474dd5eafa3e9287e520410426c180a7493"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/FiniteVarianceDecomposition.lean",
+      "git_blob_sha1": "46c0bedf4eea7f0de46854902049ee7681b1b103",
+      "sha256": "2c47a1274ad3f86b948d996bcf4bb2e5d704f2b7000137c3fafd90e161c55b77"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/FiniteVarianceEuclidean.lean",
+      "git_blob_sha1": "7d020417b0a4d1b679bee0ba13b0e999894c9777",
+      "sha256": "e822a97f2cda8406d7b318a655c6012963107b04b8e8ec731674e00d249ed10e"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/FixedBlockCount.lean",
+      "git_blob_sha1": "6010f9c79e6588283f33c42fa1e25ae50b76b83e",
+      "sha256": "e70838af817fe1aef476a2fbda4801780e0f3d67cd8e1a29b8d7b94f1d117925"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/FixedBlockMarginal.lean",
+      "git_blob_sha1": "4096dba607df9731134d839549d88288127fd8b9",
+      "sha256": "2c1c7f3f82ef036eaa750e0720ef31dce3c8b8ce1c089f1a7ff9daa0f42c65e4"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/FixedBlockPartitions.lean",
+      "git_blob_sha1": "61f670930aa12dfd7c369e0598b2d2e93aa16938",
+      "sha256": "acc9adc6bb7cdbf8f7b1ce5d00cc351fbffbafe0132dd8b6de6866f8a3024793"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/FixedBlockVariance.lean",
+      "git_blob_sha1": "7a845bdc27700e8d1a2ffa25b77f3d72dfda1a52",
+      "sha256": "9f649e012c547fed8cce7822f323cf1520ecd82857ce9102930ddeed27f0b8a6"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/ForcedColumns.lean",
+      "git_blob_sha1": "3e2e5a4f118ceffd3d3e751e55f41256a4f7ea4a",
+      "sha256": "5ff9d5135aa92adfd19eea7a60f881b80f303d464afd8ecf9ade6e317536b3fb"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/FourVertexSwitch.lean",
+      "git_blob_sha1": "8df231b50fe9e269a8af375cda23267643c82f4d",
+      "sha256": "c6e355ef21f68a033a97f0af79bf997986f87782adcf22b598aaa45b8f7ad6f5"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/FrameSynthesis.lean",
+      "git_blob_sha1": "5efb35d3435d44e00e9079d10600f15e589634a3",
+      "sha256": "abec6e2ef80be8f48fe4361dd8802aad53fcb115a576cd43c33eaa264fe94bdf"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/FrozenRows.lean",
+      "git_blob_sha1": "2cf2f511857b5b66a5ac7dbd5e0ca377eba1d3e5",
+      "sha256": "03c36830c661fd4fff3fd23a7a277ca4107d76799ffb4f3bba0a219860c5449d"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/GramComparison.lean",
+      "git_blob_sha1": "05cd3c0e02712a45b97d07fb04d915e738baaf7f",
+      "sha256": "4d8e6e7a9aa1910149c0b39a8a143427fe3898c2b1ede5c65ca1ca5fa826f666"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/HavelConnectivity.lean",
+      "git_blob_sha1": "168fce0c747db40f648fbbb59defe86391949f29",
+      "sha256": "383773079074e1f751c293c6a395eb8dac50c7f63c46fba6aa21658b6834e866"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/HavelInduction.lean",
+      "git_blob_sha1": "f05d8cd9911c22990751d9f69d1d390cc202eb70",
+      "sha256": "0e40e2bda785143e5bb2484256daf49730deaf96ea39b5d614c610c5f5080722"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/InitialTV.lean",
+      "git_blob_sha1": "71c707ce6fb9125907f72909609b3b4e19df0640",
+      "sha256": "f0754421702578fde0a7b7f43bdea63b53d93482c80451d15d0f49d132e6c7eb"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/InitialTVGraph.lean",
+      "git_blob_sha1": "32f236e0d146b922b4913153c822a2a911c19610",
+      "sha256": "c5844d08f2fc7c5575a18684379132d1a7670256db8c02af72cb87c9551219ca"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/KernelNormalization.lean",
+      "git_blob_sha1": "c61402b0460d38858233baedce079404db59934c",
+      "sha256": "c2869bef0fab4d5b0fe11ccc773871249e894d7ff8679cc16f24e79821a1702a"
     },
     {
       "path": "lean/OAI/Probability/SwitchChain/LocalGapEndgame.lean",
@@ -777,6 +2162,36 @@
       "path": "lean/OAI/Probability/SwitchChain/Main.lean",
       "git_blob_sha1": "f57bfdeb78b3af3dec46c90aeaa145b85d044140",
       "sha256": "ade00e55a157ee7bc2dc1fff71777e8cf717cbba7463819938f62de639c32d15"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/MainFromGap.lean",
+      "git_blob_sha1": "d71e509ab730ee6b0ad1b2959720e8e2890908d3",
+      "sha256": "8a667ce85e3b8e1696d89409430f322905a2b1faca139c9c2d30ede7a34983d8"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/MatchingCount.lean",
+      "git_blob_sha1": "0b8e91018d4baa3226473e61c1c9c2b662c36484",
+      "sha256": "a8aac391ecdc71580014fd815139a4a417710f0921f7007f2c7158b6331d84c1"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/MatrixRowVariance.lean",
+      "git_blob_sha1": "ea6cbc36c125c3e51998dbcf60467d540be508ee",
+      "sha256": "c0e4fa05d4383275cd2ecc3ea3c8167141c7ace96e7c61828f9af846c98225ae"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/MixingArithmetic.lean",
+      "git_blob_sha1": "9c70b7b11bf167bd681f14d8f5220b67d140b6a3",
+      "sha256": "5cd974745182df0a37f11a760a97d9e1d8dd497a986a4c0434a159f2d83cfb7f"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/MixingTimeFromTV.lean",
+      "git_blob_sha1": "40e447a6dac0f31ed9f37873276411e6d0415c12",
+      "sha256": "a0b495886f48a7aca56eb736d5bdcf6750ffde03f378299172e32cf05f321ef1"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/NeighborAlignment.lean",
+      "git_blob_sha1": "568aea545cf79cd236c7b04d8f8efc63eb290339",
+      "sha256": "876093bbe8e96bf8b8ee7c545eebd104dfc4f6ab25c8a822cee1af4a18f37072"
     },
     {
       "path": "lean/OAI/Probability/SwitchChain/OrthogonalPairResampling.lean",
@@ -794,9 +2209,34 @@
       "sha256": "37ebfd5f3d2513521b6ecb88083b38d4fc33cceb5a6e99071b9320ed2455a8a3"
     },
     {
+      "path": "lean/OAI/Probability/SwitchChain/PairAggregation.lean",
+      "git_blob_sha1": "4d5fdd56dbf714332c40bb1dd56f40d63dba864e",
+      "sha256": "bf4436c612d46618a782cb8d1150e32ece55d246f44fef5f9bd8857c183d4b3d"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairAssignmentMoves.lean",
+      "git_blob_sha1": "252c2a133a226e53a98081c7fee30d8fddd48065",
+      "sha256": "7f255c22e4f781855443d262f8cddcd67c6a5706784cb221f0c500b253186a9b"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairCrossToggleTransport.lean",
+      "git_blob_sha1": "089e2db2340c4692a923fa2d436099d843bfabf9",
+      "sha256": "67bc01983266eb9ab0f8bc60e408ca04ba1f423e245b0353814a293a51e686f4"
+    },
+    {
       "path": "lean/OAI/Probability/SwitchChain/PairDisjointAssembly.lean",
       "git_blob_sha1": "31b9bad18286c4ad5623d1e75a179955d3564626",
       "sha256": "7dd67cb22cbab2f0ad7ef9fa8981e1f7399e817dbb6c86e557bfd6af0ddb380e"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairDisjointBudget.lean",
+      "git_blob_sha1": "082f4a75c350d0bec068e0893f244bf625755d8f",
+      "sha256": "6bb0632096b8fd8c48d969ff2a11f39979fd5390d10599ae40226b637e28a154"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairEqualityBudget.lean",
+      "git_blob_sha1": "f82b9420d8510cb89aa8e14e732589c29ad479d1",
+      "sha256": "d9cd633ff5c79f8b838b12e4fe7c52b0c69ccc47493e7517a7dc64dd48d042ff"
     },
     {
       "path": "lean/OAI/Probability/SwitchChain/PairEqualityBudgetUnordered.lean",
@@ -804,14 +2244,464 @@
       "sha256": "c4834dc1308763f26f570841215aa7f908e867b2976bec9adab42433a8cf323e"
     },
     {
+      "path": "lean/OAI/Probability/SwitchChain/PairEqualityLocalization.lean",
+      "git_blob_sha1": "f34c7a85d0e2aae3aa760a3a0d55b6a866a2fb4a",
+      "sha256": "b60c26e6d9fd82cdb2a04faeb96aa81df751e4629d4f6c89694ab6c64930e022"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairEqualityOrientation.lean",
+      "git_blob_sha1": "d56859644e5943e2e4c713546c9b918a7d6dc9ec",
+      "sha256": "3f78e926ce6b209044f32749f1d63357335d8063799f1e3c877c76c920913e19"
+    },
+    {
       "path": "lean/OAI/Probability/SwitchChain/PairEqualityProjection.lean",
       "git_blob_sha1": "7de0cafcfc18ed9c7e544966d156313e2ab7afb7",
       "sha256": "c38a28a4abde4aa0baf7e5edcac68cd924ff2594a4b9fe27b04b2942b2cfbed4"
     },
     {
+      "path": "lean/OAI/Probability/SwitchChain/PairEqualityRestriction.lean",
+      "git_blob_sha1": "9ac4df33f5dc4c0192c3ba2350339f3e953300ff",
+      "sha256": "0321af7d7260475cd742194e60d338a62cb8585727596dccb3002016d0d5f236"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairEqualitySlice.lean",
+      "git_blob_sha1": "ed2df4ce689960c7a6c01501651eeff5daf5ab38",
+      "sha256": "24ec4b769ec5074ace82dfafbe88e5560af892b458301ceac4cb6b525d6dfec8"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairEqualityUnordered.lean",
+      "git_blob_sha1": "70008e903e32e0f939966336f8af4bffd34b8da2",
+      "sha256": "bb8c74e90166fba41772091ca833e7ef57ec41c3dd9028df07eadf5e568e229b"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairEqualityUnorderedSum.lean",
+      "git_blob_sha1": "4ff82cb1d82bf686ff3c97ddaebef2eea423a360",
+      "sha256": "8f945def26bdb7f305f80ba4d940efd2969eb37e60ef92cbd4a0bea364680d93"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairFiber.lean",
+      "git_blob_sha1": "2df1be5057c1ab63a30352918f0d37b8e7bf6dc7",
+      "sha256": "2b4253ac143e383fbc3350019dd9eb8f2749dbf1c832b99e861cbc427a83cbca"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairFiberBridge.lean",
+      "git_blob_sha1": "8cd22371dc3537ce693725a2f5999987b628d9a4",
+      "sha256": "38c3e181f707e76c77f8f59da832465d5a2fbac721c66a39ff442bbad92b5415"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairFiberConnectivity.lean",
+      "git_blob_sha1": "a43cf05bd521703e12a721e81984dccac2e5a86b",
+      "sha256": "609f18e4371287750cea13d07d8e04375ae66e7b6694a07a7f2ca53ebbe19c19"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairFiberDegree.lean",
+      "git_blob_sha1": "f75780f68b1e0cdbebe66466d2d8357b3ba5e932",
+      "sha256": "ff2e90564a85c1f46252e662f917d0b817968ab9bc2918c52a96cb6b170e370a"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairFiberEnergy.lean",
+      "git_blob_sha1": "41ed40824600bf4017d3eb8bf882c2d79023fe6e",
+      "sha256": "4821101d673b36008c18b91ba74ee087e94187ef2cfec2b4a66a34f2e5d12343"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairFiberEqualityTransport.lean",
+      "git_blob_sha1": "2a2e48a1120df634b89ab91704718185f5dfc021",
+      "sha256": "81168b0b88409ae9c9667204d184b50c6173d264df8e255256a4e3e7745bb3ef"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairFiberEquiv.lean",
+      "git_blob_sha1": "dc294b1e7bf10cd080bafe341534d9f3b99b7450",
+      "sha256": "00e8bd86949098685ea79061dfddde7188afd923ed02637c125f24c5a1dc4268"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairFiberOrientation.lean",
+      "git_blob_sha1": "bcf459476e1626b4606c5fc176ca62b5817a02a4",
+      "sha256": "ea68218a30cc76265eedee974a1ac3d06823fc03d06681e85e6f219f37a0d097"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairFiberRedundancy.lean",
+      "git_blob_sha1": "3a0c8e14d3e7b10fce173e76b148e94900379990",
+      "sha256": "94caacc30d3959d68418858cd6e56036d6d7d3f128902c7a9030294c9c743839"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairFiberSliceComparison.lean",
+      "git_blob_sha1": "04fe47d8a52a095726e50354e2206422303a88f3",
+      "sha256": "d1d72e2e338d3ce06259798de8be58da77fd628566fb98ea59943be54bfcea9a"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairFiberTransport.lean",
+      "git_blob_sha1": "7e4ba4c9d569721235b87d29cbc4c06b93a6a2eb",
+      "sha256": "3f9dae285623a277294f953e3b2cadedbaac8b9a001e6ab2410dc097217efd3d"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairFibers.lean",
+      "git_blob_sha1": "d2736f7f27aa0b775788a60b2934e876254f35fe",
+      "sha256": "01ac43bb20ae3ac9cf3b9a1aa19bad449322be37aca2bfcd68873b2b5f37c49f"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairGeneratorSquare.lean",
+      "git_blob_sha1": "a56bdd7e68c251dd026d44413bdd31820ba43b63",
+      "sha256": "e6af454fbb904bb4e82d7e65167fff5e76041e015cc5f122cb92cecf9f07f48b"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairLocalComparison.lean",
+      "git_blob_sha1": "3574b53d90fd3533ddc34cead1b2bccf5f869dd0",
+      "sha256": "d33c38b3ffe0984fb88aaa0721e81c92a82417df906dc1a56e72c3a2f5850344"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairOrbit.lean",
+      "git_blob_sha1": "7c05ef31bc8310bcd0537d4da2ef347821909cc6",
+      "sha256": "d3953398f9825470b7940945237cdb801646c39e0a6c0c77cb98905b8406a3bc"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairPoincare.lean",
+      "git_blob_sha1": "3d4cfccf05180857df82bc4488327b7cc4029930",
+      "sha256": "41596276f2825548821dbe0790f0f828955ede902ad063cd71dc6e88c8f38d9f"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairProjectionCell.lean",
+      "git_blob_sha1": "2a7db8ff31c7991d9555f9a242afabb553681352",
+      "sha256": "eda9d2531df28af1b186e09e32781bc4e321302bab8ba9c398c5566e4b076959"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairRangeInteraction.lean",
+      "git_blob_sha1": "d7b52323680b3f1a9d9ac501b53dc93112164858",
+      "sha256": "a625848e86bdda6e1596ec6bfc95cb9517798d112bf20baba84bece1cb4e5f49"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairSquaredEnergy.lean",
+      "git_blob_sha1": "58bfac976e7bf6ab494a555f9554cc2861bf43e7",
+      "sha256": "dade12d536d6fad72f4a17d815f8e13255573e22d1a14be416f262693572ca83"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairSwapFlip.lean",
+      "git_blob_sha1": "4ace789fbcbcf365499176d914705bf3ef4c5ed3",
+      "sha256": "ba0f148fa6bd686944c6030db4721a871af7d2241424299af4d8dfbba96bb8e3"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairSwapFlipProjection.lean",
+      "git_blob_sha1": "d98dd8dea4a66974ec118ff668271630e7b4a731",
+      "sha256": "278ef68b221bfc909b949fe39bf5e1e9ce0c0ebbc25443417489dd54c387062b"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairSwapInjectivity.lean",
+      "git_blob_sha1": "5c82a22108f58f957c2de2c8481cf4851d1b4d33",
+      "sha256": "bb010b212840603e8015570642d9cd50c86ba33fdf97251f6c898d0cd2f592b5"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairSwitchComparison.lean",
+      "git_blob_sha1": "76ea6f82f64ec69723d240791d9c4b3de5a9cf34",
+      "sha256": "cf41519a505903c07ed34c0025519ac97dbf2f98165eb213d8b0ae1975e6e2a3"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairTradeSwitch.lean",
+      "git_blob_sha1": "40790925764527e1e2916b6c9039c3841aa04e35",
+      "sha256": "338c5524bdf0754ee58826da35ff82e5ab3ae0c92313d9653b6703251994bd6d"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PairTripleBridge.lean",
+      "git_blob_sha1": "c68c9100c924c477800bffbffa788f71e7fbf7da",
+      "sha256": "66af510d346755fcf6c8a1a86129cb4a03e1bc100a719fec25f5cc001930c770"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PermutationFactors.lean",
+      "git_blob_sha1": "ff97a5056d577d08f48d3eacbea711d5e607b048",
+      "sha256": "6ed01342bf6f05b0844b52843d75622494bc12281ca4602c1b69a9d671a0028a"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PermutationGenerator.lean",
+      "git_blob_sha1": "656dd32ab4febd4ad65435aa2112e70e8588c57d",
+      "sha256": "03964eef72a86916e12c7c1b41c5194a1c5edf73e7e014e5f17fb2728c09f5c2"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/PermutationPathComparison.lean",
+      "git_blob_sha1": "978b52f923cd6e72bd995da219a1ccf146d8858b",
+      "sha256": "c33a00a3518a84ac46929be8bfafd2641b6630e7081de2a2a31c6c581fd41105"
+    },
+    {
       "path": "lean/OAI/Probability/SwitchChain/ProjectionRangeInteraction.lean",
       "git_blob_sha1": "db186e150a6a82b01ab063691d379c1d60cc0d43",
       "sha256": "5a001bed26185f8ced573ecdcabcf78591fb695dda91ed9a5231debe5184702a"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/ProjectionTools.lean",
+      "git_blob_sha1": "877689278df6c8610725f22b47f8c50d2fab2303",
+      "sha256": "b00d67db35f8b84435b91a0c422d66853c82470d3a67ceb5841ac60ad1714621"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/ProposalLaplacian.lean",
+      "git_blob_sha1": "cf683a0b20e9e679ef50d4dfa2651f3554b1ae2e",
+      "sha256": "1c9430b833d8e10a84e055236da8c73512cf4078b8003e10ffb0b4bd19d85621"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/ProposalUniqueness.lean",
+      "git_blob_sha1": "d59ff3b8ea945010f7830ce0f2e6165b51f6cfce",
+      "sha256": "8c689e3c72630b43da3d561caecdc871140ac3dca7ff072fbf7304bf87c91aaf"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/RankOneInteraction.lean",
+      "git_blob_sha1": "051db951cf1f9e013d0cb37744b9837aee0814cb",
+      "sha256": "f828884f0ea5224c9909d14ef569cc10ddbbd6f0bacc6b4fede37f884557413f"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SliceActualSynthesis.lean",
+      "git_blob_sha1": "36d75feb23603c877971245f4121366160acc7e1",
+      "sha256": "0e2020a299a35368ebdab02fc34bc584d4a0212114b1372b30e247962f198409"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SliceBounds.lean",
+      "git_blob_sha1": "d48c50e92ab44c65758102bb78ea029fb2657471",
+      "sha256": "32565eb15330961a06a8a5a3906537339c4265608fd672be0a029e7295ef4ee6"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SliceCardEncoding.lean",
+      "git_blob_sha1": "ee7f2ec0368a781da6c85ac26fb1566813b67b9a",
+      "sha256": "0dae6bc65edd736866c267da6f81589e64632b489180d93a72f3c2f8aa5e0285"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SliceCoefficientAlgebra.lean",
+      "git_blob_sha1": "033bf022f595f2d5d80b64f89f606a7acedbd3b2",
+      "sha256": "8c8470c6314daa21e4987f53af51d8a03d1445c23f0816f38dcaf2c8cebe7988"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SliceEquality.lean",
+      "git_blob_sha1": "ccda6b6bf5c10c9fe00c9881ec66bcb2ff14ebc9",
+      "sha256": "689bd84554d48a25cec67b66f0c2a103762c0fb850b688dd397cd582c693e92b"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SliceEuclideanGenerator.lean",
+      "git_blob_sha1": "10fdb8f098ee79b026c2b872b496a5532cb6f600",
+      "sha256": "5b92614eaa4735a5650e7ddb2701e2bd73a1e790876e461f20e0bfc275ce485f"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SliceFrameProjection.lean",
+      "git_blob_sha1": "576b7efa3254d1b735f9baf3613b8ceb45a4260b",
+      "sha256": "18cb7193fa854470edc998f608e57770288e033cd72aa09b90273473a43c95ce"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SliceGenerator.lean",
+      "git_blob_sha1": "9b52e9538a7ef93f77ed8973ba76783697d9250d",
+      "sha256": "7694658c3d08069a07eaec3af876f57981e024500c9a14672b5fb7302be1d126"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SliceGeneratorEquality.lean",
+      "git_blob_sha1": "726768d47c7641d32b181a6946d2fa8e325ff0ef",
+      "sha256": "ebf362238c67a702e841ce0f1e181f1f6a4437e64126711c97f30dc6970ba8f5"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SliceGeneratorSampling.lean",
+      "git_blob_sha1": "dce7b567cb6f2d239061f75bb0eeaeb74d3d9050",
+      "sha256": "c0ec4f4e7b6b9b784914eaae2e1bf3118e997a0be521cbcd245ad31c50781418"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SliceGramAction.lean",
+      "git_blob_sha1": "696fc784bfcdcc67fcbbdb2b05d4bb29f5e0a836",
+      "sha256": "88b9a06d856761194c8c193c5fc6e0fdce6c5d0feedd47289574caf162c90663"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SliceGramConstant.lean",
+      "git_blob_sha1": "2e0af4f862d71a8991ee79fb972a760f1a13c6c5",
+      "sha256": "c8e5aa88d64b5a2d1811ce78b14007a810b12a10ab8257d9059851d029f1512c"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SliceGramOrbit.lean",
+      "git_blob_sha1": "f60d2dcf02fc9f18ca6bd906ff8d822a0b6d92b2",
+      "sha256": "e75b7f01405c1f04ecc8a8abf30075194b0e3d1eac3f309f40af166c91675712"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SliceGramProfile.lean",
+      "git_blob_sha1": "a9535bfaded34d5e47acf3f8557d12272d6190b2",
+      "sha256": "e54651483b51357f45fb508cf65c34ae10002229e80f69ef2a19ac7308dad1fd"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SliceGramScalars.lean",
+      "git_blob_sha1": "4cae91ecbb3dd0c2e7d8ebb7c13c648ec2a24d57",
+      "sha256": "4d8a3d3e01e93502df8223c5afe1fb90b33f20407d02d069aacbf72e7e4621ff"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SliceImageNorm.lean",
+      "git_blob_sha1": "0c441aab168bf8a859446e046cd53842f8b1f32e",
+      "sha256": "4f214fd6296fb80d77d274f880058ad2478508f9bf2815df8e76478de9566b69"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SliceMoments.lean",
+      "git_blob_sha1": "1772fcf48423314cbfc6ccd6de1f46f5ff89b79a",
+      "sha256": "9f8776a077ef7794bc00fd43c4b2387e25d9c9bd8ff2a02d904b30bfb6ddd29f"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SliceNormalizedFamily.lean",
+      "git_blob_sha1": "b37a6b7ee87e901588dab1525968802fc08f1ae5",
+      "sha256": "527525f5a9fe17c7c913d0ffe286443336ee425cd7f999ab4a9bb446665723e1"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SliceOperatorComparison.lean",
+      "git_blob_sha1": "d24dda3d27e41f604b9f8fd1b2175878bde452e0",
+      "sha256": "335e7d87dff29a446d682a3cf34dcced91cb45176b61928e3fbd83c65159bf22"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SlicePathComparison.lean",
+      "git_blob_sha1": "cfb4421f01732669e48f4a8a2ab26aff622112bd",
+      "sha256": "ba4f4372e9b463596d62e3777f1682942925f470c27bcbff3f8dbad7ead9204a"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SlicePermutationAction.lean",
+      "git_blob_sha1": "608fac1906c07eb1fe4255ee4c8c7309f90274c3",
+      "sha256": "74ad4658f7967e9f4305a2477831fe73c1b918cd393f0a1ce620930071182d5b"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SliceProjectionComparison.lean",
+      "git_blob_sha1": "2148cc1fd928bfe231c777fdf34ece8a76f02aaf",
+      "sha256": "85bc3d03be9a354e154c7cb457c27372d63ac001498805516715011551f62819"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SliceReindexedComparison.lean",
+      "git_blob_sha1": "25d95a52d15bc4ade3f14882505a82f040cde2a5",
+      "sha256": "adb01137e58d69d841d010d17d48da560700f2e823ce0244a0a28ab0756491db"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SliceSynthesis.lean",
+      "git_blob_sha1": "e0f0c18668d22bf053c0d8fd23bb7c9cd8139925",
+      "sha256": "2724af0b60ae91ee8d2885073d431f3fe47b17b83c5d7495a324246e790f627c"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SliceSynthesisAction.lean",
+      "git_blob_sha1": "9d6bd759fdf84a79c6e2f7bd540f11be6dfcda83",
+      "sha256": "222a6f545736b234943faf533af00162bcd379c68831340316816e2537514fca"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SliceSynthesisBounds.lean",
+      "git_blob_sha1": "0292de72cfbe4d75af4e2f7149eb8173c05028dd",
+      "sha256": "32bb7cff2159005f06a6b7bb98422598548f6b579935a81a938cf1e6cc0e2030"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SpectralFromSquare.lean",
+      "git_blob_sha1": "a1cd3500d8cf3a2f292ce388e75683e288d96626",
+      "sha256": "3782cf6883e98c95cab759b88aa174735d62e333ce39fb0e52905f85e7ff21c8"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SwitchFlip.lean",
+      "git_blob_sha1": "aa7be430cfd9b7e60354de570927d7a6805bfb92",
+      "sha256": "ccd1d97d770082e61f0ca08b4a734718f69ed88496a2681824b795c81d29710a"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SwitchFoundations.lean",
+      "git_blob_sha1": "884605a51692c7d10ba1b0a7939cd2e1bb95b20a",
+      "sha256": "f20919edc9152cf689a86607879096588f6b6476fa04bf8f43ad3fbd6f18df4c"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SwitchInFiber.lean",
+      "git_blob_sha1": "b0e5bec32cc0cee972b646856429b5a41b8af564",
+      "sha256": "eb2745947d421c560d344c531bf92d7b9d22148ab9a7d0271f95ac23fcbb1e55"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SwitchLaplacian.lean",
+      "git_blob_sha1": "7740a87b180adb4729eb1fe40bd7ba44918253e9",
+      "sha256": "ab226af72ef76387b10880833e962957d7886c76d2bfeeb5dca9ada9f3a97e4e"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SwitchMultiplicity.lean",
+      "git_blob_sha1": "3394900bbb2ba1fccac23aa0f2ec6d7f8426c018",
+      "sha256": "ebc092deb9843180f64be8be2199113c51d97f4266da0c740353dc37c123e087"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SwitchPairFiber.lean",
+      "git_blob_sha1": "3df0a497dc1f47893583f6dd315924f9cede7165",
+      "sha256": "0c2cbfab5dc18f86ffa440621959eeea370793001fb5c9712bb0a26ba0f2e435"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SwitchTV.lean",
+      "git_blob_sha1": "04effa4148522b91e1a330829b0b82ed5e3efec0",
+      "sha256": "a1b93038793796e3a8b7a3fcb08752580adaef5d4d3376faec4dbe555df61202"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/SwitchWitness.lean",
+      "git_blob_sha1": "2948300b99a2d4b68e28e2e66a6be20d72fd007f",
+      "sha256": "e97a8c6e7502ee98b58807c107c012c5967ed248afb428916572bb2758955820"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/TransitiveAverage.lean",
+      "git_blob_sha1": "bd07bd4228b3bdf7116c6e8775cc9c6b801a5276",
+      "sha256": "88e6e86c49806e1284da73e188a0553fbb7781289d7f2cb069b0540ea4d60bed"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/TripleActualRowBound.lean",
+      "git_blob_sha1": "b1be6644a829c860c761e7a629f28309faa96736",
+      "sha256": "01f7688757b8af1b346be5e90c73b67aafb162238d59c1a9bc4544cc3ce5aa15"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/TripleCellTransport.lean",
+      "git_blob_sha1": "1955ac8cd03ef32861aa2a9f79e8ec647245b67b",
+      "sha256": "acac92fb10ca64bf8713f2fd6e2f8ac4f3aaa28e14d93389d6842bba42fceb7c"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/TripleCellVarianceGluing.lean",
+      "git_blob_sha1": "88f25760b672c8aad89ba91707f48883a6f8e0bb",
+      "sha256": "7b453c87a2b19ee3c44fa533650aa60508d5c3a418c5d905be2d27e492ee9be1"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/TripleCountEigenvalue.lean",
+      "git_blob_sha1": "c671063e1ef75f4273f632c7f10a3520b1d7144f",
+      "sha256": "312d646386e4c1268fd42c065fdb9228f70b64d6cb918b5b653e68bd1c57823a"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/TripleCountGram.lean",
+      "git_blob_sha1": "42e0ae3a4356ed6656626b7db800e0e9796ea072",
+      "sha256": "87e43d372f4b08767b5967362dd55a27acfbd2f9e0ad4574d5ed52a43756b782"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/TripleCountLaw.lean",
+      "git_blob_sha1": "2590fdb0c541e309c73c693c9acff3c60b0c9e98",
+      "sha256": "5241966dafdc5a55a39d48f098417ab80d1fdbd1f32de9a2ca49bc685bd45f8a"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/TripleGraphEncoding.lean",
+      "git_blob_sha1": "b394357ccd4d1ef014b097cb1970bbd2ff277b9a",
+      "sha256": "39554df5f43e38764a5b76c274c1a11395e6c202e96f8e129e1a4c5a533b9597"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/TripleInternalEncoding.lean",
+      "git_blob_sha1": "d0c807661c05562be8c3c061eb471655cd36661d",
+      "sha256": "ea6ac3883d7e9168ee45f4e15e358ee4bd808ee7e2458eb990ed1a9ef21b8fa7"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/TripleMatrixEncoding.lean",
+      "git_blob_sha1": "98de771ce38121761c8da02c11a2633b3284c214",
+      "sha256": "79d2a68e5bb7f27ac530c254ee5eed76de7504c0739940e6d44ece892a4b4fa8"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/TripleMatrixFinEquiv.lean",
+      "git_blob_sha1": "e6dfe2b801b2d014e3fe48374b42c5efb96f1ace",
+      "sha256": "5c6db515b55c2cdd2369b98a3855ad679c89d0071d78765055314d4a0ab1f70c"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/TriplePairFiber.lean",
+      "git_blob_sha1": "5a497a7885b9fcb8daef7fccf715bc2125b322ee",
+      "sha256": "f57767d6300fdc2b5aa22f63115db87928e52bab2306a2764af3947e2ef25670"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/TripleProjectionBridge.lean",
+      "git_blob_sha1": "5a6bf570fc66bb426fa51866e545abb82248a228",
+      "sha256": "433d4a51d1b3ef3235c2fb43573919f8972925ad6366763b366ad47bfe50c183"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/TripleStateReindex.lean",
+      "git_blob_sha1": "4b9baa877b15134e3bc5ef3f03afd2eb755a0d94",
+      "sha256": "bd29eb2e0f44761c784d37fbff689e473d1474350b061204f1bd3a0ba5b15f98"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/UnorderedPairSums.lean",
+      "git_blob_sha1": "2c8f9dfe33afe0506177c73949fb8e1bdf0e7ea2",
+      "sha256": "fc230126733dfc65a26415baf02e3486665c065f6f2e15929afc8509480c13f1"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/VariableBlockVariance.lean",
+      "git_blob_sha1": "d3767c67afd04ab9286c64002cd05d06b5226371",
+      "sha256": "63dc0478db3a27ad81e491f4fcf063f992870e621c9a367fb2c1af178cf8abfb"
+    },
+    {
+      "path": "lean/OAI/Probability/SwitchChain/WeightedConditionalVariance.lean",
+      "git_blob_sha1": "3f1a73a9ab909cf2d02185ab1e9b50de39d6b545",
+      "sha256": "aefd612fe02c3e76ce336ea080112c495276c4eee0c0a7a4da5091893b999196"
     },
     {
       "path": "lean/docs/087.md",

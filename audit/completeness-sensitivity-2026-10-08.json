@@ -1,0 +1,167 @@
+{
+  "definition": "Exploratory sensitivity audit of retained lexical data; not matched tasks or a causal estimate.",
+  "survey_summary_sha256": "a1423b07bb628793b31aedebe14b9cdb830edba3346b68d7a8a9dc9b27247113",
+  "sampled_oai_families": 212,
+  "largest_sampled_families": [
+    {
+      "family": "NumberTheory/Ostmann",
+      "modules": 58,
+      "proofs": 184
+    },
+    {
+      "family": "Combinatorics/Progressions",
+      "modules": 27,
+      "proofs": 290
+    },
+    {
+      "family": "NumberTheory/CubicMoment",
+      "modules": 25,
+      "proofs": 79
+    },
+    {
+      "family": "Analysis/MutuallyUnbiased",
+      "modules": 22,
+      "proofs": 1132
+    },
+    {
+      "family": "NumberTheory/DirichletL",
+      "modules": 22,
+      "proofs": 219
+    },
+    {
+      "family": "Geometry/RCD",
+      "modules": 17,
+      "proofs": 33
+    },
+    {
+      "family": "MeasureTheory/Falconer",
+      "modules": 16,
+      "proofs": 45
+    },
+    {
+      "family": "GroupTheory/PolycyclicRecognition",
+      "modules": 16,
+      "proofs": 42
+    },
+    {
+      "family": "Analysis/KadisonKastler",
+      "modules": 15,
+      "proofs": 45
+    },
+    {
+      "family": "MathematicalPhysics/DefocusingNLS",
+      "modules": 15,
+      "proofs": 45
+    }
+  ],
+  "largest_family_share_of_proof_bearing_modules_percent": 7.3979591836734695,
+  "module_balanced_raw_rates": {
+    "OAI": {
+      "mode_tactic": 92.82459095326453,
+      "local_claims_calc": 61.14103882561944,
+      "arithmetic_algebra": 38.174250082211316,
+      "restricted_simplification": 38.53468995172558,
+      "finite_decision": 6.326803635098912
+    },
+    "Mathlib": {
+      "mode_tactic": 54.49528000017161,
+      "local_claims_calc": 20.978547155034057,
+      "arithmetic_algebra": 2.675756420370401,
+      "restricted_simplification": 12.992362198009271,
+      "finite_decision": 0.18489427564628866
+    }
+  },
+  "equal_family_weight_oai_rates": {
+    "mode_tactic": 90.93511078787026,
+    "local_claims_calc": 57.42261465203339,
+    "arithmetic_algebra": 34.050503084946996,
+    "restricted_simplification": 37.16765534727905,
+    "finite_decision": 4.581399720267534
+  },
+  "leave_one_family_out_oai_rate_ranges": {
+    "mode_tactic": {
+      "minimum_oai_rate": 92.55033443446679,
+      "maximum_oai_rate": 93.00303255831335
+    },
+    "local_claims_calc": {
+      "minimum_oai_rate": 60.45359553144586,
+      "maximum_oai_rate": 62.2537802647436
+    },
+    "arithmetic_algebra": {
+      "minimum_oai_rate": 37.0458217801322,
+      "maximum_oai_rate": 38.74878116552119
+    },
+    "restricted_simplification": {
+      "minimum_oai_rate": 38.07881543683098,
+      "maximum_oai_rate": 39.60438826893487
+    },
+    "finite_decision": {
+      "minimum_oai_rate": 4.6667803539615464,
+      "maximum_oai_rate": 6.68198779728187
+    }
+  },
+  "certificate_directory_proxy_excluded_modules": 16,
+  "oai_rates_after_certificate_directory_proxy_exclusion": {
+    "mode_tactic": 92.96269956412911,
+    "local_claims_calc": 62.01178467416905,
+    "arithmetic_algebra": 38.386161276667245,
+    "restricted_simplification": 38.97787078865296,
+    "finite_decision": 5.235838043425091
+  },
+  "joint_domain_length_standardization": {
+    "unit": "Uniform proof-bearing module then uniform body; Mathlib cell means reweighted to OAI domain/length probabilities.",
+    "common_cell_count": 69,
+    "oai_module_body_probability_coverage_percent": 93.74999999999997,
+    "rates_percent": {
+      "OAI": {
+        "mode_tactic": 92.95394470260533,
+        "local_claims_calc": 61.37489327265964,
+        "arithmetic_algebra": 37.618635815538894,
+        "restricted_simplification": 38.70181286827954,
+        "finite_decision": 5.511000702459569
+      },
+      "Mathlib": {
+        "mode_tactic": 82.57520455477061,
+        "local_claims_calc": 55.56127215170787,
+        "arithmetic_algebra": 14.856785151701397,
+        "restricted_simplification": 30.98684015254212,
+        "finite_decision": 1.1811892270578934
+      }
+    },
+    "differences_pp": {
+      "mode_tactic": 10.37874014783472,
+      "local_claims_calc": 5.8136211209517725,
+      "arithmetic_algebra": 22.7618506638375,
+      "restricted_simplification": 7.714972715737421,
+      "finite_decision": 4.329811475401676
+    },
+    "oai_module_bootstrap_95_percent_intervals_pp": {
+      "mode_tactic": [
+        9.262360727045776,
+        11.515753890834727
+      ],
+      "local_claims_calc": [
+        4.381255202509706,
+        7.25432095253999
+      ],
+      "arithmetic_algebra": [
+        20.27128855594951,
+        25.379129862639818
+      ],
+      "restricted_simplification": [
+        5.44652203966022,
+        9.793774108438058
+      ],
+      "finite_decision": [
+        3.022073655948805,
+        5.9125034140243145
+      ]
+    },
+    "bootstrap": {
+      "replicates": 1500,
+      "seed": 764984,
+      "baseline": "Fixed retained Mathlib census cell means."
+    },
+    "scope": "Coarse subject/length cells; length may itself reflect proof style. Conditional on extraction and fixed baseline; no task-difficulty, declaration-role or author-provenance matching."
+  }
+}

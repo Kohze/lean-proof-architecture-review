@@ -1,0 +1,1132 @@
+{
+  "scope": "All blank-line-delimited manuscript blocks; includes prose, equations, headings and table/figure blocks.",
+  "blocks": [
+    {
+      "id": "abstract-001",
+      "file": "abstract.tex",
+      "start_line": 1,
+      "sha256": "19bb8f3eee01a9bdf7d7aebed987c874e33d4365fbda818393d2cbd54b9353f0",
+      "text": "\\begin{abstract}\nLarge Lean developments connect mathematical representation design with\nthe organization of local proof obligations. This source-driven review\nexamines that connection in six developments from the OpenAI Lean\ncollection: common-base counting, graph switch chains, the symmetric\nMahler inequality, the complete Crouzeix bound, extended trace cones,\nand marked character-variety constructions. We trace the preservation\ninterfaces that carry exact coordinates, probability laws, quantitative\nestimates, and local differential data between representations.\nElementary worked examples explain why the strength of these interfaces\nmatters. An exploratory survey of 800 uniformly sampled OpenAI modules,\ncompared with 8,070 mathematical modules in the pinned Mathlib dependency,\nthen measures the distribution of source-written proof methods. After\ncoarse subject standardization, mean within-module prevalence is higher\nby 29.2 percentage points for tactic-mode proofs, 30.5 for arithmetic\nand algebra tactics, and 34.1 for local claims or calculation chains.\nLarge batches of exact numerical certificates further distinguish the\npooled proof population. Read alongside the case studies, these results\nsuggest a characteristic division of proof work: representation and\npreservation lemmas organize mathematical obligations, while established\ntactics discharge the resulting finite, scalar, and algebraic steps.\nSource-level examples show how this combination operates in compiler\ncost bounds and analytic norm estimates. The review contributes both a\ncomparative account of mathematical interfaces and a reproducible\ndescription of proof-writing practice, providing a route from a headline\nstatement to the mathematical and tactical work supporting its formal\nconstruction.\n\\end{abstract}"
+    },
+    {
+      "id": "cases-analysis-001",
+      "file": "cases-analysis.tex",
+      "start_line": 1,
+      "sha256": "9fb798100565cbfd93e559df45bcfbcba22825b6fc76504b088e07e211b0e59e",
+      "text": "\\subsection{Mahler: ordered forms and boundary locality}\n\\label{sec:mahler}"
+    },
+    {
+      "id": "cases-analysis-002",
+      "file": "cases-analysis.tex",
+      "start_line": 4,
+      "sha256": "cb5b3edaf76e4b65dd74cd80b7e403b3ce802c3cbb09c0ca612c341974c5cc13",
+      "text": "The analytic cases shift the preservation question from finite laws to\nidentities and estimates used in differentiation and integration.\nThe symmetric Mahler development connects exterior algebra, complex analysis,\nand convex geometry through several representations of the same differential\nform. Its selected endpoint, \\src{OAI.SymmetricMahler.symmetric_mahler}, states\n\\[\n  \\frac{4^n}{n!}\\leq |K|\\,|K^\\circ|\n\\]\nfor $n\\geq1$ and a compact, convex, origin-symmetric set\n$K\\subseteq\\R^n$ with nonempty interior. Here volume is ordinary Lebesgue\nvolume and the coordinate polar is literally\n$K^\\circ=\\{p:\\sum_i p_i v_i\\leq1\\text{ for every }v\\in K\\}$.\nThe accompanying mathematical argument uses holomorphic maps associated with\nfinite intersections of strips~\\citep{OAIMahler}. For the architectural review,\nthe instructive point is how a local transgression identity becomes a numerical\nflux value usable by the convex-body reduction."
+    },
+    {
+      "id": "cases-analysis-003",
+      "file": "cases-analysis.tex",
+      "start_line": 21,
+      "sha256": "f09757027115e1a30fae7f0db7aa055c93a3200f2d5e1343e1e455f53382d04d",
+      "text": "\\paragraph{The analytic inputs and the transgression identity.}\nThe generic analytic results take a structure named \\src{MassHypotheses}.\nIts fields require an open domain containing zero, holomorphic components\n$f_j$, zero as their unique common zero in the domain, a homogeneous degree-$m$ leading\npolynomial map $G$ without nonzero common zeros, an actual Euclidean Taylor\nremainder $f-G=O(\\norm{z}^{m+1})$, and compact closures of sublevels\nwith $0<R<1$ contained in the domain.\nThe structure records analytical inputs. The desired mass inequality and\nnumerical flux value are separate conclusions. For the actual strip maps,\n\\src{euclideanSpecial_massHypotheses} constructs every field from positive\ndimension, an injective real measurement matrix, and $m\\geq2$.\nThe final body theorem supplies the resulting homogeneous flux value to a\nconditional reduction lemma. Its retained inputs are precisely the body\nhypotheses stated above.\\footnote{The endpoint and concrete hypothesis\nconstruction are\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/MainTheorem.lean\\#L12-L22}{\\src{Mahler/MainTheorem.lean}, lines 12--22}, and\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/EuclideanSpecialMap.lean\\#L67-L97}{\\src{Mahler/EuclideanSpecialMap.lean}, lines 67--97}.}"
+    },
+    {
+      "id": "cases-analysis-004",
+      "file": "cases-analysis.tex",
+      "start_line": 39,
+      "sha256": "700eb401d1089b41449a864f444c25b14f3745c6bd178f8442f874c1cb95c373",
+      "text": "For the transgression calculation, write the complex dimension as $N=k+2$, let $q(z)=z$, and set\n$\\tau(H)(z)=\\sum_j|H_j(z)|^2$. The source convention is\n$d^cu(z)[v]=-Du(z)[iv]/4$. On punctured space the degree-$m$\nhomogeneous map $G$ defines\n\\[\n \\beta=d^c\\log\\tau(G)-m\\,d^c\\log\\tau(q),\\qquad\n \\alpha_t=m\\,d^c\\log\\tau(q)+t\\beta.\n\\]\nThe deformation uses the ordered primitive\n\\[\n  \\eta_t=\\alpha_t\\wedge\\beta\\wedge(d\\alpha_t)^k.\n\\]\nThe ambient differentiation theorem preserves both terms:\n\\[\n  d\\eta_t=\\beta\\wedge(d\\alpha_t)^{k+1}\n       -\\alpha_t\\wedge d\\beta\\wedge(d\\alpha_t)^k.\n\\]\nIt follows from actual Fr\\'echet differentiation, exterior product rules, and\n$d^2\\alpha_t=0$. Restriction to sphere tangents then kills the first term.\nThe deformation residual has $k+1$ possible placements of $d\\beta$;\ntheir verified multiplicity gives\n\\[\n  \\operatorname{residual}_t=-(k+1)d\\eta_t\n  \\qquad\\text{on sphere tangent tuples}.\n\\]\nKeeping the ambient identity separate from its tangential consequence makes\nthe vanished term, sign, and multiplicity individually accountable."
+    },
+    {
+      "id": "cases-analysis-005",
+      "file": "cases-analysis.tex",
+      "start_line": 67,
+      "sha256": "bf5e96190dfa66c7326b69cdaf49cfa327f73b3f188e3d72b7bf82062e5cdaa2",
+      "text": "The disappearance of the first term has a concrete linear-algebra proof.\nAt $z\\ne0$, the sphere tangent space has real dimension $2N-1$ and contains\nthe nonzero circle tangent $iz$. Homogeneity gives $\\beta_z(iz)=0$ and\n$(\\alpha_t)_z(iz)=m/2$. Rotation invariance, together with this constant\ncircle evaluation, gives $d\\alpha_t(iz,v)=0$.\nThus $\\beta$ and $d\\alpha_t$ are horizontal in this direction:\ninserting $iz$ in any slot gives zero.\\footnote{The normalization and\ncircle evaluations are in\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousFlux.lean\\#L12-L13}{the $d^c$ definition, lines 12--13}, and\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousDeformation.lean\\#L14-L101}{the deformation and circle identities, lines 14--101}.}\nTheir top-degree wedge therefore vanishes. The lemma\n\\src{horizontal_top_eq_zero} proves the general assertion explicitly.\nAn independent top-degree tuple determines a basis. Choose a nonzero basis\ncoordinate of the horizontal vector, replace the corresponding tuple entry\nby that vector, and expand it in the basis. Alternation kills every term\nexcept the selected coordinate times the original evaluation; cancelling the\nnonzero coordinate proves that evaluation zero. A dependent tuple already\nvanishes by alternation. The sphere theorem instantiates this argument with\nthe verified tangent dimension and $iz$."
+    },
+    {
+      "id": "cases-analysis-006",
+      "file": "cases-analysis.tex",
+      "start_line": 87,
+      "sha256": "ffc8125d2ebcfa72af32135ed4643c036aa3766804c44f10b06bc8781f3f1efd",
+      "text": "\\paragraph{Identifying two representations of the form.}\nThe representation change occurs because the development constructs $\\eta_t$\nin two useful ways. One bundles a literal shuffle form through finite basis\nexpansion, supporting regularity proofs by evaluation. The other builds a\ncontinuous product from a two-form and continuous wedge powers, supporting\ndifferentiation rules. Recursive slot types retain each factor's ordered\npair of arguments. Two equivalences flatten these slots to\n$\\operatorname{Fin}(2(k+1))$ along different routes. A small extensional proof\nidentifies the equivalences; injectivity of the projection from continuous\nalternating maps to alternating maps then identifies the entire fields.\nThis field equality transports the proved transgression into the analytic\ntheorem expecting the other representation. Thus the intermediate theorem\n\\src{homogeneousFlux_endpoints_of_transgression} has an explicit local-formula\npremise, which \\src{homogeneous_flux_endpoints} discharges.\\footnote{See\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousEndpoint.lean\\#L12-L45}{the homogeneous endpoint, lines 12--45}.\nThe underlying tangent identity is proved in\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousTransgression.lean\\#L65-L97}{the tangent transgression theorem, lines 65--97}.}"
+    },
+    {
+      "id": "cases-analysis-007",
+      "file": "cases-analysis.tex",
+      "start_line": 105,
+      "sha256": "3f76b64ce241e422d98e4b0a4a93ed7d5041f8254b80ed51f1c22360084a4f64",
+      "text": "Each representation carries different proof obligations. The literal shuffle\ndescription keeps permutation signs and factor order available to algebraic\nrewrites. The continuously bundled field has a normed-space structure, so its\nregularity and derivative can be expressed through the existing calculus API.\nFinite basis expansion connects these obligations: smoothness of the finitely\nmany evaluated coefficients supplies smoothness of the bundled form.\nThe source obtains every finite regularity order on punctured space from the\nanalytic hypotheses, including the $C^2$ order used below.\nIdentifying the fields also identifies their derivatives as functions valued\nin continuous alternating maps. This is stronger than checking their values\non a chosen tangent tuple, which suffices only at the later integration\nboundary. The proof therefore uses two distinct congruence principles at\nappropriate stages: whole-field equality for differentiation and tangential\nagreement for oriented density. Keeping those principles separate clarifies\nwhich information each mathematical operation consumes."
+    },
+    {
+      "id": "cases-analysis-008",
+      "file": "cases-analysis.tex",
+      "start_line": 121,
+      "sha256": "12400613faabdf36bf8baef136a533d181a9852d271f46406f4c25704ba04410",
+      "text": "The continuous product also exposes a useful implementation choice.\n\\src{continuousWedge} starts with the algebraic shuffle product and proves\ncontinuity in its vector arguments term by term. For continuity as a\nfunction of the two forms, the source first embeds continuous alternating\nmaps into multilinear maps. Injectivity gives finite dimensionality of\nthe form space when the ambient real space is finite dimensional.\nIt then bundles the product as\n\\[\n \\mathcal W:\\mathcal A_\\iota\\longrightarrow_L\n       (\\mathcal A_\\kappa\\longrightarrow_L\\mathcal A_{\\iota\\sqcup\\kappa}),\n\\]\nwhere $\\mathcal A_\\iota$ is the normed space of continuous alternating\nmaps indexed by $\\iota$, and $\\longrightarrow_L$ denotes a continuous\nlinear map over $\\R$. The two applications of\n\\src{LinearMap.toContinuousLinearMap} use finite dimensionality to promote\nalgebraic linearity to continuity. The regularity of\n$x\\mapsto\\mathcal W(a(x))(b(x))$ now follows from the ordinary calculus\nof continuous linear maps and their application.\\footnote{See\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/ContinuousWedge.lean\\#L19-L107}{\\src{ContinuousWedge.lean}, lines 19--107}.}\nThis design fits the finite-dimensional analytic argument: a continuously\nbundled bilinear product supplies the derivative API once, while the\nshuffle representation remains available for exact algebra. Mathlib\nalready supplies the exterior derivative and its square-zero theorem\n\\citep{MathlibForms}; the project-specific work here connects the ordered\nproduct, its regularity, and the integration interfaces."
+    },
+    {
+      "id": "cases-analysis-009",
+      "file": "cases-analysis.tex",
+      "start_line": 147,
+      "sha256": "f30d2773d94e8ad1d7250a12d49b481f7490a915e27488cc2eaefc357aa0f9eb",
+      "text": "\\paragraph{Applying Stokes near the boundary.}\nA second interface controls locality. The primitive is $C^2$ on punctured\nspace, while the flux argument needs regularity near the sphere.\n\\src{exists_closed_set_form_extension} takes a form $\\omega$ that is $C^2$\non an open set $U$ containing a closed set $K$. Smooth separation gives a\nfunction $\\chi$ equal to one near $K$ and zero near $U^c$.\nThe field $\\widetilde\\omega=\\chi\\omega$ is globally $C^2$: use the product\nrule inside $U$ and its eventual equality to zero outside $U$.\nNear $K$ it is eventually equal to $\\omega$, so their Fr\\'echet derivatives,\nand hence exterior derivatives, agree there.\nFor $K$ the sphere, coordinate Stokes applies to $d\\widetilde\\omega$ and\n$d^2\\widetilde\\omega=0$ gives zero boundary flux. Tangent-density congruence\nthen transfers that conclusion to the original residual.\\footnote{The\nextension and exact-form flux theorem are\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/ClosedBoundaryStokes.lean\\#L18-L63}{\\src{Mahler/ClosedBoundaryStokes.lean}, lines 18--63}.}"
+    },
+    {
+      "id": "cases-analysis-010",
+      "file": "cases-analysis.tex",
+      "start_line": 163,
+      "sha256": "adae38f4c806e59a197b074b5680c7cdc49e3d3ff2b7c927d4c85d1e7e3f1a24",
+      "text": "Zero residual flux makes the deformation's path flux constant by the\nfundamental theorem of calculus. Comparing endpoints supplies $(\\pi m)^N$;\nthe small-sphere limit and special strip-map reduction use that value in the\nbody inequality. Dimension one is handled by a separate circle calculation.\nThe mathematical devices are familiar. Mathlib already provides continuous\nalternating maps, exterior differentiation, and $d^2=0$ under smoothness\nassumptions~\\citep{MathlibForms}. Kudryashov's earlier Lean formalization already transfers a divergence\ntheorem between integration theories and derives Cauchy--Goursat under\ncarefully chosen differentiability assumptions \\citep{Kudryashov2022}.\nIts rectangular domains give a direct comparison for integration\ninterfaces. The distinctive step here identifies ordered exterior algebra\nwith continuously bundled fields and combines that equality with a locality\ntheorem that imposes regularity where the\nintegral uses it. These interfaces expose and discharge the substantive\npremises without requiring regularity at the singular center. The elementary boundary-form example in Section~\\ref{sec:local-forms} separates the ambient and tangential information used at these two stages."
+    },
+    {
+      "id": "cases-analysis-011",
+      "file": "cases-analysis.tex",
+      "start_line": 179,
+      "sha256": "f0de0789e65b27620b20ef03025af6b27ef5d499746e39d0a0715fc23572af5d",
+      "text": "\\subsection{Crouzeix: compression, energy, and strict neighborhoods}\n\\label{sec:crouzeix}"
+    },
+    {
+      "id": "cases-analysis-012",
+      "file": "cases-analysis.tex",
+      "start_line": 182,
+      "sha256": "4b2cdebac1a8fa02d2f5a6e2f29b781151289b524682b4a9d06ee44bf8ec013f",
+      "text": "The finite-matrix Crouzeix endpoint states an amplified norm estimate with constant two.\nFor an $n$-by-$n$ complex matrix $A$, $m$-by-$m$ coefficients $B_k$, and\n$n,m>0$, \\src{OAI.DirectCrouzeix.complete_crouzeix} states\n\\[\n \\norm{\\sum_{k=0}^d A^k\\otimes B_k}\n \\leq 2\\sup_{z\\in W(A)}\\norm{\\sum_{k=0}^d z^kB_k}.\n\\]\nWrite $F(z)=\\sum_{k=0}^d z^kB_k$; $F(A)$ denotes the amplified\nevaluation on the left. The source uses the operator $2$-norm, literal matrix Kronecker products,\nand $W(A)=\\{\\langle u,Au\\rangle:\\norm{u}=1\\}$.\nIts endpoint quantifies over arbitrary $A$ and coefficient matrices.\nThe accompanying argument~\\citep{OAICrouzeix} is organized around boundary\nanalysis. The mathematical-frontiers review explains its ordered product\ntests and positive-block closure in relation to earlier proof routes\n\\citep{GounderFrontiers2026}. Here the focus is the formal implementation:\nzero-mode normalization, the finite dual witness, coefficient transport,\nand construction of the strict neighborhoods used by the endpoint."
+    },
+    {
+      "id": "cases-analysis-013",
+      "file": "cases-analysis.tex",
+      "start_line": 200,
+      "sha256": "d0b7c7f5dfe7e6f08f255667566fc97eae0b4007646f0f724e360845488f319f",
+      "text": "\\paragraph{Closing the compressed energy estimate.}\nThe local interface \\src{analytic_domain_core} accepts a polynomial sequence\n$b_k$ with $b_0=1$, a continuous boundary parametrization, and a matrix resolvent field\n$R(t)$. Its hypotheses give finite Faber expansions, lower and upper\ncoefficient-energy bounds, exact coefficients\n$\\widehat R(-k)=b_k(A)$, vanishing positive Fourier coefficients, and\n$R+R^*\\geq0$. These are conditional inputs to the local theorem.\n\\src{exterior_collar_bound} constructs them from exterior conformal data\nand supporting halfplanes before applying the core. In particular,\nthe positive resolvent and coefficient bounds are outputs at this geometric\nstage, rather than retained assumptions of the public endpoint."
+    },
+    {
+      "id": "cases-analysis-014",
+      "file": "cases-analysis.tex",
+      "start_line": 212,
+      "sha256": "82bffd0da44ba3dd74b328f90fd1394e3d4d5c3d1604a6177747c13b27632318",
+      "text": "For the normalized core, assume $\\norm{F(h(t))}\\leq1$ on the boundary,\nwhere $h$ is its parametrization. Let $T$ be the amplified polynomial\nevaluation and $\\gamma=\\norm{T}>0$;\nthe zero case is separate. A unit singular pair satisfies\n$Tx=\\gamma y$ and $T^*y=\\gamma x$. The supporting lemma obtains a norm\nattainer by compactness, then proves the adjoint relation through a\nsquared-distance calculation. Reshaping vectors indexed by\n$\\operatorname{Fin}(n)\\times\\operatorname{Fin}(m)$ produces rectangular\nmatrices $X,Y$. All boundary integrals below use normalized circle measure.\nThe proof forms\n\\[\n P=X^*RX,\\quad Q=Y^*RY,\\quad M=Y^*RX,\\quad L=X^*RY,\n \\qquad a=\\int\\norm{M(t)}_{\\mathrm{HS}}^2\\,dt.\n\\]\nA cross-boundary pairing estimate proves $a>0$. The two singular relations\nproduce the diagonal bounds\n\\[\n \\int\\norm{P+P^*}_{\\mathrm{HS}}^2\\leq\\frac{4a}{\\gamma^2},\n \\qquad\n \\int\\norm{Q+Q^*}_{\\mathrm{HS}}^2\\leq\\frac{4a}{\\gamma^2}.\n\\]\nThe normalization $b_0=1$ identifies the zero Fourier coefficients:\n\\[\n \\widehat P(0)=X^*X,\\qquad \\widehat Q(0)=Y^*Y,\\qquad\n \\widehat L(0)^*=\\widehat M(0).\n\\]\nThe first two are Hermitian; the last is the zero-frequency premise of\nthe cross-energy comparison. All four compressions inherit the vanishing\nof the positive Fourier coefficients of $R$.\nFourier identities then give $a\\leq\\int\\norm{M+L^*}_{\\mathrm{HS}}^2$.\nCompressing $R+R^*$ by the concatenated columns $[X\\ Y]$ yields a positive\nblock matrix with these diagonal and off-diagonal blocks. For a positive\nblock matrix $D=\\left(\\begin{smallmatrix}U&Z^*\\\\Z&V\\end{smallmatrix}\\right)$\nand $J=\\operatorname{diag}(I,-I)$, positivity of $D$ and $JDJ$ gives\n\\[\n 0\\leq\\operatorname{Re}\\operatorname{tr}(DJDJ)\n   =\\norm U_{\\mathrm{HS}}^2+\\norm V_{\\mathrm{HS}}^2\n     -2\\norm Z_{\\mathrm{HS}}^2.\n\\]\nIntegrating this estimate gives\n\\[\n 2\\int\\norm{M+L^*}_{\\mathrm{HS}}^2\n \\leq\\int\\norm{P+P^*}_{\\mathrm{HS}}^2\n       +\\int\\norm{Q+Q^*}_{\\mathrm{HS}}^2.\n\\]\nThus $2a\\leq8a/\\gamma^2$, and cancellation of $a>0$ gives\n$\\gamma\\leq2$.\\footnote{The four compressions and closing cancellation\nappear in\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/DomainCore.lean\\#L15-L117}{\\src{DirectCrouzeix/DomainCore.lean}, lines 15--117}.}"
+    },
+    {
+      "id": "cases-analysis-015",
+      "file": "cases-analysis.tex",
+      "start_line": 262,
+      "sha256": "a5ffec5b922ad3976dca0c0d50cf81e3e20a8fc2e7c0b276d2ed70f3aa4d8d2a",
+      "text": "\\paragraph{Where the sharp energy weights come from.}\nTwo details explain why this reduction works sharply. First,\n\\src{singular_diagonal_estimates} tests both ordered products $FG$ and $GF$, where $G$ is a test polynomial.\nThe forward and adjoint singular relations turn them into different diagonal\ncompressions, preserving the noncommutative order of matrix coefficients.\nThe dual step is explicit: from bounds on every finite test family $C_k$,\n\\src{weighted_coefficient_dual} substitutes\n$C_k=w_k^{-1}\\overline{P_k}$ in the project's bilinear entry pairing.\nBoth pairing and test energy become\n$s=\\sum_k\\norm{P_k}_{\\mathrm{HS}}^2/w_k$, leaving $s^2\\leq bs$ and hence\n$s\\leq b$. Nonnegative bounded partial sums subsequently give the infinite\nsequence estimate. This keeps the optimizing witness finite and concrete."
+    },
+    {
+      "id": "cases-analysis-016",
+      "file": "cases-analysis.tex",
+      "start_line": 275,
+      "sha256": "16ba6542007ba81ba937caafec7960c91cc34e92102d90d5a9deced904cb3f6c",
+      "text": "Second, the weights are derived by boundary analysis.\nA Faber series splits into a nonnegative Fourier series and a remainder\nwith no nonnegative coefficients. Orthogonality gives its energy as\nthe sum of coefficient energy and remainder energy. The remainder is also\nthe action of a nonnegative kernel with both marginals one on the\nnonconstant series. A weighted squared-norm inequality and Fubini prove\nkernel contraction. Consequently $w_0=1$ and $w_k=2$ for $k>0$.\nThe resulting half-weighted coefficient tail fits the exact Fourier identity\n\\[\n \\int\\norm{P+P^*}_{\\mathrm{HS}}^2\n =4\\left(\\norm{\\widehat P(0)}_{\\mathrm{HS}}^2\n    +\\frac12\\sum_{k\\geq1}\\norm{\\widehat P(-k)}_{\\mathrm{HS}}^2\\right).\n\\]\nIts factor four at frequency zero uses Hermiticity of $\\widehat P(0)$;\nthe negative coefficients contribute in paired positive and negative\nfrequencies.\\footnote{See\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/BoundaryEnergy.lean\\#L57-L88}{\\src{BoundaryEnergy.lean}, lines 57--88}, and\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/PositiveBlocks.lean\\#L22-L62}{\\src{PositiveBlocks.lean}, lines 22--62}.}"
+    },
+    {
+      "id": "cases-analysis-017",
+      "file": "cases-analysis.tex",
+      "start_line": 294,
+      "sha256": "fc302bf7866a650778e86fbc1e3cce138041060bbd28ecd9f719c219729914c1",
+      "text": "A further interface supplies matrix-valued Faber expansions from scalar\npolynomials. A scalar sequence with its $k$th polynomial of degree $k$ is\nmapped into polynomials over the matrix coefficient ring by sending scalars\nto scalar matrices. Its leading coefficients are units. The implementation\nthen applies Mathlib's degree-filtered spanning theorem for polynomial\nsequences and extracts a finite matrix-coefficient witness from membership\nin that span. This gives the exact finite expansion consumed by the core.\nEvaluation and Kronecker-evaluation identities carry the witness to the two\nconcrete matrix calculations. The established polynomial basis theorem is\nreused across the change of coefficient ring, while explicit transport lemmas\npreserve the order of multiplication. Together with rectangular reshaping,\nthis explains how the scalar boundary analysis supplies estimates uniformly\nin the matrix coefficient size, the defining feature of the complete bound."
+    },
+    {
+      "id": "cases-analysis-018",
+      "file": "cases-analysis.tex",
+      "start_line": 308,
+      "sha256": "d4ff801fdec79fd7e084012a91e3fd474add861b402176bc2c9973cd634507a7",
+      "text": "\\paragraph{Constructing the analytic inputs.}\nThe analytic inputs of the core are built before the final limiting step.\nFor an exterior parametrization $\\psi(\\zeta)=c\\zeta+g(\\zeta^{-1})$, the\nsource uses the algebra-valued generating function\n\\[\n \\mathcal G_A(u)=\n (c-u^2g'(u))\\bigl((c+ug(u))I-uA\\bigr)^{-1}.\n\\]\nIts $k$th Taylor coefficient is the Faber polynomial $b_k$ evaluated at\n$A$. The proof makes this coefficient identity finite: a geometric\nexpansion of the inverse has a remainder $u^{k+1}H(u)$ with $H$ analytic\nnear zero, whose $k$th coefficient vanishes. Local equality of the\nexpressions transfers their Taylor coefficients. Evaluating at\n$u=e^{-it}$ then invokes the antianalytic Fourier formula, giving\nthe negative modes $b_k(A)$ and zero positive modes. Thus the orientation\nand normalization consumed by \\src{analytic_domain_core} arise from a\nproved coefficient calculation.\\footnote{See\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/FaberCalculus.lean\\#L94-L163}{\\src{FaberCalculus.lean}, lines 94--163}.}"
+    },
+    {
+      "id": "cases-analysis-019",
+      "file": "cases-analysis.tex",
+      "start_line": 327,
+      "sha256": "9ea731189b17a608274f0458d2f2215c444a965d1c3bf44549bda79325430169",
+      "text": "Constructing $\\psi$ requires a further change of representation. The source\ninverts the exterior of a convex exponential sublevel about an interior\npoint, obtains a bounded simply connected domain, and constructs its\nRiemann map. To obtain an analytic collar, it first extends that map\nlocally through analytic boundary charts. The gluing argument retains\nmore than analyticity: each local extension $E$ agrees with the original\nmap inside the domain, has nonzero derivative at its boundary point, and\nsatisfies\n\\[\n \\norm{E(z)}<1\\quad\\Longleftrightarrow\\quad z\\in U.\n\\]\nThis side condition carries the geometric meaning of the unit circle\nthrough continuation."
+    },
+    {
+      "id": "cases-analysis-020",
+      "file": "cases-analysis.tex",
+      "start_line": 341,
+      "sha256": "f8fe40ca5b9be55a156cd17c89af61e18de893299451d83723c166ab84e37952",
+      "text": "The local-to-global step is explicit in Lean. Extensions are available\non balls of radius $3r$, while the chosen cover uses balls of radius $r$.\nWhen two smaller balls overlap, their larger intersection is convex and\nmeets $U$; the identity theorem extends their agreement from the interior\nto that intersection. A classically chosen extension at each point is\ntherefore locally equal to any covering representative. This neighborhood\nequality supplies analyticity and derivative agreement for the glued map.\nCompactness and local invertibility then give an injective neighborhood\nof $\\overline U$. Its image contains the closed unit disk, so a thickening\ncontains a disk of radius $R>1$. The inverse on that disk is analytic,\nand inversion back to the original plane gives the exterior Laurent\nform.\\footnote{See\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/Continuation.lean\\#L31-L111}{compatibility and gluing of boundary germs},\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/ConformalCollar.lean\\#L129-L238}{the inverse collar construction}, and\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/ExteriorMapping.lean\\#L148-L214}{the exterior map for exponential sublevels}.}\nThe preservation interface here includes analytic germs, the domain side,\nand injectivity. Those fields explain how the collar becomes suitable for\nthe resolvent and coefficient estimates."
+    },
+    {
+      "id": "cases-analysis-021",
+      "file": "cases-analysis.tex",
+      "start_line": 360,
+      "sha256": "b4a3b08e6657a50c3f3af9e52fffdbaa8bba1d876ac2431e384a04824405c68e",
+      "text": "\\paragraph{Removing the auxiliary domain assumptions.}\nThe final interface removes strict-domain geometry. For every compact,\nnonempty convex $K\\subseteq\\mathbb C$, \\src{exists_exponential_outer}\nconstructs a compact sublevel of a finite sum of exponentials of affine\nsupport inequalities. A finite direction net controls approximation;\nfour coordinate directions ensure boundedness. The sublevel contains $K$\nstrictly and lies in any prescribed neighborhood of $K$.\nIn the endpoint, set\n$M=\\sup_{W(A)}\\norm{F}$ and $\\rho=M+\\varepsilon/2$.\nCompactness places such an outer sublevel inside the open set\n$\\{z:\\norm{F(z)}<\\rho\\}$. The scaled domain estimate gives\n$\\norm{F(A)}\\leq2M+\\varepsilon$, and removing $\\varepsilon>0$ gives the\ndesired bound. The final assumptions are positive matrix sizes and arbitrary\ncoefficients; smooth strict containment is supplied by an auxiliary\nconstruction.\\footnote{See\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/OuterApproximation.lean\\#L59-L122}{\\src{DirectCrouzeix/OuterApproximation.lean}, lines 59--122}, and\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/CompleteBound.lean\\#L65-L97}{\\src{CompleteBound.lean}, lines 65--97}.}"
+    },
+    {
+      "id": "cases-analysis-022",
+      "file": "cases-analysis.tex",
+      "start_line": 378,
+      "sha256": "9bb8e599543b3dd853490fe2c5e96de5b93bbbf9d1ffa27f9400bfa44fcc9e9e",
+      "text": "The Crouzeix--Palencia proof centers the Cauchy transform\nof conjugate holomorphic functions and obtains the complete constant\n$1+\\sqrt2$~\\citep{CrouzeixPalencia2017}. Its established bound also supplies\nthe baseline in the companion numerical-range certificate study, which\ndevelops finite enclosures, error budgets, and a rational software\nprototype \\citep{GounderNumerical2026}. The present case follows the\nidentities and geometric hypotheses that connect the formal proof's\nlocal analytic core to its public matrix theorem."
+    },
+    {
+      "id": "cases-architecture-001",
+      "file": "cases-architecture.tex",
+      "start_line": 1,
+      "sha256": "e830f6727a0bf8d23b79110867f9e6ed8e56a354d12605bf0d9f8d8773bcdee3",
+      "text": "\\subsection{Recovering ideals from extended traces and canonical limits}\n\\label{sec:trace-ideals}"
+    },
+    {
+      "id": "cases-architecture-002",
+      "file": "cases-architecture.tex",
+      "start_line": 4,
+      "sha256": "8e9adaff88ca196605476e508922fc3d2bc5f8f0b338e637dc2267e625dccbcb",
+      "text": "The final pair of cases concerns the mathematical data retained by an\ninvariant or a coordinate change. The trace-cone development reconstructs\nactual closed ideals from an analytic\ninvariant and then proves that an equivalence of invariants transports two\ndistinguished ideals. The mathematical setting is the cone of extended,\nlower-semicontinuous traces, studied as an invariant of $C^*$-algebras by\n\\citet{ElliottRobertSantiago2011}. The selected support results concern this\nideal correspondence. Their hypotheses are nonunital complex $C^*$-algebras\nwith compatible order and star structures; they impose no density condition\non the finite domain of a trace \\citep{OAITraceIdeals}."
+    },
+    {
+      "id": "cases-architecture-003",
+      "file": "cases-architecture.tex",
+      "start_line": 15,
+      "sha256": "9f5ded0876c4b22049f13e864fed213e1438e2812332ef364219fb5fd270e2a9",
+      "text": "\\paragraph{Recovering the ideal order algebraically.}\nAn \\texttt{ExtendedTrace A} is a function on positive elements with values in\n$[0,\\infty]$, together with proofs of vanishing at zero, additivity, positive homogeneity,\ntraciality, and lower semicontinuity. For a closed two-sided star ideal $I$,\nthe code constructs the extended trace\n\\begin{equation}\n  \\iota_I(a)=\n  \\begin{cases}0,&a\\in I,\\\\ \\infty,&a\\notin I,\\end{cases}\n  \\qquad a\\geq 0.\n  \\label{eq:ideal-weight}\n\\end{equation}\nTo establish additivity for positive $a,b$, heredity of closed ideals gives\n$a+b\\in I$ exactly when both summands belong to $I$, proving additivity.\nThe equivalence $x^*x\\in I\\Longleftrightarrow x\\in I$ and star invariance\ngive traciality; closed sublevel sets give lower semicontinuity. The\nexistence theorem in \\src{FiniteIdeal.lean} therefore supplies a trace\nsatisfying the full interface, from which the later definition chooses a\nwitness."
+    },
+    {
+      "id": "cases-architecture-004",
+      "file": "cases-architecture.tex",
+      "start_line": 34,
+      "sha256": "fc68684c910f1c4a8e23b1cf6253b4c9f59b5d6b3b53d17df76a1c683c64a1d9",
+      "text": "The reverse construction starts with the finite-square domain of a trace:\n\\begin{equation}\n  \\mathcal N_\\tau=\\{x\\in A:\\tau(x^*x)<\\infty\\},\n  \\qquad I_\\tau=\\overline{\\mathcal N_\\tau}^{\\norm{\\cdot}}.\n  \\label{eq:finite-ideal}\n\\end{equation}\nThe source proves that $\\mathcal N_\\tau$ is a nonunital star subalgebra\nabsorbing multiplication on both sides, then takes its topological\nclosure. Thus $I_\\tau$ denotes a concrete closed ideal. If\n$\\tau+\\tau=\\tau$, every value is either zero or infinity.\nFinite-trace positive elements approximate every positive element of\n$I_\\tau$; lower semicontinuity extends their zero values to that limit,\nyielding $\\tau=\\iota_{I_\\tau}$. Conversely,\n$I_{\\iota_I}=I$. These inverse laws establish\n\\src{closedIdealEquivIdempotent}, an equivalence between closed ideals\nand additive-idempotent traces."
+    },
+    {
+      "id": "cases-architecture-005",
+      "file": "cases-architecture.tex",
+      "start_line": 51,
+      "sha256": "1f87dd68e92133c86e447283d199a64f2bdb2bd526721d708b7a03cf5fffca92",
+      "text": "The ideal order is also encoded by addition:\n\\begin{equation}\n  I\\subseteq J\\quad\\Longleftrightarrow\\quad\n  \\iota_I+\\iota_J=\\iota_I.\n  \\label{eq:ideal-addition-order}\n\\end{equation}\nConsequently, any additive bijection $e$ of the two extended-trace cones\nalready induces an order isomorphism $\\Phi$ of their closed ideals, with\n$\\iota_{\\Phi(I)}=e(\\iota_I)$. Neither continuity nor compatibility with\nscalars is required for this part. The subsequent analytic argument\nidentifies which ideals this order isomorphism assigns to a given trace.\nThis separation makes the strength of each interface field visible."
+    },
+    {
+      "id": "cases-architecture-006",
+      "file": "cases-architecture.tex",
+      "start_line": 64,
+      "sha256": "a336f3b4935c2efcf2a7da554828df14696d38120629eca4d94de162c091ecd8",
+      "text": "\\paragraph{Identifying the transported ideals by limits.}\nThe analytic step uses a cut-regularized notion of convergence. Write $(a-\\varepsilon)_+$ for the positive cut defined by\ncontinuous functional calculus. The development proves\n\\begin{equation}\n  a\\in I_\\tau\\quad\\Longleftrightarrow\\quad\n  \\forall\\varepsilon>0,\\quad\n  \\tau\\bigl((a-\\varepsilon)_+\\bigr)<\\infty,\n  \\qquad a\\geq0.\n  \\label{eq:finite-ideal-cuts}\n\\end{equation}\nIts canonical convergence predicate for a filtered family $(\\tau_i)$ and\na candidate limit $\\sigma$ requires, for every positive $a$ and every\n$\\varepsilon>0$,\n\\begin{equation}\n  \\limsup_i\\tau_i\\bigl((a-\\varepsilon)_+\\bigr)\n  \\leq\\sigma(a)\\leq\\liminf_i\\tau_i(a).\n  \\label{eq:trace-canonical-convergence}\n\\end{equation}\nThe two inequalities have different roles: the left regularizes the\nargument by a positive cut; the right uses the original element. Their\ncombination, together with recovery of a lower-semicontinuous trace from\nits cuts, gives uniqueness of a canonical limit along a proper filter.\\footnote{The convergence predicate is defined in\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/TraceCone/Basic.lean\\#L65-L69}{\\src{TraceCone/Basic.lean}, lines 65--69}; uniqueness is proved in\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/TraceCone/IdealTransport.lean\\#L177-L190}{\\src{IdealTransport.lean}, lines 177--190}.}"
+    },
+    {
+      "id": "cases-architecture-007",
+      "file": "cases-architecture.tex",
+      "start_line": 89,
+      "sha256": "7a4dfc84ba2c9a785477f4f67444cd69d509c2d3d9b8dadda05315137e2766bb",
+      "text": "In this sense the source proves\n\\begin{equation}\n  r\\tau\\longrightarrow\\iota_{I_\\tau}\\quad(r\\downarrow0),\n  \\qquad\n  r\\tau\\longrightarrow\\iota_{Z_\\tau}\\quad(r\\to\\infty),\n  \\label{eq:trace-scalar-limits}\n\\end{equation}\nwhere $Z_\\tau$ is a closed ideal whose positive elements are exactly those\non which $\\tau$ vanishes. The first limit depends on the closure and cut\ncharacterization in~\\eqref{eq:finite-ideal-cuts}. Whenever\n$a\\in I_\\tau$ but $\\tau(a)=\\infty$, every positive scalar multiple\nstill has value $(r\\tau)(a)=\\infty$, although\n$\\iota_{I_\\tau}(a)=0$. A claimed pointwise scalar-zero limit would therefore\nmiss the recovered ideal. Finite values on all positive cuts reconcile\nthis behavior with~\\eqref{eq:trace-canonical-convergence}. The\nscalar-infinity limit, by contrast, is first proved pointwise using the\ntrace that is zero on $\\tau$'s zero set and infinity elsewhere."
+    },
+    {
+      "id": "cases-architecture-008",
+      "file": "cases-architecture.tex",
+      "start_line": 107,
+      "sha256": "d21474f4f566859a57a7dd5810bdb16afddd876e4fb07e7e65eec73218bfdfe4",
+      "text": "The ideal weights, cut-regularized topology, and these two scalar limits\nare classical parts of the trace-cone analysis of\n\\citet[Sections~3.1--3.2]{ElliottRobertSantiago2011}. The source makes their\nformal dependencies explicit: additive structure recovers the ideal\norder, while convergence and scalar compatibility identify the two\nideals attached to an arbitrary trace. The review's comparison concerns\nthat separation and its implementation. Section~\\ref{sec:trace-example}\ngives a sequence-space example in which the canonical scalar-zero limit\nand the pointwise limit differ."
+    },
+    {
+      "id": "cases-architecture-009",
+      "file": "cases-architecture.tex",
+      "start_line": 117,
+      "sha256": "2d52a8737d39652e216a1fa321667ae89f6ae9435f34ad968318cb6b576636c6",
+      "text": "\\paragraph{Extending convergence preservation to arbitrary nets.}\nThe convergence interface makes a further choice about its index type.\n\\texttt{PreservesCanonicalConvergence e} quantifies over filters on the\ntrace cone itself. The mathematical use, however, includes scalar-indexed\nfamilies $g:J\\to\\mathrm{ExtendedTrace}(A)$ and filters $l$ on $J$.\nThe source passes to the image filter $g_*l$. Its reindexing lemma states\n\\[\n \\operatorname{CanConv}(g_*l,f,\\sigma)\n \\quad\\Longleftrightarrow\\quad\n \\operatorname{CanConv}(l,f\\circ g,\\sigma),\n\\]\nbecause the defining limsup and liminf commute with this filter map.\nApplying the preservation interface to the identity family on the trace\ncone, then reindexing back, proves preservation for $g$.\nThe lemma \\src{PreservesCanonicalConvergence.net} implements this route.\nIt supports arbitrary indexing types through a specification on one\ncarrier, keeping the structure's universe requirements manageable.\nThis is a concrete way in which the formal representation of a net\nshapes the reusable interface.\\footnote{See\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/TraceCone/IdealTransport.lean\\#L238-L257}{filter reindexing and the net extension, lines 238--257}.}"
+    },
+    {
+      "id": "cases-architecture-010",
+      "file": "cases-architecture.tex",
+      "start_line": 138,
+      "sha256": "1971b009d8b5f3c4abb33b86de8435700cb6eafbc5bc2f5b7746b89746545dae",
+      "text": "Finally, a \\src{TraceConeEquiv} packages an additive bijection, preservation\nof zero and positive scaling, and canonical convergence in both\ndirections. For each scalar limit, the endpoint proof maps the family\nthrough $e$, rewrites using scalar compatibility, and invokes uniqueness\nof canonical limits. Injectivity of $I\\mapsto\\iota_I$ then yields\n\\[\n  \\Phi(I_\\tau)=I_{e(\\tau)},\\qquad\n  \\Phi(Z_\\tau)=Z_{e(\\tau)}.\n\\]\nThe displayed endpoint proofs use forward convergence preservation;\nthe inverse field belongs to the larger equivalence interface. The\nilluminating architecture is the chain from constructed ideal weights,\nthrough an algebraic reconstruction, to analytic recognition by limits.\nIt makes the ideal correspondence an actual transported object, rather\nthan an unspecified provider assumption. This is a specific use of the\nabstraction boundaries familiar from large formalizations\n\\citep{Perfectoid2020,CommelinTopaz2024}."
+    },
+    {
+      "id": "cases-architecture-011",
+      "file": "cases-architecture.tex",
+      "start_line": 156,
+      "sha256": "6441abb9e10cd7f9b5ea12f9da86a31af756ee87aa2070f2105802fd97565ee9",
+      "text": "\\subsection{Named graded maps across all seams of a produced diagram}\n\\label{sec:all-seams}"
+    },
+    {
+      "id": "cases-architecture-012",
+      "file": "cases-architecture.tex",
+      "start_line": 159,
+      "sha256": "4522fb7c7f63f1e0c4536ac5d8685b125ec8d940aa8c37825ca5b24e04860b7c",
+      "text": "The character-variety case proves that values produced by a marked\nsurface construction satisfy every seam equation. The selected theorem,\n\\src{producedMarkedValues_allSeams}, starts with an existing field-valued\nsolution of the original diagram. Its hypotheses include properness of\nthe diagram, a maximal-rank condition on the facet at the chosen seam,\nand positive genus of the parent facet. The conclusion refers to the\nspecific diagram and values constructed from that solution\n\\citep{OAIAllSeams}. The key issue is preserving named graded data while\nchanging coordinates and subdividing the surface."
+    },
+    {
+      "id": "cases-architecture-013",
+      "file": "cases-architecture.tex",
+      "start_line": 169,
+      "sha256": "f0f4d5285b226a761bd13dd0a2aa6be22cc73039c5f4b842f168fe966e695793",
+      "text": "The diagram consists of surface pieces, called facets, joined along\nseams; frames specify the graded identifications at those joins. At the\nselected seam, the construction inserts a refined band determined by a\nsimultaneous splitting of the two input frames. It retains the old\nboundary circles, appends a mirror boundary at the parent facet, and\nintroduces a genus-zero disk for each fresh strip; the parent genus drops by one.\nThe all-seams theorem checks compatibility of the matrix values on\nthis resulting combinatorial diagram. This roadmap explains the\ninherited, mirror, and branch families used below.\\footnote{See the\nconstructor description in\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/MarkedDiagram.lean\\#L79-L104}{\\src{Cutting/MarkedDiagram.lean}, lines 79--104}.}"
+    },
+    {
+      "id": "cases-architecture-014",
+      "file": "cases-architecture.tex",
+      "start_line": 181,
+      "sha256": "91a0987b42f3fea74bd307fbc66d4e24f51d7f074702c063f14ae1e471705129",
+      "text": "\\paragraph{The information in a named graded map.}\nThe seam equation is stronger than equality of flags. For a graded index\nset with grade function $a$ and a frame $e$, let\n\\[\n  F_k^e=e\\{u:u_i=0\\text{ whenever }a(i)\\geq k\\},\n  \\qquad q_k^e(v)=\\bigl(e^{-1}v\\bigr)|_{\\{i:a(i)=k\\}}.\n\\]\nHere $q_k^e$ retains the named coordinates of grade $k$. The predicate\n\\texttt{SameFramedFlag a e f} requires\n\\begin{equation}\n  F_k^e=F_k^f,\\qquad\n  q_k^e(v)=q_k^f(v)\\quad\\text{for all }v\\in F_{k+1}^e,\n  \\label{eq:named-graded-flag}\n\\end{equation}\nfor every $k$. Thus the comparison retains the maps representing the\nsuccessive graded pieces, rather than only their dimensions or underlying\nsubspaces.\\footnote{See the definition of\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/AlgebraicGeometry/CharacterVarieties/Foundation/Flags.lean\\#L155-L160}{\\src{SameFramedFlag}}.}\nIn the produced seam equations, the two frames are obtained\nfrom evaluations of the seam's left and right matrix words. Losing these\nnamed maps during a change of basis would weaken the theorem's meaning.\nThe one-dimensional frame example in Section~\\ref{sec:named-maps}\nillustrates this distinction without the surface construction."
+    },
+    {
+      "id": "cases-architecture-015",
+      "file": "cases-architecture.tex",
+      "start_line": 205,
+      "sha256": "d83498653cd9fe99bf1022fe7ac031cb14f65f71ea84c1dc8895ff68c462d621",
+      "text": "\\paragraph{Keeping one witness across the construction.}\nThe intermediate construction records precisely the data needed to\nprevent that loss. An \\src{IdentifiedBand} contains a common frame for a\nsimultaneous splitting, a rank shape, and row and column identifications\nof its graded fibers. Its prefix and named-coordinate laws relate those\nidentifications to the two input frames. The source first proves that\nsuch a record exists using the named band grades and rank equalities.\nIt then chooses a witness. The opaque declaration\n\\src{cutGeneratorWitness} has this construction as its body; opacity\nhides reduction, rather than adding an unproved existence assumption.\nClassical choice here supplies coherent mathematical data, without\nclaiming an effective procedure for computing the frame."
+    },
+    {
+      "id": "cases-architecture-016",
+      "file": "cases-architecture.tex",
+      "start_line": 218,
+      "sha256": "6a2e5536b24326ff2c14f35a0c18c5b9dc4316bebe1c118b2a47c8cf9d23429d",
+      "text": "Crucially, the same chosen record supplies the shape, row ranks, column\nranks, and marked frames of the produced diagram. Those fields also\ndetermine its punctures and values. Independently choosing compatible\ndimensions would not provide these shared identifications. This illustrates\nthe difference between packaging a structure and carrying a sufficiently\nstrong specification through it. Records and algebraic interfaces are\nstandard techniques \\citep{GarillotEtAl2009,Baanen2022}; the case-specific\npayload is the simultaneous preservation of the named graded maps\nin~\\eqref{eq:named-graded-flag}."
+    },
+    {
+      "id": "cases-architecture-017",
+      "file": "cases-architecture.tex",
+      "start_line": 228,
+      "sha256": "433422beeaaf45c80dbb7920bff1d730ab5076dc3bdca72523d5603b7b174aab",
+      "text": "\\paragraph{From local seams to the produced values.}\nThe global seam proof is assembled from eight local families: the chosen\nold seam, the other inherited seams, the first and internal original\nseams, the last and internal mirror seams, and the positive and negative\nbranch seams. Exhaustiveness is proved using a surjective equivalence\ndescribing the grafted diagram, followed by sum, endpoint, and Boolean\ncases. Consequently, the universal quantifier over new seams follows\nfrom a structural coverage theorem. In the inherited family, coordinate\nequivalences identify the new frames with the old named seam frame;\ngrade-preservation lemmas make these equivalences suitable for the full\npredicate. The original solution then supplies the seam equation. The\nlocal proof transports coordinate maps, not merely a statement that the\nold and new ranks agree."
+    },
+    {
+      "id": "cases-architecture-018",
+      "file": "cases-architecture.tex",
+      "start_line": 242,
+      "sha256": "aa3ed94e142dba9e815751911c8cde23d7c8c86879aa07f201dff44df8b65f07",
+      "text": "One local producer shows what this coordinate preservation requires.\nIn \\src{AtomicFrames}, ports enumerate finite sets of common labeled\natoms. For a splitting vertex, two routes through the parent and child\nenumerations yield the same atom. Injectivity of the parent enumeration\nturns that atom identity into equality of the coordinate equivalences.\nThe source transfers this equality to the comparison matrices, whose\nidentical frames satisfy \\src{SameFramedFlag} by reflexivity.\nMerging vertices reuse the splitting construction with reversed local\ndata. Thus the compatibility starts from a common labeled object and\nreaches the named coordinate maps.\\footnote{See\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/AlgebraicGeometry/CharacterVarieties/Cutting/AtomicFrames.lean\\#L179-L227}{the splitting, merging, and frame comparison proofs}.}\nFor an inherited seam, the later proof assembles six concrete inputs:\ngrade preservation, the two frame identities, parent-word transport,\nchild-word transport, and the original seam equation. This explains why\nthe coordinate data remain necessary even when the seam's rank has\nalready been preserved.\\footnote{See\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/AlgebraicGeometry/CharacterVarieties/Frames/InheritedSeams.lean\\#L117-L155}{the inherited-seam proof}.}"
+    },
+    {
+      "id": "cases-architecture-019",
+      "file": "cases-architecture.tex",
+      "start_line": 260,
+      "sha256": "cdd1c4a38d782417ce7008e31138a3beed8576ee0bd69b226629d07c0a0aff5c",
+      "text": "There remains a second transport at the endpoint. The general\n\\src{markedCut_allSeams} theorem proves the eight-family result for the\nassembled marked-cut data. The produced values use matrices rebased along\nthe equality of the selected seam rank and its parent-facet rank.\n\\src{rebaseUnit} performs this equality-induced change of matrix size.\nThe endpoint proves that the chosen and rebased generator matrices agree,\nuses the mirror-rebasing theorem, and transports the resulting equality\nthrough the side-value constructor and then \\src{valuesFromPorts}.\nFinally, \\src{framedSeamEquations_of_values_eq} transfers the general\nseam predicate to the exact produced values. These equalities tie the\ncompatibility proof to the constructed representation."
+    },
+    {
+      "id": "cases-architecture-020",
+      "file": "cases-architecture.tex",
+      "start_line": 272,
+      "sha256": "1a49d979cd62fd642d05326967538282d73f429f0eb66e30e15a05b1f82f19c5",
+      "text": "The boundary assumptions also distinguish two nearby statements. The\nall-seams endpoint has boundary indices $b_0,i_0$, but requires no proof\nthat this occurrence is the chosen seam. The later\n\\src{producedMarkedSolution}, which assembles surface, seam, and vertex\nequations into a complete solution, additionally assumes\n\\[\n  D.\\mathrm{boundarySide}\n  \\langle D.\\mathrm{bandCutParent}(q),b_0,i_0\\rangle\n  =\\langle q,\\mathrm{none}\\rangle.\n\\]\nThat extra hypothesis is used for the surface component. Keeping these\nendpoints distinct exposes the exact scope of the selected support\ntheorem. The architectural lesson is the combination of a common\nwitness, exhaustive local families, and equality transport that preserves\nthe named mathematical content through the final construction."
+    },
+    {
+      "id": "cases-discrete-001",
+      "file": "cases-discrete.tex",
+      "start_line": 1,
+      "sha256": "d04e7321dc647f83de59f61d7a292982525a5ae1ec77d933cdb82fcb349b6479",
+      "text": "\\subsection{Common bases: from a matroid representation to physical random tapes}\n\\label{sec:common-bases}"
+    },
+    {
+      "id": "cases-discrete-002",
+      "file": "cases-discrete.tex",
+      "start_line": 4,
+      "sha256": "7092de760c07c8a08e2f274f954fb2c9a7fdb5c5501913e367a64369b77cc448",
+      "text": "The common-bases development connects an approximate counting argument to a fixed oracle machine, including its bit operations and the tape positions from which it obtains randomness \\citep{OAICommonBases}. Its organizing choice is to give the mathematical estimator, the finite random experiment, and the compiled program separate semantics, then prove the correspondences between them."
+    },
+    {
+      "id": "cases-discrete-003",
+      "file": "cases-discrete.tex",
+      "start_line": 6,
+      "sha256": "73f191fb9a4200eb59bfaa3656f5a5fc323524b86bece5f4b576eb1ed186e058",
+      "text": "\\paragraph{Encoding the counting problem.}\nThe mathematical problem is to count the common bases of two equal-rank matroids $M_1,M_2$ on an enumerated ground set $E=\\operatorname{Fin}n$. The first representation replaces two simultaneous base conditions by one base condition. On $E\\sqcup E$, set\n\\[\n N=M_1\\oplus M_2^*,\\qquad\n T(A)=\\operatorname{inl}(A)\\cup\\operatorname{inr}(E\\setminus A).\n\\]\nThe source proves that $T(A)$ is a base of $N$ exactly when $A$ is a base of both input matroids.\\footnote{\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\\#L7156-L7167}{Base correspondence and the rank of the paired matroid}.} Equal ranks give $r(N)=n$, while every transversal $T(A)$ has size $n$. Consequently the deficiency $d(A)=n-r_N(T(A))$ vanishes precisely at the objects being counted. Explicit equivalences between subsets, finite subsets, and transversals transfer both cardinalities and partition sums. If $Z$ is the common-base count, the resulting annealing partition function satisfies\n\\[\n Z\\leq \\sum_{A\\subseteq E}q^{d(A)}\\leq Z+2^nq,\n \\qquad 0\\leq q\\leq1.\n\\]\nThis representation identifies the quantity approximated by the sampling argument. It also supplies a useful state space for exchanges: a plain state selects one element from every doubled pair, while a defect state has one empty pair, one full pair, and singleton choices elsewhere. The walk can pass through these paired defects; a hitting construction returns to plain states. The formalization can therefore distinguish the space supporting local moves from the transversals whose weighted count is ultimately estimated."
+    },
+    {
+      "id": "cases-discrete-004",
+      "file": "cases-discrete.tex",
+      "start_line": 19,
+      "sha256": "23e8a5c5d2c2dbff6c19f87ef9d97d94dfac5af2253ad4a79f41d6dba2dcf471",
+      "text": "The next correspondence replaces rank access by independence queries. A greedy oracle routine computes the rank of an enumerated subset; its correctness identifies the oracle-defined deficiency and annealing weights with their mathematical counterparts. The estimator also uses a sampled zero-deficiency witness as a final guard. This gives the exact zero-count behavior later required of every machine execution."
+    },
+    {
+      "id": "cases-discrete-005",
+      "file": "cases-discrete.tex",
+      "start_line": 21,
+      "sha256": "069e0e5243e7d767ffc76b865b7dc5ad2cac8b44d16b06544631f71152e5777f",
+      "text": "\\paragraph{From experiments to a bounded program.}\nFinite random experiments are represented by trees whose internal nodes choose uniformly from a finite index set. A bounded implementation supplies each draw with a finite bank of rejection trials. Its fit condition requires at most $M$ successive draws and $H\\geq\\lceil\\log_2 a\\rceil$ bits per trial at every draw of arity $a$. With $D$ trials per draw, the development then bounds the loss in a $[0,1]$-valued observable by $M2^{-D}$. Both depth and width matter: insufficient trial width can force immediate failure regardless of $D$. A separate relation permits permutations of the outcome indices at each node and proves that these reindexings preserve expectations. Thus the abstract exchange walk and its code can use different finite enumerations while retaining the same output law."
+    },
+    {
+      "id": "cases-discrete-006",
+      "file": "cases-discrete.tex",
+      "start_line": 24,
+      "sha256": "1b2f24ad01bad4e3b6019bba6d1e06d2e714648c7b34264e6f0a079337b649d2",
+      "text": "The code layer makes randomness explicit input. Its typed expressions take\nan input and a random bank, returning an optional value and the unused\nbank. A realization theorem relates execution on every bank to the\ncorresponding random tree. For a Metropolis step, the construction follows\nthe actual proposal, acceptance calculation, Bernoulli experiment, and\nlazy branch. The complete estimator composes these experiments with\nthe witness guard."
+    },
+    {
+      "id": "cases-discrete-007",
+      "file": "cases-discrete.tex",
+      "start_line": 32,
+      "sha256": "541c9d8de70b35d6fc19d71bd169b88494bf1668464036812fcf268006a397e2",
+      "text": "Compilation supplies two distinct conclusions: the same encoded output\nand a bound on its cost. The constructed nine-register stack machine\nimplements the expressions, with a structural simulation proof including\nlist folds. Source evaluation returns a value and a charge; successful\nevaluation gives the same machine output within that charge.\\footnote{\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\\#L16459-L16620}{Cost-bearing compiler correctness}.}"
+    },
+    {
+      "id": "cases-discrete-008",
+      "file": "cases-discrete.tex",
+      "start_line": 38,
+      "sha256": "620180d45f35a3cc8598c7660a65ae0c0a160a3093c439535e4dc39bbe0a1853",
+      "text": "\\paragraph{Why semantic correctness needs a size invariant.}\nThe polynomial guarantee has a separate proof obligation. The recursive\npredicate \\texttt{Safe O S e x} bounds the encoded widths of the input and\nevery successful output, and requires safety of the subevaluations actually\nused. For a composition it bounds the intermediate result; for a fold it\nrequires the invariant after each accumulator update. If the body charge\nis at most $E$ and these widths are at most $S$, the fold lemma gives\n\\[\n  c_{\\mathrm{fold}}\\leq |\\mathrm{xs}|\\,(7+12S+E).\n\\]\nThe encoding also bounds the list length by its width. Structural induction\non the fixed expression therefore gives a polynomial charge bound once\nthe intermediate-width certificate is supplied. This explains how the\nsimulation theorem becomes a complexity statement.\\footnote{See\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\\#L16855-L16904}{\\src{Safe} and the fold-charge proof}, and\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\\#L17079-L17092}{the structural polynomial bound}.}"
+    },
+    {
+      "id": "cases-discrete-009",
+      "file": "cases-discrete.tex",
+      "start_line": 55,
+      "sha256": "17702b3962be5b8e8f492728cdac6c75230a66e85d6189d522ff3257ee70a7a7",
+      "text": "The source packages these certificates as \\src{PolySafe}: a polynomial\n$p$ takes an input parameter $S$ to an admissible width $p(S)$.\nPolynomial substitution supports composition. A further interface,\n\\src{AttrSafe}, carries numerical predicates alongside the width bound.\nThis matters for value-indexed operations: an exponent can be very large\ndespite a short binary encoding. The exponentiation lemma consequently\nassumes that the exponent itself is at most $S$. The estimator's attribute\nbounds three parameter fields, and its proof transports those bounds\nthrough exponentiation, range construction, and ratio products.\nIn \\src{attrSafe_compose}, the next width parameter is enlarged to\n$g(S)=p(S)+S$; monotonicity of the numerical attribute carries its\ninformation to that larger parameter. Thus a usable complexity interface\npreserves both encoded size and the value constraints needed by the next\noperation.\\footnote{See\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\\#L17689-L17706}{\\src{PolySafe}},\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\\#L22444-L22466}{attribute composition}, and\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\\#L24280-L24308}{the exponent and estimator attributes}.}"
+    },
+    {
+      "id": "cases-discrete-010",
+      "file": "cases-discrete.tex",
+      "start_line": 73,
+      "sha256": "676829c6245d4ad2a875c2ab94faf3133136dd0e6cbc92c4407e686a0575cb92",
+      "text": "\\paragraph{From output laws to successful tapes.}\nThe final probabilistic interface connects the program to its accuracy guarantee. Let $V$ be the canonical bounded experiment, and let $v$ be the rational output function implemented by the postamble. The certificate asserts\n\\[\n \\E_w\\,\\varphi(v(w))=\\E_b\\,\\varphi(V(b))\n \\quad\\text{for every }\\varphi:\\mathbb Q\\to\\R,\n\\]\nwhere both expectations are finite uniform averages. It also records source execution and nonnegativity, including zero output when $Z=0$.\\footnote{\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\\#L25962-L25968}{The output certificate}.} The universal observable interface transports the output distribution through changes of enumeration and bank layout."
+    },
+    {
+      "id": "cases-discrete-011",
+      "file": "cases-discrete.tex",
+      "start_line": 81,
+      "sha256": "0704f2b380230f58b59d03dff206d7ee13a0a5daecdaa2aee1f49aad982fa74e",
+      "text": "The machine correspondence reaches actual tape addresses. For $m$ total gathered bank bits, there is a start offset $s$, fixed before quantifying over tapes, such that every tape $\\beta:\\N\\to\\{0,1\\}$ produces\n\\[\n v\\bigl(\\operatorname{physicalWord}(s,m,\\beta)\\bigr),\\qquad\n \\operatorname{physicalWord}(s,m,\\beta)(i)\n   =\\beta\\bigl(s+3(m-1-i)+1\\bigr),\\quad i<m.\n\\]\nThe reversal comes from pushing bits onto a stack; the stride three reflects the sampling loop's instructions. The proof supplies $s+3m+1\\leq B$. Injectivity of these positions shows that a uniform length-$B$ tape induces a uniform length-$m$ word.\\footnote{\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\\#L25658-L25687}{Physical tape positions and their uniform law}; \\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\\#L26027-L26069}{the machine correspondence}.} Here $m$ counts bank bits, whereas $B$ bounds complete machine execution."
+    },
+    {
+      "id": "cases-discrete-012",
+      "file": "cases-discrete.tex",
+      "start_line": 89,
+      "sha256": "9c997978cec3da6dcef0a3b6eb07566f82bf1b1c6c6586d0022de43d255e2ee2",
+      "text": "The endpoint chooses one program and constants $C,a$ before the input matroids, oracle, and rational parameters $0<\\varepsilon,\\delta<1$. For every exact independence oracle and matroids of full ground set and common supplied rank $r$, it uses\n\\[\n B=C\\bigl(1+n+\\ell+\\lceil\\varepsilon^{-1}\\rceil\n       +\\operatorname{clog}_2\\lceil\\delta^{-1}\\rceil\\bigr)^a,\n\\]\nwhere $\\ell$ is the encoded input length and $\\operatorname{clog}_2$ is the ceiling binary logarithm. Every infinite tape halts by $B$, with both resource counters at most $B$. For a length-$B$ word, $\\operatorname{out}(w)$ denotes this output using its zero extension as the tape. Specializing the observable to the accuracy indicator gives\n\\[\n \\#\\{w\\in\\{0,1\\}^B:(1-\\varepsilon)Z\\leq\\operatorname{out}(w)\n                  \\leq(1+\\varepsilon)Z\\}\n \\geq(1-\\delta)2^B.\n\\]\nThe specification packages this success count with the universal resource and zero-output guarantees.\\footnote{\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\\#L110-L132}{The fixed-program and finite-tape specification}.} Verified compilation and probabilistic semantic preservation are established methods \\citep{Leroy2009,CakeML2014,CertiCrypt2009,EasyCrypt2011}. Expectation-functional semantics for randomized programs is also established\n\\citep{AudebaudPaulinMohring2009}. In Lean, SampCert separates sampling\nprocedures from normalized distribution semantics and proves exact sampler\nlaws \\citep{deMedeirosEtAl2025}. Its \\src{SLang} represents a program by an\nunnormalized mass function; normalization and equalities between sampler\nlaws support downstream privacy reasoning. The common-base development\ninstead carries its bounded random experiment through a costed expression\nlanguage to a fixed stack machine. A close compiler precedent is Zar,\nwhich translates probabilistic programs through choice-fix trees and\ninteraction trees to random-bit samplers, proving equidistribution in\nCoq \\citep{BagnallStewartBanerjee2023}. Here the comparison turns on the\nspecification carried through the pipeline: intermediate widths and\nnumerical attributes, an every-tape resource bound, and the finite count\nof accurate tapes. The distinctive evidence is the\nconcrete integration: the proof carries the counting quantity through oracle code, width bounds, and physical tape coordinates to an exact finite success count. Sections~\\ref{sec:tape-example}--\\ref{sec:success-budget} isolate the uniformity, law, and error-budget arguments behind this last step."
+    },
+    {
+      "id": "cases-discrete-013",
+      "file": "cases-discrete.tex",
+      "start_line": 116,
+      "sha256": "d9fff2031bdd293607c4da861ec75ceb6467019c824541595a13332b777c7a32",
+      "text": "\\subsection{Graph switches: a local table and a fiberwise error direction}\n\\label{sec:switch-chain}"
+    },
+    {
+      "id": "cases-discrete-014",
+      "file": "cases-discrete.tex",
+      "start_line": 119,
+      "sha256": "e06352f064731d523c39710f59ec253a7d140b888b892489e78dbf33e0129edf",
+      "text": "The common-base case needs preservation of an entire output law. The graph case instead needs control of the interaction between conditional averages. Its switch-chain development connects a four-vertex graph representation to a spectral estimate \\citep{OAISwitch}. At each step the chain stays put with probability $1/2$; otherwise it chooses uniformly a four-vertex set and an ordered pair of distinct perfect matchings on it. It replaces the first matching by the second when the removed edges are present and the added edges absent, and stays put otherwise. Each of the $6\\binom n4$ proposals thus has probability $1/(12\\binom n4)$. Its endpoint assumes $n\\geq4$ and a graphical degree sequence $d$ with $d(v)\\leq n-1$. It bounds the mixing time at total-variation threshold $1/4$ by $2n^8$ and, when there is more than one realization, gives spectral gap at least\n\\[\n \\frac{1}{24n^2\\binom n4}.\n\\]\nThe disjoint-pair branch of its proof is organized around a small exceptional direction in conditional averaging."
+    },
+    {
+      "id": "cases-discrete-015",
+      "file": "cases-discrete.tex",
+      "start_line": 125,
+      "sha256": "061829f9f0af9d9cb5c14c958fa8c741f1d9a640c7d8bc7a15ad6ad10ce32e0c",
+      "text": "\\paragraph{Reducing a graph cell to a matrix count.}\nStates are simple graphs on $\\operatorname{Fin}n$ realizing $d$. Fix four distinct vertices, grouped into pairs $a=\\{i,j\\}$ and $b=\\{k,l\\}$. A coarse cell fixes the outer graph, the internal edge of each pair, and every outside vertex's total incidence into each pair. The remaining data consist of a $2\\times2$ Boolean matrix $M$ of cross edges and two sets $U,W$ recording the singleton boundary choices at $i$ and $k$. The source proves that these coordinates determine the graph.\\footnote{\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/DisjointEncoding.lean\\#L20-L30}{The coarse graph cell}; \\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/DisjointCoordinateFeasibility.lean\\#L22-L108}{degree feasibility in coordinates}.}"
+    },
+    {
+      "id": "cases-discrete-016",
+      "file": "cases-discrete.tex",
+      "start_line": 128,
+      "sha256": "e9076a2828abfef1f686d848afe3bd8b212f262f01a396ecbdf6df83d03be5e5",
+      "text": "The important feasibility step reduces all four degree equations to preservation of the cross-edge total and two margin equations:\n\\[\n \\operatorname{row}_0(M)+|U|=c_L,\\qquad\n \\operatorname{col}_0(M)+|W|=c_R,\n\\]\nwhere $c_L,c_R$ are fixed by the original graph. Explicit forward and inverse constructions identify the fixed-degree graph cell with left and right boundary data together with a compatible matrix. This equivalence preserves the multiplicities needed for uniform conditional averages. In particular, projecting a uniform graph cell onto its boundary data produces weights equal to the number of compatible cross matrices. The matrix count records the entire dependence between the left and right data that remains after the outer graph and incidence totals have been fixed."
+    },
+    {
+      "id": "cases-discrete-017",
+      "file": "cases-discrete.tex",
+      "start_line": 135,
+      "sha256": "faef90bdb99acc033fc0d76c54da65213f61aee6c0202ede1648d4827a044f05",
+      "text": "There are only sixteen Boolean matrices. Let $c_s(r,t)$ count those with total $s$, first-row sum $r$, and first-column sum $t$. For $s=2$, finite decision proves the table\n\\[\n \\bigl(c_2(r,t)\\bigr)_{r,t=0}^2\n   =\\begin{pmatrix}0&1&0\\\\1&2&1\\\\0&1&0\\end{pmatrix},\n \\qquad c_2(r,t)=2-p(r)-p(t),\n\\]\nwhere $p(r)=\\mathbf1_{r\\ne1}$.\\footnote{\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/CrossMatrix.lean\\#L22-L25}{The finite total-two count}.} For every other total, the table factors into independent margin weights. For total two, the centered covariance factors through one flag on each side: conditional averaging can depend on the left data through the single Boolean flag $p(r)$. This is the dependence that the subsequent analysis tracks."
+    },
+    {
+      "id": "cases-discrete-018",
+      "file": "cases-discrete.tex",
+      "start_line": 143,
+      "sha256": "dca9dc2e28c7096e07691772fcb3d4c503219cdcf605e87d080647de44a87b20",
+      "text": "A short calculation illustrates the exceptional correlation. Among the six\nuniformly chosen total-two matrices, each off-center margin flag has mean\n$1/3$, while their product is always zero. Their covariance is therefore\n$-1/9$. This calculation concerns the uniform six-matrix experiment; graph\ncells also carry boundary multiplicities. It explains why a blanket claim\nof independent margins or nonnegative local correlation would fail and\nwhy the proof isolates a compensated error direction."
+    },
+    {
+      "id": "cases-discrete-019",
+      "file": "cases-discrete.tex",
+      "start_line": 151,
+      "sha256": "e6b6a0729a90a696a32136389d8bd0ec68290fbe459470c32bf1c961f0b5d240",
+      "text": "\\paragraph{Paying for the exceptional correlation.}\nIn the finite coordinate model, composing the two conditional averages therefore gives $A+Bp(r)$, with $B=0$ unless $s=2$. The graph-cell equivalence transports this formula back to actual graph states. This transport includes a proof that corresponding fibers have equal cardinalities and corresponding sums, and an identification of the flag: $p(r)$ says that $i$ has equal adjacency bits to $k$ and $l$, meaning both cross edges are present or both are absent.\\footnote{\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/CrossCellAffineComposition.lean\\#L64-L87}{The affine conditional image}; \\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/DisjointGraphAffine.lean\\#L68-L90}{its graph interpretation}.}"
+    },
+    {
+      "id": "cases-discrete-020",
+      "file": "cases-discrete.tex",
+      "start_line": 154,
+      "sha256": "ddcd0f9978fe734530c2383a2661b2488f8f34d2ecc40dfd1b00b04a23477258",
+      "text": "Work in the real function space on the finite graph state space $\\Omega$,\nwith counting inner product $\\langle f,g\\rangle=\\sum_{G\\in\\Omega}f(G)g(G)$.\nFiber averages themselves are divided by the fiber cardinality.\\footnote{See\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/OrthogonalPairResampling.lean\\#L191-L193}{\\src{OrthogonalPairResampling.lean}, lines 191--193}, and\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/OrthogonalPairResampling.lean\\#L231-L232}{lines 231--232}.}\nWrite $E_a$ for averaging over a\npair-resampling fiber. The transported formula expresses the relevant conditional image as a fiber-constant base plus a fiber-constant weight times the equality flag; the weight is supported where the cross total is two. For this purpose a fiber is active when $k$ and $l$ each have exactly one neighbor in $a$. Subtracting $E_a$ leaves a multiple of the centered flag on each active fiber. These functions form an error subspace whose orthogonal projection is denoted $R_{ab}$. The description is at most one dimensional on each fiber; the complete graph-space subspace can have many independent fiber components."
+    },
+    {
+      "id": "cases-discrete-021",
+      "file": "cases-discrete.tex",
+      "start_line": 162,
+      "sha256": "ab7930c63d89987f011dc670b4de29e2eca27f5d93c549c9b5789e44f467e424",
+      "text": "This representation supplies the hypotheses of an abstract projection interaction inequality. Conditional averaging is a symmetric idempotent operator, and the error projection fixes the correlated fluctuation just identified. The analytic argument decomposes the state-space function using ranges and orthogonal complements of these projections. This turns the graph-specific conditional formula into precisely the range conditions required by the operator theorem. With $G_{ab}$ the appropriate switch-gain projection, its graph instance yields\n\\[\n 2\\norm{G_{ab}f}^2-\\norm{R_{ab}f}^2-\\norm{R_{ba}f}^2\n \\leq2\\langle(I-E_a)f,(I-E_b)f\\rangle.\n\\]\nThe remaining task is to bound the aggregate error energy. Fix a graph\n$G$ and a pair $a=\\{i,j\\}$. Its singleton-neighbor set $V_G$ consists of\noutside vertices adjacent to exactly one endpoint of $a$. The vertices\nassigned to $i$ form a subset of prescribed cardinality $q$. An equivalence\ntherefore identifies this assignment space with the slice\n$\\{S\\subseteq V_G:|S|=q\\}$. Under its induced linear isometry, the\ncentered equality flag becomes the slice's \\src{raw} vector, while a\ngraph switch becomes a transposition of two labels."
+    },
+    {
+      "id": "cases-discrete-022",
+      "file": "cases-discrete.tex",
+      "start_line": 176,
+      "sha256": "4ba359ddc0af2e3e591ff028ee787859d91a6365fdd3b4ad93878dfbe7604700",
+      "text": "The slice estimate is itself an operator comparison. Normalized flag\nvectors have squared norm $1/2$ whenever nonzero. Their synthesis operator\n$T$ satisfies $TT^*\\leq L_{\\mathrm{swap}}$ in quadratic-form order.\nThe proof decomposes coefficient data into a zero-sum linear part and a\nsymmetric part with zero rows and diagonal. The Gram operator is scalar\non these parts; its scalars are bounded by the corresponding swap-generator\nscalars. Boundary slices have zero flag vectors and are treated separately.\nThis decomposition proves a bound on overlapping flag directions, rather\nthan assuming they are mutually orthogonal. In projection form it gives\n\\[\n \\frac12\\sum_{k,l}\\norm{\\Pi_{kl}h}^2\n \\leq\\frac18\\sum_{k,l}\\norm{h-h\\circ\\tau_{kl}}^2,\n\\]\nwhere $\\Pi_{kl}$ projects onto the centered flag line and $\\tau_{kl}$\nswaps the two labels.\\footnote{See\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/SliceOperatorComparison.lean\\#L96-L156}{the two-block operator comparison}, and\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/SliceReindexedComparison.lean\\#L49-L79}{isometric reindexing and the swap-sum estimate}.}"
+    },
+    {
+      "id": "cases-discrete-023",
+      "file": "cases-discrete.tex",
+      "start_line": 194,
+      "sha256": "497df5b152b58dab06ad15cb5b761609f3091a4a5ee0f2ceb8dbd894bde346c3",
+      "text": "Two normalizations connect this estimate to the graph budget. A switch-gain\nprojection is half the difference across its involution, so its squared\nnorm contributes the factor $1/4$ obtained by multiplying the displayed\ninequality by two. Next, the restrictions $h_G$ to assignment spaces satisfy\nthe exact identity\n\\[\n \\sum_{G\\in\\Omega}\n \\frac{\\norm{h_G}^2}{\\binom{|V_G|}{q_G}}=\\norm h^2.\n\\]\nEach fiber is represented once by each of its graph states; division by its\ncardinality cancels that repetition. Applying this identity to both sides\nof the assignment budget lifts the local inequality to the whole graph\nspace. Finally, ordered vertex labels count each unordered partner pair\ntwice, so both error and gain sums acquire the same factor $1/2$.\nThe resulting budget bounds the sum of squared error norms by the sum of\nsquared gain norms.\\footnote{The restriction identity and its use are in\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/PairEqualityBudget.lean\\#L151-L270}{\\src{PairEqualityBudget.lean}, lines 151--270}; the ordered/unordered conversion is in\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/PairEqualityBudgetUnordered.lean\\#L23-L54}{\\src{PairEqualityBudgetUnordered.lean}, lines 23--54}.}\nSumming the compensated inequality over ordered disjoint two-element vertex sets $a,b$ then gives\n\\[\n \\sum_{a,b:\\,a\\cap b=\\varnothing}\n   \\langle(I-E_a)f,(I-E_b)f\\rangle\\geq0.\n\\]\nThus the proof controls the aggregate interaction by accounting explicitly for the exceptional flag directions.\\footnote{\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/PairActualAffine.lean\\#L81-L101}{The concrete interaction inequality}; \\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/PairDisjointAssembly.lean\\#L45-L77}{assembly with the projection budget}.}"
+    },
+    {
+      "id": "cases-discrete-024",
+      "file": "cases-discrete.tex",
+      "start_line": 219,
+      "sha256": "1d4dc72b6edee33d4dcdd5d0177cc213eb13b9f99530a4f6d6ac7b6eeb6807e9",
+      "text": "The nonnegative disjoint sum combines with triple-generator and local comparison estimates to produce a generator-square bound, then the stated spectral gap and mixing estimate. Computation on finite objects and transport through equivalent representations are established proof methods \\citep{Harrison1995,CohenMahboubi2012}. The case-specific mathematical choice is to isolate the total-two table's equality flag, identify its centered error space on graph fibers, and compensate those errors in a global operator estimate."
+    },
+    {
+      "id": "cases-001",
+      "file": "cases.tex",
+      "start_line": 1,
+      "sha256": "2f8e69086de5415178d8554cb85dc95d785ef2ef46abf5b81e17276626896f95",
+      "text": "\\Needspace{32\\baselineskip}\n\\section{Six mathematical interfaces}\n\\label{sec:cases}"
+    },
+    {
+      "id": "cases-002",
+      "file": "cases.tex",
+      "start_line": 5,
+      "sha256": "4518dbbab32dc0b046e050c6fefe143ce6fdab25184993b11fbcef07ce3a2003",
+      "text": "Table~\\ref{tab:overview} groups the cases by probability and computation,\nanalysis, and reconstruction of algebraic data. Each account follows a\nrepresentation through its preservation theorem to the next mathematical\noperation. Section~\\ref{sec:worked} develops smaller explanatory examples."
+    },
+    {
+      "id": "cases-003",
+      "file": "cases.tex",
+      "start_line": 10,
+      "sha256": "cd5684dc07961de11bf11a5446131b90acd91ef1c64bb81a529bfba9010d17fb",
+      "text": "\\input{overview}\n\\input{cases-discrete}\n\\input{cases-analysis}\n\\input{cases-architecture}"
+    },
+    {
+      "id": "discussion-001",
+      "file": "discussion.tex",
+      "start_line": 1,
+      "sha256": "99a9896a630a5b967e616ff6fc1b78c4f2902d7fb976f0524bd9083daa94df1b",
+      "text": "\\section{Discussion: preservation and reuse}\n\\label{sec:discussion}"
+    },
+    {
+      "id": "discussion-002",
+      "file": "discussion.tex",
+      "start_line": 4,
+      "sha256": "d99086771f28041a9ef6e841b8d4046a34f5b7ceb7a47cc20f6460d2d13a9d2a",
+      "text": "\\subsection{What the comparison reveals}"
+    },
+    {
+      "id": "discussion-003",
+      "file": "discussion.tex",
+      "start_line": 6,
+      "sha256": "3bf8992bb5de45ac047fdcc99de6bea4859a724a7a9355882e3c78de12a27974",
+      "text": "Across the six cases, the downstream operation determines the strength of\nthe required correspondence. An accuracy probability depends on the\noutput law. A named-coordinate equation depends on the coordinate map.\nAmbient differentiation uses local information about a field. An\noptimized inequality depends on the normalization and weights of its\nestimates. The four recurring requirements---preservation of exact data,\nlaws, estimates, and local differential information---can occur together\nwithin one development."
+    },
+    {
+      "id": "discussion-004",
+      "file": "discussion.tex",
+      "start_line": 15,
+      "sha256": "3e20c137635a35fa0481f5d73279ba9316a88b7176bc23f60449ba6729f14f18",
+      "text": "The most revealing comparisons concern a change in what the proof needs.\nThe common-base construction preserves a distribution through\nreindexing, then preserves execution for a fixed input bank. Mahler first\nidentifies whole form-valued fields so that it can differentiate them,\nthen uses agreement on tangent tuples to compare boundary integrals.\nThe trace-cone construction recovers ideal order from addition alone,\nthen uses convergence and scalar compatibility to recognize the ideals\nof a particular trace. In each case, following the next operation\nexplains why the interface has the fields it does."
+    },
+    {
+      "id": "discussion-005",
+      "file": "discussion.tex",
+      "start_line": 25,
+      "sha256": "18fe69556b03ef5161d1dc68533f175a52b2d905ec12b22bce5fe675bff655e2",
+      "text": "The implementation details sharpen this comparison. In the compiler,\nencoding widths and numerical attributes answer different complexity\nquestions. In graph resampling, the restriction identity restores the\nglobal counting norm after passing to a local assignment space. In the\ntrace interface, image filters extend a property stated on one carrier\nto families indexed by other types. These are concrete choices about\nwhat an interface exposes, each with a proof that later arguments use.\nThe compositional ideal correspondence in Section~\\ref{sec:upstream-reuse}\nshows how one such specification supports a further construction."
+    },
+    {
+      "id": "discussion-006",
+      "file": "discussion.tex",
+      "start_line": 35,
+      "sha256": "dabb8956a8b257de8960ef75f4af128920f97fc11c980863205175419d7a9e1f",
+      "text": "Two cases also show how a small calculation can govern a large estimate.\nFor graph switches, the total-two matrix table identifies an exceptional\ndirection whose aggregate contribution is paid for by a projection\nbudget. For Crouzeix, rectangular compressions and two polynomial orders\nproduce energy bounds that close at the constant two. The important\nrelation is between the local calculation and the global quantity it\ncontrols."
+    },
+    {
+      "id": "discussion-007",
+      "file": "discussion.tex",
+      "start_line": 43,
+      "sha256": "5adcdaf471a9ffd4e7871a755b46a78fe98d2d019b74fac669fee636e6e43baf",
+      "text": "These patterns have substantial antecedents. Verified compilers establish\nsemantic preservation between source and implementation\n\\citep{Leroy2009,CakeML2014}; probabilistic program logics reason about\ndistributions and observations \\citep{CertiCrypt2009,EasyCrypt2011}.\nAlgebraic hierarchy design and specification-driven collaboration treat\ninterfaces as mathematical objects\n\\citep{GarillotEtAl2009,Baanen2022,CommelinTopaz2024}. The contribution of\nthis comparison lies in showing the specific mathematical payload of\nthose interfaces and how their composition supports the selected proofs."
+    },
+    {
+      "id": "discussion-008",
+      "file": "discussion.tex",
+      "start_line": 53,
+      "sha256": "aface0be90427ee0606ed5249c752f52bd5d4c24a294406bfb5f447ca1717593",
+      "text": "\\subsection{Tactic use and the division of proof work}\n\\label{sec:tactics-synthesis}"
+    },
+    {
+      "id": "discussion-009",
+      "file": "discussion.tex",
+      "start_line": 56,
+      "sha256": "255b176006f944b33919c557bd8ff76a61fb6101ff42ba5feddac2e641fc79eb",
+      "text": "The survey makes proof-writing practice a second finding of the review.\nIn the common-domain comparison, the OpenAI sample has higher\nmodule-balanced prevalence of arithmetic and algebra tactics by 30.5\npercentage points and local claims or calculation chains by 34.1 points.\nFigure~\\ref{fig:method-shift} shows these differences alongside the\nnear-baseline extensionality profile. The resulting picture is selective:\nparticular forms of local proof work receive greater emphasis."
+    },
+    {
+      "id": "discussion-010",
+      "file": "discussion.tex",
+      "start_line": 64,
+      "sha256": "1cd808a908baeae5ce2853ba4a5c0309f9d4f2d7cad8b3850533261f16289fdc",
+      "text": "The case studies give that distribution mathematical meaning. In the\ncommon-base compiler's fold-cost proof, induction supplies a bound for\nthe remaining computation. Execution identities and the safety invariant\njustify applying it to the updated state. The proof then exposes list\nlength and multiplication with restricted simplification, and\n\\src{omega} closes the natural-number inequality.\\footnote{Source:\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\\#L16880-L16907}{\\src{CommonBases.lean}, lines 16880--16907}.}\nThe mathematical work establishes the relation between the recursive\ncomputation and its cost; arithmetic automation discharges the goal\nproduced by that relation."
+    },
+    {
+      "id": "discussion-011",
+      "file": "discussion.tex",
+      "start_line": 75,
+      "sha256": "4ebd09670e582dfca26e77c8bdcf2ded8c175005a68a3a8e308a32a8b269b440",
+      "text": "The Crouzeix case exhibits a similar division at a different scale.\nFourier and positive-block estimates first establish the scalar\ninequalities needed for the sharp constant. The closing proof uses\n\\src{linarith} to obtain $2a\\leq8a/\\gamma^2$, clears the positive\ndenominator, and uses \\src{nlinarith} with $a>0$ to derive\n$\\gamma^2\\leq4$ and then $\\gamma\\leq2$.\\footnote{Source:\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/DomainCore.lean\\#L105-L117}{\\src{DirectCrouzeix/DomainCore.lean}, lines 105--117}.}\nThe choice of compressions and energy weights creates the cancellation\nthat these tactics certify. Likewise, the sampled numerical files place\nexact interval checks beneath assembly and soundness lemmas. These\nconstructions expose a useful interaction between proof design and local\nautomation."
+    },
+    {
+      "id": "discussion-012",
+      "file": "discussion.tex",
+      "start_line": 88,
+      "sha256": "fce3d5575b0ed1abead8931d24bcf8b16db0212d9e027c4ab6f31870b59eebad",
+      "text": "This interaction helps explain how the inspected constructions are\ncompleted. Their preservation lemmas make the local steps applicable\nand their conclusions reusable. The corpus frequencies establish a\nbroader difference in written proof practice. Assessing whether that\nprofile improves completion rates, development time, or maintenance\nwould require matched formalization tasks and corresponding outcome\nmeasurements. The present evidence instead joins a measured tactic\nprofile to source-traced mechanisms within particular completed proofs."
+    },
+    {
+      "id": "discussion-013",
+      "file": "discussion.tex",
+      "start_line": 97,
+      "sha256": "1730e41bab87737fdf56c5657dc5b2ebd86f5dca9f1c1af18ac960913f632f85",
+      "text": "\\subsection{Using the comparison in a new formalization}"
+    },
+    {
+      "id": "discussion-014",
+      "file": "discussion.tex",
+      "start_line": 99,
+      "sha256": "e128d0e8b773e1a4bb596e6d20e973a9481b4b0eb16c9702cd9230df74aa5999",
+      "text": "Start with the intended downstream statement. Write the equation,\ninequality, or event probability that the next step requires. Then identify\nwhat the proposed representation changes: multiplicities, coordinate\norder, multiplication order, or a neighborhood of definition. The\npreservation statement should connect those changed data to the quantity\nthe next theorem consumes."
+    },
+    {
+      "id": "discussion-015",
+      "file": "discussion.tex",
+      "start_line": 106,
+      "sha256": "ed8ed17c3941795f5ee38a25ea2d131015a9e85e6c64abdc8439bb10be88da3b",
+      "text": "The examples in Section~\\ref{sec:worked} make this choice concrete. For an\naccuracy event, preserving a mean is insufficient; its indicator\nexpectation is enough, and a full output-law identity makes the interface\nreusable for other events. For ambient differentiation, neighborhood\nagreement is sufficient, while the later boundary integral may require\nonly agreement on tangent tuples. A named seam equation needs its\ncoordinate map. Proposition~\\ref{prop:success-budget} then shows how\nseveral such obligations can meet: sampling loss, tape uniformity, and\ndeterministic execution give one finite success count."
+    },
+    {
+      "id": "discussion-016",
+      "file": "discussion.tex",
+      "start_line": 116,
+      "sha256": "695a5c447a38686feeb30bf39383735aaab7e9080bc133ea34a91b63879ba0e3",
+      "text": "Finally, follow the construction of the hypotheses for the actual inputs.\nThe Mahler strip maps supply the analytic data, while the Crouzeix outer\ndomains supply strict containment and the required estimates. In the\nmarked-surface construction, using one splitting witness for the diagram\nand its values keeps their identifications coherent. These examples\nsuggest reusable interfaces for a library: a small local model with a\nmeasure-preserving correspondence, a sufficient semantic relation, and\nexplicit construction of the inputs that relation requires."
+    },
+    {
+      "id": "discussion-017",
+      "file": "discussion.tex",
+      "start_line": 125,
+      "sha256": "06c7b72d0a20f4967a207eed34982a04066c6782dc1884f056bbfbb2dc12f6a3",
+      "text": "The tactic comparison adds a practical design question: which local\nobligations should the interface expose? A width invariant can make a\ncompiler cost step an explicit natural-number inequality. Positive\ndenominators and nonzero factors can make the final analytic estimate a\nscalar cancellation. Exact interval data can make a numerical step\ndecidable. Choosing and proving these interfaces gives established\nautomation a well-specified part of the larger argument to check."
+    },
+    {
+      "id": "discussion-018",
+      "file": "discussion.tex",
+      "start_line": 133,
+      "sha256": "cd38a457760b7ed3f4a34b4fa6c63d52c44385547fe7e8d3755510b510568a80",
+      "text": "\\subsection{Scope and further work}"
+    },
+    {
+      "id": "discussion-019",
+      "file": "discussion.tex",
+      "start_line": 135,
+      "sha256": "81d31ff6fd2e929d8b47910b5a67f22ae2aa5f8cd9214c02b9418195631cde29",
+      "text": "Selection favored explicit interfaces that could be traced in depth.\nIt supports the present comparisons of mathematical interfaces. The\nseparate survey in Section~\\ref{sec:profile} estimates lexical features\nand exposes the effect of certificate concentration. Its broad domain and\nlength comparisons help identify differences in proof-writing practice;\nmatching the same mathematical tasks would sharpen that assessment and\nallow the relationship between tactic use and formalization outcomes to\nbe tested.\nThe source analysis establishes\nwhat the inspected declarations state and how their constructions connect.\nA full assessment of the headline mathematical results additionally\nrequires rebuilding their dependencies and examining the underlying\narguments, with the endpoint and support-result distinctions retained."
+    },
+    {
+      "id": "discussion-020",
+      "file": "discussion.tex",
+      "start_line": 149,
+      "sha256": "bf672f0949ee59e889b34c8bba708f947df4b556113d908157a439c3e7ab6f8f",
+      "text": "For a mathematician, these cases offer a route into substantial formal\nsource: locate the next operation, identify what it consumes, and follow\nthe theorem that preserves that information. For a formalizer, the\ncombined analysis shows how interface design and local proof practice\nmeet. The review's contribution is the connection between those\nsource-traced mechanisms and a reproducible comparison of tactic use.\nThe worked examples provide a modest reusable version of the interfaces,\nwhile the survey identifies which forms of proof work distinguish the\nsampled collection from its Mathlib baseline."
+    },
+    {
+      "id": "discussion-021",
+      "file": "discussion.tex",
+      "start_line": 159,
+      "sha256": "7e6e0a1b85821a876fc0906c4042440ce5155fd9c01197ff3b8b053cf92fb573",
+      "text": "\\Needspace{24\\baselineskip}\n\\section*{Data and code availability}"
+    },
+    {
+      "id": "discussion-022",
+      "file": "discussion.tex",
+      "start_line": 162,
+      "sha256": "b28c9c6e4f85a8e618357810a2dc77e060dea7b1719fd0d1bc776508daf40c08",
+      "text": "The accompanying source package contains the LaTeX manuscript, verified\nreference records, declaration evidence ledgers, original Lean examples,\nand Python checks. Five elementary Lean examples import only \\src{Lean}.\nThe upstream reuse experiment imports \\src{OAI.Analysis.TraceCone.IdealTransport}\nand compiles its three-module dependency chain from unchanged source bytes.\nBoth experiments use Lean 4.34.1; the latter uses Mathlib revision\n\\src{d13f23b723b8a846827a245b89c10fc7d3f11612}. Compiler logs record the\nreported axioms for the named examples. The Python checks enumerate tape\nfibers and Boolean matrix counts using exact integers. The package README\ngives reproduction commands and identifies the pinned external sources.\nThe separate method-survey directory retains the complete path population,\nthe 800 sampled source modules and their hashes, extraction tables, feature\ndefinitions, bootstrap summaries, and the 40-body validation record.\nProfiling the Mathlib baseline requires its pinned source checkout;\nthe survey reads source without elaborating the sampled developments.\nPublic source links in the manuscript resolve to the reviewed repository\nrevision."
+    },
+    {
+      "id": "discussion-023",
+      "file": "discussion.tex",
+      "start_line": 180,
+      "sha256": "34fe00162f787d0da16933851769f074d3b61cba1a5c0b1e63a04bad4f17bb17",
+      "text": "The source inventory is the complete Git tree of \\src{openai/math},\ninspected on 8 October 2026.\\footnote{Reviewed revision:\n\\src{fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb}. Public source links refer\nto that revision.} It contains 122,875 files with the \\src{.lean}\nextension, including supporting modules. The package retains 546 source\nartifacts, including the \\src{OAI} import closures for the six selected\nendpoints; 17 detailed evidence records document the additional proof-body\nanalysis. The separate formalization\ncatalogue lists 173 source records and 200 main-result bindings\n\\citep{OAICatalog}. These counts describe different units; none is a count\nof the developments studied in depth here."
+    },
+    {
+      "id": "discussion-024",
+      "file": "discussion.tex",
+      "start_line": 193,
+      "sha256": "0750f01bddb5b208cf1ba7fc18353b7a5f9c37eeabb6af580c52390e4e5bd0a9",
+      "text": "Proof checking supplies complementary evidence. The collection provides\nComparator challenge configurations \\citep{OAIComparator}; the separately\ninspected checker implements statement comparison, dependency and axiom\ninspection, kernel replay, and an optional external checker\n\\citep{ComparatorSource2026}.\\footnote{Checker source revision:\n\\src{ca04cfc72b550331658ec314bf47685281bfd4bf}. This pin records our\ninfrastructure reading; the collection's installation instructions do\nnot specify that revision.}\nThe distinction between constructing a proof and checking it has a long\nhistory \\citep{deBruijn1970,BarendregtWiedijk2005}; Lean typechecker\nverification provides a contemporary example \\citep{Carneiro2025Lean4Lean}.\nLibrary maintenance addresses consistency at another level\n\\citep{vanDoornEbnerLewis2020}. Understanding why a formal statement\ncaptures the intended mathematics still requires reading its objects\nand hypotheses."
+    },
+    {
+      "id": "introduction-001",
+      "file": "introduction.tex",
+      "start_line": 1,
+      "sha256": "479ce8267a8dc66449e53b838492edeab11f9f116eed87da087547c1cd388ae6",
+      "text": "\\section{Introduction}"
+    },
+    {
+      "id": "introduction-002",
+      "file": "introduction.tex",
+      "start_line": 3,
+      "sha256": "5320277d790e6c767fe1cd44e2de5d74ebe1bf78926cfd836e8d2f6bac71f0f8",
+      "text": "A formal proof can cross several mathematical languages before reaching\nits conclusion. A graph becomes a Boolean matrix, a differential form\nacquires a continuously bundled representation, or an estimator becomes\na program reading a particular sequence of random bits. Each crossing\nraises the same question: what information must survive for the next\nargument to remain valid?"
+    },
+    {
+      "id": "introduction-003",
+      "file": "introduction.tex",
+      "start_line": 10,
+      "sha256": "83cc83229de6530a21b379995876eabdc6a96ff6f05d1367e70243d1246130a7",
+      "text": "We study the proved correspondences that answer this question. We call\nthem preservation interfaces: they specify both the relation between\nrepresentations and the information available to a later construction.\nAn accuracy event requires the output probability law; differentiation\nrequires suitable local information about a field; an equation in named\ncoordinates requires the coordinate maps themselves. Equivalence of\nunderlying objects is useful only when it supplies the relation that the\nnext step consumes."
+    },
+    {
+      "id": "introduction-004",
+      "file": "introduction.tex",
+      "start_line": 19,
+      "sha256": "5a5b8e43b9f411a1317e556a8b621263165061bb9a555fe5297d355ca66e2079",
+      "text": "The OpenAI Lean collection offers six detailed cases for this comparison\n\\citep{OAIRepository}. Common-base counting and graph switch chains show\nhow finite representations support probabilistic guarantees. The Mahler\nand Crouzeix arguments show how algebraic identities, analytic estimates,\nand auxiliary domains meet. Trace ideals and marked character-variety\ndiagrams show how an invariant or a change of coordinates can retain\nenough data to reconstruct and transport a specific object. The first\nfour selected statements are public endpoints; the final two are support\nresults with their own explicit conclusions."
+    },
+    {
+      "id": "introduction-005",
+      "file": "introduction.tex",
+      "start_line": 29,
+      "sha256": "7d52208ff1a9cce9b9be63a5c72a99b46267299046bcfa6b4ed91eca1941d3f3",
+      "text": "Three questions guide each case. What does the intermediate representation\nretain? Which theorem connects it to the intended object? Where does that\ntheorem discharge the next step's hypotheses? The review is intended for\nmathematicians reading formal developments and for formalizers choosing\ninterfaces. The review has two related contributions. The six case studies\ncompare preservation interfaces, supported by small examples explaining\nwhy a weaker correspondence can fail. A reproducible exploratory survey\ncompares the written proof methods of 800 uniformly sampled OpenAI modules\nwith the pinned Mathlib dependency. It distinguishes the method profile\nof a typical proof-bearing module from frequencies dominated by large\ncertificate batches."
+    },
+    {
+      "id": "introduction-006",
+      "file": "introduction.tex",
+      "start_line": 41,
+      "sha256": "e7b1d0fb1d274b53447eb0e9c14ddee2005b125314a3b1a878193b5aa4db0da1",
+      "text": "Together, these analyses relate representation choices to the division\nof proof work. An interface can turn a semantic or analytic argument into\nexplicit local obligations that simplification, arithmetic tactics, or\nexact finite decision procedures can resolve. The survey finds greater\nuse of tactic blocks, arithmetic discharge, and intermediate claims\nrelative to the Mathlib baseline. The case studies explain concrete\ninstances of the organization behind those features. This perspective\nmakes tactic use part of the architectural comparison: the mathematical\nconstruction determines which goals reach a tactic and which hypotheses\nmake that local step sufficient."
+    },
+    {
+      "id": "introduction-007",
+      "file": "introduction.tex",
+      "start_line": 52,
+      "sha256": "2a232f7848b55666ea7a873ad9191a75200eafb98d8443c3f276e67ae6726e6f",
+      "text": "Companion reviews compare proposed mathematical advances with prior\nresults \\citep{GounderFrontiers2026} and study counting and sampling\napplications \\citep{GounderCounting2026}. Here common bases, Mahler,\nand Crouzeix supply source-level cases: the analysis follows the proved\ninterfaces that preserve information for later constructions."
+    },
+    {
+      "id": "introduction-008",
+      "file": "introduction.tex",
+      "start_line": 58,
+      "sha256": "eb612fb37149dd27d0ceda82f5a995fa1d24597b32ad4269f6160ab9039fca19",
+      "text": "This perspective builds on established accounts of formalization.\nLean combines dependent type theory, an extensible elaborator, and a\nprogramming language \\citep{deMouraUllrich2021}; Mathlib provides a shared\nmathematical vocabulary \\citep{mathlib2020}.\n\\citet{AvigadEtAl2024Anatomy} follow a linear-algebra example through\nformal proof, generalization, and connection with an existing Mathlib\ntheorem. \\citet{CommelinTopaz2024} study abstraction boundaries for\nmathematical construction and collaboration, using usable specifications\nas evidence of alignment with informal mathematics. Our comparison\nfollows already-written preservation arguments across several settings."
+    },
+    {
+      "id": "introduction-009",
+      "file": "introduction.tex",
+      "start_line": 69,
+      "sha256": "74ef33ab3838e63043562858934a367c4076a8e4b1c81304ee19853568dfba48",
+      "text": "The odd-order theorem and Kepler conjecture provide precedents for\nlarge proof decompositions and verified computation\n\\citep{GonthierEtAl2013,HalesEtAl2017}. Perfectoid spaces and schemes\nillustrate Lean's representation choices \\citep{Perfectoid2020,Schemes2021}.\nThe cases and elementary examples below focus on the mathematical\nrelation proved at each transition and the operation it enables."
+    },
+    {
+      "id": "introduction-010",
+      "file": "introduction.tex",
+      "start_line": 76,
+      "sha256": "10bae5add359ba58c23318c0472d6306c97ffa6fb6d0727e459ea84706c4ce64",
+      "text": "Section~\\ref{sec:method} describes selection and evidence.\nSection~\\ref{sec:cases} begins with the overview in\nTable~\\ref{tab:overview}, then develops the six cases.\nSection~\\ref{sec:profile} compares source-written proof methods with\nMathlib and examines the effect of certificate concentration.\nSection~\\ref{sec:worked} isolates their preservation requirements in\nworked examples. Section~\\ref{sec:discussion} brings the comparisons\ntogether and considers their use in new formalizations."
+    },
+    {
+      "id": "main-001",
+      "file": "main.tex",
+      "start_line": 1,
+      "sha256": "c041e9917bb14a40a2996d5990d1d37ef720ad679a9213a67cd3a62b10562a3b",
+      "text": "\\documentclass[11pt]{article}\n\\usepackage[T1]{fontenc}\n\\usepackage[utf8]{inputenc}\n\\usepackage{lmodern}\n\\usepackage[margin=1in]{geometry}\n\\usepackage{amsmath,amssymb,amsthm,mathtools}\n\\usepackage{microtype,booktabs,longtable,array}\n\\usepackage{graphicx}\n\\usepackage[numbers,sort&compress]{natbib}\n\\usepackage{xurl}\n\\usepackage{float,needspace}\n\\usepackage[hidelinks]{hyperref}\n\\usepackage{listings}\n\\setlength{\\emergencystretch}{2em}\n\\lstset{basicstyle=\\ttfamily\\small,columns=fullflexible,keepspaces=true,breaklines=true,frame=single,aboveskip=12pt,belowskip=12pt}\n\\newtheorem{proposition}{Proposition}\n\\newtheorem{example}[proposition]{Example}\n\\newcommand{\\R}{\\mathbb R}\n\\newcommand{\\N}{\\mathbb N}\n\\newcommand{\\E}{\\mathbb E}\n\\newcommand{\\norm}[1]{\\lVert#1\\rVert}\n\\newcommand{\\src}[1]{\\texttt{\\nolinkurl{#1}}}\n\\title{Proof Architecture in the OpenAI Lean Library:\\\\Representation, Locality, and Semantic Transport}\n\\author{Robin Gounder\\thanks{Correspondence: \\href{mailto:robin@gounder.com}{robin@gounder.com}.}\\\\{\\small Vaionex Corporation}}\n\\date{8 October 2026}\n\\hypersetup{pdfauthor={Robin Gounder},pdftitle={Proof Architecture in the OpenAI Lean Library: Representation, Locality, and Semantic Transport}}\n\\begin{document}\n\\maketitle\n\\input{abstract}\n\\noindent\\textbf{Keywords:} formalized mathematics; Lean; proof architecture; semantic preservation; probabilistic algorithms; mathematical interfaces.\n\\input{introduction}\n\\input{method}\n\\input{cases}\n\\input{method-profile}\n\\input{worked-examples}\n\\input{discussion}\n\\section*{Generative AI disclosure}\nOpenAI Codex agents contributed substantially to source discovery, literature synthesis, and mathematical exposition.\n\\bibliographystyle{plainnat}\n\\bibliography{references}\n\\end{document}"
+    },
+    {
+      "id": "method-profile-table-001",
+      "file": "method-profile-table.tex",
+      "start_line": 1,
+      "sha256": "78c491a6d9a542484bbabdf6decab1ca02cf9d92094e7f93bd656f9d63d5cb0d",
+      "text": "\\Needspace{27\\baselineskip}\n\\begin{table}[H]\n\\centering\n\\caption{Module-balanced proof-body features (percent). The first three rows partition proof modes; subsequent features overlap. OpenAI intervals are exploratory 95\\% module-bootstrap intervals. Mathlib is the census baseline at the pinned revision.}\n\\label{tab:profile}\n\\small\n\\setlength{\\tabcolsep}{5pt}\n\\renewcommand{\\arraystretch}{1.18}\n\\begin{tabular}{@{}p{6.7cm}rrr@{}}\n\\toprule\nWritten feature & OpenAI & Mathlib & OpenAI interval \\\\\n\\midrule\nOuter tactic block & 92.8 & 54.5 & 91.8--93.9 \\\\[4pt]\nTerm with a tactic subproof & 0.5 & 5.7 & 0.2--0.9 \\\\[4pt]\nTerm without a tactic subproof & 6.7 & 39.8 & 5.7--7.7 \\\\[4pt]\n\\midrule\nRewrite or simplify & 72.5 & 52.4 & 70.3--74.6 \\\\[4pt]\nLocal claims or calculation chains & 61.1 & 21.0 & 58.8--63.6 \\\\[4pt]\nArithmetic or algebra tactics & 38.2 & 2.7 & 35.5--40.8 \\\\[4pt]\nRestricted simplification & 38.5 & 13.0 & 36.4--40.9 \\\\[4pt]\nCases or induction & 19.8 & 12.8 & 18.0--21.8 \\\\[4pt]\nFinite decision & 6.3 & 0.2 & 4.9--7.8 \\\\[4pt]\n\\bottomrule\n\\end{tabular}\n\\end{table}"
+    },
+    {
+      "id": "method-profile-001",
+      "file": "method-profile.tex",
+      "start_line": 1,
+      "sha256": "871dfa2b3e0601943436f4bd4f9542720fa6709685e181156290cac60a2d5502",
+      "text": "\\section{A corpus comparison of proof-writing methods}\n\\label{sec:profile}"
+    },
+    {
+      "id": "method-profile-002",
+      "file": "method-profile.tex",
+      "start_line": 4,
+      "sha256": "221c4f55d8ba92115d068d9ecbeba34a3068d52b83d1e001a51ca022a7b74161",
+      "text": "The six cases explain particular preservation arguments. A separate\nexploratory survey asks a broader question: how does the source-written\nproof style of the collection compare with an established Lean library?\nWe use Mathlib at the collection's dependency revision as the baseline.\nIts style guidance accommodates both term and tactic proofs\n\\citep{MathlibStyle}; a difference from this baseline describes a library\nprofile rather than a departure from a single standard Lean method."
+    },
+    {
+      "id": "method-profile-003",
+      "file": "method-profile.tex",
+      "start_line": 12,
+      "sha256": "a8f878d0d2b6e51fa5f8743ab25912e4135e479d18f769ce7693ca78867c1d06",
+      "text": "\\subsection{Sampling, extraction, and units of comparison}"
+    },
+    {
+      "id": "method-profile-004",
+      "file": "method-profile.tex",
+      "start_line": 14,
+      "sha256": "3e3bf2e5c0debc230369169d05c65ac3279f415c72d07bce2de2fda082a55be4",
+      "text": "The population contains 122,457 tracked modules strictly under\n\\src{lean/OAI/}. From their paths we selected the 800 lowest SHA-256 ranks\nof a fixed seed followed by the path, before fetching their contents.\nThe retained population list, seed, and Git blob identifiers reproduce\nmembership. The baseline comprises all 8,070 mathematical modules under\n\\src{Mathlib/} at the pinned revision, excluding infrastructure roots and\numbrella files. The scanner extracts explicitly written, named\n\\src{theorem} and \\src{lemma} bodies: 13,309 in the OpenAI sample and\n186,751 in Mathlib. Definitions, instances, anonymous examples, and\ndeclarations produced by macros are outside this unit."
+    },
+    {
+      "id": "method-profile-005",
+      "file": "method-profile.tex",
+      "start_line": 25,
+      "sha256": "431517d83be1819566f684cfb2d264587e90f3862f28eee9a8a812897285165c",
+      "text": "Nested comments and strings are masked before locating declaration\nboundaries and the proof assignment. The extracted bodies cover 99.98\\%\nand 99.28\\% of detected named declarations, respectively; the remaining\ndeclarations, principally equation-style forms, are logged separately.\nThese are lexical coverage figures. Validation uses forty stratified\nsource inspections and eleven synthetic boundary checks, including\n\\src{let} bindings in theorem types and inline scoped declarations.\nThe accompanying validation record retains the inspected spans and\nextraction corrections."
+    },
+    {
+      "id": "method-profile-006",
+      "file": "method-profile.tex",
+      "start_line": 35,
+      "sha256": "2abd8b574ef3c445b9a2508d9374f9e8c4c4c7b2fbb8bb06524386d1c0356a72",
+      "text": "A feature is recorded once per body when a listed unqualified token\noccurs. Local claims include \\src{have}, \\src{suffices}, \\src{obtain}, and\n\\src{calc}; arithmetic and algebra include \\src{omega}, \\src{linarith},\n\\src{nlinarith}, \\src{ring}, and related tactics. Restricted simplification\nrecords \\src{simp}, \\src{simpa}, or \\src{simp_all} followed by \\src{only}.\nThe retained script gives every token family. These lexical indicators\ndescribe written proof features; elaboration would be needed to recover\nthe internal sequence of tactic executions."
+    },
+    {
+      "id": "method-profile-007",
+      "file": "method-profile.tex",
+      "start_line": 44,
+      "sha256": "129968856931d4c9d2188fbdcf9c70d32b54fb3604882e1f51effe7364fd2883",
+      "text": "Two summaries answer different questions. If module $m$ has $n_m$\nextracted bodies and feature $f$ occurs in $c_{mf}$ of them, the pooled\nrate is $\\sum_m c_{mf}/\\sum_m n_m$. The module-balanced rate is\n$M^{-1}\\sum_m c_{mf}/n_m$, over the $M$ modules with at least one\nextracted body. It corresponds to selecting such a module uniformly,\nthen a body within it uniformly. There are 784 and 7,348 proof-bearing\nmodules in the two corpora. We added module balancing after observing\ncertificate concentration; both summaries are retained as exploratory\nanalyses. The intervals in Table~\\ref{tab:profile} resample the 784 OpenAI\nmodules, using 1,500 percentile-bootstrap replicates. They describe\nsampling variation conditional on the extraction and feature definitions."
+    },
+    {
+      "id": "method-profile-008",
+      "file": "method-profile.tex",
+      "start_line": 56,
+      "sha256": "48368831e0cf7b987dc1044d749bc6d5125ab12397646cda60ed78e727dad4fb",
+      "text": "\\input{method-profile-table}"
+    },
+    {
+      "id": "method-profile-009",
+      "file": "method-profile.tex",
+      "start_line": 58,
+      "sha256": "88a7abf2c271af42500b2373eb5d6a620eefaaa0a47743cdda17780a83536328",
+      "text": "\\subsection{Differences that survive a coarse comparison}"
+    },
+    {
+      "id": "method-profile-010",
+      "file": "method-profile.tex",
+      "start_line": 60,
+      "sha256": "2915f7675cb6d36676fe7253386c16afc029c5c917176ccae566948221fcede5",
+      "text": "The most conspicuous difference is the outer proof form: the\nmodule-balanced share beginning in tactic mode is 92.8\\% in the OpenAI\nsample and 54.5\\% in Mathlib. The former also has more bodies containing\nlocal claims or calculation chains, arithmetic and algebra tactics, and\nrestricted simplification. These features often occur together: a proof\nstates an intermediate inequality, rewrites it into scalar expressions,\nand finishes with \\src{nlinarith} or \\src{omega}. The token families\nmeasure this written organization, while the case studies explain the\nmathematics that the intermediate claims carry."
+    },
+    {
+      "id": "method-profile-011",
+      "file": "method-profile.tex",
+      "start_line": 70,
+      "sha256": "1d67fec4fe3ff08b014a0634c5a1698bc9f6989f037a0f530397e54da9c38b3d",
+      "text": "Subject composition matters. Restricting to 18 shared top-level domains\nretains 735 OpenAI proof-bearing modules, or 93.75\\% of that sample.\nReweighting Mathlib's within-domain module averages to those OpenAI\ndomain shares gives tactic-mode rates of 93.0\\% versus 63.8\\%, local-claim\nrates of 61.4\\% versus 27.3\\%, arithmetic rates of 37.6\\% versus 7.1\\%,\nand restricted-simplification rates of 38.7\\% versus 15.8\\%.\nExtensionality and congruence, by contrast, become similar: 13.8\\%\nversus 13.1\\%. The shared directory labels provide a coarse subject\ncontrol; the libraries still contain different theorem populations."
+    },
+    {
+      "id": "method-profile-012",
+      "file": "method-profile.tex",
+      "start_line": 80,
+      "sha256": "72fc803a56afec094bc7486ceac9bd1d3495b2169bb29d683c033374d3389902",
+      "text": "Figure~\\ref{fig:method-shift} expresses these contrasts as differences\nfrom the Mathlib baseline in percentage points. The strongest positive\ndifferences concern tactic-mode proofs, local claims, and arithmetic\ndischarge. Term-only proofs are less frequent. Extensionality and\ncongruence sit close to the baseline after domain standardization,\nillustrating why a broad stylistic difference need not extend to every\nproof device."
+    },
+    {
+      "id": "method-profile-013",
+      "file": "method-profile.tex",
+      "start_line": 88,
+      "sha256": "0c74ab3135557c83268c7d6fc1a402d36d94802323d62433722b156e48a4791d",
+      "text": "\\input{method-shift-figure}"
+    },
+    {
+      "id": "method-profile-014",
+      "file": "method-profile.tex",
+      "start_line": 90,
+      "sha256": "09b4306d4a7763a2f57e42996bdd3045ed49a507dd0a61e6320b613d5c05d96f",
+      "text": "Proof length explains part of the local-claim pattern. In a separate\npooled comparison within common domains, standardized local-claim rates\nfor bodies of 1--3 nonempty code lines are 1.5\\% versus 1.6\\%; for 4--10\nlines, 47.7\\% versus 39.1\\%; and for 11--30 lines, 89.8\\% versus 85.2\\%.\nThe arithmetic difference remains in every length band, including\n31.1\\% versus 6.8\\% for 4--10 lines. Thus the sample suggests greater\nreliance on scalar arithmetic discharge, while the larger overall\nlocal-claim rate also reflects the mix of proof lengths. Both corpora\nhave a pooled median of two nonempty body lines."
+    },
+    {
+      "id": "method-profile-015",
+      "file": "method-profile.tex",
+      "start_line": 100,
+      "sha256": "af7acf9d3b11d5fd275231466c3efe5a429ac3cfedc9d2e713e20339d42d2a4e",
+      "text": "The listed general proof-search tokens, including \\src{aesop},\n\\src{grind}, and \\src{solve\\_by\\_elim}, have module-balanced rates of\n0.07\\% and 3.35\\%. Arithmetic tactics and simplification are themselves\nautomation, and other search tactics or imported macros can escape this\nlist. Similarly, more \\texttt{simp only} calls describe explicit control of\nthe rewrite set; their maintenance value depends on the context.\nMathlib's guidance treats squeezing terminal simplification calls as a\ntradeoff involving performance and fragility \\citep{MathlibStyle}."
+    },
+    {
+      "id": "method-profile-016",
+      "file": "method-profile.tex",
+      "start_line": 109,
+      "sha256": "059eec3beb61db1f19ab58c1a7774ad1b47ed9a2cc66bd6f4b31de61d918192e",
+      "text": "\\subsection{Why certificate batches change the apparent distribution}"
+    },
+    {
+      "id": "method-profile-017",
+      "file": "method-profile.tex",
+      "start_line": 111,
+      "sha256": "bc2acdb9f088510020b8d85322d583e593ba1cdae709d57cbb2e5e84e43421f7",
+      "text": "Ten sampled OpenAI modules contribute 48.2\\% of the extracted bodies;\nthe largest alone contributes 14.9\\%. Consequently the pooled\nfinite-decision rate is 48.9\\%, compared with the module-balanced 6.3\\%.\nPooled rewrite/simplification rates are 41.5\\% versus Mathlib's 48.8\\%,\neven though the module-balanced ordering in Table~\\ref{tab:profile} is\nreversed. The choice of unit changes the substantive reading."
+    },
+    {
+      "id": "method-profile-018",
+      "file": "method-profile.tex",
+      "start_line": 118,
+      "sha256": "dffcc89237cace3f03a7a41397c698da00324410a04ff559236c63145c1ea3f2",
+      "text": "Reading these large files reveals an informative construction. The\nsampled planar-packing module \\src{LowBlock36\\_10} contains 872 named\nbodies, 792 of which contain a finite decision.\\footnote{Source:\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/PlanarPacking/Certificate/LowBlock36_10.lean\\#L16-L67}{\\src{Analysis/PlanarPacking/Certificate/LowBlock36\\_10.lean}, lines 16--67}.}\nIt defines exact integer interval data, checks individual entries with\n\\texttt{decide +kernel}, and assembles them into finite sums. A sampled\ntransonic barrier module similarly chains Horner-step certificates with\npreviously proved tail bounds.\\footnote{Source:\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/MathematicalPhysics/Transonic/Certificates/Barrier59.lean\\#L675-L678}{\\src{MathematicalPhysics/Transonic/Certificates/Barrier59.lean}, lines 675--678}.}\nThe useful pattern is a layer of exact data and small checks beneath\nsoundness and assembly lemmas. Lean 4.34.1 documents \\texttt{decide +kernel}\nas evaluating the decision instance by kernel reduction\n\\citep{LeanDecideSource}. Recognizing that mechanism makes the numerical\nfiles intelligible as mathematical certificates rather than thousands of\nunrelated short arguments."
+    },
+    {
+      "id": "method-profile-019",
+      "file": "method-profile.tex",
+      "start_line": 134,
+      "sha256": "391eb7259fc6123899c13efd5202dd8b61cb47af96f928d53c1be9a84555a410",
+      "text": "The comparison therefore identifies a distinctive combination of\nestablished Lean devices: tactic-oriented exposition, scalar arithmetic\ndischarge, and substantial batches of exact certificates. Alongside the\nsix case studies, it motivates a reading of proof architecture through\nthe division of proof work. Preservation interfaces organize the\nmathematical information required by a later step; the tactic profile\ndescribes how the extracted proof bodies express such local steps.\nSection~\\ref{sec:tactics-synthesis} connects the measured differences to\nspecific proof bodies and considers their role in completed constructions."
+    },
+    {
+      "id": "method-shift-figure-001",
+      "file": "method-shift-figure.tex",
+      "start_line": 1,
+      "sha256": "806faaa4aa8e3a230073b409931715a879ea2c3ad3405ba580fd9f64b85d2abe",
+      "text": "\\begin{figure}[H]\n\\centering\n\\includegraphics[width=\\textwidth]{figures/method-shift.png}\n\\caption{Differences in proof-writing methods relative to Mathlib.\nZero denotes the baseline; positive values indicate greater prevalence\nin the OpenAI sample. Hollow markers compare all proof-bearing modules\n(784 OpenAI and 7,348 Mathlib). Filled markers compare 735 OpenAI modules\nin 18 shared domains with Mathlib reweighted to those domain shares.\nLabels give the filled-marker differences. Both comparisons average\nwithin-module proof-body shares; features overlap. Table~\\ref{tab:profile}\nreports the absolute rates and OpenAI sampling intervals for the full\ncomparison. Shared domains provide a coarse subject control.}\n\\label{fig:method-shift}\n\\end{figure}"
+    },
+    {
+      "id": "method-001",
+      "file": "method.tex",
+      "start_line": 1,
+      "sha256": "9a503ee571bccac2615446115c0ce3aa03788ebd6049b837b63cbc53c30e06bf",
+      "text": "\\section{Sources, selection, and reading method}\n\\label{sec:method}"
+    },
+    {
+      "id": "method-002",
+      "file": "method.tex",
+      "start_line": 4,
+      "sha256": "2b5a474c13b6fe9dd3912bf3179b6df43128e0d7da4d331969ff65e410ef3358",
+      "text": "The unit of comparison is a chain: an initial representation, a\npreservation statement, and its downstream use. Selection was purposive.\nA case had to expose all three parts and a mathematically meaningful\nchange of representation. We favored diversity of mathematical setting\nand preservation requirement over coverage by file count."
+    },
+    {
+      "id": "method-003",
+      "file": "method.tex",
+      "start_line": 10,
+      "sha256": "8fe6f04dbd6079ee00b88a3a87db4c41d321daba411834d1c77cacf34c58c599",
+      "text": "For each case we read backwards from the selected conclusion to its\ndefinitions and immediate hypotheses, then forwards through the\nconstructions that discharge those hypotheses. We ask which device is\ninherited from earlier work, which concrete relation is proved in this\ndevelopment, and which later obligation it resolves. The accompanying\nevidence ledgers retain declaration names, line ranges, source excerpts,\nand Git blob identifiers; downloaded files were checked against those\nidentifiers."
+    },
+    {
+      "id": "method-004",
+      "file": "method.tex",
+      "start_line": 19,
+      "sha256": "f225877dbace6a9b7aa01a745449d0c07b74040acf7bdc8c7b5ebb60f2f7215c",
+      "text": "The discovery process was exploratory. The retained findings record\nendpoint inspection followed by deeper tracing of candidate interfaces.\nFor example, the irrationality-exponent-of-$\\pi$ and two-point-correlation\nendpoints were examined but left outside the review because their\nmechanisms had not been traced at comparable depth. These exclusions\nreflect the available analysis. The selection supports a comparison of\nthe six cases, not an estimate of how frequent their techniques are\nthroughout the collection. Section~\\ref{sec:profile} uses a separate\nuniform path sample to estimate lexical proof features; those percentages\nrefer to that survey's units and feature definitions."
+    },
+    {
+      "id": "method-005",
+      "file": "method.tex",
+      "start_line": 30,
+      "sha256": "b3c713faa9f29f143e7e1c729d41fe97f34b5ecd1333b82eda8703003c4340e6",
+      "text": "A central distinction is between an interface and its instantiation.\nFor an analytic theorem with a flux identity or resolvent estimate as\ninput, we trace the construction supplying it at the endpoint. We also\ndistinguish proved witnesses chosen classically from additional provider\nhypotheses."
+    },
+    {
+      "id": "method-006",
+      "file": "method.tex",
+      "start_line": 36,
+      "sha256": "5daa633e9fc115a7d2cef2f2b120e4030e664db9e12c317c6cb78fba0b51baa0",
+      "text": "All six cases use static declaration and dependency analysis. Their\ntransitive \\src{OAI} import closures are retained; evidence ledgers identify\nthe proof bodies read. The original examples in Section~\\ref{sec:worked}\ncheck arithmetic and finite-law interfaces using Lean 4.34.1. A further\nexperiment compiles the three upstream trace-cone modules and a corollary\nthat reuses their ideal-transport interface, with the pinned Mathlib\nrevision. Provenance and checking infrastructure are documented in the\ndata and code availability statement."
+    },
+    {
+      "id": "method-007",
+      "file": "method.tex",
+      "start_line": 45,
+      "sha256": "b5ec541971d2a8d833c85f3d086c8c65fee0ba21a327b01aa39bc1bc4ccaca37",
+      "text": "Blueprints connect informal arguments to declarations and dependencies\n\\citep{MassotLeanBlueprint}; LeanArchitect studies automation of that\nconnection \\citep{ZhuEtAl2026}. Our evidence ledgers make the selected\ninterfaces inspectable. The exposition supplies the mathematical\nequations that explain why their hypotheses are useful."
+    },
+    {
+      "id": "overview-001",
+      "file": "overview.tex",
+      "start_line": 1,
+      "sha256": "7bb3f67091374ac2d24687b0487f26d5bb196ad9c7bb2f794af4ab2bdfc09e15",
+      "text": "\\begingroup\n\\setlength{\\intextsep}{22pt}\n\\setlength{\\abovecaptionskip}{10pt}\n\\setlength{\\belowcaptionskip}{12pt}\n\\begin{table}[H]\n\\small\n\\centering\n\\renewcommand{\\arraystretch}{1.14}\n\\caption{Overview of the selected formal statements and the information\npreserved by each bridge.}\\label{tab:overview}\n\\begin{tabular}{@{}p{0.18\\textwidth}p{0.38\\textwidth}p{0.37\\textwidth}@{}}\n\\toprule\nDevelopment & Representation bridge & Mathematical work exposed\\\\\n\\midrule\nCommon bases\\newline Endpoint & Matroid transversals; finite random trees;\noracle expressions; physical random tapes. & Output-law preservation joins\nbit-cost bounds and a fixed-program specification.\\\\[7pt]\n\\midrule[0.3pt]\\addlinespace[7pt]\nGraph switches\\newline Endpoint & Fixed-degree graph cells;\n$2\\times2$ Boolean matrices; conditional averaging operators. & A finite\ncount isolates one exceptional direction per fiber; compensated estimates\ncontrol its global contribution.\\\\[7pt]\n\\midrule[0.3pt]\\addlinespace[7pt]\nMahler\\newline Endpoint & Ordered shuffle forms; continuously bundled\nfields; boundary-local extensions. & Exact slot identifications preserve\nderivatives, signs, and multiplicities; locality makes Stokes applicable.\\\\[7pt]\n\\midrule[0.3pt]\\addlinespace[7pt]\nCrouzeix\\newline Endpoint & Amplified polynomial evaluation;\nrectangular compressions; Fourier coefficient energies. & Finite dual\nwitnesses and positive blocks give a scalar cancellation; outer domains\nremove strict-containment assumptions.\\\\[7pt]\n\\midrule[0.3pt]\\addlinespace[7pt]\nTrace ideals\\newline Support result & Closed ideals; idempotent\nextended traces; positive cuts and scalar limits. & Algebraic recovery of\nideals combines with canonical convergence to identify transported ideals.\\\\[7pt]\n\\midrule[0.3pt]\\addlinespace[7pt]\nAll seams\\newline Support result & A shared splitting witness;\nnamed graded maps; rebased matrices and produced diagram values. & Eight\nlocal seam families cover the constructed diagram; equality transport\nretains its named maps.\\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}\n\\endgroup"
+    },
+    {
+      "id": "worked-examples-001",
+      "file": "worked-examples.tex",
+      "start_line": 1,
+      "sha256": "090e12f9f1c613dc186e228568f8a6713385e77765582d078c830a6a53b01927",
+      "text": "\\section{Worked examples: why the stronger interface matters}\n\\label{sec:worked}"
+    },
+    {
+      "id": "worked-examples-002",
+      "file": "worked-examples.tex",
+      "start_line": 4,
+      "sha256": "c83a419f59fa872a7f1f82078a388c5009c96700ec29b628c4de9355146945f9",
+      "text": "The first three examples unpack the common-base case: selecting random\nbits, preserving the output law, and composing an error budget. The\nremaining examples return to boundary locality, trace limits, and named\ncoordinates. Each isolates the information needed by a later operation\nwithout the surrounding formal development."
+    },
+    {
+      "id": "worked-examples-003",
+      "file": "worked-examples.tex",
+      "start_line": 10,
+      "sha256": "b493f5a2df1ef399568b5f749c3ab4af303960bda468a35c846b2aa8e3439199",
+      "text": "\\subsection{Injective tape positions preserve a uniform experiment}\n\\label{sec:tape-example}"
+    },
+    {
+      "id": "worked-examples-004",
+      "file": "worked-examples.tex",
+      "start_line": 13,
+      "sha256": "ae31215d4f9294d1cff820feea80e4770a7ad6b78b14e4cc7863c4df18b21f12",
+      "text": "\\begin{samepage}\n\\begin{proposition}\\label{prop:tape}\nLet $p:\\{0,\\ldots,m-1\\}\\to\\{0,\\ldots,B-1\\}$ be injective. If\n$\\beta$ is uniform on $\\{0,1\\}^B$, then\n$(\\beta(p(0)),\\ldots,\\beta(p(m-1)))$ is uniform on $\\{0,1\\}^m$.\nEvery word has exactly $2^{B-m}$ preimages.\n\\end{proposition}\n\\begin{proof}\nPrescribing the $m$ selected bits leaves precisely $B-m$ coordinates\nfree. Each assignment to these remaining coordinates determines one\npreimage. Thus every word has the same number of preimages, and its\nprobability is $2^{B-m}/2^B=2^{-m}$.\n\\end{proof}\n\\end{samepage}"
+    },
+    {
+      "id": "worked-examples-005",
+      "file": "worked-examples.tex",
+      "start_line": 28,
+      "sha256": "481eaeabaefe74f66cfc1017fa20ef86a22181835b78ffdabebf9e6a1fdf2231",
+      "text": "For the common-base machine, the relevant map is\n$p(i)=s+3(m-1-i)+1$. Reversal and multiplication by three preserve\ndistinctness. For $i<m$, its value is less than $B$ whenever\n$s+3m+1\\leq B$. The latter bound is stronger than needed for the selected\npositions because it also accounts for the surrounding execution.\nThe review's Lean file proves these arithmetic facts for arbitrary natural\n$s,m,B$, including the empty-word case."
+    },
+    {
+      "id": "worked-examples-006",
+      "file": "worked-examples.tex",
+      "start_line": 36,
+      "sha256": "81be48bc13183b6af01cd92a1ffa8042c0b74ee41a1b569ccb6411d80041c005",
+      "text": "\\Needspace{7\\baselineskip}\nThe index map is defined by\n\\begin{lstlisting}\ndef physicalIndex (start m : Nat) (i : Fin m) : Nat :=\n  start + 3 * (m - 1 - i.val) + 1\n\\end{lstlisting}\nThe proof uses the bounds stored in \\texttt{Fin m} to justify subtraction\narithmetic. This matters: natural-number subtraction is truncated, so\ninjectivity would fail on unrestricted natural indices. A range type is\npart of the mathematical interface, not a cosmetic annotation."
+    },
+    {
+      "id": "worked-examples-007",
+      "file": "worked-examples.tex",
+      "start_line": 47,
+      "sha256": "91f9510cea5acf17ca28f0902b4e19888ec2e0012bb018d2ec30db06493aa6c8",
+      "text": "For comparison, if $p(0)=p(1)$, the words $01$ and $10$ have no\npreimages. Reading fair individual bits does not by itself produce an\nindependent word. Proposition~\\ref{prop:tape} explains why the source proves\ninjectivity of the physical positions before transporting the success\nprobability. The Python companion exhaustively checks 15 small choices\nof $(s,m,B)$ against the exact fiber count."
+    },
+    {
+      "id": "worked-examples-008",
+      "file": "worked-examples.tex",
+      "start_line": 54,
+      "sha256": "f086217c23e7e59c08fa59f520abbac14a156504a0600310ea7851ae2ab9c78b",
+      "text": "\\subsection{Observables determine a finite law; its mean does not}\n\\label{sec:law-example}"
+    },
+    {
+      "id": "worked-examples-009",
+      "file": "worked-examples.tex",
+      "start_line": 57,
+      "sha256": "0581b5baee1d955d87f53bf810c9c66193d8189c608f2dc4529f7ea6f684159b",
+      "text": "\\begin{samepage}\n\\begin{proposition}\\label{prop:law}\nLet $\\mu,\\nu$ be probability measures on a finite set $X$. Then\n$\\E_\\mu\\varphi=\\E_\\nu\\varphi$ for every $\\varphi:X\\to\\R$ if and only\nif $\\mu=\\nu$.\n\\end{proposition}\n\\begin{proof}\nFor each $x\\in X$, take $\\varphi=\\mathbf1_{\\{x\\}}$ to obtain\n$\\mu(\\{x\\})=\\nu(\\{x\\})$. Summing singleton masses gives equality on every\nsubset. The converse follows from the definition of finite expectation.\n\\end{proof}\n\\end{samepage}"
+    },
+    {
+      "id": "worked-examples-010",
+      "file": "worked-examples.tex",
+      "start_line": 70,
+      "sha256": "599a2fdff6eddfa09817e5df877b071b8f830eb13de11e145d44902b8ce9739a",
+      "text": "In a uniform finite experiment, these expectations are normalized sums\nwith integer multiplicities. The Lean companion proves the corresponding\ncount statement: equality of unnormalized sums against every natural-valued\nobservable determines each multiplicity. If two sampling spaces have\ndifferent cardinalities $N,N'>0$, equality of their output laws instead\nmeans $N'c(x)=Nc'(x)$ for each output $x$. The companion also proves this\ncross-multiplied statement from equality of normalized observables.\nFor example, multiplicities $(1,1,1)$ and $(2,2,2)$ describe the same law,\nalthough their unnormalized counts differ. It then checks the measures on\n$X=\\{0,1,2\\}$ with multiplicities\n\\[\n  (1,1,1)\\quad\\text{and}\\quad(0,3,0).\n\\]\nBoth have total mass three and mean one after normalization. Their\nprobabilities of $\\{0\\}$ are $1/3$ and zero. Thus preservation of the\nexpected numerical output would be insufficient for an accuracy event.\nThe universal observable certificate in Section~\\ref{sec:common-bases}\nsupports exactly the stronger conclusion required: substitute the\nindicator of the desired relative-error interval."
+    },
+    {
+      "id": "worked-examples-011",
+      "file": "worked-examples.tex",
+      "start_line": 90,
+      "sha256": "187154b673c0eb87441134c12757edccfed8062d366befd67f2806f70dfe75c7",
+      "text": "This interpretation also explains why the source allows reindexing of\ndraw outcomes. A permutation can change the result returned for a\nparticular numbered bank without changing its distribution under uniform\nsampling. Law equality is the appropriate interface between those\nexperiments; the deterministic compiler layer separately preserves the\nexecution result for a supplied bank."
+    },
+    {
+      "id": "worked-examples-012",
+      "file": "worked-examples.tex",
+      "start_line": 97,
+      "sha256": "95301c4187d341fda3b326461c311498dd7d715fe3973413017a88a3a3c41b42",
+      "text": "\\subsection{From a bounded experiment to a finite success count}\n\\label{sec:success-budget}"
+    },
+    {
+      "id": "worked-examples-013",
+      "file": "worked-examples.tex",
+      "start_line": 100,
+      "sha256": "d99578c98a516ba1404f8610a08ee9c2ca1f485d4c02ce83fe984d4da492f3bd",
+      "text": "The preceding two interfaces can be composed with a quantitative error\nbound. This gives a concrete way to read the final accuracy statement of\nSection~\\ref{sec:common-bases}."
+    },
+    {
+      "id": "worked-examples-014",
+      "file": "worked-examples.tex",
+      "start_line": 104,
+      "sha256": "05e6bcfbe3206c21de7c9956b3bdc873ac807c4f549dc554bfe923918bdc4973",
+      "text": "\\begin{samepage}\n\\begin{proposition}\\label{prop:success-budget}\nLet $X$ be finite, adjoin a failure symbol $\\bot$, and let $U$ be an\nideal $X$-valued output. Let $V$ be a bounded implementation driven by a\nuniform $m$-bit word, taking values in $X\\cup\\{\\bot\\}$.\nFor $\\varphi:X\\to[0,1]$, set\n$\\varphi(\\bot)=0$. Suppose\n\\[\n  \\E\\varphi(V)\\geq\\E\\varphi(U)-\\eta\n  \\quad\\text{for every such }\\varphi.\n\\]\nLet $\\eta,\\delta_0\\geq0$ and\n$A\\subseteq X$ satisfy $\\Pr(U\\in A)\\geq1-\\delta_0$.\nIf a machine obtains its word from fixed injective positions in a\nuniform $B$-bit tape and returns $V$ on that word, then\n\\[\n  \\#\\{\\text{successful }B\\text{-bit tapes}\\}\n  \\geq(1-\\delta_0-\\eta)2^B,\n\\]\nwhere success means returning an element of $A$.\n\\end{proposition}\n\\begin{proof}\nChoose $\\varphi=\\mathbf1_A$ to obtain\n$\\Pr(V\\in A)\\geq1-\\delta_0-\\eta$. Proposition~\\ref{prop:tape}\nshows that the tape projection has the required uniform word law.\nMultiplying its success probability by $2^B$ gives the count.\n\\end{proof}\n\\end{samepage}"
+    },
+    {
+      "id": "worked-examples-015",
+      "file": "worked-examples.tex",
+      "start_line": 133,
+      "sha256": "d097da980040e8d1bfad834a998667ce82ac4830fc2b2b3fb5cf0230287aa3f8",
+      "text": "For a single accuracy event, only its indicator is needed; the\nall-observables hypothesis makes the estimate reusable for other events.\nIn the source's bounded draw-tree implementation, the fit condition\nrequires at most $M$ successive draws and $H\\geq\\lceil\\log_2 a\\rceil$\ntrial bits for every draw arity $a$. With $D$ trials per draw,\n$\\eta=M2^{-D}$, with failed runs assigned\nobservable value zero.\\footnote{See\n\\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\\#L9346-L9349}{\\src{CommonBases.lean}, \\src{run_lower}}.}\nFor a desired failure budget $0<\\delta<1$, choosing\n$\\delta_0\\leq\\delta/2$ and $M2^{-D}\\leq\\delta/2$ suffices.\nWhen $M>0$, one may take\n$D\\geq\\max\\{0,\\lceil\\log_2(2M/\\delta)\\rceil\\}$.\nThe required tape length and execution bound must still be proved\nseparately. Thus the accuracy budget, the uniformity of the gathered\nbits, and the deterministic machine specification are distinct inputs\nto a single final guarantee."
+    },
+    {
+      "id": "worked-examples-016",
+      "file": "worked-examples.tex",
+      "start_line": 150,
+      "sha256": "500e2e2b7785dd65a6958647fd35e70a24b506fe85de8150cf0b4d92c00e5192",
+      "text": "A tight finite example joins the layers. Let the ideal probabilities of\n$a,b$ be $6/8,2/8$, and assign the eight implementation words to five\ncopies of $a$, two of $b$, and one failure. The observable loss is exactly\n$\\varphi(a)/8$, hence at most $\\eta=1/8$. For $A=\\{a\\}$,\n$\\delta_0=1/4$ and the lower bound is $5/8$. Embedding the three-bit word\nat positions $7,4,1$ in a ten-bit tape gives exactly\n$5\\cdot2^7=640$ successful tapes out of $1024$. The Python companion\nenumerates those tapes and all event indicators. This fixture illustrates\nthe composed bound independently of the upstream rejection sampler."
+    },
+    {
+      "id": "worked-examples-017",
+      "file": "worked-examples.tex",
+      "start_line": 160,
+      "sha256": "0010c9a58e032d2e07e7bccf49f9a5b525e1ba18e1dae8b1fc08a05a88bcb7e1",
+      "text": "\\subsection{Boundary values and ambient derivatives}\n\\label{sec:local-forms}"
+    },
+    {
+      "id": "worked-examples-018",
+      "file": "worked-examples.tex",
+      "start_line": 163,
+      "sha256": "bb04e1aee2e02ed13870b84db239b0c35749ed6f00f83a5fd044b289011aa352",
+      "text": "The Mahler case uses local equality to identify ambient derivatives.\nOn $\\R^2$, the\none-forms $\\omega=0$ and $\\eta=(x^2+y^2-1)\\,dx$ agree at every point\nof the unit circle. Their ambient exterior derivatives need not agree:\n$d\\eta=-2y\\,dx\\wedge dy$, which is nonzero at $(0,1)$.\nEquality on a neighborhood does imply equality of the ambient derivatives.\nThe Mahler cutoff argument uses this sufficient condition to transfer\nits ambient derivative; agreement on tangent arguments suffices for the\nlater comparison of integration densities. Intrinsic differentiation\nafter pullback to the circle uses different data: both pulled-back forms,\nand their exterior derivatives, vanish. Mathlib's\ndifferential-form interface explicitly uses the derivative of a\nform-valued field \\citep{MathlibForms}."
+    },
+    {
+      "id": "worked-examples-019",
+      "file": "worked-examples.tex",
+      "start_line": 178,
+      "sha256": "b74d31d9cc23452589cf9d34a4cf1e8b2f33888dc54a18631697d573f6eb6b4c",
+      "text": "\\subsection{A cut-sensitive limit that is not pointwise}\n\\label{sec:trace-example}"
+    },
+    {
+      "id": "worked-examples-020",
+      "file": "worked-examples.tex",
+      "start_line": 181,
+      "sha256": "7adeb34b7b25422cb30b9a129057536c34c6db946488fd20486ba9a1c6499659",
+      "text": "Consider the commutative $C^*$-algebra $c_0$ of complex sequences tending\nto zero, with pointwise operations and the supremum norm. On its positive\ncone define\n\\[\n  \\tau(a)=\\sum_{j=1}^{\\infty}a_j\\in[0,\\infty].\n\\]\nThe trace is additive, positively homogeneous, and tracial. It is lower\nsemicontinuous because it is the supremum of its continuous finite partial\nsums. Finite-support sequences belong to $\\mathcal N_\\tau$, so the closed\nfinite ideal $I_\\tau$ in~\\eqref{eq:finite-ideal} is all of $c_0$."
+    },
+    {
+      "id": "worked-examples-021",
+      "file": "worked-examples.tex",
+      "start_line": 192,
+      "sha256": "e38ff50c74efa61855f993dd4a80e5946340c138cdddb2de5a46cab25216e73e",
+      "text": "For every positive $a\\in c_0$ and $\\varepsilon>0$, the sequence\n$(a-\\varepsilon)_+$ has finite support. Consequently\n\\[\n  \\lim_{r\\downarrow0}r\\tau((a-\\varepsilon)_+)=0,\n  \\qquad 0\\leq\\liminf_{r\\downarrow0}r\\tau(a).\n\\]\nThese are precisely the two inequalities in\n\\eqref{eq:trace-canonical-convergence} with limit trace\n$\\iota_{c_0}=0$. But for $a_j=1/j$ one has $\\tau(a)=\\infty$, hence\n$r\\tau(a)=\\infty$ for every $r>0$. The pointwise limit at this element\nis infinity. The finite ideal and canonical limit are nevertheless\nunambiguous."
+    },
+    {
+      "id": "worked-examples-022",
+      "file": "worked-examples.tex",
+      "start_line": 205,
+      "sha256": "e09ea05b22aefb575fbc77903e51b3a909e5dee9de02ed50c0e0aec6dc54233d",
+      "text": "This classical example makes the reason for the positive cuts concrete\n\\citep{ElliottRobertSantiago2011}. Closure admits elements with infinite\ntrace, while every fixed positive cut is controlled by a finite value.\nReplacing the source's convergence predicate by pointwise convergence\nwould therefore alter the theorem."
+    },
+    {
+      "id": "worked-examples-023",
+      "file": "worked-examples.tex",
+      "start_line": 212,
+      "sha256": "34230cd23550e2aaec00314a76868bc25b597c591d228c8bb2458ba5544546a3",
+      "text": "\\subsection{Equal flags and different named coordinates}\n\\label{sec:named-maps}"
+    },
+    {
+      "id": "worked-examples-024",
+      "file": "worked-examples.tex",
+      "start_line": 215,
+      "sha256": "a5e455ac927768895a9796230cd3e16d0adb7283519db2dc2f876678c4646309",
+      "text": "The character-variety case preserves more than the flag of subspaces.\nTwo frames of a one-dimensional vector space can induce the\nsame flag but different named coordinate maps. If $e(u)=uv$ and\n$f(u)=2uv$ over a field of characteristic zero, both give the flag\n$0\\subset\\operatorname{span}(v)$, while\n$e^{-1}(v)=1$ and $f^{-1}(v)=1/2$. The all-seams predicate must therefore\nretain the named graded maps when those maps occur in the seam equation.\nThe coordinate equation consumes information that equality of the\nunderlying flag has forgotten. This is the small-scale reason for\nretaining named graded maps throughout the surface construction."
+    },
+    {
+      "id": "worked-examples-025",
+      "file": "worked-examples.tex",
+      "start_line": 226,
+      "sha256": "d426c835678f9322f7864769dc5010c34bc97c07c1520ad2b593bd4cc06e68d8",
+      "text": "\\subsection{Composing the actual ideal correspondence}\n\\label{sec:upstream-reuse}"
+    },
+    {
+      "id": "worked-examples-026",
+      "file": "worked-examples.tex",
+      "start_line": 229,
+      "sha256": "d9d85f29eaa69f7dd4b8731f062782ce86793687ddac9ade42bb5fe4c1c9ea2e",
+      "text": "The trace case permits a direct reuse of its formal interface. Suppose\n$e:T(A)\\simeq T(B)$ and $f:T(B)\\simeq T(C)$ are additive equivalences\nof extended-trace cones. Let $\\Phi_e$ be the source's induced order\nisomorphism of closed ideals. Its weight identity gives\n\\[\n \\iota_{\\Phi_e(I)}=e(\\iota_I).\n\\]\nApplying this identity successively yields\n\\[\n \\iota_{\\Phi_f(\\Phi_e(I))}\n =f(e(\\iota_I))\n =\\iota_{\\Phi_{f\\circ e}(I)}.\n\\]\nInjectivity of ideal weights therefore proves\n$\\Phi_{f\\circ e}(I)=\\Phi_f(\\Phi_e(I))$.\nThis compositional law uses the additive equivalences alone; the\nconvergence and scalar fields become relevant when identifying the ideals\nof particular traces."
+    },
+    {
+      "id": "worked-examples-027",
+      "file": "worked-examples.tex",
+      "start_line": 248,
+      "sha256": "d8ac0200d852cadbac56c5a951b244cb5beb3e784fc3724c68d0c134fdd152cc",
+      "text": "The accompanying \\src{UpstreamReuse.lean} imports\n\\src{OAI.Analysis.TraceCone.IdealTransport}. Its proof invokes the\nupstream ideal-weight identity three times and then uses definitional\nequality for composition. This elementary corollary illustrates the\nbenefit of exposing actual reconstructed ideals and their identifying\nequation: a later construction can compose the correspondence without\nrepeating the analytic reconstruction."
+    }
+  ]
+}

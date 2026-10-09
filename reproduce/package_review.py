@@ -13,7 +13,7 @@ def files():
         if relative.parts[0].startswith('.venv') or relative.parts[0] in ('venv','.pytest_cache','.mypy_cache','.ruff_cache'):continue
         if '__pycache__' in relative.parts:continue
         if relative.parts[:3]==('research','architecture','source'):continue
-        if relative.as_posix() in ('audit/artifact-manifest.json','audit/package.json','FILE_MANIFEST.json','publication.json'):continue
+        if relative.as_posix() in ('audit/artifact-manifest.json','audit/package.json','FILE_MANIFEST.json'):continue
         yield path,relative
 
 def main():

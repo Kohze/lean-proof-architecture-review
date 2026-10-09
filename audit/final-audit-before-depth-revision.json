@@ -1,0 +1,249 @@
+{
+  "pages": 24,
+  "cited_references": 41,
+  "scholarly_references": 29,
+  "published_scholarly_references_with_doi": 24,
+  "preprints": 4,
+  "technical_reports": 1,
+  "companion_manuscript_references": 3,
+  "source_and_software_references": 12,
+  "unused_reference_keys": [],
+  "missing_citation_keys": [],
+  "latex_problems": [],
+  "doi_title_checks": [
+    {
+      "key": "deMouraUllrich2021",
+      "doi": "10.1007/978-3-030-79876-5_37",
+      "title_identity": true,
+      "recorded_title": "The Lean 4 Theorem Prover and Programming Language",
+      "publisher_titles": [
+        "The Lean 4 Theorem Prover and Programming Language"
+      ]
+    },
+    {
+      "key": "mathlib2020",
+      "doi": "10.1145/3372885.3373824",
+      "title_identity": true,
+      "recorded_title": "The Lean Mathematical Library",
+      "publisher_titles": [
+        "The lean mathematical library"
+      ]
+    },
+    {
+      "key": "vanDoornEbnerLewis2020",
+      "doi": "10.1007/978-3-030-53518-6_16",
+      "title_identity": true,
+      "recorded_title": "Maintaining a Library of Formal Mathematics",
+      "publisher_titles": [
+        "Maintaining a Library of Formal Mathematics"
+      ]
+    },
+    {
+      "key": "Baanen2022",
+      "doi": "10.4230/LIPIcs.ITP.2022.4",
+      "title_identity": true,
+      "recorded_title": "Use and Abuse of Instance Parameters in the Lean Mathematical Library",
+      "publisher_titles": [
+        "Use and Abuse of Instance Parameters in the Lean Mathematical Library"
+      ]
+    },
+    {
+      "key": "GarillotEtAl2009",
+      "doi": "10.1007/978-3-642-03359-9_23",
+      "title_identity": true,
+      "recorded_title": "Packaging Mathematical Structures",
+      "publisher_titles": [
+        "Packaging Mathematical Structures"
+      ]
+    },
+    {
+      "key": "CommelinTopaz2024",
+      "doi": "10.1090/bull/1831",
+      "title_identity": true,
+      "recorded_title": "Abstraction boundaries and spec driven development in pure mathematics",
+      "publisher_titles": [
+        "Abstraction boundaries and spec driven development in pure mathematics"
+      ]
+    },
+    {
+      "key": "ZhuEtAl2026",
+      "doi": "10.4230/LIPIcs.ITP.2026.25",
+      "title_identity": true,
+      "recorded_title": "LeanArchitect: Automating Blueprint Generation for Humans and AI",
+      "publisher_titles": [
+        "LeanArchitect: Automating Blueprint Generation for Humans and AI"
+      ]
+    },
+    {
+      "key": "deBruijn1970",
+      "doi": "10.1007/BFb0060623",
+      "title_identity": true,
+      "recorded_title": "The mathematical language AUTOMATH, its usage and some of its extensions",
+      "publisher_titles": [
+        "The mathematical language AUTOMATH, its usage, and some of its extensions"
+      ]
+    },
+    {
+      "key": "BarendregtWiedijk2005",
+      "doi": "10.1098/rsta.2005.1650",
+      "title_identity": true,
+      "recorded_title": "The challenge of computer mathematics",
+      "publisher_titles": [
+        "The challenge of computer mathematics"
+      ]
+    },
+    {
+      "key": "CohenMahboubi2012",
+      "doi": "10.2168/LMCS-8(1:2)2012",
+      "title_identity": true,
+      "recorded_title": "Formal proofs in real algebraic geometry: from ordered fields to quantifier elimination",
+      "publisher_titles": [
+        "Formal proofs in real algebraic geometry: from ordered fields to quantifier elimination"
+      ]
+    },
+    {
+      "key": "GonthierEtAl2013",
+      "doi": "10.1007/978-3-642-39634-2_14",
+      "title_identity": true,
+      "recorded_title": "A Machine-Checked Proof of the Odd Order Theorem",
+      "publisher_titles": [
+        "A Machine-Checked Proof of the Odd Order Theorem"
+      ]
+    },
+    {
+      "key": "HalesEtAl2017",
+      "doi": "10.1017/fmp.2017.1",
+      "title_identity": true,
+      "recorded_title": "A formal proof of the Kepler conjecture",
+      "publisher_titles": [
+        "A FORMAL PROOF OF THE KEPLER CONJECTURE"
+      ]
+    },
+    {
+      "key": "AvigadEtAl2024Anatomy",
+      "doi": "10.1090/noti3114",
+      "title_identity": true,
+      "recorded_title": "Anatomy of a Formal Proof",
+      "publisher_titles": [
+        "Anatomy of a Formal Proof"
+      ]
+    },
+    {
+      "key": "Kudryashov2022",
+      "doi": "10.4230/LIPIcs.ITP.2022.23",
+      "title_identity": true,
+      "recorded_title": "Formalizing the Divergence Theorem and the Cauchy Integral Formula in Lean",
+      "publisher_titles": [
+        "Formalizing the Divergence Theorem and the Cauchy Integral Formula in Lean"
+      ]
+    },
+    {
+      "key": "AudebaudPaulinMohring2009",
+      "doi": "10.1016/j.scico.2007.09.002",
+      "title_identity": true,
+      "recorded_title": "Proofs of randomized algorithms in Coq",
+      "publisher_titles": [
+        "Proofs of randomized algorithms in Coq"
+      ]
+    },
+    {
+      "key": "deMedeirosEtAl2025",
+      "doi": "10.1145/3729294",
+      "title_identity": true,
+      "recorded_title": "Verified Foundations for Differential Privacy",
+      "publisher_titles": [
+        "Verified Foundations for Differential Privacy"
+      ]
+    },
+    {
+      "key": "Perfectoid2020",
+      "doi": "10.1145/3372885.3373830",
+      "title_identity": true,
+      "recorded_title": "Formalising perfectoid spaces",
+      "publisher_titles": [
+        "Formalising perfectoid spaces"
+      ]
+    },
+    {
+      "key": "Schemes2021",
+      "doi": "10.1080/10586458.2021.1983489",
+      "title_identity": true,
+      "recorded_title": "Schemes in Lean",
+      "publisher_titles": [
+        "Schemes in Lean"
+      ]
+    },
+    {
+      "key": "CertiCrypt2009",
+      "doi": "10.1145/1480881.1480894",
+      "title_identity": true,
+      "recorded_title": "Formal certification of code-based cryptographic proofs",
+      "publisher_titles": [
+        "Formal certification of code-based cryptographic proofs"
+      ]
+    },
+    {
+      "key": "EasyCrypt2011",
+      "doi": "10.1007/978-3-642-22792-9_5",
+      "title_identity": true,
+      "recorded_title": "Computer-Aided Security Proofs for the Working Cryptographer",
+      "publisher_titles": [
+        "Computer-Aided Security Proofs for the Working Cryptographer"
+      ]
+    },
+    {
+      "key": "CakeML2014",
+      "doi": "10.1145/2535838.2535841",
+      "title_identity": true,
+      "recorded_title": "CakeML: A Verified Implementation of ML",
+      "publisher_titles": [
+        "CakeML",
+        "CakeML: a verified implementation of ML"
+      ]
+    },
+    {
+      "key": "Leroy2009",
+      "doi": "10.1145/1538788.1538814",
+      "title_identity": true,
+      "recorded_title": "Formal verification of a realistic compiler",
+      "publisher_titles": [
+        "Formal verification of a realistic compiler"
+      ]
+    },
+    {
+      "key": "ElliottRobertSantiago2011",
+      "doi": "10.1353/ajm.2011.0027",
+      "title_identity": true,
+      "recorded_title": "The cone of lower semicontinuous traces on a C*-algebra",
+      "publisher_titles": [
+        "The cone of lower semicontinuous traces on a C*-algebra"
+      ]
+    },
+    {
+      "key": "CrouzeixPalencia2017",
+      "doi": "10.1137/17M1116672",
+      "title_identity": true,
+      "recorded_title": "The Numerical Range is a $(1+\\sqrt{2})$-Spectral Set",
+      "publisher_titles": [
+        "The Numerical Range is a $(1+\\sqrt{2})$-Spectral Set"
+      ]
+    }
+  ],
+  "disclosure_confined_to_dedicated_section": true,
+  "review_type": "Source-driven comparative narrative review with original explanatory examples.",
+  "novelty_scope": "Comparative synthesis; the elementary propositions are not presented as new theorems.",
+  "pdf_sha256": "18b9567467c10d697bc71bd1572e16343b5a1e9211a6c799f4b2070ac3303b0c",
+  "tex_hashes": {
+    "abstract.tex": "45869b953eff20e3cd36040fca0372d10d10dde557fcb52c979db620dadc5b2d",
+    "cases-analysis.tex": "1720353f5e128728d012b3f36e31856b3c1b15bc598977e9d777a351239f1a22",
+    "cases-architecture.tex": "6377083c7b3e7463d69acf5529b5c527883c60e81a4fa6009277ebd945888686",
+    "cases-discrete.tex": "f03297bad6a4ba54bc1df24a9b4ade58dfa93b41290502848b70f51bf11e3048",
+    "cases.tex": "d1bd306a86a5dad09e3424ffaf78afe8fd25ceac3eac24d19d1977b5d89ae8de",
+    "discussion.tex": "1c82d1451e4bffcfe14513dd4aac1d57c612c19b061b10f25fa7a7d84e376569",
+    "introduction.tex": "6b35f91eaff6bc66ded44855f507eeff32742e3c2ca304a3196f72b61ff1c6c3",
+    "main.tex": "03e6e81d9b2036567506d0c2040b63cb5672902d98468b655466155c8facc9c2",
+    "method.tex": "2705a542379d8d4aa67286880551ceb79b4f31cbd8ea2f871528c72f8449b5d5",
+    "overview.tex": "bdb203e167e1204a6f1b1f863a08cd96fcd47f6d7aa1e0606e7a7651671b562c",
+    "worked-examples.tex": "b90f1d57f868c6e7382ac49ac49db1fcd6b6081a589b2d3dea4f71d72d1e32c0"
+  }
+}

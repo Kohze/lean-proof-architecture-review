@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-08",
+  "date": "2026-10-09",
   "method": "Primary literature records plus retained DOI publisher metadata, and pinned Git-tree artifacts.",
   "references": [
     {
@@ -368,6 +368,87 @@
       "year": 2026
     },
     {
+      "key": "GounderFrontiers2026",
+      "title": "Mathematical Frontiers in the OpenAI Research Release: Cancellation, Positivity, and Changes of Representation",
+      "repo": "openai-mathematical-frontiers-review",
+      "edition": "v1.0.1",
+      "type": "misc",
+      "authors": [
+        "Robin Gounder"
+      ],
+      "year": 2026,
+      "primary_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7579158",
+      "note": "SSRN working paper, abstract no. 7579158",
+      "reference_category": "companion_manuscript",
+      "claim_supported": "Related study and division of analytical scope; primary theorem claims remain attributed to their original sources.",
+      "identity_evidence": {
+        "paper": "frontiers",
+        "source_url": "https://raw.githubusercontent.com/Kohze/openai-mathematical-frontiers-review/313f34c453227f9ed93fe8db7f5281c3ccb96d23/main.tex",
+        "source_sha256": "bdfefa67307bb18474c020f53505daf9a9da992fbca5e59aa8a6325dea919ca2",
+        "title_block": "Mathematical Frontiers in the OpenAI Research Release:\\\r\nCancellation, Positivity, and Changes of Representation}",
+        "author": "Robin Gounder",
+        "year": 2026,
+        "verification": "Title and author read from immutable public manuscript source; manuscript edition, not journal publication."
+      },
+      "ssrn_identity_evidence": {
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7579158",
+        "status": "author_confirmed_identity",
+        "evidence": "SSRN HTTP 403; DOI content negotiation and Crossref/DataCite metadata returned 404; search returned no indexed record; no browser available. User clarification pending.",
+        "doi_added": false,
+        "title": "Mathematical Frontiers in the OpenAI Research Release: Cancellation, Positivity, and Changes of Representation",
+        "paper": "frontiers",
+        "identity_confirmation": "Author explicitly confirmed the complete title in conversation on 8 October 2026. Title and author independently match the immutable public GitHub manuscript. SSRN page content was not retrievable."
+      }
+    },
+    {
+      "key": "GounderCounting2026",
+      "title": "Approximate Counting and Uniform Sampling: A Critical Review of Matroid Intersections, Contingency Tables, and Graph Switch Chains",
+      "repo": "counting-and-sampling-review",
+      "edition": "paper-2026-10-08",
+      "type": "misc",
+      "authors": [
+        "Robin Gounder"
+      ],
+      "year": 2026,
+      "primary_url": "https://github.com/Kohze/counting-and-sampling-review/releases/tag/paper-2026-10-08",
+      "note": "Companion manuscript, edition paper-2026-10-08",
+      "reference_category": "companion_manuscript",
+      "claim_supported": "Related study and division of analytical scope; primary theorem claims remain attributed to their original sources.",
+      "identity_evidence": {
+        "paper": "counting",
+        "source_url": "https://raw.githubusercontent.com/Kohze/counting-and-sampling-review/f43457381c7139d4c82d1c168b947f1e6a7bc92a/main.tex",
+        "source_sha256": "d198c2039a343125a10cb9cc20a9a9aa109fa94be41b2fb49d0fb5de5f00825f",
+        "title_block": "Approximate Counting and Uniform Sampling:\\\\\r\nA Critical Review of Matroid Intersections, Contingency Tables, and Graph Switch Chains}",
+        "author": "Robin Gounder",
+        "year": 2026,
+        "verification": "Title and author read from immutable public manuscript source; manuscript edition, not journal publication."
+      }
+    },
+    {
+      "key": "GounderNumerical2026",
+      "title": "Finite numerical-range certificates for polynomial matrix computations: a rational prototype with comparative controls",
+      "repo": "numerical-range-certificates",
+      "edition": "paper-2026-10-08",
+      "type": "misc",
+      "authors": [
+        "Robin Gounder"
+      ],
+      "year": 2026,
+      "primary_url": "https://github.com/Kohze/numerical-range-certificates/releases/tag/paper-2026-10-08",
+      "note": "Companion manuscript, edition paper-2026-10-08",
+      "reference_category": "companion_manuscript",
+      "claim_supported": "Related study and division of analytical scope; primary theorem claims remain attributed to their original sources.",
+      "identity_evidence": {
+        "paper": "numerical",
+        "source_url": "https://raw.githubusercontent.com/Kohze/numerical-range-certificates/ccd6606b8b050236e4adf109d147ccab241b1d84/paper/main.tex",
+        "source_sha256": "07eec1a0dadef45420c5f39e6b831d7c8a0c406ab23f5a6343383bdc861df5ee",
+        "title_block": "Finite numerical-range certificates for polynomial matrix computations:\\\\\r\na rational prototype with comparative controls}",
+        "author": "Robin Gounder",
+        "year": 2026,
+        "verification": "Title and author read from immutable public manuscript source; manuscript edition, not journal publication."
+      }
+    },
+    {
       "key": "Kudryashov2022",
       "type": "inproceedings",
       "title": "Formalizing the Divergence Theorem and the Cauchy Integral Formula in Lean",
@@ -534,6 +615,57 @@
       }
     },
     {
+      "key": "GuEtAl2025ProofOptimizer",
+      "type": "misc",
+      "title": "ProofOptimizer: Training Language Models to Simplify Proofs without Human Demonstrations",
+      "authors": [
+        "Alex Gu",
+        "Bartosz Piotrowski",
+        "Fabian Gloeckle",
+        "Kaiyu Yang",
+        "Aram H. Markosyan"
+      ],
+      "year": 2025,
+      "doi": "10.48550/arXiv.2510.15700",
+      "primary_url": "https://arxiv.org/abs/2510.15700v1",
+      "note": "arXiv:2510.15700, version 1, 17 October 2025",
+      "reference_category": "research_preprint",
+      "claim_supported": "Reports shortening generated Lean proofs while checking replacements against the original statements. Section 2 defines token length; Section 5.2 and Appendix H distinguish source length from execution cost. These experiments do not evaluate the six OpenAI developments in this review."
+    },
+    {
+      "key": "LuEtAl2026LeanRefactor",
+      "type": "misc",
+      "title": "Lean Refactor: Multi-Objective Controllable Proof Optimization via Agentic Strategy Search",
+      "authors": [
+        "Jialin Lu",
+        "Soonho Kong",
+        "Rodrigo Stehling",
+        "Kaiyu Yang",
+        "Zhangyang Wang",
+        "Weiran Sun",
+        "Wuyang Chen"
+      ],
+      "year": 2026,
+      "doi": "10.48550/arXiv.2605.20244",
+      "primary_url": "https://arxiv.org/abs/2605.20244v1",
+      "note": "arXiv:2605.20244, version 1, 18 May 2026",
+      "reference_category": "research_preprint",
+      "claim_supported": "Studies length, compilation cost, and cross-version compatibility as distinct Lean refactoring objectives, including competition and research repositories. Its experiments do not establish redundancy in this review's six case studies."
+    },
+    {
+      "key": "GounderArchitectureData2026",
+      "type": "misc",
+      "title": "Proof Architecture in the OpenAI Lean Library: manuscript, data, and reproduction code",
+      "authors": [
+        "Robin Gounder"
+      ],
+      "year": 2026,
+      "primary_url": "https://github.com/Kohze/lean-proof-architecture-review/releases/tag/v1.6.0",
+      "note": "Versioned reproduction repository; edition 1.6.0",
+      "reference_category": "reproduction_repository",
+      "claim_supported": "Manuscript source, retained corpus data and source hashes, analysis scripts, original Lean examples, and verification records. Release v1.6.0 identifies the accompanying reproduction edition."
+    },
+    {
       "key": "Perfectoid2020",
       "type": "inproceedings",
       "title": "Formalising perfectoid spaces",
@@ -689,6 +821,25 @@
       "publisher_metadata_verified": true
     },
     {
+      "key": "BagnallStewartBanerjee2023",
+      "type": "article",
+      "title": "Formally Verified Samplers from Probabilistic Programs with Loops and Conditioning",
+      "authors": [
+        "Alexander Bagnall",
+        "Gordon Stewart",
+        "Anindya Banerjee"
+      ],
+      "year": 2023,
+      "venue": "Proceedings of the ACM on Programming Languages",
+      "volume": "7",
+      "pages": "1-24",
+      "doi": "10.1145/3591220",
+      "primary_url": "https://arxiv.org/abs/2211.06747v3",
+      "claim_supported": "Zar is a Coq-verified compiler from probabilistic programs through choice-fix and interaction trees to random-bit samplers, with equidistribution correctness. This is a close baseline for the counting compiler; the reviewed OAI specification additionally tracks its own width, value-attribute and every-tape resource guarantees.",
+      "publisher_metadata_title": "Formally Verified Samplers from Probabilistic Programs with Loops and Conditioning",
+      "publisher_metadata_verified": true
+    },
+    {
       "key": "OAIRepository",
       "type": "misc",
       "title": "Mathematics manuscripts and supporting proof artifacts",
@@ -816,7 +967,31 @@
       "primary_url": "https://github.com/leanprover-community/mathlib4/blob/d13f23b723b8a846827a245b89c10fc7d3f11612/Mathlib/Analysis/Calculus/DifferentialForm/Basic.lean",
       "note": "Pinned dependency source; accessed 8 October 2026",
       "claim_supported": "Continuous alternating maps, Frechet exterior derivative, and d squared under smoothness."
+    },
+    {
+      "key": "LeanDecideSource",
+      "type": "misc",
+      "title": "Tactic syntax and decision-procedure documentation: Lean 4.34.1 source",
+      "authors": [
+        "The Lean developers"
+      ],
+      "year": 2026,
+      "primary_url": "https://github.com/leanprover/lean4/blob/v4.34.1/src/Init/Tactics.lean",
+      "note": "Version-pinned source, lines 1411--1430; accessed 8 October 2026",
+      "claim_supported": "The documented semantics of decide +kernel in the reviewed Lean toolchain."
+    },
+    {
+      "key": "MathlibStyle",
+      "type": "misc",
+      "title": "Library Style Guidelines",
+      "authors": [
+        "The mathlib Community"
+      ],
+      "year": 2026,
+      "primary_url": "https://leanprover-community.github.io/contribute/style.html",
+      "note": "Living contributor documentation; accessed 8 October 2026",
+      "claim_supported": "Term and tactic styles, explicit local claims, and the context-dependent tradeoffs of squeezing simp calls."
     }
   ],
-  "reference_count": 38
+  "reference_count": 47
 }

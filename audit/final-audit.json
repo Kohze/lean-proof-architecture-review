@@ -1,11 +1,12 @@
 {
-  "pages": 23,
-  "cited_references": 38,
-  "scholarly_references": 26,
-  "published_scholarly_references_with_doi": 24,
-  "preprints": 1,
+  "pages": 35,
+  "cited_references": 47,
+  "scholarly_references": 32,
+  "published_scholarly_references_with_doi": 25,
+  "preprints": 6,
   "technical_reports": 1,
-  "source_and_software_references": 12,
+  "companion_manuscript_references": 3,
+  "source_and_software_references": 15,
   "unused_reference_keys": [],
   "missing_citation_keys": [],
   "latex_problems": [],
@@ -226,23 +227,37 @@
       "publisher_titles": [
         "The Numerical Range is a $(1+\\sqrt{2})$-Spectral Set"
       ]
+    },
+    {
+      "key": "BagnallStewartBanerjee2023",
+      "doi": "10.1145/3591220",
+      "title_identity": true,
+      "recorded_title": "Formally Verified Samplers from Probabilistic Programs with Loops and Conditioning",
+      "publisher_titles": [
+        "Formally Verified Samplers from Probabilistic Programs with Loops and Conditioning"
+      ]
     }
   ],
   "disclosure_confined_to_dedicated_section": true,
-  "review_type": "Source-driven comparative narrative review with original explanatory examples.",
-  "novelty_scope": "Comparative synthesis; the elementary propositions are not presented as new theorems.",
-  "pdf_sha256": "7a7213b9a94197145e430d1dc9692b7c376061482e53fd4c91632e52bad6190e",
+  "literal_upstream_lean_excerpts_checked": 2,
+  "review_type": "Source-driven comparative narrative review with an exploratory corpus survey and original explanatory examples.",
+  "novelty_scope": "Comparative synthesis and original descriptive corpus analysis; the elementary propositions are not presented as new theorems.",
+  "pdf_sha256": "b5c39b14a055a11048beb806fd98792d23352c6c048dc85445ba7d8c4faf8351",
   "tex_hashes": {
-    "abstract.tex": "45869b953eff20e3cd36040fca0372d10d10dde557fcb52c979db620dadc5b2d",
-    "cases-analysis.tex": "e71e887f930ea67d70b742ab933176a3ad10afa4ba90255a9814ec899afcc49d",
-    "cases-architecture.tex": "6377083c7b3e7463d69acf5529b5c527883c60e81a4fa6009277ebd945888686",
-    "cases-discrete.tex": "f03297bad6a4ba54bc1df24a9b4ade58dfa93b41290502848b70f51bf11e3048",
-    "cases.tex": "177ef064b2793ee2cb74fab8fdd313e0acb8ac4e03995e1735a8bae10ce5eb32",
-    "discussion.tex": "1c82d1451e4bffcfe14513dd4aac1d57c612c19b061b10f25fa7a7d84e376569",
-    "introduction.tex": "3f870b7eeaa8d6241a310afcfd2b1a19cd8c8c2cb4c73bc9e9cec7031b23de23",
-    "main.tex": "03e6e81d9b2036567506d0c2040b63cb5672902d98468b655466155c8facc9c2",
-    "method.tex": "2705a542379d8d4aa67286880551ceb79b4f31cbd8ea2f871528c72f8449b5d5",
+    "abstract.tex": "cc611a84b629b53770d34ef405de76fee67c7533aa5fa2d455f683cbf8320e07",
+    "cases-analysis.tex": "3328cd0c8ba61e93a964a6f51eb38c919faa9712c6a7c61993006833fdc7fab9",
+    "cases-architecture.tex": "c0b8b5e571426a2f16be763ded469a1e51dd1e1135a457874acef7aad82d5bbc",
+    "cases-discrete.tex": "0b7775776ea752c07dacff329044d476cc43aa81c66df8f413f8ebb42422af66",
+    "cases.tex": "b256549eda811b5c6f3a44f4366be94da00825d1d912ad4839872a52de8cc7d2",
+    "discussion.tex": "1433a8c5116b7b9d0ae8d3f88e7358c1619ca09d354b405541bcc0ce5f1cf25e",
+    "introduction.tex": "20bf2cf7405893a6d81c22895ba5bd65e531055d4e12df6b913d7f2b3efc209f",
+    "main.tex": "62b9429d2dea1ce0678c1c5f0420c2974cb0db26c9075521cfbcc146b6a012e0",
+    "method-profile-joint-table.tex": "ba05dcfe654c3bc8a919dd194fcd1b86cb44623ffa78be8df21114672d2189e0",
+    "method-profile-table.tex": "16b87ad00b532df978a2391dc093171b967b123de084eddfeed0d350934bde78",
+    "method-profile.tex": "c5e0e00a107956331d847925e64e4134ac6b9f41f03504b87e95122e588da590",
+    "method-shift-figure.tex": "e283345a61ffae03765326ee60c91c4b1efe937d777f0b308d788f9f23a39771",
+    "method.tex": "d9f0d246fb6d3a3af48e39f06806f63284e55955afd691f0955bce47f7f6b7ce",
     "overview.tex": "bdb203e167e1204a6f1b1f863a08cd96fcd47f6d7aa1e0606e7a7651671b562c",
-    "worked-examples.tex": "b90f1d57f868c6e7382ac49ac49db1fcd6b6081a589b2d3dea4f71d72d1e32c0"
+    "worked-examples.tex": "41868bdc83c4649f573383689475f4b577b0dc5dc138cddf798e62397d5ef910"
   }
 }

@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-08",
+  "pdf_sha256": "60acdd961c366da5cad135a2db7197112e0293593707da9e7f114ac908516e7d",
+  "pages_rendered": 31,
+  "all_contact_sheets_inspected": true,
+  "full_size_pages_inspected": [
+    21
+  ],
+  "comparison_chart_inspected": true,
+  "checks": [
+    "Nine methods show signed differences from an explicit Mathlib zero baseline.",
+    "Raw and common-domain comparisons use different marker fills and a clear legend.",
+    "Adjusted labels are legible at manuscript size; chart and caption remain together on page 21.",
+    "Figure follows its introducing paragraph and precedes the proof-length discussion.",
+    "All 31 page contact-sheet images checked for clipping, overlap and pagination."
+  ],
+  "unresolved_visual_defects": []
+}

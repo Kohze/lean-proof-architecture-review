@@ -1,23 +1,26 @@
 \begin{abstract}
-Formal proofs often become most informative where they change
-representation: a graph is encoded by a small matrix, or a random
-experiment becomes a program reading specified tape bits. The mathematical
-question is what must be preserved for the next proof step to remain
-valid. This source-driven review examines that question in six developments
-from the OpenAI Lean collection: common-base counting, graph switch chains,
-the symmetric Mahler inequality, the complete Crouzeix bound, extended
-trace cones, and marked character-variety constructions. We trace the
-correspondences between representations and identify their downstream use.
-Across the cases, the required information includes exact coordinates,
-output laws, quantitative estimates, and local differential data. The
-comparison explains why an output mean cannot replace a probability law,
-why ordered form identities and boundary locality have different roles,
-and why equal subspaces need not preserve a named-coordinate equation.
-Elementary worked examples isolate these distinctions; a composed
-success-budget argument connects sampling loss and tape uniformity to
-an exact finite success count. Comparison with established formalization
-and verified-programming literature locates the contribution in the
-concrete composition of these interfaces. The review offers mathematicians
-and formalizers a route from a theorem statement to the preservation
-arguments that make its construction work.
+What information must a change of representation preserve for a formal
+proof to continue? This review studies that question in six developments
+from the OpenAI Lean collection: common-base counting, graph switch
+chains, the symmetric Mahler inequality, the complete Crouzeix bound,
+extended trace cones, and marked character-variety constructions.
+We follow the declarations that transport probability laws, computational
+bounds, analytic estimates, and coordinate identities to their downstream
+uses. The cases expose a division of proof work: mathematical interfaces
+establish the hypotheses under which local arithmetic, algebraic, and
+finite checks suffice. Elementary examples explain the information these
+interfaces must retain. An exploratory survey compares 800 uniformly
+sampled OpenAI modules with 8,070 mathematical modules in their pinned
+Mathlib dependency. With equal weight per proof-bearing module and joint
+standardization by broad subject and proof-length band, arithmetic and
+algebra tactics occur in a larger share of extracted named proof bodies
+by 22.8 percentage points; the differences are 10.4 points for tactic-mode
+proofs and 5.8 for local claims or calculation chains. Comparing these
+estimates with subject-only controls separates persistent arithmetic
+emphasis from differences associated with proof length. Large numerical
+certificate batches also make pooled body frequencies differ sharply
+from module averages. Together, source tracing and corpus analysis
+identify how established Lean methods are organized in this collection
+and give readers a practical way to inspect the mathematical obligations
+behind a formal theorem.
 \end{abstract}

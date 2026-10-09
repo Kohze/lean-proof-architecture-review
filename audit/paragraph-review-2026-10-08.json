@@ -1,0 +1,2354 @@
+{
+  "date": "2026-10-08",
+  "edition": "1.5.0-local",
+  "scope": "Every original blank-line manuscript block, including prose, equations, headings, tables, figures and document scaffolding; block IDs refer to the retained before-edition inventory.",
+  "original_blocks_reviewed": 161,
+  "original_tex_files": 14,
+  "review_method": "Paragraph-by-paragraph mathematical and editorial reading, with targeted retained Lean proof-body checks. Structural blocks checked for role, ordering and layout. Notes state the concrete check or change; this is an internal audit, not external peer review.",
+  "before_archive": "audit/paragraph-review-before-2026-10-08.zip",
+  "records": [
+    {
+      "id": "abstract-001",
+      "file": "abstract.tex",
+      "start_line": 1,
+      "sha256": "19bb8f3eee01a9bdf7d7aebed987c874e33d4365fbda818393d2cbd54b9353f0",
+      "disposition": "revised or reorganized",
+      "review_note": "Rebuilt around the preservation question, six cases, two contributions, and joint-adjusted effect sizes; removed the implication that the larger subject-only contrasts persist under length control."
+    },
+    {
+      "id": "cases-analysis-001",
+      "file": "cases-analysis.tex",
+      "start_line": 1,
+      "sha256": "9fb798100565cbfd93e559df45bcfbcba22825b6fc76504b088e07e211b0e59e",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained the Mahler heading and label; the subsection now begins directly with the analytic chain."
+    },
+    {
+      "id": "cases-analysis-002",
+      "file": "cases-analysis.tex",
+      "start_line": 4,
+      "sha256": "cb5b3edaf76e4b65dd74cd80b7e403b3ce802c3cbb09c0ca612c341974c5cc13",
+      "disposition": "revised or reorganized",
+      "review_note": "Recast the opening as local forms to convex-body inequality; retained n>=1, compactness, convexity, symmetry, interior and the literal coordinate polar."
+    },
+    {
+      "id": "cases-analysis-003",
+      "file": "cases-analysis.tex",
+      "start_line": 21,
+      "sha256": "f09757027115e1a30fae7f0db7aa055c93a3200f2d5e1343e1e455f53382d04d",
+      "disposition": "revised or reorganized",
+      "review_note": "Checked MassHypotheses against the concrete strip-map construction; separated generic analytic premises from hypotheses remaining at the body endpoint."
+    },
+    {
+      "id": "cases-analysis-004",
+      "file": "cases-analysis.tex",
+      "start_line": 39,
+      "sha256": "700eb401d1089b41449a864f444c25b14f3745c6bd178f8442f874c1cb95c373",
+      "disposition": "revised or reorganized",
+      "review_note": "Checked degrees N=k+2, d^c normalization, ordered wedge signs and the -(k+1) multiplicity; explained the k+1 differentiated factors after the horizontal term vanishes."
+    },
+    {
+      "id": "cases-analysis-005",
+      "file": "cases-analysis.tex",
+      "start_line": 67,
+      "sha256": "bf5e96190dfa66c7326b69cdaf49cfa327f73b3f188e3d72b7bf82062e5cdaa2",
+      "disposition": "revised or reorganized",
+      "review_note": "Retained the explicit horizontal-vector proof: sphere tangent dimension 2N-1, beta(iz)=0, alpha(iz)=m/2, and alternation plus one nonzero basis coordinate."
+    },
+    {
+      "id": "cases-analysis-006",
+      "file": "cases-analysis.tex",
+      "start_line": 87,
+      "sha256": "ffc8125d2ebcfa72af32135ed4643c036aa3766804c44f10b06bc8781f3f1efd",
+      "disposition": "revised or reorganized",
+      "review_note": "Rewrote the two-form representations around their distinct uses; whole-field equality transports differentiation, with flattening equivalences identifying ordered slots."
+    },
+    {
+      "id": "cases-analysis-007",
+      "file": "cases-analysis.tex",
+      "start_line": 105,
+      "sha256": "3f76b64ce241e422d98e4b0a4a93ed7d5041f8254b80ed51f1c22360084a4f64",
+      "disposition": "revised or reorganized",
+      "review_note": "Clarified smooth coefficient expansion and distinguished whole-field derivative congruence from the weaker tangent-density congruence used in integration."
+    },
+    {
+      "id": "cases-analysis-008",
+      "file": "cases-analysis.tex",
+      "start_line": 121,
+      "sha256": "12400613faabdf36bf8baef136a533d181a9852d271f46406f4c25704ba04410",
+      "disposition": "revised or reorganized",
+      "review_note": "Checked continuousWedgeCLM: injective embedding gives finite dimensionality, then two linear-map continuity promotions bundle the bilinear product."
+    },
+    {
+      "id": "cases-analysis-009",
+      "file": "cases-analysis.tex",
+      "start_line": 147,
+      "sha256": "f30d2773d94e8ad1d7250a12d49b481f7490a915e27488cc2eaefc357aa0f9eb",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained cutoff locality and eventual equality for derivative transfer. Added the previously missing real-part, coordinate-pullback and positive-orientation flux bridge before this paragraph."
+    },
+    {
+      "id": "cases-analysis-010",
+      "file": "cases-analysis.tex",
+      "start_line": 163,
+      "sha256": "adae38f4c806e59a197b074b5680c7cdc49e3d3ff2b7c927d4c85d1e7e3f1a24",
+      "disposition": "revised or reorganized",
+      "review_note": "Kept endpoint flux (pi*m)^N and the separate dimension-one calculation; refined the comparison with Kudryashov to integration interfaces and regularity rather than novelty of Stokes itself."
+    },
+    {
+      "id": "cases-analysis-011",
+      "file": "cases-analysis.tex",
+      "start_line": 179,
+      "sha256": "f0de0789e65b27620b20ef03025af6b27ef5d499746e39d0a0715fc23572af5d",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained the Crouzeix heading and label; ordered progression is core, energy weights, analytic construction, then removal of domain assumptions."
+    },
+    {
+      "id": "cases-analysis-012",
+      "file": "cases-analysis.tex",
+      "start_line": 182,
+      "sha256": "4b2cdebac1a8fa02d2f5a6e2f29b781151289b524682b4a9d06ee44bf8ec013f",
+      "disposition": "revised or reorganized",
+      "review_note": "Recast the opening as a boundary-to-matrix interface; retained amplified Kronecker evaluation, arbitrary coefficient matrices and positive dimensions, with companion-review scope explicit."
+    },
+    {
+      "id": "cases-analysis-013",
+      "file": "cases-analysis.tex",
+      "start_line": 200,
+      "sha256": "d0b7c7f5dfe7e6f08f255667566fc97eae0b4007646f0f724e360845488f319f",
+      "disposition": "revised or reorganized",
+      "review_note": "Distinguished the analytic_domain_core premises from their construction by exterior_collar_bound; b0=1, Fourier orientation and positive resolvent are actual inputs."
+    },
+    {
+      "id": "cases-analysis-014",
+      "file": "cases-analysis.tex",
+      "start_line": 212,
+      "sha256": "82bffd0da44ba3dd74b328f90fd1394e3d4d5c3d1604a6177747c13b27632318",
+      "disposition": "revised or reorganized",
+      "review_note": "Checked singular-vector reshaping, a>0, Hermitian zero modes, positive block inequality and constants 2a<=8a/gamma^2. Made gamma^2<=4 and gamma<=2 cancellation explicit."
+    },
+    {
+      "id": "cases-analysis-015",
+      "file": "cases-analysis.tex",
+      "start_line": 262,
+      "sha256": "a5ffec5b922ad3976dca0c0d50cf81e3e20a8fc2e7c0b276d2ed70f3aa4d8d2a",
+      "disposition": "revised or reorganized",
+      "review_note": "Clarified that FG and GF serve different singular relations. Checked finite dual witness Ck=wk^-1 conjugate(Pk), s^2<=bs and nonnegative partial-sum passage."
+    },
+    {
+      "id": "cases-analysis-016",
+      "file": "cases-analysis.tex",
+      "start_line": 275,
+      "sha256": "16ba6542007ba81ba937caafec7960c91cc34e92102d90d5a9deced904cb3f6c",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained kernel contraction, w0=1 and wk=2; checked factor four on the Hermitian zero mode and half-weighted negative-frequency tail against BoundaryEnergy."
+    },
+    {
+      "id": "cases-analysis-017",
+      "file": "cases-analysis.tex",
+      "start_line": 294,
+      "sha256": "fc302bf7866a650778e86fbc1e3cce138041060bbd28ecd9f719c219729914c1",
+      "disposition": "revised or reorganized",
+      "review_note": "Clarified reuse of the scalar polynomial basis theorem over a matrix coefficient ring; retained unit leading coefficients and explicit noncommutative evaluation transport."
+    },
+    {
+      "id": "cases-analysis-018",
+      "file": "cases-analysis.tex",
+      "start_line": 308,
+      "sha256": "d4ff801fdec79fd7e084012a91e3fd474add861b402176bc2c9973cd634507a7",
+      "disposition": "revised or reorganized",
+      "review_note": "Corrected analytic scope: the finite Taylor remainder gives a local coefficient identity, while the collar supplies a disk large enough for evaluation on the unit circle."
+    },
+    {
+      "id": "cases-analysis-019",
+      "file": "cases-analysis.tex",
+      "start_line": 327,
+      "sha256": "9ea731189b17a608274f0458d2f2215c444a965d1c3bf44549bda79325430169",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained inverted-domain Riemann-map construction and the side condition |E(z)|<1 iff z lies in U; this retains geometric information in analytic continuation."
+    },
+    {
+      "id": "cases-analysis-020",
+      "file": "cases-analysis.tex",
+      "start_line": 341,
+      "sha256": "f8fe40ca5b9be55a156cd17c89af61e18de893299451d83723c166ab84e37952",
+      "disposition": "revised or reorganized",
+      "review_note": "Checked the r/3r overlap argument, identity theorem, injective thickening and R>1 inverse collar; sharpened the final explanation of what the collar preserves."
+    },
+    {
+      "id": "cases-analysis-021",
+      "file": "cases-analysis.tex",
+      "start_line": 360,
+      "sha256": "b4a3b08e6657a50c3f3af9e52fffdbaa8bba1d876ac2431e384a04824405c68e",
+      "disposition": "revised or reorganized",
+      "review_note": "Recast removal of auxiliary assumptions as construction of strict outer geometry. Checked rho=M+epsilon/2 gives the bound 2M+epsilon before the limit."
+    },
+    {
+      "id": "cases-analysis-022",
+      "file": "cases-analysis.tex",
+      "start_line": 378,
+      "sha256": "9bb8e599543b3dd853490fe2c5e96de5b93bbbf9d1ffa27f9400bfa44fcc9e9e",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Kept the Crouzeix-Palencia 1+sqrt(2) comparison and companion numerical study; each has a distinct role from the present formal-interface analysis."
+    },
+    {
+      "id": "cases-architecture-001",
+      "file": "cases-architecture.tex",
+      "start_line": 1,
+      "sha256": "e830f6727a0bf8d23b79110867f9e6ed8e56a354d12605bf0d9f8d8773bcdee3",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained the trace-ideal subsection heading and label."
+    },
+    {
+      "id": "cases-architecture-002",
+      "file": "cases-architecture.tex",
+      "start_line": 4,
+      "sha256": "8e9adaff88ca196605476e508922fc3d2bc5f8f0b338e637dc2267e625dccbcb",
+      "disposition": "revised or reorganized",
+      "review_note": "Clarified algebraic reconstruction versus recognition of ideals attached to a trace; retained the nonunital, extended-trace setting and the classical trace-cone reference."
+    },
+    {
+      "id": "cases-architecture-003",
+      "file": "cases-architecture.tex",
+      "start_line": 15,
+      "sha256": "9f5ded0876c4b22049f13e864fed213e1438e2812332ef364219fb5fd270e2a9",
+      "disposition": "revised or reorganized",
+      "review_note": "Checked ideal-weight additivity via heredity, x*x ideal equivalence for traciality, and closed sublevels for lower semicontinuity; existence supplies all fields before witness choice."
+    },
+    {
+      "id": "cases-architecture-004",
+      "file": "cases-architecture.tex",
+      "start_line": 34,
+      "sha256": "fc68684c910f1c4a8e23b1cf6253b4c9f59b5d6b3b53d17df76a1c683c64a1d9",
+      "disposition": "revised or reorganized",
+      "review_note": "Retained finite-square domain, closure, idempotent values 0/infinity, positive finite approximation and both inverse laws; distinguished the original algebra from its trace cone."
+    },
+    {
+      "id": "cases-architecture-005",
+      "file": "cases-architecture.tex",
+      "start_line": 51,
+      "sha256": "1f87dd68e92133c86e447283d199a64f2bdb2bd526721d708b7a03cf5fffca92",
+      "disposition": "revised or reorganized",
+      "review_note": "Checked the direction of I subset J iff iotaI+iotaJ=iotaI; emphasized that additive bijectivity already recovers ideal order without convergence."
+    },
+    {
+      "id": "cases-architecture-006",
+      "file": "cases-architecture.tex",
+      "start_line": 64,
+      "sha256": "a336f3b4935c2efcf2a7da554828df14696d38120629eca4d94de162c091ecd8",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained positive-cut characterization and canonical limsup/liminf inequalities; proper-filter uniqueness is stated with its necessary condition."
+    },
+    {
+      "id": "cases-architecture-007",
+      "file": "cases-architecture.tex",
+      "start_line": 89,
+      "sha256": "7a4dfc84ba2c9a785477f4f67444cd69d509c2d3d9b8dadda05315137e2766bb",
+      "disposition": "revised or reorganized",
+      "review_note": "Checked the scalar-zero and scalar-infinity limits, closure versus finite value, and why an infinite point value does not obstruct cut-regularized convergence."
+    },
+    {
+      "id": "cases-architecture-008",
+      "file": "cases-architecture.tex",
+      "start_line": 107,
+      "sha256": "d21474f4f566859a57a7dd5810bdb16afddd876e4fb07e7e65eec73218bfdfe4",
+      "disposition": "revised or reorganized",
+      "review_note": "Identified the limits and ideal weights as classical; the contribution here is analysis of the formal separation between algebraic recovery and analytic recognition."
+    },
+    {
+      "id": "cases-architecture-009",
+      "file": "cases-architecture.tex",
+      "start_line": 117,
+      "sha256": "2d52a8737d39652e216a1fa321667ae89f6ae9435f34ad968318cb6b576636c6",
+      "disposition": "revised or reorganized",
+      "review_note": "Added an explicit role for the further map f in the image-filter identity; checked that carrier-filter preservation extends to arbitrary indexing types."
+    },
+    {
+      "id": "cases-architecture-010",
+      "file": "cases-architecture.tex",
+      "start_line": 138,
+      "sha256": "1971b009d8b5f3c4abb33b86de8435700cb6eafbc5bc2f5b7746b89746545dae",
+      "disposition": "revised or reorganized",
+      "review_note": "Traced scalar compatibility, forward preservation, uniqueness and ideal-weight injectivity to both transported-ideal identities; inverse convergence remains part of the larger interface."
+    },
+    {
+      "id": "cases-architecture-011",
+      "file": "cases-architecture.tex",
+      "start_line": 156,
+      "sha256": "6441abb9e10cd7f9b5ea12f9da86a31af756ee87aa2070f2105802fd97565ee9",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained the named-graded-map subsection heading and label."
+    },
+    {
+      "id": "cases-architecture-012",
+      "file": "cases-architecture.tex",
+      "start_line": 159,
+      "sha256": "4522fb7c7f63f1e0c4536ac5d8685b125ec8d940aa8c37825ca5b24e04860b7c",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Clarified that producedMarkedValues_allSeams is a support theorem about an existing solution; preserved properness, rank and genus premises."
+    },
+    {
+      "id": "cases-architecture-013",
+      "file": "cases-architecture.tex",
+      "start_line": 169,
+      "sha256": "f0f4d5285b226a761bd13dd0a2aa6be22cc73039c5f4b842f168fe966e695793",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Kept the surface-construction roadmap: selected band, mirror boundary, new genus-zero disks and parent genus drop; this introduces the seam families before detailed transport."
+    },
+    {
+      "id": "cases-architecture-014",
+      "file": "cases-architecture.tex",
+      "start_line": 181,
+      "sha256": "91a0987b42f3fea74bd307fbc66d4e24f51d7f074702c063f14ae1e471705129",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Checked prefix Fk, grade-k map qk and restriction to F(k+1); clarified that SameFramedFlag retains specified maps rather than only ranks or subspaces."
+    },
+    {
+      "id": "cases-architecture-015",
+      "file": "cases-architecture.tex",
+      "start_line": 205,
+      "sha256": "d83498653cd9fe99bf1022fe7ac031cb14f65f71ea84c1dc8895ff68c462d621",
+      "disposition": "revised or reorganized",
+      "review_note": "Traced IdentifiedBand to its existence theorem and the chosen opaque witness; explained coherent noncomputable data without implying an extra unproved premise."
+    },
+    {
+      "id": "cases-architecture-016",
+      "file": "cases-architecture.tex",
+      "start_line": 218,
+      "sha256": "6a2e5536b24326ff2c14f35a0c18c5b9dc4316bebe1c118b2a47c8cf9d23429d",
+      "disposition": "revised or reorganized",
+      "review_note": "Explained why one record supplies dimensions and coordinate identifications throughout the produced diagram; retained hierarchy-design precedents as established methods."
+    },
+    {
+      "id": "cases-architecture-017",
+      "file": "cases-architecture.tex",
+      "start_line": 228,
+      "sha256": "433422beeaaf45c80dbb7920bff1d730ab5076dc3bdca72523d5603b7b174aab",
+      "disposition": "revised or reorganized",
+      "review_note": "Checked all eight local seam families and the structural coverage equivalence; explained how inherited equations consume grade-preserving coordinate maps."
+    },
+    {
+      "id": "cases-architecture-018",
+      "file": "cases-architecture.tex",
+      "start_line": 242,
+      "sha256": "aa3ed94e142dba9e815751911c8cde23d7c8c86879aa07f201dff44df8b65f07",
+      "disposition": "revised or reorganized",
+      "review_note": "Traced common atom labels through injectivity to equality of coordinate equivalences, then frames. Counted the six inherited-seam inputs explicitly."
+    },
+    {
+      "id": "cases-architecture-019",
+      "file": "cases-architecture.tex",
+      "start_line": 260,
+      "sha256": "cdd1c4a38d782417ce7008e31138a3beed8576ee0bd69b226629d07c0a0aff5c",
+      "disposition": "revised or reorganized",
+      "review_note": "Clarified the second transport from general marked-cut data to exact produced values using rank equality, rebaseUnit, generator agreement and valuesFromPorts."
+    },
+    {
+      "id": "cases-architecture-020",
+      "file": "cases-architecture.tex",
+      "start_line": 272,
+      "sha256": "1a49d979cd62fd642d05326967538282d73f429f0eb66e30e15a05b1f82f19c5",
+      "disposition": "revised or reorganized",
+      "review_note": "Retained the additional boundary-occurrence premise only for producedMarkedSolution; tied it to the surface component and distinguished the all-seams support statement."
+    },
+    {
+      "id": "cases-discrete-001",
+      "file": "cases-discrete.tex",
+      "start_line": 1,
+      "sha256": "d04e7321dc647f83de59f61d7a292982525a5ae1ec77d933cdb82fcb349b6479",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained the common-base subsection heading and label."
+    },
+    {
+      "id": "cases-discrete-002",
+      "file": "cases-discrete.tex",
+      "start_line": 4,
+      "sha256": "7092de760c07c8a08e2f274f954fb2c9a7fdb5c5501913e367a64369b77cc448",
+      "disposition": "revised or reorganized",
+      "review_note": "Rewrote the opening around three concrete layers: estimator, finite experiment and fixed machine, each carrying a different preservation obligation."
+    },
+    {
+      "id": "cases-discrete-003",
+      "file": "cases-discrete.tex",
+      "start_line": 6,
+      "sha256": "73f191fb9a4200eb59bfaa3656f5a5fc323524b86bece5f4b576eb1ed186e058",
+      "disposition": "revised or reorganized",
+      "review_note": "Checked M1 direct-sum M2-dual, transversal size n, rank n, zero deficiency and Z<=partition<=Z+2^n*q; explained zero and positive deficiency contributions."
+    },
+    {
+      "id": "cases-discrete-004",
+      "file": "cases-discrete.tex",
+      "start_line": 19,
+      "sha256": "23e8a5c5d2c2dbff6c19f87ef9d97d94dfac5af2253ad4a79f41d6dba2dcf471",
+      "disposition": "revised or reorganized",
+      "review_note": "Clarified rank simulation by independence queries and the witness guard; exact zero-count behavior holds even outside the high-probability accuracy event."
+    },
+    {
+      "id": "cases-discrete-005",
+      "file": "cases-discrete.tex",
+      "start_line": 21,
+      "sha256": "069e0e5243e7d767ffc76b865b7dc5ad2cac8b44d16b06544631f71152e5777f",
+      "disposition": "revised or reorganized",
+      "review_note": "Explained fit conditions separately from trial count; retained M*2^-D observable loss and reindexing as equality in law despite different numbered outcomes."
+    },
+    {
+      "id": "cases-discrete-006",
+      "file": "cases-discrete.tex",
+      "start_line": 24,
+      "sha256": "1b2f24ad01bad4e3b6019bba6d1e06d2e714648c7b34264e6f0a079337b649d2",
+      "disposition": "revised or reorganized",
+      "review_note": "Separated bankwise deterministic realization from distributional preservation; retained Metropolis proposal, acceptance, Bernoulli and lazy branch structure."
+    },
+    {
+      "id": "cases-discrete-007",
+      "file": "cases-discrete.tex",
+      "start_line": 32,
+      "sha256": "541c9d8de70b35d6fc19d71bd169b88494bf1668464036812fcf268006a397e2",
+      "disposition": "revised or reorganized",
+      "review_note": "Clarified the cost-bearing simulation: encoded output and recorded charge are distinct conclusions of compiler correctness."
+    },
+    {
+      "id": "cases-discrete-008",
+      "file": "cases-discrete.tex",
+      "start_line": 38,
+      "sha256": "620180d45f35a3cc8598c7660a65ae0c0a160a3093c439535e4dc39bbe0a1853",
+      "disposition": "revised or reorganized",
+      "review_note": "Corrected the heading: Safe is needed for polynomial cost bounds, not semantic correctness itself. Checked fold charge and list-length/width dependence."
+    },
+    {
+      "id": "cases-discrete-009",
+      "file": "cases-discrete.tex",
+      "start_line": 55,
+      "sha256": "17702b3962be5b8e8f492728cdac6c75230a66e85d6189d522ff3257ee70a7a7",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained PolySafe and AttrSafe with source checks of exponent value bounds, polynomial substitution and monotonicity at enlarged parameter p(S)+S."
+    },
+    {
+      "id": "cases-discrete-010",
+      "file": "cases-discrete.tex",
+      "start_line": 73,
+      "sha256": "676829c6245d4ad2a875c2ab94faf3133136dd0e6cbc92c4407e686a0575cb92",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Checked the universal rational observable identity and finite uniform averages; it transports full output law, including reuse for the accuracy indicator."
+    },
+    {
+      "id": "cases-discrete-011",
+      "file": "cases-discrete.tex",
+      "start_line": 81,
+      "sha256": "0704f2b380230f58b59d03dff206d7ee13a0a5daecdaa2aee1f49aad982fa74e",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Checked physical word s+3(m-1-i)+1, quantifier order for offset s, injective positions and s+3m+1<=B; distinguished gathered-bit count m from execution bound B."
+    },
+    {
+      "id": "cases-discrete-012",
+      "file": "cases-discrete.tex",
+      "start_line": 89,
+      "sha256": "9c997978cec3da6dcef0a3b6eb07566f82bf1b1c6c6586d0022de43d255e2ee2",
+      "disposition": "revised or reorganized",
+      "review_note": "Checked fixed-program quantifier order, oracle calls and bit operations, parameter encoding and finite successful-tape count; sharpened close precedents including Zar and SampCert."
+    },
+    {
+      "id": "cases-discrete-013",
+      "file": "cases-discrete.tex",
+      "start_line": 116,
+      "sha256": "d9fff2031bdd293607c4da861ec75ceb6467019c824541595a13332b777c7a32",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained graph-switch subsection heading and label."
+    },
+    {
+      "id": "cases-discrete-014",
+      "file": "cases-discrete.tex",
+      "start_line": 119,
+      "sha256": "e06352f064731d523c39710f59ec253a7d140b888b892489e78dbf33e0129edf",
+      "disposition": "revised or reorganized",
+      "review_note": "Removed the claim that common bases intrinsically needs a whole law. Checked lazy proposal probability, mixing threshold and conditional spectral-gap statement."
+    },
+    {
+      "id": "cases-discrete-015",
+      "file": "cases-discrete.tex",
+      "start_line": 125,
+      "sha256": "061829f9f0af9d9cb5c14c958fa8c741f1d9a640c7d8bc7a15ad6ad10ce32e0c",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained coarse graph-cell definition and injective reconstruction from cross matrix and singleton-boundary choices."
+    },
+    {
+      "id": "cases-discrete-016",
+      "file": "cases-discrete.tex",
+      "start_line": 128,
+      "sha256": "e9076a2828abfef1f686d848afe3bd8b212f262f01a396ecbdf6df83d03be5e5",
+      "disposition": "revised or reorganized",
+      "review_note": "Explained why the coordinate equivalence must preserve compatible-matrix multiplicities; checked cross total and two margin constraints."
+    },
+    {
+      "id": "cases-discrete-017",
+      "file": "cases-discrete.tex",
+      "start_line": 135,
+      "sha256": "faef90bdb99acc033fc0d76c54da65213f61aee6c0202ede1648d4827a044f05",
+      "disposition": "revised or reorganized",
+      "review_note": "Checked the exact 3x3 total-two table and c2=2-p(r)-p(t); distinguished exceptional dependence from the other factorized totals."
+    },
+    {
+      "id": "cases-discrete-018",
+      "file": "cases-discrete.tex",
+      "start_line": 143,
+      "sha256": "dca9dc2e28c7096e07691772fcb3d4c503219cdcf605e87d080647de44a87b20",
+      "disposition": "revised or reorganized",
+      "review_note": "Checked flag means 1/3, product zero and covariance -1/9; stated this as an illustration before weighted graph-fiber transport."
+    },
+    {
+      "id": "cases-discrete-019",
+      "file": "cases-discrete.tex",
+      "start_line": 151,
+      "sha256": "e6b6a0729a90a696a32136389d8bd0ec68290fbe459470c32bf1c961f0b5d240",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained affine conditional image and corresponding-fiber sum/cardinality transport; identified the equality-of-adjacency flag explicitly."
+    },
+    {
+      "id": "cases-discrete-020",
+      "file": "cases-discrete.tex",
+      "start_line": 154,
+      "sha256": "ddcd0f9978fe734530c2383a2661b2488f8f34d2ecc40dfd1b00b04a23477258",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Clarified counting inner product versus normalized fiber averages; error direction is at most one-dimensional on each fiber, not the whole state space."
+    },
+    {
+      "id": "cases-discrete-021",
+      "file": "cases-discrete.tex",
+      "start_line": 162,
+      "sha256": "ab7930c63d89987f011dc670b4de29e2eca27f5d93c549c9b5789e44f467e424",
+      "disposition": "revised or reorganized",
+      "review_note": "Checked the compensated projection inequality and slice assignment equivalence; distinguished conditional averaging, gain and error projections."
+    },
+    {
+      "id": "cases-discrete-022",
+      "file": "cases-discrete.tex",
+      "start_line": 176,
+      "sha256": "4ba359ddc0af2e3e591ff028ee787859d91a6365fdd3b4ad93878dfbe7604700",
+      "disposition": "revised or reorganized",
+      "review_note": "Retained normalized slice flag norm, two-block Gram/generator comparison, boundary cases and the reindexed 1/2 versus 1/8 inequality."
+    },
+    {
+      "id": "cases-discrete-023",
+      "file": "cases-discrete.tex",
+      "start_line": 194,
+      "sha256": "497df5b152b58dab06ad15cb5b761609f3091a4a5ee0f2ceb8dbd894bde346c3",
+      "disposition": "revised or reorganized",
+      "review_note": "Clarified all factors: doubling gives 1/4 difference energy, restrictions divide by repeated fiber cardinality, and ordered partner labels contribute a common 1/2."
+    },
+    {
+      "id": "cases-discrete-024",
+      "file": "cases-discrete.tex",
+      "start_line": 219,
+      "sha256": "1d4dc72b6edee33d4dcdd5d0177cc213eb13b9f99530a4f6d6ac7b6eeb6807e9",
+      "disposition": "revised or reorganized",
+      "review_note": "Recast the conclusion as exact finite count to coordinate transport to global energy budget; retained the dependency on triple-generator and local comparisons."
+    },
+    {
+      "id": "cases-001",
+      "file": "cases.tex",
+      "start_line": 1,
+      "sha256": "2f8e69086de5415178d8554cb85dc95d785ef2ef46abf5b81e17276626896f95",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained overview-first section placement and its label; visual review checks the reserved space before Table 1."
+    },
+    {
+      "id": "cases-002",
+      "file": "cases.tex",
+      "start_line": 5,
+      "sha256": "4518dbbab32dc0b046e050c6fefe143ce6fdab25184993b11fbcef07ce3a2003",
+      "disposition": "revised or reorganized",
+      "review_note": "Clarified how the overview groups the six cases and prepares readers for the representation/preservation/use sequence."
+    },
+    {
+      "id": "cases-003",
+      "file": "cases.tex",
+      "start_line": 10,
+      "sha256": "cd5684dc07961de11bf11a5446131b90acd91ef1c64bb81a529bfba9010d17fb",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained input order: overview before discrete, analytic and reconstruction details."
+    },
+    {
+      "id": "discussion-001",
+      "file": "discussion.tex",
+      "start_line": 1,
+      "sha256": "99a9896a630a5b967e616ff6fc1b78c4f2902d7fb976f0524bd9083daa94df1b",
+      "disposition": "revised or reorganized",
+      "review_note": "Retitled around interfaces and division of proof work, reflecting both the mathematical and empirical contributions."
+    },
+    {
+      "id": "discussion-002",
+      "file": "discussion.tex",
+      "start_line": 4,
+      "sha256": "d99086771f28041a9ef6e841b8d4046a34f5b7ceb7a47cc20f6460d2d13a9d2a",
+      "disposition": "revised or reorganized",
+      "review_note": "Renamed the first subsection to state explicitly that it synthesizes the mathematical comparison."
+    },
+    {
+      "id": "discussion-003",
+      "file": "discussion.tex",
+      "start_line": 6,
+      "sha256": "3bf8992bb5de45ac047fdcc99de6bea4859a724a7a9355882e3c78de12a27974",
+      "disposition": "revised or reorganized",
+      "review_note": "Corrected necessity: the relevant event probability suffices for accuracy, whereas a full law is reusable; retained map, local-field and sharp-weight requirements."
+    },
+    {
+      "id": "discussion-004",
+      "file": "discussion.tex",
+      "start_line": 15,
+      "sha256": "3e20c137635a35fa0481f5d73279ba9316a88b7176bc23f60449ba6729f14f18",
+      "disposition": "revised or reorganized",
+      "review_note": "Sharpened the transitions between distribution, execution, derivative, tangential integration and analytic identification rather than repeating six case summaries."
+    },
+    {
+      "id": "discussion-005",
+      "file": "discussion.tex",
+      "start_line": 25,
+      "sha256": "18fe69556b03ef5161d1dc68533f175a52b2d905ec12b22bce5fe675bff655e2",
+      "disposition": "revised or reorganized",
+      "review_note": "Retained encoded size versus numerical attributes, counting-norm restoration and image-filter extension as three distinct reusable details."
+    },
+    {
+      "id": "discussion-006",
+      "file": "discussion.tex",
+      "start_line": 35,
+      "sha256": "dabb8956a8b257de8960ef75f4af128920f97fc11c980863205175419d7a9e1f",
+      "disposition": "revised or reorganized",
+      "review_note": "Kept graph and Crouzeix local-to-global examples; connected short final calculation to the earlier exact constants and signs."
+    },
+    {
+      "id": "discussion-007",
+      "file": "discussion.tex",
+      "start_line": 43,
+      "sha256": "5adcdaf471a9ffd4e7871a755b46a78fe98d2d019b74fac669fee636e6e43baf",
+      "disposition": "revised or reorganized",
+      "review_note": "Retained compiler, probabilistic semantics and hierarchy precedents; attributed specificity to the inspected compositions and mathematical payload."
+    },
+    {
+      "id": "discussion-008",
+      "file": "discussion.tex",
+      "start_line": 53,
+      "sha256": "aface0be90427ee0606ed5249c752f52bd5d4c24a294406bfb5f447ca1717593",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained tactic-synthesis subsection label for cross-references."
+    },
+    {
+      "id": "discussion-009",
+      "file": "discussion.tex",
+      "start_line": 56,
+      "sha256": "255b176006f944b33919c557bd8ff76a61fb6101ff42ba5feddac2e641fc79eb",
+      "disposition": "revised or reorganized",
+      "review_note": "Replaced the subject-only headline with joint-adjusted differences 22.8, 10.4 and 5.8 pp, and directed readers to the comparison table."
+    },
+    {
+      "id": "discussion-010",
+      "file": "discussion.tex",
+      "start_line": 64,
+      "sha256": "1cd808a908baeae5ce2853ba4a5c0309f9d4f2d7cad8b3850533261f16289fdc",
+      "disposition": "revised or reorganized",
+      "review_note": "Added a literal three-line Lean excerpt from evalFold_charge; checked exact source bytes and explained safety/width premises and shared product simplification before omega."
+    },
+    {
+      "id": "discussion-011",
+      "file": "discussion.tex",
+      "start_line": 75,
+      "sha256": "4ebd09670e582dfca26e77c8bdcf2ded8c175005a68a3a8e308a32a8b269b440",
+      "disposition": "revised or reorganized",
+      "review_note": "Added a literal seven-line Crouzeix excerpt; checked source bytes, gamma positivity, positive energy and the linarith/nlinarith cancellation. Fixed Unicode corruption."
+    },
+    {
+      "id": "discussion-012",
+      "file": "discussion.tex",
+      "start_line": 88,
+      "sha256": "fce3d5575b0ed1abead8931d24bcf8b16db0212d9e027c4ab6f31870b59eebad",
+      "disposition": "revised or reorganized",
+      "review_note": "Connected certificate soundness to local decision checks; confined any completion-rate or development-effort interpretation to future matched outcome work."
+    },
+    {
+      "id": "discussion-013",
+      "file": "discussion.tex",
+      "start_line": 97,
+      "sha256": "1730e41bab87737fdf56c5657dc5b2ebd86f5dca9f1c1af18ac960913f632f85",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained practical-guidance subsection position after the comparative findings."
+    },
+    {
+      "id": "discussion-014",
+      "file": "discussion.tex",
+      "start_line": 99,
+      "sha256": "e128d0e8b773e1a4bb596e6d20e973a9481b4b0eb16c9702cd9230df74aa5999",
+      "disposition": "revised or reorganized",
+      "review_note": "Rewrote practical advice around the exact quantity consumed by the next theorem and the data changed by a representation."
+    },
+    {
+      "id": "discussion-015",
+      "file": "discussion.tex",
+      "start_line": 106,
+      "sha256": "ed8ed17c3941795f5ee38a25ea2d131015a9e85e6c64abdc8439bb10be88da3b",
+      "disposition": "revised or reorganized",
+      "review_note": "Kept event indicator, neighborhood, tangent and named-coordinate examples; clarified how the success-budget proposition composes the interfaces."
+    },
+    {
+      "id": "discussion-016",
+      "file": "discussion.tex",
+      "start_line": 116,
+      "sha256": "695a5c447a38686feeb30bf39383735aaab7e9080bc133ea34a91b63879ba0e3",
+      "disposition": "revised or reorganized",
+      "review_note": "Connected concrete hypotheses to their constructors: strip-map data, outer domains and one shared splitting witness."
+    },
+    {
+      "id": "discussion-017",
+      "file": "discussion.tex",
+      "start_line": 125,
+      "sha256": "06c7b72d0a20f4967a207eed34982a04066c6782dc1884f056bbfbb2dc12f6a3",
+      "disposition": "revised or reorganized",
+      "review_note": "Connected interface design to concrete local obligations in arithmetic, analytic cancellation and exact interval decisions."
+    },
+    {
+      "id": "discussion-018",
+      "file": "discussion.tex",
+      "start_line": 133,
+      "sha256": "cd38a457760b7ed3f4a34b4fa6c63d52c44385547fe7e8d3755510b510568a80",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained scope/further-work subsection as the place for meaningful evidentiary limits."
+    },
+    {
+      "id": "discussion-019",
+      "file": "discussion.tex",
+      "start_line": 135,
+      "sha256": "81d31ff6fd2e929d8b47910b5a67f22ae2aa5f8cd9214c02b9418195631cde29",
+      "disposition": "revised or reorganized",
+      "review_note": "Separated purposive case depth from uniform sampling; added matched declaration roles, elaborated traces and held-out validation as remaining empirical opportunities."
+    },
+    {
+      "id": "discussion-020",
+      "file": "discussion.tex",
+      "start_line": 149,
+      "sha256": "bf672f0949ee59e889b34c8bba708f947df4b556113d908157a439c3e7ab6f8f",
+      "disposition": "revised or reorganized",
+      "review_note": "Rewrote the closing reader guidance around the two levels of contribution, with arithmetic persistence under coarse joint controls rather than causal success claims."
+    },
+    {
+      "id": "discussion-021",
+      "file": "discussion.tex",
+      "start_line": 159,
+      "sha256": "7e6e0a1b85821a876fc0906c4042440ce5155fd9c01197ff3b8b053cf92fb573",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained data/code section after substantive discussion."
+    },
+    {
+      "id": "discussion-022",
+      "file": "discussion.tex",
+      "start_line": 162,
+      "sha256": "b28c9c6e4f85a8e618357810a2dc77e060dea7b1719fd0d1bc776508daf40c08",
+      "disposition": "revised or reorganized",
+      "review_note": "Reorganized reproducibility into original examples and actual three-module reuse; retained compiler axiom provenance and external dependency instructions."
+    },
+    {
+      "id": "discussion-023",
+      "file": "discussion.tex",
+      "start_line": 180,
+      "sha256": "34fe00162f787d0da16933851769f074d3b61cba1a5c0b1e63a04bad4f17bb17",
+      "disposition": "revised or reorganized",
+      "review_note": "Clarified complete-tree units versus selected artifacts, 800 survey modules, and catalogue bindings. Updated additional proof-body evidence records to 21."
+    },
+    {
+      "id": "discussion-024",
+      "file": "discussion.tex",
+      "start_line": 193,
+      "sha256": "0750f01bddb5b208cf1ba7fc18353b7a5f9c37eeabb6af580c52390e4e5bd0a9",
+      "disposition": "revised or reorganized",
+      "review_note": "Retained Comparator revision and checking mechanisms as infrastructure context; distinguished these from the mathematical interpretation supplied by source reading."
+    },
+    {
+      "id": "introduction-001",
+      "file": "introduction.tex",
+      "start_line": 1,
+      "sha256": "479ce8267a8dc66449e53b838492edeab11f9f116eed87da087547c1cd388ae6",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained Introduction heading."
+    },
+    {
+      "id": "introduction-002",
+      "file": "introduction.tex",
+      "start_line": 3,
+      "sha256": "5320277d790e6c767fe1cd44e2de5d74ebe1bf78926cfd836e8d2f6bac71f0f8",
+      "disposition": "revised or reorganized",
+      "review_note": "Replaced abstract framing with graph, wedge and random-tape examples; stated the next mathematical operation as the organizing question."
+    },
+    {
+      "id": "introduction-003",
+      "file": "introduction.tex",
+      "start_line": 10,
+      "sha256": "83cc83229de6530a21b379995876eabdc6a96ff6f05d1367e70243d1246130a7",
+      "disposition": "revised or reorganized",
+      "review_note": "Corrected event-law necessity and clarified local agreement for differentiation and named maps for coordinate equations."
+    },
+    {
+      "id": "introduction-004",
+      "file": "introduction.tex",
+      "start_line": 19,
+      "sha256": "5a5b8e43b9f411a1317e556a8b621263165061bb9a555fe5297d355ca66e2079",
+      "disposition": "revised or reorganized",
+      "review_note": "Kept six-case roadmap and explicit four endpoints versus two support results."
+    },
+    {
+      "id": "introduction-005",
+      "file": "introduction.tex",
+      "start_line": 29,
+      "sha256": "7d52208ff1a9cce9b9be63a5c72a99b46267299046bcfa6b4ed91eca1941d3f3",
+      "disposition": "revised or reorganized",
+      "review_note": "Stated three reading questions and separated case synthesis from uniform survey contribution and its two rate units."
+    },
+    {
+      "id": "introduction-006",
+      "file": "introduction.tex",
+      "start_line": 41,
+      "sha256": "e7b1d0fb1d274b53447eb0e9c14ddee2005b125314a3b1a878193b5aa4db0da1",
+      "disposition": "revised or reorganized",
+      "review_note": "Rewrote the synthesis around local proof obligations; arithmetic persists under joint controls while tactic/local-claim contrasts shrink."
+    },
+    {
+      "id": "introduction-007",
+      "file": "introduction.tex",
+      "start_line": 52,
+      "sha256": "2a232f7848b55666ea7a873ad9191a75200eafb98d8443c3f276e67ae6726e6f",
+      "disposition": "revised or reorganized",
+      "review_note": "Kept companion-paper boundaries: mathematical advances and applications there, formal representation/proof organization here."
+    },
+    {
+      "id": "introduction-008",
+      "file": "introduction.tex",
+      "start_line": 58,
+      "sha256": "eb612fb37149dd27d0ceda82f5a995fa1d24597b32ad4269f6160ab9039fca19",
+      "disposition": "revised or reorganized",
+      "review_note": "Retained Lean, Mathlib, Anatomy and specification-driven construction precedents; tied them to the review question without implying these methods originated here."
+    },
+    {
+      "id": "introduction-009",
+      "file": "introduction.tex",
+      "start_line": 69,
+      "sha256": "74ef33ab3838e63043562858934a367c4076a8e4b1c81304ee19853568dfba48",
+      "disposition": "revised or reorganized",
+      "review_note": "Retained odd-order, Kepler, perfectoid and scheme precedents; framed novelty as case-specific payload and use of established devices."
+    },
+    {
+      "id": "introduction-010",
+      "file": "introduction.tex",
+      "start_line": 76,
+      "sha256": "10bae5add359ba58c23318c0472d6306c97ffa6fb6d0727e459ea84706c4ce64",
+      "disposition": "revised or reorganized",
+      "review_note": "Updated roadmap to include joint composition controls and certificate concentration, with overview preceding case detail."
+    },
+    {
+      "id": "main-001",
+      "file": "main.tex",
+      "start_line": 1,
+      "sha256": "c041e9917bb14a40a2996d5990d1d37ef720ad679a9213a67cd3a62b10562a3b",
+      "disposition": "revised or reorganized",
+      "review_note": "Checked author, affiliation, correspondence, date, title and input order. Kept disclosure solely in its dedicated section; updated proof-automation keyword and Unicode listing mappings. Reduced bibliography spacing to avoid a final page containing only one reference; final bibliography remains legible."
+    },
+    {
+      "id": "method-profile-table-001",
+      "file": "method-profile-table.tex",
+      "start_line": 1,
+      "sha256": "78c491a6d9a542484bbabdf6decab1ca02cf9d92094e7f93bd656f9d63d5cb0d",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained generated absolute rates and module-bootstrap intervals; checked 784/7348 proof-bearing modules and partitioning of the first three proof modes."
+    },
+    {
+      "id": "method-profile-001",
+      "file": "method-profile.tex",
+      "start_line": 1,
+      "sha256": "871dfa2b3e0601943436f4bd4f9542720fa6709685e181156290cac60a2d5502",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained corpus-comparison section heading and label."
+    },
+    {
+      "id": "method-profile-002",
+      "file": "method-profile.tex",
+      "start_line": 4,
+      "sha256": "221c4f55d8ba92115d068d9ecbeba34a3068d52b83d1e001a51ca022a7b74161",
+      "disposition": "revised or reorganized",
+      "review_note": "Clarified the exploratory source-written unit and Mathlib baseline, separate from the six purposive cases."
+    },
+    {
+      "id": "method-profile-003",
+      "file": "method-profile.tex",
+      "start_line": 12,
+      "sha256": "a8f878d0d2b6e51fa5f8743ab25912e4135e479d18f769ce7693ca78867c1d06",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained sampling/extraction/units subsection heading."
+    },
+    {
+      "id": "method-profile-004",
+      "file": "method-profile.tex",
+      "start_line": 14,
+      "sha256": "3e3bf2e5c0debc230369169d05c65ac3279f415c72d07bce2de2fda082a55be4",
+      "disposition": "revised or reorganized",
+      "review_note": "Checked complete strict-OAI population, hash-rank membership selected before content retrieval, baseline exclusions and 13309/186751 extracted named bodies."
+    },
+    {
+      "id": "method-profile-005",
+      "file": "method-profile.tex",
+      "start_line": 25,
+      "sha256": "431517d83be1819566f684cfb2d264587e90f3862f28eee9a8a812897285165c",
+      "disposition": "revised or reorganized",
+      "review_note": "Clarified detected-declaration coverage versus parser accuracy. Kept 40 stratified inspections, 11 fixtures and two corrected header-binding errors."
+    },
+    {
+      "id": "method-profile-006",
+      "file": "method-profile.tex",
+      "start_line": 35,
+      "sha256": "2abd8b574ef3c445b9a2508d9374f9e8c4c4c7b2fbb8bb06524386d1c0356a72",
+      "disposition": "revised or reorganized",
+      "review_note": "Retained once-per-body token indicators and exact feature families; distinguished written tokens from executed tactic traces."
+    },
+    {
+      "id": "method-profile-007",
+      "file": "method-profile.tex",
+      "start_line": 44,
+      "sha256": "129968856931d4c9d2188fbdcf9c70d32b54fb3604882e1f51effe7364fd2883",
+      "disposition": "revised or reorganized",
+      "review_note": "Checked pooled versus equal-module formulas, proof-bearing module counts and bootstrap unit; disclosed exploratory addition of module balancing."
+    },
+    {
+      "id": "method-profile-008",
+      "file": "method-profile.tex",
+      "start_line": 56,
+      "sha256": "48368831e0cf7b987dc1044d749bc6d5125ab12397646cda60ed78e727dad4fb",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained generated absolute-rate table input before interpretation."
+    },
+    {
+      "id": "method-profile-009",
+      "file": "method-profile.tex",
+      "start_line": 58,
+      "sha256": "88a7abf2c271af42500b2373eb5d6a620eefaaa0a47743cdda17780a83536328",
+      "disposition": "revised or reorganized",
+      "review_note": "Retitled the subsection to separate subject, length and method use."
+    },
+    {
+      "id": "method-profile-010",
+      "file": "method-profile.tex",
+      "start_line": 60,
+      "sha256": "2915f7675cb6d36676fe7253386c16afc029c5c917176ccae566948221fcede5",
+      "disposition": "revised or reorganized",
+      "review_note": "Kept raw tactic-mode and feature comparisons, tied to particular source instances without implying causal success or a novel tactic."
+    },
+    {
+      "id": "method-profile-011",
+      "file": "method-profile.tex",
+      "start_line": 70,
+      "sha256": "1d67fec4fe3ff08b014a0634c5a1698bc9f6989f037a0f530397e54da9c38b3d",
+      "disposition": "revised or reorganized",
+      "review_note": "Checked 18-domain/735-module coverage and standardized rates, including the near-zero extensionality contrast."
+    },
+    {
+      "id": "method-profile-012",
+      "file": "method-profile.tex",
+      "start_line": 80,
+      "sha256": "72fc803a56afec094bc7486ceac9bd1d3495b2169bb29d683c033374d3389902",
+      "disposition": "revised or reorganized",
+      "review_note": "Clarified Figure 1 as raw and subject-only percentage-point differences, with local claims/arithmetic/tactic form separated from extensionality."
+    },
+    {
+      "id": "method-profile-013",
+      "file": "method-profile.tex",
+      "start_line": 88,
+      "sha256": "0c74ab3135557c83268c7d6fc1a402d36d94802323d62433722b156e48a4791d",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained Figure 1 at the subject-control point; caption now directs readers to joint Table 3."
+    },
+    {
+      "id": "method-profile-014",
+      "file": "method-profile.tex",
+      "start_line": 90,
+      "sha256": "09b4306d4a7763a2f57e42996bdd3045ed49a507dd0a61e6320b613d5c05d96f",
+      "disposition": "revised or reorganized",
+      "review_note": "Replaced the separate pooled length-band argument with a module/body joint analysis over 69 cells, preserving fractional within-module contributions and 93.75% coverage."
+    },
+    {
+      "id": "method-profile-015",
+      "file": "method-profile.tex",
+      "start_line": 100,
+      "sha256": "af7acf9d3b11d5fd275231466c3efe5a429ac3cfedc9d2e713e20339d42d2a4e",
+      "disposition": "revised or reorganized",
+      "review_note": "Retained low listed search-token rates and rewrite-control interpretation; arithmetic and simplification remain automation."
+    },
+    {
+      "id": "method-profile-016",
+      "file": "method-profile.tex",
+      "start_line": 109,
+      "sha256": "059eec3beb61db1f19ab58c1a7774ad1b47ed9a2cc66bd6f4b31de61d918192e",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained certificate-concentration subsection heading."
+    },
+    {
+      "id": "method-profile-017",
+      "file": "method-profile.tex",
+      "start_line": 111,
+      "sha256": "bc2acdb9f088510020b8d85322d583e593ba1cdae709d57cbb2e5e84e43421f7",
+      "disposition": "revised or reorganized",
+      "review_note": "Checked pooled finite decision 48.9 versus balanced 6.3 and top-ten concentration 48.2%; explained the different statistical questions."
+    },
+    {
+      "id": "method-profile-018",
+      "file": "method-profile.tex",
+      "start_line": 118,
+      "sha256": "dffcc89237cace3f03a7a41397c698da00324410a04ff559236c63145c1ea3f2",
+      "disposition": "revised or reorganized",
+      "review_note": "Checked LowBlock36_10 body/finite-decision counts, kernel decision entries and Horner/tail assembly; used primary Lean documentation for decide +kernel."
+    },
+    {
+      "id": "method-profile-019",
+      "file": "method-profile.tex",
+      "start_line": 134,
+      "sha256": "391eb7259fc6123899c13efd5202dd8b61cb47af96f928d53c1be9a84555a410",
+      "disposition": "revised or reorganized",
+      "review_note": "Rewrote synthesis around persistent arithmetic, separate certificate layer and proof-length composition; linked mechanisms to concrete source excerpts."
+    },
+    {
+      "id": "method-shift-figure-001",
+      "file": "method-shift-figure.tex",
+      "start_line": 1,
+      "sha256": "806faaa4aa8e3a230073b409931715a879ea2c3ad3405ba580fd9f64b85d2abe",
+      "disposition": "revised or reorganized",
+      "review_note": "Retained all nine contrasts and raw/shared-domain markers; clarified that these give coarse subject control and cross-referenced the new joint subject/length table."
+    },
+    {
+      "id": "method-001",
+      "file": "method.tex",
+      "start_line": 1,
+      "sha256": "9a503ee571bccac2615446115c0ce3aa03788ebd6049b837b63cbc53c30e06bf",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained sources/selection/reading-method heading and label."
+    },
+    {
+      "id": "method-002",
+      "file": "method.tex",
+      "start_line": 4,
+      "sha256": "2b5a474c13b6fe9dd3912bf3179b6df43128e0d7da4d331969ff65e410ef3358",
+      "disposition": "revised or reorganized",
+      "review_note": "Clarified purposive case eligibility as representation, preservation and downstream mathematical use."
+    },
+    {
+      "id": "method-003",
+      "file": "method.tex",
+      "start_line": 10,
+      "sha256": "8fe6f04dbd6079ee00b88a3a87db4c41d321daba411834d1c77cacf34c58c599",
+      "disposition": "revised or reorganized",
+      "review_note": "Retained backward/forward source tracing and ledger identity fields; separated established device, specific relation and later use."
+    },
+    {
+      "id": "method-004",
+      "file": "method.tex",
+      "start_line": 19,
+      "sha256": "f225877dbace6a9b7aa01a745449d0c07b74040acf7bdc8c7b5ebb60f2f7215c",
+      "disposition": "revised or reorganized",
+      "review_note": "Distinguished endpoint discovery and exclusions from uniform survey prevalence; no claim of exhaustive proof-body coverage."
+    },
+    {
+      "id": "method-005",
+      "file": "method.tex",
+      "start_line": 30,
+      "sha256": "b3c713faa9f29f143e7e1c729d41fe97f34b5ecd1333b82eda8703003c4340e6",
+      "disposition": "revised or reorganized",
+      "review_note": "Clarified generic hypotheses versus concrete construction, including tracing classical witness choice to existence."
+    },
+    {
+      "id": "method-006",
+      "file": "method.tex",
+      "start_line": 36,
+      "sha256": "5daa633e9fc115a7d2cef2f2b120e4030e664db9e12c317c6cb78fba0b51baa0",
+      "disposition": "revised or reorganized",
+      "review_note": "Kept static scope for all six and compilation scope for elementary examples and the three upstream trace modules; no full endpoint build is implied."
+    },
+    {
+      "id": "method-007",
+      "file": "method.tex",
+      "start_line": 45,
+      "sha256": "b5ec541971d2a8d833c85f3d086c8c65fee0ba21a327b01aa39bc1bc4ccaca37",
+      "disposition": "revised or reorganized",
+      "review_note": "Retained blueprint/LeanArchitect antecedents and explained the ledgers as source locators plus mathematical exposition."
+    },
+    {
+      "id": "overview-001",
+      "file": "overview.tex",
+      "start_line": 1,
+      "sha256": "7bb3f67091374ac2d24687b0487f26d5bb196ad9c7bb2f794af4ab2bdfc09e15",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained six-row overview with ruled, spaced rows and endpoint/support labels. Checked each representation and mathematical-work summary against its subsection."
+    },
+    {
+      "id": "worked-examples-001",
+      "file": "worked-examples.tex",
+      "start_line": 1,
+      "sha256": "090e12f9f1c613dc186e228568f8a6713385e77765582d078c830a6a53b01927",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained worked-examples section heading and label."
+    },
+    {
+      "id": "worked-examples-002",
+      "file": "worked-examples.tex",
+      "start_line": 4,
+      "sha256": "c83a419f59fa872a7f1f82078a388c5009c96700ec29b628c4de9355146945f9",
+      "disposition": "revised or reorganized",
+      "review_note": "Rewrote opening to explain tape/law/budget decomposition followed by locality, trace, coordinate and reuse examples."
+    },
+    {
+      "id": "worked-examples-003",
+      "file": "worked-examples.tex",
+      "start_line": 10,
+      "sha256": "b493f5a2df1ef399568b5f749c3ab4af303960bda468a35c846b2aa8e3439199",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained injective-tape subsection heading and label."
+    },
+    {
+      "id": "worked-examples-004",
+      "file": "worked-examples.tex",
+      "start_line": 13,
+      "sha256": "ae31215d4f9294d1cff820feea80e4770a7ad6b78b14e4cc7863c4df18b21f12",
+      "disposition": "revised or reorganized",
+      "review_note": "Checked proposition including m=0; made injectivity=>m<=B explicit before counting exactly 2^(B-m) preimages."
+    },
+    {
+      "id": "worked-examples-005",
+      "file": "worked-examples.tex",
+      "start_line": 28,
+      "sha256": "481eaeabaefe74f66cfc1017fa20ef86a22181835b78ffdabebf9e6a1fdf2231",
+      "disposition": "revised or reorganized",
+      "review_note": "Checked reversed stride-three positions and range bound for arbitrary natural parameters, including empty word."
+    },
+    {
+      "id": "worked-examples-006",
+      "file": "worked-examples.tex",
+      "start_line": 36,
+      "sha256": "81be48bc13183b6af01cd92a1ffa8042c0b74ee41a1b569ccb6411d80041c005",
+      "disposition": "revised or reorganized",
+      "review_note": "Kept literal physicalIndex definition; clarified why Fin m bounds prevent truncated-subtraction collisions."
+    },
+    {
+      "id": "worked-examples-007",
+      "file": "worked-examples.tex",
+      "start_line": 47,
+      "sha256": "91f9510cea5acf17ca28f0902b4e19888ec2e0012bb018d2ec30db06493aa6c8",
+      "disposition": "revised or reorganized",
+      "review_note": "Added m>=2 to collision example and stated no preimage for different first bits; connected this to 15 finite fiber checks."
+    },
+    {
+      "id": "worked-examples-008",
+      "file": "worked-examples.tex",
+      "start_line": 54,
+      "sha256": "f086217c23e7e59c08fa59f520abbac14a156504a0600310ea7851ae2ab9c78b",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained observables-versus-mean subsection heading and label."
+    },
+    {
+      "id": "worked-examples-009",
+      "file": "worked-examples.tex",
+      "start_line": 57,
+      "sha256": "0581b5baee1d955d87f53bf810c9c66193d8189c608f2dc4529f7ea6f684159b",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Checked finite-law equivalence by singleton indicators and converse finite expectation."
+    },
+    {
+      "id": "worked-examples-010",
+      "file": "worked-examples.tex",
+      "start_line": 70,
+      "sha256": "599a2fdff6eddfa09817e5df877b071b8f830eb13de11e145d44902b8ce9739a",
+      "disposition": "revised or reorganized",
+      "review_note": "Checked normalized versus unnormalized multiplicities, cross-multiplication N prime*c=N*c prime, and equal-mean counterexample."
+    },
+    {
+      "id": "worked-examples-011",
+      "file": "worked-examples.tex",
+      "start_line": 90,
+      "sha256": "187154b673c0eb87441134c12757edccfed8062d366befd67f2806f70dfe75c7",
+      "disposition": "revised or reorganized",
+      "review_note": "Clarified law equality under reindexing versus additional bankwise execution preservation in compiler simulation."
+    },
+    {
+      "id": "worked-examples-012",
+      "file": "worked-examples.tex",
+      "start_line": 97,
+      "sha256": "95301c4187d341fda3b326461c311498dd7d715fe3973413017a88a3a3c41b42",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained finite-success-count subsection heading and label."
+    },
+    {
+      "id": "worked-examples-013",
+      "file": "worked-examples.tex",
+      "start_line": 100,
+      "sha256": "d99578c98a516ba1404f8610a08ee9c2ca1f485d4c02ce83fe984d4da492f3bd",
+      "disposition": "revised or reorganized",
+      "review_note": "Rewrote setup as composition of tape uniformity, observable preservation and error loss."
+    },
+    {
+      "id": "worked-examples-014",
+      "file": "worked-examples.tex",
+      "start_line": 104,
+      "sha256": "05e6bcfbe3206c21de7c9956b3bdc873ac807c4f549dc554bfe923918bdc4973",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Checked success-budget proposition for failure extension, nonnegative eta/delta0, indicator substitution and exact finite probability-to-count conversion."
+    },
+    {
+      "id": "worked-examples-015",
+      "file": "worked-examples.tex",
+      "start_line": 133,
+      "sha256": "d097da980040e8d1bfad834a998667ce82ac4830fc2b2b3fb5cf0230287aa3f8",
+      "disposition": "revised or reorganized",
+      "review_note": "Checked draw-tree fit and eta=M*2^-D, split delta/2 budget, M>0 logarithmic choice and separate execution inputs."
+    },
+    {
+      "id": "worked-examples-016",
+      "file": "worked-examples.tex",
+      "start_line": 150,
+      "sha256": "500e2e2b7785dd65a6958647fd35e70a24b506fe85de8150cf0b4d92c00e5192",
+      "disposition": "revised or reorganized",
+      "review_note": "Checked tight 5/8 success example, selected bits 7/4/1, 640/1024 tapes and enumeration of all event indicators."
+    },
+    {
+      "id": "worked-examples-017",
+      "file": "worked-examples.tex",
+      "start_line": 160,
+      "sha256": "0010c9a58e032d2e07e7bccf49f9a5b525e1ba18e1dae8b1fc08a05a88bcb7e1",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained boundary-value/ambient-derivative subsection heading and label."
+    },
+    {
+      "id": "worked-examples-018",
+      "file": "worked-examples.tex",
+      "start_line": 163,
+      "sha256": "bb04e1aee2e02ed13870b84db239b0c35749ed6f00f83a5fd044b289011aa352",
+      "disposition": "revised or reorganized",
+      "review_note": "Checked d((x^2+y^2-1)dx)=-2y dx wedge dy; ambient versus intrinsic circle derivatives are explicitly separated."
+    },
+    {
+      "id": "worked-examples-019",
+      "file": "worked-examples.tex",
+      "start_line": 178,
+      "sha256": "b74d31d9cc23452589cf9d34a4cf1e8b2f33888dc54a18631697d573f6eb6b4c",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained cut-sensitive-limit subsection heading and label."
+    },
+    {
+      "id": "worked-examples-020",
+      "file": "worked-examples.tex",
+      "start_line": 181,
+      "sha256": "7adeb34b7b25422cb30b9a129057536c34c6db946488fd20486ba9a1c6499659",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Checked extended trace on c0, lower semicontinuity as supremum of continuous finite sums, and dense finite-support domain giving closed ideal c0."
+    },
+    {
+      "id": "worked-examples-021",
+      "file": "worked-examples.tex",
+      "start_line": 192,
+      "sha256": "e38ff50c74efa61855f993dd4a80e5946340c138cdddb2de5a46cab25216e73e",
+      "disposition": "revised or reorganized",
+      "review_note": "Checked finite support of each epsilon cut, canonical zero limit, and harmonic sequence a_j=1/j with infinite point value for every positive scalar."
+    },
+    {
+      "id": "worked-examples-022",
+      "file": "worked-examples.tex",
+      "start_line": 205,
+      "sha256": "e09ea05b22aefb575fbc77903e51b3a909e5dee9de02ed50c0e0aec6dc54233d",
+      "disposition": "revised or reorganized",
+      "review_note": "Changed attribution to an elementary instantiation of the cited cut theory, avoiding an implication that the exact example appears there."
+    },
+    {
+      "id": "worked-examples-023",
+      "file": "worked-examples.tex",
+      "start_line": 212,
+      "sha256": "34230cd23550e2aaec00314a76868bc25b597c591d228c8bb2458ba5544546a3",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained named-coordinate subsection heading and label."
+    },
+    {
+      "id": "worked-examples-024",
+      "file": "worked-examples.tex",
+      "start_line": 215,
+      "sha256": "a5e455ac927768895a9796230cd3e16d0adb7283519db2dc2f876678c4646309",
+      "disposition": "revised or reorganized",
+      "review_note": "Clarified basis vector v, characteristic zero and grade zero; checked identical one-dimensional flags but inverse coordinates 1 versus 1/2."
+    },
+    {
+      "id": "worked-examples-025",
+      "file": "worked-examples.tex",
+      "start_line": 226,
+      "sha256": "d426c835678f9322f7864769dc5010c34bc97c07c1520ad2b593bd4cc06e68d8",
+      "disposition": "retained wording, reviewed",
+      "review_note": "Retained ideal-composition subsection heading and label."
+    },
+    {
+      "id": "worked-examples-026",
+      "file": "worked-examples.tex",
+      "start_line": 229,
+      "sha256": "d9d85f29eaa69f7dd4b8731f062782ce86793687ddac9ade42bb5fe4c1c9ea2e",
+      "disposition": "revised or reorganized",
+      "review_note": "Defined T(A) before use and checked three ideal-weight identities plus injectivity; convergence is unnecessary for this algebraic corollary."
+    },
+    {
+      "id": "worked-examples-027",
+      "file": "worked-examples.tex",
+      "start_line": 248,
+      "sha256": "d8ac0200d852cadbac56c5a951b244cb5beb3e784fc3724c68d0c134fdd152cc",
+      "disposition": "revised or reorganized",
+      "review_note": "Checked actual upstream import/API use and definitional composition; corrected the closing description to ideal reconstruction rather than analytic reconstruction."
+    }
+  ],
+  "current_block_inventory": [
+    {
+      "id": "abstract-current-001",
+      "file": "abstract.tex",
+      "start_line": 1,
+      "sha256": "cc611a84b629b53770d34ef405de76fee67c7533aa5fa2d455f683cbf8320e07"
+    },
+    {
+      "id": "cases-analysis-current-001",
+      "file": "cases-analysis.tex",
+      "start_line": 1,
+      "sha256": "9fb798100565cbfd93e559df45bcfbcba22825b6fc76504b088e07e211b0e59e"
+    },
+    {
+      "id": "cases-analysis-current-002",
+      "file": "cases-analysis.tex",
+      "start_line": 4,
+      "sha256": "4672870c90ebeeb698d07371dfa3deda946e9bb0c0f9963c0acd45c2ec0135b9"
+    },
+    {
+      "id": "cases-analysis-current-003",
+      "file": "cases-analysis.tex",
+      "start_line": 14,
+      "sha256": "f86bf35f4211f40641cf49cfbe12d835ca8629629d9b0cadfc042c86c87df670"
+    },
+    {
+      "id": "cases-analysis-current-004",
+      "file": "cases-analysis.tex",
+      "start_line": 29,
+      "sha256": "5bc480211b961b8ac294c9493847e467c8114011a44818f485270a31b19d7202"
+    },
+    {
+      "id": "cases-analysis-current-005",
+      "file": "cases-analysis.tex",
+      "start_line": 55,
+      "sha256": "19a39b3058fa1d8d19436169d1a76ff440276f174b030c4ab812e46efacc901a"
+    },
+    {
+      "id": "cases-analysis-current-006",
+      "file": "cases-analysis.tex",
+      "start_line": 75,
+      "sha256": "80743a24378e428d76115dd06a0eb9c6111a6d930b4aa31d564745b2c551de3d"
+    },
+    {
+      "id": "cases-analysis-current-007",
+      "file": "cases-analysis.tex",
+      "start_line": 88,
+      "sha256": "1d0a3c11314a762dd037586e8a5b3a5f11b5f99a6c53e839b335adc41341611c"
+    },
+    {
+      "id": "cases-analysis-current-008",
+      "file": "cases-analysis.tex",
+      "start_line": 98,
+      "sha256": "6b8213f14d58579c5698c8fc5bd21165814cf6e1d7f2d442c0378e14775c7d4f"
+    },
+    {
+      "id": "cases-analysis-current-009",
+      "file": "cases-analysis.tex",
+      "start_line": 122,
+      "sha256": "f0b5f8f8007e997613316644b772f355400b8bdff6986cf7dc6d81a5ef97258d"
+    },
+    {
+      "id": "cases-analysis-current-010",
+      "file": "cases-analysis.tex",
+      "start_line": 132,
+      "sha256": "f30d2773d94e8ad1d7250a12d49b481f7490a915e27488cc2eaefc357aa0f9eb"
+    },
+    {
+      "id": "cases-analysis-current-011",
+      "file": "cases-analysis.tex",
+      "start_line": 148,
+      "sha256": "469f0d5ae5dc4d36cbe51fa56ddffc94792514be1c1a69038058fdb487dc5133"
+    },
+    {
+      "id": "cases-analysis-current-012",
+      "file": "cases-analysis.tex",
+      "start_line": 160,
+      "sha256": "f0de0789e65b27620b20ef03025af6b27ef5d499746e39d0a0715fc23572af5d"
+    },
+    {
+      "id": "cases-analysis-current-013",
+      "file": "cases-analysis.tex",
+      "start_line": 163,
+      "sha256": "2491f14efdc737a209999accf4a567010fba3ae5bf299021f659f40bdce9ae9e"
+    },
+    {
+      "id": "cases-analysis-current-014",
+      "file": "cases-analysis.tex",
+      "start_line": 181,
+      "sha256": "71d610796d65e7b397db809133e9d3fb32a007f5af3a812fd4f6d9c0c2b0f021"
+    },
+    {
+      "id": "cases-analysis-current-015",
+      "file": "cases-analysis.tex",
+      "start_line": 192,
+      "sha256": "11ce4a6df52555c4664fbd1ff87d82aa690d1981f0e1e2417b64a2630fb91917"
+    },
+    {
+      "id": "cases-analysis-current-016",
+      "file": "cases-analysis.tex",
+      "start_line": 240,
+      "sha256": "b4ecddaaa531538064418be98e8dddab4f04d1305668dea3c4afca6651ff9557"
+    },
+    {
+      "id": "cases-analysis-current-017",
+      "file": "cases-analysis.tex",
+      "start_line": 253,
+      "sha256": "16ba6542007ba81ba937caafec7960c91cc34e92102d90d5a9deced904cb3f6c"
+    },
+    {
+      "id": "cases-analysis-current-018",
+      "file": "cases-analysis.tex",
+      "start_line": 272,
+      "sha256": "75eb512c66021e17597425ab9e1d9cadde2c9a6defbd9a6ec5e5d8a3fe72d03d"
+    },
+    {
+      "id": "cases-analysis-current-019",
+      "file": "cases-analysis.tex",
+      "start_line": 285,
+      "sha256": "84f584335063c7e5275d7b0ec9724e72c7344118f639c9fa5a577c802f81cb29"
+    },
+    {
+      "id": "cases-analysis-current-020",
+      "file": "cases-analysis.tex",
+      "start_line": 302,
+      "sha256": "9ea731189b17a608274f0458d2f2215c444a965d1c3bf44549bda79325430169"
+    },
+    {
+      "id": "cases-analysis-current-021",
+      "file": "cases-analysis.tex",
+      "start_line": 316,
+      "sha256": "64bf3e638fba51f33e8ee72752e951baaac7eb48d1d3709a1982447a56465944"
+    },
+    {
+      "id": "cases-analysis-current-022",
+      "file": "cases-analysis.tex",
+      "start_line": 333,
+      "sha256": "d6aac76566b224d27643e49e5e12c2f6f1d98485921cfc8db35f69848026ed5d"
+    },
+    {
+      "id": "cases-analysis-current-023",
+      "file": "cases-analysis.tex",
+      "start_line": 349,
+      "sha256": "c492b47b65bdca6ffea9bdfadf59062f54f71488d08214f3901d78bb205332b4"
+    },
+    {
+      "id": "cases-architecture-current-001",
+      "file": "cases-architecture.tex",
+      "start_line": 1,
+      "sha256": "e830f6727a0bf8d23b79110867f9e6ed8e56a354d12605bf0d9f8d8773bcdee3"
+    },
+    {
+      "id": "cases-architecture-current-002",
+      "file": "cases-architecture.tex",
+      "start_line": 4,
+      "sha256": "ea24bb91ffab2da27d2521305f6572ab2a70eb77942473bb942f307f39ad7b60"
+    },
+    {
+      "id": "cases-architecture-current-003",
+      "file": "cases-architecture.tex",
+      "start_line": 9,
+      "sha256": "2e2f0d2f4b9f92c07fc4cf879ade4753ba9be98bf928d4dfa1afd1e6916031a0"
+    },
+    {
+      "id": "cases-architecture-current-004",
+      "file": "cases-architecture.tex",
+      "start_line": 25,
+      "sha256": "c91f8971ea6ced077ae0e748b90ccbc548293b4e81955ecdecd9e5386fdbeb18"
+    },
+    {
+      "id": "cases-architecture-current-005",
+      "file": "cases-architecture.tex",
+      "start_line": 42,
+      "sha256": "755d711139d9e9e0ea4ae1e235dc6bd17b508860757c58fcc7c568cb2f15b942"
+    },
+    {
+      "id": "cases-architecture-current-006",
+      "file": "cases-architecture.tex",
+      "start_line": 52,
+      "sha256": "a336f3b4935c2efcf2a7da554828df14696d38120629eca4d94de162c091ecd8"
+    },
+    {
+      "id": "cases-architecture-current-007",
+      "file": "cases-architecture.tex",
+      "start_line": 77,
+      "sha256": "8d282d510470d501953a73ec80984b16c5b34fd6d24ad328176686e3442976c5"
+    },
+    {
+      "id": "cases-architecture-current-008",
+      "file": "cases-architecture.tex",
+      "start_line": 91,
+      "sha256": "30b116c768b437ba59baafccc9adf8a76c52ef66304ada974a57994b1211bdec"
+    },
+    {
+      "id": "cases-architecture-current-009",
+      "file": "cases-architecture.tex",
+      "start_line": 100,
+      "sha256": "91d1bb717276cc043e79cc77c3d26d082f779a0f4e6433f244be0fc7945396bb"
+    },
+    {
+      "id": "cases-architecture-current-010",
+      "file": "cases-architecture.tex",
+      "start_line": 118,
+      "sha256": "50d1ba0fb1216654f60bcfad9574334388583165912763aa3bca90ba230bb58f"
+    },
+    {
+      "id": "cases-architecture-current-011",
+      "file": "cases-architecture.tex",
+      "start_line": 132,
+      "sha256": "6441abb9e10cd7f9b5ea12f9da86a31af756ee87aa2070f2105802fd97565ee9"
+    },
+    {
+      "id": "cases-architecture-current-012",
+      "file": "cases-architecture.tex",
+      "start_line": 135,
+      "sha256": "4522fb7c7f63f1e0c4536ac5d8685b125ec8d940aa8c37825ca5b24e04860b7c"
+    },
+    {
+      "id": "cases-architecture-current-013",
+      "file": "cases-architecture.tex",
+      "start_line": 145,
+      "sha256": "f0f4d5285b226a761bd13dd0a2aa6be22cc73039c5f4b842f168fe966e695793"
+    },
+    {
+      "id": "cases-architecture-current-014",
+      "file": "cases-architecture.tex",
+      "start_line": 157,
+      "sha256": "91a0987b42f3fea74bd307fbc66d4e24f51d7f074702c063f14ae1e471705129"
+    },
+    {
+      "id": "cases-architecture-current-015",
+      "file": "cases-architecture.tex",
+      "start_line": 181,
+      "sha256": "7c909783effc83bde26ec6684174fc5b4ac1f0a5ff17cc26cebc3847abb0ff56"
+    },
+    {
+      "id": "cases-architecture-current-016",
+      "file": "cases-architecture.tex",
+      "start_line": 189,
+      "sha256": "2dd2e707c6fe74cd42bbfb08f77081c6f754631f3a2c0edf5e7758b7f6cf586d"
+    },
+    {
+      "id": "cases-architecture-current-017",
+      "file": "cases-architecture.tex",
+      "start_line": 196,
+      "sha256": "1cc04a06ab4e4356a8193ec6f5391cdecbb39ca82b8a44cb312ece2e34783518"
+    },
+    {
+      "id": "cases-architecture-current-018",
+      "file": "cases-architecture.tex",
+      "start_line": 206,
+      "sha256": "d39e43a4314453e5189deebc7fd9550d4b060535196e790e80ccc2d40fa7d783"
+    },
+    {
+      "id": "cases-architecture-current-019",
+      "file": "cases-architecture.tex",
+      "start_line": 222,
+      "sha256": "adce7bad8742cec709a7ffa9e030390e858e21e187f26780164b21ab71b478ec"
+    },
+    {
+      "id": "cases-architecture-current-020",
+      "file": "cases-architecture.tex",
+      "start_line": 233,
+      "sha256": "213bcdcc845be7567e24890ed1e791b93b5bf3d63712a198b59a7d87ba4f414d"
+    },
+    {
+      "id": "cases-discrete-current-001",
+      "file": "cases-discrete.tex",
+      "start_line": 1,
+      "sha256": "d04e7321dc647f83de59f61d7a292982525a5ae1ec77d933cdb82fcb349b6479"
+    },
+    {
+      "id": "cases-discrete-current-002",
+      "file": "cases-discrete.tex",
+      "start_line": 4,
+      "sha256": "666d822cbe58f62a83a7596c014fb7995413d7912a7683079ddf08fbb789e18b"
+    },
+    {
+      "id": "cases-discrete-current-003",
+      "file": "cases-discrete.tex",
+      "start_line": 11,
+      "sha256": "f7b0c026236cdec905022235af4423160fb3df4ae5a75f1da6b41ad6e64b9d92"
+    },
+    {
+      "id": "cases-discrete-current-004",
+      "file": "cases-discrete.tex",
+      "start_line": 31,
+      "sha256": "571d940794903f5c6043a883d9d0b9939b38da1578da52a6690b73c1135c39cb"
+    },
+    {
+      "id": "cases-discrete-current-005",
+      "file": "cases-discrete.tex",
+      "start_line": 38,
+      "sha256": "44bc65b63a3b69c37403ad97c1d1deba11902faa2c7e0a823434bf868092a7cc"
+    },
+    {
+      "id": "cases-discrete-current-006",
+      "file": "cases-discrete.tex",
+      "start_line": 51,
+      "sha256": "91be59fd9d45e67c8dc7aaf3cbc12d30b407be2747ab3cabbfe27ed818d95295"
+    },
+    {
+      "id": "cases-discrete-current-007",
+      "file": "cases-discrete.tex",
+      "start_line": 60,
+      "sha256": "ddfc68271648e88b8fc3d4d4300bf2463fff1d4d9cc6af215aa11f35412f9fe5"
+    },
+    {
+      "id": "cases-discrete-current-008",
+      "file": "cases-discrete.tex",
+      "start_line": 67,
+      "sha256": "dd237d24ce76d78641548230b71d2b7813a5cc89988db052a15d05b8880ee9ae"
+    },
+    {
+      "id": "cases-discrete-current-009",
+      "file": "cases-discrete.tex",
+      "start_line": 84,
+      "sha256": "17702b3962be5b8e8f492728cdac6c75230a66e85d6189d522ff3257ee70a7a7"
+    },
+    {
+      "id": "cases-discrete-current-010",
+      "file": "cases-discrete.tex",
+      "start_line": 102,
+      "sha256": "676829c6245d4ad2a875c2ab94faf3133136dd0e6cbc92c4407e686a0575cb92"
+    },
+    {
+      "id": "cases-discrete-current-011",
+      "file": "cases-discrete.tex",
+      "start_line": 110,
+      "sha256": "0704f2b380230f58b59d03dff206d7ee13a0a5daecdaa2aee1f49aad982fa74e"
+    },
+    {
+      "id": "cases-discrete-current-012",
+      "file": "cases-discrete.tex",
+      "start_line": 118,
+      "sha256": "019eb42551b4732977f19e88e4a1726f67ead24f64996f0aeeead17e4401d090"
+    },
+    {
+      "id": "cases-discrete-current-013",
+      "file": "cases-discrete.tex",
+      "start_line": 153,
+      "sha256": "d9fff2031bdd293607c4da861ec75ceb6467019c824541595a13332b777c7a32"
+    },
+    {
+      "id": "cases-discrete-current-014",
+      "file": "cases-discrete.tex",
+      "start_line": 156,
+      "sha256": "3a8cab2782f29d050035f3ea604f540a02548e8e7573dc2b3ea5c14531c378d4"
+    },
+    {
+      "id": "cases-discrete-current-015",
+      "file": "cases-discrete.tex",
+      "start_line": 174,
+      "sha256": "061829f9f0af9d9cb5c14c958fa8c741f1d9a640c7d8bc7a15ad6ad10ce32e0c"
+    },
+    {
+      "id": "cases-discrete-current-016",
+      "file": "cases-discrete.tex",
+      "start_line": 177,
+      "sha256": "9e66f0e68d39c86ed18c0550cea5a0b9619f2539aa570454a9dd651cbc999375"
+    },
+    {
+      "id": "cases-discrete-current-017",
+      "file": "cases-discrete.tex",
+      "start_line": 191,
+      "sha256": "257c6daa1fb2d899afc9c4954a7808b63666e5be371e31bbb3b111ebed8a669b"
+    },
+    {
+      "id": "cases-discrete-current-018",
+      "file": "cases-discrete.tex",
+      "start_line": 203,
+      "sha256": "798028f39552552d65f9c4d9f0b47307e01e519c550d1f865e0c77438e1b00e4"
+    },
+    {
+      "id": "cases-discrete-current-019",
+      "file": "cases-discrete.tex",
+      "start_line": 211,
+      "sha256": "e6b6a0729a90a696a32136389d8bd0ec68290fbe459470c32bf1c961f0b5d240"
+    },
+    {
+      "id": "cases-discrete-current-020",
+      "file": "cases-discrete.tex",
+      "start_line": 214,
+      "sha256": "ddcd0f9978fe734530c2383a2661b2488f8f34d2ecc40dfd1b00b04a23477258"
+    },
+    {
+      "id": "cases-discrete-current-021",
+      "file": "cases-discrete.tex",
+      "start_line": 222,
+      "sha256": "ea28450a93704fbb7e40280d51df88bd6e4950c1b936b9953117d6bcd9ba058f"
+    },
+    {
+      "id": "cases-discrete-current-022",
+      "file": "cases-discrete.tex",
+      "start_line": 242,
+      "sha256": "f8585e394a3afc6b81203dc70f51dd15ce1e33dbe53ae2e718d6fcbd99e0c161"
+    },
+    {
+      "id": "cases-discrete-current-023",
+      "file": "cases-discrete.tex",
+      "start_line": 260,
+      "sha256": "8729143f9cc0318dd80ba8ba874ecf6a95afbb03237dc05ae89cba013f9f707f"
+    },
+    {
+      "id": "cases-discrete-current-024",
+      "file": "cases-discrete.tex",
+      "start_line": 287,
+      "sha256": "19c1f7aea86a553e8d7a8fdce57f823c783cbedc2eda931acdff474f69b8b678"
+    },
+    {
+      "id": "cases-current-001",
+      "file": "cases.tex",
+      "start_line": 1,
+      "sha256": "2f8e69086de5415178d8554cb85dc95d785ef2ef46abf5b81e17276626896f95"
+    },
+    {
+      "id": "cases-current-002",
+      "file": "cases.tex",
+      "start_line": 5,
+      "sha256": "da3172b4390be0d03ab79f0aa599253ebed46f7fb0c6f68bb7388e887dbc79c4"
+    },
+    {
+      "id": "cases-current-003",
+      "file": "cases.tex",
+      "start_line": 11,
+      "sha256": "b1a88017acf1645700773d3f141e1f34221c29fe899f19f982c3338c110098f3"
+    },
+    {
+      "id": "discussion-current-001",
+      "file": "discussion.tex",
+      "start_line": 1,
+      "sha256": "85f3ca9dd897c3620c8dd162c73400e99921da8643b274467c6837e81b2a1acd"
+    },
+    {
+      "id": "discussion-current-002",
+      "file": "discussion.tex",
+      "start_line": 4,
+      "sha256": "9ff6ebc2e3e94368b118b50bf7993a72dd5ffe58096402d876e1662e8867ec47"
+    },
+    {
+      "id": "discussion-current-003",
+      "file": "discussion.tex",
+      "start_line": 6,
+      "sha256": "850b75d5c10954a823898534e48137bcbdf6a129543ba7159f000db19505badd"
+    },
+    {
+      "id": "discussion-current-004",
+      "file": "discussion.tex",
+      "start_line": 15,
+      "sha256": "4e815742805956e497115c86cbe1a800ee766691b7e236e9dda0688953826010"
+    },
+    {
+      "id": "discussion-current-005",
+      "file": "discussion.tex",
+      "start_line": 24,
+      "sha256": "501c4f55bbe1f581465c6c5e7e91bd22da01834304026f189eb51d511d63a7a2"
+    },
+    {
+      "id": "discussion-current-006",
+      "file": "discussion.tex",
+      "start_line": 33,
+      "sha256": "7dc956efde79fa59cf31f3f853028360c959f9d3eb1d3c4637ebb70e843abfcc"
+    },
+    {
+      "id": "discussion-current-007",
+      "file": "discussion.tex",
+      "start_line": 40,
+      "sha256": "41355c511af1ffe3dd6deab9f01b3230d058f2b5495ca33856b3a0954e27a661"
+    },
+    {
+      "id": "discussion-current-008",
+      "file": "discussion.tex",
+      "start_line": 50,
+      "sha256": "aface0be90427ee0606ed5249c752f52bd5d4c24a294406bfb5f447ca1717593"
+    },
+    {
+      "id": "discussion-current-009",
+      "file": "discussion.tex",
+      "start_line": 53,
+      "sha256": "21d609daca37868ee93c9cf222db162406f27e810fa46a26566780182bfa6cd9"
+    },
+    {
+      "id": "discussion-current-010",
+      "file": "discussion.tex",
+      "start_line": 62,
+      "sha256": "73e24f5de4a43eaa539d5c3a90998d7107c9c8263719f9715f39c2ee61f51205"
+    },
+    {
+      "id": "discussion-current-011",
+      "file": "discussion.tex",
+      "start_line": 80,
+      "sha256": "2a0de4910e63d1848e8395bfd29070824a680a1fc07feb00a14cf350c0654edc"
+    },
+    {
+      "id": "discussion-current-012",
+      "file": "discussion.tex",
+      "start_line": 99,
+      "sha256": "868320c7dc3e17587ad53005f4ea7d2c094b0014ca9c326dad9bd1b33afb6354"
+    },
+    {
+      "id": "discussion-current-013",
+      "file": "discussion.tex",
+      "start_line": 109,
+      "sha256": "1730e41bab87737fdf56c5657dc5b2ebd86f5dca9f1c1af18ac960913f632f85"
+    },
+    {
+      "id": "discussion-current-014",
+      "file": "discussion.tex",
+      "start_line": 111,
+      "sha256": "2474a439ef494e72fb1ae4aa354ed04bde92422536be3226f7a25a1161afc064"
+    },
+    {
+      "id": "discussion-current-015",
+      "file": "discussion.tex",
+      "start_line": 118,
+      "sha256": "93e5d86e9477db995848d2e6b8ad351b7d467fa6b06ce22dd20ecc62c2558bcf"
+    },
+    {
+      "id": "discussion-current-016",
+      "file": "discussion.tex",
+      "start_line": 127,
+      "sha256": "cde35b8080ed5b7920f01319cb3159e5a37ea2e517a89895d79563e9433c0080"
+    },
+    {
+      "id": "discussion-current-017",
+      "file": "discussion.tex",
+      "start_line": 135,
+      "sha256": "a2d5075949f1cf46889ff792b463575ee5997651c8a3b77752f3dfdb7ee665f1"
+    },
+    {
+      "id": "discussion-current-018",
+      "file": "discussion.tex",
+      "start_line": 142,
+      "sha256": "cd38a457760b7ed3f4a34b4fa6c63d52c44385547fe7e8d3755510b510568a80"
+    },
+    {
+      "id": "discussion-current-019",
+      "file": "discussion.tex",
+      "start_line": 144,
+      "sha256": "4c1e6f3075183714a0f93cb0cd7c7b99390c99ba90d2478acd4b430736c08c1a"
+    },
+    {
+      "id": "discussion-current-020",
+      "file": "discussion.tex",
+      "start_line": 153,
+      "sha256": "323742e289653452054968237c3f712b9063a77f64acb2bddbbf42c8f6332212"
+    },
+    {
+      "id": "discussion-current-021",
+      "file": "discussion.tex",
+      "start_line": 161,
+      "sha256": "e82c11ea50d038ab1892151ec75af29252893f9a0f720fb9bf25abb418edce7b"
+    },
+    {
+      "id": "discussion-current-022",
+      "file": "discussion.tex",
+      "start_line": 170,
+      "sha256": "7e6e0a1b85821a876fc0906c4042440ce5155fd9c01197ff3b8b053cf92fb573"
+    },
+    {
+      "id": "discussion-current-023",
+      "file": "discussion.tex",
+      "start_line": 173,
+      "sha256": "50ee7a7042ff29560580cbab6d3453460ef86e54da500d7ce97f5e650cfdab35"
+    },
+    {
+      "id": "discussion-current-024",
+      "file": "discussion.tex",
+      "start_line": 184,
+      "sha256": "add54e9ff990ef1d68e56cfd824976c0ca42e17c65759d8e76bf800fc41eb030"
+    },
+    {
+      "id": "discussion-current-025",
+      "file": "discussion.tex",
+      "start_line": 193,
+      "sha256": "0eb4fc7467f91d4ff0906e3e366758e6e926613844455075426052ae1457c7bb"
+    },
+    {
+      "id": "discussion-current-026",
+      "file": "discussion.tex",
+      "start_line": 204,
+      "sha256": "f549eaa8568777e2c41717cfc8bc41c2d695cd5e77edf29d1a29e306ef951720"
+    },
+    {
+      "id": "introduction-current-001",
+      "file": "introduction.tex",
+      "start_line": 1,
+      "sha256": "479ce8267a8dc66449e53b838492edeab11f9f116eed87da087547c1cd388ae6"
+    },
+    {
+      "id": "introduction-current-002",
+      "file": "introduction.tex",
+      "start_line": 3,
+      "sha256": "5b9fa2fd86115fbc94627edc7bd981125eb745de6c12bc78c3b1d5a627a40fd2"
+    },
+    {
+      "id": "introduction-current-003",
+      "file": "introduction.tex",
+      "start_line": 10,
+      "sha256": "346e470afc9e4956b2add236afb9feae5f347e017b45ce8f680a23f07ae47693"
+    },
+    {
+      "id": "introduction-current-004",
+      "file": "introduction.tex",
+      "start_line": 20,
+      "sha256": "5576a15dd6c271b4df9c107d8a8ab776ab5a549deee20bb8cb7d1e37c34f6925"
+    },
+    {
+      "id": "introduction-current-005",
+      "file": "introduction.tex",
+      "start_line": 30,
+      "sha256": "b40aad90b3890ce1f6f08f0dd4adc69ba9cb9f510d2ca0a697e6aa1fe0561139"
+    },
+    {
+      "id": "introduction-current-006",
+      "file": "introduction.tex",
+      "start_line": 41,
+      "sha256": "5fe79d582aef09a7b9a021cc598e2a0125e4430743dbb48eeef6e12f5dac25c9"
+    },
+    {
+      "id": "introduction-current-007",
+      "file": "introduction.tex",
+      "start_line": 51,
+      "sha256": "3b241637874bf7dc3c9c3db28e58aa1fa4163ace2d9208465f2083d76c6c9c3c"
+    },
+    {
+      "id": "introduction-current-008",
+      "file": "introduction.tex",
+      "start_line": 58,
+      "sha256": "34ba76ff2bc4e095131d4db880e2422b42d13246af79a68c8a0055978775c227"
+    },
+    {
+      "id": "introduction-current-009",
+      "file": "introduction.tex",
+      "start_line": 69,
+      "sha256": "7ba4602048f821020f0f2251cfaa1af9b534925890c53e68817ef92286112dd2"
+    },
+    {
+      "id": "introduction-current-010",
+      "file": "introduction.tex",
+      "start_line": 78,
+      "sha256": "694b7834b6db1529de2a1a46b208f712f7f12ad8c70755efb0d9e5c01ea061fc"
+    },
+    {
+      "id": "main-current-001",
+      "file": "main.tex",
+      "start_line": 1,
+      "sha256": "5317e4480733a5da1412072b1f74a7c88d5293fbfca75b0370d737783b4f3063"
+    },
+    {
+      "id": "method-profile-joint-table-current-001",
+      "file": "method-profile-joint-table.tex",
+      "start_line": 1,
+      "sha256": "7b7e0f66da29a99414f7265907c512b331804740c675aa106c966bd0c57ca325"
+    },
+    {
+      "id": "method-profile-table-current-001",
+      "file": "method-profile-table.tex",
+      "start_line": 1,
+      "sha256": "16b87ad00b532df978a2391dc093171b967b123de084eddfeed0d350934bde78"
+    },
+    {
+      "id": "method-profile-current-001",
+      "file": "method-profile.tex",
+      "start_line": 1,
+      "sha256": "871dfa2b3e0601943436f4bd4f9542720fa6709685e181156290cac60a2d5502"
+    },
+    {
+      "id": "method-profile-current-002",
+      "file": "method-profile.tex",
+      "start_line": 4,
+      "sha256": "2b5a5d7ae77e580ee4232ffa3b00b2f57e7bc1595f1a3ea54f78896265067836"
+    },
+    {
+      "id": "method-profile-current-003",
+      "file": "method-profile.tex",
+      "start_line": 11,
+      "sha256": "a8f878d0d2b6e51fa5f8743ab25912e4135e479d18f769ce7693ca78867c1d06"
+    },
+    {
+      "id": "method-profile-current-004",
+      "file": "method-profile.tex",
+      "start_line": 13,
+      "sha256": "72aae88e3c0eb1e3f4232efbde2c8f9ee61e9aa0fd029ea2b1ee56ba2a943bf3"
+    },
+    {
+      "id": "method-profile-current-005",
+      "file": "method-profile.tex",
+      "start_line": 24,
+      "sha256": "55b045a2c699d6b2f991e422c633bd058664ad8357deca96fccb575feee864ba"
+    },
+    {
+      "id": "method-profile-current-006",
+      "file": "method-profile.tex",
+      "start_line": 36,
+      "sha256": "cc84506daefe9b486bf6eaa1f0d2f4ed25a034885fd3369e7558086ccb059f96"
+    },
+    {
+      "id": "method-profile-current-007",
+      "file": "method-profile.tex",
+      "start_line": 45,
+      "sha256": "4298e3118ed970960685ef4c64cf7ee5cb58fb8122dc8b54533d1b7b7c369381"
+    },
+    {
+      "id": "method-profile-current-008",
+      "file": "method-profile.tex",
+      "start_line": 58,
+      "sha256": "48368831e0cf7b987dc1044d749bc6d5125ab12397646cda60ed78e727dad4fb"
+    },
+    {
+      "id": "method-profile-current-009",
+      "file": "method-profile.tex",
+      "start_line": 60,
+      "sha256": "1dc8569d6e84386a63a34c7862a01ed9ec4e75a0f94ae5bb70f63ab28b9d91ae"
+    },
+    {
+      "id": "method-profile-current-010",
+      "file": "method-profile.tex",
+      "start_line": 62,
+      "sha256": "4f386388c53a627abc7c9903e85471bcf4bded984910aa19aaf5cf666b88029a"
+    },
+    {
+      "id": "method-profile-current-011",
+      "file": "method-profile.tex",
+      "start_line": 72,
+      "sha256": "aba66ae1d0a6fc8cfae70db2fcba95444e2c36ac047127572b82750b4dd032ba"
+    },
+    {
+      "id": "method-profile-current-012",
+      "file": "method-profile.tex",
+      "start_line": 82,
+      "sha256": "96b24b4863be091fa33d23aa5bf58c000ce9551f331081b6885d9d206ed37b87"
+    },
+    {
+      "id": "method-profile-current-013",
+      "file": "method-profile.tex",
+      "start_line": 89,
+      "sha256": "0c74ab3135557c83268c7d6fc1a402d36d94802323d62433722b156e48a4791d"
+    },
+    {
+      "id": "method-profile-current-014",
+      "file": "method-profile.tex",
+      "start_line": 91,
+      "sha256": "1318c7b676837abf50fae3df347b27c2960dd383f96988551e84ed99beec908b"
+    },
+    {
+      "id": "method-profile-current-015",
+      "file": "method-profile.tex",
+      "start_line": 101,
+      "sha256": "12757bf5a19f81fb2628f7746db1bc38c3a5ffe87f9609450c5041370b6db27a"
+    },
+    {
+      "id": "method-profile-current-016",
+      "file": "method-profile.tex",
+      "start_line": 115,
+      "sha256": "96d1409b1b8599a9f5ff22eb87730deb3dcfa1a14cb1e372dc1ed60f56657d6d"
+    },
+    {
+      "id": "method-profile-current-017",
+      "file": "method-profile.tex",
+      "start_line": 117,
+      "sha256": "b0a24e3993700a61ebb41e91b7cf35efb3a5a2e38e6d3a4c93b24ee8accaa4b0"
+    },
+    {
+      "id": "method-profile-current-018",
+      "file": "method-profile.tex",
+      "start_line": 126,
+      "sha256": "f4a08dd41ca6e9c2b010c470554af1b1d4305a3f71ab38746391fa0947ad3687"
+    },
+    {
+      "id": "method-profile-current-019",
+      "file": "method-profile.tex",
+      "start_line": 135,
+      "sha256": "d13f5b4b02bc44d428a6ab4d5c245fd3ffd2752bb0c256db31fa9839fa915548"
+    },
+    {
+      "id": "method-profile-current-020",
+      "file": "method-profile.tex",
+      "start_line": 144,
+      "sha256": "059eec3beb61db1f19ab58c1a7774ad1b47ed9a2cc66bd6f4b31de61d918192e"
+    },
+    {
+      "id": "method-profile-current-021",
+      "file": "method-profile.tex",
+      "start_line": 146,
+      "sha256": "6ae5b763a80fad71a4d53ae956edd08dad44612460cfc8c005d4060a10e0b604"
+    },
+    {
+      "id": "method-profile-current-022",
+      "file": "method-profile.tex",
+      "start_line": 155,
+      "sha256": "5e10a09e4424e9b90bcc7d0828f65eca7feeb69e4c0659a4f86b8673972e857f"
+    },
+    {
+      "id": "method-profile-current-023",
+      "file": "method-profile.tex",
+      "start_line": 170,
+      "sha256": "6475f1d5268afeb2f42d9c7b3fcbe9d55a48ef7c1916e5e69ed52ee8ccc02325"
+    },
+    {
+      "id": "method-shift-figure-current-001",
+      "file": "method-shift-figure.tex",
+      "start_line": 1,
+      "sha256": "3bc50ef98f987964b64aca668c741afca9fa5701a5969a953526f49c35b52b94"
+    },
+    {
+      "id": "method-current-001",
+      "file": "method.tex",
+      "start_line": 1,
+      "sha256": "9a503ee571bccac2615446115c0ce3aa03788ebd6049b837b63cbc53c30e06bf"
+    },
+    {
+      "id": "method-current-002",
+      "file": "method.tex",
+      "start_line": 4,
+      "sha256": "0a6afb6a943317d203112fef3fe9c440ddd6e09406d1d240b8d5b24db72df043"
+    },
+    {
+      "id": "method-current-003",
+      "file": "method.tex",
+      "start_line": 11,
+      "sha256": "c7c3590ba78a48ba45b852030e920d4e9f5da0c4e9706ca1b5f4151f934e00a3"
+    },
+    {
+      "id": "method-current-004",
+      "file": "method.tex",
+      "start_line": 19,
+      "sha256": "090b96458780feafaeec5985e51fbe029fe0d5bcaa1ecbf3275239e012c0e43b"
+    },
+    {
+      "id": "method-current-005",
+      "file": "method.tex",
+      "start_line": 29,
+      "sha256": "3801b51dc176cd75373284cd5999dd0c1f5ae02328fedd7f0259469b5001d6ed"
+    },
+    {
+      "id": "method-current-006",
+      "file": "method.tex",
+      "start_line": 36,
+      "sha256": "ec0290aa5ebbba837c106b019df54da81f1c05b22c6b1b48f895d619cff39d0f"
+    },
+    {
+      "id": "method-current-007",
+      "file": "method.tex",
+      "start_line": 45,
+      "sha256": "00b89a80f1dc4d7c33d17e5bbf4501af543e26bf11bceffec89e5ef5f9d60a48"
+    },
+    {
+      "id": "overview-current-001",
+      "file": "overview.tex",
+      "start_line": 1,
+      "sha256": "bdb203e167e1204a6f1b1f863a08cd96fcd47f6d7aa1e0606e7a7651671b562c"
+    },
+    {
+      "id": "worked-examples-current-001",
+      "file": "worked-examples.tex",
+      "start_line": 1,
+      "sha256": "090e12f9f1c613dc186e228568f8a6713385e77765582d078c830a6a53b01927"
+    },
+    {
+      "id": "worked-examples-current-002",
+      "file": "worked-examples.tex",
+      "start_line": 4,
+      "sha256": "f141bb021aa7f027d46eb3d1479af3b1fcedf7782e22cbcd788280754070ce6c"
+    },
+    {
+      "id": "worked-examples-current-003",
+      "file": "worked-examples.tex",
+      "start_line": 6,
+      "sha256": "b493f5a2df1ef399568b5f749c3ab4af303960bda468a35c846b2aa8e3439199"
+    },
+    {
+      "id": "worked-examples-current-004",
+      "file": "worked-examples.tex",
+      "start_line": 9,
+      "sha256": "816e0e7efbc665a2fd2c09c15dda9e88994ea6dcd3d6277c42db680e7eeb6ca2"
+    },
+    {
+      "id": "worked-examples-current-005",
+      "file": "worked-examples.tex",
+      "start_line": 23,
+      "sha256": "57c31da4b9657d97bbfb91ed00b59c041fca00c436f962be8a78acad18c56076"
+    },
+    {
+      "id": "worked-examples-current-006",
+      "file": "worked-examples.tex",
+      "start_line": 30,
+      "sha256": "e9700e429285b1b9a94be9018cc69473cd849840b282685a842b4d47de75ec52"
+    },
+    {
+      "id": "worked-examples-current-007",
+      "file": "worked-examples.tex",
+      "start_line": 40,
+      "sha256": "477ace7c8dc9af7e0db5bbeab7d8f71cb1f62566feba1558bb6c91dd5205d871"
+    },
+    {
+      "id": "worked-examples-current-008",
+      "file": "worked-examples.tex",
+      "start_line": 45,
+      "sha256": "f086217c23e7e59c08fa59f520abbac14a156504a0600310ea7851ae2ab9c78b"
+    },
+    {
+      "id": "worked-examples-current-009",
+      "file": "worked-examples.tex",
+      "start_line": 48,
+      "sha256": "0581b5baee1d955d87f53bf810c9c66193d8189c608f2dc4529f7ea6f684159b"
+    },
+    {
+      "id": "worked-examples-current-010",
+      "file": "worked-examples.tex",
+      "start_line": 61,
+      "sha256": "192dd3b3fdd0963bc7db706bb9381aa87f76a3ab85c546948205b36e3c8b0a5d"
+    },
+    {
+      "id": "worked-examples-current-011",
+      "file": "worked-examples.tex",
+      "start_line": 79,
+      "sha256": "7be6e7782f1f9c8167c82590cc1bf58dd72edcfa4da86089a2912925670e881c"
+    },
+    {
+      "id": "worked-examples-current-012",
+      "file": "worked-examples.tex",
+      "start_line": 84,
+      "sha256": "95301c4187d341fda3b326461c311498dd7d715fe3973413017a88a3a3c41b42"
+    },
+    {
+      "id": "worked-examples-current-013",
+      "file": "worked-examples.tex",
+      "start_line": 87,
+      "sha256": "5c39205c555a6ed5de92bfaa7e2d91df4ba915bdce64813fc5694f6b3c7eee79"
+    },
+    {
+      "id": "worked-examples-current-014",
+      "file": "worked-examples.tex",
+      "start_line": 89,
+      "sha256": "05e6bcfbe3206c21de7c9956b3bdc873ac807c4f549dc554bfe923918bdc4973"
+    },
+    {
+      "id": "worked-examples-current-015",
+      "file": "worked-examples.tex",
+      "start_line": 118,
+      "sha256": "be93899911d928611910249b6aee964761a02a897610e409375f774a00b9a622"
+    },
+    {
+      "id": "worked-examples-current-016",
+      "file": "worked-examples.tex",
+      "start_line": 132,
+      "sha256": "b4d39e367dc495aa253013d131512c12c9b9bfc8758c7a9ebcabf01d21dc3b34"
+    },
+    {
+      "id": "worked-examples-current-017",
+      "file": "worked-examples.tex",
+      "start_line": 141,
+      "sha256": "0010c9a58e032d2e07e7bccf49f9a5b525e1ba18e1dae8b1fc08a05a88bcb7e1"
+    },
+    {
+      "id": "worked-examples-current-018",
+      "file": "worked-examples.tex",
+      "start_line": 144,
+      "sha256": "cd4eccd8624d46042e3da39df8295f87126418ed74e5254118d44e459c8bfa7b"
+    },
+    {
+      "id": "worked-examples-current-019",
+      "file": "worked-examples.tex",
+      "start_line": 159,
+      "sha256": "b74d31d9cc23452589cf9d34a4cf1e8b2f33888dc54a18631697d573f6eb6b4c"
+    },
+    {
+      "id": "worked-examples-current-020",
+      "file": "worked-examples.tex",
+      "start_line": 162,
+      "sha256": "7adeb34b7b25422cb30b9a129057536c34c6db946488fd20486ba9a1c6499659"
+    },
+    {
+      "id": "worked-examples-current-021",
+      "file": "worked-examples.tex",
+      "start_line": 173,
+      "sha256": "15ace475b5ccf3e2876782e46cce8e06f55e678c7ae04cbb9e8fcf6fd505bc5f"
+    },
+    {
+      "id": "worked-examples-current-022",
+      "file": "worked-examples.tex",
+      "start_line": 185,
+      "sha256": "cbfb551d59cde2422ed4612088e527e99c64d2651937aa4f1a0207f678f25615"
+    },
+    {
+      "id": "worked-examples-current-023",
+      "file": "worked-examples.tex",
+      "start_line": 191,
+      "sha256": "34230cd23550e2aaec00314a76868bc25b597c591d228c8bb2458ba5544546a3"
+    },
+    {
+      "id": "worked-examples-current-024",
+      "file": "worked-examples.tex",
+      "start_line": 194,
+      "sha256": "c5fe2e47c77e7a328ef886636d7872092e3dcd6351391c3cebb150c82a246d24"
+    },
+    {
+      "id": "worked-examples-current-025",
+      "file": "worked-examples.tex",
+      "start_line": 201,
+      "sha256": "d426c835678f9322f7864769dc5010c34bc97c07c1520ad2b593bd4cc06e68d8"
+    },
+    {
+      "id": "worked-examples-current-026",
+      "file": "worked-examples.tex",
+      "start_line": 204,
+      "sha256": "7cfa697074584efecc793a6ba86226f280ed93e6adfeb6ef6c320a5bd9fa031e"
+    },
+    {
+      "id": "worked-examples-current-027",
+      "file": "worked-examples.tex",
+      "start_line": 221,
+      "sha256": "a3bd1b9646386940f4df123c68bbb6f43aa9d57dc5dfd3b5a55f547838071499"
+    }
+  ],
+  "new_material_review": [
+    {
+      "location": "cases-analysis.tex, real-coordinate flux paragraph and display",
+      "check": "Read ExactFormCoordinates 33-96 and ExactSphereFluxBridge 11-67. Verified real-part projection, pullback naturality, positive-frame density and measure-preserving flux transfer; types are complex-valued real forms to real-valued coordinate forms."
+    },
+    {
+      "location": "method-profile.tex, joint-control paragraphs and formula; method-profile-joint-table.tex",
+      "check": "Recomputed 69 cells with original module/body measure, reconciled cell formula against direct module vectors, recomputed 1500 percentile-bootstrap replicates and conditional coverage; differentiated length conditioning from causal adjustment."
+    },
+    {
+      "location": "method-profile.tex, family sensitivity paragraph",
+      "check": "Recomputed exclusion of each of 212 directory families; arithmetic range 37.0-38.7% supports limited robustness to this grouping proxy."
+    },
+    {
+      "location": "discussion.tex, literal Lean listings and explanations",
+      "check": "Both listings exactly match dedented retained source spans; verifier now enforces byte-level text equality. Checked positivity/cancellation and fold induction hypotheses."
+    },
+    {
+      "location": "discussion.tex, reorganized data/code paragraphs",
+      "check": "Distinct units for tree inventory, selected artifacts, sampled modules and catalogue bindings; evidence count is 21 and source link check count is 55."
+    }
+  ],
+  "mathematical_corrections": [
+    "One event probability suffices for one accuracy guarantee; equality of full output laws is a reusable stronger interface.",
+    "Safety and width invariants support polynomial cost bounds, separately from semantic correctness.",
+    "Complex forms reach real-coordinate Stokes through real-part projection, derivative naturality and orientation-normalized flux equality.",
+    "The local Faber Taylor identity needs the separately constructed analytic collar for unit-circle Fourier evaluation.",
+    "The final ideal-composition example reuses algebraic reconstruction, not the convergence fields."
+  ],
+  "remaining_research_opportunities": [
+    "Held-out, randomly selected extraction validation for an independent accuracy estimate.",
+    "Elaborated tactic traces to measure executed steps rather than written lexical indicators.",
+    "Matched tasks and declaration roles, with outcomes, to study causes or success effects.",
+    "Compilation and broader mathematical checking of the remaining upstream case endpoints.",
+    "More independently replicated case analyses and comparison with additional formal libraries."
+  ],
+  "status": "Completed; final PDF built, rendered and visually inspected, with verification records retained.",
+  "final_pdf_sha256": "03df4180462e114120e3bfbc9b0164099c5bb3d015a8254bd434af3f87192d35",
+  "final_pages": 33
+}

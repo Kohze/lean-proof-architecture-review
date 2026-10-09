@@ -1,0 +1,16 @@
+Tactics synthesis revision - 8 October 2026
+
+Local edition 1.4.0: 32 pages, 44 cited references.
+PDF SHA256: 7e7900d6ad49ae746e90fb1f5993cb3beb5434b94b746e76f6ed05225a919230
+
+The abstract, introduction and discussion now connect the measured method profile to the division of proof work in the six case studies. Two source-body examples trace how semantic and analytic hypotheses prepare the arithmetic obligations discharged by established Lean tactics.
+
+Common-domain differences: tactic-mode proofs +29.2 percentage points; arithmetic/algebra tactics +30.5; local claims/calculation chains +34.1. The unit is the average within-module share of extracted named theorem/lemma bodies. Survey data, feature definitions, controls, graphic and table are unchanged.
+
+Interpretation: descriptive differences from the pinned Mathlib baseline, supported by source tracing in particular completed constructions. Completion-rate, effort or maintenance effects require matched tasks and corresponding outcome data.
+
+Verification: manuscript checks passed; 44 cited records, including 30 scholarly references and 14 source/software records; 25 published scholarly DOI identities retained; no missing or unused citation keys; disclosure confined to its dedicated section. All 53 source links checked against retained bytes; 17 detailed case evidence records retained.
+
+Layout: all 32 pages rendered, four contact sheets inspected, pages 1, 2, 21, 26, 27 and 28 inspected at full size. No unresolved visual defects. Figure 1 and its caption remain on page 21.
+
+Earlier edition audits and public v1.1.1 metadata are retained separately.

@@ -1,11 +1,7 @@
 \subsection{Mahler: ordered forms and boundary locality}
 \label{sec:mahler}
 
-The analytic cases shift the preservation question from finite laws to
-identities and estimates used in differentiation and integration.
-The symmetric Mahler development connects exterior algebra, complex analysis,
-and convex geometry through several representations of the same differential
-form. Its selected endpoint, \src{OAI.SymmetricMahler.symmetric_mahler}, states
+The symmetric Mahler development connects a local differential-form calculation to a convex-body inequality. Exterior algebra describes the calculation, continuous alternating maps support its differentiation, and boundary integrals supply the quantity used in the geometric reduction. The selected endpoint, \src{OAI.SymmetricMahler.symmetric_mahler}, states
 \[
   \frac{4^n}{n!}\leq |K|\,|K^\circ|
 \]
@@ -13,10 +9,7 @@ for $n\geq1$ and a compact, convex, origin-symmetric set
 $K\subseteq\R^n$ with nonempty interior. Here volume is ordinary Lebesgue
 volume and the coordinate polar is literally
 $K^\circ=\{p:\sum_i p_i v_i\leq1\text{ for every }v\in K\}$.
-The accompanying mathematical argument uses holomorphic maps associated with
-finite intersections of strips~\citep{OAIMahler}. For the architectural review,
-the instructive point is how a local transgression identity becomes a numerical
-flux value usable by the convex-body reduction.
+The accompanying argument uses holomorphic maps associated with finite intersections of strips~\citep{OAIMahler}. We follow the transgression identity through its regularity and locality requirements to the flux value consumed by the convex-body reduction.
 
 \paragraph{The analytic inputs and the transgression identity.}
 The generic analytic results take a structure named \src{MassHypotheses}.
@@ -25,18 +18,16 @@ $f_j$, zero as their unique common zero in the domain, a homogeneous degree-$m$ 
 polynomial map $G$ without nonzero common zeros, an actual Euclidean Taylor
 remainder $f-G=O(\norm{z}^{m+1})$, and compact closures of sublevels
 with $0<R<1$ contained in the domain.
-The structure records analytical inputs. The desired mass inequality and
-numerical flux value are separate conclusions. For the actual strip maps,
+These fields record analytic inputs from which the mass and flux conclusions are derived. For the strip maps,
 \src{euclideanSpecial_massHypotheses} constructs every field from positive
 dimension, an injective real measurement matrix, and $m\geq2$.
-The final body theorem supplies the resulting homogeneous flux value to a
-conditional reduction lemma. Its retained inputs are precisely the body
-hypotheses stated above.\footnote{The endpoint and concrete hypothesis
+The body theorem passes the resulting homogeneous flux value to the reduction lemma, leaving exactly the stated body hypotheses.\footnote{The endpoint and concrete hypothesis
 construction are
 \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/MainTheorem.lean\#L12-L22}{\src{Mahler/MainTheorem.lean}, lines 12--22}, and
 \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/EuclideanSpecialMap.lean\#L67-L97}{\src{Mahler/EuclideanSpecialMap.lean}, lines 67--97}.}
 
-For the transgression calculation, write the complex dimension as $N=k+2$, let $q(z)=z$, and set
+For the transgression calculation in dimension $N\geq2$, write
+$N=k+2$ with $k\geq0$, let $q(z)=z$, and set
 $\tau(H)(z)=\sum_j|H_j(z)|^2$. The source convention is
 $d^cu(z)[v]=-Du(z)[iv]/4$. On punctured space the degree-$m$
 homogeneous map $G$ defines
@@ -55,14 +46,13 @@ The ambient differentiation theorem preserves both terms:
 \]
 It follows from actual Fr\'echet differentiation, exterior product rules, and
 $d^2\alpha_t=0$. Restriction to sphere tangents then kills the first term.
-The deformation residual has $k+1$ possible placements of $d\beta$;
-their verified multiplicity gives
+On sphere tangents, the remaining variation of $\alpha_t\wedge(d\alpha_t)^{k+1}$ contains $k+1$ placements of $d\beta$. Denote this remaining sum by $\operatorname{residual}_t$.
+Its multiplicity gives the identity
 \[
   \operatorname{residual}_t=-(k+1)d\eta_t
   \qquad\text{on sphere tangent tuples}.
 \]
-Keeping the ambient identity separate from its tangential consequence makes
-the vanished term, sign, and multiplicity individually accountable.
+The two identities distinguish ambient differentiation from its restriction to the integration boundary. The sign and the factor $k+1$ identify the residual as an exact form there.
 
 The disappearance of the first term has a concrete linear-algebra proof.
 At $z\ne0$, the sphere tangent space has real dimension $2N-1$ and contains
@@ -74,7 +64,7 @@ inserting $iz$ in any slot gives zero.\footnote{The normalization and
 circle evaluations are in
 \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousFlux.lean\#L12-L13}{the $d^c$ definition, lines 12--13}, and
 \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousDeformation.lean\#L14-L101}{the deformation and circle identities, lines 14--101}.}
-Their top-degree wedge therefore vanishes. The lemma
+Their wedge has top degree on the sphere tangent space and therefore vanishes. The lemma
 \src{horizontal_top_eq_zero} proves the general assertion explicitly.
 An independent top-degree tuple determines a basis. Choose a nonzero basis
 coordinate of the horizontal vector, replace the corresponding tuple entry
@@ -85,38 +75,61 @@ vanishes by alternation. The sphere theorem instantiates this argument with
 the verified tangent dimension and $iz$.
 
 \paragraph{Identifying two representations of the form.}
-The representation change occurs because the development constructs $\eta_t$
-in two useful ways. One bundles a literal shuffle form through finite basis
-expansion, supporting regularity proofs by evaluation. The other builds a
-continuous product from a two-form and continuous wedge powers, supporting
-differentiation rules. Recursive slot types retain each factor's ordered
+The development constructs $\eta_t$ in two ways suited to different operations. A literal shuffle form is bundled through finite basis expansion, supporting regularity proofs by evaluation. A continuous product of a two-form and wedge powers supports differentiation rules. Recursive slot types retain each factor's ordered
 pair of arguments. Two equivalences flatten these slots to
 $\operatorname{Fin}(2(k+1))$ along different routes. A small extensional proof
 identifies the equivalences; injectivity of the projection from continuous
 alternating maps to alternating maps then identifies the entire fields.
-This field equality transports the proved transgression into the analytic
-theorem expecting the other representation. Thus the intermediate theorem
+Equality of the whole fields transports the transgression into the analytic theorem expecting the other representation. The intermediate theorem
 \src{homogeneousFlux_endpoints_of_transgression} has an explicit local-formula
 premise, which \src{homogeneous_flux_endpoints} discharges.\footnote{See
 \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousEndpoint.lean\#L12-L45}{the homogeneous endpoint, lines 12--45}.
 The underlying tangent identity is proved in
 \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/HomogeneousTransgression.lean\#L65-L97}{the tangent transgression theorem, lines 65--97}.}
 
-Each representation carries different proof obligations. The literal shuffle
-description keeps permutation signs and factor order available to algebraic
-rewrites. The continuously bundled field has a normed-space structure, so its
-regularity and derivative can be expressed through the existing calculus API.
+The shuffle description exposes permutation signs and factor order for algebraic rewrites. The continuously bundled field has a normed-space structure, so the calculus library interface can express its regularity and derivative.
 Finite basis expansion connects these obligations: smoothness of the finitely
 many evaluated coefficients supplies smoothness of the bundled form.
 The source obtains every finite regularity order on punctured space from the
 analytic hypotheses, including the $C^2$ order used below.
 Identifying the fields also identifies their derivatives as functions valued
-in continuous alternating maps. This is stronger than checking their values
-on a chosen tangent tuple, which suffices only at the later integration
-boundary. The proof therefore uses two distinct congruence principles at
+in continuous alternating maps. Agreement on tangent tuples supplies the later integration comparison; differentiation uses equality of the form-valued fields. The proof therefore uses two distinct congruence principles at
 appropriate stages: whole-field equality for differentiation and tangential
-agreement for oriented density. Keeping those principles separate clarifies
-which information each mathematical operation consumes.
+agreement for oriented density. The source uses each principle at the stage where its information suffices.
+
+The continuous product also exposes a useful implementation choice.
+\src{continuousWedge} starts with the algebraic shuffle product and proves
+continuity in its vector arguments term by term. For continuity as a
+function of the two forms, the source first embeds continuous alternating
+maps into multilinear maps. Injectivity gives finite dimensionality of
+the form space when the ambient real space is finite dimensional.
+It then bundles the product as
+\[
+ \mathcal W:\mathcal A_\iota\longrightarrow_L
+       (\mathcal A_\kappa\longrightarrow_L\mathcal A_{\iota\sqcup\kappa}),
+\]
+where $\mathcal A_\iota$ is the normed space of continuous alternating
+maps indexed by $\iota$, and $\longrightarrow_L$ denotes a continuous
+linear map over $\R$. The two applications of
+\src{LinearMap.toContinuousLinearMap} use finite dimensionality to promote
+algebraic linearity to continuity. The regularity of
+$x\mapsto\mathcal W(a(x))(b(x))$ now follows from the ordinary calculus
+of continuous linear maps and their application.\footnote{See
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/ContinuousWedge.lean\#L19-L107}{\src{ContinuousWedge.lean}, lines 19--107}.}
+The finite-dimensional setting makes this bridge economical: the bundled bilinear product supplies the calculus operations, and the shuffle representation supplies exact algebraic identities. Mathlib
+already supplies the exterior derivative and its square-zero theorem
+\citep{MathlibForms}; the project-specific work here connects the ordered
+product, its regularity, and the integration interfaces.
+
+\paragraph{From complex forms to real-coordinate flux.}
+The integration interface requires another preservation theorem. The primitive is a complex-valued real alternating form, whereas coordinate Stokes takes real-valued forms on $\R^{2N}$. Let $L:\R^{2N}\to\mathbb C^N$ be the positively oriented orthonormal coordinate map used by the sphere flux. The source defines the real pullback
+\[
+ (\mathcal P\eta)_x(v_1,\ldots,v_q)
+   =\operatorname{Re}\bigl(\eta_{Lx}(Lv_1,\ldots,Lv_q)\bigr)
+\]
+and proves $d(\mathcal P\eta)=\mathcal P(d\eta)$ wherever $\eta$ is differentiable. Taking real parts commutes with the finite alternating derivative sum; the chain rule handles the fixed linear coordinates. A separate density identity uses the chosen frame's volume $+1$, and a measure-preserving sphere isometry identifies the two flux integrals. Thus the exact-form identity reaches coordinate Stokes with its sign and normalization preserved.\footnote{See
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/ExactFormCoordinates.lean\#L33-L96}{real-part projection and pullback naturality, lines 33--96}, and
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/Mahler/ExactSphereFluxBridge.lean\#L11-L67}{the oriented density and flux comparisons, lines 11--67}.}
 
 \paragraph{Applying Stokes near the boundary.}
 A second interface controls locality. The primitive is $C^2$ on punctured
@@ -144,16 +157,12 @@ assumptions~\citep{MathlibForms}. Kudryashov's earlier Lean formalization alread
 theorem between integration theories and derives Cauchy--Goursat under
 carefully chosen differentiability assumptions \citep{Kudryashov2022}.
 Its rectangular domains give a direct comparison for integration
-interfaces. The distinctive step here identifies ordered exterior algebra
-with continuously bundled fields and combines that equality with a locality
-theorem that imposes regularity where the
-integral uses it. These interfaces expose and discharge the substantive
-premises without requiring regularity at the singular center. The elementary boundary-form example in Section~\ref{sec:local-forms} separates the ambient and tangential information used at these two stages.
+interfaces. The integration here combines equality of ordered and continuously bundled forms with a locality theorem supplying regularity near the boundary. This connects the analytic calculation to Stokes while accommodating the singular center. Section~\ref{sec:local-forms} illustrates why the ambient and tangential comparisons need different data.
 
 \subsection{Crouzeix: compression, energy, and strict neighborhoods}
 \label{sec:crouzeix}
 
-The finite-matrix Crouzeix endpoint states an amplified norm estimate with constant two.
+The Crouzeix case follows a different analytic interface: boundary coefficient estimates feed a matrix-norm calculation with constant two.
 For an $n$-by-$n$ complex matrix $A$, $m$-by-$m$ coefficients $B_k$, and
 $n,m>0$, \src{OAI.DirectCrouzeix.complete_crouzeix} states
 \[
@@ -162,11 +171,16 @@ $n,m>0$, \src{OAI.DirectCrouzeix.complete_crouzeix} states
 \]
 Write $F(z)=\sum_{k=0}^d z^kB_k$; $F(A)$ denotes the amplified
 evaluation on the left. The source uses the operator $2$-norm, literal matrix Kronecker products,
-and $W(A)=\{\langle u,Au\rangle:\norm{u}=1\}$.
+and $W(A)=\{\langle u,Au\rangle:\norm{u}=1\}$. Here $C^*$ denotes the
+conjugate transpose, and the Hilbert--Schmidt (Frobenius) norm is
+$\norm{C}_{\mathrm{HS}}^2=\sum_{i,j}|C_{ij}|^2$.
 Its endpoint quantifies over arbitrary $A$ and coefficient matrices.
 The accompanying argument~\citep{OAICrouzeix} is organized around boundary
-analysis; the formal implementation makes particularly clear how positivity
-and Fourier energy combine to produce the constant two.
+analysis. The mathematical-frontiers review explains its ordered product
+tests and positive-block closure in relation to earlier proof routes
+\citep{GounderFrontiers2026}. Here the focus is the formal implementation:
+zero-mode normalization, the finite dual witness, coefficient transport,
+and construction of the strict neighborhoods used by the endpoint.
 
 \paragraph{Closing the compressed energy estimate.}
 The local interface \src{analytic_domain_core} accepts a polynomial sequence
@@ -174,11 +188,10 @@ $b_k$ with $b_0=1$, a continuous boundary parametrization, and a matrix resolven
 $R(t)$. Its hypotheses give finite Faber expansions, lower and upper
 coefficient-energy bounds, exact coefficients
 $\widehat R(-k)=b_k(A)$, vanishing positive Fourier coefficients, and
-$R+R^*\geq0$. These are conditional inputs to the local theorem.
+$R+R^*\geq0$. These are the inputs of the local theorem.
 \src{exterior_collar_bound} constructs them from exterior conformal data
 and supporting halfplanes before applying the core. In particular,
-the positive resolvent and coefficient bounds are outputs at this geometric
-stage, rather than retained assumptions of the public endpoint.
+the positive resolvent and coefficient bounds are constructed at this geometric stage before the public endpoint is assembled.
 
 For the normalized core, assume $\norm{F(h(t))}\leq1$ on the boundary,
 where $h$ is its parametrization. Let $T$ be the amplified polynomial
@@ -188,14 +201,14 @@ $Tx=\gamma y$ and $T^*y=\gamma x$. The supporting lemma obtains a norm
 attainer by compactness, then proves the adjoint relation through a
 squared-distance calculation. Reshaping vectors indexed by
 $\operatorname{Fin}(n)\times\operatorname{Fin}(m)$ produces rectangular
-matrices $X,Y$. All boundary integrals below use normalized circle measure.
+matrices $X,Y$. All boundary integrals below use normalized Haar measure
+$\mu$ on the period-one circle $\R/\mathbb{Z}$.
 The proof forms
 \[
  P=X^*RX,\quad Q=Y^*RY,\quad M=Y^*RX,\quad L=X^*RY,
- \qquad a=\int\norm{M(t)}_{\mathrm{HS}}^2\,dt.
+ \qquad a=\int\norm{M(t)}_{\mathrm{HS}}^2\,d\mu(t).
 \]
-A cross-boundary pairing estimate proves $a>0$. The two singular relations
-produce the diagonal bounds
+A cross-boundary pairing estimate makes $a=0$ incompatible with $\gamma>0$. The two singular relations then produce the diagonal bounds
 \[
  \int\norm{P+P^*}_{\mathrm{HS}}^2\leq\frac{4a}{\gamma^2},
  \qquad
@@ -225,23 +238,23 @@ Integrating this estimate gives
  \leq\int\norm{P+P^*}_{\mathrm{HS}}^2
        +\int\norm{Q+Q^*}_{\mathrm{HS}}^2.
 \]
-Thus $2a\leq8a/\gamma^2$, and cancellation of $a>0$ gives
-$\gamma\leq2$.\footnote{The four compressions and closing cancellation
+Combining the inequalities gives $2a\leq8a/\gamma^2$. Since $a>0$ and $\gamma>0$, multiplication by $\gamma^2$ and cancellation yield $\gamma^2\leq4$, hence $\gamma\leq2$.\footnote{The four compressions and closing cancellation
 appear in
 \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/DomainCore.lean\#L15-L117}{\src{DirectCrouzeix/DomainCore.lean}, lines 15--117}.}
 
 \paragraph{Where the sharp energy weights come from.}
-Two details explain why this reduction works sharply. First,
+Two ingredients fix the constants in this reduction. First,
 \src{singular_diagonal_estimates} tests both ordered products $FG$ and $GF$, where $G$ is a test polynomial.
 The forward and adjoint singular relations turn them into different diagonal
 compressions, preserving the noncommutative order of matrix coefficients.
 The dual step is explicit: from bounds on every finite test family $C_k$,
 \src{weighted_coefficient_dual} substitutes
-$C_k=w_k^{-1}\overline{P_k}$ in the project's bilinear entry pairing.
+$C_k=w_k^{-1}\overline{P_k}$ in the project's bilinear entry pairing,
+where the bar denotes entrywise complex conjugation.
 Both pairing and test energy become
 $s=\sum_k\norm{P_k}_{\mathrm{HS}}^2/w_k$, leaving $s^2\leq bs$ and hence
 $s\leq b$. Nonnegative bounded partial sums subsequently give the infinite
-sequence estimate. This keeps the optimizing witness finite and concrete.
+sequence estimate. The infinite bound is thus obtained from explicit finite optimizing witnesses.
 
 Second, the weights are derived by boundary analysis.
 A Faber series splits into a nonnegative Fourier series and a remainder
@@ -269,15 +282,62 @@ to scalar matrices. Its leading coefficients are units. The implementation
 then applies Mathlib's degree-filtered spanning theorem for polynomial
 sequences and extracts a finite matrix-coefficient witness from membership
 in that span. This gives the exact finite expansion consumed by the core.
-Evaluation and Kronecker-evaluation identities carry the witness to the two
-concrete matrix calculations. The established polynomial basis theorem is
+Evaluation and Kronecker-evaluation identities carry the finite witness to the two matrix calculations. The established polynomial basis theorem is
 reused across the change of coefficient ring, while explicit transport lemmas
 preserve the order of multiplication. Together with rectangular reshaping,
 this explains how the scalar boundary analysis supplies estimates uniformly
 in the matrix coefficient size, the defining feature of the complete bound.
 
+\paragraph{Constructing the analytic inputs.}
+The analytic inputs of the core are built before the final limiting step.
+For an exterior parametrization $\psi(\zeta)=c\zeta+g(\zeta^{-1})$, the
+source uses the algebra-valued generating function
+\[
+ \mathcal G_A(u)=
+ (c-u^2g'(u))\bigl((c+ug(u))I-uA\bigr)^{-1}.
+\]
+Its $k$th Taylor coefficient is the Faber polynomial $b_k$ evaluated at
+$A$. The proof makes this coefficient identity finite: a geometric
+expansion of the inverse has a remainder $u^{k+1}H(u)$ with $H$ analytic
+near zero, whose $k$th coefficient vanishes. Local equality transfers the Taylor coefficients. On the analytic disk supplied by the collar construction, evaluation at $u=e^{-2\pi it}$, with $t\in\R/\mathbb{Z}$, invokes the antianalytic Fourier formula, giving
+the negative modes $b_k(A)$ and zero positive modes. Thus the orientation
+and normalization consumed by \src{analytic_domain_core} arise from a
+proved coefficient calculation.\footnote{See
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/FaberCalculus.lean\#L94-L163}{\src{FaberCalculus.lean}, lines 94--163}.}
+
+Constructing $\psi$ requires a further change of representation. The source
+inverts the exterior of a convex exponential sublevel about an interior
+point, obtains a bounded simply connected domain, and constructs its
+Riemann map. To obtain an analytic collar, it first extends that map
+locally through analytic boundary charts. The gluing argument retains
+more than analyticity: each local extension $E$ agrees with the original
+map inside the domain, has nonzero derivative at its boundary point, and
+satisfies
+\[
+ \norm{E(z)}<1\quad\Longleftrightarrow\quad z\in U.
+\]
+This side condition carries the geometric meaning of the unit circle
+through continuation.
+
+The local-to-global step is explicit in Lean. Extensions are available
+on balls of radius $3r$, while the chosen cover uses balls of radius $r$.
+When two smaller balls overlap, their larger intersection is convex and
+meets $U$; the identity theorem extends their agreement from the interior
+to that intersection. A classically chosen extension at each point is
+therefore locally equal to any covering representative. This neighborhood
+equality supplies analyticity and derivative agreement for the glued map.
+Compactness and local invertibility then give an injective neighborhood
+of $\overline U$. Its image contains the closed unit disk, so a thickening
+contains a disk of radius $R>1$. The inverse on that disk is analytic,
+and inversion back to the original plane gives the exterior Laurent
+form.\footnote{See
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/Continuation.lean\#L31-L111}{compatibility and gluing of boundary germs},
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/ConformalCollar.lean\#L129-L238}{the inverse collar construction}, and
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/ExteriorMapping.lean\#L148-L214}{the exterior map for exponential sublevels}.}
+The collar therefore retains analytic germs, the domain-side identity, and injectivity. These are the geometric facts needed to justify the resolvent and coefficient estimates used earlier.
+
 \paragraph{Removing the auxiliary domain assumptions.}
-The final interface removes strict-domain geometry. For every compact,
+The last step supplies strict-domain geometry for an arbitrary numerical range. For every compact,
 nonempty convex $K\subseteq\mathbb C$, \src{exists_exponential_outer}
 constructs a compact sublevel of a finite sum of exponentials of affine
 support inequalities. A finite direction net controls approximation;
@@ -288,18 +348,15 @@ $M=\sup_{W(A)}\norm{F}$ and $\rho=M+\varepsilon/2$.
 Compactness places such an outer sublevel inside the open set
 $\{z:\norm{F(z)}<\rho\}$. The scaled domain estimate gives
 $\norm{F(A)}\leq2M+\varepsilon$, and removing $\varepsilon>0$ gives the
-desired bound. The final assumptions are positive matrix sizes and arbitrary
-coefficients; smooth strict containment is supplied by an auxiliary
-construction.\footnote{See
+desired bound. The auxiliary outer domain supplies smooth strict containment, leaving positive matrix sizes and arbitrary coefficient matrices in the endpoint.\footnote{See
 \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/OuterApproximation.lean\#L59-L122}{\src{DirectCrouzeix/OuterApproximation.lean}, lines 59--122}, and
 \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/CompleteBound.lean\#L65-L97}{\src{CompleteBound.lean}, lines 65--97}.}
 
-Singular vectors, dual witnesses, positive blocks, and approximation are
-established tools. Their precise composition is the architectural lesson:
-amplification becomes rectangular compression, the two polynomial orders
-become two energy bounds, and positivity closes a scalar cancellation.
-As a comparison, the Crouzeix--Palencia proof centers the Cauchy transform
+The Crouzeix--Palencia proof centers the Cauchy transform
 of conjugate holomorphic functions and obtains the complete constant
-$1+\sqrt2$~\citep{CrouzeixPalencia2017}. The comparison identifies different
-proof interfaces, without asserting priority for the individual devices
-used here.
+$1+\sqrt2$~\citep{CrouzeixPalencia2017}. Its established bound also supplies
+the baseline in the companion numerical-range certificate study, which
+develops finite enclosures, error budgets, and a rational software
+prototype \citep{GounderNumerical2026}. The present case follows the
+identities and geometric hypotheses that connect the formal proof's
+local analytic core to its public matrix theorem.

@@ -1,4 +1,4 @@
-\begin{thebibliography}{38}
+\begin{thebibliography}{47}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -33,6 +33,16 @@ Anne Baanen.
 \newblock \doi{10.4230/LIPIcs.ITP.2022.4}.
 \newblock URL
   \url{https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2022.4}.
+
+\bibitem[Bagnall et~al.(2023)Bagnall, Stewart, and
+  Banerjee]{BagnallStewartBanerjee2023}
+Alexander Bagnall, Gordon Stewart, and Anindya Banerjee.
+\newblock {Formally Verified Samplers from Probabilistic Programs with Loops
+  and Conditioning}.
+\newblock \emph{Proceedings of the ACM on Programming Languages}, 7:\penalty0
+  1--24, 2023.
+\newblock \doi{10.1145/3591220}.
+\newblock URL \url{https://arxiv.org/abs/2211.06747v3}.
 
 \bibitem[Barendregt and Wiedijk(2005)]{BarendregtWiedijk2005}
 Henk Barendregt and Freek Wiedijk.
@@ -181,6 +191,49 @@ Georges Gonthier, Andrea Asperti, Jeremy Avigad, Yves Bertot, Cyril Cohen,
 \newblock URL
   \url{https://link.springer.com/chapter/10.1007/978-3-642-39634-2_14}.
 
+\bibitem[Gounder(2026{\natexlab{a}})]{GounderArchitectureData2026}
+Robin Gounder.
+\newblock {Proof Architecture in the OpenAI Lean Library: manuscript, data, and
+  reproduction code}, 2026{\natexlab{a}}.
+\newblock URL
+  \url{https://github.com/Kohze/lean-proof-architecture-review/releases/tag/v1.6.0}.
+\newblock Versioned reproduction repository; edition 1.6.0.
+
+\bibitem[Gounder(2026{\natexlab{b}})]{GounderCounting2026}
+Robin Gounder.
+\newblock {Approximate Counting and Uniform Sampling: A Critical Review of
+  Matroid Intersections, Contingency Tables, and Graph Switch Chains},
+  2026{\natexlab{b}}.
+\newblock URL
+  \url{https://github.com/Kohze/counting-and-sampling-review/releases/tag/paper-2026-10-08}.
+\newblock Companion manuscript, edition paper-2026-10-08.
+
+\bibitem[Gounder(2026{\natexlab{c}})]{GounderFrontiers2026}
+Robin Gounder.
+\newblock {Mathematical Frontiers in the OpenAI Research Release: Cancellation,
+  Positivity, and Changes of Representation}, 2026{\natexlab{c}}.
+\newblock URL
+  \url{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7579158}.
+\newblock SSRN working paper, abstract no. 7579158.
+
+\bibitem[Gounder(2026{\natexlab{d}})]{GounderNumerical2026}
+Robin Gounder.
+\newblock {Finite numerical-range certificates for polynomial matrix
+  computations: a rational prototype with comparative controls},
+  2026{\natexlab{d}}.
+\newblock URL
+  \url{https://github.com/Kohze/numerical-range-certificates/releases/tag/paper-2026-10-08}.
+\newblock Companion manuscript, edition paper-2026-10-08.
+
+\bibitem[Gu et~al.(2025)Gu, Piotrowski, Gloeckle, Yang, and
+  Markosyan]{GuEtAl2025ProofOptimizer}
+Alex Gu, Bartosz Piotrowski, Fabian Gloeckle, Kaiyu Yang, and Aram~H.
+  Markosyan.
+\newblock {ProofOptimizer: Training Language Models to Simplify Proofs without
+  Human Demonstrations}, 2025.
+\newblock URL \url{https://arxiv.org/abs/2510.15700v1}.
+\newblock arXiv:2510.15700, version 1, 17 October 2025.
+
 \bibitem[Hales et~al.(2017)Hales, Adams, Bauer, Dang, Harrison, Hoang,
   Kaliszyk, Magron, McLaughlin, Nguyen, Nguyen, Nipkow, Obua, Pleso, Rute,
   Solovyev, Ta, Tran, Trieu, Urban, Vu, and Zumkeller]{HalesEtAl2017}
@@ -227,6 +280,15 @@ Xavier Leroy.
 \newblock \emph{Communications of the ACM}, 52:\penalty0 107--115, 2009.
 \newblock \doi{10.1145/1538788.1538814}.
 \newblock URL \url{https://xavierleroy.org/publi/compcert-CACM.pdf}.
+
+\bibitem[Lu et~al.(2026)Lu, Kong, Stehling, Yang, Wang, Sun, and
+  Chen]{LuEtAl2026LeanRefactor}
+Jialin Lu, Soonho Kong, Rodrigo Stehling, Kaiyu Yang, Zhangyang Wang, Weiran
+  Sun, and Wuyang Chen.
+\newblock {Lean Refactor: Multi-Objective Controllable Proof Optimization via
+  Agentic Strategy Search}, 2026.
+\newblock URL \url{https://arxiv.org/abs/2605.20244v1}.
+\newblock arXiv:2605.20244, version 1, 18 May 2026.
 
 \bibitem[Massot and contributors(2026)]{MassotLeanBlueprint}
 Patrick Massot and contributors.
@@ -300,6 +362,14 @@ Patrick Massot and contributors.
   \url{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/TraceCone/IdealTransport.lean}.
 \newblock Repository artifact; accessed 8 October 2026.
 
+\bibitem[{The Lean developers}(2026)]{LeanDecideSource}
+{The Lean developers}.
+\newblock {Tactic syntax and decision-procedure documentation: Lean 4.34.1
+  source}, 2026.
+\newblock URL
+  \url{https://github.com/leanprover/lean4/blob/v4.34.1/src/Init/Tactics.lean}.
+\newblock Version-pinned source, lines 1411--1430; accessed 8 October 2026.
+
 \bibitem[{The mathlib Community}(2020)]{mathlib2020}
 {The mathlib Community}.
 \newblock {The Lean Mathematical Library}.
@@ -309,12 +379,19 @@ Patrick Massot and contributors.
 \newblock URL
   \url{https://leanprover-community.github.io/papers/mathlib-paper.pdf}.
 
-\bibitem[{The mathlib Community}(2026)]{MathlibForms}
+\bibitem[{The mathlib Community}(2026{\natexlab{a}})]{MathlibForms}
 {The mathlib Community}.
-\newblock {Differential forms: Mathlib source}, 2026.
+\newblock {Differential forms: Mathlib source}, 2026{\natexlab{a}}.
 \newblock URL
   \url{https://github.com/leanprover-community/mathlib4/blob/d13f23b723b8a846827a245b89c10fc7d3f11612/Mathlib/Analysis/Calculus/DifferentialForm/Basic.lean}.
 \newblock Pinned dependency source; accessed 8 October 2026.
+
+\bibitem[{The mathlib Community}(2026{\natexlab{b}})]{MathlibStyle}
+{The mathlib Community}.
+\newblock {Library Style Guidelines}, 2026{\natexlab{b}}.
+\newblock URL
+  \url{https://leanprover-community.github.io/contribute/style.html}.
+\newblock Living contributor documentation; accessed 8 October 2026.
 
 \bibitem[van Doorn et~al.(2020)van Doorn, Ebner, and
   Lewis]{vanDoornEbnerLewis2020}

@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "synthetic_edge_case_checks": 11,
+  "sampled_source_blobs_verified": 800,
+  "population_modules": 122457,
+  "hash_rank_membership_verified": true,
+  "manually_inspected_bodies": 40,
+  "initial_manual_validation_errors_corrected": 2,
+  "source_file_counts": {
+    "OAI": 800,
+    "Mathlib": 8070
+  },
+  "extracted_body_counts": {
+    "OAI": 13309,
+    "Mathlib": 186751
+  },
+  "scope": "Lexer/boundary fixtures, retained CSV hashes and count reconciliation; source reading remains necessary for mathematical interpretation."
+}

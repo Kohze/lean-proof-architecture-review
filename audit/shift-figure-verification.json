@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "rows_verified_against_retained_summary": 9,
+  "units": "percentage points",
+  "full_and_common_domain_differences_verified": true,
+  "figure_page": 21,
+  "embedded_images_on_figure_page": 1,
+  "source_summary_sha256": "a1423b07bb628793b31aedebe14b9cdb830edba3346b68d7a8a9dc9b27247113",
+  "embedded_png_sha256": "1feb8d42b2d7dfd701875b5ad783f6b02941916eb4bcf8de61b61f0682e77b9f",
+  "png_pixels": [
+    4260,
+    3090
+  ],
+  "pdf_sha256": "03df4180462e114120e3bfbc9b0164099c5bb3d015a8254bd434af3f87192d35",
+  "caption_refers_to_joint_table": true
+}

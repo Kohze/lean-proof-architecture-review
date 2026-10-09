@@ -1,44 +1,50 @@
 \section{Sources, selection, and reading method}
 \label{sec:method}
 
-The unit of comparison is a chain: an initial representation, a
-preservation statement, and its downstream use. Selection was purposive.
-A case had to expose all three parts and a mathematically meaningful
-change of representation. We favored diversity of mathematical setting
-and preservation requirement over coverage by file count.
+Each case follows a chain consisting of an initial representation, a
+preservation statement, and its downstream use. Selection was purposive:
+a candidate had to expose all three parts and a mathematically meaningful
+change of representation. We sought contrasting preservation requirements
+across mathematical settings so that the comparison would explain why
+different interfaces need different hypotheses.
 
-For each case we read backwards from the selected conclusion to its
-definitions and immediate hypotheses, then forwards through the
-constructions that discharge those hypotheses. We ask which device is
-inherited from earlier work, which concrete relation is proved in this
-development, and which later obligation it resolves. The accompanying
-evidence ledgers retain declaration names, line ranges, source excerpts,
-and Git blob identifiers; downloaded files were checked against those
-identifiers.
+We read backwards from each selected conclusion to its definitions and
+hypotheses, then forwards through the constructions supplying those
+hypotheses. This separates the established mathematical device, the
+specific relation proved in the development, and its use in a later
+argument. Evidence ledgers retain declaration names, source excerpts,
+line ranges, and Git blob identifiers. Matching downloaded files to these
+identifiers makes the source locations reproducible.
 
-The discovery process was exploratory. The retained findings record
-endpoint inspection followed by deeper tracing of candidate interfaces.
-For example, the irrationality-exponent-of-$\pi$ and two-point-correlation
-endpoints were examined but left outside the review because their
-mechanisms had not been traced at comparable depth. These exclusions
-reflect the available analysis. The selection supports a comparison of
-the six cases, not an estimate of how frequent their techniques are
-throughout the collection.
+Discovery proceeded from endpoint inspection to deeper tracing of
+candidate interfaces. The irrationality-exponent-of-$\pi$ and
+two-point-correlation endpoints were considered but excluded because
+their mechanisms had not been traced to comparable depth. The six-case
+selection therefore supports a focused comparison of interfaces.
+Section~\ref{sec:profile} addresses prevalence separately through a
+uniform path sample, with explicit extraction units and feature
+definitions. This division keeps purposive mathematical analysis distinct
+from estimates about the wider source population.
 
-A central reading distinction is between a conditional interface and
-its instantiation. An analytic theorem may assume a flux identity or
-resolvent estimate; the next question is whether the endpoint constructs
-that input for its stated objects. Similarly, a witness chosen
-classically has a proved construction, while an extra provider hypothesis
-remains an input to the theorem. We trace these dependencies directly.
-The six case studies use static declaration and dependency analysis.
-The original examples in Section~\ref{sec:worked} provide a separate
-executable check of particular arithmetic and finite-law interfaces,
-using Lean 4.34.1. Repository provenance and checking infrastructure are
-documented in the data and code availability statement.
+The key reading task is to distinguish an interface from its
+instantiation. When an analytic lemma takes a flux identity or resolvent
+estimate as input, the analysis follows the endpoint's construction of
+that input. Likewise, a witness selected by classical choice is traced
+to its existence theorem. This identifies which hypotheses remain in
+the final statement and which are supplied within the proof.
 
-Blueprints connect informal arguments to declarations and dependencies
-\citep{MassotLeanBlueprint}; LeanArchitect studies automation of that
-connection \citep{ZhuEtAl2026}. Our evidence ledgers make the selected
-interfaces inspectable. The exposition supplies the mathematical
-equations that explain why their hypotheses are useful.
+All six cases are studied through declaration and dependency analysis.
+Their transitive \src{OAI} import closures are retained, and the evidence
+ledgers identify the bodies inspected. The worked examples in
+Section~\ref{sec:worked} include arithmetic and finite-law lemmas checked
+with Lean 4.34.1. A separate experiment compiles three unchanged upstream
+trace-cone modules and an importing corollary using the pinned Mathlib
+revision. The data and code availability statement records the source
+provenance and the scope of these complementary checks.
+
+Blueprints link informal arguments to formal declarations and
+dependencies \citep{MassotLeanBlueprint}; LeanArchitect studies
+automation of that connection \citep{ZhuEtAl2026}. Our ledgers serve as
+source locators for the selected interfaces. The review adds the
+mathematical explanation: the equations, normalizations, and hypotheses
+that make each transition useful to the next argument.

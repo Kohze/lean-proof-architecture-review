@@ -1,0 +1,87 @@
+COMPLETENESS AND IMPROVEMENT AUDIT - 8 OCTOBER 2026
+
+Paper: local edition 1.4.0-local, 32 pages, 44 references.
+PDF SHA256: 7e7900d6ad49ae746e90fb1f5993cb3beb5434b94b746e76f6ed05225a919230
+
+VERDICT
+Structurally complete as a focused review, with material analytical improvements still available before final submission.
+
+The most useful next revision would sharpen the empirical inference and validate selected actual proof mechanisms. Broadening to more mathematical topics or adding citations alone has lower value.
+
+NEW QUANTITATIVE CHECK
+Unit: average within-module share of named theorem/lemma bodies. Joint controls reweight the pinned Mathlib baseline to the OAI domain and four proof-length-band probabilities. There are 69 common cells covering 93.75% of the OAI module/body probability.
+
+mode_tactic: subject-only +29.2 pp; joint subject/length +10.4 pp; conditional OAI bootstrap interval [9.3, 11.5] pp.
+local_claims_calc: subject-only +34.1 pp; joint subject/length +5.8 pp; conditional OAI bootstrap interval [4.4, 7.3] pp.
+arithmetic_algebra: subject-only +30.5 pp; joint subject/length +22.8 pp; conditional OAI bootstrap interval [20.3, 25.4] pp.
+restricted_simplification: subject-only +22.9 pp; joint subject/length +7.7 pp; conditional OAI bootstrap interval [5.4, 9.8] pp.
+finite_decision: subject-only +4.9 pp; joint subject/length +4.3 pp; conditional OAI bootstrap interval [3.0, 5.9] pp.
+
+The joint control changes the comparison question. Length may reflect the style under study, so attenuation does not establish a causal explanation. Arithmetic automation remains the strongest difference among the five audited features. The main PDF is unchanged; these new results have not yet been integrated.
+
+ROBUSTNESS
+The proof-bearing sample spans 212 directory-family proxies. The largest contributes 7.4% of the sampled proof-bearing modules. Dropping any single family leaves the OAI arithmetic rate between 37.0% and 38.7%, compared with 38.2% in the full module-balanced sample. Exact family weighting and directory exclusions answer different descriptive questions; they are retained in the JSON audit.
+
+WHAT IS ALREADY STRONG
+- Six source-traced cases with explicit preservation interfaces and explanatory examples.
+- 546 retained source artifacts and 53 manuscript locators rechecked against pinned bytes.
+- 800 survey source blobs and hash-ranked membership reverified; 13,309 OAI and 186,751 Mathlib extracted bodies.
+- Current bibliography has 44 cited records, no missing or unused citation keys and retained identity checks for 25 published scholarly DOI records.
+- Three actual upstream TraceCone modules and an importing corollary have retained successful compilation logs.
+
+PRIORITIZED GAPS
+
+1. Statistical interpretation
+Headline results use subject-standardized module-balanced rates; length is considered separately using pooled within-band rates. The additional joint analysis changes the magnitude of the style differences substantially.
+Tactic mode +29.2 -> +10.4 pp; local claims/calculation chains +34.1 -> +5.8 pp; arithmetic/algebra +30.5 -> +22.8 pp.
+Recommended work: Integrate joint controls as a third comparison or compact robustness table, revise the abstract and synthesis to foreground the arithmetic difference, and explain that conditioning on length removes part of the proof style being described.
+Done when: Readers can compare raw, subject-only and joint estimates with identical target units and a clear interpretation.
+
+2. Tactic mechanism and extraction validity
+Lexical features show where devices are written; they do not measure actual executions, solved goals, elaboration cost or semantic proof methods. Forty deliberately stratified manual cases and eleven boundary checks are useful but do not estimate error in unseen bodies.
+
+Recommended work: Trace a manageable, preselected cohort using Lean elaboration; compare syntax/token labels with actual tactic nodes and before/after goals. Add held-out source inspections, including definitions or instances carrying mathematical work.
+Done when: Retained traces for representative compiled bodies and a clear validation denominator; errors or unsupported forms logged rather than inferred absent.
+
+3. Verification of core examples
+The retained upstream compilation covers Basic, FiniteIdeal and IdealTransport from TraceCone plus an importing corollary. The other five cases use source analysis.
+
+Recommended work: Compile selected analytical and discrete interface chains, starting with the Crouzeix scalar core and a graph coordinate/counting interface; inspect their reported axioms and the downstream theorem statements.
+Done when: Fresh logs identify exact source bytes, targets, imports, toolchain and axiom dependencies. Separate compilation, statement fidelity and mathematical interpretation.
+
+4. Comparison fairness and transfer
+Mathlib is an established library baseline, not a matched set of the same formalization tasks. Domain and length controls leave theorem role, abstraction level, project organization and provenance unmatched.
+
+Recommended work: Select a small comparison cohort of analogous human-authored Lean developments and label declaration roles such as certificate leaf, transport bridge, analytic estimate and theorem assembly. Compare roles within comparable tasks.
+Done when: The paper can distinguish broad library composition from a difference in how analogous proof work is organized.
+
+5. Novelty and prior-art synthesis
+The review has original descriptive analysis and a useful synthesis. Its case studies use established mathematical and Lean devices; a different frequency does not establish a new tactic or historical priority.
+
+Recommended work: Add a concise prior-art comparison identifying inherited device, project-specific integration and demonstrated formal payoff for each case; make the literature basis explicit for certificate verification and interface design.
+Done when: Every unusualness claim has a concrete comparator and a clear scope.
+
+6. Reader value and organization
+The 32-page manuscript now combines a six-case review and an empirical survey. The new synthesis connects them, but the reader must still reconstruct the relationship between local proof goals and the corpus categories.
+
+Recommended work: Use two annotated actual Lean excerpts showing representation or invariant -> local obligation -> closing tactic, with goal states if traced. Keep detailed validation records in the package rather than adding more prose to the main text.
+Done when: A reader can explain the central finding from the overview, one worked source example and the controlled comparison.
+
+WHAT THE CURRENT NOVELTY AMOUNTS TO
+Original empirical description of this release, plus a comparative account of how preservation interfaces and local automation interact. The existing tactics are established. Stronger claims about a uniquely AI-driven method, higher completion rates or reduced development effort require additional evidence.
+
+BOUNDARIES OF THIS AUDIT
+No new full endpoint build, semantic annotation cohort, task-matched outcome experiment or independent expert review was completed in this audit.
+
+REPRODUCTION
+python reproduce/audit_completeness.py
+audit/completeness-sensitivity-2026-10-08.json
+All current manuscript and survey files remain unchanged.
+
+PRIMARY SOURCES CONSULTED
+Mathlib Library Style Guidelines - https://leanprover-community.github.io/contribute/style.html
+Baseline style permits both term and tactic proofs; distinctiveness is relative to the sampled baseline.
+Lean.Elab.InfoTree.Types - https://lean-lang.org/doc/api/Lean/Elab/InfoTree/Types.html
+Elaboration metadata provides tactic and goal-state information beyond lexical tokens; implementation must use the project toolchain.
+LeanDojo: Theorem Proving with Retrieval-Augmented Language Models - https://arxiv.org/abs/2306.15626
+Primary precedent for extracting proof-environment and premise data; no assertion of compatibility with the current pinned Lean toolchain.

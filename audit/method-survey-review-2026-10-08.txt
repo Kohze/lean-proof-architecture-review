@@ -1,0 +1,11 @@
+METHOD-SURVEY REVISION REVIEW - 8 OCTOBER 2026
+
+The local manuscript is 31 pages with 44 cited records (30 scholarly and 14 source/software). It adds original exploratory descriptive analysis of 800 sampled OpenAI modules and 8,070 pinned mathematical Mathlib modules.
+
+Checks pass for all sampled source blobs, reproducible hash-rank membership, 11 extraction edge-case checks, 40 manually inspected proof bodies, and data count/hash reconciliation. The source inspection exposed two initial theorem-type let-binding errors; corrected extraction and regression fixtures are retained.
+
+The study reports both pooled and module-balanced rates, because the largest ten sampled modules contribute 48.2% of proof bodies. Domain and length controls make the comparison more informative while preserving its descriptive scope. It quantifies a distinctive use of established Lean methods, not a percentage of mathematical novelty.
+
+The manuscript builds without warnings; all 44 bibliography keys are cited, all 25 published DOI/title identities match retained publisher metadata, and AI disclosure remains confined to its dedicated section. All 31 pages were rendered and checked in contact sheets, with full-size checks of the new table and certificate discussion. Code spacing and plot-whisker labeling were corrected.
+
+The prior public release is unchanged. Earlier local depth-revision evidence and compiled examples are retained, and this revision does not expand their proof-checking scope. See method-survey-review-2026-10-08.json and research/method-survey/report.txt for details.

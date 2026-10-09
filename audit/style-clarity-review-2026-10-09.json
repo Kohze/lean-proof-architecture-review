@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-09",
+  "edition": "1.6.0",
+  "scope": "Internal style, clarity, and evidential-scope audit; not external peer review.",
+  "pdf_sha256": "b5c39b14a055a11048beb806fd98792d23352c6c048dc85445ba7d8c4faf8351",
+  "pages": 35,
+  "cited_references": 47,
+  "request_resolution": [
+    {
+      "request": "Figure 1 aligned markers without connectors or numeric annotations",
+      "resolution": "Both scatters use identical y coordinates; connector drawing and point annotations removed. The x axis gives OpenAI-minus-Mathlib percentage-point estimates. Separate full and shared-domain estimates are explained in the caption. Underlying rates and differences are retained."
+    },
+    {
+      "request": "Academic captions and clearer code presentation",
+      "resolution": "Bold numbered labels, normal roman caption text, consistent spacing and punctuation; lighter top/bottom listing rules, source captions, upright apostrophes, and a reserved page block for the seven-line Crouzeix excerpt. Vector PDF embedded for Figure 1."
+    },
+    {
+      "request": "Confusing predicate and notation audit",
+      "resolution": "Safe(O,S,e,x) is typeset as a mathematical operator with arguments defined. Other bare predicate applications, CanConv, optional seam identifiers, residual notation, graph-affine coefficients, dimension restrictions, normalized circle measure, conjugation and matrix norm conventions are explained. The period-one Fourier phase is aligned with the retained TaylorFourier/FaberCalculus source convention."
+    },
+    {
+      "request": "Clarify worked examples and survey statements",
+      "resolution": "The mean example identifies probability laws and multiplicity vectors separately; the closed-ideal example is described as norm-closed; sampling probabilities and interval levels are labeled. The original Lean examples and literal upstream proof excerpts are unchanged."
+    },
+    {
+      "request": "AI versus human practice and possible differential speed",
+      "resolution": "Added a restrained workflow hypothesis based on the availability of proved interfaces and tactic-compatible local obligations, explicitly allowing within-field variation and counting interface construction cost. No causal speed, cognitive, or superiority conclusion is drawn from the source corpora. Proposed matched-task outcomes include unsuccessful attempts, time, intervention, costs, reuse, and blinded clarity judgments."
+    },
+    {
+      "request": "Proof simplification literature",
+      "resolution": "Cites primary ProofOptimizer and Lean Refactor preprints for Lean-checked replacement and separate length/checking-cost objectives. Their results are not claimed to shorten these six cases. Kintali is excluded from the bibliography and supporting evidence because correctness has not been assessed; the deferral is recorded in research/style-review/references.json."
+    },
+    {
+      "request": "Versioned GitHub reproduction citation and complete data",
+      "resolution": "Data and code availability and reference GounderArchitectureData2026 identify reproduction edition v1.6.0. The package includes the previously local deep-case evidence, all 800 sampled source modules, joint comparison data, scripts, source hashes and verification records."
+    }
+  ],
+  "verification": {
+    "source_integrity": "Passed: 546 curated source artifacts at the pinned revision.",
+    "depth_evidence": "Passed: 21 evidence records and 55 manuscript source links.",
+    "method_profile": "Passed: 800 sampled source blobs, extraction fixtures, 40 inspected cases, membership and count reconciliation.",
+    "joint_analysis": "Recomputed from retained data; cell formula reconciles with direct module/body measure.",
+    "original_examples": "Five elementary Lean lemmas compile with Lean 4.34.1; reported axiom lists and exact finite checks pass.",
+    "bibliography": "47 cited records, no missing or unused citation keys; retained publisher DOI/title identities checked.",
+    "pdf": "35 pages; pdfLaTeX/BibTeX build passes with no warnings; two literal upstream Lean excerpts match pinned source lines.",
+    "scope": "The unchanged upstream reuse logs remain evidence from the previous edition. This style review does not recompile all six endpoints or assess Kintali correctness.",
+    "standalone_checkout": "Curated sources, detailed evidence, method-profile data, and manuscript checks also pass from the standalone Git checkout.",
+    "portable_generation": "Joint JSON output now uses explicit LF newlines so regenerated retained data compare consistently on Windows and Linux."
+  },
+  "visual_review": {
+    "pages_rendered": 35,
+    "all_five_contact_sheets_inspected": true,
+    "full_size_pages_inspected": [
+      5,
+      22,
+      23,
+      24,
+      28,
+      29,
+      31
+    ],
+    "checks": [
+      "Figure 1 marker positions, absence of connectors and value labels, axis and legend legibility.",
+      "Academic caption formatting and table interval headings.",
+      "Safe predicate operator spacing and defined arguments.",
+      "Lean code glyphs and indentation; no Crouzeix listing split across pages.",
+      "New discussion and versioned availability statement; bibliography flow and absence of clipping or overlap."
+    ],
+    "unresolved_visual_defects": []
+  }
+}

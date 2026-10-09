@@ -1,11 +1,7 @@
 \section{Worked examples: why the stronger interface matters}
 \label{sec:worked}
 
-The first three examples unpack the common-base case: selecting random
-bits, preserving the output law, and composing an error budget. The
-remaining examples return to boundary locality, trace limits, and named
-coordinates. Each isolates the information needed by a later operation
-without the surrounding formal development.
+The first three examples separate the common-base pipeline into tape selection, output-law preservation, and an accuracy budget. The others isolate boundary locality, trace limits, named coordinates, and reuse of the actual ideal interface. Together they show why each preservation requirement is useful in the operation that follows it.
 
 \subsection{Injective tape positions preserve a uniform experiment}
 \label{sec:tape-example}
@@ -18,8 +14,7 @@ $(\beta(p(0)),\ldots,\beta(p(m-1)))$ is uniform on $\{0,1\}^m$.
 Every word has exactly $2^{B-m}$ preimages.
 \end{proposition}
 \begin{proof}
-Prescribing the $m$ selected bits leaves precisely $B-m$ coordinates
-free. Each assignment to these remaining coordinates determines one
+Injectivity gives $m\leq B$. Prescribing the $m$ selected bits leaves precisely $B-m$ coordinates free. Each assignment to these remaining coordinates determines one
 preimage. Thus every word has the same number of preimages, and its
 probability is $2^{B-m}/2^B=2^{-m}$.
 \end{proof}
@@ -28,30 +23,26 @@ probability is $2^{B-m}/2^B=2^{-m}$.
 For the common-base machine, the relevant map is
 $p(i)=s+3(m-1-i)+1$. Reversal and multiplication by three preserve
 distinctness. For $i<m$, its value is less than $B$ whenever
-$s+3m+1\leq B$. The latter bound is stronger than needed for the selected
-positions because it also accounts for the surrounding execution.
+$s+3m+1\leq B$. This resource bound also accounts for the instructions surrounding the selected reads.
 The review's Lean file proves these arithmetic facts for arbitrary natural
 $s,m,B$, including the empty-word case.
 
 \Needspace{7\baselineskip}
 The index map is defined by
-\begin{lstlisting}
+\begin{lstlisting}[caption={Lean definition of the physical tape index.},label={lst:physical-index}]
 def physicalIndex (start m : Nat) (i : Fin m) : Nat :=
   start + 3 * (m - 1 - i.val) + 1
 \end{lstlisting}
-The proof uses the bounds stored in \src{Fin m} to justify subtraction
+The proof uses the bounds stored in \texttt{Fin m} to justify subtraction
 arithmetic. This matters: natural-number subtraction is truncated, so
-injectivity would fail on unrestricted natural indices. A range type is
-part of the mathematical interface, not a cosmetic annotation.
+injectivity would fail on unrestricted natural indices. The range type supplies exactly the bounds that make the index arithmetic valid.
 
-For comparison, if $p(0)=p(1)$, the words $01$ and $10$ have no
-preimages. Reading fair individual bits does not by itself produce an
-independent word. Proposition~\ref{prop:tape} explains why the source proves
+For $m\geq2$, if $p(0)=p(1)$, every word with different first two bits has no preimage. Marginal fairness of individual reads therefore leaves a separate joint-uniformity obligation. Proposition~\ref{prop:tape} explains why the source proves
 injectivity of the physical positions before transporting the success
 probability. The Python companion exhaustively checks 15 small choices
 of $(s,m,B)$ against the exact fiber count.
 
-\subsection{Observables determine a finite law; its mean does not}
+\subsection{All observables determine a finite law; one mean need not}
 \label{sec:law-example}
 
 \begin{samepage}
@@ -80,40 +71,34 @@ $X=\{0,1,2\}$ with multiplicities
 \[
   (1,1,1)\quad\text{and}\quad(0,3,0).
 \]
-Both have total mass three and mean one after normalization. Their
+Both multiplicity vectors sum to three; after normalization, both
+distributions have mean one. Their
 probabilities of $\{0\}$ are $1/3$ and zero. Thus preservation of the
 expected numerical output would be insufficient for an accuracy event.
-The universal observable certificate in Section~\ref{sec:common-bases}
-supports exactly the stronger conclusion required: substitute the
-indicator of the desired relative-error interval.
+The universal observable certificate in Section~\ref{sec:common-bases} supplies the needed event probability by substitution of the relative-error indicator.
 
 This interpretation also explains why the source allows reindexing of
 draw outcomes. A permutation can change the result returned for a
 particular numbered bank without changing its distribution under uniform
-sampling. Law equality is the appropriate interface between those
-experiments; the deterministic compiler layer separately preserves the
-execution result for a supplied bank.
+sampling. Law equality transports the probabilistic guarantee between these experiments. The compiler layer additionally preserves execution on each supplied bank.
 
 \subsection{From a bounded experiment to a finite success count}
 \label{sec:success-budget}
 
-The preceding two interfaces can be composed with a quantitative error
-bound. This gives a concrete way to read the final accuracy statement of
-Section~\ref{sec:common-bases}.
+Tape uniformity and observable preservation compose with an implementation error bound. The resulting success count explains the accuracy statement in Section~\ref{sec:common-bases}.
 
 \begin{samepage}
 \begin{proposition}\label{prop:success-budget}
 Let $X$ be finite, adjoin a failure symbol $\bot$, and let $U$ be an
 ideal $X$-valued output. Let $V$ be a bounded implementation driven by a
 uniform $m$-bit word, taking values in $X\cup\{\bot\}$.
-For $\varphi:X\to[0,1]$, set
+Let $\eta,\delta_0\geq0$. For $\varphi:X\to[0,1]$, set
 $\varphi(\bot)=0$. Suppose
 \[
   \E\varphi(V)\geq\E\varphi(U)-\eta
   \quad\text{for every such }\varphi.
 \]
-Let $\eta,\delta_0\geq0$ and
-$A\subseteq X$ satisfy $\Pr(U\in A)\geq1-\delta_0$.
+Let $A\subseteq X$ satisfy $\Pr(U\in A)\geq1-\delta_0$.
 If a machine obtains its word from fixed injective positions in a
 uniform $B$-bit tape and returns $V$ on that word, then
 \[
@@ -142,10 +127,7 @@ For a desired failure budget $0<\delta<1$, choosing
 $\delta_0\leq\delta/2$ and $M2^{-D}\leq\delta/2$ suffices.
 When $M>0$, one may take
 $D\geq\max\{0,\lceil\log_2(2M/\delta)\rceil\}$.
-The required tape length and execution bound must still be proved
-separately. Thus the accuracy budget, the uniformity of the gathered
-bits, and the deterministic machine specification are distinct inputs
-to a single final guarantee.
+The tape-length and execution proofs supply the remaining inputs. The final guarantee therefore combines a probabilistic loss budget, a uniform gathered word, and deterministic execution on that word.
 
 A tight finite example joins the layers. Let the ideal probabilities of
 $a,b$ be $6/8,2/8$, and assign the eight implementation words to five
@@ -154,8 +136,7 @@ $\varphi(a)/8$, hence at most $\eta=1/8$. For $A=\{a\}$,
 $\delta_0=1/4$ and the lower bound is $5/8$. Embedding the three-bit word
 at positions $7,4,1$ in a ten-bit tape gives exactly
 $5\cdot2^7=640$ successful tapes out of $1024$. The Python companion
-enumerates those tapes and all event indicators. This fixture illustrates
-the composed bound independently of the upstream rejection sampler.
+enumerates those tapes and all event indicators. This finite fixture makes every layer of the composed bound directly countable.
 
 \subsection{Boundary values and ambient derivatives}
 \label{sec:local-forms}
@@ -163,9 +144,9 @@ the composed bound independently of the upstream rejection sampler.
 The Mahler case uses local equality to identify ambient derivatives.
 On $\R^2$, the
 one-forms $\omega=0$ and $\eta=(x^2+y^2-1)\,dx$ agree at every point
-of the unit circle. Their ambient exterior derivatives need not agree:
+of the unit circle. Their ambient exterior derivatives differ:
 $d\eta=-2y\,dx\wedge dy$, which is nonzero at $(0,1)$.
-Equality on a neighborhood does imply equality of the ambient derivatives.
+Equality on a neighborhood identifies the ambient derivatives.
 The Mahler cutoff argument uses this sufficient condition to transfer
 its ambient derivative; agreement on tangent arguments suffices for the
 later comparison of integration densities. Intrinsic differentiation
@@ -187,7 +168,7 @@ cone define
 The trace is additive, positively homogeneous, and tracial. It is lower
 semicontinuous because it is the supremum of its continuous finite partial
 sums. Finite-support sequences belong to $\mathcal N_\tau$, so the closed
-finite ideal $I_\tau$ in~\eqref{eq:finite-ideal} is all of $c_0$.
+norm-closed ideal $I_\tau$ in~\eqref{eq:finite-ideal} is all of $c_0$.
 
 For every positive $a\in c_0$ and $\varepsilon>0$, the sequence
 $(a-\varepsilon)_+$ has finite support. Consequently
@@ -199,11 +180,9 @@ These are precisely the two inequalities in
 \eqref{eq:trace-canonical-convergence} with limit trace
 $\iota_{c_0}=0$. But for $a_j=1/j$ one has $\tau(a)=\infty$, hence
 $r\tau(a)=\infty$ for every $r>0$. The pointwise limit at this element
-is infinity. The finite ideal and canonical limit are nevertheless
-unambiguous.
+is infinity. The cut-regularized limit still recovers this norm-closed ideal.
 
-This classical example makes the reason for the positive cuts concrete
-\citep{ElliottRobertSantiago2011}. Closure admits elements with infinite
+The example instantiates the cut-regularized convergence studied by \citet{ElliottRobertSantiago2011}. Closure admits elements with infinite
 trace, while every fixed positive cut is controlled by a finite value.
 Replacing the source's convergence predicate by pointwise convergence
 would therefore alter the theorem.
@@ -213,12 +192,33 @@ would therefore alter the theorem.
 \label{sec:named-maps}
 
 The character-variety case preserves more than the flag of subspaces.
-Two frames of a one-dimensional vector space can induce the
-same flag but different named coordinate maps. If $e(u)=uv$ and
-$f(u)=2uv$ over a field of characteristic zero, both give the flag
+Choose a basis vector $v$ of a one-dimensional vector space over a field of characteristic zero, with its coordinate in grade zero. The frames $e(u)=uv$ and $f(u)=2uv$ induce the same flag
 $0\subset\operatorname{span}(v)$, while
 $e^{-1}(v)=1$ and $f^{-1}(v)=1/2$. The all-seams predicate must therefore
 retain the named graded maps when those maps occur in the seam equation.
-The coordinate equation consumes information that equality of the
-underlying flag has forgotten. This is the small-scale reason for
-retaining named graded maps throughout the surface construction.
+The coordinate equation depends on the specified maps on the graded piece. This is the elementary obstruction that the surface construction addresses with named frame data.
+
+\subsection{Composing the actual ideal correspondence}
+\label{sec:upstream-reuse}
+
+The trace case permits a direct reuse of its formal interface. Write $T(A)$ for the extended-trace cone, and let $e:T(A)\simeq T(B)$ and $f:T(B)\simeq T(C)$ be additive equivalences. Let $\Phi_e$ be the source's induced order
+isomorphism of closed ideals. Its weight identity gives
+\[
+ \iota_{\Phi_e(I)}=e(\iota_I).
+\]
+Applying this identity successively yields
+\[
+ \iota_{\Phi_f(\Phi_e(I))}
+ =f(e(\iota_I))
+ =\iota_{\Phi_{f\circ e}(I)}.
+\]
+Injectivity of ideal weights therefore proves
+$\Phi_{f\circ e}(I)=\Phi_f(\Phi_e(I))$.
+This compositional law uses the additive equivalences alone; the
+convergence and scalar fields become relevant when identifying the ideals
+of particular traces.
+
+The accompanying \src{UpstreamReuse.lean} imports
+\src{OAI.Analysis.TraceCone.IdealTransport}. Its proof invokes the
+upstream ideal-weight identity three times and then uses definitional
+equality for composition. The corollary shows the practical value of the identifying equation: composition of the reconstructed ideal maps follows directly from the upstream API. The ideal reconstruction is reused through its specification.

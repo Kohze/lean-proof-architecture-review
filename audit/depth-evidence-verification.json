@@ -1,0 +1,16 @@
+{
+  "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "case_evidence_records": 21,
+  "source_links_checked": 55,
+  "verified_oai_closure_counts": {
+    "common_bases": 1,
+    "graph_switches": 165,
+    "mahler": 229,
+    "crouzeix": 41,
+    "trace_ideals": 3,
+    "all_seams": 79
+  },
+  "unique_oai_closure_modules": 518,
+  "status": "passed",
+  "scope": "Byte identity and source locators; mathematical interpretations are the recorded static reading."
+}

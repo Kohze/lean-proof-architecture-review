@@ -1,0 +1,23 @@
+{
+  "records": [
+    {
+      "key": "LeanDecideSource",
+      "version": "v4.34.1",
+      "source_url": "https://github.com/leanprover/lean4/blob/v4.34.1/src/Init/Tactics.lean",
+      "source_sha256": "fea7d6fdd2ea9880a51430bf1386c851a31662dadf6b4a0678ba0dced0e5f1f2",
+      "lines": [
+        1416,
+        1423
+      ],
+      "excerpt": "- `decide +kernel` uses kernel for reduction instead of the elaborator.\n  It has two key properties: (1) since it uses the kernel, it ignores transparency and can unfold everything,\n  and (2) it reduces the `Decidable` instance only once instead of twice.\n- `decide +native` uses the native code compiler (`#eval`) to evaluate the `Decidable` instance,\n  admitting the result via an axiom.\n  This can be significantly more efficient than using reduction, but it is at the cost of increasing the size\n  of the trusted code base.\n  Namely, it depends on the correctness of the Lean compiler and all definitions with an `@[implemented_by]` attribute.",
+      "accessed": "2026-10-08",
+      "scope": "Retained documentation excerpt for decision-mode semantics; upstream copyright and Apache 2.0 terms apply."
+    },
+    {
+      "key": "MathlibStyle",
+      "source_url": "https://leanprover-community.github.io/contribute/style.html",
+      "accessed": "2026-10-08",
+      "type": "Living contributor documentation; used for style context, not retrospective compliance judgments."
+    }
+  ]
+}

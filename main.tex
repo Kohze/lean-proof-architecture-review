@@ -5,13 +5,23 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm,mathtools}
 \usepackage{microtype,booktabs,longtable,array}
+\usepackage{graphicx,xcolor}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf,textfont=normalfont,labelsep=period,
+  justification=justified,singlelinecheck=false}
 \usepackage[numbers,sort&compress]{natbib}
 \usepackage{xurl}
+\usepackage{float,needspace}
 \usepackage[hidelinks]{hyperref}
 \usepackage{listings}
-\usepackage{float,needspace}
 \setlength{\emergencystretch}{2em}
-\lstset{basicstyle=\ttfamily\small,columns=fullflexible,keepspaces=true,breaklines=true,frame=single,aboveskip=12pt,belowskip=12pt}
+\definecolor{coderule}{gray}{0.65}
+\lstset{basicstyle=\ttfamily\small,columns=fullflexible,keepspaces=true,
+  showstringspaces=false,upquote=true,breaklines=true,breakatwhitespace=true,
+  frame=tb,rulecolor=\color{coderule},framerule=0.4pt,framesep=6pt,
+  xleftmargin=6pt,xrightmargin=6pt,aboveskip=10pt,belowskip=10pt,
+  captionpos=b,literate={γ}{{$\gamma$}}1 {≤}{{$\leq$}}1
+  {⊢}{{$\vdash$}}1 {₀}{{$_0$}}1}
 \newtheorem{proposition}{Proposition}
 \newtheorem{example}[proposition]{Example}
 \newcommand{\R}{\mathbb R}
@@ -21,19 +31,23 @@
 \newcommand{\src}[1]{\texttt{\nolinkurl{#1}}}
 \title{Proof Architecture in the OpenAI Lean Library:\\Representation, Locality, and Semantic Transport}
 \author{Robin Gounder\thanks{Correspondence: \href{mailto:robin@gounder.com}{robin@gounder.com}.}\\{\small Vaionex Corporation}}
-\date{8 October 2026}
+\date{9 October 2026}
 \hypersetup{pdfauthor={Robin Gounder},pdftitle={Proof Architecture in the OpenAI Lean Library: Representation, Locality, and Semantic Transport}}
 \begin{document}
 \maketitle
 \input{abstract}
-\noindent\textbf{Keywords:} formalized mathematics; Lean; proof architecture; semantic preservation; probabilistic algorithms; mathematical interfaces.
+\noindent\textbf{Keywords:} formalized mathematics; Lean; proof architecture; proof automation; semantic preservation; mathematical interfaces.
 \input{introduction}
 \input{method}
 \input{cases}
+\input{method-profile}
 \input{worked-examples}
 \input{discussion}
 \section*{Generative AI disclosure}
 OpenAI Codex agents contributed substantially to source discovery, literature synthesis, and mathematical exposition.
+\begingroup
+\setlength{\bibsep}{4pt}
 \bibliographystyle{plainnat}
 \bibliography{references}
+\endgroup
 \end{document}

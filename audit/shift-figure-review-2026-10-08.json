@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-08",
+  "edition": "1.3.1-local",
+  "status": "Integrated figure, data and local manuscript checked",
+  "pages": 31,
+  "cited_references": 44,
+  "pdf_sha256": "60acdd961c366da5cad135a2db7197112e0293593707da9e7f114ac908516e7d",
+  "figure": "Figure 1, page 21",
+  "figure_inputs": [
+    "research/method-survey/summary.json",
+    "research/method-survey/shift-comparison.csv"
+  ],
+  "figure_outputs": [
+    "figures/method-shift.png",
+    "figures/method-shift.svg"
+  ],
+  "verification": {
+    "status": "passed",
+    "rows_verified_against_retained_summary": 9,
+    "units": "percentage points",
+    "full_and_common_domain_differences_verified": true,
+    "figure_page": 21,
+    "embedded_images_on_figure_page": 1,
+    "source_summary_sha256": "a1423b07bb628793b31aedebe14b9cdb830edba3346b68d7a8a9dc9b27247113",
+    "embedded_png_sha256": "1feb8d42b2d7dfd701875b5ad783f6b02941916eb4bcf8de61b61f0682e77b9f",
+    "png_pixels": [
+      4260,
+      3090
+    ]
+  },
+  "visual_review": {
+    "date": "2026-10-08",
+    "pdf_sha256": "60acdd961c366da5cad135a2db7197112e0293593707da9e7f114ac908516e7d",
+    "pages_rendered": 31,
+    "all_contact_sheets_inspected": true,
+    "full_size_pages_inspected": [
+      21
+    ],
+    "comparison_chart_inspected": true,
+    "checks": [
+      "Nine methods show signed differences from an explicit Mathlib zero baseline.",
+      "Raw and common-domain comparisons use different marker fills and a clear legend.",
+      "Adjusted labels are legible at manuscript size; chart and caption remain together on page 21.",
+      "Figure follows its introducing paragraph and precedes the proof-length discussion.",
+      "All 31 page contact-sheet images checked for clipping, overlap and pagination."
+    ],
+    "unresolved_visual_defects": []
+  },
+  "scope": "Cross-sectional descriptive differences from the pinned Mathlib baseline, in percentage points; both series average within-module shares. Common-domain reweighting is a coarse subject control.",
+  "selected_common_domain_shifts_pp": {
+    "mode_tactic": 29.178290216195464,
+    "mode_term_only": -23.813023861403888,
+    "local_claims_calc": 34.114491921202486,
+    "arithmetic_algebra": 30.49398863669157,
+    "restricted_simplification": 22.94715771466337,
+    "rewrite_simplify": 11.168113443881289,
+    "cases_induction": 4.162755115427389,
+    "finite_decision": 4.877061433729457,
+    "extensionality_congruence": 0.7379496756057993
+  },
+  "build_warnings": [],
+  "public_release": "Earlier v1.1.1 release unchanged; updated local edition packaged separately."
+}

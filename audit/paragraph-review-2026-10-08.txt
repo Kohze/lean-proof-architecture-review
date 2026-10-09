@@ -1,0 +1,512 @@
+PARAGRAPH AND MATHEMATICAL REVIEW ? 8 OCTOBER 2026
+Edition: 1.5.0-local
+Reviewed 161 original manuscript blocks across 14 TeX files; new material is recorded separately.
+This ledger records internal editorial and mathematical review, not external peer review.
+
+abstract-001 | abstract.tex:1 | revised or reorganized
+Rebuilt around the preservation question, six cases, two contributions, and joint-adjusted effect sizes; removed the implication that the larger subject-only contrasts persist under length control.
+
+cases-analysis-001 | cases-analysis.tex:1 | retained wording, reviewed
+Retained the Mahler heading and label; the subsection now begins directly with the analytic chain.
+
+cases-analysis-002 | cases-analysis.tex:4 | revised or reorganized
+Recast the opening as local forms to convex-body inequality; retained n>=1, compactness, convexity, symmetry, interior and the literal coordinate polar.
+
+cases-analysis-003 | cases-analysis.tex:21 | revised or reorganized
+Checked MassHypotheses against the concrete strip-map construction; separated generic analytic premises from hypotheses remaining at the body endpoint.
+
+cases-analysis-004 | cases-analysis.tex:39 | revised or reorganized
+Checked degrees N=k+2, d^c normalization, ordered wedge signs and the -(k+1) multiplicity; explained the k+1 differentiated factors after the horizontal term vanishes.
+
+cases-analysis-005 | cases-analysis.tex:67 | revised or reorganized
+Retained the explicit horizontal-vector proof: sphere tangent dimension 2N-1, beta(iz)=0, alpha(iz)=m/2, and alternation plus one nonzero basis coordinate.
+
+cases-analysis-006 | cases-analysis.tex:87 | revised or reorganized
+Rewrote the two-form representations around their distinct uses; whole-field equality transports differentiation, with flattening equivalences identifying ordered slots.
+
+cases-analysis-007 | cases-analysis.tex:105 | revised or reorganized
+Clarified smooth coefficient expansion and distinguished whole-field derivative congruence from the weaker tangent-density congruence used in integration.
+
+cases-analysis-008 | cases-analysis.tex:121 | revised or reorganized
+Checked continuousWedgeCLM: injective embedding gives finite dimensionality, then two linear-map continuity promotions bundle the bilinear product.
+
+cases-analysis-009 | cases-analysis.tex:147 | retained wording, reviewed
+Retained cutoff locality and eventual equality for derivative transfer. Added the previously missing real-part, coordinate-pullback and positive-orientation flux bridge before this paragraph.
+
+cases-analysis-010 | cases-analysis.tex:163 | revised or reorganized
+Kept endpoint flux (pi*m)^N and the separate dimension-one calculation; refined the comparison with Kudryashov to integration interfaces and regularity rather than novelty of Stokes itself.
+
+cases-analysis-011 | cases-analysis.tex:179 | retained wording, reviewed
+Retained the Crouzeix heading and label; ordered progression is core, energy weights, analytic construction, then removal of domain assumptions.
+
+cases-analysis-012 | cases-analysis.tex:182 | revised or reorganized
+Recast the opening as a boundary-to-matrix interface; retained amplified Kronecker evaluation, arbitrary coefficient matrices and positive dimensions, with companion-review scope explicit.
+
+cases-analysis-013 | cases-analysis.tex:200 | revised or reorganized
+Distinguished the analytic_domain_core premises from their construction by exterior_collar_bound; b0=1, Fourier orientation and positive resolvent are actual inputs.
+
+cases-analysis-014 | cases-analysis.tex:212 | revised or reorganized
+Checked singular-vector reshaping, a>0, Hermitian zero modes, positive block inequality and constants 2a<=8a/gamma^2. Made gamma^2<=4 and gamma<=2 cancellation explicit.
+
+cases-analysis-015 | cases-analysis.tex:262 | revised or reorganized
+Clarified that FG and GF serve different singular relations. Checked finite dual witness Ck=wk^-1 conjugate(Pk), s^2<=bs and nonnegative partial-sum passage.
+
+cases-analysis-016 | cases-analysis.tex:275 | retained wording, reviewed
+Retained kernel contraction, w0=1 and wk=2; checked factor four on the Hermitian zero mode and half-weighted negative-frequency tail against BoundaryEnergy.
+
+cases-analysis-017 | cases-analysis.tex:294 | revised or reorganized
+Clarified reuse of the scalar polynomial basis theorem over a matrix coefficient ring; retained unit leading coefficients and explicit noncommutative evaluation transport.
+
+cases-analysis-018 | cases-analysis.tex:308 | revised or reorganized
+Corrected analytic scope: the finite Taylor remainder gives a local coefficient identity, while the collar supplies a disk large enough for evaluation on the unit circle.
+
+cases-analysis-019 | cases-analysis.tex:327 | retained wording, reviewed
+Retained inverted-domain Riemann-map construction and the side condition |E(z)|<1 iff z lies in U; this retains geometric information in analytic continuation.
+
+cases-analysis-020 | cases-analysis.tex:341 | revised or reorganized
+Checked the r/3r overlap argument, identity theorem, injective thickening and R>1 inverse collar; sharpened the final explanation of what the collar preserves.
+
+cases-analysis-021 | cases-analysis.tex:360 | revised or reorganized
+Recast removal of auxiliary assumptions as construction of strict outer geometry. Checked rho=M+epsilon/2 gives the bound 2M+epsilon before the limit.
+
+cases-analysis-022 | cases-analysis.tex:378 | retained wording, reviewed
+Kept the Crouzeix-Palencia 1+sqrt(2) comparison and companion numerical study; each has a distinct role from the present formal-interface analysis.
+
+cases-architecture-001 | cases-architecture.tex:1 | retained wording, reviewed
+Retained the trace-ideal subsection heading and label.
+
+cases-architecture-002 | cases-architecture.tex:4 | revised or reorganized
+Clarified algebraic reconstruction versus recognition of ideals attached to a trace; retained the nonunital, extended-trace setting and the classical trace-cone reference.
+
+cases-architecture-003 | cases-architecture.tex:15 | revised or reorganized
+Checked ideal-weight additivity via heredity, x*x ideal equivalence for traciality, and closed sublevels for lower semicontinuity; existence supplies all fields before witness choice.
+
+cases-architecture-004 | cases-architecture.tex:34 | revised or reorganized
+Retained finite-square domain, closure, idempotent values 0/infinity, positive finite approximation and both inverse laws; distinguished the original algebra from its trace cone.
+
+cases-architecture-005 | cases-architecture.tex:51 | revised or reorganized
+Checked the direction of I subset J iff iotaI+iotaJ=iotaI; emphasized that additive bijectivity already recovers ideal order without convergence.
+
+cases-architecture-006 | cases-architecture.tex:64 | retained wording, reviewed
+Retained positive-cut characterization and canonical limsup/liminf inequalities; proper-filter uniqueness is stated with its necessary condition.
+
+cases-architecture-007 | cases-architecture.tex:89 | revised or reorganized
+Checked the scalar-zero and scalar-infinity limits, closure versus finite value, and why an infinite point value does not obstruct cut-regularized convergence.
+
+cases-architecture-008 | cases-architecture.tex:107 | revised or reorganized
+Identified the limits and ideal weights as classical; the contribution here is analysis of the formal separation between algebraic recovery and analytic recognition.
+
+cases-architecture-009 | cases-architecture.tex:117 | revised or reorganized
+Added an explicit role for the further map f in the image-filter identity; checked that carrier-filter preservation extends to arbitrary indexing types.
+
+cases-architecture-010 | cases-architecture.tex:138 | revised or reorganized
+Traced scalar compatibility, forward preservation, uniqueness and ideal-weight injectivity to both transported-ideal identities; inverse convergence remains part of the larger interface.
+
+cases-architecture-011 | cases-architecture.tex:156 | retained wording, reviewed
+Retained the named-graded-map subsection heading and label.
+
+cases-architecture-012 | cases-architecture.tex:159 | retained wording, reviewed
+Clarified that producedMarkedValues_allSeams is a support theorem about an existing solution; preserved properness, rank and genus premises.
+
+cases-architecture-013 | cases-architecture.tex:169 | retained wording, reviewed
+Kept the surface-construction roadmap: selected band, mirror boundary, new genus-zero disks and parent genus drop; this introduces the seam families before detailed transport.
+
+cases-architecture-014 | cases-architecture.tex:181 | retained wording, reviewed
+Checked prefix Fk, grade-k map qk and restriction to F(k+1); clarified that SameFramedFlag retains specified maps rather than only ranks or subspaces.
+
+cases-architecture-015 | cases-architecture.tex:205 | revised or reorganized
+Traced IdentifiedBand to its existence theorem and the chosen opaque witness; explained coherent noncomputable data without implying an extra unproved premise.
+
+cases-architecture-016 | cases-architecture.tex:218 | revised or reorganized
+Explained why one record supplies dimensions and coordinate identifications throughout the produced diagram; retained hierarchy-design precedents as established methods.
+
+cases-architecture-017 | cases-architecture.tex:228 | revised or reorganized
+Checked all eight local seam families and the structural coverage equivalence; explained how inherited equations consume grade-preserving coordinate maps.
+
+cases-architecture-018 | cases-architecture.tex:242 | revised or reorganized
+Traced common atom labels through injectivity to equality of coordinate equivalences, then frames. Counted the six inherited-seam inputs explicitly.
+
+cases-architecture-019 | cases-architecture.tex:260 | revised or reorganized
+Clarified the second transport from general marked-cut data to exact produced values using rank equality, rebaseUnit, generator agreement and valuesFromPorts.
+
+cases-architecture-020 | cases-architecture.tex:272 | revised or reorganized
+Retained the additional boundary-occurrence premise only for producedMarkedSolution; tied it to the surface component and distinguished the all-seams support statement.
+
+cases-discrete-001 | cases-discrete.tex:1 | retained wording, reviewed
+Retained the common-base subsection heading and label.
+
+cases-discrete-002 | cases-discrete.tex:4 | revised or reorganized
+Rewrote the opening around three concrete layers: estimator, finite experiment and fixed machine, each carrying a different preservation obligation.
+
+cases-discrete-003 | cases-discrete.tex:6 | revised or reorganized
+Checked M1 direct-sum M2-dual, transversal size n, rank n, zero deficiency and Z<=partition<=Z+2^n*q; explained zero and positive deficiency contributions.
+
+cases-discrete-004 | cases-discrete.tex:19 | revised or reorganized
+Clarified rank simulation by independence queries and the witness guard; exact zero-count behavior holds even outside the high-probability accuracy event.
+
+cases-discrete-005 | cases-discrete.tex:21 | revised or reorganized
+Explained fit conditions separately from trial count; retained M*2^-D observable loss and reindexing as equality in law despite different numbered outcomes.
+
+cases-discrete-006 | cases-discrete.tex:24 | revised or reorganized
+Separated bankwise deterministic realization from distributional preservation; retained Metropolis proposal, acceptance, Bernoulli and lazy branch structure.
+
+cases-discrete-007 | cases-discrete.tex:32 | revised or reorganized
+Clarified the cost-bearing simulation: encoded output and recorded charge are distinct conclusions of compiler correctness.
+
+cases-discrete-008 | cases-discrete.tex:38 | revised or reorganized
+Corrected the heading: Safe is needed for polynomial cost bounds, not semantic correctness itself. Checked fold charge and list-length/width dependence.
+
+cases-discrete-009 | cases-discrete.tex:55 | retained wording, reviewed
+Retained PolySafe and AttrSafe with source checks of exponent value bounds, polynomial substitution and monotonicity at enlarged parameter p(S)+S.
+
+cases-discrete-010 | cases-discrete.tex:73 | retained wording, reviewed
+Checked the universal rational observable identity and finite uniform averages; it transports full output law, including reuse for the accuracy indicator.
+
+cases-discrete-011 | cases-discrete.tex:81 | retained wording, reviewed
+Checked physical word s+3(m-1-i)+1, quantifier order for offset s, injective positions and s+3m+1<=B; distinguished gathered-bit count m from execution bound B.
+
+cases-discrete-012 | cases-discrete.tex:89 | revised or reorganized
+Checked fixed-program quantifier order, oracle calls and bit operations, parameter encoding and finite successful-tape count; sharpened close precedents including Zar and SampCert.
+
+cases-discrete-013 | cases-discrete.tex:116 | retained wording, reviewed
+Retained graph-switch subsection heading and label.
+
+cases-discrete-014 | cases-discrete.tex:119 | revised or reorganized
+Removed the claim that common bases intrinsically needs a whole law. Checked lazy proposal probability, mixing threshold and conditional spectral-gap statement.
+
+cases-discrete-015 | cases-discrete.tex:125 | retained wording, reviewed
+Retained coarse graph-cell definition and injective reconstruction from cross matrix and singleton-boundary choices.
+
+cases-discrete-016 | cases-discrete.tex:128 | revised or reorganized
+Explained why the coordinate equivalence must preserve compatible-matrix multiplicities; checked cross total and two margin constraints.
+
+cases-discrete-017 | cases-discrete.tex:135 | revised or reorganized
+Checked the exact 3x3 total-two table and c2=2-p(r)-p(t); distinguished exceptional dependence from the other factorized totals.
+
+cases-discrete-018 | cases-discrete.tex:143 | revised or reorganized
+Checked flag means 1/3, product zero and covariance -1/9; stated this as an illustration before weighted graph-fiber transport.
+
+cases-discrete-019 | cases-discrete.tex:151 | retained wording, reviewed
+Retained affine conditional image and corresponding-fiber sum/cardinality transport; identified the equality-of-adjacency flag explicitly.
+
+cases-discrete-020 | cases-discrete.tex:154 | retained wording, reviewed
+Clarified counting inner product versus normalized fiber averages; error direction is at most one-dimensional on each fiber, not the whole state space.
+
+cases-discrete-021 | cases-discrete.tex:162 | revised or reorganized
+Checked the compensated projection inequality and slice assignment equivalence; distinguished conditional averaging, gain and error projections.
+
+cases-discrete-022 | cases-discrete.tex:176 | revised or reorganized
+Retained normalized slice flag norm, two-block Gram/generator comparison, boundary cases and the reindexed 1/2 versus 1/8 inequality.
+
+cases-discrete-023 | cases-discrete.tex:194 | revised or reorganized
+Clarified all factors: doubling gives 1/4 difference energy, restrictions divide by repeated fiber cardinality, and ordered partner labels contribute a common 1/2.
+
+cases-discrete-024 | cases-discrete.tex:219 | revised or reorganized
+Recast the conclusion as exact finite count to coordinate transport to global energy budget; retained the dependency on triple-generator and local comparisons.
+
+cases-001 | cases.tex:1 | retained wording, reviewed
+Retained overview-first section placement and its label; visual review checks the reserved space before Table 1.
+
+cases-002 | cases.tex:5 | revised or reorganized
+Clarified how the overview groups the six cases and prepares readers for the representation/preservation/use sequence.
+
+cases-003 | cases.tex:10 | retained wording, reviewed
+Retained input order: overview before discrete, analytic and reconstruction details.
+
+discussion-001 | discussion.tex:1 | revised or reorganized
+Retitled around interfaces and division of proof work, reflecting both the mathematical and empirical contributions.
+
+discussion-002 | discussion.tex:4 | revised or reorganized
+Renamed the first subsection to state explicitly that it synthesizes the mathematical comparison.
+
+discussion-003 | discussion.tex:6 | revised or reorganized
+Corrected necessity: the relevant event probability suffices for accuracy, whereas a full law is reusable; retained map, local-field and sharp-weight requirements.
+
+discussion-004 | discussion.tex:15 | revised or reorganized
+Sharpened the transitions between distribution, execution, derivative, tangential integration and analytic identification rather than repeating six case summaries.
+
+discussion-005 | discussion.tex:25 | revised or reorganized
+Retained encoded size versus numerical attributes, counting-norm restoration and image-filter extension as three distinct reusable details.
+
+discussion-006 | discussion.tex:35 | revised or reorganized
+Kept graph and Crouzeix local-to-global examples; connected short final calculation to the earlier exact constants and signs.
+
+discussion-007 | discussion.tex:43 | revised or reorganized
+Retained compiler, probabilistic semantics and hierarchy precedents; attributed specificity to the inspected compositions and mathematical payload.
+
+discussion-008 | discussion.tex:53 | retained wording, reviewed
+Retained tactic-synthesis subsection label for cross-references.
+
+discussion-009 | discussion.tex:56 | revised or reorganized
+Replaced the subject-only headline with joint-adjusted differences 22.8, 10.4 and 5.8 pp, and directed readers to the comparison table.
+
+discussion-010 | discussion.tex:64 | revised or reorganized
+Added a literal three-line Lean excerpt from evalFold_charge; checked exact source bytes and explained safety/width premises and shared product simplification before omega.
+
+discussion-011 | discussion.tex:75 | revised or reorganized
+Added a literal seven-line Crouzeix excerpt; checked source bytes, gamma positivity, positive energy and the linarith/nlinarith cancellation. Fixed Unicode corruption.
+
+discussion-012 | discussion.tex:88 | revised or reorganized
+Connected certificate soundness to local decision checks; confined any completion-rate or development-effort interpretation to future matched outcome work.
+
+discussion-013 | discussion.tex:97 | retained wording, reviewed
+Retained practical-guidance subsection position after the comparative findings.
+
+discussion-014 | discussion.tex:99 | revised or reorganized
+Rewrote practical advice around the exact quantity consumed by the next theorem and the data changed by a representation.
+
+discussion-015 | discussion.tex:106 | revised or reorganized
+Kept event indicator, neighborhood, tangent and named-coordinate examples; clarified how the success-budget proposition composes the interfaces.
+
+discussion-016 | discussion.tex:116 | revised or reorganized
+Connected concrete hypotheses to their constructors: strip-map data, outer domains and one shared splitting witness.
+
+discussion-017 | discussion.tex:125 | revised or reorganized
+Connected interface design to concrete local obligations in arithmetic, analytic cancellation and exact interval decisions.
+
+discussion-018 | discussion.tex:133 | retained wording, reviewed
+Retained scope/further-work subsection as the place for meaningful evidentiary limits.
+
+discussion-019 | discussion.tex:135 | revised or reorganized
+Separated purposive case depth from uniform sampling; added matched declaration roles, elaborated traces and held-out validation as remaining empirical opportunities.
+
+discussion-020 | discussion.tex:149 | revised or reorganized
+Rewrote the closing reader guidance around the two levels of contribution, with arithmetic persistence under coarse joint controls rather than causal success claims.
+
+discussion-021 | discussion.tex:159 | retained wording, reviewed
+Retained data/code section after substantive discussion.
+
+discussion-022 | discussion.tex:162 | revised or reorganized
+Reorganized reproducibility into original examples and actual three-module reuse; retained compiler axiom provenance and external dependency instructions.
+
+discussion-023 | discussion.tex:180 | revised or reorganized
+Clarified complete-tree units versus selected artifacts, 800 survey modules, and catalogue bindings. Updated additional proof-body evidence records to 21.
+
+discussion-024 | discussion.tex:193 | revised or reorganized
+Retained Comparator revision and checking mechanisms as infrastructure context; distinguished these from the mathematical interpretation supplied by source reading.
+
+introduction-001 | introduction.tex:1 | retained wording, reviewed
+Retained Introduction heading.
+
+introduction-002 | introduction.tex:3 | revised or reorganized
+Replaced abstract framing with graph, wedge and random-tape examples; stated the next mathematical operation as the organizing question.
+
+introduction-003 | introduction.tex:10 | revised or reorganized
+Corrected event-law necessity and clarified local agreement for differentiation and named maps for coordinate equations.
+
+introduction-004 | introduction.tex:19 | revised or reorganized
+Kept six-case roadmap and explicit four endpoints versus two support results.
+
+introduction-005 | introduction.tex:29 | revised or reorganized
+Stated three reading questions and separated case synthesis from uniform survey contribution and its two rate units.
+
+introduction-006 | introduction.tex:41 | revised or reorganized
+Rewrote the synthesis around local proof obligations; arithmetic persists under joint controls while tactic/local-claim contrasts shrink.
+
+introduction-007 | introduction.tex:52 | revised or reorganized
+Kept companion-paper boundaries: mathematical advances and applications there, formal representation/proof organization here.
+
+introduction-008 | introduction.tex:58 | revised or reorganized
+Retained Lean, Mathlib, Anatomy and specification-driven construction precedents; tied them to the review question without implying these methods originated here.
+
+introduction-009 | introduction.tex:69 | revised or reorganized
+Retained odd-order, Kepler, perfectoid and scheme precedents; framed novelty as case-specific payload and use of established devices.
+
+introduction-010 | introduction.tex:76 | revised or reorganized
+Updated roadmap to include joint composition controls and certificate concentration, with overview preceding case detail.
+
+main-001 | main.tex:1 | revised or reorganized
+Checked author, affiliation, correspondence, date, title and input order. Kept disclosure solely in its dedicated section; updated proof-automation keyword and Unicode listing mappings.
+
+method-profile-table-001 | method-profile-table.tex:1 | retained wording, reviewed
+Retained generated absolute rates and module-bootstrap intervals; checked 784/7348 proof-bearing modules and partitioning of the first three proof modes.
+
+method-profile-001 | method-profile.tex:1 | retained wording, reviewed
+Retained corpus-comparison section heading and label.
+
+method-profile-002 | method-profile.tex:4 | revised or reorganized
+Clarified the exploratory source-written unit and Mathlib baseline, separate from the six purposive cases.
+
+method-profile-003 | method-profile.tex:12 | retained wording, reviewed
+Retained sampling/extraction/units subsection heading.
+
+method-profile-004 | method-profile.tex:14 | revised or reorganized
+Checked complete strict-OAI population, hash-rank membership selected before content retrieval, baseline exclusions and 13309/186751 extracted named bodies.
+
+method-profile-005 | method-profile.tex:25 | revised or reorganized
+Clarified detected-declaration coverage versus parser accuracy. Kept 40 stratified inspections, 11 fixtures and two corrected header-binding errors.
+
+method-profile-006 | method-profile.tex:35 | revised or reorganized
+Retained once-per-body token indicators and exact feature families; distinguished written tokens from executed tactic traces.
+
+method-profile-007 | method-profile.tex:44 | revised or reorganized
+Checked pooled versus equal-module formulas, proof-bearing module counts and bootstrap unit; disclosed exploratory addition of module balancing.
+
+method-profile-008 | method-profile.tex:56 | retained wording, reviewed
+Retained generated absolute-rate table input before interpretation.
+
+method-profile-009 | method-profile.tex:58 | revised or reorganized
+Retitled the subsection to separate subject, length and method use.
+
+method-profile-010 | method-profile.tex:60 | revised or reorganized
+Kept raw tactic-mode and feature comparisons, tied to particular source instances without implying causal success or a novel tactic.
+
+method-profile-011 | method-profile.tex:70 | revised or reorganized
+Checked 18-domain/735-module coverage and standardized rates, including the near-zero extensionality contrast.
+
+method-profile-012 | method-profile.tex:80 | revised or reorganized
+Clarified Figure 1 as raw and subject-only percentage-point differences, with local claims/arithmetic/tactic form separated from extensionality.
+
+method-profile-013 | method-profile.tex:88 | retained wording, reviewed
+Retained Figure 1 at the subject-control point; caption now directs readers to joint Table 3.
+
+method-profile-014 | method-profile.tex:90 | revised or reorganized
+Replaced the separate pooled length-band argument with a module/body joint analysis over 69 cells, preserving fractional within-module contributions and 93.75% coverage.
+
+method-profile-015 | method-profile.tex:100 | revised or reorganized
+Retained low listed search-token rates and rewrite-control interpretation; arithmetic and simplification remain automation.
+
+method-profile-016 | method-profile.tex:109 | retained wording, reviewed
+Retained certificate-concentration subsection heading.
+
+method-profile-017 | method-profile.tex:111 | revised or reorganized
+Checked pooled finite decision 48.9 versus balanced 6.3 and top-ten concentration 48.2%; explained the different statistical questions.
+
+method-profile-018 | method-profile.tex:118 | revised or reorganized
+Checked LowBlock36_10 body/finite-decision counts, kernel decision entries and Horner/tail assembly; used primary Lean documentation for decide +kernel.
+
+method-profile-019 | method-profile.tex:134 | revised or reorganized
+Rewrote synthesis around persistent arithmetic, separate certificate layer and proof-length composition; linked mechanisms to concrete source excerpts.
+
+method-shift-figure-001 | method-shift-figure.tex:1 | revised or reorganized
+Retained all nine contrasts and raw/shared-domain markers; clarified that these give coarse subject control and cross-referenced the new joint subject/length table.
+
+method-001 | method.tex:1 | retained wording, reviewed
+Retained sources/selection/reading-method heading and label.
+
+method-002 | method.tex:4 | revised or reorganized
+Clarified purposive case eligibility as representation, preservation and downstream mathematical use.
+
+method-003 | method.tex:10 | revised or reorganized
+Retained backward/forward source tracing and ledger identity fields; separated established device, specific relation and later use.
+
+method-004 | method.tex:19 | revised or reorganized
+Distinguished endpoint discovery and exclusions from uniform survey prevalence; no claim of exhaustive proof-body coverage.
+
+method-005 | method.tex:30 | revised or reorganized
+Clarified generic hypotheses versus concrete construction, including tracing classical witness choice to existence.
+
+method-006 | method.tex:36 | revised or reorganized
+Kept static scope for all six and compilation scope for elementary examples and the three upstream trace modules; no full endpoint build is implied.
+
+method-007 | method.tex:45 | revised or reorganized
+Retained blueprint/LeanArchitect antecedents and explained the ledgers as source locators plus mathematical exposition.
+
+overview-001 | overview.tex:1 | retained wording, reviewed
+Retained six-row overview with ruled, spaced rows and endpoint/support labels. Checked each representation and mathematical-work summary against its subsection.
+
+worked-examples-001 | worked-examples.tex:1 | retained wording, reviewed
+Retained worked-examples section heading and label.
+
+worked-examples-002 | worked-examples.tex:4 | revised or reorganized
+Rewrote opening to explain tape/law/budget decomposition followed by locality, trace, coordinate and reuse examples.
+
+worked-examples-003 | worked-examples.tex:10 | retained wording, reviewed
+Retained injective-tape subsection heading and label.
+
+worked-examples-004 | worked-examples.tex:13 | revised or reorganized
+Checked proposition including m=0; made injectivity=>m<=B explicit before counting exactly 2^(B-m) preimages.
+
+worked-examples-005 | worked-examples.tex:28 | revised or reorganized
+Checked reversed stride-three positions and range bound for arbitrary natural parameters, including empty word.
+
+worked-examples-006 | worked-examples.tex:36 | revised or reorganized
+Kept literal physicalIndex definition; clarified why Fin m bounds prevent truncated-subtraction collisions.
+
+worked-examples-007 | worked-examples.tex:47 | revised or reorganized
+Added m>=2 to collision example and stated no preimage for different first bits; connected this to 15 finite fiber checks.
+
+worked-examples-008 | worked-examples.tex:54 | retained wording, reviewed
+Retained observables-versus-mean subsection heading and label.
+
+worked-examples-009 | worked-examples.tex:57 | retained wording, reviewed
+Checked finite-law equivalence by singleton indicators and converse finite expectation.
+
+worked-examples-010 | worked-examples.tex:70 | revised or reorganized
+Checked normalized versus unnormalized multiplicities, cross-multiplication N prime*c=N*c prime, and equal-mean counterexample.
+
+worked-examples-011 | worked-examples.tex:90 | revised or reorganized
+Clarified law equality under reindexing versus additional bankwise execution preservation in compiler simulation.
+
+worked-examples-012 | worked-examples.tex:97 | retained wording, reviewed
+Retained finite-success-count subsection heading and label.
+
+worked-examples-013 | worked-examples.tex:100 | revised or reorganized
+Rewrote setup as composition of tape uniformity, observable preservation and error loss.
+
+worked-examples-014 | worked-examples.tex:104 | retained wording, reviewed
+Checked success-budget proposition for failure extension, nonnegative eta/delta0, indicator substitution and exact finite probability-to-count conversion.
+
+worked-examples-015 | worked-examples.tex:133 | revised or reorganized
+Checked draw-tree fit and eta=M*2^-D, split delta/2 budget, M>0 logarithmic choice and separate execution inputs.
+
+worked-examples-016 | worked-examples.tex:150 | revised or reorganized
+Checked tight 5/8 success example, selected bits 7/4/1, 640/1024 tapes and enumeration of all event indicators.
+
+worked-examples-017 | worked-examples.tex:160 | retained wording, reviewed
+Retained boundary-value/ambient-derivative subsection heading and label.
+
+worked-examples-018 | worked-examples.tex:163 | revised or reorganized
+Checked d((x^2+y^2-1)dx)=-2y dx wedge dy; ambient versus intrinsic circle derivatives are explicitly separated.
+
+worked-examples-019 | worked-examples.tex:178 | retained wording, reviewed
+Retained cut-sensitive-limit subsection heading and label.
+
+worked-examples-020 | worked-examples.tex:181 | retained wording, reviewed
+Checked extended trace on c0, lower semicontinuity as supremum of continuous finite sums, and dense finite-support domain giving closed ideal c0.
+
+worked-examples-021 | worked-examples.tex:192 | revised or reorganized
+Checked finite support of each epsilon cut, canonical zero limit, and harmonic sequence a_j=1/j with infinite point value for every positive scalar.
+
+worked-examples-022 | worked-examples.tex:205 | revised or reorganized
+Changed attribution to an elementary instantiation of the cited cut theory, avoiding an implication that the exact example appears there.
+
+worked-examples-023 | worked-examples.tex:212 | retained wording, reviewed
+Retained named-coordinate subsection heading and label.
+
+worked-examples-024 | worked-examples.tex:215 | revised or reorganized
+Clarified basis vector v, characteristic zero and grade zero; checked identical one-dimensional flags but inverse coordinates 1 versus 1/2.
+
+worked-examples-025 | worked-examples.tex:226 | retained wording, reviewed
+Retained ideal-composition subsection heading and label.
+
+worked-examples-026 | worked-examples.tex:229 | revised or reorganized
+Defined T(A) before use and checked three ideal-weight identities plus injectivity; convergence is unnecessary for this algebraic corollary.
+
+worked-examples-027 | worked-examples.tex:248 | revised or reorganized
+Checked actual upstream import/API use and definitional composition; corrected the closing description to ideal reconstruction rather than analytic reconstruction.
+
+NEW MATERIAL
+cases-analysis.tex, real-coordinate flux paragraph and display: Read ExactFormCoordinates 33-96 and ExactSphereFluxBridge 11-67. Verified real-part projection, pullback naturality, positive-frame density and measure-preserving flux transfer; types are complex-valued real forms to real-valued coordinate forms.
+method-profile.tex, joint-control paragraphs and formula; method-profile-joint-table.tex: Recomputed 69 cells with original module/body measure, reconciled cell formula against direct module vectors, recomputed 1500 percentile-bootstrap replicates and conditional coverage; differentiated length conditioning from causal adjustment.
+method-profile.tex, family sensitivity paragraph: Recomputed exclusion of each of 212 directory families; arithmetic range 37.0-38.7% supports limited robustness to this grouping proxy.
+discussion.tex, literal Lean listings and explanations: Both listings exactly match dedented retained source spans; verifier now enforces byte-level text equality. Checked positivity/cancellation and fold induction hypotheses.
+discussion.tex, reorganized data/code paragraphs: Distinct units for tree inventory, selected artifacts, sampled modules and catalogue bindings; evidence count is 21 and source link check count is 55.
+
+MATHEMATICAL CORRECTIONS
+One event probability suffices for one accuracy guarantee; equality of full output laws is a reusable stronger interface.
+Safety and width invariants support polynomial cost bounds, separately from semantic correctness.
+Complex forms reach real-coordinate Stokes through real-part projection, derivative naturality and orientation-normalized flux equality.
+The local Faber Taylor identity needs the separately constructed analytic collar for unit-circle Fourier evaluation.
+The final ideal-composition example reuses algebraic reconstruction, not the convergence fields.
+
+REMAINING RESEARCH OPPORTUNITIES
+Held-out, randomly selected extraction validation for an independent accuracy estimate.
+Elaborated tactic traces to measure executed steps rather than written lexical indicators.
+Matched tasks and declaration roles, with outcomes, to study causes or success effects.
+Compilation and broader mathematical checking of the remaining upstream case endpoints.
+More independently replicated case analyses and comparison with additional formal libraries.
+
+FINAL OUTPUT
+33 pages, 44 cited records; PDF SHA-256 03df4180462e114120e3bfbc9b0164099c5bb3d015a8254bd434af3f87192d35
+Bibliography spacing adjusted to avoid a final page with one reference.

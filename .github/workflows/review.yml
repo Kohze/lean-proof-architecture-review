@@ -41,6 +41,8 @@ jobs:
               'lean-proof-architecture.pdf',
               'results/lean-compiler.log', 'results/verification.json',
               'results/worked-examples.json', 'audit/source-integrity.json',
+              'audit/depth-evidence-verification.json',
+              'audit/method-survey-verification.json',
               'audit/build.json', 'audit/build-pass-*.log', 'audit/latex-final.log',
               'audit/bibliography-build.log', 'audit/references-rendered.bbl',
               'audit/final-audit.json',
@@ -55,6 +57,17 @@ jobs:
 
       - name: Verify curated upstream bytes against pinned hashes
         run: python reproduce/verify_sources.py
+
+      - name: Verify proof-body evidence and manuscript source locators
+        run: python reproduce/verify_depth_evidence.py
+
+      - name: Verify sampled source bytes, extraction fixtures, and method data
+        run: python reproduce/verify_method_profile.py
+
+      - name: Recompute joint subject and length standardization
+        run: |
+          python reproduce/audit_completeness.py
+          git diff --exit-code -- research/method-survey/joint-standardization.json research/method-survey/joint-comparison.csv method-profile-joint-table.tex
 
       - name: Install elan and Lean 4.34.1
         shell: bash
@@ -100,6 +113,9 @@ jobs:
             results/verification.json
             results/worked-examples.json
             audit/source-integrity.json
+            audit/depth-evidence-verification.json
+            audit/method-survey-verification.json
+            audit/completeness-sensitivity-2026-10-08.json
             audit/build.json
             audit/build-pass-*.log
             audit/latex-final.log

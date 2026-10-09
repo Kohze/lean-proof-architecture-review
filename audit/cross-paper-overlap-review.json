@@ -1,0 +1,210 @@
+{
+  "date": "2026-10-08",
+  "scope": "Four manuscript bodies and their detailed arguments, worked examples, and contribution claims; exact prose comparison excludes mathematics and front/back matter as specified in its saved method.",
+  "judgment": "Meaningful overlap of subjects and some mechanisms, especially Lean/Frontiers Crouzeix and Counting/Frontiers algorithms. The papers retain different central questions and substantial distinct analyses. They are not independent discoveries of the release theorems. Attribution and scope boundaries improve transparency; citations alone do not establish a new contribution.",
+  "textual_comparison": "No shared run of at least 15 normalized narrative words in any of the six pairs, before or after revision. This threshold result does not mean zero paraphrased or mathematical overlap.",
+  "pairwise_assessment": [
+    {
+      "papers": [
+        "lean",
+        "frontiers"
+      ],
+      "overlap": "moderate overall; substantial in the Crouzeix mechanism",
+      "shared_subjects": [
+        "common matroid bases",
+        "symmetric Mahler",
+        "complete Crouzeix"
+      ],
+      "shared_case_count": "3 of 6 Lean case subjects",
+      "shared_analysis": "Ordered FG/GF tests, singular vectors, positive Hermitian resolvent compression, Fourier weights, and positive-block closure to constant two. Both syntheses stress information preserved under a change of representation.",
+      "distinct_analysis": "Frontiers compares mathematical scope and proof mechanisms with prior literature. Lean traces exact source interfaces: oracle encodings and physical tape addresses, ordered forms and boundary-local derivatives, zero modes and a finite dual witness, coefficient transport and strict neighborhoods. Graph switches, trace ideals, and marked all-seams diagrams are additional Lean subjects.",
+      "action": "Added reciprocal context citations and an explicit scope boundary; shortened the Lean Crouzeix concluding mechanism summary and redirected historical comparison to the SSRN review.",
+      "evidence": [
+        {
+          "file": "papers/lean-proof-architecture/cases-analysis.tex",
+          "line": 174,
+          "phrase": "Closing the compressed energy estimate"
+        },
+        {
+          "file": "papers/openai-mathematical-frontiers/research/geometry-operators/section.tex",
+          "line": 221,
+          "phrase": "The decisive algebraic passage"
+        },
+        {
+          "file": "papers/openai-mathematical-frontiers/synthesis.tex",
+          "line": 51,
+          "phrase": "Changing representation changes"
+        }
+      ]
+    },
+    {
+      "papers": [
+        "lean",
+        "counting"
+      ],
+      "overlap": "moderate subject overlap; limited overlap of detailed analysis",
+      "shared_subjects": [
+        "common matroid bases",
+        "simple-undirected graph switch chains"
+      ],
+      "shared_case_count": "2 of 6 Lean case subjects",
+      "shared_analysis": "Oracle and bit-cost models, output laws, attempted-proposal clocks, and the distinction between expected work and a bound on every execution.",
+      "distinct_analysis": "Counting develops count-preserving reductions, table-law and structural-zero examples, interval self-reduction, inference budgets, and residual correction. Lean develops finite-tape transport, compiled-program semantics, a fiberwise graph covariance calculation, and a tight finite success count. The law examples use different objects and demonstrate different failures.",
+      "action": "Added reciprocal companion citations and named the application versus source-interface questions.",
+      "evidence": [
+        {
+          "file": "papers/lean-proof-architecture/cases-discrete.tex",
+          "line": 1,
+          "phrase": "physical random tapes"
+        },
+        {
+          "file": "papers/counting-and-sampling/main.tex",
+          "line": 284,
+          "phrase": "Binary-depth count-to-sample self-reduction"
+        }
+      ]
+    },
+    {
+      "papers": [
+        "lean",
+        "numerical"
+      ],
+      "overlap": "low contribution overlap",
+      "shared_subjects": [
+        "complete Crouzeix inequality"
+      ],
+      "shared_analysis": "The amplified polynomial bound and the established complete 1+sqrt(2) baseline.",
+      "distinct_analysis": "Lean explains the formal proof interfaces. Numerical constructs finite outer enclosures and rational certificates, separates error sources, and reports comparative controls and software costs. No experimental dataset is republished in the Lean study.",
+      "action": "Added reciprocal contextual citations; the numerical paper explicitly treats the spectral-set bound as an input.",
+      "evidence": [
+        {
+          "file": "papers/numerical-range-certificates/main.tex",
+          "line": 139,
+          "phrase": "This paper addresses a narrower operational question"
+        },
+        {
+          "file": "papers/lean-proof-architecture/cases-analysis.tex",
+          "line": 303,
+          "phrase": "companion numerical-range certificate study"
+        }
+      ]
+    },
+    {
+      "papers": [
+        "frontiers",
+        "counting"
+      ],
+      "overlap": "moderate; strongest earlier-paper overlap",
+      "shared_subjects": [
+        "general perfect matchings",
+        "common matroid bases",
+        "unrestricted contingency tables"
+      ],
+      "shared_analysis": "Restricted versus full energy estimates, transversal returns, bit complexity, and rare exact residual correction. The K2,2 common-base setup occurs in both: Counting tests basis exchange, Frontiers tests Lorentzian signature.",
+      "distinct_analysis": "Frontiers locates the proposed mathematical gain in eight grouped cases. Counting develops operational reductions and probability laws in six manuscripts, including bounded tables, binary-capacity polymatroids, and graph switches. Its bisection, uniform-versus-Poisson law, structural-zero, and inference calculations are not repeated in Frontiers.",
+      "action": "Added reciprocal references; shortened the repeated restricted/full-energy explanation in Counting and cited the SSRN treatment for the mechanism comparison.",
+      "evidence": [
+        {
+          "file": "papers/openai-mathematical-frontiers/research/combinatorics/section.tex",
+          "line": 1,
+          "phrase": "Counting, sampling, and the limits"
+        },
+        {
+          "file": "papers/counting-and-sampling/main.tex",
+          "line": 210,
+          "phrase": "For common bases and bounded tables, counting uses"
+        }
+      ]
+    },
+    {
+      "papers": [
+        "frontiers",
+        "numerical"
+      ],
+      "overlap": "low contribution overlap; shared theorem and classical control",
+      "shared_subjects": [
+        "Crouzeix",
+        "finite nodes versus continuous bounds"
+      ],
+      "shared_analysis": "Both use the classical sharp 2-by-2 nilpotent example. The finite-node principle is also shared: sampled values need a bound between samples. These are background or calibration ideas, not separate original discoveries.",
+      "distinct_analysis": "Frontiers compares direct and structural proof mechanisms and uses a scalar positivity example to discuss Mahler. Numerical gives matrix-polynomial enclosure and mesh theorems, an implemented rational checker, error accounting, and original comparative experiments.",
+      "action": "Added reciprocal companion citations, retained original operator-theory citations for the classical control, and made the certificate input/output boundary explicit.",
+      "evidence": [
+        {
+          "file": "papers/openai-mathematical-frontiers/research/geometry-operators/section.tex",
+          "line": 197,
+          "phrase": "For a concrete sharpness control"
+        },
+        {
+          "file": "papers/numerical-range-certificates/main.tex",
+          "line": 831,
+          "phrase": "Normal and sharp controls"
+        },
+        {
+          "file": "papers/openai-mathematical-frontiers/research/contrastive-tests.tex",
+          "line": 46,
+          "phrase": "Positive nodes and a continuum"
+        }
+      ]
+    },
+    {
+      "papers": [
+        "counting",
+        "numerical"
+      ],
+      "overlap": "minimal",
+      "shared_subjects": [],
+      "shared_analysis": "General reproducibility and accuracy-budget vocabulary.",
+      "distinct_analysis": "Different mathematical objects, propositions, algorithms, examples, and experiments.",
+      "action": "No cross-citation added between these papers: no specific substantive dependency was identified.",
+      "evidence": []
+    }
+  ],
+  "revisions": {
+    "lean": {
+      "folder": "papers\\lean-proof-architecture",
+      "pdf": "output\\pdf\\lean-proof-architecture.pdf",
+      "pages": 24,
+      "cited_references": 41,
+      "pdf_sha256": "18b9567467c10d697bc71bd1572e16343b5a1e9211a6c799f4b2070ac3303b0c"
+    },
+    "frontiers": {
+      "folder": "papers\\openai-mathematical-frontiers",
+      "pdf": "output\\pdf\\openai-mathematical-frontiers.pdf",
+      "pages": 26,
+      "cited_references": 86,
+      "pdf_sha256": "f657a0c0290fe65178b2df16f1efed6b5e489768269d550cbaecc5dd6b719a98"
+    },
+    "counting": {
+      "folder": "papers\\counting-and-sampling",
+      "pdf": "output\\pdf\\counting-and-sampling-review.pdf",
+      "pages": 18,
+      "cited_references": 41,
+      "pdf_sha256": "8c7d84f0c3a2260eac5c563a818869ef309987fa4527d597e230f89009926dc7"
+    },
+    "numerical": {
+      "folder": "papers\\numerical-range-certificates",
+      "pdf": "output\\pdf\\numerical-range-certificates.pdf",
+      "pages": 19,
+      "cited_references": 32,
+      "pdf_sha256": "06aee7df3d33c2609a5fa82dc7a72d09994bcd4095147b2211cecc89158233b5"
+    }
+  },
+  "ssrn_reference": {
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7579158",
+    "status": "author_confirmed_identity",
+    "evidence": "SSRN HTTP 403; DOI content negotiation and Crossref/DataCite metadata returned 404; search returned no indexed record; no browser available. User clarification pending.",
+    "doi_added": false,
+    "title": "Mathematical Frontiers in the OpenAI Research Release: Cancellation, Positivity, and Changes of Representation",
+    "paper": "frontiers",
+    "identity_confirmation": "Author explicitly confirmed the complete title in conversation on 8 October 2026. Title and author independently match the immutable public GitHub manuscript. SSRN page content was not retrievable."
+  },
+  "citation_policy": "Original mathematical claims retain primary citations; companion reviews are cited for their specific analyses. Self-citations are counted separately from prior independent scholarly literature. No unverified DOI, journal, volume, pages, or peer-reviewed status was added.",
+  "verification": [
+    "Citation-key coverage and saved identity/support ledgers",
+    "All four PDFs built without unresolved citations or overfull boxes",
+    "All 87 final pages rendered and visually inspected",
+    "SSRN entry checked in the rendered bibliographies of Lean, Counting, and Numerical"
+  ],
+  "limits": "Local comparison of these four papers, not an exhaustive external similarity search or a journal decision. Existing mathematical checks are retained; this editorial revision changes no theorem, experiment, or implementation."
+}

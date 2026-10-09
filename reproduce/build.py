@@ -14,6 +14,10 @@ def main():
         build = Path(temporary)
         for source in [*PAPER.glob('*.tex'), PAPER/'references.bib']:
             shutil.copy2(source,build/source.name)
+        # Retained publication figures are build inputs; regenerating them is optional.
+        figures = PAPER / 'figures'
+        if figures.exists():
+            shutil.copytree(figures, build / 'figures')
         commands = [['pdflatex','-interaction=nonstopmode','-halt-on-error','main.tex'],
                     ['bibtex','main'],
                     ['pdflatex','-interaction=nonstopmode','-halt-on-error','main.tex'],

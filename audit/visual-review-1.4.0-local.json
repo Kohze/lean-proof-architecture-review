@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-08",
+  "pdf_sha256": "7e7900d6ad49ae746e90fb1f5993cb3beb5434b94b746e76f6ed05225a919230",
+  "pages_rendered": 32,
+  "all_contact_sheets_inspected": true,
+  "full_size_pages_inspected": [
+    1,
+    2,
+    21,
+    26,
+    27,
+    28
+  ],
+  "comparison_chart_inspected": true,
+  "checks": [
+    "All four contact sheets checked for clipping, overlap and pagination.",
+    "Rewritten abstract and introduction inspected at full size.",
+    "New discussion subsection and its two source footnotes inspected at full size.",
+    "Figure 1 remains legible, with caption on page 21; the numerical content is unchanged.",
+    "Final discussion and data-availability transition inspected at full size."
+  ],
+  "unresolved_visual_defects": []
+}

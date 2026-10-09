@@ -1,0 +1,87 @@
+{
+  "accessed": "2026-10-08",
+  "scope": "Verified public manuscript editions; self-citations are identified separately from prior independent literature.",
+  "references": [
+    {
+      "key": "GounderFrontiers2026",
+      "title": "Mathematical Frontiers in the OpenAI Research Release: Cancellation, Positivity, and Changes of Representation",
+      "repo": "openai-mathematical-frontiers-review",
+      "edition": "v1.0.1",
+      "type": "misc",
+      "authors": [
+        "Robin Gounder"
+      ],
+      "year": 2026,
+      "primary_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7579158",
+      "note": "SSRN working paper, abstract no. 7579158",
+      "reference_category": "companion_manuscript",
+      "claim_supported": "Related study and division of analytical scope; primary theorem claims remain attributed to their original sources.",
+      "identity_evidence": {
+        "paper": "frontiers",
+        "source_url": "https://raw.githubusercontent.com/Kohze/openai-mathematical-frontiers-review/313f34c453227f9ed93fe8db7f5281c3ccb96d23/main.tex",
+        "source_sha256": "bdfefa67307bb18474c020f53505daf9a9da992fbca5e59aa8a6325dea919ca2",
+        "title_block": "Mathematical Frontiers in the OpenAI Research Release:\\\r\nCancellation, Positivity, and Changes of Representation}",
+        "author": "Robin Gounder",
+        "year": 2026,
+        "verification": "Title and author read from immutable public manuscript source; manuscript edition, not journal publication."
+      },
+      "ssrn_identity_evidence": {
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7579158",
+        "status": "author_confirmed_identity",
+        "evidence": "SSRN HTTP 403; DOI content negotiation and Crossref/DataCite metadata returned 404; search returned no indexed record; no browser available. User clarification pending.",
+        "doi_added": false,
+        "title": "Mathematical Frontiers in the OpenAI Research Release: Cancellation, Positivity, and Changes of Representation",
+        "paper": "frontiers",
+        "identity_confirmation": "Author explicitly confirmed the complete title in conversation on 8 October 2026. Title and author independently match the immutable public GitHub manuscript. SSRN page content was not retrievable."
+      }
+    },
+    {
+      "key": "GounderCounting2026",
+      "title": "Approximate Counting and Uniform Sampling: A Critical Review of Matroid Intersections, Contingency Tables, and Graph Switch Chains",
+      "repo": "counting-and-sampling-review",
+      "edition": "paper-2026-10-08",
+      "type": "misc",
+      "authors": [
+        "Robin Gounder"
+      ],
+      "year": 2026,
+      "primary_url": "https://github.com/Kohze/counting-and-sampling-review/releases/tag/paper-2026-10-08",
+      "note": "Companion manuscript, edition paper-2026-10-08",
+      "reference_category": "companion_manuscript",
+      "claim_supported": "Related study and division of analytical scope; primary theorem claims remain attributed to their original sources.",
+      "identity_evidence": {
+        "paper": "counting",
+        "source_url": "https://raw.githubusercontent.com/Kohze/counting-and-sampling-review/f43457381c7139d4c82d1c168b947f1e6a7bc92a/main.tex",
+        "source_sha256": "d198c2039a343125a10cb9cc20a9a9aa109fa94be41b2fb49d0fb5de5f00825f",
+        "title_block": "Approximate Counting and Uniform Sampling:\\\\\r\nA Critical Review of Matroid Intersections, Contingency Tables, and Graph Switch Chains}",
+        "author": "Robin Gounder",
+        "year": 2026,
+        "verification": "Title and author read from immutable public manuscript source; manuscript edition, not journal publication."
+      }
+    },
+    {
+      "key": "GounderNumerical2026",
+      "title": "Finite numerical-range certificates for polynomial matrix computations: a rational prototype with comparative controls",
+      "repo": "numerical-range-certificates",
+      "edition": "paper-2026-10-08",
+      "type": "misc",
+      "authors": [
+        "Robin Gounder"
+      ],
+      "year": 2026,
+      "primary_url": "https://github.com/Kohze/numerical-range-certificates/releases/tag/paper-2026-10-08",
+      "note": "Companion manuscript, edition paper-2026-10-08",
+      "reference_category": "companion_manuscript",
+      "claim_supported": "Related study and division of analytical scope; primary theorem claims remain attributed to their original sources.",
+      "identity_evidence": {
+        "paper": "numerical",
+        "source_url": "https://raw.githubusercontent.com/Kohze/numerical-range-certificates/ccd6606b8b050236e4adf109d147ccab241b1d84/paper/main.tex",
+        "source_sha256": "07eec1a0dadef45420c5f39e6b831d7c8a0c406ab23f5a6343383bdc861df5ee",
+        "title_block": "Finite numerical-range certificates for polynomial matrix computations:\\\\\r\na rational prototype with comparative controls}",
+        "author": "Robin Gounder",
+        "year": 2026,
+        "verification": "Title and author read from immutable public manuscript source; manuscript edition, not journal publication."
+      }
+    }
+  ]
+}

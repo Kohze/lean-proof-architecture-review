@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-08",
+  "edition": "v1.1.1",
+  "pdf_sha256": "7a7213b9a94197145e430d1dc9692b7c376061482e53fd4c91632e52bad6190e",
+  "pages_rendered_and_inspected": 23,
+  "method": "All 23 final pages inspected through three contact sheets; full final pages 3, 16, 17 and 20 inspected for overview placement, code, propositions and end matter. No clipping, overlaps, missing glyphs or unresolved layout defects seen.",
+  "overview_table": "Table 1 occupies one page in Section 3 before the detailed cases, with visible row rules and spacing.",
+  "checks": [
+    "No clipping or overlap seen",
+    "No missing glyphs seen",
+    "No detached proposition/proof block seen",
+    "Code example with its introduction",
+    "Availability statement starts as one block",
+    "References and footnotes legible",
+    "Disclosure only in its dedicated section"
+  ],
+  "unresolved_visual_defects": [],
+  "final_latex_build_problems": []
+}

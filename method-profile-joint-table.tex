@@ -1,0 +1,18 @@
+\begin{table}[H]
+\centering\small
+\caption{OpenAI minus Mathlib differences in percentage points, with subject-only and joint subject/length standardization. Both use the module/body sampling measure. The 95\% percentile-bootstrap intervals resample OpenAI modules with Mathlib cell means fixed. The joint comparison covers 69 cells and 93.75\% of the OpenAI measure.}
+\label{tab:joint-profile}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabular}{@{}p{6.0cm}rrr@{}}
+\toprule
+Written feature & Subject only & Subject + length & 95\% joint interval \\
+\midrule
+Outer tactic block & +29.2 & +10.4 & 9.3--11.5 \\[5pt]
+Local claims or calculation chains & +34.1 & +5.8 & 4.4--7.3 \\[5pt]
+Arithmetic or algebra tactics & +30.5 & +22.8 & 20.3--25.4 \\[5pt]
+Restricted simplification & +22.9 & +7.7 & 5.4--9.8 \\[5pt]
+Finite decision & +4.9 & +4.3 & 3.0--5.9 \\[5pt]
+\bottomrule
+\end{tabular}
+\end{table}

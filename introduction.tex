@@ -1,62 +1,86 @@
 \section{Introduction}
 
-A formal proof can cross several mathematical languages before reaching
-its conclusion. A graph becomes a Boolean matrix, a differential form
-acquires a continuously bundled representation, or an estimator becomes
-a program reading a particular sequence of random bits. Each crossing
-raises the same question: what information must survive for the next
-argument to remain valid?
+A formal proof often changes the language in which its objects are
+represented. A graph becomes a Boolean matrix; an algebraic wedge product
+becomes a continuous bilinear operator; a randomized estimator becomes a
+program reading addressed tape bits. The next argument needs more than a
+new description of the object. It needs a theorem preserving the
+particular quantity or operation on which that argument depends.
 
-We study the proved correspondences that answer this question. We call
-them preservation interfaces: they specify both the relation between
-representations and the information available to a later construction.
-An accuracy event requires the output probability law; differentiation
-requires suitable local information about a field; an equation in named
-coordinates requires the coordinate maps themselves. Equivalence of
-underlying objects is useful only when it supplies the relation that the
-next step consumes.
+We call such correspondences preservation interfaces. An interface
+specifies the relation between two representations and exposes the
+information available to a later construction. To transfer an accuracy
+guarantee, it must preserve the relevant event probability; equality of
+output laws supplies a reusable sufficient condition. To differentiate a
+field, it must provide appropriate local agreement. To transport an
+equation in named coordinates, it must identify the coordinate maps.
+These requirements explain both the mathematical content and the formal
+shape of the interfaces studied here.
 
-The OpenAI Lean collection offers six detailed cases for this comparison
-\citep{OAIRepository}. Common-base counting and graph switch chains show
-how finite representations support probabilistic guarantees. The Mahler
-and Crouzeix arguments show how algebraic identities, analytic estimates,
-and auxiliary domains meet. Trace ideals and marked character-variety
-diagrams show how an invariant or a change of coordinates can retain
-enough data to reconstruct and transport a specific object. The first
-four selected statements are public endpoints; the final two are support
-results with their own explicit conclusions.
+Six developments in the OpenAI Lean collection provide the comparison
+\citep{OAIRepository}. Common-base counting and graph switch chains
+connect finite representations to probabilistic guarantees. The Mahler
+and Crouzeix arguments connect algebraic identities to differentiation,
+integration, and norm estimates. Trace ideals and marked character-variety
+diagrams reconstruct or transport algebraic data. The first four selected
+statements are public theorem endpoints; the last two are support results.
+Keeping these roles explicit allows the comparison to follow the
+mathematical work performed by each selected construction.
 
-Three questions guide each case. What does the intermediate representation
-retain? Which theorem connects it to the intended object? Where does that
-theorem discharge the next step's hypotheses? The review is intended for
-mathematicians reading formal developments and for formalizers choosing
-interfaces. Its contribution is a source-anchored comparison, supported
-by small examples that explain why a weaker correspondence can fail.
+Three questions guide each case: what does the intermediate representation
+retain, which theorem relates it to the intended object, and how is that
+theorem used in the next step? The case studies answer these questions
+through source declarations and worked mathematical examples. A separate
+exploratory survey compares the written proof methods of 800 uniformly
+sampled OpenAI modules with the pinned Mathlib dependency. It distinguishes
+average within-module practice from body frequencies dominated by large
+certificate batches, then examines broad subject and proof-length
+composition. The two analyses serve mathematicians reading formal source
+and formalizers designing reusable interfaces.
 
-This perspective builds on established accounts of formalization.
-Lean combines dependent type theory, an extensible elaborator, and a
-programming language \citep{deMouraUllrich2021}; Mathlib provides a shared
+Together, they describe a division of proof work. Representation and
+preservation lemmas make the hypotheses of a local calculation available;
+simplification, arithmetic tactics, or exact decision procedures then
+check the resulting obligation. Arithmetic and algebra tactics remain
+substantially more prevalent after joint subject and length controls.
+The corresponding differences in tactic blocks and intermediate claims
+are smaller under these controls. Source examples explain how such
+devices operate within particular proofs: the construction determines
+which goals reach a tactic and why the available hypotheses suffice.
+
+Companion reviews assess the proposed mathematical advances against
+prior results \citep{GounderFrontiers2026} and examine counting and
+sampling applications \citep{GounderCounting2026}. The present review
+uses common bases, Mahler, and Crouzeix to study a different question:
+how the formal source connects its mathematical representations and
+organizes the proof obligations between them.
+
+The comparison builds on established accounts of formalization. Lean
+combines dependent type theory with an extensible elaborator and a
+programming language \citep{deMouraUllrich2021}; Mathlib supplies a shared
 mathematical vocabulary \citep{mathlib2020}.
-\citet{AvigadEtAl2024Anatomy} follow a linear-algebra example through
-formal proof, generalization, and connection with an existing Mathlib
-theorem. \citet{CommelinTopaz2024} study abstraction boundaries for
-mathematical construction and collaboration, using usable specifications
-as evidence of alignment with informal mathematics. Our comparison
-follows already-written preservation arguments across several settings.
+\citet{AvigadEtAl2024Anatomy} trace a linear-algebra example through
+formal proof, generalization, and connection to an existing Mathlib
+theorem. \citet{CommelinTopaz2024} explain how usable specifications
+support mathematical construction and collaboration. Here we compare
+the mathematical payload of preservation statements across several
+settings and relate their local uses to a corpus-level method profile.
 
-Large formalizations provide further precedents. The odd-order theorem
-and Kepler conjecture combined extensive libraries, proof decompositions,
-and verified computation \citep{GonthierEtAl2013,HalesEtAl2017}.
-Perfectoid spaces and schemes in Lean required carefully chosen objects
-and interfaces \citep{Perfectoid2020,Schemes2021}. Against that background,
-the interest here lies in the particular mathematical relation proved at
-each transition and the operation it enables. The elementary examples
-serve that explanatory purpose. Preservation of data, laws, estimates,
-and local information provides a common reading framework for the cases.
+The odd-order theorem and Kepler conjecture establish precedents for
+large proof decompositions and verified computation
+\citep{GonthierEtAl2013,HalesEtAl2017}. Lean formalizations of perfectoid
+spaces and schemes illustrate the importance of representation choices
+\citep{Perfectoid2020,Schemes2021}. These precedents frame the novelty
+question in this review: which established device is used, what
+project-specific information does its interface preserve, and what later
+step becomes possible because that information is available?
 
 Section~\ref{sec:method} describes selection and evidence.
 Section~\ref{sec:cases} begins with the overview in
 Table~\ref{tab:overview}, then develops the six cases.
-Section~\ref{sec:worked} isolates their preservation requirements in
-worked examples. Section~\ref{sec:discussion} brings the comparisons
-together and considers their use in new formalizations.
+Section~\ref{sec:profile} compares source-written proof methods with
+Mathlib, including joint composition controls and certificate
+concentration. Section~\ref{sec:worked} isolates the cases' preservation
+requirements in elementary examples. Section~\ref{sec:discussion}
+connects the mathematical and empirical findings and develops guidance
+for new formalizations.

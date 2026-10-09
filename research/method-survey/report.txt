@@ -1,0 +1,140 @@
+PROOF-WRITING METHODS IN THE OPENAI LEAN COLLECTION
+Exploratory comparison with the pinned Mathlib dependency; 8 October 2026
+
+Finding: the sampled OpenAI modules use a more tactic-oriented style,
+with more explicit arithmetic discharge and intermediate claims than this
+Mathlib baseline. Exact certificate batches form a substantial separate layer.
+These are differences in the use and composition of established Lean devices.
+
+SOURCES AND UNITS
+OpenAI revision: fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb
+Mathlib revision: d13f23b723b8a846827a245b89c10fc7d3f11612
+Population: 122,457 tracked .lean modules strictly under lean/OAI/.
+Sample: 800 modules with the lowest SHA-256(seed + NUL + path) ranks;
+seed lean-method-profile-2026-10-08-v1. Membership was fixed before fetching contents.
+Mathlib census: 8,070 mathematical source modules; exclude infrastructure
+roots Tactic, Lean, Util, Testing and umbrella files.
+Extracted source-written named theorem/lemma bodies: 13,309 OpenAI; 186,751 Mathlib.
+Proof-bearing modules: 784 OpenAI; 7,348 Mathlib.
+
+Module-balanced means: choose a proof-bearing module uniformly, then an
+extracted body within it uniformly. It is an average of within-module rates,
+not the fraction of files containing a feature. Pooled rates weight every
+extracted body equally. Module balancing was added as an exploratory sensitivity
+analysis after observing certificate concentration; the original pooled results
+are also retained. There was no registered confirmatory study.
+
+MODULE-BALANCED PERCENTAGES
+Feature                                  OpenAI  Mathlib   OAI 95% interval
+Outer tactic block                         92.8     54.5    91.8--93.9
+Term with a tactic subproof                 0.5      5.7     0.2--0.9
+Term without a tactic subproof              6.7     39.8     5.7--7.7
+Rewrite or simplify                        72.5     52.4    70.3--74.6
+Local claims or calculation chains         61.1     21.0    58.8--63.6
+Arithmetic or algebra tactics              38.2      2.7    35.5--40.8
+Restricted simplification                  38.5     13.0    36.4--40.9
+Cases or induction                         19.8     12.8    18.0--21.8
+Finite decision                             6.3      0.2     4.9--7.8
+The first three rows sum to 100%; subsequent categories overlap.
+Intervals: 1,500 percentile-bootstrap resamples of OpenAI proof-bearing
+modules (seed 764983), conditional on the extraction and feature definitions.
+They exclude systematic extraction error, task mismatch, and future changes.
+Mathlib values are descriptive census rates at the recorded revision.
+
+SUBJECT AND LENGTH CHECKS
+For 18 shared directory domains, retain 735 OpenAI proof-bearing modules
+(93.75%). Reweight Mathlib within-domain module means to the corresponding
+OpenAI module shares. These are coarse subject labels, not task-matched proofs.
+Outer tactic block: 93.0% OpenAI vs 63.8% standardized Mathlib.
+Term with a tactic subproof: 0.3% OpenAI vs 5.7% standardized Mathlib.
+Term without a tactic subproof: 6.7% OpenAI vs 30.6% standardized Mathlib.
+Rewrite or simplify: 73.1% OpenAI vs 61.9% standardized Mathlib.
+Local claims or calculation chains: 61.4% OpenAI vs 27.3% standardized Mathlib.
+Arithmetic or algebra tactics: 37.6% OpenAI vs 7.1% standardized Mathlib.
+Restricted simplification: 38.7% OpenAI vs 15.8% standardized Mathlib.
+Cases or induction: 19.8% OpenAI vs 15.7% standardized Mathlib.
+Finite decision: 5.5% OpenAI vs 0.6% standardized Mathlib.
+Extensionality/congruence becomes similar: 13.8% vs 13.1%.
+Length-band checks are a separate POOLED analysis in common domains,
+with within-band domain standardization. Local claims: 1.5% vs 1.6%
+(1-3 nonempty code lines), 47.7% vs 39.1% (4-10), 89.8% vs 85.2% (11-30).
+Arithmetic remains higher in all bands: 31.1% vs 6.8% for 4-10 lines.
+Both corpora have a pooled median of two nonempty proof-body lines.
+The larger local-claim average partly reflects length composition.
+
+CERTIFICATES AND CONCENTRATION
+The largest sampled module contributes 14.9% of OpenAI bodies; the ten
+largest contribute 48.2%. Pooled finite decision is 48.9%, compared with
+module-balanced 6.3%. Pooled rewriting is 41.5% vs Mathlib 48.8%, reversing
+the module-balanced comparison. These units answer different questions.
+LowBlock36_10.lean has 872 bodies, 792 with finite decision: exact integer
+interval entries are checked using decide +kernel and then assembled.
+Barrier59.lean composes Horner steps with certified tail bounds.
+The architecture places exact finite certificates beneath soundness and
+assembly lemmas that support larger mathematical estimates.
+
+VALIDATION AND INTERPRETATION
+Lexical coverage of DETECTED named declarations: 99.98% OpenAI, 99.28% Mathlib.
+Definitions, instances, anonymous examples and macro-generated declarations
+are outside the unit. Most logged exclusions use equation-style syntax.
+Nested comments and strings are masked; feature flags count a listed token
+at least once per extracted body. Tokens do not measure elapsed tactic time,
+internal tactic execution, mathematical novelty, or dependency axiom usage.
+Forty stratified source-inspected bodies exposed two initial theorem-type
+let-binding boundary errors. Corrected extraction matches those cases; eleven
+synthetic edge-case checks pass. This cohort is not an independent random
+estimate of parser accuracy. Initial review inputs and corrections are retained.
+All 800 source blobs and hash-rank sample membership pass independent checks.
+
+Listed general search tokens occur at module-balanced rates of 0.07% vs 3.35%.
+Arithmetic and simplification are also automation. Unlisted search tactics
+and macro expansions are not captured. More simp only is a rewrite-control
+choice; maintenance benefits require examining the particular proof.
+Mathlib is a concrete baseline with different theorem populations and curation
+goals. This comparison does not isolate an effect of model generation or
+establish a percentage of new mathematical methods.
+
+PRIMARY DOCUMENTATION
+https://leanprover-community.github.io/contribute/style.html
+https://github.com/leanprover/lean4/blob/v4.34.1/src/Init/Tactics.lean
+The pinned Lean source documents decide +kernel as kernel reduction.
+
+REPRODUCTION
+python reproduce/verify_method_profile.py
+python reproduce/profile_lean_methods.py <Mathlib-checkout-at-recorded-revision>
+python reproduce/summarize_method_profile.py --plot
+The final command optionally needs matplotlib; the data checks do not.
+The research/method-survey directory contains population, manifests, source
+bytes, CSV tables, feature definitions, summaries, and validation records.
+
+DIFFERENCES FROM MATHLIB (PERCENTAGE POINTS)
+Full comparison / common domains with a standardized Mathlib baseline:
+Outer tactic block: +38.3 / +29.2
+Term-only proof: -33.1 / -23.8
+Local claims / calculation chains: +40.2 / +34.1
+Arithmetic / algebra tactics: +35.5 / +30.5
+Restricted simplification: +25.5 / +22.9
+Rewrite / simplify: +20.1 / +11.2
+Cases / induction: +7.0 / +4.2
+Finite decision: +6.1 / +4.9
+Extensionality / congruence: +2.4 / +0.7
+Zero is the Mathlib baseline. Both comparisons use module-balanced rates.
+The common-domain cohort has 735 OpenAI proof-bearing modules in 18 domains.
+See figures/method-shift.png for the integrated manuscript figure.
+
+JOINT SUBJECT AND LENGTH COMPARISON
+Uniform proof-bearing module, then uniform body; within-cell module
+contributions retain their body fractions. Mathlib conditional rates
+are reweighted to the OpenAI domain/length cell probabilities.
+Shared cells: 69; OpenAI measure coverage: 93.75%.
+mode_tactic: +10.4 pp; exploratory 95% interval [9.3, 11.5].
+local_claims_calc: +5.8 pp; exploratory 95% interval [4.4, 7.3].
+arithmetic_algebra: +22.8 pp; exploratory 95% interval [20.3, 25.4].
+restricted_simplification: +7.7 pp; exploratory 95% interval [5.4, 9.8].
+finite_decision: +4.3 pp; exploratory 95% interval [3.0, 5.9].
+Intervals resample OpenAI modules; Mathlib cell means stay fixed.
+Length may itself reflect style, so adjustment changes the question.
+This joint module/body analysis is distinct from the older pooled
+length-band check above. Table 3 presents the joint results.
+python reproduce/audit_completeness.py regenerates cell-level data
+and method-profile-joint-table.tex from the retained proof table.

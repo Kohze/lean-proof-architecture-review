@@ -1,0 +1,25 @@
+\Needspace{27\baselineskip}
+\begin{table}[H]
+\centering
+\caption{Module-balanced proof-body features (percent). The first three rows partition proof modes; subsequent features overlap. OpenAI intervals are exploratory 95\% module-bootstrap intervals. Mathlib is the census baseline at the pinned revision.}
+\label{tab:profile}
+\small
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabular}{@{}p{6.7cm}rrr@{}}
+\toprule
+Written feature & OpenAI & Mathlib & OpenAI interval \\
+\midrule
+Outer tactic block & 92.8 & 54.5 & 91.8--93.9 \\[4pt]
+Term with a tactic subproof & 0.5 & 5.7 & 0.2--0.9 \\[4pt]
+Term without a tactic subproof & 6.7 & 39.8 & 5.7--7.7 \\[4pt]
+\midrule
+Rewrite or simplify & 72.5 & 52.4 & 70.3--74.6 \\[4pt]
+Local claims or calculation chains & 61.1 & 21.0 & 58.8--63.6 \\[4pt]
+Arithmetic or algebra tactics & 38.2 & 2.7 & 35.5--40.8 \\[4pt]
+Restricted simplification & 38.5 & 13.0 & 36.4--40.9 \\[4pt]
+Cases or induction & 19.8 & 12.8 & 18.0--21.8 \\[4pt]
+Finite decision & 6.3 & 0.2 & 4.9--7.8 \\[4pt]
+\bottomrule
+\end{tabular}
+\end{table}

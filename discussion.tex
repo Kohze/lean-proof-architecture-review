@@ -1,124 +1,263 @@
-\section{Discussion: preservation and reuse}
+\section{Discussion: interfaces and the division of proof work}
 \label{sec:discussion}
 
-\subsection{What the comparison reveals}
+\subsection{What the mathematical comparison reveals}
 
-Across the six cases, the downstream operation determines the strength of
-the required correspondence. An accuracy probability depends on the
-output law. A named-coordinate equation depends on the coordinate map.
-Ambient differentiation uses local information about a field. An
-optimized inequality depends on the normalization and weights of its
-estimates. The four recurring requirements---preservation of exact data,
-laws, estimates, and local differential information---can occur together
-within one development.
+The downstream operation determines what a preservation statement must
+expose. Transferring an accuracy guarantee requires the relevant event
+probability; equality of output laws supports all such transfers.
+A named-coordinate equation uses the coordinate map. Ambient
+differentiation uses local information about a field. A sharp norm
+estimate uses the normalization and weights of the preceding bounds.
+Exact data, laws, estimates, and local differential information can
+therefore appear together in one development.
 
-The most revealing comparisons concern a change in what the proof needs.
-The common-base construction preserves a distribution through
-reindexing, then preserves execution for a fixed input bank. Mahler first
-identifies whole form-valued fields so that it can differentiate them,
-then uses agreement on tangent tuples to compare boundary integrals.
-The trace-cone construction recovers ideal order from addition alone,
-then uses convergence and scalar compatibility to recognize the ideals
-of a particular trace. In each case, following the next operation
-explains why the interface has the fields it does.
+The most informative transitions occur when the next operation changes
+these requirements. The common-base proof preserves a distribution
+through reindexing, then execution on each supplied bank. Mahler
+identifies form-valued fields for differentiation, then uses tangential
+agreement for boundary integration. Trace-cone reconstruction obtains
+ideal order from addition, then uses convergence and scaling to identify
+the ideals of a particular trace. Following the next operation explains
+why each interface has its particular fields.
 
-Two cases also show how a small calculation can govern a large estimate.
-For graph switches, the total-two matrix table identifies an exceptional
-direction whose aggregate contribution is paid for by a projection
-budget. For Crouzeix, rectangular compressions and two polynomial orders
-produce energy bounds that close at the constant two. The important
-relation is between the local calculation and the global quantity it
-controls.
+Implementation details sharpen the comparison. Encoded width and
+numerical attributes answer different complexity questions in the
+compiler. The graph restriction identity restores the counting norm
+when local assignment estimates are summed. Image filters extend a
+carrier-indexed convergence property to arbitrary nets. These choices
+expose mathematical data through lemmas that later constructions can
+reuse. The compiled ideal-composition example in
+Section~\ref{sec:upstream-reuse} demonstrates this reuse directly.
+
+Two cases show how a local calculation controls a global estimate.
+The graph's total-two table isolates an exceptional direction whose
+aggregate energy is paid for by switch gains. In Crouzeix, rectangular
+compressions and two orders of polynomial multiplication produce
+compatible energy bounds. The final scalar cancellation is short because
+the earlier constructions have supplied its exact constants and signs.
 
 These patterns have substantial antecedents. Verified compilers establish
 semantic preservation between source and implementation
 \citep{Leroy2009,CakeML2014}; probabilistic program logics reason about
 distributions and observations \citep{CertiCrypt2009,EasyCrypt2011}.
-Algebraic hierarchy design and specification-driven collaboration treat
-interfaces as mathematical objects
-\citep{GarillotEtAl2009,Baanen2022,CommelinTopaz2024}. The contribution of
-this comparison lies in showing the specific mathematical payload of
-those interfaces and how their composition supports the selected proofs.
+Algebraic hierarchy design and specification-driven collaboration make
+interfaces part of mathematical construction
+\citep{GarillotEtAl2009,Baanen2022,CommelinTopaz2024}. The present
+comparison identifies what those interfaces preserve in the selected
+proofs and how their composition supplies a later calculation's inputs.
+
+\subsection{Tactic use and the division of proof work}
+\label{sec:tactics-synthesis}
+
+The corpus survey adds a measured comparison of written proof practice.
+After joint subject and proof-length standardization, arithmetic and
+algebra tactics remain more prevalent by 22.8 percentage points. Tactic
+mode and local claims retain differences of 10.4 and 5.8 points,
+respectively. The larger subject-only contrasts in
+Figure~\ref{fig:method-shift} also reflect proof-length composition;
+Table~\ref{tab:joint-profile} makes that distinction explicit. Arithmetic
+emphasis is the clearest persistent difference among these features.
+
+The common-base fold-cost proof shows how such local automation fits
+into a semantic argument. Execution identities justify applying the
+induction hypothesis to the remaining fold. The safety invariant and
+width bound supply its premises. The following consecutive source lines
+then apply that hypothesis and close the cost inequality:\footnote{Source:
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\#L16880-L16907}{\src{CommonBases.lean}, lines 16880--16907}; excerpt, lines 16905--16907.}
+\begin{lstlisting}[caption={Lean source excerpt: fold induction followed by arithmetic discharge.},label={lst:fold-cost}]
+have hh := ih z' y' e (hs.2 z' hrun) hw' ht
+simp only [List.length_cons,Nat.add_mul,Nat.one_mul]
+omega
+\end{lstlisting}
+Here \src{hs.2} supplies safety after the accumulator update, and
+\src{hw'} bounds the remaining list's width. Expanding the successor
+length exposes shared product terms. Although the displayed cost bound
+contains multiplication, the remaining comparison fits linear
+natural-number arithmetic. The semantic and size arguments prepare the
+obligation that \src{omega} checks.
+
+\Needspace{14\baselineskip}
+The Crouzeix proof supplies a parallel example in analysis. Fourier and
+positive-block estimates have already produced bounds with the same
+energy $a$ and norm $\gamma$. Their closing scalar argument is:\footnote{Source:
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Analysis/DirectCrouzeix/DomainCore.lean\#L105-L117}{\src{DirectCrouzeix/DomainCore.lean}, lines 105--117}; excerpt, lines 111--117.}
+\begin{lstlisting}[caption={Lean source excerpt: the closing Crouzeix energy calculation.},label={lst:crouzeix-close}]
+have hb : 2*a ≤ 8*a/γ^2 := by
+  simp only [mul_div_assoc] at hPE hQE ⊢
+  linarith
+have hmul := (le_div_iff₀ (sq_pos_of_pos hγ)).mp hb
+change γ ≤ 2
+have hg2 : γ^2 ≤ 4 := by nlinarith [hapos]
+nlinarith
+\end{lstlisting}
+The first tactic combines the available energy inequalities. Positivity
+of $\gamma$ then permits denominator clearing, and positivity of $a$
+permits the final cancellation. The choice of compressions, Fourier
+weights, and zero-mode identities creates the relations that these
+arithmetic steps certify.
+
+Exact numerical certificates exhibit a further division of work. Their
+finite checks verify retained interval data; assembly and soundness
+lemmas explain why those checks imply the required estimate. Across
+these examples, representation design and local automation meet at an
+explicit obligation with proved hypotheses. The survey establishes a
+broader method profile, while the case tracing explains mechanisms
+within completed source proofs. Testing effects on completion rates,
+development effort, or maintenance would require matched tasks and
+corresponding outcome measurements.
+
+\subsection{Proof generation, simplification, and mathematical explanation}
+\label{sec:generation-explanation}
+
+The comparison identifies differences between completed source corpora.
+Mathlib is a collaborative library with varied authoring histories, rather
+than a controlled sample of unaided human proofs. These data therefore
+cannot establish a distinct AI reasoning process, an advantage in
+completion time, or a superior method of doing mathematics. They suggest
+a workflow hypothesis: automation may be especially effective when
+proved interfaces expose many local obligations in forms handled by
+existing tactics. The relevant conditions---available representations,
+library coverage, and checkable local goals---can vary within a subject
+as well as between subjects. Interface construction remains part of the
+work whose cost must be measured.
+
+Obtaining a checked proof and obtaining an economical explanation are
+separate objectives. ProofOptimizer reports substantial token
+reductions in generated Lean proofs, using Lean to check replacements
+against the original theorem statements \citep{GuEtAl2025ProofOptimizer}. Lean Refactor studies proof
+length, compilation cost, and compatibility across library versions as
+distinct optimization objectives \citep{LuEtAl2026LeanRefactor}. These
+results indicate scope for refactoring on the evaluated benchmarks;
+they do not measure redundancy in the six
+developments examined here. Shorter tactic scripts can also invoke
+heavier automation. Source length, proof-checking cost, dependency
+structure, and explanatory clarity should consequently be assessed
+separately.
+
+Together these observations motivate a research direction: connect
+proof generation to compression, reusable interfaces, and mathematical
+explanation. A useful interface may amortize its construction cost over
+many later results, while a concise final proof may conceal substantial
+setup. Claims of improved mathematical practice require evidence about
+total effort, generality, downstream reuse, and reader understanding,
+alongside correctness. The present findings locate possible mechanisms
+and evaluation targets without establishing those improvements.
 
 \subsection{Using the comparison in a new formalization}
 
-Start with the intended downstream statement. Write the equation,
-inequality, or event probability that the next step requires. Then identify
-what the proposed representation changes: multiplicities, coordinate
-order, multiplication order, or a neighborhood of definition. The
-preservation statement should connect those changed data to the quantity
-the next theorem consumes.
+Begin with the quantity the next theorem consumes: an event probability,
+a coordinate equation, a derivative, or an inequality. Identify what a
+proposed representation changes, such as multiplicities, coordinate
+order, multiplication order, or the neighborhood of definition. The
+preservation statement should connect those changed data to that
+specific quantity.
 
-The examples in Section~\ref{sec:worked} make this choice concrete. For an
-accuracy event, preserving a mean is insufficient; its indicator
-expectation is enough, and a full output-law identity makes the interface
-reusable for other events. For ambient differentiation, neighborhood
-agreement is sufficient, while the later boundary integral may require
-only agreement on tangent tuples. A named seam equation needs its
-coordinate map. Proposition~\ref{prop:success-budget} then shows how
-several such obligations can meet: sampling loss, tape uniformity, and
-deterministic execution give one finite success count.
+The worked examples make the choice concrete. An event indicator is
+sufficient to transfer one accuracy probability, while a full output-law
+identity supports reuse for other events. Neighborhood agreement
+identifies ambient derivatives; tangential agreement can suffice for the
+later integral. A named seam equation needs its coordinate maps.
+Proposition~\ref{prop:success-budget} combines several interfaces in one
+count: implementation loss, tape uniformity, and deterministic execution
+jointly yield the success guarantee.
 
-Finally, follow the construction of the hypotheses for the actual inputs.
-The Mahler strip maps supply the analytic data, while the Crouzeix outer
-domains supply strict containment and the required estimates. In the
-marked-surface construction, using one splitting witness for the diagram
-and its values keeps their identifications coherent. These examples
-suggest reusable interfaces for a library: a small local model with a
-measure-preserving correspondence, a sufficient semantic relation, and
-explicit construction of the inputs that relation requires.
+Next, follow how the hypotheses are supplied for the actual inputs.
+Mahler's strip maps construct the analytic data, and Crouzeix's outer
+domains provide strict containment and the required estimates. In the
+marked-surface construction, one splitting witness supplies both the
+diagram and its coordinate identifications. The reusable design consists
+of a precise local model, a preservation relation, and a construction of
+the data required to apply it.
+
+Finally, inspect the local goals exposed by that design. A width
+invariant can reduce a compiler cost step to natural-number arithmetic.
+Positive denominators and nonzero factors can prepare an analytic
+cancellation. Exact interval data can make a numerical obligation
+decidable. The interface proofs assign established automation a concrete
+part of the larger mathematical argument to check.
 
 \subsection{Scope and further work}
 
-Selection favored explicit interfaces that could be traced in depth.
-It supports the present comparisons but does not estimate their frequency
-or development cost across the collection. The source analysis establishes
-what the inspected declarations state and how their constructions connect.
-A full assessment of the headline mathematical results additionally
-requires rebuilding their dependencies and examining the underlying
-arguments, with the endpoint and support-result distinctions retained.
+The six cases were selected for interfaces that could be traced in depth.
+Their mathematical comparisons are complemented by the separate uniform
+module sample. Joint domain/length controls and directory-family
+sensitivity checks sharpen the survey's descriptive interpretation.
+A comparison of analogous declaration roles and mathematical tasks would
+further separate library composition from choices about proof organization.
+Elaborated tactic traces and a held-out extraction-validation cohort
+would connect the lexical measurements more directly to executed proof steps.
+A prospective comparison could cross AI assistance with availability of
+proved representation interfaces on matched tasks, retaining unsuccessful
+attempts. Relevant outcomes include time to a checked proof, human
+intervention, inference and checking costs, later reuse, and blinded
+expert assessments of clarity. This would test the workflow hypothesis
+without treating completed-proof length as a causal control.
 
-For a mathematician, these cases offer a route into substantial formal
-source: locate the next operation, identify what it consumes, and follow
-the theorem that preserves that information. For a formalizer, they point
-to interfaces worth extracting into smaller libraries. The worked
-examples provide a modest version of that extraction, exposing a
-mathematical dependency in a form that can be inspected, reused, and tested.
+Source reading identifies the inspected declarations, their hypotheses,
+and the constructions connecting them. Compilation of the worked
+examples and the three-module trace-cone reuse experiment supplies
+additional checking evidence at those targets. Rebuilding the remaining
+case endpoints and examining their mathematical arguments would extend
+this assessment. Endpoint statements and support results retain their
+distinct roles throughout the comparison.
+
+For readers of substantial Lean developments, the practical route is to
+locate the next operation, identify what it consumes, and follow the
+theorem preserving that information. For formalizers, the cases show how
+interface design prepares local proof obligations. The corpus comparison
+adds evidence about which written devices are prevalent in this
+collection, with arithmetic emphasis persisting under coarse joint
+controls. The review brings these two levels together: the mathematical
+content of preservation statements and the local proof work they support.
 
 \Needspace{24\baselineskip}
 \section*{Data and code availability}
 
-The accompanying source package contains the LaTeX manuscript, verified
-reference records, declaration evidence ledgers, original Lean examples,
-and Python checks. The Lean examples use Lean 4.34.1 and import only
-\src{Lean}; their compiler log records the axioms reported for the five
-named theorems. The Python checks enumerate tape fibers and Boolean matrix
-counts using exact integers. The package README gives reproduction
-commands and identifies the pinned external sources. Public source links
-in the manuscript resolve to the reviewed repository revision.
+The accompanying reproduction repository (release~1.6.0) provides the
+manuscript source, data, and analysis code \citep{GounderArchitectureData2026}.
+The source package contains the LaTeX manuscript, reference records,
+declaration ledgers, original Lean examples, and Python checks. Five
+elementary Lean lemmas import only \src{Lean}. The upstream reuse
+experiment imports \src{OAI.Analysis.TraceCone.IdealTransport} and compiles
+its three-module dependency chain from unchanged source bytes. Both use
+Lean 4.34.1; the latter uses Mathlib revision
+\src{d13f23b723b8a846827a245b89c10fc7d3f11612}. Compiler logs retain the
+reported axioms. Exact Python checks enumerate tape fibers and Boolean
+matrix counts. The README gives reproduction commands and identifies the
+external dependencies.
+
+The method-survey directory retains the complete path population, all
+800 sampled source modules and their hashes, extraction tables, feature
+definitions, bootstrap summaries, and forty inspected validation cases.
+The joint comparison additionally retains cell weights, conditional
+rates, intervals, and the generated manuscript table. Baseline profiling
+requires the pinned Mathlib source checkout; the lexical survey reads
+source without elaborating the developments. Public manuscript source
+links resolve to the reviewed repository revision.
 
 The source inventory is the complete Git tree of \src{openai/math},
 inspected on 8 October 2026.\footnote{Reviewed revision:
 \src{fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb}. Public source links refer
 to that revision.} It contains 122,875 files with the \src{.lean}
-extension, including supporting modules. The separate formalization
-catalogue lists 173 source records and 200 main-result bindings
-\citep{OAICatalog}. These counts describe different units; none is a count
-of the developments studied in depth here.
+extension, including supporting modules. The package retains 546 source
+artifacts, including the \src{OAI} import closures for the six selected
+cases; twenty-one detailed records document the additional proof-body
+analysis. The separate formalization catalogue lists 173 source records
+and 200 main-result bindings \citep{OAICatalog}. These inventories count
+different objects and should be read alongside their stated units.
 
-
-Proof checking supplies complementary evidence. The collection provides
-Comparator challenge configurations \citep{OAIComparator}; the separately
-inspected checker implements statement comparison, dependency and axiom
-inspection, kernel replay, and an optional external checker
-\citep{ComparatorSource2026}.\footnote{Checker source revision:
-\src{ca04cfc72b550331658ec314bf47685281bfd4bf}. This pin records our
-infrastructure reading; the collection's installation instructions do
-not specify that revision.}
-The distinction between constructing a proof and checking it has a long
+The collection also supplies Comparator challenge configurations
+\citep{OAIComparator}. The inspected checker implements statement
+comparison, dependency and axiom inspection, kernel replay, and an
+optional external checker \citep{ComparatorSource2026}.\footnote{Checker
+source revision: \src{ca04cfc72b550331658ec314bf47685281bfd4bf}. This
+records the infrastructure source inspected; the collection's
+installation instructions do not specify that revision.}
+The distinction between proof construction and checking has a long
 history \citep{deBruijn1970,BarendregtWiedijk2005}; Lean typechecker
-verification provides a contemporary example \citep{Carneiro2025Lean4Lean}.
-Library maintenance addresses consistency at another level
-\citep{vanDoornEbnerLewis2020}. Understanding why a formal statement
-captures the intended mathematics still requires reading its objects
-and hypotheses.
+verification supplies a contemporary example \citep{Carneiro2025Lean4Lean}.
+Library maintenance addresses consistency across a growing development
+\citep{vanDoornEbnerLewis2020}. Interpreting the mathematics additionally
+requires reading the formal objects and hypotheses, the task pursued
+by the case studies here.

@@ -33,18 +33,9 @@
         "main.tex"
       ],
       "exit_code": 0
-    },
-    {
-      "command": [
-        "pdflatex",
-        "-interaction=nonstopmode",
-        "-halt-on-error",
-        "main.tex"
-      ],
-      "exit_code": 0
     }
   ],
-  "pages": 23,
+  "pages": 35,
   "warnings": [],
-  "pdf_sha256": "7a7213b9a94197145e430d1dc9692b7c376061482e53fd4c91632e52bad6190e"
+  "pdf_sha256": "b5c39b14a055a11048beb806fd98792d23352c6c048dc85445ba7d8c4faf8351"
 }

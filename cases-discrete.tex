@@ -1,7 +1,12 @@
 \subsection{Common bases: from a matroid representation to physical random tapes}
 \label{sec:common-bases}
 
-The common-bases development connects an approximate counting argument to a fixed oracle machine, including its bit operations and the tape positions from which it obtains randomness \citep{OAICommonBases}. Its organizing choice is to give the mathematical estimator, the finite random experiment, and the compiled program separate semantics, then prove the correspondences between them.
+The common-bases development follows an approximate count all the way to a
+fixed oracle program, its bit costs, and the tape positions supplying its
+randomness \citep{OAICommonBases}. Three descriptions of the computation
+are kept explicit: the mathematical estimator, a finite random experiment,
+and the compiled machine. Successive interfaces track the counted objects,
+the output law, and execution on a given input through this pipeline.
 
 \paragraph{Encoding the counting problem.}
 The mathematical problem is to count the common bases of two equal-rank matroids $M_1,M_2$ on an enumerated ground set $E=\operatorname{Fin}n$. The first representation replaces two simultaneous base conditions by one base condition. On $E\sqcup E$, set
@@ -14,30 +19,86 @@ The source proves that $T(A)$ is a base of $N$ exactly when $A$ is a base of bot
  Z\leq \sum_{A\subseteq E}q^{d(A)}\leq Z+2^nq,
  \qquad 0\leq q\leq1.
 \]
-This representation identifies the quantity approximated by the sampling argument. It also supplies a useful state space for exchanges: a plain state selects one element from every doubled pair, while a defect state has one empty pair, one full pair, and singleton choices elsewhere. The walk can pass through these paired defects; a hitting construction returns to plain states. The formalization can therefore distinguish the space supporting local moves from the transversals whose weighted count is ultimately estimated.
+The partition function now has a direct relation to the desired count:
+zero-deficiency terms contribute exactly $Z$, and every other term is at
+most $q$. The doubled ground set also supplies the exchange space. A plain
+state selects one element from each pair; a defect state has one empty
+pair, one full pair, and singleton choices elsewhere. The walk passes
+through paired defects before a hitting construction returns it to plain
+states. This separates the space convenient for local moves from the
+transversals whose weighted count is estimated.
 
-The next correspondence replaces rank access by independence queries. A greedy oracle routine computes the rank of an enumerated subset; its correctness identifies the oracle-defined deficiency and annealing weights with their mathematical counterparts. The estimator also uses a sampled zero-deficiency witness as a final guard. This gives the exact zero-count behavior later required of every machine execution.
+A greedy routine next computes rank from independence queries. Its
+correctness theorem identifies the implemented deficiency and annealing
+weights with the mathematical ones. A sampled zero-deficiency witness
+serves as the estimator's final guard. Because such a witness is a common
+base, this guard enforces the zero-count conclusion on every execution,
+including tapes outside the high-probability accuracy event.
 
 \paragraph{From experiments to a bounded program.}
-Finite random experiments are represented by trees whose internal nodes choose uniformly from a finite index set. A bounded implementation supplies each draw with a finite bank of rejection trials. Its fit condition requires at most $M$ successive draws and $H\geq\lceil\log_2 a\rceil$ bits per trial at every draw of arity $a$. With $D$ trials per draw, the development then bounds the loss in a $[0,1]$-valued observable by $M2^{-D}$. Both depth and width matter: insufficient trial width can force immediate failure regardless of $D$. A separate relation permits permutations of the outcome indices at each node and proves that these reindexings preserve expectations. Thus the abstract exchange walk and its code can use different finite enumerations while retaining the same output law.
+Finite random experiments are trees with uniform choices at their internal
+nodes. The bounded implementation gives each draw a bank of rejection
+trials. Its fit condition bounds the number of successive draws by $M$
+and requires $H\geq\lceil\log_2 a\rceil$ trial bits for each positive draw
+arity $a$. With $D$ trials per draw, the observable loss is at most
+$M2^{-D}$ for values in $[0,1]$. The width condition ensures that a trial
+can represent every outcome; increasing the number of undersized trials
+would not repair that defect. A separate reindexing relation permits
+permutations of outcome labels and proves expectation preservation.
+Consequently, the walk and its implementation may enumerate choices
+differently while agreeing in law.
 
-The code layer makes randomness explicit input. Its typed expressions take
-an input and a random bank, returning an optional value and the unused
-bank. A realization theorem relates execution on every bank to the
-corresponding random tree. For a Metropolis step, the construction follows
-the actual proposal, acceptance calculation, Bernoulli experiment, and
-lazy branch. The complete estimator composes these experiments with
-the witness guard.
+In the expression language, randomness becomes explicit input. Evaluation
+takes a value and a random bank and returns an optional result together
+with the unused bank. A realization theorem relates this deterministic
+execution, bank by bank, to the random tree. For a Metropolis step, the
+proof follows the proposal, acceptance calculation, Bernoulli choice, and
+lazy branch. Composition with the witness guard then gives the complete
+estimator. Law preservation and bankwise execution preservation enter at
+different layers of the same construction.
 
-Compilation supplies two distinct conclusions: the same encoded output
-and a bound on its cost. The constructed nine-register stack machine
-implements the expressions, with a structural simulation proof including
-list folds. Source evaluation returns a value and a charge; successful
-evaluation gives the same machine output within that charge. A separate
-recursive certificate bounds intermediate encoding widths, from which
-polynomials bound steps, oracle calls, and bit operations. Thus output
-semantics and size control meet at the fixed program, while remaining
-separately reusable for its preamble and bank-processing postamble.\footnote{\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\#L16459-L16620}{Cost-bearing compiler correctness}; \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\#L25559-L25566}{polynomial majorant}.}
+Compilation preserves the encoded output and supplies a cost bound.
+The constructed nine-register stack machine implements the expression
+language by structural simulation, including its list folds. Source
+evaluation returns both a value and a charge; the machine produces that
+value within the recorded charge. This makes resource use part of the
+simulation statement, ready for the polynomial-bound argument.\footnote{\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\#L16459-L16620}{Cost-bearing compiler correctness}.}
+
+\paragraph{From semantic preservation to a polynomial cost bound.}
+Bounding the charge requires control of intermediate representations. The recursive
+predicate $\operatorname{Safe}(O,S,e,x)$, with oracle $O$, width bound
+$S$, expression $e$, and input $x$, bounds the encoded widths of the input and
+every successful output, and requires safety of the subevaluations actually
+used. For a composition it bounds the intermediate result; for a fold it
+requires the invariant after each accumulator update. If the body charge
+is at most $E$ and these widths are at most $S$, the fold lemma gives
+\[
+  c_{\mathrm{fold}}\leq |\mathrm{xs}|\,(7+12S+E).
+\]
+The encoding bounds list length by width, so this estimate can be composed
+through structural induction on the fixed expression. The width
+certificate turns the cost-bearing simulation into a polynomial charge
+bound.\footnote{See
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\#L16855-L16904}{\src{Safe} and the fold-charge proof}, and
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\#L17079-L17092}{the structural polynomial bound}.}
+
+The source packages these certificates as \src{PolySafe}: a polynomial
+$p$ takes an input parameter $S$ to an admissible width $p(S)$.
+Polynomial substitution supports composition. A further interface,
+\src{AttrSafe}, carries numerical predicates alongside the width bound.
+This matters for value-indexed operations: an exponent can be very large
+despite a short binary encoding. The exponentiation lemma consequently
+assumes that the exponent itself is at most $S$. The estimator's attribute
+bounds three parameter fields, and its proof transports those bounds
+through exponentiation, range construction, and ratio products.
+In \src{attrSafe_compose}, the next width parameter is enlarged to
+$g(S)=p(S)+S$; monotonicity of the numerical attribute carries its
+information to that larger parameter. Thus a usable complexity interface
+preserves both encoded size and the value constraints needed by the next
+operation.\footnote{See
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\#L17689-L17706}{\src{PolySafe}},
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\#L22444-L22466}{attribute composition}, and
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\#L24280-L24308}{the exponent and estimator attributes}.}
 
 \paragraph{From output laws to successful tapes.}
 The final probabilistic interface connects the program to its accuracy guarantee. Let $V$ be the canonical bounded experiment, and let $v$ be the rational output function implemented by the postamble. The certificate asserts
@@ -55,12 +116,20 @@ The machine correspondence reaches actual tape addresses. For $m$ total gathered
 \]
 The reversal comes from pushing bits onto a stack; the stride three reflects the sampling loop's instructions. The proof supplies $s+3m+1\leq B$. Injectivity of these positions shows that a uniform length-$B$ tape induces a uniform length-$m$ word.\footnote{\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\#L25658-L25687}{Physical tape positions and their uniform law}; \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\#L26027-L26069}{the machine correspondence}.} Here $m$ counts bank bits, whereas $B$ bounds complete machine execution.
 
-The endpoint chooses one program and constants $C,a$ before the input matroids, oracle, and rational parameters $0<\varepsilon,\delta<1$. For every exact independence oracle and matroids of full ground set and common supplied rank $r$, it uses
+The endpoint quantifies over one fixed program and constants $C,a$ before
+the input matroids, oracle, and rational parameters
+$0<\varepsilon,\delta<1$. For an exact independence oracle and matroids
+with full ground set and supplied common rank $r$, the resource bound is
 \[
  B=C\bigl(1+n+\ell+\lceil\varepsilon^{-1}\rceil
        +\operatorname{clog}_2\lceil\delta^{-1}\rceil\bigr)^a,
 \]
-where $\ell$ is the encoded input length and $\operatorname{clog}_2$ is the ceiling binary logarithm. Every infinite tape halts by $B$, with both resource counters at most $B$. For a length-$B$ word, $\operatorname{out}(w)$ denotes this output using its zero extension as the tape. Specializing the observable to the accuracy indicator gives
+where $\ell$ is the encoded input length and $\operatorname{clog}_2$ is
+the ceiling binary logarithm. Execution on every infinite tape produces
+an output within $B$, with at most $B$ oracle calls and bit operations.
+For a length-$B$ word, let $\operatorname{out}(w)$ denote this output on
+the word's zero extension. Substituting the accuracy indicator in the
+observable identity yields
 \[
  \#\{w\in\{0,1\}^B:(1-\varepsilon)Z\leq\operatorname{out}(w)
                   \leq(1+\varepsilon)Z\}
@@ -69,27 +138,56 @@ where $\ell$ is the encoded input length and $\operatorname{clog}_2$ is the ceil
 The specification packages this success count with the universal resource and zero-output guarantees.\footnote{\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Combinatorics/MatroidCounting/CommonBases.lean\#L110-L132}{The fixed-program and finite-tape specification}.} Verified compilation and probabilistic semantic preservation are established methods \citep{Leroy2009,CakeML2014,CertiCrypt2009,EasyCrypt2011}. Expectation-functional semantics for randomized programs is also established
 \citep{AudebaudPaulinMohring2009}. In Lean, SampCert separates sampling
 procedures from normalized distribution semantics and proves exact sampler
-laws \citep{deMedeirosEtAl2025}. The distinctive evidence here is the
+laws \citep{deMedeirosEtAl2025}. Its \src{SLang} represents a program by an
+unnormalized mass function; normalization and equalities between sampler
+laws support downstream privacy reasoning. The common-base development
+instead carries its bounded random experiment through a costed expression
+language to a fixed stack machine. A close compiler precedent is Zar,
+which translates probabilistic programs through choice-fix trees and
+interaction trees to random-bit samplers, proving equidistribution in
+Coq \citep{BagnallStewartBanerjee2023}. Here the comparison turns on the
+specification carried through the pipeline: intermediate widths and
+numerical attributes, an every-tape resource bound, and the finite count
+of accurate tapes. The distinctive evidence is the
 concrete integration: the proof carries the counting quantity through oracle code, width bounds, and physical tape coordinates to an exact finite success count. Sections~\ref{sec:tape-example}--\ref{sec:success-budget} isolate the uniformity, law, and error-budget arguments behind this last step.
 
 \subsection{Graph switches: a local table and a fiberwise error direction}
 \label{sec:switch-chain}
 
-The common-base case needs preservation of an entire output law. The graph case instead needs control of the interaction between conditional averages. Its switch-chain development connects a four-vertex graph representation to a spectral estimate \citep{OAISwitch}. At each step the chain stays put with probability $1/2$; otherwise it chooses uniformly a four-vertex set and an ordered pair of distinct perfect matchings on it. It replaces the first matching by the second when the removed edges are present and the added edges absent, and stays put otherwise. Each of the $6\binom n4$ proposals thus has probability $1/(12\binom n4)$. Its endpoint assumes $n\geq4$ and a graphical degree sequence $d$ with $d(v)\leq n-1$. It bounds the mixing time at total-variation threshold $1/4$ by $2n^8$ and, when there is more than one realization, gives spectral gap at least
+The graph case studies how two conditional averages interact. Its
+switch-chain development connects a four-vertex representation to a
+spectral estimate \citep{OAISwitch}. The chain stays put with probability
+$1/2$; otherwise it chooses uniformly a four-vertex set and an ordered
+pair of distinct perfect matchings on it. It replaces the first matching
+by the second when the removed edges are present and the added edges are
+absent, and stays put otherwise. Each of the $6\binom n4$ proposals has
+probability $1/(12\binom n4)$. For $n\geq4$ and a graphical degree
+sequence satisfying $d(v)\leq n-1$, the endpoint gives mixing time at most
+$2n^8$ at total-variation threshold $1/4$. When there is more than one
+realization, its spectral-gap bound is
 \[
  \frac{1}{24n^2\binom n4}.
 \]
-The disjoint-pair branch of its proof is organized around a small exceptional direction in conditional averaging.
+We follow the disjoint-pair part of the argument, where an exact matrix
+count identifies the exceptional direction that the operator estimate
+must control.
 
 \paragraph{Reducing a graph cell to a matrix count.}
 States are simple graphs on $\operatorname{Fin}n$ realizing $d$. Fix four distinct vertices, grouped into pairs $a=\{i,j\}$ and $b=\{k,l\}$. A coarse cell fixes the outer graph, the internal edge of each pair, and every outside vertex's total incidence into each pair. The remaining data consist of a $2\times2$ Boolean matrix $M$ of cross edges and two sets $U,W$ recording the singleton boundary choices at $i$ and $k$. The source proves that these coordinates determine the graph.\footnote{\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/DisjointEncoding.lean\#L20-L30}{The coarse graph cell}; \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/DisjointCoordinateFeasibility.lean\#L22-L108}{degree feasibility in coordinates}.}
 
-The important feasibility step reduces all four degree equations to preservation of the cross-edge total and two margin equations:
+Once the cell data are fixed, the four degree equations reduce to the
+cross-edge total and two margin equations:
 \[
  \operatorname{row}_0(M)+|U|=c_L,\qquad
  \operatorname{col}_0(M)+|W|=c_R,
 \]
-where $c_L,c_R$ are fixed by the original graph. Explicit forward and inverse constructions identify the fixed-degree graph cell with left and right boundary data together with a compatible matrix. This equivalence preserves the multiplicities needed for uniform conditional averages. In particular, projecting a uniform graph cell onto its boundary data produces weights equal to the number of compatible cross matrices. The matrix count records the entire dependence between the left and right data that remains after the outer graph and incidence totals have been fixed.
+where $c_L,c_R$ are determined by the original graph. Forward and inverse
+constructions identify the graph cell with boundary choices and a
+compatible matrix. Under this equivalence, a uniform graph law weights
+each pair of boundary choices by its number of compatible matrices.
+Preserving these multiplicities is what makes the coordinate model usable
+for conditional averaging. The matrix count describes the remaining
+dependence between the left and right choices.
 
 There are only sixteen Boolean matrices. Let $c_s(r,t)$ count those with total $s$, first-row sum $r$, and first-column sum $t$. For $s=2$, finite decision proves the table
 \[
@@ -97,18 +195,24 @@ There are only sixteen Boolean matrices. Let $c_s(r,t)$ count those with total $
    =\begin{pmatrix}0&1&0\\1&2&1\\0&1&0\end{pmatrix},
  \qquad c_2(r,t)=2-p(r)-p(t),
 \]
-where $p(r)=\mathbf1_{r\ne1}$.\footnote{\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/CrossMatrix.lean\#L22-L25}{The finite total-two count}.} For every other total, the table factors into independent margin weights. For total two, the centered covariance factors through one flag on each side: conditional averaging can depend on the left data through the single Boolean flag $p(r)$. This is the dependence that the subsequent analysis tracks.
+where $p(r)=\mathbf1_{r\ne1}$.\footnote{\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/CrossMatrix.lean\#L22-L25}{The finite total-two count}.}
+The other totals give tables that factor into independent margin weights.
+For total two, centering leaves dependence through one Boolean flag on
+each side. This reduces the correlated component to a specified local
+direction, which the subsequent operator argument can isolate.
 
 A short calculation illustrates the exceptional correlation. Among the six
 uniformly chosen total-two matrices, each off-center margin flag has mean
 $1/3$, while their product is always zero. Their covariance is therefore
-$-1/9$. This calculation concerns the uniform six-matrix experiment; graph
-cells also carry boundary multiplicities. It explains why a blanket claim
-of independent margins or nonnegative local correlation would fail and
-why the proof isolates a compensated error direction.
+$-1/9$. The sign shows why a direct nonnegative-correlation argument is
+unavailable. Actual graph cells also carry boundary multiplicities, so the
+proof transports the flag description to those weighted fibers before
+estimating its contribution.
 
 \paragraph{Paying for the exceptional correlation.}
-In the finite coordinate model, composing the two conditional averages therefore gives $A+Bp(r)$, with $B=0$ unless $s=2$. The graph-cell equivalence transports this formula back to actual graph states. This transport includes a proof that corresponding fibers have equal cardinalities and corresponding sums, and an identification of the flag: $p(r)$ says that $i$ has equal adjacency bits to $k$ and $l$, meaning both cross edges are present or both are absent.\footnote{\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/CrossCellAffineComposition.lean\#L64-L87}{The affine conditional image}; \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/DisjointGraphAffine.lean\#L68-L90}{its graph interpretation}.}
+In the finite coordinate model, composing the two conditional averages
+gives $A+Bp(r)$ on each fixed cell. The coefficients $A,B$ depend on
+that cell and the averaged function, and $B=0$ unless $s=2$. The graph-cell equivalence transports this formula back to actual graph states. This transport includes a proof that corresponding fibers have equal cardinalities and corresponding sums, and an identification of the flag: $p(r)$ says that $i$ has equal adjacency bits to $k$ and $l$, meaning both cross edges are present or both are absent.\footnote{\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/CrossCellAffineComposition.lean\#L64-L87}{The affine conditional image}; \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/DisjointGraphAffine.lean\#L68-L90}{its graph interpretation}.}
 
 Work in the real function space on the finite graph state space $\Omega$,
 with counting inner product $\langle f,g\rangle=\sum_{G\in\Omega}f(G)g(G)$.
@@ -118,17 +222,76 @@ Fiber averages themselves are divided by the fiber cardinality.\footnote{See
 Write $E_a$ for averaging over a
 pair-resampling fiber. The transported formula expresses the relevant conditional image as a fiber-constant base plus a fiber-constant weight times the equality flag; the weight is supported where the cross total is two. For this purpose a fiber is active when $k$ and $l$ each have exactly one neighbor in $a$. Subtracting $E_a$ leaves a multiple of the centered flag on each active fiber. These functions form an error subspace whose orthogonal projection is denoted $R_{ab}$. The description is at most one dimensional on each fiber; the complete graph-space subspace can have many independent fiber components.
 
-This representation supplies the hypotheses of an abstract projection interaction inequality. Conditional averaging is a symmetric idempotent operator, and the error projection fixes the correlated fluctuation just identified. The analytic argument decomposes the state-space function using ranges and orthogonal complements of these projections. This turns the graph-specific conditional formula into precisely the range conditions required by the operator theorem. With $G_{ab}$ the appropriate switch-gain projection, its graph instance yields
+The flag representation now supplies the hypotheses of an abstract
+projection inequality. Conditional averaging is symmetric and idempotent,
+and the error projection fixes the correlated fluctuation. Decomposition
+into the projections' ranges and orthogonal complements turns these facts
+into an interaction bound. If $G_{ab}$ denotes the switch-gain projection,
+the graph instance gives
 \[
  2\norm{G_{ab}f}^2-\norm{R_{ab}f}^2-\norm{R_{ba}f}^2
  \leq2\langle(I-E_a)f,(I-E_b)f\rangle.
 \]
-A separately proved projection budget bounds the sum of squared error norms
-by the sum of squared gain norms. Summing the compensated inequality over ordered disjoint two-element vertex sets $a,b$ then gives
+To sum this inequality, the proof needs a budget for the error terms.
+Fix a graph
+$G$ and a pair $a=\{i,j\}$. Its singleton-neighbor set $V_G$ consists of
+outside vertices adjacent to exactly one endpoint of $a$. The vertices
+assigned to $i$ form a subset of prescribed cardinality $q$. An equivalence
+therefore identifies this assignment space with the slice
+$\{S\subseteq V_G:|S|=q\}$. Under its induced linear isometry, the
+centered equality flag becomes the slice's \src{raw} vector, while a
+graph switch becomes a transposition of two labels.
+
+The slice estimate is itself an operator comparison. Normalized flag
+vectors have squared norm $1/2$ whenever nonzero. Their synthesis operator
+$T$ satisfies $TT^*\leq L_{\mathrm{swap}}$ in quadratic-form order.
+The proof decomposes coefficient data into a zero-sum linear part and a
+symmetric part with zero rows and diagonal. The Gram operator is scalar
+on these parts; its scalars are bounded by the corresponding swap-generator
+scalars. Boundary slices have zero flag vectors and are treated separately.
+The decomposition controls the overlap between flag directions. In
+projection form it gives
+\[
+ \frac12\sum_{k,l}\norm{\Pi_{kl}h}^2
+ \leq\frac18\sum_{k,l}\norm{h-h\circ\tau_{kl}}^2,
+\]
+where $\Pi_{kl}$ projects onto the centered flag line and $\tau_{kl}$
+swaps the two labels.\footnote{See
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/SliceOperatorComparison.lean\#L96-L156}{the two-block operator comparison}, and
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/SliceReindexedComparison.lean\#L49-L79}{isometric reindexing and the swap-sum estimate}.}
+
+Two normalizations connect this estimate to the graph budget. Multiplying
+it by two gives a coefficient $1/4$ on the squared differences, exactly
+the squared norm of the switch-gain projection $(I-S)/2$ for the switch
+involution $S$. Next, the restrictions $h_G$ to assignment spaces satisfy
+the exact identity
+\[
+ \sum_{G\in\Omega}
+ \frac{\norm{h_G}^2}{\binom{|V_G|}{q_G}}=\norm h^2.
+\]
+Each fiber is represented once by each of its graph states; division by its
+cardinality cancels that repetition. Applying this identity to both sides
+of the assignment budget lifts the local inequality to the whole graph
+space. Finally, ordered partner labels $(k,l)$ count each unordered pair
+twice, so both error and gain sums acquire the same factor $1/2$.
+The resulting budget bounds the sum of squared error norms by the sum of
+squared gain norms.\footnote{The restriction identity and its use are in
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/PairEqualityBudget.lean\#L151-L270}{\src{PairEqualityBudget.lean}, lines 151--270}; the ordered/unordered conversion is in
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/PairEqualityBudgetUnordered.lean\#L23-L54}{\src{PairEqualityBudgetUnordered.lean}, lines 23--54}.}
+Summing the compensated inequality over ordered disjoint two-element vertex sets $a,b$ then gives
 \[
  \sum_{a,b:\,a\cap b=\varnothing}
    \langle(I-E_a)f,(I-E_b)f\rangle\geq0.
 \]
-Thus the proof controls the aggregate interaction by accounting explicitly for the exceptional flag directions.\footnote{\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/PairActualAffine.lean\#L81-L101}{The concrete interaction inequality}; \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/PairDisjointAssembly.lean\#L45-L77}{assembly with the projection budget}.}
+The compensated local bounds therefore give a nonnegative aggregate
+interaction even though individual fibers can exhibit negative
+correlation.\footnote{\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/PairActualAffine.lean\#L81-L101}{The concrete interaction inequality}; \href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Probability/SwitchChain/PairDisjointAssembly.lean\#L45-L77}{assembly with the projection budget}.}
 
-The nonnegative disjoint sum combines with triple-generator and local comparison estimates to produce a generator-square bound, then the stated spectral gap and mixing estimate. Computation on finite objects and transport through equivalent representations are established proof methods \citep{Harrison1995,CohenMahboubi2012}. The case-specific mathematical choice is to isolate the total-two table's equality flag, identify its centered error space on graph fibers, and compensate those errors in a global operator estimate.
+Triple-generator and local comparison estimates combine with the
+disjoint sum to give a generator-square bound, from which the stated gap
+and mixing estimate follow. Finite computation and transport through
+equivalent representations are established proof methods
+\citep{Harrison1995,CohenMahboubi2012}. The informative integration here
+is the route from a sixteen-object count to a global estimate: identify
+the equality flag, transport its centered direction with the correct
+multiplicities, and pay for its aggregate energy through switch gains.

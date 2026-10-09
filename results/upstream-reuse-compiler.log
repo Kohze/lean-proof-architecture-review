@@ -1,0 +1,8 @@
+COMMAND: lake env lean -DautoImplicit=false -o OAI\Analysis\TraceCone\Basic.olean OAI\Analysis\TraceCone\Basic.lean
+
+COMMAND: lake env lean -DautoImplicit=false -o OAI\Analysis\TraceCone\FiniteIdeal.olean OAI\Analysis\TraceCone\FiniteIdeal.lean
+
+COMMAND: lake env lean -DautoImplicit=false -o OAI\Analysis\TraceCone\IdealTransport.olean OAI\Analysis\TraceCone\IdealTransport.lean
+
+COMMAND: lake env lean -DautoImplicit=false UpstreamReuse.lean
+'ReviewReuse.additiveIdealTransport_comp' depends on axioms: [propext, Classical.choice, Quot.sound]

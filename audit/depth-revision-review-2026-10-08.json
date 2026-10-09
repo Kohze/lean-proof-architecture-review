@@ -1,0 +1,171 @@
+{
+  "date": "2026-10-08",
+  "edition": "1.2.0-local",
+  "title": "Proof Architecture in the OpenAI Lean Library: Representation, Locality, and Semantic Transport",
+  "baseline_review": "audit/lean-analysis-depth-review-2026-10-08.txt (workspace-level pre-revision audit)",
+  "review_type": "Applied depth revision, targeted source reading, compilation/reuse experiment, citation/build checks and rendered-PDF review.",
+  "verdict": "The specific depth gaps in the earlier audit have been addressed. The manuscript is stronger as a focused comparative review of formal interfaces; its novelty rests on synthesis and explanatory analysis.",
+  "ratings": [
+    {
+      "category": "Depth of actual Lean analysis",
+      "before": 7.5,
+      "after": 8.5,
+      "reason": "New proof-body explanations address each targeted gap, including both the graph lifting chain and Crouzeix input construction."
+    },
+    {
+      "category": "Mathematical exposition",
+      "before": 8.5,
+      "after": 8.5,
+      "reason": "The added detail explains the mechanisms while retaining the existing six-case structure and elementary examples."
+    },
+    {
+      "category": "Lean-specific implementation analysis",
+      "before": 7.0,
+      "after": 8.5,
+      "reason": "Size and numerical invariants, finite-dimensional bundling, image filters, analytic germs, coordinate injectivity and actual API reuse now have explicit explanations."
+    },
+    {
+      "category": "Tracing premises through constructions",
+      "before": 7.5,
+      "after": 8.5,
+      "reason": "The projection budget and analytic collar are followed through their producers, with exact retained source locations."
+    },
+    {
+      "category": "Evidence for unusualness or formalization novelty",
+      "before": 6.5,
+      "after": 7.0,
+      "reason": "Zar and SampCert give a closer specification comparison, but this remains a focused synthesis rather than a corpus-wide demonstration of unprecedented Lean methods."
+    }
+  ],
+  "changes": [
+    {
+      "area": "Common-base compiler",
+      "revision": "Explained Safe, fold charges, PolySafe substitution and AttrSafe numerical invariants; distinguished binary width from the value of an exponent."
+    },
+    {
+      "area": "Graph switches",
+      "revision": "Traced the two-block Gram comparison, isometric slice reindexing, exact restriction normalization, gain factor and ordered/unordered budget conversion."
+    },
+    {
+      "area": "Mahler",
+      "revision": "Explained the finite-dimensional construction of a continuous bilinear wedge and distinguished inherited exterior-derivative infrastructure from the project bridges."
+    },
+    {
+      "area": "Crouzeix",
+      "revision": "Traced the finite Taylor remainder and Fourier orientation, local boundary-germ compatibility, analytic collar, injective neighborhood and inverse disk thickening."
+    },
+    {
+      "area": "Trace ideals",
+      "revision": "Explained image-filter extension to arbitrary nets and added a compiled corollary composing the actual upstream ideal correspondence."
+    },
+    {
+      "area": "All seams",
+      "revision": "Explained a local atomic-coordinate producer and the six concrete obligations consumed by inherited-seam transport."
+    },
+    {
+      "area": "Predecessor comparison",
+      "revision": "Added Zar with verified ACM metadata and compared its compilation/equidistribution specification and SampCert law semantics with the selected every-tape complexity specification."
+    },
+    {
+      "area": "Reproduction and reading flow",
+      "revision": "Retained all six literal OAI import closures, added checked evidence spans and portable Mathlib preparation/reuse scripts, and tightened the method so the overview fits without a large gap."
+    }
+  ],
+  "verification": {
+    "pages": 27,
+    "cited_references": 42,
+    "publisher_doi_title_matches": 25,
+    "retained_artifacts_byte_verified": 546,
+    "oai_closures": {
+      "common_bases": 1,
+      "graph_switches": 165,
+      "mahler": 229,
+      "crouzeix": 41,
+      "trace_ideals": 3,
+      "all_seams": 79
+    },
+    "unique_oai_closure_modules": 518,
+    "new_evidence_spans": 17,
+    "manuscript_source_locators_checked": 49,
+    "upstream_reuse": {
+      "status": "passed",
+      "oai_commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "mathlib_revision": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+      "toolchain": "leanprover/lean4:v4.34.1",
+      "commands": [
+        {
+          "module": "OAI/Analysis/TraceCone/Basic.lean",
+          "exit_code": 0
+        },
+        {
+          "module": "OAI/Analysis/TraceCone/FiniteIdeal.lean",
+          "exit_code": 0
+        },
+        {
+          "module": "OAI/Analysis/TraceCone/IdealTransport.lean",
+          "exit_code": 0
+        },
+        {
+          "module": "UpstreamReuse.lean",
+          "exit_code": 0
+        }
+      ],
+      "unmodified_upstream_source_sha256": {
+        "OAI/Analysis/TraceCone/Basic.lean": "de409f3d3d82a547500c73c72c193cbaf25388b11b704e7a6cdbb1036420b720",
+        "OAI/Analysis/TraceCone/FiniteIdeal.lean": "dc498c5106478f01ea03a6dd6f59db25576cd1d466dde99fddef90cab4c4662a",
+        "OAI/Analysis/TraceCone/IdealTransport.lean": "ce1b2e54486dd3bf4cc80aa676234ae18a3946fea652746e042a4da9f3e21ff7"
+      },
+      "example_sha256": "9cf8366271b392070504fd526732c4a4d15e840b7c2eb64d1b777f416c05a8b0",
+      "reported_axioms": [
+        "'ReviewReuse.additiveIdealTransport_comp' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "scope": "Three TraceCone modules plus one compositional corollary; other five cases and Comparator were not compiled by this experiment."
+    },
+    "original_examples": {
+      "command": [
+        "lean",
+        "+leanprover/lean4:v4.34.1",
+        "C:\\Users\\robin\\math_ai\\papers\\lean-proof-architecture\\reproduce\\InterfaceExamples.lean"
+      ],
+      "toolchain": "leanprover/lean4:v4.34.1",
+      "version": "Lean (version 4.34.1, x86_64-w64-windows-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)",
+      "exit_code": 0,
+      "reported_axioms": {
+        "physicalIndex_injective": [
+          "propext",
+          "Quot.sound"
+        ],
+        "physicalIndex_lt": [
+          "propext",
+          "Quot.sound"
+        ],
+        "moment_indicator": [
+          "propext",
+          "Quot.sound"
+        ],
+        "all_observables_determine_counts": [
+          "propext",
+          "Quot.sound"
+        ],
+        "normalized_observables_determine_counts": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      "lean_source_sha256": "113bedfd927ff66d608a04cf02de076c331df3116e46da5f746bc1ca02a8f64c",
+      "finite_check_exit_code": 0,
+      "scope": "Original review examples; source-corpus endpoints were studied statically."
+    },
+    "latex_problems": [],
+    "visual_pages_inspected": 27,
+    "pdf_sha256": "7ca16773389f918dc9f03a0e1eae688a2a26388fe70ad95711e899c60155ab43"
+  },
+  "remaining_scope_limits": [
+    "The depth review and ratings are internal judgments by the editing agent, not external peer review or acceptance probabilities.",
+    "Compilation covers three unmodified TraceCone modules and one importing corollary, plus five separate elementary examples. The other five selected OAI cases and Comparator were studied statically in this revision.",
+    "The 546 retained artifacts and 518-module closure count measure source availability. They do not assert that every retained proof body was analyzed in depth.",
+    "The composition corollary is elementary and demonstrates API reuse. It is not presented as a new mathematical theorem.",
+    "Predecessor comparisons support the specific architectural distinctions discussed; they do not establish that the techniques are unprecedented across formal mathematics."
+  ],
+  "public_release_action": "None. Existing public v1.1.1 metadata retained; this is a separate local revision."
+}

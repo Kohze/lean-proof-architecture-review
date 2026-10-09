@@ -1,0 +1,260 @@
+{
+  "pages": 31,
+  "cited_references": 44,
+  "scholarly_references": 30,
+  "published_scholarly_references_with_doi": 25,
+  "preprints": 4,
+  "technical_reports": 1,
+  "companion_manuscript_references": 3,
+  "source_and_software_references": 14,
+  "unused_reference_keys": [],
+  "missing_citation_keys": [],
+  "latex_problems": [],
+  "doi_title_checks": [
+    {
+      "key": "deMouraUllrich2021",
+      "doi": "10.1007/978-3-030-79876-5_37",
+      "title_identity": true,
+      "recorded_title": "The Lean 4 Theorem Prover and Programming Language",
+      "publisher_titles": [
+        "The Lean 4 Theorem Prover and Programming Language"
+      ]
+    },
+    {
+      "key": "mathlib2020",
+      "doi": "10.1145/3372885.3373824",
+      "title_identity": true,
+      "recorded_title": "The Lean Mathematical Library",
+      "publisher_titles": [
+        "The lean mathematical library"
+      ]
+    },
+    {
+      "key": "vanDoornEbnerLewis2020",
+      "doi": "10.1007/978-3-030-53518-6_16",
+      "title_identity": true,
+      "recorded_title": "Maintaining a Library of Formal Mathematics",
+      "publisher_titles": [
+        "Maintaining a Library of Formal Mathematics"
+      ]
+    },
+    {
+      "key": "Baanen2022",
+      "doi": "10.4230/LIPIcs.ITP.2022.4",
+      "title_identity": true,
+      "recorded_title": "Use and Abuse of Instance Parameters in the Lean Mathematical Library",
+      "publisher_titles": [
+        "Use and Abuse of Instance Parameters in the Lean Mathematical Library"
+      ]
+    },
+    {
+      "key": "GarillotEtAl2009",
+      "doi": "10.1007/978-3-642-03359-9_23",
+      "title_identity": true,
+      "recorded_title": "Packaging Mathematical Structures",
+      "publisher_titles": [
+        "Packaging Mathematical Structures"
+      ]
+    },
+    {
+      "key": "CommelinTopaz2024",
+      "doi": "10.1090/bull/1831",
+      "title_identity": true,
+      "recorded_title": "Abstraction boundaries and spec driven development in pure mathematics",
+      "publisher_titles": [
+        "Abstraction boundaries and spec driven development in pure mathematics"
+      ]
+    },
+    {
+      "key": "ZhuEtAl2026",
+      "doi": "10.4230/LIPIcs.ITP.2026.25",
+      "title_identity": true,
+      "recorded_title": "LeanArchitect: Automating Blueprint Generation for Humans and AI",
+      "publisher_titles": [
+        "LeanArchitect: Automating Blueprint Generation for Humans and AI"
+      ]
+    },
+    {
+      "key": "deBruijn1970",
+      "doi": "10.1007/BFb0060623",
+      "title_identity": true,
+      "recorded_title": "The mathematical language AUTOMATH, its usage and some of its extensions",
+      "publisher_titles": [
+        "The mathematical language AUTOMATH, its usage, and some of its extensions"
+      ]
+    },
+    {
+      "key": "BarendregtWiedijk2005",
+      "doi": "10.1098/rsta.2005.1650",
+      "title_identity": true,
+      "recorded_title": "The challenge of computer mathematics",
+      "publisher_titles": [
+        "The challenge of computer mathematics"
+      ]
+    },
+    {
+      "key": "CohenMahboubi2012",
+      "doi": "10.2168/LMCS-8(1:2)2012",
+      "title_identity": true,
+      "recorded_title": "Formal proofs in real algebraic geometry: from ordered fields to quantifier elimination",
+      "publisher_titles": [
+        "Formal proofs in real algebraic geometry: from ordered fields to quantifier elimination"
+      ]
+    },
+    {
+      "key": "GonthierEtAl2013",
+      "doi": "10.1007/978-3-642-39634-2_14",
+      "title_identity": true,
+      "recorded_title": "A Machine-Checked Proof of the Odd Order Theorem",
+      "publisher_titles": [
+        "A Machine-Checked Proof of the Odd Order Theorem"
+      ]
+    },
+    {
+      "key": "HalesEtAl2017",
+      "doi": "10.1017/fmp.2017.1",
+      "title_identity": true,
+      "recorded_title": "A formal proof of the Kepler conjecture",
+      "publisher_titles": [
+        "A FORMAL PROOF OF THE KEPLER CONJECTURE"
+      ]
+    },
+    {
+      "key": "AvigadEtAl2024Anatomy",
+      "doi": "10.1090/noti3114",
+      "title_identity": true,
+      "recorded_title": "Anatomy of a Formal Proof",
+      "publisher_titles": [
+        "Anatomy of a Formal Proof"
+      ]
+    },
+    {
+      "key": "Kudryashov2022",
+      "doi": "10.4230/LIPIcs.ITP.2022.23",
+      "title_identity": true,
+      "recorded_title": "Formalizing the Divergence Theorem and the Cauchy Integral Formula in Lean",
+      "publisher_titles": [
+        "Formalizing the Divergence Theorem and the Cauchy Integral Formula in Lean"
+      ]
+    },
+    {
+      "key": "AudebaudPaulinMohring2009",
+      "doi": "10.1016/j.scico.2007.09.002",
+      "title_identity": true,
+      "recorded_title": "Proofs of randomized algorithms in Coq",
+      "publisher_titles": [
+        "Proofs of randomized algorithms in Coq"
+      ]
+    },
+    {
+      "key": "deMedeirosEtAl2025",
+      "doi": "10.1145/3729294",
+      "title_identity": true,
+      "recorded_title": "Verified Foundations for Differential Privacy",
+      "publisher_titles": [
+        "Verified Foundations for Differential Privacy"
+      ]
+    },
+    {
+      "key": "Perfectoid2020",
+      "doi": "10.1145/3372885.3373830",
+      "title_identity": true,
+      "recorded_title": "Formalising perfectoid spaces",
+      "publisher_titles": [
+        "Formalising perfectoid spaces"
+      ]
+    },
+    {
+      "key": "Schemes2021",
+      "doi": "10.1080/10586458.2021.1983489",
+      "title_identity": true,
+      "recorded_title": "Schemes in Lean",
+      "publisher_titles": [
+        "Schemes in Lean"
+      ]
+    },
+    {
+      "key": "CertiCrypt2009",
+      "doi": "10.1145/1480881.1480894",
+      "title_identity": true,
+      "recorded_title": "Formal certification of code-based cryptographic proofs",
+      "publisher_titles": [
+        "Formal certification of code-based cryptographic proofs"
+      ]
+    },
+    {
+      "key": "EasyCrypt2011",
+      "doi": "10.1007/978-3-642-22792-9_5",
+      "title_identity": true,
+      "recorded_title": "Computer-Aided Security Proofs for the Working Cryptographer",
+      "publisher_titles": [
+        "Computer-Aided Security Proofs for the Working Cryptographer"
+      ]
+    },
+    {
+      "key": "CakeML2014",
+      "doi": "10.1145/2535838.2535841",
+      "title_identity": true,
+      "recorded_title": "CakeML: A Verified Implementation of ML",
+      "publisher_titles": [
+        "CakeML",
+        "CakeML: a verified implementation of ML"
+      ]
+    },
+    {
+      "key": "Leroy2009",
+      "doi": "10.1145/1538788.1538814",
+      "title_identity": true,
+      "recorded_title": "Formal verification of a realistic compiler",
+      "publisher_titles": [
+        "Formal verification of a realistic compiler"
+      ]
+    },
+    {
+      "key": "ElliottRobertSantiago2011",
+      "doi": "10.1353/ajm.2011.0027",
+      "title_identity": true,
+      "recorded_title": "The cone of lower semicontinuous traces on a C*-algebra",
+      "publisher_titles": [
+        "The cone of lower semicontinuous traces on a C*-algebra"
+      ]
+    },
+    {
+      "key": "CrouzeixPalencia2017",
+      "doi": "10.1137/17M1116672",
+      "title_identity": true,
+      "recorded_title": "The Numerical Range is a $(1+\\sqrt{2})$-Spectral Set",
+      "publisher_titles": [
+        "The Numerical Range is a $(1+\\sqrt{2})$-Spectral Set"
+      ]
+    },
+    {
+      "key": "BagnallStewartBanerjee2023",
+      "doi": "10.1145/3591220",
+      "title_identity": true,
+      "recorded_title": "Formally Verified Samplers from Probabilistic Programs with Loops and Conditioning",
+      "publisher_titles": [
+        "Formally Verified Samplers from Probabilistic Programs with Loops and Conditioning"
+      ]
+    }
+  ],
+  "disclosure_confined_to_dedicated_section": true,
+  "review_type": "Source-driven comparative narrative review with an exploratory corpus survey and original explanatory examples.",
+  "novelty_scope": "Comparative synthesis and original descriptive corpus analysis; the elementary propositions are not presented as new theorems.",
+  "pdf_sha256": "9b91bced568878a112a9c28ee7985343c1aaa157a70b6ea6ed43625ece577990",
+  "tex_hashes": {
+    "abstract.tex": "d2503980d0225a171de009ed485d4812d5f401ffa523f95582f04216e8e5ad45",
+    "cases-analysis.tex": "30e3dd13095a3387daef0d7b15d93412e2ea3392403fe48d75696b043ec9b7cc",
+    "cases-architecture.tex": "4a889f89a4237298f18ca583be157358148421316db3bb292fe9dd126b9aa009",
+    "cases-discrete.tex": "a4cadaabdfdc9364d88176c07d1a17fce5ed62259e29f9cd4a1a913fdde0e4c7",
+    "cases.tex": "561cd4df9d6bd1cbdd28b50eb1cd6630ca5165c8280f0f550766ee10b4c85331",
+    "discussion.tex": "5ee1b92742ca0dfa12b94a59044caa35ac295b3a903c07435464dd6a1e854b4a",
+    "introduction.tex": "67d83aa6aa276062ea083fa1b25c3477b1854ed54aa948d9ad0eb2152e441112",
+    "main.tex": "cd5d372bfdf6200193c3182f40d40f4f3b0831ecc2d96707a9247e886d81e9dc",
+    "method-profile-table.tex": "16b87ad00b532df978a2391dc093171b967b123de084eddfeed0d350934bde78",
+    "method-profile.tex": "08559dcb2f20fa2d91dd443597ef9b25d67397d790dad42b2563b7c38c9044bf",
+    "method.tex": "09e869e790d9e8e22d2ae2bde2868aa94877c817f71a224f15fa4fbb80fae3ee",
+    "overview.tex": "bdb203e167e1204a6f1b1f863a08cd96fcd47f6d7aa1e0606e7a7651671b562c",
+    "worked-examples.tex": "d2ee941fad7e1f8f143f03ad5616abff9aae092f8ed9100fe6d09fbfde8886a1"
+  }
+}
