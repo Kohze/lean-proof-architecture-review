@@ -196,25 +196,24 @@ Robin Gounder.
 \newblock {Proof Architecture in the OpenAI Lean Library: manuscript, data, and
   reproduction code}, 2026{\natexlab{a}}.
 \newblock URL
-  \url{https://github.com/Kohze/lean-proof-architecture-review/releases/tag/v1.6.0}.
-\newblock Versioned reproduction repository; edition 1.6.0.
+  \url{https://github.com/Kohze/lean-proof-architecture-review/releases/tag/v1.6.1}.
+\newblock Versioned reproduction repository; edition 1.6.1.
 
 \bibitem[Gounder(2026{\natexlab{b}})]{GounderCounting2026}
 Robin Gounder.
 \newblock {Approximate Counting and Uniform Sampling: A Critical Review of
-  Matroid Intersections, Contingency Tables, and Graph Switch Chains},
-  2026{\natexlab{b}}.
-\newblock URL
-  \url{https://github.com/Kohze/counting-and-sampling-review/releases/tag/paper-2026-10-08}.
-\newblock Companion manuscript, edition paper-2026-10-08.
+  Matroid Intersections, Contingency Tables, and Graph Switch Chains}.
+\newblock \doi{10.2139/ssrn.7576420}, 2026{\natexlab{b}}.
+\newblock URL \url{https://ssrn.com/abstract=7576420}.
+\newblock SSRN working paper, 7 October 2026; abstract no. 7576420.
 
 \bibitem[Gounder(2026{\natexlab{c}})]{GounderFrontiers2026}
 Robin Gounder.
 \newblock {Mathematical Frontiers in the OpenAI Research Release: Cancellation,
-  Positivity, and Changes of Representation}, 2026{\natexlab{c}}.
-\newblock URL
-  \url{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7579158}.
-\newblock SSRN working paper, abstract no. 7579158.
+  Positivity, and Changes of Representation}.
+\newblock \doi{10.2139/ssrn.7579158}, 2026{\natexlab{c}}.
+\newblock URL \url{https://ssrn.com/abstract=7579158}.
+\newblock SSRN working paper, 1 October 2026; abstract no. 7579158.
 
 \bibitem[Gounder(2026{\natexlab{d}})]{GounderNumerical2026}
 Robin Gounder.

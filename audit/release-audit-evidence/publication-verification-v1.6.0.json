@@ -1,0 +1,43 @@
+{
+  "verified_at": "2026-10-09T10:41:49.217409+00:00",
+  "repository": "https://github.com/Kohze/lean-proof-architecture-review",
+  "commit": "1244bb3f14371e1bfe4951742db156e0b748e5cd",
+  "anonymous_github_source_archive_downloaded": true,
+  "all_manifested_files_verified": 1536,
+  "pdf_sha256": "b5c39b14a055a11048beb806fd98792d23352c6c048dc85445ba7d8c4faf8351",
+  "source_archive_sha256": "84542b504a680a1129108a4c8d7a100cdbba4097daa27eb03692003ca617e685",
+  "release_url": "https://github.com/Kohze/lean-proof-architecture-review/releases/tag/v1.6.0",
+  "published_at": "2026-10-09T10:41:19Z",
+  "assets": [
+    {
+      "name": "lean-proof-architecture-review-v1.6.0-source-and-data.zip",
+      "url": "https://github.com/Kohze/lean-proof-architecture-review/releases/download/v1.6.0/lean-proof-architecture-review-v1.6.0-source-and-data.zip",
+      "bytes": 14587750,
+      "sha256": "ef49e74609926d51fe78745019bd2ce78ff0a6394772475a75e4e8e77630db4d",
+      "anonymous_download_verified": true
+    },
+    {
+      "name": "lean-proof-architecture.pdf",
+      "url": "https://github.com/Kohze/lean-proof-architecture-review/releases/download/v1.6.0/lean-proof-architecture.pdf",
+      "bytes": 727365,
+      "sha256": "b5c39b14a055a11048beb806fd98792d23352c6c048dc85445ba7d8c4faf8351",
+      "anonymous_download_verified": true
+    },
+    {
+      "name": "SHA256SUMS-v1.6.0.txt",
+      "url": "https://github.com/Kohze/lean-proof-architecture-review/releases/download/v1.6.0/SHA256SUMS-v1.6.0.txt",
+      "bytes": 218,
+      "sha256": "ac2aed1a11158daba1ca9d29982d1a969480c1d5267db615406428432882e44c",
+      "anonymous_download_verified": true
+    }
+  ],
+  "release_zip_manifested_files_verified": 1535,
+  "reviewed_pdf_identical_in_git_and_release": true,
+  "pages": 35,
+  "github_ci": {
+    "database_id": 37918848319,
+    "commit": "1244bb3f14371e1bfe4951742db156e0b748e5cd",
+    "conclusion": "success",
+    "url": "https://github.com/Kohze/lean-proof-architecture-review/actions/runs/37918848319"
+  }
+}

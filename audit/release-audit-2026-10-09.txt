@@ -1,0 +1,73 @@
+Final release audit: Proof Architecture in the OpenAI Lean Library
+Edition 1.6.1 | 2026-10-09
+PDF SHA-256: 24fb708a803a07a309fabe837ab54d2ea50a2b7a32c2b4de039e9d697283ae1f
+35 pages; 47 cited references.
+
+Recommendation: Technically ready for release; minor revisions and methodological strengthening recommended for journal submission.
+No confirmed release blocker was found in the work inspected.
+
+Scope: Internal reviewer-style audit by the assistant that helped prepare the manuscript; not independent external peer review.
+This is an assessment of evidence and presentation, not a guarantee of every upstream theorem. This report audits the manuscript and reproducible evidence. Exact public commit, CI and asset-byte checks for v1.6.1 are completed separately after upload.
+
+1. CONTRIBUTION AND ORIGINALITY
+Verdict: Pass
+The defensible contribution is a source-driven comparison of preservation interfaces, an exploratory corpus analysis, and explanatory examples. It is not a new general mathematical method or a causal study of AI reasoning.
+Reviewer recommendation: Keep this scope in the abstract, submission cover letter, and publicity.
+
+2. MATHEMATICS AND FIDELITY TO LEAN
+Verdict: Pass within stated scope
+The inspected exposition is tied to pinned source declarations and proof bodies. Manual checks covered finite tape probabilities and budgets, Boolean contingency-table counts, the positive-block trace estimate, Mahler orientation/multiplicity conventions, cut-sensitive trace convergence, and marked-coordinate agreement. Five original Lean lemmas compile. The audit did not independently compile all six upstream endpoint proofs.
+Reviewer recommendation: A compact verification-status note beside Table 1 would help readers distinguish source tracing from the targeted trace-cone compilation experiment.
+
+3. EMPIRICAL AND STATISTICAL METHODS
+Verdict: Pass with a substantive limitation
+All 800 retained OpenAI modules and all 8,070 pinned Mathlib modules were re-extracted, reproducing 13,309 and 186,751 bodies with zero differences from the retained CSVs. A separate Decimal implementation reproduced all five joint-standardized point estimates within 2.7e-14 percentage points. The extractor is lexical; the 40 stratified inspected cases informed fixes and are not a held-out estimate of extraction accuracy. Bootstrap intervals condition on the extracted data and do not quantify extraction error or selection/confounding effects.
+Reviewer recommendation: For stronger empirical claims, freeze the extractor and evaluate an independent, stratified held-out annotation set or parser-based reference, reporting boundary and feature accuracy. Treat the present intervals as exploratory.
+
+4. AI VERSUS HUMAN INTERPRETATION AND PROOF SIMPLIFICATION
+Verdict: Pass
+The comparison concerns completed corpora, with Mathlib described as collaborative and not as a controlled sample of unaided human proofs. Section 6.3 presents interface availability as a workflow hypothesis and proposes matched-task evaluation. It does not establish speed, cognitive differences, or mathematical superiority. ProofOptimizer and Lean Refactor support the distinction between checked proof reduction and readable explanation; their benchmark results do not establish simplification of the six cases.
+Reviewer recommendation: Retain the distinction between source length, checking cost, total development cost, and mathematical clarity. Test proposed speed differences prospectively rather than infer them from corpus frequencies.
+
+5. CITATIONS AND ATTRIBUTION
+Verdict: Pass after correction
+All 47 references are cited, with no missing or unused keys. Twenty-five publisher DOI/title records match retained metadata. The two named companion papers now use the author-supplied SSRN abstract URLs, DOIs and exact dates, rather than GitHub as their bibliographic destination. They remain working papers, not publisher-verified journal articles. The source repository still has its own separate data/code citation. Recent simplification papers are identified as preprints; the unassessed QRH proposal is not used as evidence.
+Reviewer recommendation: Use the SSRN identities consistently in submission metadata. SSRN page/registry retrieval was unavailable during this audit, so the record distinguishes author confirmation from independent publisher verification.
+
+6. REPRODUCIBILITY AND VERIFICATION
+Verdict: Pass
+A fresh anonymous download of the public v1.6.0 source/data ZIP matched its release hash; all 1,535 manifest-listed files matched, and six verification scripts passed from the extracted package. The correction edition changes bibliography, a repeated-word typo, version metadata and audit records; it does not change corpus data, estimates, examples or formal claims. The corrected manuscript rebuilt without LaTeX warnings and passed its bibliography, literal-excerpt and PDF checks.
+Reviewer recommendation: The optional upstream reuse experiment has retained successful local compilation evidence but is not rerun by the default CI job. An opt-in CI workflow would strengthen ongoing portability assurance; the present documentation already states the scope.
+
+7. FIGURES, TYPOGRAPHY AND NOTATION
+Verdict: Pass
+All 35 pages of the corrected PDF were rendered and inspected through five contact sheets, with Figure 1 and the corrected bibliography additionally inspected at page scale. Figure 1 has aligned filled/hollow markers, no connectors and no point-value annotations. Its x axis and caption identify the two differences from Mathlib. Caption typography and Lean listings are consistent; the Crouzeix excerpt stays together. Safe(O,S,e,x) uses explicit mathematical arguments. No clipping, overlap or missing glyphs was found.
+Reviewer recommendation: The whitespace before forced section/listing transitions is acceptable. A journal class may repaginate the manuscript and will require another render check.
+
+8. RELEASE METADATA, LICENSING AND ARCHIVAL DURABILITY
+Verdict: Pass with minor improvements available
+The paper identifies a versioned reproduction release, includes source/data manifests and distinguishes original code from retained upstream Apache-licensed sources. Current visual metadata is updated to the corrected PDF, while earlier audit records remain explicitly historical. Final public commit, asset-byte and CI verification is a separate publication step, recorded outside the packaged audit to avoid self-reference.
+Reviewer recommendation: Pin optional figure-generation/rendering dependencies if byte-identical plot regeneration becomes a requirement. A persistent archival DOI would improve long-term citation durability; a versioned GitHub release is adequate for the present reproducibility link.
+
+CORRECTIONS COMPLETED
+- Corrected both named companion papers to the supplied SSRN identities, dates and DOIs; checked the DOI text actually appears in the PDF.
+- Fixed the repeated adjective 'closed norm-closed ideal'.
+- Archived outdated generic visual metadata under its historical edition and recorded the current 35-page visual review.
+
+REMAINING FINDINGS
+- M1 [medium; methodological limitation, disclosed]: No independent held-out measurement of lexical extraction error.
+- M2 [medium; optional clarity improvement]: Table 1 could display verification status directly, although Section 2 and data/code availability already distinguish static tracing from targeted compilation.
+- L1 [low; optional infrastructure improvement]: Optional upstream reuse compilation is not rerun by default CI.
+- L2 [low; optional archival improvement]: Optional plotting/rendering versions are not fully pinned; no archival DOI is assigned to this reproduction package.
+
+EVIDENCE RECORDS
+baseline_release: https://github.com/Kohze/lean-proof-architecture-review/releases/tag/v1.6.0
+baseline_publication: audit/release-audit-evidence/publication-verification-v1.6.0.json
+fresh_archive_checks: audit/release-audit-evidence/fresh-archive-checks-v1.6.0.json
+oai_full_reextraction: audit/release-audit-evidence/oai-reextraction-v1.6.0.json
+mathlib_full_reextraction: audit/release-audit-evidence/mathlib-reextraction-v1.6.0.json
+independent_estimates: audit/release-audit-evidence/independent-estimates-v1.6.0.json
+corrected_manuscript: audit/final-audit.json
+corrected_visual_review: audit/visual-review.json
+
+The fresh-archive and complete re-extraction checks above were performed on v1.6.0. Their inputs are unchanged in v1.6.1; final build, bibliography, visual metadata and archive manifests identify the corrected edition separately.

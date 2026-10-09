@@ -1,0 +1,13 @@
+{
+  "independent_decimal_recalculation_pp": {
+    "mode_tactic": 10.378740147834693,
+    "local_claims_calc": 5.813621120951757,
+    "arithmetic_algebra": 22.761850663837482,
+    "restricted_simplification": 7.714972715737409,
+    "finite_decision": 4.329811475401674
+  },
+  "maximum_difference_from_retained": 2.6645352591003757e-14,
+  "common_cells": 69,
+  "oai_measure_coverage_percent": 93.75,
+  "scope": "Separate decimal implementation of uniform-module/body weights, fixed Mathlib conditional means and the shared-cell adjustment."
+}

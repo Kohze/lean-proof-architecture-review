@@ -11,13 +11,13 @@ Its second central finding is a measured difference in proof-writing practice re
 
 The [paragraph and mathematical review](audit/paragraph-review-2026-10-08.txt) records checks and changes for all 161 original manuscript blocks, with additional entries for the new mathematical and statistical analysis. Earlier audits remain records of their respective editions.
 
-**Edition 1.6.0, 9 October 2026:** a 35-page manuscript with 47 references (32 scholarly works and 15 source or software records). The [style and clarity review](audit/style-clarity-review-2026-10-09.json) records the revised captions, Lean listings, notation, and Figure 1. A new discussion distinguishes proof generation, simplification, and explanation, and frames possible automation advantages as testable workflow hypotheses. The edition includes the previously local joint subject/length analysis, detailed source evidence, and reproduction data. Earlier audits and the public v1.1.1 release document earlier editions.
+**Edition 1.6.1, 9 October 2026:** a 35-page manuscript with 47 references (32 scholarly works and 15 source or software records). The [style and clarity review](audit/style-clarity-review-2026-10-09.json) records the revised captions, Lean listings, notation, and Figure 1. A new discussion distinguishes proof generation, simplification, and explanation, and frames possible automation advantages as testable workflow hypotheses. The edition includes the previously local joint subject/length analysis, detailed source evidence, and reproduction data. The [final release audit](audit/release-audit-2026-10-09.txt) records category verdicts, remaining limitations, and the corrected SSRN companion citations. Earlier audits document their respective editions.
 
 The [method-survey report](research/method-survey/report.txt), [comparison chart](research/method-survey/comparison.png), and [data table](research/method-survey/comparison.csv) explain the method distribution. Module-balanced rates give equal weight to each proof-bearing module; pooled rates expose the concentration of exact numerical certificates. These lexical measurements describe the use of established Lean devices. The six case studies supply the mathematical interpretation.
 
 Figure 1 in the manuscript displays [differences from the Mathlib baseline](figures/method-shift.png) in percentage points. Hollow markers show the full comparison; filled markers show the shared-domain comparison with a standardized Mathlib baseline. The [figure data](research/method-survey/shift-comparison.csv) retain the absolute rates and both differences. The two markers for each feature share the same height; they are separate estimates relative to the zero baseline, with no connecting lines or value annotations. Vector [PDF](figures/method-shift.pdf) and [SVG](figures/method-shift.svg) versions are included for reuse. Table 3 adds the [joint subject/length comparison](research/method-survey/joint-comparison.csv); its [cell-level record](research/method-survey/joint-standardization.json) preserves weights, conditional rates, and bootstrap intervals. The arithmetic/algebra difference remains +22.8 percentage points, while tactic mode and local claims become +10.4 and +5.8 points. Length can itself reflect proof style, so this is a descriptive comparison.
 
-Reproduction repository: [Kohze/lean-proof-architecture-review](https://github.com/Kohze/lean-proof-architecture-review). The manuscript cites the versioned [v1.6.0 reproduction edition](https://github.com/Kohze/lean-proof-architecture-review/releases/tag/v1.6.0).
+Reproduction repository: [Kohze/lean-proof-architecture-review](https://github.com/Kohze/lean-proof-architecture-review). The manuscript cites the versioned [v1.6.1 reproduction edition](https://github.com/Kohze/lean-proof-architecture-review/releases/tag/v1.6.1).
 
 The [depth revision review](audit/depth-revision-review-2026-10-08.txt) records the earlier depth analysis and verification scope. The [mathematical publication review](audit/publication-review-oct8.txt) and [reading-flow review](audit/reading-flow-review-v1.1.1.txt) document earlier editions. Five elementary Lean lemmas compile with Lean 4.34.1; exhaustive finite checks include a tight 640/1024 successful-tape example. A separate experiment compiles three unchanged upstream trace-cone modules and the ideal-transport composition corollary.
 
@@ -117,7 +117,7 @@ Use the scholarly `preferred-citation` in [CITATION.cff](CITATION.cff), or:
   author = {Gounder, Robin},
   title = {Proof Architecture in the OpenAI Lean Library: Representation, Locality, and Semantic Transport},
   year = {2026},
-  note = {Manuscript, 9 October 2026; edition 1.6.0},
+  note = {Manuscript, 9 October 2026; edition 1.6.1},
   url = {https://github.com/Kohze/lean-proof-architecture-review}
 }
 ```

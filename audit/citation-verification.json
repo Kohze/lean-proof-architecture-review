@@ -377,8 +377,8 @@
         "Robin Gounder"
       ],
       "year": 2026,
-      "primary_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7579158",
-      "note": "SSRN working paper, abstract no. 7579158",
+      "primary_url": "https://ssrn.com/abstract=7579158",
+      "note": "SSRN working paper, 1 October 2026; abstract no. 7579158",
       "reference_category": "companion_manuscript",
       "claim_supported": "Related study and division of analytical scope; primary theorem claims remain attributed to their original sources.",
       "identity_evidence": {
@@ -391,14 +391,37 @@
         "verification": "Title and author read from immutable public manuscript source; manuscript edition, not journal publication."
       },
       "ssrn_identity_evidence": {
-        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7579158",
-        "status": "author_confirmed_identity",
-        "evidence": "SSRN HTTP 403; DOI content negotiation and Crossref/DataCite metadata returned 404; search returned no indexed record; no browser available. User clarification pending.",
-        "doi_added": false,
+        "status": "author_confirmed_full_citation",
+        "confirmed_on": "2026-10-09",
         "title": "Mathematical Frontiers in the OpenAI Research Release: Cancellation, Positivity, and Changes of Representation",
-        "paper": "frontiers",
-        "identity_confirmation": "Author explicitly confirmed the complete title in conversation on 8 October 2026. Title and author independently match the immutable public GitHub manuscript. SSRN page content was not retrievable."
-      }
+        "author": "Robin Gounder",
+        "date": "2026-10-01",
+        "doi": "10.2139/ssrn.7579158",
+        "url": "https://ssrn.com/abstract=7579158",
+        "doi_added": true,
+        "identity_confirmation": "The author supplied the complete SSRN citation, publication date, abstract identifier and DOI in conversation on 9 October 2026. Title and author also match the retained immutable manuscript-source identity record.",
+        "retrieval_scope": "SSRN pages and DOI URLs were not accessible through the web tool during this audit; no independent DOI registry verification is claimed."
+      },
+      "citation_revision_history": [
+        {
+          "superseded_on": "2026-10-09",
+          "record": {
+            "primary_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7579158",
+            "note": "SSRN working paper, abstract no. 7579158",
+            "ssrn_identity_evidence": {
+              "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7579158",
+              "status": "author_confirmed_identity",
+              "evidence": "SSRN HTTP 403; DOI content negotiation and Crossref/DataCite metadata returned 404; search returned no indexed record; no browser available. User clarification pending.",
+              "doi_added": false,
+              "title": "Mathematical Frontiers in the OpenAI Research Release: Cancellation, Positivity, and Changes of Representation",
+              "paper": "frontiers",
+              "identity_confirmation": "Author explicitly confirmed the complete title in conversation on 8 October 2026. Title and author independently match the immutable public GitHub manuscript. SSRN page content was not retrievable."
+            }
+          }
+        }
+      ],
+      "doi": "10.2139/ssrn.7579158",
+      "date": "2026-10-01"
     },
     {
       "key": "GounderCounting2026",
@@ -410,8 +433,8 @@
         "Robin Gounder"
       ],
       "year": 2026,
-      "primary_url": "https://github.com/Kohze/counting-and-sampling-review/releases/tag/paper-2026-10-08",
-      "note": "Companion manuscript, edition paper-2026-10-08",
+      "primary_url": "https://ssrn.com/abstract=7576420",
+      "note": "SSRN working paper, 7 October 2026; abstract no. 7576420",
       "reference_category": "companion_manuscript",
       "claim_supported": "Related study and division of analytical scope; primary theorem claims remain attributed to their original sources.",
       "identity_evidence": {
@@ -422,6 +445,29 @@
         "author": "Robin Gounder",
         "year": 2026,
         "verification": "Title and author read from immutable public manuscript source; manuscript edition, not journal publication."
+      },
+      "citation_revision_history": [
+        {
+          "superseded_on": "2026-10-09",
+          "record": {
+            "primary_url": "https://github.com/Kohze/counting-and-sampling-review/releases/tag/paper-2026-10-08",
+            "note": "Companion manuscript, edition paper-2026-10-08"
+          }
+        }
+      ],
+      "doi": "10.2139/ssrn.7576420",
+      "date": "2026-10-07",
+      "ssrn_identity_evidence": {
+        "status": "author_confirmed_full_citation",
+        "confirmed_on": "2026-10-09",
+        "title": "Approximate Counting and Uniform Sampling: A Critical Review of Matroid Intersections, Contingency Tables, and Graph Switch Chains",
+        "author": "Robin Gounder",
+        "date": "2026-10-07",
+        "doi": "10.2139/ssrn.7576420",
+        "url": "https://ssrn.com/abstract=7576420",
+        "doi_added": true,
+        "identity_confirmation": "The author supplied the complete SSRN citation, publication date, abstract identifier and DOI in conversation on 9 October 2026. Title and author also match the retained immutable manuscript-source identity record.",
+        "retrieval_scope": "SSRN pages and DOI URLs were not accessible through the web tool during this audit; no independent DOI registry verification is claimed."
       }
     },
     {
@@ -660,10 +706,10 @@
         "Robin Gounder"
       ],
       "year": 2026,
-      "primary_url": "https://github.com/Kohze/lean-proof-architecture-review/releases/tag/v1.6.0",
-      "note": "Versioned reproduction repository; edition 1.6.0",
+      "primary_url": "https://github.com/Kohze/lean-proof-architecture-review/releases/tag/v1.6.1",
+      "note": "Versioned reproduction repository; edition 1.6.1",
       "reference_category": "reproduction_repository",
-      "claim_supported": "Manuscript source, retained corpus data and source hashes, analysis scripts, original Lean examples, and verification records. Release v1.6.0 identifies the accompanying reproduction edition."
+      "claim_supported": "Manuscript source, retained corpus data and source hashes, analysis scripts, original Lean examples, and verification records. Release v1.6.1 identifies the accompanying reproduction edition."
     },
     {
       "key": "Perfectoid2020",

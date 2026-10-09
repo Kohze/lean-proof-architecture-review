@@ -1,0 +1,32 @@
+[
+  {
+    "script": "verify_sources.py",
+    "exit_code": 0,
+    "seconds": 0.11
+  },
+  {
+    "script": "verify_depth_evidence.py",
+    "exit_code": 0,
+    "seconds": 0.22
+  },
+  {
+    "script": "verify_method_profile.py",
+    "exit_code": 0,
+    "seconds": 2.1
+  },
+  {
+    "script": "audit_completeness.py",
+    "exit_code": 0,
+    "seconds": 2.46
+  },
+  {
+    "script": "verify_manuscript.py",
+    "exit_code": 0,
+    "seconds": 1.51
+  },
+  {
+    "script": "verify_examples.py",
+    "exit_code": 0,
+    "seconds": 2.4
+  }
+]

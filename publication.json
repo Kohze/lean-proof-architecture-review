@@ -1,26 +1,28 @@
 {
   "title": "Proof Architecture in the OpenAI Lean Library: Representation, Locality, and Semantic Transport",
   "genre": "Source-driven comparative narrative review",
-  "edition": "1.6.0",
+  "edition": "1.6.1",
   "date": "2026-10-09",
   "pages": 35,
   "cited_references": 47,
-  "pdf_sha256": "b5c39b14a055a11048beb806fd98792d23352c6c048dc85445ba7d8c4faf8351",
+  "pdf_sha256": "24fb708a803a07a309fabe837ab54d2ea50a2b7a32c2b4de039e9d697283ae1f",
   "canonical_folder": "C:\\Users\\robin\\math_ai\\papers\\lean-proof-architecture",
   "public_source": {
     "repository": "https://github.com/Kohze/lean-proof-architecture-review",
-    "tag": "v1.6.0",
-    "release_url": "https://github.com/Kohze/lean-proof-architecture-review/releases/tag/v1.6.0",
-    "release_binding": "The Git tag resolves the source commit; release assets include the reviewed PDF, source/data ZIP, and SHA256SUMS-v1.6.0.txt."
+    "tag": "v1.6.1",
+    "release_url": "https://github.com/Kohze/lean-proof-architecture-review/releases/tag/v1.6.1",
+    "release_binding": "The Git tag resolves the source commit; release assets include the reviewed PDF, source/data ZIP, and SHA256SUMS-v1.6.1.txt."
   },
-  "publication_audit": "audit/style-clarity-review-2026-10-09.json",
+  "publication_audit": "audit/release-audit-2026-10-09.json",
   "verification_records": [
     "audit/build.json",
     "audit/final-audit.json",
     "audit/source-integrity.json",
     "audit/depth-evidence-verification.json",
     "audit/method-survey-verification.json",
-    "results/verification.json"
+    "results/verification.json",
+    "audit/release-audit-2026-10-09.json",
+    "audit/visual-review.json"
   ],
   "publication_history": [
     {
@@ -94,6 +96,36 @@
       "verified_at": "2026-10-08T13:40:30.318748+00:00",
       "publication_audit": "audit/publication-review-oct8.json",
       "editorial_audit": "audit/reading-flow-review-v1.1.1.json"
+    },
+    {
+      "title": "Proof Architecture in the OpenAI Lean Library: Representation, Locality, and Semantic Transport",
+      "genre": "Source-driven comparative narrative review",
+      "edition": "1.6.0",
+      "date": "2026-10-09",
+      "pages": 35,
+      "cited_references": 47,
+      "pdf_sha256": "b5c39b14a055a11048beb806fd98792d23352c6c048dc85445ba7d8c4faf8351",
+      "canonical_folder": "C:\\Users\\robin\\math_ai\\papers\\lean-proof-architecture",
+      "public_source": {
+        "repository": "https://github.com/Kohze/lean-proof-architecture-review",
+        "tag": "v1.6.0",
+        "release_url": "https://github.com/Kohze/lean-proof-architecture-review/releases/tag/v1.6.0",
+        "release_binding": "The Git tag resolves the source commit; release assets include the reviewed PDF, source/data ZIP, and SHA256SUMS-v1.6.0.txt.",
+        "commit": "1244bb3f14371e1bfe4951742db156e0b748e5cd",
+        "published_at": "2026-10-09T10:41:19Z"
+      },
+      "publication_audit": "audit/style-clarity-review-2026-10-09.json",
+      "verification_records": [
+        "audit/build.json",
+        "audit/final-audit.json",
+        "audit/source-integrity.json",
+        "audit/depth-evidence-verification.json",
+        "audit/method-survey-verification.json",
+        "results/verification.json",
+        "audit/release-audit-2026-10-09.json",
+        "audit/visual-review.json"
+      ],
+      "public_verification_record": "audit/release-audit-evidence/publication-verification-v1.6.0.json"
     }
   ],
   "local_revision_history": [
@@ -160,7 +192,7 @@
       "github_release_status": "Existing public release retained; this local revision is separately recorded.",
       "figure_audit": "audit/shift-figure-review-2026-10-08.json",
       "synthesis_audit": "audit/tactics-synthesis-review-2026-10-08.json",
-      "visual_audit": "audit/visual-review.json"
+      "visual_audit": "audit/visual-review-1.4.0-local.json"
     },
     {
       "date": "2026-10-08",
@@ -176,7 +208,7 @@
       "github_release_status": "Existing public release retained; this local revision is separately recorded.",
       "figure_audit": "audit/shift-figure-review-2026-10-08.json",
       "synthesis_audit": "audit/tactics-synthesis-review-2026-10-08.json",
-      "visual_audit": "audit/visual-review.json",
+      "visual_audit": "audit/visual-review-1.5.0-local.json",
       "paragraph_audit": "audit/paragraph-review-2026-10-08.json",
       "completeness_resolution": "audit/completeness-resolution-2026-10-08.json",
       "joint_method_data": "research/method-survey/joint-standardization.json"

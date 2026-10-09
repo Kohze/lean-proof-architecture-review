@@ -6,6 +6,7 @@
   "preprints": 6,
   "technical_reports": 1,
   "companion_manuscript_references": 3,
+  "author_confirmed_ssrn_citations_checked": 2,
   "source_and_software_references": 15,
   "unused_reference_keys": [],
   "missing_citation_keys": [],
@@ -242,14 +243,14 @@
   "literal_upstream_lean_excerpts_checked": 2,
   "review_type": "Source-driven comparative narrative review with an exploratory corpus survey and original explanatory examples.",
   "novelty_scope": "Comparative synthesis and original descriptive corpus analysis; the elementary propositions are not presented as new theorems.",
-  "pdf_sha256": "b5c39b14a055a11048beb806fd98792d23352c6c048dc85445ba7d8c4faf8351",
+  "pdf_sha256": "24fb708a803a07a309fabe837ab54d2ea50a2b7a32c2b4de039e9d697283ae1f",
   "tex_hashes": {
     "abstract.tex": "cc611a84b629b53770d34ef405de76fee67c7533aa5fa2d455f683cbf8320e07",
     "cases-analysis.tex": "3328cd0c8ba61e93a964a6f51eb38c919faa9712c6a7c61993006833fdc7fab9",
     "cases-architecture.tex": "c0b8b5e571426a2f16be763ded469a1e51dd1e1135a457874acef7aad82d5bbc",
     "cases-discrete.tex": "0b7775776ea752c07dacff329044d476cc43aa81c66df8f413f8ebb42422af66",
     "cases.tex": "b256549eda811b5c6f3a44f4366be94da00825d1d912ad4839872a52de8cc7d2",
-    "discussion.tex": "1433a8c5116b7b9d0ae8d3f88e7358c1619ca09d354b405541bcc0ce5f1cf25e",
+    "discussion.tex": "3e9566b164e0e5ce39a2dc68c84acf7dbd25ffe13748e397e2fb326228a8a723",
     "introduction.tex": "20bf2cf7405893a6d81c22895ba5bd65e531055d4e12df6b913d7f2b3efc209f",
     "main.tex": "62b9429d2dea1ce0678c1c5f0420c2974cb0db26c9075521cfbcc146b6a012e0",
     "method-profile-joint-table.tex": "ba05dcfe654c3bc8a919dd194fcd1b86cb44623ffa78be8df21114672d2189e0",
@@ -258,6 +259,6 @@
     "method-shift-figure.tex": "e283345a61ffae03765326ee60c91c4b1efe937d777f0b308d788f9f23a39771",
     "method.tex": "d9f0d246fb6d3a3af48e39f06806f63284e55955afd691f0955bce47f7f6b7ce",
     "overview.tex": "bdb203e167e1204a6f1b1f863a08cd96fcd47f6d7aa1e0606e7a7651671b562c",
-    "worked-examples.tex": "41868bdc83c4649f573383689475f4b577b0dc5dc138cddf798e62397d5ef910"
+    "worked-examples.tex": "9aee82101a09d93fde9dd0feb1b8ce6ff0c6efc50506e9829ba86dc212cc54c0"
   }
 }

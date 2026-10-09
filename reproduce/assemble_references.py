@@ -73,7 +73,9 @@ def main():
             ref['printed_doi_variant'] = ref['doi']
             ref['doi'] = '10.2168/LMCS-8(1:2)2012'
             ref['doi_normalization_note'] = 'The journal prints 1:02; its resolving DOI and official project bibliography use 1:2.'
-    dois = [r['doi'] for r in refs if r.get('doi') and not r['doi'].startswith('10.48550/')]
+    # arXiv and SSRN identifiers describe preprints, not publisher-verified
+    # journal articles. Retain their primary records without reclassifying them.
+    dois = [r['doi'] for r in refs if r.get('doi') and not r['doi'].startswith(('10.48550/','10.2139/'))]
     dois += [x[1] for x in EXTRA]
     with ThreadPoolExecutor(max_workers=3) as executor:
         metadata = dict(zip(dois, executor.map(crossref,dois)))
@@ -151,6 +153,10 @@ def main():
             if ref.get(key): fields[key] = clean(ref[key])
         for key in ('number','series','institution','eprint'):
             if ref.get(key): fields[key] = clean(ref[key])
+        # plainnat omits the DOI field for misc entries. Print SSRN identifiers
+        # through its standard howpublished field as well as retaining doi.
+        if ref['type'] == 'misc' and ref.get('doi','').startswith('10.2139/'):
+            fields['howpublished'] = r'\doi{' + ref['doi'] + '}'
         fields['url'] = ref['primary_url']
         bib.append('@'+ref['type']+'{'+ref['key']+',\n'+',\n'.join('  '+k+' = {'+str(v)+'}' for k,v in fields.items())+'\n}')
     rendered = '\n\n'.join(bib)+'\n'

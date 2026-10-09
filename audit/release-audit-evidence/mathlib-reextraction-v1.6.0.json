@@ -1,0 +1,8 @@
+{
+  "pinned_mathlib_commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "source_files_hash_checked_and_reextracted": 8070,
+  "bodies_reextracted": 186751,
+  "retained_csv_differences": [],
+  "seconds": 67.26,
+  "scope": "Complete pinned Mathlib re-extraction checks code/data consistency; it is not independent semantic parser validation."
+}

@@ -6,7 +6,13 @@
       "key": "GuEtAl2025ProofOptimizer",
       "type": "misc",
       "title": "ProofOptimizer: Training Language Models to Simplify Proofs without Human Demonstrations",
-      "authors": ["Alex Gu", "Bartosz Piotrowski", "Fabian Gloeckle", "Kaiyu Yang", "Aram H. Markosyan"],
+      "authors": [
+        "Alex Gu",
+        "Bartosz Piotrowski",
+        "Fabian Gloeckle",
+        "Kaiyu Yang",
+        "Aram H. Markosyan"
+      ],
       "year": 2025,
       "doi": "10.48550/arXiv.2510.15700",
       "primary_url": "https://arxiv.org/abs/2510.15700v1",
@@ -18,7 +24,15 @@
       "key": "LuEtAl2026LeanRefactor",
       "type": "misc",
       "title": "Lean Refactor: Multi-Objective Controllable Proof Optimization via Agentic Strategy Search",
-      "authors": ["Jialin Lu", "Soonho Kong", "Rodrigo Stehling", "Kaiyu Yang", "Zhangyang Wang", "Weiran Sun", "Wuyang Chen"],
+      "authors": [
+        "Jialin Lu",
+        "Soonho Kong",
+        "Rodrigo Stehling",
+        "Kaiyu Yang",
+        "Zhangyang Wang",
+        "Weiran Sun",
+        "Wuyang Chen"
+      ],
       "year": 2026,
       "doi": "10.48550/arXiv.2605.20244",
       "primary_url": "https://arxiv.org/abs/2605.20244v1",
@@ -30,12 +44,14 @@
       "key": "GounderArchitectureData2026",
       "type": "misc",
       "title": "Proof Architecture in the OpenAI Lean Library: manuscript, data, and reproduction code",
-      "authors": ["Robin Gounder"],
+      "authors": [
+        "Robin Gounder"
+      ],
       "year": 2026,
-      "primary_url": "https://github.com/Kohze/lean-proof-architecture-review/releases/tag/v1.6.0",
-      "note": "Versioned reproduction repository; edition 1.6.0",
+      "primary_url": "https://github.com/Kohze/lean-proof-architecture-review/releases/tag/v1.6.1",
+      "note": "Versioned reproduction repository; edition 1.6.1",
       "reference_category": "reproduction_repository",
-      "claim_supported": "Manuscript source, retained corpus data and source hashes, analysis scripts, original Lean examples, and verification records. Release v1.6.0 identifies the accompanying reproduction edition."
+      "claim_supported": "Manuscript source, retained corpus data and source hashes, analysis scripts, original Lean examples, and verification records. Release v1.6.1 identifies the accompanying reproduction edition."
     }
   ],
   "deferred_reference": {

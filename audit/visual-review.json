@@ -1,26 +1,19 @@
 {
-  "date": "2026-10-08",
-  "edition": "1.5.0-local",
-  "pdf_sha256": "03df4180462e114120e3bfbc9b0164099c5bb3d015a8254bd434af3f87192d35",
-  "pages_rendered": 33,
+  "date": "2026-10-09",
+  "edition": "1.6.1",
+  "pdf_sha256": "24fb708a803a07a309fabe837ab54d2ea50a2b7a32c2b4de039e9d697283ae1f",
+  "pages_rendered": 35,
   "all_contact_sheets_inspected": true,
   "full_size_pages_inspected": [
-    1,
-    4,
-    12,
-    21,
     22,
-    28,
     33
   ],
   "checks": [
-    "All pages inspected through five contact sheets; no clipping, overlapping text or missing content found.",
-    "Full-size overview table has clear row rules and spacing.",
-    "New Mahler real-form bridge, equation and source footnote are legible.",
-    "Figure 1 and its clarified subject-only caption are legible.",
-    "Joint Table 3 and its surrounding definitions are legible and separated from text.",
-    "Literal Crouzeix excerpt displays gamma, inequality, turnstile and subscript correctly.",
-    "Bibliography spacing adjusted after initial render to remove a one-reference final page; final references checked."
+    "All 35 final pages inspected through five contact sheets; no clipping, overlaps or missing glyphs found.",
+    "Figure 1 additionally checked at page scale: same-y marker pairs, no connecting lines or point-value labels, clear percentage-point axis and caption.",
+    "Corrected SSRN bibliography additionally checked at page scale: full titles, Robin Gounder, working-paper dates, both abstract URLs and both DOI identifiers appear.",
+    "Listing 3 stays on one page, caption styles are consistent, and versioned data/code availability identifies v1.6.1.",
+    "Earlier full-size reviews of unchanged mathematical and listing pages remain recorded in the edition-specific historical audits."
   ],
   "unresolved_visual_defects": []
 }

@@ -41,10 +41,21 @@ def main():
     rendered=(PAPER/'audit/references-rendered.bbl').read_text(encoding='utf-8')
     assert rendered.count('\\bibitem')==len(cited)
     records=json.loads((PAPER/'audit/citation-verification.json').read_text(encoding='utf-8'))['references']
+    bib_by_key={r['ID']:r for r in bibliography}
+    ssrn_records=[r for r in records if r.get('doi','').startswith('10.2139/')]
+    for record in ssrn_records:
+        entry=bib_by_key[record['key']]
+        for field,source_field in [('doi','doi'),('url','primary_url'),('note','note')]:
+            assert entry[field]==record[source_field],(record['key'],field)
+        assert normalized(entry['title'])==normalized(record['title'])
+        evidence=record['ssrn_identity_evidence']
+        assert evidence['doi']==record['doi'] and evidence['date']==record['date']
+        assert evidence['status']=='author_confirmed_full_citation'
+        assert r'\doi{'+record['doi']+'}' in rendered,record['key']
     metadata_checks=[]
     for record in records:
         doi=record.get('doi')
-        if doi and not doi.startswith('10.48550/'):
+        if doi and not doi.startswith(('10.48550/','10.2139/')):
             cache=PAPER/'research/bibliography'/(re.sub(r'[^a-zA-Z0-9]+','_',doi)+'.json')
             data=json.loads(cache.read_text(encoding='utf-8'))
             assert data['DOI'].casefold()==doi.casefold()
@@ -59,6 +70,8 @@ def main():
     pdfpath=PAPER/'lean-proof-architecture.pdf'
     reader=PdfReader(pdfpath)
     text='\n'.join(page.extract_text() for page in reader.pages)
+    for record in ssrn_records:
+        assert record['doi'] in text,record['key']
     assert len(reader.pages)>10
     assert 'Robin Gounder' in text and 'Vaionex Corporation' in text
     assert 'Generative AI disclosure' in text
@@ -75,6 +88,7 @@ def main():
              'scholarly_references':len(scholarly),'published_scholarly_references_with_doi':len(metadata_checks),
              'preprints':len(preprints),'technical_reports':len(technical),
              'companion_manuscript_references':len(companions),
+             'author_confirmed_ssrn_citations_checked':len(ssrn_records),
              'source_and_software_references':len(cited)-len(scholarly),
              'unused_reference_keys':[],'missing_citation_keys':[], 'latex_problems':[],
              'doi_title_checks':metadata_checks,'disclosure_confined_to_dedicated_section':True, 'literal_upstream_lean_excerpts_checked':len(excerpts),

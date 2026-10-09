@@ -29,7 +29,8 @@ audit/publication-review-oct8.txt: mathematical category review and audit fixes.
 audit/reading-flow-review-v1.1.1.txt: earlier reading-flow and organization review.
 audit/depth-revision-review-2026-10-08.txt: earlier depth and verification review.
 audit/paragraph-review-2026-10-08.txt: earlier paragraph-by-paragraph mathematical review.
-audit/style-clarity-review-2026-10-09.json: current style, notation, and evidence review.
+audit/style-clarity-review-2026-10-09.json: style, notation, and evidence review for v1.6.0.
+audit/release-audit-2026-10-09.txt: final reviewer-style category audit for v1.6.1.
 research/method-survey/report.txt: current exploratory method-distribution report.
 research/method-survey/comparison.png: module-balanced comparison chart.
 research/method-survey/comparison.csv: pooled, balanced, and domain-adjusted rates.
@@ -37,10 +38,10 @@ figures/method-shift.pdf, .png and .svg: differences from the Mathlib baseline;
 aligned marker pairs, no connectors or point-value annotations.
 research/method-survey/shift-comparison.csv: exact rates and percentage-point shifts.
 audit/publication-review-oct8.json: machine-readable revision/recheck record.
-Edition 1.6.0: 35 pages, 47 references, 546 curated source
+Edition 1.6.1: 35 pages, 47 references, 546 curated source
 artifacts plus 800 separately sampled OpenAI modules, five compiled elementary
 Lean lemmas, and a compiled corollary importing three unchanged upstream
-trace-cone modules. The manuscript cites release v1.6.0 of this reproduction
+trace-cone modules. The manuscript cites release v1.6.1 of this reproduction
 repository. Earlier publication records remain in publication.json.
 results/: original Lean compiler output and exact finite example results.
 
